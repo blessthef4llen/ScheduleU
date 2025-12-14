@@ -1,1 +1,78 @@
+from datetime import datetime
+
+# Represents a single notification sent to a user
+class Notification:
+    def __init__(self, user_id, message, notif_type):
+        self.user_id = user_id
+        self.message = message
+        self.type = notif_type
+        self.timestamp = datetime.now()
+        self.is_read = False
+
+    # Marks the notification as read by the user
+    def mark_as_read(self):
+        self.is_read = True
+
+
+# Manages creating, storing, and delivering notifications
+class NotificationCenter:
+    def __init__(self):
+        self.notifications = []
+
+    # Creates a notification and sends an alert to the user
+    def create_notification(self, user_id, message, notif_type):
+        notification = Notification(user_id, message, notif_type)
+        self.notifications.append(notification)
+        self.send_alert(notification)
+
+    # Simulates sending a notification (email, app alert, etc.)
+    def send_alert(self, notification):
+        print(f"Alert for User {notification.user_id}: {notification.message}")
+
+    # Retrieves all notifications for a specific user
+    def get_user_notifications(self, user_id):
+        return [n for n in self.notifications if n.user_id == user_id]
+
+
+# Simulates updates coming from the university enrollment system
+class UniversityDataService:
+    def __init__(self, notification_center):
+        self.notification_center = notification_center
+
+    # Triggered when a seat becomes available in a class
+    def class_seat_update(self, course_id, seats_available, waiting_users):
+        if seats_available > 0:
+            for user_id in waiting_users:
+                self.notification_center.create_notification(
+                    user_id,
+                    f"A seat is now available for {course_id}",
+                    "seat_open"
+                )
+
+    # Triggered when class time or schedule changes
+    def class_time_change(self, course_id, new_time, enrolled_users):
+        for user_id in enrolled_users:
+            self.notification_center.create_notification(
+                user_id,
+                f"{course_id} has been rescheduled to {new_time}",
+                "class_update"
+            )
+
+
+# Example usage
+notification_center = NotificationCenter()
+university_service = UniversityDataService(notification_center)
+
+# University reports a seat opening
+university_service.class_seat_update(
+    "CECS 342",
+    seats_available=1,
+    waiting_users=[101, 102]
+)
+
+# Student checks notifications
+student_notifications = notification_center.get_user_notifications(101)
+for notification in student_notifications:
+    print(notification.message)
+    notification.mark_as_read()
 
