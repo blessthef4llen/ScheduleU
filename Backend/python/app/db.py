@@ -1,10 +1,11 @@
 import os
 from dotenv import load_dotenv
 import psycopg
-fromcontextlib import contextmanager
+from contextlib import contextmanager
 
 load_dotenv()
 
+@contextmanager
 def get_connection():
     url = os.getenv("DATABASE_URL")
     if not url:
