@@ -1,0 +1,40 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,01,2867,Spring_2026|HRM 360|01|2867,FALSE,\N,,LEC,MW,9:30-10:45AM,,COB-217,Arnold J,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,02,2431,Spring_2026|HRM 360|02|2431,FALSE,\N,,LEC,MW,11-12:15PM,,COB-139A,Arnold J,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,03,7168,Spring_2026|HRM 360|03|7168,FALSE,\N,,LEC,W,7-9:45PM,,COB-113,Olson A,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,04,3140,Spring_2026|HRM 360|04|3140,FALSE,\N,,LEC,TuTh,9:30-10:45AM,,COB-140A,Ekema M,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,05,3907,Spring_2026|HRM 360|05|3907,FALSE,\N,,LEC,TuTh,12:30-1:45PM,,COB-139,Zanhour M,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,06,2596,Spring_2026|HRM 360|06|2596,FALSE,\N,,LEC,Tu,4-6:45PM,,COB-139A,Olson A,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,07,7550,Spring_2026|HRM 360|07|7550,FALSE,\N,,LEC,MW,12:30-1:45PM,,COB-113,Arnold J,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,08,7611,Spring_2026|HRM 360|08|7611,FALSE,\N,310,LEC,Th,4-6:45PM,,COB-229,Stafford C,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,09,9187,Spring_2026|HRM 360|09|9187,FALSE,\N,,LEC,M,4-6:45PM,,FCS-126,Boatman H,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,11,9633,Spring_2026|HRM 360|11|9633,FALSE,\N,310,LEC,Tu,7-9:45PM,,COB-112,Boatman H,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,12,9719,Spring_2026|HRM 360|12|9719,FALSE,\N,310,LEC,W,4-6:45PM,,COB-113,Olson A,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,13,11079,Spring_2026|HRM 360|13|11079,FALSE,\N,310,LEC,F,9-11:45AM,,COB-227,Rinderle S,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,360,HRM 360,ORGANIZATIONAL BEHAVIOR,3,,14,12796,Spring_2026|HRM 360|14|12796,FALSE,\N,310,LEC,TuTh,8-9:15AM,,COB-217,Thompson C,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,361,HRM 361,THE HUMAN RESOURCE FUNCTION,3,,01,1383,Spring_2026|HRM 361|01|1383,FALSE,\N,,LEC,Tu,4-6:45PM,,COB-113,Boatman H,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,361,HRM 361,THE HUMAN RESOURCE FUNCTION,3,,02,3831,Spring_2026|HRM 361|02|3831,FALSE,\N,,LEC,TuTh,11-12:15PM,,COB-113,Thompson C,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,361,HRM 361,THE HUMAN RESOURCE FUNCTION,3,,03,7589,Spring_2026|HRM 361|03|7589,FALSE,\N,,LEC,W,7-9:45PM,,COB-227,Gross C,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,361,HRM 361,THE HUMAN RESOURCE FUNCTION,3,,04,7590,Spring_2026|HRM 361|04|7590,FALSE,\N,310,LEC,Th,4-6:45PM,available,COB-113,Matsumoto E,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,361,HRM 361,THE HUMAN RESOURCE FUNCTION,3,,05,7911,Spring_2026|HRM 361|05|7911,FALSE,\N,,LEC,M,4-6:45PM,,COB-229,Hoang M,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,445,HRM 445,COMPENSATION ADMINISTRATION,3,,01,3212,Spring_2026|HRM 445|01|3212,FALSE,\N,,SEM,F,9-11:45AM,available,COB-113,Kennington J,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,446,HRM 446,LEADERSHIP & MOTIVATION,3,,01,2430,Spring_2026|HRM 446|01|2430,FALSE,\N,,SEM,MW,2-3:15PM,,COB-113,Fattoracci E,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,446,HRM 446,LEADERSHIP & MOTIVATION,3,,02,4043,Spring_2026|HRM 446|02|4043,FALSE,\N,,SEM,TuTh,2-3:15PM,available,COB-214,Ekema M,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,446,HRM 446,LEADERSHIP & MOTIVATION,3,,03,5658,Spring_2026|HRM 446|03|5658,FALSE,\N,310,SEM,Th,4-6:45PM,,COB-217,Hedger E,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,461,HRM 461,EMPLOYMENT LAW,3,,01,6378,Spring_2026|HRM 461|01|6378,FALSE,\N,,LEC,Th,4-6:45PM,,COB-227,Gibson K,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,462,HRM 462,LABOR MANAGEMENT RELATIONS,3,,01,3195,Spring_2026|HRM 462|01|3195,FALSE,\N,,LEC,W,7-9:45PM,,COB-214,Hudspeth K,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,463,HRM 463,ORG TRAINING & DEVELOPMENT,3,,01,3213,Spring_2026|HRM 463|01|3213,FALSE,\N,,SEM,Tu,4-6:45PM,available,COB-114,Matsumoto E,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,465,HRM 465,STAFFING & PERFORMANCE MGMT,3,,01,4719,Spring_2026|HRM 465|01|4719,FALSE,\N,,SEM,W,4-6:45PM,,COB-229,Hoang M,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,652,HRM 652,SEM IN HUMAN RESOURCE MGMT,3,,01,4509,Spring_2026|HRM 652|01|4509,FALSE,\N,,SEM,Tu,7-9:45PM,available,COB-227,Gross C,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,654,HRM 654,NEGOTIATION & CONFLICT MGMT,3,,01,4766,Spring_2026|HRM 654|01|4766,FALSE,\N,,SEM,M,7-9:45PM,available,COB-113,Fotohabadi M,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,657,HRM 657,SEMINAR IN LEADERSHIP,3,,01,7560,Spring_2026|HRM 657|01|7560,FALSE,\N,,SEM,W,7-9:45PM,available,COB-228,Hedger E,Class instruction is: Face to Face - On Campus.
+Spring_2026,HRM,652,HRM 652,SEM IN HUMAN RESOURCE MGMT,3,,02,9805,Spring_2026|HRM 652|02|9805,FALSE,\N,309,SEM,Tu,6-8:45PM,,ONLINE-ONLY,Johnson E,Class instruction is: Online - Mixed Meet Times. Class enrollment for OMBA students ONLY
+Spring_2026,HRM,652,HRM 652,SEM IN HUMAN RESOURCE MGMT,3,,02,\N,Spring_2026|HRM 652|02|NOCLASS|80ab7ca6bc97fab3,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HRM,652,HRM 652,SEM IN HUMAN RESOURCE MGMT,3,,03,9809,Spring_2026|HRM 652|03|9809,FALSE,\N,309,SEM,Th,6-8:45PM,,ONLINE-ONLY,Zanhour M,Class instruction is: Online - Mixed Meet Times. Class enrollment for OMBA students ONLY
+Spring_2026,HRM,652,HRM 652,SEM IN HUMAN RESOURCE MGMT,3,,03,\N,Spring_2026|HRM 652|03|NOCLASS|9e6b821d3eab8a20,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HRM,657,HRM 657,SEMINAR IN LEADERSHIP,3,,02,9806,Spring_2026|HRM 657|02|9806,FALSE,\N,309,SEM,W,7-9:45PM,,ONLINE-ONLY,Batiste M,Class instruction is: Online - Mixed Meet Times. Class enrollment for OMBA students ONLY
+Spring_2026,HRM,657,HRM 657,SEMINAR IN LEADERSHIP,3,,02,\N,Spring_2026|HRM 657|02|NOCLASS|da0e098d06ba0e05,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HRM,657,HRM 657,SEMINAR IN LEADERSHIP,3,,03,9807,Spring_2026|HRM 657|03|9807,FALSE,\N,309,SEM,M,7-9:45PM,,ONLINE-ONLY,Walle K,Class instruction is: Online - Mixed Meet Times. Class enrollment for OMBA students ONLY
+Spring_2026,HRM,657,HRM 657,SEMINAR IN LEADERSHIP,3,,03,\N,Spring_2026|HRM 657|03|NOCLASS|ca7b31cd2184e1ba,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HRM,652,HRM 652,SEM IN HUMAN RESOURCE MGMT,3,,04,9839,Spring_2026|HRM 652|04|9839,FALSE,\N,309,SEM,Tu,6-8:45PM,,ONLINE-ONLY,Rinderle S,Class instruction is: Online - Mixed Meet Times. Class Enrollment for OMBA students ONLY
+Spring_2026,HRM,652,HRM 652,SEM IN HUMAN RESOURCE MGMT,3,,04,\N,Spring_2026|HRM 652|04|NOCLASS|d28a5f9254e2acfc,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail

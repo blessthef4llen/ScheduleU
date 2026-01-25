@@ -1,0 +1,66 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,ED,P 301,ED P 301,CHILD DEVELOPMENT & LEARNING,3,,01,1224,Spring_2026|ED P 301|01|1224,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Taylor S,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 301,ED P 301,CHILD DEVELOPMENT & LEARNING,3,,02,3432,Spring_2026|ED P 301|02|3432,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Tortorici Luna J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 301,ED P 301,CHILD DEVELOPMENT & LEARNING,3,,04,4651,Spring_2026|ED P 301|04|4651,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Tortorici Luna J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 301,ED P 301,CHILD DEVELOPMENT & LEARNING,3,,05,4652,Spring_2026|ED P 301|05|4652,FALSE,\N,310,SEM,TuTh,2-3:15PM,available,LA1-210,Taylor S,Class instruction is: Face to Face - On Campus.
+Spring_2026,ED,P 301,ED P 301,CHILD DEVELOPMENT & LEARNING,3,,06,7043,Spring_2026|ED P 301|06|7043,FALSE,\N,306,SEM,MW,2-3:15PM,available,ONLINE-ONLY,Taylor S,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,ED,P 301,ED P 301,CHILD DEVELOPMENT & LEARNING,3,,08,10138,Spring_2026|ED P 301|08|10138,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Forrest L,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 302,ED P 302,ADOLES DEVELP: CROSS-CULT,3,,01,1225,Spring_2026|ED P 302|01|1225,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Portnoi L,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 302,ED P 302,ADOLES DEVELP: CROSS-CULT,3,,02,3755,Spring_2026|ED P 302|02|3755,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Tortorici Luna J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 302,ED P 302,ADOLES DEVELP: CROSS-CULT,3,,03,4906,Spring_2026|ED P 302|03|4906,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Tortorici Luna J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 302,ED P 302,ADOLES DEVELP: CROSS-CULT,3,,04,4907,Spring_2026|ED P 302|04|4907,FALSE,\N,307,SEM,W,7-9:45PM,,LA3-204,Portnoi L,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 302,ED P 302,ADOLES DEVELP: CROSS-CULT,3,,04,\N,Spring_2026|ED P 302|04|NOCLASS|ca34390a3a7210b0,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Portnoi L,additional meeting detail
+Spring_2026,ED,P 302,ED P 302,ADOLES DEVELP: CROSS-CULT,3,,06,12447,Spring_2026|ED P 302|06|12447,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Taylor S,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 302,ED P 302,ADOLES DEVELP: CROSS-CULT,3,,11,12658,Spring_2026|ED P 302|11|12658,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Portnoi L,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 305,ED P 305,EDUCATIONAL PSYCHOLOGY,3,,01,1226,Spring_2026|ED P 305|01|1226,FALSE,\N,307,SEM,Th,4-6:45PM,,LA5-250,Stewart A,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 305,ED P 305,EDUCATIONAL PSYCHOLOGY,3,,01,\N,Spring_2026|ED P 305|01|NOCLASS|c79e9ec4fcd06da4,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 405,ED P 405,POSITIVE STRATGS CLASSRM MGMT,3,,01,5630,Spring_2026|ED P 405|01|5630,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Hagans K,Class instruction is: Asynch. Online-No Meet Times. Certificate of Clearance and valid TB test required.
+Spring_2026,ED,P 497,ED P 497,INDEPENDENT STUDY,1,,01,6626,Spring_2026|ED P 497|01|6626,FALSE,\N,,SUP,TBA,NA,available,OFF-CAMP,Sanderson K,Department Consent Required Class instruction is: Face to Face - Off Campus.
+Spring_2026,ED,P 497,ED P 497,INDEPENDENT STUDY,1,,04,9795,Spring_2026|ED P 497|04|9795,FALSE,\N,,SUP,TBA,NA,available,OFF-CAMP,Locks A,Department Consent Required Class instruction is: Face to Face - Off Campus.
+Spring_2026,ED,P 517,ED P 517,INDIVIDUAL/GRP COUN IN SCHOOLS,2,,01,5708,Spring_2026|ED P 517|01|5708,FALSE,\N,,SUP,Tu,4-6:45PM,available,AS-243,Knight-Teague K,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 517,ED P 517,INDIVIDUAL/GRP COUN IN SCHOOLS,2,,01,\N,Spring_2026|ED P 517|01|NOCLASS|72e3ecff7665db0f,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 518,ED P 518,SCHOOL CRISIS RESPONSE,3,,01,7065,Spring_2026|ED P 518|01|7065,FALSE,\N,311,SEM,M,7-9:45PM,available,HC-132,Knight-Teague K,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ED,P 518,ED P 518,SCHOOL CRISIS RESPONSE,3,,01,\N,Spring_2026|ED P 518|01|NOCLASS|b002da639d9f3261,FALSE,\N,,,M,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 520,ED P 520,QUANT RESEARCH METHODS IN ED,3,,01,6425,Spring_2026|ED P 520|01|6425,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Masunaga H,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ED,P 524C,ED P 524C,PSYCHOED ASSESSMENT II,2,,01,5608,Spring_2026|ED P 524C|01|5608,FALSE,\N,,SUP,Tu,4-5:45PM,available,ED2-216,Browers V,Class instruction is: Face to Face - On Campus.
+Spring_2026,ED,P 524C,ED P 524C,PSYCHOED ASSESSMENT II,2,,02,5615,Spring_2026|ED P 524C|02|5615,FALSE,\N,,SUP,W,4-5:45PM,,ED2-160B,Browers V,Class instruction is: Face to Face - On Campus.
+Spring_2026,ED,P 527,ED P 527,ADV ASSESS FOR INTERVENTION,3,,01,6402,Spring_2026|ED P 527|01|6402,FALSE,\N,311,SEM,W,7-9:45PM,available,ED2-160B,McGowan E,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ED,P 527,ED P 527,ADV ASSESS FOR INTERVENTION,3,,01,\N,Spring_2026|ED P 527|01|NOCLASS|c76c34f16a3d7157,FALSE,\N,,,W,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 536,ED P 536,COLLABORATIVE CONSULT SCHOOLS,3,,03,10972,Spring_2026|ED P 536|03|10972,FALSE,\N,306,SEM,Tu,4-6:45PM,available,ONLINE-ONLY,Loker T,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,ED,P 541,ED P 541,EDUC MEASUREMENT & ASSESSMENT,3,,01,8358,Spring_2026|ED P 541|01|8358,FALSE,\N,311,SEM,Tu,7-9:45PM,available,AS-243,Arruda E,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ED,P 541,ED P 541,EDUC MEASUREMENT & ASSESSMENT,3,,01,\N,Spring_2026|ED P 541|01|NOCLASS|23be206be571aa9d,FALSE,\N,,,Tu,7-9:45PM,,ONLINE-ONLY,Arruda E,additional meeting detail
+Spring_2026,ED,P 579A,ED P 579A,ACADEMIC ASSESSMENT & INTERVTN,3,,01,7070,Spring_2026|ED P 579A|01|7070,FALSE,\N,310,SEM,M,7-9:45PM,,AS-233,Hagans K,Class instruction is: Face to Face - On Campus.
+Spring_2026,ED,P 579B,ED P 579B,ACAD ASMNT/INTRVNTN: CLIN APPS,2,,01,8359,Spring_2026|ED P 579B|01|8359,FALSE,\N,310,SUP,MW,4-5:30PM,,LA2-203,Hagans K,Class instruction is: Face to Face - On Campus.
+Spring_2026,ED,P 595,ED P 595,QUAL RESEARCH METHODS IN ED,3,,01,10134,Spring_2026|ED P 595|01|10134,FALSE,\N,307,SEM,Tu,7-9:45PM,,EED-041,Portnoi L,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 595,ED P 595,QUAL RESEARCH METHODS IN ED,3,,01,\N,Spring_2026|ED P 595|01|NOCLASS|2527be3a95bf9e87,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Portnoi L,additional meeting detail
+Spring_2026,ED,P 595,ED P 595,QUAL RESEARCH METHODS IN ED,3,,02,10135,Spring_2026|ED P 595|02|10135,FALSE,\N,307,SEM,Tu,7-9:45PM,available,AS-233,Taylor S,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 595,ED P 595,QUAL RESEARCH METHODS IN ED,3,,02,\N,Spring_2026|ED P 595|02|NOCLASS|4ac3a1c9882d0e1a,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Taylor S,additional meeting detail
+Spring_2026,ED,P 603,ED P 603,MENTAL/BEHAVIORAL HLTH IN SCHL,3,,01,6501,Spring_2026|ED P 603|01|6501,FALSE,\N,310,SEM,W,7-9:45PM,,LA2-203,Shahroozi R,Class instruction is: Face to Face - On Campus.
+Spring_2026,ED,P 604,ED P 604,SEMINAR IN HUMAN DEVELOPMENT,3,,01,5123,Spring_2026|ED P 604|01|5123,FALSE,\N,"306,1",SEM,M,7-9:45PM,,ONLINE-ONLY,Moses R,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,ED,P 641B,ED P 641B,SCHOOL PSYCH PRACTICUM,2,,01,8360,Spring_2026|ED P 641B|01|8360,FALSE,\N,311,SUP,Th,4-5:45PM,,ED2-174,Powers K,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ED,P 641B,ED P 641B,SCHOOL PSYCH PRACTICUM,2,,01,\N,Spring_2026|ED P 641B|01|NOCLASS|a33258aa3fa826ae,FALSE,\N,,,Th,4-5:45PM,,ONLINE-ONLY,Powers K,additional meeting detail
+Spring_2026,ED,P 641B,ED P 641B,SCHOOL PSYCH PRACTICUM,2,,04,9395,Spring_2026|ED P 641B|04|9395,FALSE,\N,311,SUP,Th,4-5:45PM,,ED2-160B,Hagans K,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ED,P 641B,ED P 641B,SCHOOL PSYCH PRACTICUM,2,,04,\N,Spring_2026|ED P 641B|04|NOCLASS|83b2ff8535039a57,FALSE,\N,,,Th,4-5:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 642B,ED P 642B,FIELD WORK II - SCHOOL PSYCH,1,,02,7063,Spring_2026|ED P 642B|02|7063,FALSE,\N,307,SUP,W,7-7:50PM,,LA2-108,Hagans K,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 642B,ED P 642B,FIELD WORK II - SCHOOL PSYCH,1,,02,\N,Spring_2026|ED P 642B|02|NOCLASS|6bcf35a6b0f8893a,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 642B,ED P 642B,FIELD WORK II - SCHOOL PSYCH,1,,03,7069,Spring_2026|ED P 642B|03|7069,FALSE,\N,311,SUP,M,4-6:45PM,,HC-132,Knight-Teague K,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 642B,ED P 642B,FIELD WORK II - SCHOOL PSYCH,1,,03,\N,Spring_2026|ED P 642B|03|NOCLASS|30189862dfeedfbe,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 642B,ED P 642B,FIELD WORK II - SCHOOL PSYCH,1,,04,9185,Spring_2026|ED P 642B|04|9185,FALSE,\N,,SUP,M,7-9:45PM,available,ED2-160B,Shahroozi R,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 642B,ED P 642B,FIELD WORK II - SCHOOL PSYCH,1,,04,\N,Spring_2026|ED P 642B|04|NOCLASS|f6645e5f4b50be3a,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 642B,ED P 642B,FIELD WORK II - SCHOOL PSYCH,1,,05,12354,Spring_2026|ED P 642B|05|12354,FALSE,\N,311,SUP,W,7-9:45PM,,HC-132,Loker T,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 642B,ED P 642B,FIELD WORK II - SCHOOL PSYCH,1,,05,\N,Spring_2026|ED P 642B|05|NOCLASS|000debb38e629e37,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 643,ED P 643,SYSTEM APP INTERVENT SCHOOLS,3,,01,7178,Spring_2026|ED P 643|01|7178,FALSE,\N,307,SEM,Th,4-6:45PM,available,LA5-263,Loker T,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 643,ED P 643,SYSTEM APP INTERVENT SCHOOLS,3,,01,\N,Spring_2026|ED P 643|01|NOCLASS|a2e690428ed2a1eb,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 697,ED P 697,DIRECTED RESEARCH,1,,01,7224,Spring_2026|ED P 697|01|7224,FALSE,\N,,SUP,TBA,NA,available,OFF-CAMP,Staff,Department Consent Required Class instruction is: Face to Face - Off Campus.
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,01,1227,Spring_2026|ED P 698|01|1227,FALSE,\N,"8,55,307",SUP,TBA,NA,available,OFF-CAMP,Perez Huber L,Department Consent Required Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,01,\N,Spring_2026|ED P 698|01|NOCLASS|436887a8dde5a0c5,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,02,1853,Spring_2026|ED P 698|02|1853,FALSE,\N,"8,55,307",SUP,TBA,NA,available,OFF-CAMP,Flores N,Department Consent Required Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,02,\N,Spring_2026|ED P 698|02|NOCLASS|1cef780d69250e97,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,03,4139,Spring_2026|ED P 698|03|4139,FALSE,\N,"8,55,307",SUP,TBA,NA,available,OFF-CAMP,Santos R,Department Consent Required Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,03,\N,Spring_2026|ED P 698|03|NOCLASS|eb24f537f9690fdf,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,04,5138,Spring_2026|ED P 698|04|5138,FALSE,\N,307,SUP,TBA,NA,available,OFF-CAMP,So S,Department Consent Required Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,04,\N,Spring_2026|ED P 698|04|NOCLASS|e400b927b824af11,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,05,5142,Spring_2026|ED P 698|05|5142,FALSE,\N,307,SUP,TBA,NA,available,OFF-CAMP,Powers K,Department Consent Required Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,05,\N,Spring_2026|ED P 698|05|NOCLASS|0c7db621b3f8d413,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,06,5143,Spring_2026|ED P 698|06|5143,FALSE,\N,307,SUP,TBA,NA,available,OFF-CAMP,Staff,Department Consent Required Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ED,P 698,ED P 698,THESIS,3,,06,\N,Spring_2026|ED P 698|06|NOCLASS|a906e0a4877373e4,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail

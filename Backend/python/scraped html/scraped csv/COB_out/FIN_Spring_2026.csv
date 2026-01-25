@@ -1,0 +1,63 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,01,1361,Spring_2026|FIN 300|01|1361,FALSE,\N,,LEC,TuTh,3:30-4:45PM,,COB-139,Prombutr W,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,02,1362,Spring_2026|FIN 300|02|1362,FALSE,\N,,LEC,TuTh,9:30-10:45AM,,COB-139,Ma Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,04,3150,Spring_2026|FIN 300|04|3150,FALSE,\N,,LEC,MW,9:30-10:45AM,,COB-139,Chen C,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,05,3177,Spring_2026|FIN 300|05|3177,FALSE,\N,306,LEC,Tu,7-9:45PM,,ONLINE-ONLY,Shin H,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,06,3178,Spring_2026|FIN 300|06|3178,FALSE,\N,,LEC,MW,11-12:15PM,,COB-124,Johnson E,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,07,3777,Spring_2026|FIN 300|07|3777,FALSE,\N,,LEC,MW,5-6:15PM,,COB-139,Phengpis C,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,08,5611,Spring_2026|FIN 300|08|5611,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Ma Y,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,09,7581,Spring_2026|FIN 300|09|7581,FALSE,\N,,LEC,MW,12:30-1:45PM,,FCS-126,Ke S,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,10,7582,Spring_2026|FIN 300|10|7582,FALSE,\N,,LEC,TuTh,12:30-1:45PM,,COB-216,Johnson E,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,11,9498,Spring_2026|FIN 300|11|9498,FALSE,\N,310,LEC,TuTh,12:30-1:45PM,,HHS1-100,McEnulty F,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,12,9672,Spring_2026|FIN 300|12|9672,FALSE,\N,310,LEC,TuTh,11-12:15PM,,COB-110,Ham D,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,300,FIN 300,BUSINESS FINANCE,3,,13,9747,Spring_2026|FIN 300|13|9747,FALSE,\N,310,LEC,TuTh,2-3:15PM,,COB-216,Solt M,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,310,FIN 310,PERSONAL FINANCE,3,,01,6432,Spring_2026|FIN 310|01|6432,FALSE,\N,,LEC,MW,8-9:15AM,available,COB-236,Johnson E,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,330,FIN 330,INSURANCE PRINCIPLES,3,,01,9111,Spring_2026|FIN 330|01|9111,FALSE,\N,,LEC,TuTh,9:30-10:45AM,,COB-217,Ham D,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,340,FIN 340,REAL ESTATE PRINCIPLES,3,,01,4115,Spring_2026|FIN 340|01|4115,FALSE,\N,,LEC,TuTh,12:30-1:45PM,,COB-217,Ham D,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,350,FIN 350,INVESTMENT PRINCIPLES,3,,01,2346,Spring_2026|FIN 350|01|2346,FALSE,\N,,SEM,MW,2-3:15PM,,COB-124,Johnson E,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,350,FIN 350,INVESTMENT PRINCIPLES,3,,02,2782,Spring_2026|FIN 350|02|2782,FALSE,\N,,SEM,W,4-6:45PM,,COB-235,Ke S,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,350,FIN 350,INVESTMENT PRINCIPLES,3,,03,3109,Spring_2026|FIN 350|03|3109,FALSE,\N,306,SEM,Tu,4-6:45PM,,ONLINE-ONLY,McEnulty F,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,FIN,350,FIN 350,INVESTMENT PRINCIPLES,3,,04,4091,Spring_2026|FIN 350|04|4091,FALSE,\N,,SEM,Th,4-6:45PM,,COB-237A,Kim Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,350,FIN 350,INVESTMENT PRINCIPLES,3,,05,7912,Spring_2026|FIN 350|05|7912,FALSE,\N,,SEM,TuTh,2-3:15PM,,COB-237A,Kim Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,360,FIN 360,CAPITAL MARKETS,3,,01,3750,Spring_2026|FIN 360|01|3750,TRUE,\N,,LEC,MW,11-12:15PM,,COB-235,Gonzalez Alana L,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,400,FIN 400,INTERMEDIATE FINANCIAL MGMT,3,,01,3751,Spring_2026|FIN 400|01|3751,FALSE,\N,306,SEM,Tu,4-6:45PM,,ONLINE-ONLY,Ma Y,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,FIN,400,FIN 400,INTERMEDIATE FINANCIAL MGMT,3,,02,3753,Spring_2026|FIN 400|02|3753,FALSE,\N,,SEM,MW,12:30-1:45PM,,COB-235,Shin H,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,400,FIN 400,INTERMEDIATE FINANCIAL MGMT,3,,03,3963,Spring_2026|FIN 400|03|3963,FALSE,\N,,SEM,MW,2-3:15PM,,COB-235,Shin H,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,400,FIN 400,INTERMEDIATE FINANCIAL MGMT,3,,04,4151,Spring_2026|FIN 400|04|4151,FALSE,\N,,SEM,TuTh,11-12:15PM,,COB-235,Johnson E,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,450,FIN 450,PORTFOLIO ANALYSIS,3,,01,3752,Spring_2026|FIN 450|01|3752,FALSE,\N,,SEM,TuTh,2-3:15PM,,COB-236,Coryell R,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,450,FIN 450,PORTFOLIO ANALYSIS,3,,02,3850,Spring_2026|FIN 450|02|3850,FALSE,\N,,SEM,M,7-9:45PM,,COB-124,Salih A,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,450,FIN 450,PORTFOLIO ANALYSIS,3,,03,4513,Spring_2026|FIN 450|03|4513,FALSE,\N,,SEM,MW,12:30-1:45PM,,COB-228,Salih A,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,460,FIN 460,MGMT IN FINANCIAL INSTITUTIONS,3,,01,3863,Spring_2026|FIN 460|01|3863,TRUE,\N,,LEC,MW,9:30-10:45AM,,COB-235,Gonzalez Alana L,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,460,FIN 460,MGMT IN FINANCIAL INSTITUTIONS,3,,02,4090,Spring_2026|FIN 460|02|4090,FALSE,\N,311,LEC,Th,11-12:15PM,,COB-229,Stimpfl P,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,FIN,460,FIN 460,MGMT IN FINANCIAL INSTITUTIONS,3,,02,\N,Spring_2026|FIN 460|02|NOCLASS|10e9b1ab25791f48,FALSE,\N,,,Tu,11-12:15PM,,ONLINE-ONLY,Stimpfl P,additional meeting detail
+Spring_2026,FIN,460,FIN 460,MGMT IN FINANCIAL INSTITUTIONS,3,,03,4512,Spring_2026|FIN 460|03|4512,TRUE,\N,306,LEC,W,7-9:45PM,,ONLINE-ONLY,Gonzalez Alana L,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,FIN,460,FIN 460,MGMT IN FINANCIAL INSTITUTIONS,3,,04,6835,Spring_2026|FIN 460|04|6835,FALSE,\N,311,LEC,Th,12:30-1:45PM,,COB-235,Stimpfl P,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,FIN,460,FIN 460,MGMT IN FINANCIAL INSTITUTIONS,3,,04,\N,Spring_2026|FIN 460|04|NOCLASS|e0baab6f6c2a6ab2,FALSE,\N,,,Tu,12:30-1:45PM,,ONLINE-ONLY,Stimpfl P,additional meeting detail
+Spring_2026,FIN,470,FIN 470,SEMINAR IN FINANCIAL MGMT,3,,01,3877,Spring_2026|FIN 470|01|3877,FALSE,\N,,SEM,M,4-6:45PM,,COB-235,McEnulty F,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,480,FIN 480,DERIVATIVES,3,,01,5241,Spring_2026|FIN 480|01|5241,FALSE,\N,,SEM,TuTh,11-12:15PM,,COB-124,Coryell R,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,485,FIN 485,FIXED INCOME SECURITIES,3,,01,2492,Spring_2026|FIN 485|01|2492,FALSE,\N,,LEC,Tu,4-6:45PM,,COB-229,Coryell R,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,490,FIN 490,INTERNATIONAL FINANCE,3,,01,1363,Spring_2026|FIN 490|01|1363,TRUE,\N,306,SEM,M,7-9:45PM,,ONLINE-ONLY,Gonzalez Alana L,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,FIN,490,FIN 490,INTERNATIONAL FINANCE,3,,02,2420,Spring_2026|FIN 490|02|2420,FALSE,\N,,SEM,Tu,4-6:45PM,,COB-124,Rowe J,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,490,FIN 490,INTERNATIONAL FINANCE,3,,03,2493,Spring_2026|FIN 490|03|2493,FALSE,\N,,SEM,TuTh,9:30-10:45AM,,COB-229,McEnulty F,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,490,FIN 490,INTERNATIONAL FINANCE,3,,04,3961,Spring_2026|FIN 490|04|3961,FALSE,\N,,SEM,MW,11-12:15PM,,COB-229,Ham D,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,497,FIN 497,DIRECTED STUDIES IN FINANCE,1,,01,10907,Spring_2026|FIN 497|01|10907,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Ammermann P,Department Consent Required Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,FIN,497,FIN 497,DIRECTED STUDIES IN FINANCE,1,,02,12632,Spring_2026|FIN 497|02|12632,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Salih A,Department Consent Required Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,FIN,499B,FIN 499B,APPLIED PORTFOLIO MANAGEMENT,3,,01,1364,Spring_2026|FIN 499B|01|1364,FALSE,\N,"1,15",SEM,M,7-9:45PM,available,COB-229,Ammermann P,Department Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,501,FIN 501,FINANCIAL MANAGEMENT CONCEPTS,3,,01,2363,Spring_2026|FIN 501|01|2363,FALSE,\N,311,SEM,W,7-9:45PM,available,COB-124,Phengpis C,Class instruction is: Hybrid (Face to Face & Synch). Evening MBA (EMBA)
+Spring_2026,FIN,501,FIN 501,FINANCIAL MANAGEMENT CONCEPTS,3,,01,\N,Spring_2026|FIN 501|01|NOCLASS|13bd19ddc0b9abf5,FALSE,\N,,,W,7-9:45PM,,ONLINE-ONLY,Phengpis C,additional meeting detail
+Spring_2026,FIN,600,FIN 600,SEMINAR IN BUSINESS FINANCE,3,,01,4752,Spring_2026|FIN 600|01|4752,FALSE,\N,,SEM,Tu,7-9:45PM,available,COB-229,Mari R,Class instruction is: Face to Face - On Campus. Evening MBA (EMBA)
+Spring_2026,FIN,660,FIN 660,SEM FIN INSTITUTIONS & ETHICS,3,,01,6556,Spring_2026|FIN 660|01|6556,FALSE,\N,,SEM,M,7-9:45PM,,COB-235,McEnulty F,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,680,FIN 680,SEMINAR IN DERIVATIVES,3,,01,6500,Spring_2026|FIN 680|01|6500,FALSE,\N,,SEM,Tu,7-9:45PM,available,COB-217,Kim Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,685,FIN 685,SEM FIXED-INCOME SECURITIES,3,,01,5279,Spring_2026|FIN 685|01|5279,FALSE,\N,,SEM,Th,7-9:45PM,available,COB-229,Ammermann P,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,690,FIN 690,SEMINAR ECONOMICS/INTL FINANCE,3,,01,6555,Spring_2026|FIN 690|01|6555,FALSE,\N,,SEM,W,7-9:45PM,available,COB-235,Salih A,Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,699B,FIN 699B,APPLIED PORTFOLIO MANAGEMENT,3,,01,1365,Spring_2026|FIN 699B|01|1365,FALSE,\N,"1,46",SEM,M,7-9:45PM,available,COB-229,Ammermann P,Department Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,FIN,501,FIN 501,FINANCIAL MANAGEMENT CONCEPTS,3,,02,9799,Spring_2026|FIN 501|02|9799,FALSE,\N,309,SEM,M,7-9:45PM,,ONLINE-ONLY,Phengpis C,Class instruction is: Online - Mixed Meet Times. Online MBA students only (OMBA)
+Spring_2026,FIN,501,FIN 501,FINANCIAL MANAGEMENT CONCEPTS,3,,02,\N,Spring_2026|FIN 501|02|NOCLASS|b30bc6b8be36d7b9,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,FIN,650,FIN 650,SEMINAR IN INVESTMENTS,3,,01,9800,Spring_2026|FIN 650|01|9800,FALSE,\N,309,SEM,Th,6-8:45PM,,ONLINE-ONLY,Prombutr W,Class instruction is: Online - Mixed Meet Times. Online MBA students only (OMBA)
+Spring_2026,FIN,650,FIN 650,SEMINAR IN INVESTMENTS,3,,01,\N,Spring_2026|FIN 650|01|NOCLASS|450bdfb519ebf587,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,FIN,501,FIN 501,FINANCIAL MANAGEMENT CONCEPTS,3,,03,9830,Spring_2026|FIN 501|03|9830,FALSE,\N,309,SEM,W,6-8:45PM,,ONLINE-ONLY,Chen C,Class instruction is: Online - Mixed Meet Times. Online MBA students only (OMBA)
+Spring_2026,FIN,501,FIN 501,FINANCIAL MANAGEMENT CONCEPTS,3,,03,\N,Spring_2026|FIN 501|03|NOCLASS|760a2fdceaf040c7,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,FIN,600,FIN 600,SEMINAR IN BUSINESS FINANCE,3,,02,9831,Spring_2026|FIN 600|02|9831,FALSE,\N,309,SEM,W,6-8:45PM,,ONLINE-ONLY,Ammermann P,Class instruction is: Online - Mixed Meet Times. Online MBA students only (OMBA)
+Spring_2026,FIN,600,FIN 600,SEMINAR IN BUSINESS FINANCE,3,,02,\N,Spring_2026|FIN 600|02|NOCLASS|9fe2651de4d87d8a,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,FIN,650,FIN 650,SEMINAR IN INVESTMENTS,3,,02,9832,Spring_2026|FIN 650|02|9832,FALSE,\N,309,SEM,W,6-8:45PM,,ONLINE-ONLY,Mari R,Class instruction is: Online - Mixed Meet Times. Online MBA students only (OMBA)
+Spring_2026,FIN,650,FIN 650,SEMINAR IN INVESTMENTS,3,,02,\N,Spring_2026|FIN 650|02|NOCLASS|14346b482dce47de,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
