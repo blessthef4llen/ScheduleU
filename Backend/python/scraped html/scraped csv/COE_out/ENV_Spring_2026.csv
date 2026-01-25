@@ -1,0 +1,6 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,ENV,101,ENV 101,INTRO TO ENVIRONMENTAL ENGR,1,GE: E,01,6716,Spring_2026|ENV 101|01|6716,FALSE,\N,,SEM,Th,11-11:50AM,available,VEC-331,Asvapathanagul P,Class instruction is: Face to Face - On Campus. Class offered with ENV-101H-01
+Spring_2026,ENV,101H,ENV 101H,INTRO TO ENVIRONMENTAL ENGR,1,GE: E,01,9404,Spring_2026|ENV 101H|01|9404,FALSE,\N,,SEM,Th,11-11:50AM,available,VEC-331,Asvapathanagul P,Class instruction is: Face to Face - On Campus. Class offered with ENV-101-01
+Spring_2026,ENV,480,ENV 480,ENV ASMNT REPORT WRITING,1,,01,7497,Spring_2026|ENV 480|01|7497,FALSE,\N,,SEM,W,11-11:50AM,available,VEC-115,Bourbour E,Class instruction is: Face to Face - On Campus.
+Spring_2026,ENV,490,ENV 490,SENIOR DESIGN PROJECTS,3,,01,7498,Spring_2026|ENV 490|01|7498,FALSE,\N,,SEM,M,5-6:50PM,available,VEC-224,Hong J,Department Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,ENV,490,ENV 490,SENIOR DESIGN PROJECTS,3,,02,7499,Spring_2026|ENV 490|02|7499,FALSE,\N,,LAB,M,7-9:45PM,available,VEC-224,Hong J,Department Consent Required Class instruction is: Face to Face - On Campus.

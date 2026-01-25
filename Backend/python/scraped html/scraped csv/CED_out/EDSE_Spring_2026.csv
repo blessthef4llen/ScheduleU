@@ -1,0 +1,26 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,EDSE,435,EDSE 435,U S SECONDRY SCHLS INTERCL EDU,3,,01,1801,Spring_2026|EDSE 435|01|1801,FALSE,\N,"310,1,27,224,10",LEC,M,4-6:45PM,,AS-235,Macias H,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,435,EDSE 435,U S SECONDRY SCHLS INTERCL EDU,3,,02,1800,Spring_2026|EDSE 435|02|1800,FALSE,\N,"310,1,27,224,10",LEC,M,7-9:45PM,,LA2-205,Zaid D,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,435,EDSE 435,U S SECONDRY SCHLS INTERCL EDU,3,,03,2228,Spring_2026|EDSE 435|03|2228,FALSE,\N,"310,1,27,224,10",LEC,Tu,4-6:45PM,,LA1-314,Navarro O,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,435,EDSE 435,U S SECONDRY SCHLS INTERCL EDU,3,,04,3074,Spring_2026|EDSE 435|04|3074,FALSE,\N,"310,1,27,224,10",LEC,Tu,7-9:45PM,,LA1-314,Crawford N,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,435,EDSE 435,U S SECONDRY SCHLS INTERCL EDU,3,,05,3458,Spring_2026|EDSE 435|05|3458,FALSE,\N,"310,1,27,224,10",LEC,W,12-2:45PM,,ED2-158,Navarro O,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,435,EDSE 435,U S SECONDRY SCHLS INTERCL EDU,3,,06,4171,Spring_2026|EDSE 435|06|4171,FALSE,\N,"310,1,27,224,10",LEC,W,7-9:45PM,,ED2-158,Orozco A,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,435,EDSE 435,U S SECONDRY SCHLS INTERCL EDU,3,,07,4809,Spring_2026|EDSE 435|07|4809,FALSE,\N,"310,1,27,224,10",LEC,Th,7-9:45PM,,EED-040,Orozco A,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,435,EDSE 435,U S SECONDRY SCHLS INTERCL EDU,3,,08,9641,Spring_2026|EDSE 435|08|9641,FALSE,\N,"310,1,27,224,10",LEC,Th,4-6:45PM,,LA1-314,Aguilar M,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,436,EDSE 436,CURRIC INSTR ASSESS AFFRMG ENV,3,,01,1802,Spring_2026|EDSE 436|01|1802,FALSE,\N,"310,1,10,27,224",LEC,Tu,4-6:45PM,,HC-133,Rogers S,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,436,EDSE 436,CURRIC INSTR ASSESS AFFRMG ENV,3,,02,3075,Spring_2026|EDSE 436|02|3075,FALSE,\N,"310,1,10,27,93,224",LEC,Tu,7-9:45PM,,HC-102,Nolasco W,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,436,EDSE 436,CURRIC INSTR ASSESS AFFRMG ENV,3,,04,4153,Spring_2026|EDSE 436|04|4153,FALSE,\N,"310,1,10,27,224",LEC,W,4-6:45PM,,LA1-308,Tate D,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,436,EDSE 436,CURRIC INSTR ASSESS AFFRMG ENV,3,,05,4154,Spring_2026|EDSE 436|05|4154,FALSE,\N,"310,1,10,27,224",LEC,M,7-9:45PM,,HC-102,Loeb G,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,436,EDSE 436,CURRIC INSTR ASSESS AFFRMG ENV,3,,06,4548,Spring_2026|EDSE 436|06|4548,FALSE,\N,"310,1,10,27,224",LEC,Th,4-6:45PM,,HC-102,Hume D,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,436,EDSE 436,CURRIC INSTR ASSESS AFFRMG ENV,3,,07,4799,Spring_2026|EDSE 436|07|4799,FALSE,\N,"310,1,10,27,224",LEC,Th,7-9:45PM,,HC-102,Hume D,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,436,EDSE 436,CURRIC INSTR ASSESS AFFRMG ENV,3,,08,9229,Spring_2026|EDSE 436|08|9229,FALSE,\N,"310,1,10,27,224",LEC,W,7-9:45PM,,LA1-308,Tate D,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,436,EDSE 436,CURRIC INSTR ASSESS AFFRMG ENV,3,,09,9644,Spring_2026|EDSE 436|09|9644,FALSE,\N,"310,1,10,27,224",LEC,M,12-2:45PM,,EED-040,Golden N,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,458,EDSE 458,RDNG/WRTNG SECNDRY SCHLS HUM,3,,01,7739,Spring_2026|EDSE 458|01|7739,FALSE,\N,"310,10,27,224,1",LEC,M,4-6:45PM,,LA3-106,Hall K,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,458,EDSE 458,RDNG/WRTNG SECNDRY SCHLS HUM,3,,02,7740,Spring_2026|EDSE 458|02|7740,FALSE,\N,310,LEC,M,7-9:45PM,,LA3-106,Hall K,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,458,EDSE 458,RDNG/WRTNG SECNDRY SCHLS HUM,3,,03,7741,Spring_2026|EDSE 458|03|7741,FALSE,\N,310,LEC,W,7-9:45PM,,HC-102,Hume S,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,458,EDSE 458,RDNG/WRTNG SECNDRY SCHLS HUM,3,,04,7744,Spring_2026|EDSE 458|04|7744,FALSE,\N,310,LEC,W,4-6:45PM,,HC-102,Hume S,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,458,EDSE 458,RDNG/WRTNG SECNDRY SCHLS HUM,3,,05,9595,Spring_2026|EDSE 458|05|9595,FALSE,\N,310,LEC,W,4-6:45PM,,LA3-106,Hall K,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,458,EDSE 458,RDNG/WRTNG SECNDRY SCHLS HUM,3,,06,12693,Spring_2026|EDSE 458|06|12693,FALSE,\N,"1,10,27,224,310",LEC,W,7-9:45PM,available,LA3-106,Hall K,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,459,EDSE 459,RDNG/WRTNG SECNDRY SCHLS STEM,3,,02,7742,Spring_2026|EDSE 459|02|7742,FALSE,\N,310,LEC,Tu,7-9:45PM,,LA2-205,Ruiz M,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,459,EDSE 459,RDNG/WRTNG SECNDRY SCHLS STEM,3,,03,7743,Spring_2026|EDSE 459|03|7743,FALSE,\N,310,LEC,Th,4-6:45PM,,HC-132,Maya M,Class instruction is: Face to Face - On Campus.
+Spring_2026,EDSE,459,EDSE 459,RDNG/WRTNG SECNDRY SCHLS STEM,3,,04,9318,Spring_2026|EDSE 459|04|9318,FALSE,\N,310,LEC,Th,7-9:45PM,,HC-132,Maya M,Class instruction is: Face to Face - On Campus.

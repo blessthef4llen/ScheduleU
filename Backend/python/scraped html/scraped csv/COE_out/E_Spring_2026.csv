@@ -1,0 +1,29 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,E,T 101,E T 101,INTRO ENGINEERING TECHNOLOGY,1,GE: E,02,10982,Spring_2026|E T 101|02|10982,FALSE,\N,310,SEM,M,1-1:50PM,available,VEC-519,Ghaforyfard P,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 252,E T 252,CIRCUIT ANALYSIS II,2,,02,10983,Spring_2026|E T 252|02|10983,FALSE,\N,310,SEM,MW,10-10:50AM,,ECS-315,Jalali S,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 252L,E T 252L,CIRCUIT ANALYSIS II LABORATORY,1,,02,10984,Spring_2026|E T 252L|02|10984,FALSE,\N,310,LAB,MW,11-12:15PM,,ECS-315,Jalali S,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 255,E T 255,INTRO TO DIGITAL ELECTRONICS,2,,01,6478,Spring_2026|E T 255|01|6478,FALSE,\N,310,SEM,Tu,7-8:50PM,,VEC-325,Sleiman A,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 255L,E T 255L,INTRO DIGITAL ELECTRONICS LAB,1,,01,6479,Spring_2026|E T 255L|01|6479,FALSE,\N,310,LAB,Th,7-9:45PM,,ECS-317,Sleiman A,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 286,E T 286,OBJECT ORIENTED PROGRAMMING,2,,01,6943,Spring_2026|E T 286|01|6943,FALSE,\N,,SEM,M,7-8:50PM,available,ECS-314,Jalali S,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 286L,E T 286L,OBJECT ORIENTED PROGRAMNG LAB,1,,01,6944,Spring_2026|E T 286L|01|6944,FALSE,\N,,LAB,W,7-9:45PM,available,ECS-315,Jalali S,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 312,E T 312,STATISTICAL QUALITY CONTROL,3,,01,6659,Spring_2026|E T 312|01|6659,FALSE,\N,,SEM,Tu,4-6:45PM,available,VEC-110,Shariat P,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 341,E T 341,SOLID STATE ELECTRONICS II,2,,01,7210,Spring_2026|E T 341|01|7210,FALSE,\N,,SEM,F,5-6:50PM,available,ET-113,Lopez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 341L,E T 341L,SOLID STATE ELECTRONICS II,1,,01,7211,Spring_2026|E T 341L|01|7211,FALSE,\N,,LAB,F,7-9:45PM,available,ET-113,Lopez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 350,E T 350,MOTORS & GENERATORS,2,,01,2319,Spring_2026|E T 350|01|2319,FALSE,\N,,SEM,M,5-6:50PM,available,ET-113,Lopez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 350L,E T 350L,MOTORS & GENERATORS LABORATORY,1,,01,2320,Spring_2026|E T 350L|01|2320,FALSE,\N,,LAB,M,7-9:45PM,available,ET-113,Lopez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 409B,E T 409B,SENIOR PROB-ELECTRONICS TECH,1,,01,1817,Spring_2026|E T 409B|01|1817,FALSE,\N,,SUP,TBA,NA,available,ECS-610,Khoo I,Department Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 409C,E T 409C,SENIOR PROB-MANUFACTURING TECH,1,,01,1213,Spring_2026|E T 409C|01|1213,FALSE,\N,7,SUP,TBA,NA,available,ECS-610,Staff,Department Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 409D,E T 409D,SENIOR PROB-QUALITY ASSURANCE,1,,01,1214,Spring_2026|E T 409D|01|1214,FALSE,\N,7,SUP,TBA,NA,available,ECS-610,Staff,Department Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 409E,E T 409E,SENIOR PROBLEMS COMPUTER TECH,1,,01,2043,Spring_2026|E T 409E|01|2043,FALSE,\N,,SUP,TBA,NA,available,ECS-610,Khoo I,Department Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 409F,E T 409F,ENVIRONMENTAL TECHNOLOGY,1,,02,2705,Spring_2026|E T 409F|02|2705,FALSE,\N,,SUP,TBA,NA,available,ECS-610,Staff,Department Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 444,E T 444,TELECOMMUNCATIONS,3,,01,7350,Spring_2026|E T 444|01|7350,FALSE,\N,,SEM,Tu,7-9:45PM,available,ET-113,Lopez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 486,E T 486,DATA STRUCTURES,2,,01,8993,Spring_2026|E T 486|01|8993,FALSE,\N,,SEM,M,5-6:50PM,available,VEC-501,Taggart D,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 486L,E T 486L,DATA STRUCTURES LABORATORY,1,,01,8994,Spring_2026|E T 486L|01|8994,FALSE,\N,,LAB,M,7-9:45PM,available,VEC-417,Taggart D,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 488,E T 488,MICROCOMPUTER SYSTEMS,2,,01,7869,Spring_2026|E T 488|01|7869,FALSE,\N,,SEM,Th,5-6:50PM,available,ECS-316,Seng A,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 488L,E T 488L,MICROCOMPUTER SYSTEMS LAB,1,,01,7870,Spring_2026|E T 488L|01|7870,FALSE,\N,,LAB,Th,7-9:45PM,available,ECS-316,Seng A,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 491,E T 491,EMBEDDED PROCESSORS SYSTEMS,2,,01,7482,Spring_2026|E T 491|01|7482,FALSE,\N,,SEM,W,5-6:50PM,available,ET-113,Lopez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 491L,E T 491L,EMBEDDED PROCESSOR SYSTM LAB,1,,02,7483,Spring_2026|E T 491L|02|7483,FALSE,\N,,LAB,W,7-9:45PM,available,ET-113,Lopez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 492,E T 492,COMP CONTROLLD INDUSTRIAL SYST,2,,01,8590,Spring_2026|E T 492|01|8590,FALSE,\N,,SEM,Tu,5-6:50PM,available,ECS-317,Partida B,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 492L,E T 492L,COMP CONTROLLD INDUSTL SYS LAB,1,,01,8591,Spring_2026|E T 492L|01|8591,FALSE,\N,,LAB,Tu,7-9:45PM,available,ECS-317,Partida B,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 494,E T 494,APPLIED SYSTEMS DEVLP PROJECT,2,GE AREA: F-Capstone,01,8975,Spring_2026|E T 494|01|8975,FALSE,\N,,SEM,F,5-6:50PM,available,VEC-325,Babaeian M,Class instruction is: Face to Face - On Campus.
+Spring_2026,E,T 494L,E T 494L,APPL SYSTEMS DEVLP PROJECT LAB,1,GE AREA: F-Capstone,01,8976,Spring_2026|E T 494L|01|8976,FALSE,\N,,LAB,F,7-9:45PM,available,VEC-325,Babaeian M,Class instruction is: Face to Face - On Campus.
