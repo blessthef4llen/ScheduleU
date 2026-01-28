@@ -1,0 +1,5 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,GK,101B,GK 101B,INTRODUCTORY GREEK,3,GE: 3B (C2),01,6736,Spring_2026|GK 101B|01|6736,FALSE,\N,,LEC,MW,9:30-10:45AM,available,COB-111,Hogan A,Class instruction is: Face to Face - On Campus.
+Spring_2026,GK,401,GK 401,HOMER,3,,01,10477,Spring_2026|GK 401|01|10477,FALSE,\N,,SEM,TuTh,3:30-4:45PM,available,LA5-353,Chew K,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,GK,401,GK 401,HOMER,3,,01,\N,Spring_2026|GK 401|01|NOCLASS|27faee0fc1b6002f,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Chew K,additional meeting detail
+Spring_2026,GK,499,GK 499,DIRECTED STUDIES,1,,01,1929,Spring_2026|GK 499|01|1929,FALSE,\N,"3,305",SUP,TBA,NA,available,ONLINE-ONLY,Chew K,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.

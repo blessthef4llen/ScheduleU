@@ -1,0 +1,51 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,PPA,512,PPA 512,URBAN EXECUTIVE MGMT,3,,01,10416,Spring_2026|PPA 512|01|10416,FALSE,\N,,SEM,W,4-6:45PM,available,SPA-112,Goodman M,Class instruction is: Face to Face - On Campus.
+Spring_2026,PPA,518,PPA 518,MICROECONOMICS PUBLIC POLICY,3,,01,5162,Spring_2026|PPA 518|01|5162,FALSE,\N,,SEM,W,7-9:45PM,available,SPA-112,Wong P,Class instruction is: Face to Face - On Campus.
+Spring_2026,PPA,542,PPA 542,EMERGENCY PLANNING & MANAGEMNT,3,,01,9507,Spring_2026|PPA 542|01|9507,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Campbell J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,555,PPA 555,GOVERNMENT BUDGET & FINANCE,3,,02,9378,Spring_2026|PPA 555|02|9378,FALSE,\N,,SEM,M,7-9:45PM,available,SPA-208,Nkrumah R,Class instruction is: Face to Face - On Campus.
+Spring_2026,PPA,555,PPA 555,GOVERNMENT BUDGET & FINANCE,3,,03,10961,Spring_2026|PPA 555|03|10961,FALSE,\N,306,SEM,Tu,4-6:45PM,,ONLINE-ONLY,Nkrumah R,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,PPA,585,PPA 585,PPA INTERNSHIP,3,,01,11203,Spring_2026|PPA 585|01|11203,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Nkrumah R,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,610,PPA 610,SEM URBAN AFFAIRS,3,,01,9370,Spring_2026|PPA 610|01|9370,FALSE,\N,306,SEM,M,7-9:45PM,available,ONLINE-ONLY,Butz A,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,PPA,660,PPA 660,SEM ORG THEORY & BEHAVIOR,3,,01,4775,Spring_2026|PPA 660|01|4775,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Baber F,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,660,PPA 660,SEM ORG THEORY & BEHAVIOR,3,,02,8193,Spring_2026|PPA 660|02|8193,FALSE,\N,,SEM,W,7-9:45PM,,SPA-208,Dominguez R,Class instruction is: Face to Face - On Campus.
+Spring_2026,PPA,696,PPA 696,RESEARCH METHODS,3,,01,5205,Spring_2026|PPA 696|01|5205,FALSE,\N,306,SEM,Tu,4-6:45PM,available,ONLINE-ONLY,Campbell J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,PPA,696,PPA 696,RESEARCH METHODS,3,,02,9220,Spring_2026|PPA 696|02|9220,FALSE,\N,306,SEM,Tu,7-9:45PM,,ONLINE-ONLY,Campbell J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,01,3230,Spring_2026|PPA 697|01|3230,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Martin E,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,02,3438,Spring_2026|PPA 697|02|3438,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Martin E,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,03,3773,Spring_2026|PPA 697|03|3773,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Mathews M,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,04,4665,Spring_2026|PPA 697|04|4665,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Mathews M,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,05,5964,Spring_2026|PPA 697|05|5964,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Powell D,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,06,6084,Spring_2026|PPA 697|06|6084,FALSE,\N,,SUP,NA,NA,,ONLINE-ONLY,Powell D,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,07,6085,Spring_2026|PPA 697|07|6085,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Zhao T,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,08,6620,Spring_2026|PPA 697|08|6620,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Zhao T,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,09,9222,Spring_2026|PPA 697|09|9222,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Baber F,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,10,10411,Spring_2026|PPA 697|10|10411,FALSE,\N,,SUP,TBA,NA,available,ONLINE-ONLY,Butz A,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,697,PPA 697,DIRECTED RESEARCH,3,,11,10410,Spring_2026|PPA 697|11|10410,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Nkrumah R,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,PPA,500,PPA 500,FOUNDATION OF PPA,3,,01,5707,Spring_2026|PPA 500|01|5707,FALSE,\N,309,SEM,Tu,4-6:45PM,available,ONLINE-ONLY,Powell D,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,500,PPA 500,FOUNDATION OF PPA,3,,01,\N,Spring_2026|PPA 500|01|NOCLASS|fd8bfa201d8b0c3b,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,500,PPA 500,FOUNDATION OF PPA,3,,04,10966,Spring_2026|PPA 500|04|10966,FALSE,\N,309,SEM,Th,4-6:45PM,available,ONLINE-ONLY,Powell D,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,500,PPA 500,FOUNDATION OF PPA,3,,04,\N,Spring_2026|PPA 500|04|NOCLASS|4445299d3a1b33c0,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,533,PPA 533,RACE INEQUALITY PUBLIC POLICY,3,,01,6083,Spring_2026|PPA 533|01|6083,FALSE,\N,309,SEM,Tu,7-9:45PM,available,ONLINE-ONLY,Martin E,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,533,PPA 533,RACE INEQUALITY PUBLIC POLICY,3,,01,\N,Spring_2026|PPA 533|01|NOCLASS|2cf7b6e46ae862cf,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,540,PPA 540,GRANTS ADMINISTRATN MANAGEMENT,3,,01,10603,Spring_2026|PPA 540|01|10603,FALSE,\N,309,SEM,M,4-6:45PM,,ONLINE-ONLY,Berg D,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,540,PPA 540,GRANTS ADMINISTRATN MANAGEMENT,3,,01,\N,Spring_2026|PPA 540|01|NOCLASS|fc0aedf1c26798f8,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,571,PPA 571,LEADERSHIP SKILLS & STRATEGIES,3,,01,9819,Spring_2026|PPA 571|01|9819,FALSE,\N,309,SEM,M,7-9:45PM,available,ONLINE-ONLY,Martin E,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,571,PPA 571,LEADERSHIP SKILLS & STRATEGIES,3,,01,\N,Spring_2026|PPA 571|01|NOCLASS|fcc3e21bcce95461,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,577,PPA 577,PUB SECT HUMAN RESOURCES MGMT,3,,01,4441,Spring_2026|PPA 577|01|4441,FALSE,\N,309,SEM,Th,7-9:45PM,,ONLINE-ONLY,Martin E,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,577,PPA 577,PUB SECT HUMAN RESOURCES MGMT,3,,01,\N,Spring_2026|PPA 577|01|NOCLASS|e1a624923d9c2d22,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,577,PPA 577,PUB SECT HUMAN RESOURCES MGMT,3,,02,9820,Spring_2026|PPA 577|02|9820,FALSE,\N,309,SEM,Tu,7-9:45PM,available,ONLINE-ONLY,Martin E,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,577,PPA 577,PUB SECT HUMAN RESOURCES MGMT,3,,02,\N,Spring_2026|PPA 577|02|NOCLASS|54c8b6bea9daf10d,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,670,PPA 670,POLICY ISSUE ANALYSIS,3,,01,9821,Spring_2026|PPA 670|01|9821,FALSE,\N,307,SEM,Tu,7-9:45PM,available,SPA-208,Zhao T,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,PPA,670,PPA 670,POLICY ISSUE ANALYSIS,3,,01,\N,Spring_2026|PPA 670|01|NOCLASS|5e9dd188d8f246ac,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,515,PPA 515,ADMN REPORT WRITING,3,,01,10602,Spring_2026|PPA 515|01|10602,FALSE,\N,309,SEM,Th,7-9:45PM,available,ONLINE-ONLY,Netter M,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,515,PPA 515,ADMN REPORT WRITING,3,,01,\N,Spring_2026|PPA 515|01|NOCLASS|48d9db139b8fd776,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,521,PPA 521,MICROCOMP MGMT PUBLC ADMNTRTOR,3,,01,9847,Spring_2026|PPA 521|01|9847,FALSE,\N,307,SEM,Tu,7-9:45PM,available,ONLINE-ONLY,Nkrumah R,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,521,PPA 521,MICROCOMP MGMT PUBLC ADMNTRTOR,3,,01,\N,Spring_2026|PPA 521|01|NOCLASS|4455b2aaa81bf149,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,525,PPA 525,NON-PROFIT MANAGEMENT,3,,01,7559,Spring_2026|PPA 525|01|7559,FALSE,\N,307,SEM,W,7-9:45PM,available,SPA-203,Mathews M,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,PPA,525,PPA 525,NON-PROFIT MANAGEMENT,3,,01,\N,Spring_2026|PPA 525|01|NOCLASS|f709983530dd214b,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,570,PPA 570,NEGOTIATG DYNMC STRAT & SKILL,3,,01,6773,Spring_2026|PPA 570|01|6773,FALSE,\N,307,SEM,Th,7-9:45PM,,SPA-208,Perez M,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,PPA,570,PPA 570,NEGOTIATG DYNMC STRAT & SKILL,3,,01,\N,Spring_2026|PPA 570|01|NOCLASS|82e714e6c8ddf79f,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,581,PPA 581,GOVERNMENT/COMMUNITY RELATIONS,3,,01,8786,Spring_2026|PPA 581|01|8786,FALSE,\N,307,SEM,W,4-6:45PM,,ONLINE-ONLY,Mathews M,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,581,PPA 581,GOVERNMENT/COMMUNITY RELATIONS,3,,01,\N,Spring_2026|PPA 581|01|NOCLASS|2a2fd1c5d5610b4e,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,PPA,670,PPA 670,POLICY ISSUE ANALYSIS,3,,02,9848,Spring_2026|PPA 670|02|9848,FALSE,\N,309,SEM,M,7-9:45PM,,ONLINE-ONLY,Beaumaster S,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,PPA,670,PPA 670,POLICY ISSUE ANALYSIS,3,,02,\N,Spring_2026|PPA 670|02|NOCLASS|5ad8b1377a2613a8,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail

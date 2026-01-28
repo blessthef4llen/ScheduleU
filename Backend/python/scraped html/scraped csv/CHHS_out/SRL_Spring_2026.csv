@@ -1,0 +1,4 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,SRL,210,SRL 210,SPORT CLUBS,1,,01,1751,Spring_2026|SRL 210|01|1751,FALSE,\N,"276,11,12,24,180",ACT,NA,NA,available,KIN-020A,Mejia C,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,SRL,210F,SRL 210F,RUGBY,1,,03,6423,Spring_2026|SRL 210F|03|6423,FALSE,\N,310,ACT,TuTh,4-5:15PM,available,FLD-115,Williams E,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,SRL,210L,SRL 210L,LEADERSHIP,1,,01,7170,Spring_2026|SRL 210L|01|7170,FALSE,\N,"11,12,24,276",ACT,NA,NA,available,KIN-020A,Mejia C,Department Consent RequiredClass instruction is: Face to Face - On Campus.

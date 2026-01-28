@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="#F9A600">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Schedule of Classes</title>
+		<!-- THIS IS THE FRAMEWORK FILE -->
+<link rel="stylesheet" href="/misc/ut2/framework/bootstrap/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+<link rel="stylesheet" href="/misc/ut2/css/style.min.css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/misc/ut2/fonts/font-awesome/css/font-awesome.min.css">
+<!-- SmartMenus core CSS (required) -->
+<link href='/misc/ut2/css/sm-core-css.css' rel='stylesheet' type='text/css' />
+<!-- "sm-blue" menu theme (optional, you can use your own CSS, too) -->
+<link href='/misc/ut2/css/sm-blue.css' rel='stylesheet' type='text/css' />
+<!-- compiled and minified jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="/misc/ut2/framework/bootstrap/js/bootstrap.min.js"></script>
+<script src="/misc/ut2/js/custom.js"></script>
+<!-- SmartMenus jQuery plugin -->
+<script src="/misc/ut2/js/jquery.smartmenus.js" type="text/javascript"></script>
+
+
+
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-193316-2', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- Apply your own custom javascripts and css styles here. Please adhere to the web style guidelines provided to you and refer to the CMS resources site for more information. -->
+		<style>
+		#alphaRow a {margin-right:6px;color:#555;padding:.25em;}
+		#alphaRow a:hover{color:#000 !important;background-color:#f9a600;}
+		#alphaRow{background-color:#e4e1d9;padding:.5em;text-align:center;font-size:1.2em;}
+		/*.indexList ul li a{color:#555;}*/
+		.textbooks{background-color:#222;border:0;padding:6px 18px;-webkit-border-top-right-radius:0.5em;-webkit-border-bottom-right-radius:0.5em;-webkit-border-bottom-left-radius:0.5em;-webkit-border-top-left-radius:0.5em;-moz-border-radius-topright:0.5em;-moz-border-radius-bottomright:0.5em;-moz-border-radius-bottomleft:0.5em;-moz-border-radius-topleft:0.5em; color:#000;width:25%;margin:auto;text-align:center;margin-bottom:2em;}
+		.textbooks a {color:#edaa00;text-decoration:none;}
+		.textbooks a:hover,a:visited{color:#edaa00!important;text-decoration:none!important;}
+		.textbooks span{color:#edaa00;}
+		#pagenav ul {list-style:none;clear:both;}
+		#pagenav ul li{width:30%;float:left;}
+		#browseBySubject,#browseByCollege,#browseByGE{padding:1em;background-color:#d7d2c5;font-size:1em;margin-right:.25em;}
+		#browseBySubject a,#browseByCollege a ,#browseByGE a {color:#555!important;text-decoration:none;}
+		.indexHeader h2{clear:both;padding-top:1em;}
+		.activeTab{background-color:#edaa00!important;}
+		.departmentTitle{padding-top:3em;}
+		ul li {font-size:1.2em;line-height:1.2em;content:"\25CF";color:#A74300;position:relative;left:-20px;margin-right:-10px;}
+		a {color:#A74300;}
+		.page-content ol li {color:#000;display:list-item;font-family:Lato,sans-serif;font-size:16px;font-weight:300;line-height:24px;list-style-position:outside;margin-bottom:8px;word-wrap:break-word;-webkit-font-smoothing:antialiased;padding-left:5px;list-style-type:decimal;}
+		.breadcrumb{padding:20px;}
+		.sectionTable{width:100%;overflow-x:auto;display:block;max-width: 100%;white-space: nowrap;}
+		.toplink{margin-bottom:1em;}
+		table.sectionTable td {border: 1px solid #eee;}
+		.dot {text-align: center;}
+		.courseBlock {
+		overflow-y: scroll;
+		width: 100%;
+		max-width: 100%;
+		border: 1px solid #EFEFEF;
+		}
+		h3 { margin: 1.25em auto 0 auto; }
+		</style>
+	</head>
+	<body>
+		<!-- THIS IS THE HEADER 1 FILE -->
+		<p class="jump-navigation">
+			<a href="#skip_content" id="sr_skip_content" class="sr-only sr-only-focusable">Jump to Content</a>
+			<a href="#skip_to_resources" id="sr_skip_to_resources" class="sr-only sr-only-focusable">Jump to Resources</a>
+		</p>
+		<div id="navigation" role="navigation" aria-label="primary">
+			<nav class="navbar navbar-default  navbar-fixed-top top-navigation">
+				<div class="container" id="content" tabindex="-1">
+					<div class="navbar-header">
+						<span class="navbar-brand"><a href="https://www.csulb.edu"><img class="university-name" src="/misc/ut2/imgs/logo_university_name.png" alt="CALIFORNIA STATE UNIVERSITY LONG BEACH"/></a>
+						<a class="university-name-abbr-link" href="https://www.csulb.edu"><img class="university-name-abbr" src="/misc/ut2/imgs/csulb.png" alt="CSULB logo for mobile devices"/></a><span class="border-line"></span><a class="department-name" style="display:inline-block;" href="https://www.csulb.edu/registration-and-records">Registration & Records</a></span>
+						
+						<p id="university-main-menu-button">
+							<span class="menu-click-link" id="university-main-menu-overlay">
+								<a href="javascript:void(0)"  class="menu-open" aria-haspopup="true" aria-expanded="false"><span class="text-menu">Menu</span><span id="icon-class" class="box-shadow-menu" style="margin-left: 9px;"><span class="sr-only">Open</span></span></a>
+								<a href="javascript:void(0)" class="menu-close"  aria-haspopup="true" aria-expanded="true" style="display:none; padding-right: 26px;" ><span class="text-menu">Menu</span><span class="close" id="remove-menu-icon"><span class="sr-only">Close</span></span></a>
+							</span>
+							<span>
+								<a href="javascript:void(0)" class="glyphicon glyphicon-search search-icon" aria-haspopup="true" aria-expanded="false" id="search-form-icon" style="height: 12px;"><span class="sr-only">Search</span></a>
+							</span>
+						</p>
+						<!--the search.html should contain search form for your site-->
+						<!-- THIS IS THE SEARCH -->
+						<div class="search-form" aria-label="search-form-icon" >
+							<form class="form-inline search-open" _lpchecked = "1"action="https://web.csulb.edu/search" method="get" id="google-appliance-block-form" accept-charset="UTF-8">
+								
+								<div class="form-group">
+									<label for="edit-search-keys"><span class="sr-only">Search</span></label>
+									<input class="form-text" id="edit-search-keys" maxlength="128" name="query" size="15" type="text" value=""><button type="submit" class="btn btn-primary" style="margin-right: 5px;margin-left:5px;">
+									Search
+									</button><p><input name="page" type="hidden" value="1"><input name="applied_filters" type="hidden" value=""><input name="sort" type="hidden" value="relevance"><input name="sortdir" type="hidden" value="desc"><input name="pagesize" type="hidden" value="10"><input name="col" type="hidden" value="11"></p>
+									
+								</div>
+								
+							</form>
+						</div>
+						<!-- THIS IS THE HEADER 2 FILE -->
+		</div>
+			</div>
+		<div class="jumbotron university-main-menu testing88" aria-labelledby="university-main-menu-overlay">
+					<div class="container">
+						<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-7 five-three">
+								<div class="row">
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/academic-affairs/colleges-departments?utm_source=CSULBHomepage&utm_medium=html&utm_campaign=AcademicsFlow" class="menu-heading auto-tab">ACADEMICS</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/academic-affairs/menu/academics/colleges-departments">Colleges &amp; Degrees</a></li>
+											<li><a href="https://www.csulb.edu/office-of-research-and-economic-development">Research</a></li>
+											<li><a href="https://www.csulb.edu/academic-affairs/academic-affairs-calendar?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Academic Calendar</a></li>
+											<li><a href="http://www.ccpe.csulb.edu/international/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">International Education</a></li>
+											<li><a href="https://www.csulb.edu/university-library?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Library</a></li>
+											<li><a href="https://www.csulb.edu/graduate-studies/graduate-studies">Graduate Studies</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/student-life" class="menu-heading">Campus Life</a></h3>
+										<ul class="menu">
+											<li><a href="http://www.longbeachstate.com/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Athletics</a></li>
+											<li><a href="https://www.csulb.edu/centers-organizations?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Centers &amp; Organizations</a></li>
+											<li><a href="https://www.csulb.edu/commencement" class="menu__link menu__link" tabindex="0">Commencement</a></li>
+											<li><a href="http://specialevents.csulb.edu/MasterCalendar/MasterCalendar.aspx?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Events</a></li>
+											<li><a href="https://www.csulb.edu/student-life" class="menu__link menu__link" tabindex="0">Housing</a></li>
+											<li><a href="https://www.csulb.edu/housing">Student Life</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/about-csulb" class="menu-heading">About</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/about-csulb?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">About Us</a></li>
+											<li><a href="https://www.csulb.edu/academic-affairs/program-review-and-assessment/wscuc/wscuc-accreditation">Accreditation</a></li>
+											<li><a href="https://www.csulb.edu/student-records/tuition-and-fees?utm_source=website&utm_medium=other&utm_content=menulink&utm_campaign=JumboMenu">Tuition and Fees</a></li>
+											<li><a href="https://www.csulb.edu/explore?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Explore</a></li>
+											<li><a href="https://www.csulb.edu/maps?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Parking & Maps</a></li>
+											<li><a href="https://www.csulb.edu/employment?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Careers with CSULB</a></li>
+
+
+										</ul>
+									</div><!-- end inner row -->
+									<div class="col-sm-4">
+										<h3><a href="http://web.csulb.edu/alumni/" class="menu-heading"><span class=" sr-only">C S U L B</span> Alumni</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/alumni?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Alumni Home</a></li>
+											<li><a href="https://www.csulb.edu/alumni/volunteers?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Alumni Volunteering</a></li>
+											<li><a href="https://giveto.csulb.edu/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu))/">Alumni Giving</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/menu/administration?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu?" class="menu-heading">Divisions</a></h3>
+										<ul class="menu menu-no-border">
+											<li><a href="https://www.csulb.edu/office-of-the-president?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Office of the President</a></li>
+											<li><a href="https://www.csulb.edu/office-of-the-provost">Office of the Provost</a></li>
+											<li><a href="https://www.csulb.edu/administration-finance?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Administration & Finance</a></li>
+											<li><a href="https://www.csulb.edu/students?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Student Affairs</a></li>
+											<li><a href="https://www.csulb.edu/university-relations-and-development">University Relations & Development</a></li>
+											<li><a href="https://www.csulb.edu/information-technology">Information Technology</a></li>
+
+										</ul>
+									</div>
+
+								</div>
+							</div>
+							<!-- end outer row -->
+						</div>
+						</div>
+						<div class="col-sm-12 edit1">
+							<div class="row">
+								<!-- <div class="col-sm-3 two-one hidden">
+									<div class="edit3 row">
+										<ul class="menu social-connection col-md-6 connect-app-icons menu-social-first-col">
+
+
+                                                <li><a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a></li>
+                                       			<li><a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a></li>
+
+											</ul>
+											<ul class="menu social-connection col-md-6 connect-app-icons menu-social-second-col">
+                                                <li><a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a></li>
+                                       			<li><a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a></li>
+											</ul>
+
+									</div>
+								</div> -->
+								<div class="col-sm-9 one-one row-margin-top">
+								<h3  tabindex="-1" style="width:90px;" class="menu-heading" id="skip_to_resources">RESOURCES</h3>
+								<div class="edit2 row">
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://sso.csulb.edu/">My CSULB</a></li>
+												<li><a href="https://bbcsulb.desire2learn.com/">BeachBoard</a></li>
+												<li><a href="https://www.csulb.edu/directory">Campus Directory</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://mail.csulb.edu/">Email</a></li>
+												<li><a href="https://www.csulb.edu/admissions">Admissions</a></li>
+												<li><a href="https://www.csulb.edu/enrollment-services">Enrollment Services</a></li>
+
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://www.csulb.edu/financial-aid?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Financial Aid</a></li>
+												<li><a href="https://www.csulb.edu/student-records/schedule-of-classes?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Schedule of Classes</a></li>
+												<li><a href="https://www.csulb.edu/student-records">Student Records</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://www.csulb.edu/49er-shops-at-the-beach">49er Shops</a></li>
+												<li><a href="https://www.csulb.edu/49er-foundation">49er Foundation</a></li>
+												<li><a id="last-item-header" href="https://www.csulb.edu/help?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Help</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+					<div id="vertical-menu"  tabindex="0">
+
+						<div id="header-menu-container" class="panel">
+							<ul id="root-menu">
+								<li>
+								<h3 class="back-to-main-menu" tabindex="0"><span class="glyphicon glyphicon-menu-left">&nbsp; </span>Back</h3>
+								</li>
+								<li>
+									<h3 tabindex="0">ACADEMICS</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/academic-affairs/menu/academics/colleges-departments">Colleges &amp; Degrees</a></li>
+										<li><a href="https://www.csulb.edu/office-of-research-and-economic-development">Research</a></li>
+										<li><a href="https://www.csulb.edu/academic-affairs/academic-affairs-calendar">Academic Calendar</a></li>
+										<li><a href="http://www.ccpe.csulb.edu/international">International Education</a></li>
+										<li><a href="https://www.csulb.edu/university-library">Library</a></li>
+										<li><a href="https://www.csulb.edu/graduate-studies/graduate-studies">Graduate Studies</a></li>
+									</ul>
+								</li>
+								<!-- we will keep this LI open by default -->
+								<li>
+									<h3 tabindex="0">CAMPUS LIFE</h3>
+									<ul>
+										<li><a href="http://www.longbeachstate.com/">Athletics</a></li>
+										<li><a href="https://www.csulb.edu/centers-organizations">Centers &amp; Organizations</a></li>
+										<li><a href="https://www.csulb.edu/commencement">Commencement</a></li>
+										<li><a href="http://specialevents.csulb.edu/MasterCalendar/MasterCalendar.aspx">Events</a></li>
+										<li><a href="https://www.csulb.edu/student-life">Housing</a></li>
+										<li><a href="https://www.csulb.edu/housing">Student Life</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">ABOUT</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/about-csulb">About Us</a></li>
+										<li><a href="https://www.csulb.edu/academic-affairs/program-review-and-assessment/wscuc/wscuc-accreditation">Accreditation</a></li>
+										<li><a href="https://www.csulb.edu/student-records/tuition-and-fees">Tuition and Fees</a></li>
+										<li><a href="https://www.csulb.edu/explore">Explore</a></li>
+										<li><a href="https://www.csulb.edu/maps">Parking & Maps</a></li>
+										<li><a href="https://www.csulb.edu/employment">Careers with CSULB</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">ALUMNI</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/alumni">Alumni Home</a></li>
+										<li><a href="https://www.csulb.edu/alumni/volunteers">Alumni Volunteering</a></li>
+										<li><a href="https://giveto.csulb.edu/">Alumni Giving</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">DIVISIONS</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/office-of-the-president">Office of the President</a></li>
+										<li><a href="https://www.csulb.edu/office-of-the-provost">Office of the Provost</a></li>
+										<li><a href="https://www.csulb.edu/administration-finance">Administration & Finance</a></li>
+										<li><a href="https://www.csulb.edu/students">Student Affairs</a></li>
+										<li><a href="https://www.csulb.edu/university-relations-and-development">University Relations & Development</a></li>
+										<li><a href="https://www.csulb.edu/information-technology">Information Technology</a></li>
+									</ul>
+								</li>
+								<!-- <li>
+									<h3 tabindex="0">SOCIAL MEDIA</h3>
+									<ul>
+										<li><a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a></li>
+                                        <li><a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a></li>
+                                        <li><a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a></li>
+                                        <li><a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a></li>
+									</ul>
+								</li> -->
+                <li>
+									<h3 tabindex="0">RESOURCES</h3>
+									<ul>
+										<li><a href="https://sso.csulb.edu/">My CSULB</a></li>
+										<li><a href="https://bbcsulb.desire2learn.com/">BeachBoard</a></li>
+										<li><a href="https://www.csulb.edu/directory">Campus Directory</a></li>
+										<li><a href="https://mail.csulb.edu/">Email</a></li>
+										<li><a href="https://www.csulb.edu/admissions">Admissions</a></li>
+										<li><a href="https://www.csulb.edu/enrollment-services">Enrollment Services</a></li>
+										<li><a href="https://www.csulb.edu/financial-aid">Financial Aid</a></li>
+										<li><a href="https://www.csulb.edu/student-records/schedule-of-classes">Schedule of Classes</a></li>
+										<li><a href="https://www.csulb.edu/student-records">Student Records</a></li>
+										<li><a href="https://www.csulb.edu/49er-shops-at-the-beach">49er Shops</a></li>
+										<li><a href="https://www.csulb.edu/49er-foundation">49er Foundation</a></li>
+										<li><a id="last-item-header" href="https://www.csulb.edu/help">Help</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+			</nav>
+		</div>
+
+						<div class="banner" aria-label="banner">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12 bgimage"><img src="https://www.csulb.edu/sites/default/files/images/banner_financialaid_students.jpg" alt="University Banner">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="page" data-scroll-speed="2">
+							
+							<div class="main-content">
+								<div class="container page-content">
+									<div class="row">
+										
+										
+										
+										<!-- content column -->
+										<div id="center-column" class="col-md-12 .col-xs-12 col-sm-12">
+											<div id="skip_content" class="skip_content" tabindex="-1"></div>
+											<div class="bs-example" role="navigation" aria-label="breadcrumb">
+												<ul class="breadcrumb">
+													<li><a href="https://www.csulb.edu/">Home</a></li>
+													<li class="crumbs-separator"></li>
+													<li><a href="index.html" id="current_soc">Schedule of Classes</a></li>
+													
+												</ul>
+											</div>
+											<h1 class="socheader">Schedule of Classes</h1>
+<h1>Spring 2026</h1><p class="update">Class offerings as of: JANUARY 28, 2026</p><div id="external_links" class="hideFromPrint">
+  <div class="register">
+    <script type="text/javascript"> writeLink("/depts/enrollment/registration/class_schedule/how_to_register.html","Register Here"); </script>
+	<noscript><p><a href="/depts/enrollment/registration/class_schedule/how_to_register.html" target="_new"><span>Register Here</span></a></p></noscript>
+  </div>
+  <div class="textbooks"><a href="http://csulb.verbacompare.com/" target="_new"><span>Textbook Information</span></a></div>
+</div>
+
+<div id="pagenav"><ul>
+<li id="browseBySubject"><a href="../By_Subject/index.html"><span>By Subject</span></a></li>
+<li id="browseByCollege"><a href="index.html" class="activeTab"><span>By College</span></a></li>
+<li id="browseByGE"><a href="../By_GE_Requirement/index.html"><span>By GE Requirement</span></a></li>
+</ul></div><div id="pageContent">
+<div class="indexHeader"><h2>College of The Arts</h2></div>
+<div class="subjectContainer"><div class="header"><h2 class="departmentTitle">Design - (DESN)</h2><div class="globalNote"><p> </p></div></div>
+<div class="session">
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 110</span> - <span class="courseTitle">FOUNDATION DESIGN HISTORY</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 3A (C1)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8125</td><td></td><td><div class="dot"><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://www.csulb.edu/sites/default/files/u33991/reserve_capacity_icon_2.png" width="55" height="55" alt="Reserve Capacity" title="Reserve Capacity" /></a></div></td><td><a href="#note1">306</a></td><td>LEC</td><td>TuTh</td><td>2-3:15PM</td><td><div class="dot"><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://web.csulb.edu/depts/enrollment/registration/assets/yellow_dot.png" width="16" height="16" alt="Reserve Capacity" title="Reserve Capacity" /></a></div></td><td>ONLINE-ONLY</td><td>Tredway T</td><td>Class instruction is: Synch. Online - Meet Times.<br>Seats are reserved for pre Design and Design Majors in the Design Department (BFA, BA and BS) only from 10/06/25-2/3/26.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 120A</span> - <span class="courseTitle">FUNDAMENTALS OF DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9327</td><td></td><td></td><td><a href="#note1">310,17</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>HSD-105</td><td>Luddy B</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 120B</span> - <span class="courseTitle">FUNDAMENTALS OF DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7722</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-105</td><td>LaForte M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>7004</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-105</td><td>Luddy B</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>7952</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td></td><td>DESN-115</td><td>Perez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>8801</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td></td><td>HSD-105</td><td>Menard D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">07</th><td>9397</td><td></td><td></td><td><a href="#note1">1,17,310</a></td><td>ACT</td><td>MW</td><td>8-10:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-115</td><td>Reed J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 130</span> - <span class="courseTitle">PERSPECTIVE RENDERNG INTERIORS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4765</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-111</td><td>Adair J</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 132A</span> - <span class="courseTitle">PERSPECTIVE &amp; RENDER SYSTEMS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2910</td><td></td><td></td><td></td><td>ACT</td><td>MW</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>HSD-105</td><td>LaForte M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 132B</span> - <span class="courseTitle">PERSPECTIVE &amp; RENDER SYSTEMS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>4745</td><td></td><td></td><td><a href="#note1">1,17,306</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td></td><td>ONLINE-ONLY</td><td>LaForte M</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">03</th><td>7867</td><td></td><td></td><td><a href="#note1">1,17</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td></td><td>HSD-105</td><td>Peters R</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>6138</td><td></td><td></td><td><a href="#note1">1,17</a></td><td>ACT</td><td>F</td><td>9-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-111</td><td>LaForte M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 141</span> - <span class="courseTitle">INTERIOR ARCHITECTURAL DRAFT</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>3094</td><td></td><td></td><td></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-105</td><td>Paterno K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 142</span> - <span class="courseTitle">BEGINNING SPACE PLANNING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4744</td><td></td><td></td><td></td><td>ACT</td><td>MW</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-111</td><td>Dominguez V</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>9307</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-111</td><td>Griffith B</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>9308</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td></td><td>DESN-121</td><td>Lopez J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>7868</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td></td><td>DESN-111</td><td>Griffith B</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 143</span> - <span class="courseTitle">MATERIALS OF INTERIORS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1194</td><td></td><td></td><td><a href="#note1">1,311</a></td><td>SEM</td><td>F</td><td>9-11:45AM</td><td></td><td>DESN-112</td><td>Ferry E</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>F</td><td>9-11:45AM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">02</th><td>9548</td><td></td><td></td><td></td><td>SEM</td><td>F</td><td>1-3:45PM</td><td></td><td>DESN-112</td><td>Ferry E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 150</span> - <span class="courseTitle">DESIGN DRAFTING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5793</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Rivera J</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 151</span> - <span class="courseTitle">DESIGN MATERIALS AND TOOLS</span></h4><span class="units">2 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6506</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>4-5:50PM</td><td></td><td>DESN-131</td><td>Reed J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>5047</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>1-2:50PM</td><td></td><td>DESN-131</td><td>Ocana M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>7873</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>4-5:50PM</td><td></td><td>DESN-131</td><td>Ocana M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>9673</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>6-7:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-131</td><td>Reed J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 154</span> - <span class="courseTitle">MODEL &amp; PROTOTYPE TECHNIQUE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6888</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-131</td><td>Ocana M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 156</span> - <span class="courseTitle">COMPUTER-AIDED DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>6993</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Rivera J</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 230</span> - <span class="courseTitle">VISUALIZATION INTERIOR ARCH</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5662</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>MW</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-103</td><td>Hernandez M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>7884</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>TuTh</td><td>4-6:45PM</td><td></td><td>DESN-105</td><td>Adair J</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>Tu</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Adair J</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">03</th><td>7986</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Hernandez M</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 232</span> - <span class="courseTitle">VISUALIZATION TECHNIQUES</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>12730</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-121</td><td>Westerkamp R</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 244</span> - <span class="courseTitle">LIGHT DESIGN INT ARCHITECTURE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9305</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>TuTh</td><td>5-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-111</td><td>Ceballos B</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>5-7:45PM</td><td></td><td>ONLINE-ONLY</td><td>Ceballos B</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">02</th><td>7153</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>SPA-109</td><td>Paterno K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 245</span> - <span class="courseTitle">BLDG SYS INTERIOR ARCHITECTURE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6579</td><td></td><td></td><td><a href="#note1">310</a></td><td>SEM</td><td>TuTh</td><td>9:30-10:45AM</td><td></td><td>DESN-105</td><td>Johnson A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>12765</td><td></td><td></td><td><a href="#note1">310</a></td><td>SEM</td><td>MW</td><td>9:30-10:45AM</td><td></td><td>DESN-121</td><td>Johnson A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 246</span> - <span class="courseTitle">COMPUTER-AIDED DRAFTING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">04</th><td>7991</td><td></td><td></td><td><a href="#note1">306,1,17</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Lo N</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">05</th><td>7992</td><td></td><td></td><td><a href="#note1">306,1,17</a></td><td>ACT</td><td>TuTh</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Sumarsono I</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">07</th><td>12708</td><td></td><td></td><td><a href="#note1">307</a></td><td>ACT</td><td>MW</td><td>5-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-103</td><td>Sumarsono I</td><td>Class instruction is: Hybrid(Face to Face &amp; Async).</td></tr>
+<tr><th scope="row">07</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 254</span> - <span class="courseTitle">PROD MATERLS &amp; TECH PROCESSES</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>7918</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td></td><td>DESN-103</td><td>Ocana M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>12683</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-115</td><td>Hedden D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 255</span> - <span class="courseTitle">2D COMPUTER AIDED GRAPHICS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>9537</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Hurley J</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">04</th><td>7907</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>MW</td><td>9-11:45AM</td><td></td><td>ONLINE-ONLY</td><td>Hurley J</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 280</span> - <span class="courseTitle">INDUSTRIAL DESIGN PROCESSES</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5048</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-103</td><td>Takahashi S</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>MW</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">03</th><td>9140</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td></td><td>DESN-108</td><td>Ivey J</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">03</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 300</span> - <span class="courseTitle">DESIGNERS IN THEIR OWN WORDS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>3662</td><td></td><td></td><td><a href="#note1">311</a></td><td>SEM</td><td>Th</td><td>7-9:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-112</td><td>Woelfel W</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>Th</td><td>7-9:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 312</span> - <span class="courseTitle">INT ARCHITECTURL MODEL BUILD</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>6536</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td></td><td>DESN-133</td><td>Adair J</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>MW</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Adair J</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">03</th><td>7891</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td></td><td>DESN-133</td><td>Chapin C</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">03</th><td></td><td></td><td></td><td></td><td></td><td>MW</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">04</th><td>12558</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>TuTh</td><td>4-6:45PM</td><td></td><td>DESN-133</td><td>Ng K</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">04</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 315</span> - <span class="courseTitle">FORM AND FIGURES</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 2UD/5UD (UDB)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6605</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>LEC</td><td>Th</td><td>4-6:45PM</td><td></td><td>DESN-112</td><td>Boyer S</td><td>Class instruction is: Face to Face - On Campus.<br>Seating will be reserved for pre Design and Design Majors in the Design Department (BFA, BA and BS) only from 10/06/25-2/3/26.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 320</span> - <span class="courseTitle">ADVANCED FORM STUDY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>9306</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td></td><td>DESN-105</td><td>Beach M</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>MW</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Beach M</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 331B</span> - <span class="courseTitle">INDUSTRIAL DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1195</td><td></td><td></td><td><a href="#note1">15,1,311</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td></td><td>DESN-125</td><td>Teubner D</td><td>Department Consent Required<br>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">02</th><td>4489</td><td></td><td></td><td><a href="#note1">15,311</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td></td><td>DESN-125</td><td>Woelfel W</td><td>Department Consent Required<br>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>MW</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 332</span> - <span class="courseTitle">ADV IDEA GENERATION FOR DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>12624</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td></td><td>ONLINE-ONLY</td><td>Krohn L</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">03</th><td>7979</td><td></td><td></td><td><a href="#note1">306,1,17</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Krohn L</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 333B</span> - <span class="courseTitle">INDUSTRIAL DESIGN METHODOLOGY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>8045</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td></td><td>DESN-125</td><td>Ivey J</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>9674</td><td></td><td></td><td><a href="#note1">1,15,310</a></td><td>ACT</td><td>MW</td><td>9-11:45AM</td><td></td><td>DESN-125</td><td>Takahashi S</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 336</span> - <span class="courseTitle">ADV VISUALIZATION 3D MODELING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5603</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Hedden D</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">03</th><td>7075</td><td></td><td></td><td><a href="#note1">306,1</a></td><td>ACT</td><td>TuTh</td><td>7-9:45PM</td><td></td><td>ONLINE-ONLY</td><td>Cusolito A</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">04</th><td>12611</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>TuTh</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Hedden D</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 340</span> - <span class="courseTitle">INT. DESIGN PROCESS &amp; THEORY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>7890</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-111</td><td>Perez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>9639</td><td></td><td></td><td><a href="#note1">310</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-103</td><td>Dominguez V</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 341B</span> - <span class="courseTitle">INTERIOR DESIGN</span></h4><span class="units">4 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1196</td><td></td><td></td><td><a href="#note1">1,15,310</a></td><td>ACT</td><td>TuTh</td><td>1-4:45PM</td><td></td><td>DESN-135</td><td>Griffith B</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>3772</td><td></td><td></td><td><a href="#note1">1,15,310</a></td><td>ACT</td><td>MW</td><td>1-4:45PM</td><td></td><td>DESN-135</td><td>Johnson A</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 343</span> - <span class="courseTitle">ADVANCED DRAFTING &amp; DETAILING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2157</td><td></td><td></td><td><a href="#note1">1,15,311</a></td><td>ACT</td><td>TuTh</td><td>9-11:45AM</td><td></td><td>DESN-135</td><td>Andrade M</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>9-11:45AM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">03</th><td>8044</td><td></td><td></td><td><a href="#note1">311,1,15</a></td><td>ACT</td><td>MW</td><td>9-11:45AM</td><td></td><td>DESN-135</td><td>Andrade M</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">03</th><td></td><td></td><td></td><td></td><td></td><td>MW</td><td>5-7:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 344A</span> - <span class="courseTitle">DISPLAY &amp; EXHIBITION DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>12338</td><td></td><td></td><td><a href="#note1">309</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Woelfel W</td><td>Class instruction is: Online - Mixed Meet Times.</td></tr>
+<tr><th scope="row">03</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 344B</span> - <span class="courseTitle">DISPLAY &amp; EXHIBITION DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>12337</td><td></td><td></td><td><a href="#note1">309</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Woelfel W</td><td>Class instruction is: Online - Mixed Meet Times.</td></tr>
+<tr><th scope="row">03</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 346</span> - <span class="courseTitle">COMPUTER AIDED DESIGN 3D MODEL</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4132</td><td></td><td></td><td><a href="#note1">1,15,311</a></td><td>ACT</td><td>TuTh</td><td>4-6:45PM</td><td></td><td>DESN-103</td><td>Char K</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 356</span> - <span class="courseTitle">ADV 3D COMPUTER-AIDED DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4163</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Rivera J</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 360A</span> - <span class="courseTitle">ENVIRONMNTL COMMUNICATN DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6433</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Kleinpeter J</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">02</th><td>12766</td><td></td><td></td><td><a href="#note1">306</a></td><td>ACT</td><td>MW</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Satterfield D</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 360B</span> - <span class="courseTitle">ADV ENVIRON COMMUNICATN DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4048</td><td></td><td></td><td><a href="#note1">309</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Kleinpeter J</td><td>Class instruction is: Online - Mixed Meet Times.</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Kleinpeter J</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">03</th><td>7017</td><td></td><td></td><td><a href="#note1">309</a></td><td>ACT</td><td>TuTh</td><td>1-3:45PM</td><td></td><td>ONLINE-ONLY</td><td>Kleinpeter J</td><td>Class instruction is: Online - Mixed Meet Times.</td></tr>
+<tr><th scope="row">03</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Kleinpeter J</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 366</span> - <span class="courseTitle">ADVANCED 3D DIGITAL MODELING</span></h4><span class="units">2 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6607</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>TuTh</td><td>7-8:45PM</td><td></td><td>DESN-103</td><td>Char K</td><td>Class instruction is: Hybrid(Face to Face &amp; Async).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 367</span> - <span class="courseTitle">HIST &amp; THEORY OF ARCHITECTURE</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 3UD (UDC), 4UD (UDD)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>10991</td><td></td><td><div class="dot"><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://www.csulb.edu/sites/default/files/u33991/reserve_capacity_icon_2.png" width="55" height="55" alt="Reserve Capacity" title="Reserve Capacity" /></a></div></td><td><a href="#note1">307</a></td><td>LEC</td><td>W</td><td>2-3:15PM</td><td><div class="dot"><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://web.csulb.edu/depts/enrollment/registration/assets/yellow_dot.png" width="16" height="16" alt="Reserve Capacity" title="Reserve Capacity" /></a></div></td><td>ET-229</td><td>Kowalski A</td><td>Class instruction is: Hybrid(Face to Face &amp; Async).</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Kowalski A</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 368</span> - <span class="courseTitle">HISTORY &amp; THEORY OF DESIGN</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 3UD (UDC), 4UD (UDD)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2412</td><td></td><td></td><td><a href="#note1">17,306</a></td><td>LEC</td><td>MW</td><td>7-8:15PM</td><td></td><td>ONLINE-ONLY</td><td>Tredway T</td><td>Class instruction is: Synch. Online - Meet Times.<br>Seating will be reserved for pre Design and Design Majors in the Design Department (BFA, BA and BS) only from 10/06/25-02/3/26.</td></tr>
+<tr><th scope="row">02</th><td>8029</td><td></td><td></td><td><a href="#note1">311</a></td><td>LEC</td><td>TuTh</td><td>5:30-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Tredway T</td><td>Class instruction is: Synch. Online - Meet Times.<br>Seating will be reserved for pre Design and Design Majors in the Design Department (BFA, BA and BS) only from 10/06/25-2/3/26.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 369</span> - <span class="courseTitle">HIST FURNITRE &amp; DECORATVE ARTS</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 3UD (UDC), 4UD (UDD)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>10779</td><td></td><td></td><td></td><td>LEC</td><td>TuTh</td><td>2-3:15PM</td><td></td><td>HHS1-201</td><td>Kowalski A</td><td>Class instruction is: Hybrid(Face to Face &amp; Async).<br>20 seats are reserved for Interior Design students from 10/06/25-2/03/26.  Another 20 seats are reserved for Design students from 10/6/25-2/03/26.</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Kowalski A</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">03</th><td>11003</td><td></td><td><div class="dot"><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://www.csulb.edu/sites/default/files/u33991/reserve_capacity_icon_2.png" width="55" height="55" alt="Reserve Capacity" title="Reserve Capacity" /></a></div></td><td><a href="#note1">307</a></td><td>LEC</td><td>M</td><td>2-3:15PM</td><td><div class="dot"><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://web.csulb.edu/depts/enrollment/registration/assets/yellow_dot.png" width="16" height="16" alt="Reserve Capacity" title="Reserve Capacity" /></a></div></td><td>ET-229</td><td>Kowalski A</td><td>Class instruction is: Hybrid(Face to Face &amp; Async).<br>20 seats are reserved for Interior Design students from 10/06/25-2/03/26.  Another 20 seats are reserved for Design students from 10/6/25-2/03/26.</td></tr>
+<tr><th scope="row">03</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Kowalski A</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 431B</span> - <span class="courseTitle">ADVANCED INDUSTRIAL DESIGN</span></h4><span class="units">4 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1197</td><td></td><td></td><td><a href="#note1">15,311</a></td><td>ACT</td><td>F</td><td>9-5:45PM</td><td></td><td>DESN-108</td><td>Beach M</td><td>Department Consent Required<br>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>F</td><td>9-5:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">02</th><td>5133</td><td></td><td></td><td><a href="#note1">15,311</a></td><td>ACT</td><td>F</td><td>9-5:45PM</td><td></td><td>DESN-125</td><td>Bell J</td><td>Department Consent Required<br>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>F</td><td>9-5:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 441B</span> - <span class="courseTitle">ADVANCED INTERIOR DESIGN</span></h4><span class="units">4 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2419</td><td></td><td></td><td><a href="#note1">15,310</a></td><td>ACT</td><td>MW</td><td>1-4:45PM</td><td></td><td>DESN-122</td><td>Dominguez V</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>4049</td><td></td><td></td><td><a href="#note1">15,310</a></td><td>ACT</td><td>TuTh</td><td>1-4:45PM</td><td></td><td>DESN-122</td><td>Perez E</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 442G</span> - <span class="courseTitle">INTERNSHIP INDUSTRIAL DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>7005</td><td></td><td></td><td><a href="#note1">305</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Woelfel W</td><td>Class instruction is: Asynch. Online-No Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 442H</span> - <span class="courseTitle">INTERNSHIP IN INTERIOR DESIGN</span></h4><span class="units">1-3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2813</td><td></td><td></td><td><a href="#note1">15,305</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Perez E</td><td>Class instruction is: Asynch. Online-No Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 442J</span> - <span class="courseTitle">INTERNSHIP IN DESIGN</span></h4><span class="units">1-4 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7889</td><td></td><td></td><td><a href="#note1">305</a></td><td>SEM</td><td>NA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Kleinpeter J</td><td>Instructor Consent Required<br>Class instruction is: Asynch. Online-No Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 450</span> - <span class="courseTitle">BA SENIOR PROJECT</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4751</td><td></td><td></td><td><a href="#note1">1,306</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Satterfield D</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+<tr><th scope="row">02</th><td>6434</td><td></td><td></td><td><a href="#note1">306,1</a></td><td>ACT</td><td>TuTh</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Hurley J</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 454</span> - <span class="courseTitle">TECHNOLOGIES FOR HYBRID DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5480</td><td></td><td></td><td><a href="#note1">311,13</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-121</td><td>Boyer S</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>MW</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Boyer S</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 457</span> - <span class="courseTitle">SOFT GOODS DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7738</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td></td><td>DESN-115</td><td>Regoli-Arthur K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 469</span> - <span class="courseTitle">ENT DESIGN: HISTORY AND PRACTI</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8802</td><td></td><td></td><td><a href="#note1">306</a></td><td>LEC</td><td>MW</td><td>5:30-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Tredway T</td><td>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 490</span> - <span class="courseTitle">S TOPICS DESIGN</span></h4><span class="units">1-3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>11276</td><td></td><td></td><td></td><td>ACT</td><td>MW</td><td>7-9:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-115</td><td>Regoli-Arthur K</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 495</span> - <span class="courseTitle">FIELD STUDIES IN DESIGN</span></h4><span class="units">1-6 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4750</td><td></td><td></td><td><a href="#note1">15,305</a></td><td>SUP</td><td>TBA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Satterfield D</td><td>Instructor Consent Required<br>Class instruction is: Asynch. Online-No Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 554</span> - <span class="courseTitle">TECHNOLOGIES FOR HYBRID DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5481</td><td></td><td></td><td><a href="#note1">311,13</a></td><td>ACT</td><td>MW</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-121</td><td>Boyer S</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>MW</td><td>4-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Boyer S</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 583</span> - <span class="courseTitle">DATA &amp; TECH HUMAN INTRACTN DSN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>7978</td><td></td><td></td><td><a href="#note1">310,1,13,21</a></td><td>SEM</td><td>Th</td><td>9:30-12:15PM</td><td></td><td>DESN-113</td><td>Takahashi S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 586</span> - <span class="courseTitle">HUM EXPER &amp; EMBODIED INTERACTS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>7887</td><td></td><td></td><td><a href="#note1">310,21</a></td><td>ACT</td><td>F</td><td>1-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-113</td><td>Boyer S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 592</span> - <span class="courseTitle">GRADUATE INTERNSHIP</span></h4><span class="units">1-2 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7886</td><td></td><td></td><td><a href="#note1">306,21</a></td><td>SUP</td><td>F</td><td>9:30-10:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Barker H</td><td>Department Consent Required<br>Class instruction is: Online - Mixed Meet Times.</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>TBA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Barker H</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 595</span> - <span class="courseTitle">FIELD STUDIES IN DESIGN</span></h4><span class="units">1-3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9167</td><td></td><td></td><td><a href="#note1">306</a></td><td>SUP</td><td>W</td><td>1-1:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Barker H</td><td>Department Consent Required<br>Class instruction is: Synch. Online - Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 670</span> - <span class="courseTitle">GLOBAL DESIGN THEORY AND PRAC.</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9171</td><td></td><td></td><td><a href="#note1">307</a></td><td>SEM</td><td>W</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-113</td><td>Barker H</td><td>Class instruction is: Hybrid(Face to Face &amp; Async).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 686</span> - <span class="courseTitle">IMMERSIVE DESIGN RESEARCH LAB</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7948</td><td></td><td></td><td><a href="#note1">311</a></td><td>ACT</td><td>Th</td><td>1-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-113</td><td>Char K</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>Th</td><td>1-6:45PM</td><td></td><td>ONLINE-ONLY</td><td>Char K</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">DESN 697</span> - <span class="courseTitle">DIRECTED GRADUATE STUDIES</span></h4><span class="units">1-3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7885</td><td></td><td></td><td><a href="#note1">307</a></td><td>SUP</td><td>Tu</td><td>9:30-10:45AM</td><td></td><td>DESN-113</td><td>Barker H</td><td>Department Consent Required<br>Class instruction is: Hybrid(Face to Face &amp; Async).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>TBA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">02</th><td>12614</td><td></td><td></td><td><a href="#note1">307</a></td><td>SUP</td><td>F</td><td>6-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-113</td><td>Barker H</td><td>Department Consent Required<br>Class instruction is: Hybrid(Face to Face &amp; Async).</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>TBA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+</div>
+<div class="notesBlock"><h2 class="notesTitle"><a id="note1"></a>Class Notes for Design</h2><table class="classScheduleNotes"><tr><th scope="col" >Number</th><th scope="col">Note</th></tr><tr><td><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://www.csulb.edu/sites/default/files/u33991/reserve_capacity_icon_2.png" width="55" height="55" alt="Reserve Capacity" title="Reserve Capacity" /></a></td><td>Reserve Capacity - Reserved seats (AKA reserve capacity) is a new functionality added to the registration system that can save a certain number of seats for a specific group of students.</td></tr><tr><td><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></td><td>Zero Cost Course Materials - California Community Colleges and California State Universities now include a no cost symbol in the online campus course schedule that exclusively use digital course materials that are free of charge to students and therefore not required to be purchased.</td></tr>
+<tr><th scope="row">1</th><td><p>Prerequisite and/or co-requisite - see University Catalog.</p></td></tr>
+<tr><th scope="row">13</th><td><p>Double numbered course.  400 level/undergraduates; 500 level/graduates.</p></td></tr>
+<tr><th scope="row">15</th><td><p>For specific majors only - inquire department office.</p></td></tr>
+<tr><th scope="row">17</th><td><p>Admission preference given to majors.</p></td></tr>
+<tr><th scope="row">21</th><td><p>Open to upper division students only.</p></td></tr>
+<tr><th scope="row">305</th><td><p>Online Asynchronous Instruction: instructor and students participate at different times; no set schedule for face-to-face or synchronous online meetings; check course syllabus for details.</p></td></tr>
+<tr><th scope="row">306</th><td><p>Online Synchronous Instruction: instructor and students normally participate at the same time on a set schedule, students expected to be available to participate on indicated days at specified times; may include asynchronous online work; check course syllabus for details. Camera use may be required for synchronous online courses. Students in need of appropriate technology resources should contact ATS-help@csulb.edu</p></td></tr>
+<tr><th scope="row">307</th><td><p>Hybrid Instruction: Class consists of both face-to-face and asynchronous (no meet times) online class meetings. Check course syllabus for details.</p></td></tr>
+<tr><th scope="row">309</th><td><p>Online Mixed Meeting (Synchronous and Asynchronous) Instruction: Instructor and students participate online at the same time on a set schedule, and online at different times. Check course syllabus for details. Camera use may be required for synchronous online courses. Student in need of appropriate technology resources should contact ATS-help@csulb.edu</p></td></tr>
+<tr><th scope="row">310</th><td><p>Face-to-Face On-Campus Instruction: Face-to-face instruction will take place in a classroom on campus. Check course syllabus for details.</p></td></tr>
+<tr><th scope="row">311</th><td><p>Hybrid Instruction: Class consists of both face-to-face and synchronous (meet times) online class meetings. Check course syllabus for details.</p></td></tr>
+</table></div>
+</div>
+</div></div></div></div></div>
+<footer class="footer">
+		  <div class="container">
+			<div class="col-sm-12 footer-columns" role="navigation" aria-label="footer-navigation">
+				<div class="row">
+					<div class="col-sm-2 three-footer-column">
+					<h3 class="menu-footer-heading">SERVICES</h3>
+						<ul class="menu-footer">
+							<li><a href="http://emergency.csulb.edu/">Emergency Information</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/caps/crisis.htm">Crisis Assistance</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/cares/">CARES Team</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/ati/">Accessibility</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/shs/">Student Health Center</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 three-footer-column">
+						<div class="row footer-border">
+						<h3 class="menu-footer-heading">Colleges</h3>
+							<div class="col-sm-6 footer-two-one">
+								<ul class="menu-footer" style="margin-right: 10px;">
+									<li><a href="http://web.csulb.edu/colleges/cota/">The Arts</a></li>
+									<li><a href="http://www.ced.csulb.edu/">Education</a></li>
+									<li><a href="http://web.csulb.edu/colleges/cba/">Business Administration</a></li>
+									<li><a href="http://www.ccpe.csulb.edu/ContinuingEd/default.aspx">Continuing &amp; Professional Education</a></li>
+									
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+										<li class="footer-single-column"><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+									
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<ul class="menu-footer footer-double-column">
+									<li><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+									<li><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+									<li><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+									<li><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 three-footer-column">
+						<div class="row footer-border">
+						 <h3 class="menu-footer-heading">Additional Resources</h3>
+							<div class="col-sm-6 footer-two-one">
+								<ul class="menu-footer" style="margin-right: 10px;">
+									<li><a href="http://www.csulb.edu/about/">About CSULB</a></li>
+									<li><a href="http://web.csulb.edu/employment/"><span class=" sr-only">University</span> Careers</a></li>
+									<li><a href="http://daf.csulb.edu/offices/ppfm/police/">University Police</a></li>
+									<li><a href="http://daf.csulb.edu/offices/its/catalog/directory.php">Campus Directory</a></li>
+								
+										<li class="footer-single-column"><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+										<li class="footer-single-column"><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+										<li class="footer-single-column"><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a></li>
+									
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<ul class="menu-footer footer-double-column">				
+									<li><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+									<li><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+									<li><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<ul class="menu-footer footer-border footer-without-h3">
+							<li><a href="http://www.calstate.edu/">CSU</a></li>
+							
+							<li><a href="http://www.csulb.edu/sitemap">Site Index</a></li>
+							<li><a href="/contact">Feedback </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- comment -->
+			<div class="panel-group footer-accordian" id="accordionFooter">
+				<!-- Panel  1 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseOne">
+							SERVICES   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">						
+								<li><a href="http://emergency.csulb.edu/">Emergency Information</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/caps/crisis.htm">Crisis Assistance</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/cares/">CARES Team</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/ati/">Accessibility</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/shs/">Student Health Center</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Panel  2 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseTwo">
+							Colleges   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseTwo" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">
+								<li><a href="http://web.csulb.edu/colleges/cota/">The Arts</a></li>
+								<li><a href="http://www.ced.csulb.edu/">Education</a></li>
+								<li><a href="http://web.csulb.edu/colleges/cba/">Business Administration</a></li>
+								<li><a href="http://www.ccpe.csulb.edu/ContinuingEd/default.aspx">Continuing &amp; Professional Education</a></li>
+								<li><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+								<li><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+								<li><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+								<li><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Panel  2 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseThree">
+							Additional Resources   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseThree" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">
+								<li><a href="http://www.csulb.edu/about/">About CSULB</a></li>
+								<li><a id="last-item-header" href="http://web.csulb.edu/employment/"><span class=" sr-only">University</span> Careers</a></li>
+								<li><a href="http://daf.csulb.edu/offices/ppfm/police/">University Police</a></li>
+								<li><a href="http://daf.csulb.edu/offices/its/catalog/directory.php">Campus Directory</a></li>
+								<li><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+								<li><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+								<li><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container container-table">
+			<div class="row">
+				<div class="col-md-12 text-center footer-social-link">
+					<a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a>
+                    <a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a>
+                    <a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a>
+                    <a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a>
+				</div>
+			</div>
+				<div class="row">
+					<div class="text-center col-md-6 col-md-offset-3">
+						<p class="footer-logo"><a href="http://www.csulb.edu">California State University <strong>Long Beach</strong></a></p>
+						<div class="vcard">
+							<div class="adr">
+								<div class="street-address">1250 Bellflower Boulevard</div>
+								<div><span class="locality">Long Beach, California</span> <span class="postal-code">90840</span></div>
+							</div>
+							<div class="tel">562.985.4111</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		</footer>
+        </div>
+        <script>
+	$( document ).ready(function() {
+    console.log( "ready!" );
+	var pathname = window.location.pathname;
+	var mypart = pathname.split("/").reverse()[1];
+	
+	if(mypart == 'By_Subject'){
+	$("#browseBySubject").addClass("activeTab");
+	}
+	
+	if(mypart == 'By_College'){
+	$("#browseByCollege").addClass("activeTab");
+	}
+	
+	if(mypart == 'By_GE_Requirement'){
+	$("#browseByGE").addClass("activeTab");
+	}
+});
+
+
+
+</script>
+</body>
+</html>
+
