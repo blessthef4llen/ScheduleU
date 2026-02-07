@@ -1,0 +1,34 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+COUN 191,Career and Personal Explorations,3,,,,Any foundation (G
+COUN 360,Life and Career Decisions,3,,,"Completion of GE Foundation requirements, one or more Explorations courses, and upper-division standing",
+COUN 506,Introduction to School Counseling,3,,,School Counseling Majors Only,
+COUN 507,Foundations of Career Development in K-12 Schools,3,,,COUN 506,
+COUN 508A,Family Systems Applied to Aging and Lifespan Development,3,,,Counseling Psychology Majors Only,
+COUN 508B,Family Systems Methods,3,,,COUN 508A or consent of instructor,
+COUN 510,Law and Ethics for Counselors,3,,,"Counseling Psychology Majors, School Counseling Majors, or Student Development in Higher Education Majors only",
+COUN 511,Counseling the Alcohol/Chemically Dependent Person,2,,,Counseling Psychology Majors Only,
+COUN 512,Child and Spousal/Partner Abuse,1,,,Counseling Psychology Majors Only,
+COUN 513,Introduction to Clinical Interviewing,3,,,"Counseling Psychology Majors, School Counseling Majors, or Student Development in Higher Education Majors only",
+COUN 514,Psychopharmacology for Counselors,3,,,COUN 513,
+COUN 515,Counseling Theories,3,,,,COUN 513
+COUN 522,Counseling Methods and Techniques,3,,,,"COUN 513 , COUN 515"
+COUN 543,Human Sexuality Counseling,3,,,COUN 515,
+COUN 555,Cross-Cultural Counseling,3,,,"COUN 510 , COUN 513 , COUN 515 ; COUN 506 for School Counseling Option, SDHE 510 for SDHE Option",
+COUN 556,Counseling Children and Adolescents,3,,,COUN 515,
+COUN 557,Counseling Couples,3,,,COUN 515,
+COUN 559,Play and Art Therapy for Children/Adolescents,3,,,Counseling Psychology Majors Only,
+COUN 601,Trauma and Grief Counseling,3,,,COUN 556,
+COUN 602,College Counseling for Equity and Access in K-12 Schools,3,,,"COUN 513 , School Counseling and Student Development in Higher Education majors only",
+COUN 604,Multi-Tiered Systems of Support (MTSS) for School Counselors,3,,,COUN 506 and Department Consent,
+COUN 605,Mental Health and Crisis Response in Schools,3,,,School Counseling Majors or Department Consent,
+COUN 606,School Counseling Curriculum and Instructional Design,3,,,COUN 506,COUN 643A or COUN 644A
+COUN 607,School Counseling Practicum,3,,,"COUN 506 , COUN 513 , Certificate of Clearance",COUN 515 Candidates gain exposure to the climate and conditions within the K-12 school setting and the role of the school counselor
+COUN 608,Psychological Assessment and Testing,3,,,"COUN 510 , COUN 511 , COUN 512 , COUN 513 , COUN 515 , COUN 522",
+COUN 609,Counseling Psychology Practicum,4,,,"COUN 510 , COUN 511 , COUN 512 , COUN 513 , COUN 515 , COUN 522 , and COUN 608",
+COUN 638,Group Counseling,3,,,"COUN 510 , COUN 513 , COUN 515",
+COUN 643A,Counseling Field Work (School Counseling),3,,,"COUN 607, COUN 638","COUN 606, EDP 596"
+COUN 643D,Counseling Field Work (Counseling Psychology),3,,,"COUN 608 , COUN 609",
+COUN 644A,Advanced Counseling Fieldwork (Advanced School Counseling),3,,,"EDP 596, COUN 606, COUN 643A",
+COUN 644D,Advanced Counseling Field Work (Counseling Psychology),3,,,"COUN 638 , COUN 643D",
+COUN 685,Community Mental Health Counseling,1,,,Counseling Psychology Majors Only,
+COUN 695C,Integrative Seminar in Professional School Counseling,3,,,"COUN 555 , EDP 596 , COUN 643A",COUN 644A

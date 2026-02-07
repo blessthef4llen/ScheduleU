@@ -1,0 +1,5 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+ETEC 171,Critical Thinking Using Computer Technology,3,,,,Completion/concurrent enrollment in GE Foundation requirement Category A1 English Composition
+ETEC 570,E-Learning Design and Development,3,,,"ETEC 523 Introduction to e-learning design and development, including project management, instructional analyses and strategies, software selection, and evaluation",
+ETEC 580,Field Experience in Educational Technology,3,,,ETEC 523,
+ETEC 695,Seminar in Educational Technology,3,,,Successful completion of all required course work for the Master of Science in Educational Technology and Media Leadership Majors only,

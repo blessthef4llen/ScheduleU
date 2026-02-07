@@ -1,0 +1,11 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+ES P 200,California Environmental Issues,3,,,,"( ERTH 102 , ERTH 104 OR GEOG 140 or GEOG 130 OR ES P/GEOG 101 ) and ( BIOL 200 or BIOL 211 or ECON 101 ); or instructor consent"
+ES P 300,Environmental Law and Policy,3,,,ES P 200 and upper division standing; or consent of instructor,
+ES P 330,California Ecosystems,3,,,GEOG 101 or GEOG 130 or GEOG 135 or GEOG 140 or ES P/GEOG 101 or ES P 200 ; AND GEOG 200 or BIOL 260 ; or instructor consent,
+ES P 350,Environmental Politics,3,,,"ES P 200 Co-requisite: ES P 300 This course examines how government agencies, historical land uses, social activism and politics, science, multinational corporations, and cultural institutions have influenced and formed U",
+ES P 392,Climate Action and Sustainability at CSULB,3,,,Completion of entire GE Foundation curriculum along with one or more GE Explorations courses and upper-division standing,
+ES P 400,Environmental Science and Policy Capstone Project,3,,,BIOL 350 or ES P 330 ; ECON 306 or ECON 462 or C E 406 ; ES P 300 ; GEOG 481 or GEOG 473 ; ERTH 300 ; AND department consent,
+ES P 450,Environmental Sustainability and Social Justice,3,,,"Upper division standing An interdisciplinary, project-based examination of environmental sustainability challenges and social justice issues",
+ES P 490,Selected Topics in Environmental Science and Policy,3,,,Consent of instructor,
+ES P 492,Applied Internship,3,,,Upper division standing,
+ES P 499,Environmental Science and Policy Directed Study,,,,Consent of instructor,
