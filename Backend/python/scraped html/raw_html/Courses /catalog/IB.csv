@@ -1,0 +1,4 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+IB 300,International Business,3,,,"Business majors, Pre-Business majors, International Business Minors, Entrepreneurship minors, Marketing minors, Asian Studies, Construction Engineering Management, and Certificate in Asian Studies",
+IB 492,Global Business Project,3,,,IB 300,
+IB 495,Selected Topics in Business Administration,3,,,Consent of program director,

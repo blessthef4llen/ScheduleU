@@ -1,0 +1,9 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+SCM 410,Sustainable Logistics Management,3,,,"Management majors, OSCM majors, International Business majors, Applied Mathematics majors, and SCM minors only",
+SCM 411,Operations Planning and Control,3,,,"Management majors, OSCM majors, International Business majors, Applied Mathematics majors, and SCM minors only",
+SCM 413,Total Quality Management,3,,,MGMT 300 and I S 301,
+SCM 414,Global Supply Chain Management,3,,,"Management majors, OSCM majors, International Business majors, Applied Mathematics majors, and SCM minors only",
+SCM 415,Distribution Management,3,,,MGMT 300 Theories and principles behind modes of transportation and facilities responsible for the movement of products in the supply chain,
+SCM 418,Procurement,3,,,MGMT 300; I S 301,
+SCM 430,Project Management,3,,,"MGMT 300 , I S 301",
+SCM 614,Supply Chain Management,3,,,Graduate Standing,

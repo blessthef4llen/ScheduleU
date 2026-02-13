@@ -1,0 +1,51 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+CHEM 100,Chemistry and Today’s World,4,,,"One GE Foundation course (GE categories 1A, 1B, 1C or 2)",
+CHEM 111A,General Chemistry,5,,,MATH 112B or higher (can be taken concurrently) and one of the following: CHEM 90 OR CHEM 102 OR CHEM 140 OR AP Chemistry with a score of 2 or 3 OR other department-approved measures for chemistry placement,MATH 112B or higher (can be taken concurrently) and one of the following: CHEM 90 OR CHEM 102 OR CHEM 140 OR AP Chemistry with a score of 2 or 3 OR other department-approved measures for chemistry placement
+CHEM 111B,General Chemistry,5,,,Students in need of additional support will be required to enroll concurrently in CHEM 95B,Students in need of additional support will be required to enroll concurrently in CHEM 95B
+CHEM 112A,Advanced General Chemistry,5,,,Department consent,
+CHEM 112B,Advanced General Chemistry,5,,,CHEM 112A with a grade of “C’ or better,
+CHEM 220A,Organic Chemistry I,3,,,CHEM 111B or CHEM 112B with a grade of “C” or better,CHEM 224A is required for students repeating course
+CHEM 220B,Organic Chemistry II,3,,,CHEM 220A with a grade of “C” or better,
+CHEM 223A,Organic Chemistry Laboratory I,1,,,,"CHEM 220A , except for students who have previously earned a “C” or better in CHEM 220A"
+CHEM 223B,Organic Chemistry Laboratory II,1,,,"CHEM 220A and CHEM 223A , both with a grade of “C” or better","CHEM 220B , except for students who have previously earned a “C” or better in CHEM 220B"
+CHEM 224A,Organic Chemistry I Recitation,1,,,,CHEM 220A Problem solving session emphasizing principles learned in first semester organic chemistry
+CHEM 224B,Organic Chemistry II Recitation,1,,,,CHEM 220B Problem solving session emphasizing principles learned in second semester organic chemistry
+CHEM 227,Fundamentals of Organic Chemistry,3,,,CHEM 111A or CHEM 112A with a grade of “C” or better; CHEM 111B or CHEM 112B is recommended,
+CHEM 241,Explorations in Biochemistry,1,,,"BIOL 212 with a grade of “C” or better Prerequisite/Corequisite: CHEM 220A An introduction to the core principles, key topics, and seminal discoveries in the field of biochemistry","CHEM 220A An introduction to the core principles, key topics, and seminal discoveries in the field of biochemistry"
+CHEM 251,Quantitative Analysis,4,,,CHEM 111B or CHEM 112B with a grade of “C” or better,
+CHEM 304,Chemistry in the Kitchen,3,,,"Completion of at least 60 units, completion of the entire Foundation, and completion of at least one Explorations course in category B",
+CHEM 320L,Organic Chemistry Laboratory,2,,,CHEM 220A,"CHEM 220B , except for students who have previously earned a “C” or better in CHEM 220B"
+CHEM 331,Inorganic Chemistry,3,,,CHEM 111B or CHEM 112B with a grade of “C” or better,
+CHEM 361,Chemical Communications,3,,,GE Foundation requirement,CHEM 220A
+CHEM 371A,Physical Chemistry: Thermodynamics and Kinetics,3,,,"CHEM 111B or CHEM 112B , MATH 123 , PHYS 152 (all with a grade of “C” or better)",MATH 224
+CHEM 371B,Physical Chemistry: Quantum Mechanics and Spectroscopy,3,,,"CHEM 111B or CHEM 112B , MATH 123 , PHYS 152 (all with a grade of “C” or better)",MATH 224
+CHEM 373,Physical Chemistry Laboratory,3,,,"CHEM 361 , CHEM 371A or CHEM 377A , and CHEM 371B or CHEM 377B , all with a grade of “C” or better",
+CHEM 375,Physical Chemistry for Engineers,3,,,"MATH 123 ; PHYS 151 and either PHYS 152 or E E 210 / E E 210L ; CH E 220 ; CHEM 111A or CHEM 112A / CHEM 111B or CHEM 112B ; and CHEM 220A or CHEM 227 , all grades of “C” or better",
+CHEM 377A,Fundamentals of Physical Chemistry,3,,,"CHEM 111B or CHEM 112B , MATH 123 , and PHYS 152 (all with a grade of “C” or better)",
+CHEM 377B,Fundamentals of Physical Chemistry,3,,,"CHEM 111B or CHEM 112B , MATH 123 , and PHYS 152 (all with a grade of “C” or better)",
+CHEM 379,Physical Chemistry for the Biosciences,4,,,"CHEM 111B or CHEM 112B , CHEM 220A , MATH 123 , and PHYS 100B or PHYS 152 , all with grades of C or better",
+CHEM 381,Special Topics in Spectroscopy,1,,,"CHEM 371B or CHEM 377B or CHEM 379 Fundamentals, modern aspects, and applications of spectroscopic methods in chemical and biological systems","CHEM 371B or CHEM 377B or CHEM 379 Fundamentals, modern aspects, and applications of spectroscopic methods in chemical and biological systems"
+CHEM 385,Materials Science,3,,,"CHEM 111A or CHEM 112A and PHYS 152 and ( CHEM 111B or CHEM 112B or PHYS 320 ), completion of CHEM 111B or CHEM 112B is strongly recommended",
+CHEM 385C,Materials Science Colloquium,1,,,"CHEM 111A or CHEM 112A and PHYS 152 and ( CHEM 111B or CHEM 112B or PHYS 320 ), completion of CHEM 111B or CHEM 112B is strongly recommended Discussion of advances as reported in recent literature related to energy materials",
+CHEM 385L,Materials Science Laboratory,2,,,"CHEM 111A or CHEM 112A and PHYS 152 and ( CHEM 111B or CHEM 112B or PHYS 320 ), completion of CHEM 111B or CHEM 112B is strongly recommended Introduction to synthesis, characterization methods, and property measurement of advanced materials",
+CHEM 420,Advanced Organic Chemistry Laboratory,3,,,CHEM 220B and CHEM 320L,CHEM 361
+CHEM 421,Physical Organic Chemistry,3,,,CHEM 220B with a grade of “C” or better,CHEM 371B or CHEM 377B
+CHEM 431,Advanced Inorganic Chemistry,3,,,CHEM 371B,CHEM 371B
+CHEM 441A,Biological Chemistry,3,,,"BIOL 212 , CHEM 220B and either CHEM 320L or CHEM 223B all with a grade of “C” or better",
+CHEM 441B,Biological Chemistry,3,,,CHEM 441A with a grade of “C” or better,
+CHEM 442,Methods in Biochemistry,2,,,CHEM 361 and CHEM 441A both with grades of C or better,
+CHEM 443,Biochemistry Laboratory,4,,,CHEM 441A and CHEM 361 ; all with a grade of “C” or better,
+CHEM 448,Fundamentals of Biological Chemistry,3,,,CHEM 220B or CHEM 227 either with a grade of “C” or better,
+CHEM 449,Nutritional Biochemistry Laboratory,1,,,CHEM 448 with a grade of “C” or better,
+CHEM 461,Chemistry Capstone,1,,,,Department consent
+CHEM 480,Biomolecular Modeling and Simulation,3,,,"CHEM 220B or CHEM 227 , MATH 119B or MATH 123 , and PHYS 100B or PHYS 152 , all with a grade of “C” or better",
+CHEM 485,Special Topics in Materials Chemistry,3,,,"CHEM 220B and CHEM 331 and CHEM 385 or consent of instructor Areas of current interest in materials chemistry with introduction to principles of materials synthesis, characterization, and application",
+CHEM 496,Undergraduate Directed Research,,,,Consent of instructor,
+CHEM 498,Senior Thesis,3,,,Major GPA 3,
+CHEM 498H,Senior Thesis - Honors,,,,"At least one unit of CHEM 496 with a grade of “A”; admission into the Honors in Chemistry program, and consent of instructor",
+CHEM 595A,Colloquium in Biochemistry,1,,,Graduate standing or consent of instructor,
+CHEM 595B,Colloquium in Organic Chemistry,1,,,Graduate standing or consent of instructor,
+CHEM 595C,"Colloquium in Analytical, Physical and Inorganic Chemistry",1,,,Graduate standing or consent of instructor,
+CHEM 697,Directed Research,,,,Arrangement with instructor,
+CHEM 697C,Directed Research,,,,Arrangement with Instructor Continuation of laboratory work supervised on an individual basis,
+CHEM 698,Thesis,,,,Advancement to candidacy for M,

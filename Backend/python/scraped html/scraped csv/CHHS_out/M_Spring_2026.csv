@@ -1,0 +1,11 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,M,S 102,M S 102,BASIC LEADERSHIP,1,,01,7137,Spring_2026|M S 102|01|7137,FALSE,\N,310,LEC,Tu,9-9:50AM,available,EN2-107,Van Orden A,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 102L,M S 102L,LEADERSHIP LABORATORY,1,,01,7138,Spring_2026|M S 102L|01|7138,FALSE,\N,310,ACT,Th,8-10:45AM,available,ET-107,Van Orden A,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 202,M S 202,LEADERSHIP AND TEAMWORK,2,,01,7139,Spring_2026|M S 202|01|7139,FALSE,\N,310,LEC,Tu,9-10:50AM,available,ET-107,Marquez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 202L,M S 202L,LEADERSHIP LABORATORY,2,,01,7140,Spring_2026|M S 202L|01|7140,FALSE,\N,,ACT,Th,8-10:45AM,available,ET-107,Van Orden A,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 302,M S 302,LEADERSHIP & ETHICS,3,,01,7141,Spring_2026|M S 302|01|7141,FALSE,\N,310,LEC,TuTh,6:30-8:00AM,available,ET-107,Van Orden A,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 302L,M S 302L,LEADERSHIP LAB,1,,01,7142,Spring_2026|M S 302L|01|7142,FALSE,\N,310,ACT,Th,8-10:45AM,available,ET-107,Van Orden A,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 402,M S 402,OFFICERSHIP,3,,01,7143,Spring_2026|M S 402|01|7143,FALSE,\N,310,LEC,TuTh,6:30-8:00AM,available,ET-229,Tapia A,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 402L,M S 402L,LEADERSHIP LAB,2,,01,7144,Spring_2026|M S 402L|01|7144,FALSE,\N,310,ACT,Th,8-10:45AM,available,ET-107,Van Orden A,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 411,M S 411,U.S. MILITARY HISTORY,3,,04,6631,Spring_2026|M S 411|04|6631,FALSE,\N,310,LEC,MW,9-10:30AM,available,COB-124,Marquez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,M,S 497,M S 497,INDEPENDENT STUDIES,1,,01,1826,Spring_2026|M S 497|01|1826,FALSE,\N,,SUP,TBA,NA,available,ET-233,Van Orden A,Department Consent RequiredClass instruction is: Face to Face - On Campus.

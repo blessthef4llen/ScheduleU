@@ -1,0 +1,116 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,CINE,101,CINE 101,UNDERSTANDING CINEMA,3,GE: 3A (C1),01,10469,Spring_2026|CINE 101|01|10469,FALSE,\N,,LEC,M,4-6:45PM,,CINE-127,Vafaeisefat E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,170,CINE 170,ON-SET SAFETY & BEST PRACTICES,3,,01,8256,Spring_2026|CINE 170|01|8256,FALSE,\N,,LEC,W,9-11:45AM,,CINE-207,Russo C,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,170,CINE 170,ON-SET SAFETY & BEST PRACTICES,3,,03,8258,Spring_2026|CINE 170|03|8258,FALSE,\N,,LEC,W,12-2:45PM,,CINE-207,Russo C,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,170,CINE 170,ON-SET SAFETY & BEST PRACTICES,3,,05,9896,Spring_2026|CINE 170|05|9896,FALSE,\N,,LEC,Tu,9:30-12:15PM,,CINE-207,Gurzi J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,170,CINE 170,ON-SET SAFETY & BEST PRACTICES,3,,06,9897,Spring_2026|CINE 170|06|9897,FALSE,\N,,LEC,Tu,12:30-3:15PM,,CINE-207,Gurzi J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,170,CINE 170,ON-SET SAFETY & BEST PRACTICES,3,,07,8262,Spring_2026|CINE 170|07|8262,FALSE,\N,,LEC,Th,9:30-12:15PM,,CINE-201,Ketcham K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,170,CINE 170,ON-SET SAFETY & BEST PRACTICES,3,,08,8263,Spring_2026|CINE 170|08|8263,FALSE,\N,,LEC,Th,12:30-3:15PM,,CINE-201,Ketcham K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,170,CINE 170,ON-SET SAFETY & BEST PRACTICES,3,,09,9952,Spring_2026|CINE 170|09|9952,FALSE,\N,,LEC,M,9-11:45AM,,CINE-109,Mahoney T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,170,CINE 170,ON-SET SAFETY & BEST PRACTICES,3,,10,10442,Spring_2026|CINE 170|10|10442,FALSE,\N,,LEC,Tu,12:30-3:15PM,,CINE-101,Hayward K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,201,CINE 201,FILM HISTORY I: ORIGINS-1960,3,,01,10470,Spring_2026|CINE 201|01|10470,FALSE,\N,,LEC,F,9-10:50AM,available,CINE-127,Gendler J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,201,CINE 201,FILM HISTORY I: ORIGINS-1960,3,,02,10471,Spring_2026|CINE 201|02|10471,FALSE,\N,,ACT,F,11-12:50PM,available,CINE-127,Gendler J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,202,CINE 202,FILM HISTORY II: 1960-PRESENT,3,,01,8264,Spring_2026|CINE 202|01|8264,FALSE,\N,,LEC,M,12-1:50PM,,CINE-127,Wagner P,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,202,CINE 202,FILM HISTORY II: 1960-PRESENT,3,,02,8265,Spring_2026|CINE 202|02|8265,FALSE,\N,,ACT,M,2-3:50PM,,CINE-127,Wagner P,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,207,CINE 207,INTRODUCTION TO SCREENWRITING,3,,01,8274,Spring_2026|CINE 207|01|8274,FALSE,\N,,SEM,Th,9:30-12:15PM,,CINE-101,Geib G,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,207,CINE 207,INTRODUCTION TO SCREENWRITING,3,,02,8275,Spring_2026|CINE 207|02|8275,FALSE,\N,,SEM,Tu,12:30-3:15PM,,CINE-201,Blackburn B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,207,CINE 207,INTRODUCTION TO SCREENWRITING,3,,05,9953,Spring_2026|CINE 207|05|9953,FALSE,\N,,SEM,Tu,9:30-12:15PM,,CINE-109,Reyes Loo E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,207,CINE 207,INTRODUCTION TO SCREENWRITING,3,,06,8278,Spring_2026|CINE 207|06|8278,FALSE,\N,,SEM,W,3-5:45PM,available,CINE-203,Blackburn B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,207,CINE 207,INTRODUCTION TO SCREENWRITING,3,,07,8279,Spring_2026|CINE 207|07|8279,FALSE,\N,,SEM,W,6-8:45PM,available,CINE-203,Jackson Q,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,207,CINE 207,INTRODUCTION TO SCREENWRITING,3,,09,8281,Spring_2026|CINE 207|09|8281,FALSE,\N,,SEM,F,1-3:45PM,,CINE-203,Vafaeisefat E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,207,CINE 207,INTRODUCTION TO SCREENWRITING,3,,10,9954,Spring_2026|CINE 207|10|9954,FALSE,\N,,SEM,W,9-11:45AM,,CINE-109,Vafaeisefat E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,207,CINE 207,INTRODUCTION TO SCREENWRITING,3,,11,11012,Spring_2026|CINE 207|11|11012,FALSE,\N,310,SEM,Th,5-7:45PM,available,CINE-207,Reyes Loo E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,220,CINE 220,THE VISUAL STORY,3,,01,9141,Spring_2026|CINE 220|01|9141,FALSE,\N,,LEC,M,12-2:45PM,,CINE-109,Winchell Q,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,220,CINE 220,THE VISUAL STORY,3,,02,9142,Spring_2026|CINE 220|02|9142,FALSE,\N,,LEC,M,3-5:45PM,,CINE-109,Winchell Q,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,220,CINE 220,THE VISUAL STORY,3,,03,10404,Spring_2026|CINE 220|03|10404,FALSE,\N,,LEC,Tu,4-6:45PM,,CINE-109,Kelly A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,220,CINE 220,THE VISUAL STORY,3,,04,9143,Spring_2026|CINE 220|04|9143,FALSE,\N,,LEC,Tu,3:30-6:15PM,,CINE-207,Corbin N,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,220,CINE 220,THE VISUAL STORY,3,,05,9144,Spring_2026|CINE 220|05|9144,FALSE,\N,,LEC,W,12-2:45PM,,CINE-109,Boyd-Batstone K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,220,CINE 220,THE VISUAL STORY,3,,08,9146,Spring_2026|CINE 220|08|9146,FALSE,\N,,LEC,Th,12:30-3:15PM,,CINE-109,Corbin N,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,220,CINE 220,THE VISUAL STORY,3,,09,9147,Spring_2026|CINE 220|09|9147,FALSE,\N,,LEC,Th,3:30-6:15PM,,CINE-109,Corbin N,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,220,CINE 220,THE VISUAL STORY,3,,11,10466,Spring_2026|CINE 220|11|10466,FALSE,\N,310,LEC,Tu,3:30-6:15PM,,CINE-201,Sullivan L,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,272,CINE 272,EDITING I LAB,1,,01,9215,Spring_2026|CINE 272|01|9215,FALSE,\N,,ACT,Tu,9:30-11:20AM,available,SSC-060,Winiemko G,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,300,CINE 300,ORIENTATION TO CINEMATIC ARTS,2,,02,12627,Spring_2026|CINE 300|02|12627,FALSE,\N,310,SEM,W,1-2:50PM,available,CINE-203,Vafaeisefat E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,301,CINE 301,CRITICAL DEBATES FILM & MEDIA,3,GE: 3UD (UDC),01,8282,Spring_2026|CINE 301|01|8282,FALSE,\N,,LEC,M,9-11:45AM,,CINE-127,Aquino R,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,301,CINE 301,CRITICAL DEBATES FILM & MEDIA,3,GE: 3UD (UDC),02,8283,Spring_2026|CINE 301|02|8283,FALSE,\N,,LEC,Tu,7-9:45PM,,CINE-127,Tsai B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,301,CINE 301,CRITICAL DEBATES FILM & MEDIA,3,GE: 3UD (UDC),03,8284,Spring_2026|CINE 301|03|8284,FALSE,\N,,LEC,M,7-9:45PM,,CINE-127,Wagner P,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,301,CINE 301,CRITICAL DEBATES FILM & MEDIA,3,GE: 3UD (UDC),06,9658,Spring_2026|CINE 301|06|9658,FALSE,\N,310,LEC,Th,6:30-9:15PM,,CINE-127,Jeong S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,307,CINE 307,PRODUCTION SOUND,3,,01,8285,Spring_2026|CINE 307|01|8285,FALSE,\N,,ACT,F,12-3:45PM,available,SSC-060,Tomlinson J,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CINE,307,CINE 307,PRODUCTION SOUND,3,,01,\N,Spring_2026|CINE 307|01|NOCLASS|3f4b4f04eb9dea72,FALSE,\N,,,F,12-3:45PM,,CINE-109,Tomlinson J,additional meeting detail
+Spring_2026,CINE,307,CINE 307,PRODUCTION SOUND,3,,01,\N,Spring_2026|CINE 307|01|NOCLASS|21e1277e30a6b608,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Tomlinson J,additional meeting detail
+Spring_2026,CINE,307,CINE 307,PRODUCTION SOUND,3,,02,9762,Spring_2026|CINE 307|02|9762,FALSE,\N,310,ACT,Tu,12:30-4:15PM,,SSC-060,Tomlinson J,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CINE,307,CINE 307,PRODUCTION SOUND,3,,02,\N,Spring_2026|CINE 307|02|NOCLASS|ab150f0556ced8fb,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Tomlinson J,additional meeting detail
+Spring_2026,CINE,310,CINE 310,WORLD AND CULTURE THRU FILM,3,GE: 3UD (UDC),03,9070,Spring_2026|CINE 310|03|9070,FALSE,\N,,LEC,M,6-8:45PM,,CINE-201,Smith L,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,310,CINE 310,WORLD AND CULTURE THRU FILM,3,GE: 3UD (UDC),04,9071,Spring_2026|CINE 310|04|9071,FALSE,\N,,LEC,Th,7-9:45PM,available,CINE-203,Guerra K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,310,CINE 310,WORLD AND CULTURE THRU FILM,3,GE: 3UD (UDC),05,9072,Spring_2026|CINE 310|05|9072,FALSE,\N,,LEC,Tu,7-9:45PM,available,CINE-203,Guerra K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,310,CINE 310,WORLD AND CULTURE THRU FILM,3,GE: 3UD (UDC),07,10465,Spring_2026|CINE 310|07|10465,FALSE,\N,310,LEC,M,3-5:45PM,,CINE-101,Li Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,310,CINE 310,WORLD AND CULTURE THRU FILM,3,GE: 3UD (UDC),08,11005,Spring_2026|CINE 310|08|11005,FALSE,\N,"34,34",LEC,Tu,4-6:45PM,available,CINE-203,Guerra K,Honors SectionClass instruction is: Face to Face - On Campus.
+Spring_2026,CINE,313,CINE 313,SUSTAINABILITY AND FILM,3,,01,9867,Spring_2026|CINE 313|01|9867,FALSE,\N,,LEC,W,1-3:45PM,available,CINE-101,Hayward K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,316,CINE 316,POPULAR CULTURE AND MEDIA,3,GE: 3UD (UDC),01,8287,Spring_2026|CINE 316|01|8287,FALSE,\N,,LEC,M,3-5:45PM,,CINE-203,Jeong S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,318,CINE 318,THEORY OF FICTION & FILM,3,GE: 3UD (UDC),05,10917,Spring_2026|CINE 318|05|10917,FALSE,\N,310,SEM,Tu,3:30-6:15PM,,CINE-205,Blackburn B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,320,CINE 320,POST-PRODUCTION SOUND,3,,01,8289,Spring_2026|CINE 320|01|8289,FALSE,\N,,ACT,Th,9:30-1:20PM,available,SSC-060,Huff B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,320,CINE 320,POST-PRODUCTION SOUND,3,,01,\N,Spring_2026|CINE 320|01|NOCLASS|29eb7eb4dfeb9081,FALSE,\N,,,NA,NA,,NA,Huff B,additional meeting detail
+Spring_2026,CINE,322,CINE 322,EXPERIMENTAL FILMMAKING,3,,01,8291,Spring_2026|CINE 322|01|8291,FALSE,\N,,SEM,Tu,9:30-12:15PM,,CINE-101,Hayward K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,322,CINE 322,EXPERIMENTAL FILMMAKING,3,,04,11106,Spring_2026|CINE 322|04|11106,FALSE,\N,,SEM,W,3-5:45PM,,CINE-109,Huff B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,326,CINE 326,INTERMEDIATE SCREENWRITING II,3,,01,9872,Spring_2026|CINE 326|01|9872,FALSE,\N,,SEM,W,12-2:45PM,available,CINE-205,Montoya M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,326,CINE 326,INTERMEDIATE SCREENWRITING II,3,,02,10453,Spring_2026|CINE 326|02|10453,FALSE,\N,,SEM,Tu,12:30-3:15PM,available,CINE-205,Reyes Loo E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,345,CINE 345,DIRECTING II,3,,02,8295,Spring_2026|CINE 345|02|8295,FALSE,\N,,LEC,Th,3:30-6:15PM,,CINE-123,Haywood-Carter A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,345,CINE 345,DIRECTING II,3,,03,8296,Spring_2026|CINE 345|03|8296,FALSE,\N,310,LEC,Tu,12:30-3:15PM,,CINE-109,Haywood-Carter A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,345,CINE 345,DIRECTING II,3,,04,10454,Spring_2026|CINE 345|04|10454,FALSE,\N,,LEC,F,9-11:45AM,available,CINE-123,Sullivan L,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,346,CINE 346,EUROPEAN CINEMA COM FAC RESIST,3,"GE: 3UD (UDC), 4UD (UDD)",01,8612,Spring_2026|CINE 346|01|8612,FALSE,\N,,LEC,M,5-6:50PM,available,CINE-207,Gendler J,Class instruction is: Face to Face - On Campus.Class offered with RGR-346-01
+Spring_2026,CINE,346,CINE 346,EUROPEAN CINEMA COM FAC RESIST,3,"GE: 3UD (UDC), 4UD (UDD)",02,8613,Spring_2026|CINE 346|02|8613,FALSE,\N,,ACT,M,7-8:50PM,available,CINE-207,Gendler J,Class instruction is: Face to Face - On Campus.Class offered with RGR-346-02
+Spring_2026,CINE,347,CINE 347,INTRODUCTION TO VISUAL EFFECTS,3,,01,10456,Spring_2026|CINE 347|01|10456,FALSE,\N,,LEC,W,7-9:45PM,,SSC-060,Steidl M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,348,CINE 348,ACTING FOR FILMMAKERS,3,,01,8255,Spring_2026|CINE 348|01|8255,FALSE,\N,,LEC,F,9-11:45AM,available,CINE-207,Knapp N,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,348,CINE 348,ACTING FOR FILMMAKERS,3,,02,10457,Spring_2026|CINE 348|02|10457,FALSE,\N,310,LEC,M,9-11:45AM,,CINE-201,Knapp N,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,355,CINE 355,INTRO DOCUMENTARY FILMMAKING,4,,05,11021,Spring_2026|CINE 355|05|11021,FALSE,\N,,LEC,Tu,10-12:45PM,available,CINE-203,Scheer H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,355,CINE 355,INTRO DOCUMENTARY FILMMAKING,4,,06,11022,Spring_2026|CINE 355|06|11022,FALSE,\N,,LAB,Th,10-12:45PM,available,CINE-203,Scheer H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,360,CINE 360,SURFSIDE PRODUCTIONS,3,,01,8297,Spring_2026|CINE 360|01|8297,FALSE,\N,307,ACT,W,12-2:45PM,,CINE-201,Winchell Q,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CINE,360,CINE 360,SURFSIDE PRODUCTIONS,3,,01,\N,Spring_2026|CINE 360|01|NOCLASS|a1db52f59a4f6d66,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Winchell Q,additional meeting detail
+Spring_2026,CINE,364,CINE 364,CINEMAS REBELLION & RESISTANCE,3,,01,8335,Spring_2026|CINE 364|01|8335,FALSE,\N,,LEC,W,6-8:45PM,,CINE-127,Palacios J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,370,CINE 370,ON-SET SAFETY & BEST PRACTICES,3,,03,11241,Spring_2026|CINE 370|03|11241,FALSE,\N,310,LEC,W,9-11:45AM,available,CINE-203,Mahoney T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,374,CINE 374,EDITING DOCUMENTARY,3,,02,9211,Spring_2026|CINE 374|02|9211,FALSE,\N,,LEC,W,10-12:45PM,available,SSC-050,Dwyer A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,374,CINE 374,EDITING DOCUMENTARY,3,,03,12297,Spring_2026|CINE 374|03|12297,FALSE,\N,310,LEC,W,3-5:45PM,,SSC-050,Dwyer A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,380,CINE 380,DOCUMENTARY HISTORY & THEORY,3,GE: 3UD (UDC),01,8300,Spring_2026|CINE 380|01|8300,FALSE,\N,,LEC,W,9-10:50AM,,CINE-127,Aquino R,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,380,CINE 380,DOCUMENTARY HISTORY & THEORY,3,GE: 3UD (UDC),02,8301,Spring_2026|CINE 380|02|8301,FALSE,\N,,ACT,W,11-12:50PM,,CINE-127,Aquino R,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,385,CINE 385,COLLABORATIVE SCRIPT DEVELPMNT,3,,02,8303,Spring_2026|CINE 385|02|8303,FALSE,\N,,LEC,W,9-11:45AM,,CINE-201,Geib G,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,385,CINE 385,COLLABORATIVE SCRIPT DEVELPMNT,3,,03,8304,Spring_2026|CINE 385|03|8304,FALSE,\N,,LEC,Tu,9:30-12:15PM,,CINE-201,Elmohtaseb S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,385,CINE 385,COLLABORATIVE SCRIPT DEVELPMNT,3,,04,8305,Spring_2026|CINE 385|04|8305,FALSE,\N,,LEC,M,9-11:45AM,,CINE-203,Wall T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,385,CINE 385,COLLABORATIVE SCRIPT DEVELPMNT,3,,05,9959,Spring_2026|CINE 385|05|9959,FALSE,\N,,LEC,M,12-2:45PM,,CINE-207,Wall T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,385,CINE 385,COLLABORATIVE SCRIPT DEVELPMNT,3,,06,9960,Spring_2026|CINE 385|06|9960,FALSE,\N,,LEC,M,12-2:45PM,,CINE-101,Stidham L,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,388A,CINE 388A,EUROPEAN CINEMAS,3,,01,10758,Spring_2026|CINE 388A|01|10758,FALSE,\N,,LEC,Th,3:30-6:15PM,,CINE-127,Palacios J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,388C,CINE 388C,EAST ASIAN CINEMAS,3,,01,10748,Spring_2026|CINE 388C|01|10748,FALSE,\N,,LEC,F,12-2:45PM,available,CINE-207,Tsai B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,395A,CINE 395A,HORROR,3,,01,8334,Spring_2026|CINE 395A|01|8334,FALSE,\N,,LEC,Th,3:30-6:15PM,,CINE-203,Guerra K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,406,CINE 406,ADV SCREENWRITING II: REVISION,3,,02,11118,Spring_2026|CINE 406|02|11118,FALSE,\N,310,SEM,M,9-11:45AM,available,CINE-205,Stidham L,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,408,CINE 408,WRITING THE SCREEN ADAPTATION,3,,03,11205,Spring_2026|CINE 408|03|11205,FALSE,\N,310,SEM,Tu,9:30-12:15PM,,CINE-205,Jackson Q,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,416,CINE 416,EDITING II,4,,02,10205,Spring_2026|CINE 416|02|10205,FALSE,\N,,LEC,Tu,3:30-7:20PM,,SSC-050,Niu X,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,416,CINE 416,EDITING II,4,,03,11122,Spring_2026|CINE 416|03|11122,FALSE,\N,310,LEC,M,1:30-5:20PM,,SSC-050,Bloom S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,417,CINE 417,EDITING III,4,,03,11123,Spring_2026|CINE 417|03|11123,FALSE,\N,310,LEC,Tu,10-1:45PM,,SSC-050,Bloom S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,417,CINE 417,EDITING III,4,,04,11124,Spring_2026|CINE 417|04|11124,FALSE,\N,310,LEC,M,9:30-1:15PM,,SSC-050,Thomas K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,418,CINE 418,COLOR CORRECTION,3,,01,8319,Spring_2026|CINE 418|01|8319,FALSE,\N,,LEC,M,2-4:45PM,,SSC-060,Balis A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,418,CINE 418,COLOR CORRECTION,3,,03,12332,Spring_2026|CINE 418|03|12332,FALSE,\N,310,LEC,M,6-8:45PM,,SSC-060,Balis A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,419,CINE 419,THE WRITERS ROOM,3,,01,8321,Spring_2026|CINE 419|01|8321,FALSE,\N,,SEM,M,12-2:45PM,,CINE-205,Montoya M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,420,CINE 420,ADVANCED AUDIO,3,,01,9213,Spring_2026|CINE 420|01|9213,FALSE,\N,,SEM,M,10-11:50AM,available,SSC-060,Huff B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,420,CINE 420,ADVANCED AUDIO,3,,02,9214,Spring_2026|CINE 420|02|9214,FALSE,\N,,ACT,M,12-1:50PM,available,SSC-060,Huff B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,423,CINE 423,ADV CINEMATOGRAPHY I PROD TECH,4,,03,8324,Spring_2026|CINE 423|03|8324,FALSE,\N,,LEC,W,9-11:45AM,,CINE-123,Pearson A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,423,CINE 423,ADV CINEMATOGRAPHY I PROD TECH,4,,04,8325,Spring_2026|CINE 423|04|8325,FALSE,\N,,LAB,W,12-2:45PM,,CINE-123,Pearson A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,424,CINE 424,PRODUCTION WORKSHOP III,3,,01,9870,Spring_2026|CINE 424|01|9870,FALSE,\N,,LEC,M,12-2:45PM,available,CINE-203,Hayward K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,424,CINE 424,PRODUCTION WORKSHOP III,3,,03,10449,Spring_2026|CINE 424|03|10449,FALSE,\N,,LEC,M,9-11:45AM,available,CINE-101,Elmohtaseb S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,424,CINE 424,PRODUCTION WORKSHOP III,3,,04,10450,Spring_2026|CINE 424|04|10450,FALSE,\N,,LEC,M,12-2:45PM,available,CINE-201,Haywood-Carter A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,425,CINE 425,ADVANCED CINEMATOGRAPHY II,4,,05,9906,Spring_2026|CINE 425|05|9906,FALSE,\N,,LEC,W,3-5:45PM,,CINE-123,Boyd-Batstone K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,425,CINE 425,ADVANCED CINEMATOGRAPHY II,4,,06,9907,Spring_2026|CINE 425|06|9907,FALSE,\N,,LAB,W,6-8:45PM,,CINE-123,Boyd-Batstone K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,427,CINE 427,PROD II: PROD FEATURE FILMS,3,,01,10928,Spring_2026|CINE 427|01|10928,FALSE,\N,310,LEC,Th,9:30-12:15PM,available,CINE-109,Liu-Countryman J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,427,CINE 427,PROD II: PROD FEATURE FILMS,3,,03,11010,Spring_2026|CINE 427|03|11010,FALSE,\N,,LEC,Th,5-7:45PM,available,CINE-101,Liu-Countryman J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,437,CINE 437,3D COMPUTER GENERATED IMAGERY,3,,01,9854,Spring_2026|CINE 437|01|9854,FALSE,\N,,LEC,Tu,7-9:45PM,,SSC-060,Steidl M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,437,CINE 437,3D COMPUTER GENERATED IMAGERY,3,,02,12475,Spring_2026|CINE 437|02|12475,FALSE,\N,310,LEC,Th,7-9:45PM,available,SSC-060,Steidl M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,453,CINE 453,MIND-GAME FILM,3,,01,9857,Spring_2026|CINE 453|01|9857,FALSE,\N,,LEC,Tu,3:30-6:15PM,available,CINE-101,Jeong S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,457,CINE 457,GERMAN CINEMA,3,,01,8610,Spring_2026|CINE 457|01|8610,TRUE,\N,310,LEC,Th,5-6:50PM,available,LA3-120,Blankenship R,Class instruction is: Face to Face - On Campus.Class offered with GERM-480-01
+Spring_2026,CINE,457,CINE 457,GERMAN CINEMA,3,,02,8611,Spring_2026|CINE 457|02|8611,FALSE,\N,,ACT,Th,7-8:50PM,available,LA3-120,Blankenship R,Class instruction is: Face to Face - On Campus.Class offered with GERM-480-02
+Spring_2026,CINE,465,CINE 465,ADVANCED DOC FILMMAKING,4,,03,11023,Spring_2026|CINE 465|03|11023,FALSE,\N,,LEC,Th,10-12:45PM,available,CINE-207,Shellen C,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,465,CINE 465,ADVANCED DOC FILMMAKING,4,,04,11024,Spring_2026|CINE 465|04|11024,FALSE,\N,,LAB,Th,1-3:45PM,available,CINE-207,Shellen C,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,471,CINE 471,SENIOR SEMINR CRITICAL STUDIES,3,,01,9858,Spring_2026|CINE 471|01|9858,FALSE,\N,,SEM,F,2-4:45PM,available,CINE-205,Jeong S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,472,CINE 472,EDITING IV,4,,01,10207,Spring_2026|CINE 472|01|10207,FALSE,\N,,LEC,Th,9:30-1:20PM,,SSC-050,Martin-Daugherty T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,486,CINE 486,ALTERNATIVE MEDIA,3,GE: 4UD (UDD); GWAR: WI,01,8328,Spring_2026|CINE 486|01|8328,FALSE,\N,,LEC,M,3-5:45PM,,CINE-201,Smith L,Class instruction is: Face to Face - On Campus.
+Spring_2026,CINE,490,CINE 490,SPECIAL TOPICS-CINEMATIC ARTS,3,,01,9859,Spring_2026|CINE 490|01|9859,FALSE,\N,,LEC,Th,12:30-3:15PM,available,CINE-205,Montoya M,Department Consent RequiredClass instruction is: Face to Face - On Campus.Screenwriting - REVISION
+Spring_2026,CINE,490,CINE 490,SPECIAL TOPICS-CINEMATIC ARTS,3,,02,9855,Spring_2026|CINE 490|02|9855,FALSE,\N,,LEC,Tu,3:30-6:15PM,available,CINE-127,Palacios J,Department Consent RequiredClass instruction is: Face to Face - On Campus.Latinx Cinemas
+Spring_2026,CINE,490,CINE 490,SPECIAL TOPICS-CINEMATIC ARTS,3,,04,10624,Spring_2026|CINE 490|04|10624,FALSE,\N,,LEC,Th,3:30-6:15PM,available,CINE-205,Stidham L,Department Consent RequiredClass instruction is: Face to Face - On Campus.Screenwriting - REVISION
+Spring_2026,CINE,492,CINE 492,INTERNSHIP,3,,01,8329,Spring_2026|CINE 492|01|8329,FALSE,\N,,SEM,NA,NA,available,OFF-CAMP,Scheer H,Class instruction is: Face to Face - Off Campus.
+Spring_2026,CINE,499,CINE 499,SPECIAL PROJECTS - CINE,1,,01,8330,Spring_2026|CINE 499|01|8330,FALSE,\N,,SUP,TBA,NA,available,OFF-CAMP,Waldman D,Department Consent RequiredClass instruction is: Face to Face - Off Campus.

@@ -2,22 +2,15 @@
 r"""
 folder_subject_scraper.py
 
-Parse a folder of CSULB SUBJECT schedule HTML pages (one subject per file),
-extract all course + section rows, and export one Postgres-ready CSV per subject.
+Parse a folder of CSULB subject HTML pages (one subject per file),
+extract all course + section rows, and export:
 
-- Auto-detect subject code from HTML (first courseCode like "CECS 491A")
-  and falls back to filename (e.g., "CECS.html" -> "CECS").
-- Writes \N for NULL numeric fields (Postgres-friendly for COPY/import).
-- Deduplicates rows within each subject using section_uid.
+1) One CSV per subject (required)
+2) One combined CSV (optional)
 
-Usage:
-  python3 folder_subject_scraper.py \
-    --term Spring_2026 \
-    --html-dir "/path/to/raw_html" \
-    --out-dir "/path/to/out_csv"
-
-Deps:
-  pip install beautifulsoup4 lxml
+Postgres-friendly:
+- Uses \N for NULL numeric fields
+- section_uid is the primary identifier
 """
 
 import re
@@ -78,36 +71,12 @@ def extract_notes_ref(td) -> str:
     return clean_text(td.get_text(" ", strip=True))
 
 
-def make_section_uid(
-    term: str,
-    course_code_full: str,
-    sec: str,
-    type_: str,
-    days: str,
-    time_: str,
-    location: str,
-    instructor: str,
-    class_number: str,
-) -> str:
-    """
-    Stable UID:
-    - Prefer class_number if present
-    - Otherwise hash a composite signature of the meeting
-    """
+def make_section_uid(term, course_code_full, sec, type_, days, time_, location, instructor, class_number):
     if class_number.strip():
         return f"{term}|{course_code_full}|{sec}|{class_number.strip()}"
 
-    signature = "|".join([
-        term,
-        course_code_full,
-        sec,
-        type_,
-        days,
-        time_,
-        location,
-        instructor,
-    ])
-    h = hashlib.sha1(signature.encode("utf-8")).hexdigest()[:16]
+    sig = "|".join([term, course_code_full, sec, type_, days, time_, location, instructor])
+    h = hashlib.sha1(sig.encode("utf-8")).hexdigest()[:16]
     return f"{term}|{course_code_full}|{sec}|NOCLASS|{h}"
 
 
@@ -126,11 +95,11 @@ class SectionRow:
     course_info: str
 
     sec: str
-    class_number: str          # may be blank -> exported as \N
-    section_uid: str           # always present
+    class_number: str
+    section_uid: str
 
     no_material_cost: bool
-    reserve_capacity: str      # may be blank -> exported as \N if numeric in your schema
+    reserve_capacity: str
     class_notes_ref: str
     type: str
     days: str
@@ -141,33 +110,22 @@ class SectionRow:
     comment: str
 
 
-# ----------------------------
-# Postgres-friendly conversion
-# ----------------------------
-
-NUMERIC_FIELDS = {
-    "class_number",
-    "reserve_capacity",
-}
-
-BOOLEAN_FIELDS = {
-    "no_material_cost",
-}
+NUMERIC_FIELDS = {"class_number", "reserve_capacity"}
+BOOLEAN_FIELDS = {"no_material_cost"}
 
 
-def row_dict_for_csv(row: SectionRow) -> Dict[str, Any]:
+def row_for_csv(row: SectionRow) -> Dict[str, Any]:
     d = asdict(row)
-    out: Dict[str, Any] = {}
-    for key, val in d.items():
-        if key in NUMERIC_FIELDS:
-            if val is None or (isinstance(val, str) and val.strip() == ""):
-                out[key] = r"\N"
-            else:
-                out[key] = str(val).strip()
-        elif key in BOOLEAN_FIELDS:
-            out[key] = "TRUE" if bool(val) else "FALSE"
+    out = {}
+
+    for k, v in d.items():
+        if k in NUMERIC_FIELDS:
+            out[k] = r"\N" if not v else str(v)
+        elif k in BOOLEAN_FIELDS:
+            out[k] = "TRUE" if v else "FALSE"
         else:
-            out[key] = "" if val is None else str(val)
+            out[k] = "" if v is None else str(v)
+
     return out
 
 
@@ -176,111 +134,78 @@ def row_dict_for_csv(row: SectionRow) -> Dict[str, Any]:
 # ----------------------------
 
 def detect_subject_from_html(html: str) -> str:
-    """
-    Find the first <span class="courseCode">SUBJ 123</span> and return SUBJ.
-    Returns "" if not found.
-    """
     soup = BeautifulSoup(html, "html.parser")
-    code_el = soup.select_one("span.courseCode")
-    if not code_el:
+    el = soup.select_one("span.courseCode")
+    if not el:
         return ""
-    txt = clean_text(code_el.get_text())
-    m = re.match(r"^([A-Z]+)\s+", txt)
+    m = re.match(r"^([A-Z]+)\s+", clean_text(el.get_text()))
     return m.group(1) if m else ""
 
 
-def parse_course_header(course_block) -> dict:
-    code_el = course_block.select_one(".courseHeader .courseCode")
-    title_el = course_block.select_one(".courseHeader .courseTitle")
-    units_el = course_block.select_one(".courseHeader .units")
-    info_el = course_block.select_one(".courseHeader .courseInfo")
-
-    course_code_full = clean_text(code_el.get_text()) if code_el else ""
-    course_title = clean_text(title_el.get_text()) if title_el else ""
-    units = parse_units(clean_text(units_el.get_text())) if units_el else ""
-    course_info = clean_text(info_el.get_text()) if info_el else ""
-
-    subj = ""
-    num = ""
-    m = re.match(r"^([A-Z]+)\s+(.+)$", course_code_full)
-    if m:
-        subj = m.group(1).strip()
-        num = m.group(2).strip()
-
-    return {
-        "course_code_full": course_code_full,
-        "course_title": course_title,
-        "units": units,
-        "course_info": course_info,
-        "subject": subj,
-        "course_number": num,
-    }
-
-
-def parse_subject_page_html(term: str, html: str, fallback_subject: str = "") -> List[SectionRow]:
+def parse_subject_html(term: str, html: str, fallback_subject: str) -> List[SectionRow]:
     soup = BeautifulSoup(html, "html.parser")
-    all_rows: list[SectionRow] = []
+    rows = []
 
     for block in soup.select("div.courseBlock"):
-        header = parse_course_header(block)
+        code_el = block.select_one(".courseCode")
+        title_el = block.select_one(".courseTitle")
+        units_el = block.select_one(".units")
+        info_el = block.select_one(".courseInfo")
 
-        # Prefer subject from header; fallback to detected/filename
-        subject = header["subject"] or fallback_subject
+        course_code_full = clean_text(code_el.get_text()) if code_el else ""
+        course_title = clean_text(title_el.get_text()) if title_el else ""
+        units = parse_units(clean_text(units_el.get_text())) if units_el else ""
+        course_info = clean_text(info_el.get_text()) if info_el else ""
+
+        m = re.match(r"^([A-Z]+)\s+(.+)$", course_code_full)
+        subject = m.group(1) if m else fallback_subject
+        course_number = m.group(2) if m else ""
 
         table = block.select_one("table.sectionTable")
         if not table:
             continue
 
         for tr in table.select("tr"):
-            sec_th = tr.find("th", attrs={"scope": "row"})
+            sec_th = tr.find("th", scope="row")
             if not sec_th:
                 continue
 
-            sec = clean_text(sec_th.get_text(" ", strip=True))
             tds = tr.find_all("td")
             if not tds:
                 continue
 
-            # Fixed-position mapping after SEC.
-            class_number = clean_text(tds[0].get_text(" ", strip=True)) if len(tds) > 0 else ""
-            no_material_cost = bool_from_no_cost_cell(tds[1]) if len(tds) > 1 else False
-            reserve_capacity = clean_text(tds[2].get_text(" ", strip=True)) if len(tds) > 2 else ""
-            class_notes_ref = extract_notes_ref(tds[3]) if len(tds) > 3 else ""
-            type_ = clean_text(tds[4].get_text(" ", strip=True)) if len(tds) > 4 else ""
-            days = clean_text(tds[5].get_text(" ", strip=True)) if len(tds) > 5 else ""
-            time_ = clean_text(tds[6].get_text(" ", strip=True)) if len(tds) > 6 else ""
+            sec = clean_text(sec_th.get_text())
+            class_number = clean_text(tds[0].get_text()) if len(tds) > 0 else ""
+            no_cost = bool_from_no_cost_cell(tds[1]) if len(tds) > 1 else False
+            reserve = clean_text(tds[2].get_text()) if len(tds) > 2 else ""
+            notes = extract_notes_ref(tds[3]) if len(tds) > 3 else ""
+            type_ = clean_text(tds[4].get_text()) if len(tds) > 4 else ""
+            days = clean_text(tds[5].get_text()) if len(tds) > 5 else ""
+            time_ = clean_text(tds[6].get_text()) if len(tds) > 6 else ""
             open_seats = open_seats_value(tds[7]) if len(tds) > 7 else ""
-            location = clean_text(tds[8].get_text(" ", strip=True)) if len(tds) > 8 else ""
-            instructor = clean_text(tds[9].get_text(" ", strip=True)) if len(tds) > 9 else ""
-            comment = clean_text(tds[10].get_text(" ", strip=True)) if len(tds) > 10 else ""
+            location = clean_text(tds[8].get_text()) if len(tds) > 8 else ""
+            instructor = clean_text(tds[9].get_text()) if len(tds) > 9 else ""
+            comment = clean_text(tds[10].get_text()) if len(tds) > 10 else ""
 
-            section_uid = make_section_uid(
-                term=term,
-                course_code_full=header["course_code_full"],
-                sec=sec,
-                type_=type_,
-                days=days,
-                time_=time_,
-                location=location,
-                instructor=instructor,
-                class_number=class_number,
+            uid = make_section_uid(
+                term, course_code_full, sec, type_, days, time_, location, instructor, class_number
             )
 
-            all_rows.append(
+            rows.append(
                 SectionRow(
                     term=term,
                     subject=subject,
-                    course_number=header["course_number"],
-                    course_code_full=header["course_code_full"],
-                    course_title=header["course_title"],
-                    units=header["units"],
-                    course_info=header["course_info"],
+                    course_number=course_number,
+                    course_code_full=course_code_full,
+                    course_title=course_title,
+                    units=units,
+                    course_info=course_info,
                     sec=sec,
                     class_number=class_number,
-                    section_uid=section_uid,
-                    no_material_cost=no_material_cost,
-                    reserve_capacity=reserve_capacity,
-                    class_notes_ref=class_notes_ref,
+                    section_uid=uid,
+                    no_material_cost=no_cost,
+                    reserve_capacity=reserve,
+                    class_notes_ref=notes,
                     type=type_,
                     days=days,
                     time=time_,
@@ -291,83 +216,61 @@ def parse_subject_page_html(term: str, html: str, fallback_subject: str = "") ->
                 )
             )
 
-    return all_rows
+    return rows
 
 
-# ----------------------------
-# Dedupe + CSV writing
-# ----------------------------
-
-def dedupe_by_section_uid(rows: List[SectionRow]) -> List[SectionRow]:
-    seen: dict[str, SectionRow] = {}
+def dedupe(rows: List[SectionRow]) -> List[SectionRow]:
+    seen = {}
     for r in rows:
         if r.section_uid not in seen:
             seen[r.section_uid] = r
     return list(seen.values())
 
 
-def write_subject_csv(rows: List[SectionRow], out_path: Path) -> None:
-    fieldnames = list(SectionRow.__dataclass_fields__.keys())
-    with out_path.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        for r in rows:
-            writer.writerow(row_dict_for_csv(r))
-
-
 # ----------------------------
 # Main
 # ----------------------------
 
-def main() -> None:
-    ap = argparse.ArgumentParser(
-        description="Parse a folder of CSULB subject HTML pages and write one CSV per subject."
-    )
-    ap.add_argument("--term", required=True, help='e.g. "Spring_2026"')
-    ap.add_argument("--html-dir", required=True, help="Directory containing subject HTML files (*.html)")
-    ap.add_argument("--out-dir", required=True, help="Directory to write per-subject CSV files into")
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--term", required=True)
+    ap.add_argument("--html-dir", required=True)
+    ap.add_argument("--out-dir", required=True)
+    ap.add_argument("--combined-out", help="Optional combined CSV path")
     args = ap.parse_args()
 
     html_dir = Path(args.html_dir)
     out_dir = Path(args.out_dir)
-
-    if not html_dir.is_dir():
-        raise SystemExit(f"ERROR: --html-dir is not a directory: {html_dir}")
-
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    html_files = sorted(html_dir.glob("*.html"))
-    if not html_files:
-        raise SystemExit(f"ERROR: No .html files found in: {html_dir}")
+    combined_rows: List[SectionRow] = []
 
-    print(f"Found {len(html_files)} HTML files in {html_dir}")
+    for html_file in sorted(html_dir.glob("*.html")):
+        html = html_file.read_text(encoding="utf-8", errors="replace")
+        subject = detect_subject_from_html(html) or html_file.stem.upper()
 
-    total_rows = 0
-    total_subjects = 0
+        rows = parse_subject_html(args.term, html, subject)
+        rows = dedupe(rows)
+        combined_rows.extend(rows)
 
-    for html_path in html_files:
-        html = html_path.read_text(encoding="utf-8", errors="replace")
-
-        # Subject detect: prefer HTML; fallback to filename stem
-        subj_from_html = detect_subject_from_html(html)
-        fallback_subj = re.sub(r"[^A-Z0-9]", "", html_path.stem.upper())
-        subject = subj_from_html or fallback_subj or "UNKNOWN"
-
-        rows = parse_subject_page_html(args.term, html, fallback_subject=subject)
-        before = len(rows)
-        rows = dedupe_by_section_uid(rows)
-        after = len(rows)
-
-        # Output file name: SUBJECT_TERM.csv
         out_path = out_dir / f"{subject}_{args.term}.csv"
-        write_subject_csv(rows, out_path)
+        with out_path.open("w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=SectionRow.__dataclass_fields__.keys())
+            writer.writeheader()
+            for r in rows:
+                writer.writerow(row_for_csv(r))
 
-        print(f"- {html_path.name}: subject={subject} rows={after} (deduped from {before}) -> {out_path.name}")
+        print(f"Wrote {out_path.name} ({len(rows)} rows)")
 
-        total_rows += after
-        total_subjects += 1
+    if args.combined_out:
+        combined_out = Path(args.combined_out)
+        with combined_out.open("w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=SectionRow.__dataclass_fields__.keys())
+            writer.writeheader()
+            for r in dedupe(combined_rows):
+                writer.writerow(row_for_csv(r))
 
-    print(f"\nDone. Wrote {total_subjects} CSV files. Total section-rows: {total_rows}")
+        print(f"Wrote combined CSV → {combined_out}")
 
 
 if __name__ == "__main__":
