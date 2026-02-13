@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="#F9A600">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Schedule of Classes</title>
+		<!-- THIS IS THE FRAMEWORK FILE -->
+<link rel="stylesheet" href="/misc/ut2/framework/bootstrap/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+<link rel="stylesheet" href="/misc/ut2/css/style.min.css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/misc/ut2/fonts/font-awesome/css/font-awesome.min.css">
+<!-- SmartMenus core CSS (required) -->
+<link href='/misc/ut2/css/sm-core-css.css' rel='stylesheet' type='text/css' />
+<!-- "sm-blue" menu theme (optional, you can use your own CSS, too) -->
+<link href='/misc/ut2/css/sm-blue.css' rel='stylesheet' type='text/css' />
+<!-- compiled and minified jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="/misc/ut2/framework/bootstrap/js/bootstrap.min.js"></script>
+<script src="/misc/ut2/js/custom.js"></script>
+<!-- SmartMenus jQuery plugin -->
+<script src="/misc/ut2/js/jquery.smartmenus.js" type="text/javascript"></script>
+
+
+
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-193316-2', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- Apply your own custom javascripts and css styles here. Please adhere to the web style guidelines provided to you and refer to the CMS resources site for more information. -->
+		<style>
+		#alphaRow a {margin-right:6px;color:#555;padding:.25em;}
+		#alphaRow a:hover{color:#000 !important;background-color:#f9a600;}
+		#alphaRow{background-color:#e4e1d9;padding:.5em;text-align:center;font-size:1.2em;}
+		/*.indexList ul li a{color:#555;}*/
+		.textbooks{background-color:#222;border:0;padding:6px 18px;-webkit-border-top-right-radius:0.5em;-webkit-border-bottom-right-radius:0.5em;-webkit-border-bottom-left-radius:0.5em;-webkit-border-top-left-radius:0.5em;-moz-border-radius-topright:0.5em;-moz-border-radius-bottomright:0.5em;-moz-border-radius-bottomleft:0.5em;-moz-border-radius-topleft:0.5em; color:#000;width:25%;margin:auto;text-align:center;margin-bottom:2em;}
+		.textbooks a {color:#edaa00;text-decoration:none;}
+		.textbooks a:hover,a:visited{color:#edaa00!important;text-decoration:none!important;}
+		.textbooks span{color:#edaa00;}
+		#pagenav ul {list-style:none;clear:both;}
+		#pagenav ul li{width:30%;float:left;}
+		#browseBySubject,#browseByCollege,#browseByGE{padding:1em;background-color:#d7d2c5;font-size:1em;margin-right:.25em;}
+		#browseBySubject a,#browseByCollege a ,#browseByGE a {color:#555!important;text-decoration:none;}
+		.indexHeader h2{clear:both;padding-top:1em;}
+		.activeTab{background-color:#edaa00!important;}
+		.departmentTitle{padding-top:3em;}
+		ul li {font-size:1.2em;line-height:1.2em;content:"\25CF";color:#A74300;position:relative;left:-20px;margin-right:-10px;}
+		a {color:#A74300;}
+		.page-content ol li {color:#000;display:list-item;font-family:Lato,sans-serif;font-size:16px;font-weight:300;line-height:24px;list-style-position:outside;margin-bottom:8px;word-wrap:break-word;-webkit-font-smoothing:antialiased;padding-left:5px;list-style-type:decimal;}
+		.breadcrumb{padding:20px;}
+		.sectionTable{width:100%;overflow-x:auto;display:block;max-width: 100%;white-space: nowrap;}
+		.toplink{margin-bottom:1em;}
+		table.sectionTable td {border: 1px solid #eee;}
+		.dot {text-align: center;}
+		.courseBlock {
+		overflow-y: scroll;
+		width: 100%;
+		max-width: 100%;
+		border: 1px solid #EFEFEF;
+		}
+		h3 { margin: 1.25em auto 0 auto; }
+		</style>
+	</head>
+	<body>
+		<!-- THIS IS THE HEADER 1 FILE -->
+		<p class="jump-navigation">
+			<a href="#skip_content" id="sr_skip_content" class="sr-only sr-only-focusable">Jump to Content</a>
+			<a href="#skip_to_resources" id="sr_skip_to_resources" class="sr-only sr-only-focusable">Jump to Resources</a>
+		</p>
+		<div id="navigation" role="navigation" aria-label="primary">
+			<nav class="navbar navbar-default  navbar-fixed-top top-navigation">
+				<div class="container" id="content" tabindex="-1">
+					<div class="navbar-header">
+						<span class="navbar-brand"><a href="https://www.csulb.edu"><img class="university-name" src="/misc/ut2/imgs/logo_university_name.png" alt="CALIFORNIA STATE UNIVERSITY LONG BEACH"/></a>
+						<a class="university-name-abbr-link" href="https://www.csulb.edu"><img class="university-name-abbr" src="/misc/ut2/imgs/csulb.png" alt="CSULB logo for mobile devices"/></a><span class="border-line"></span><a class="department-name" style="display:inline-block;" href="https://www.csulb.edu/registration-and-records">Registration & Records</a></span>
+						
+						<p id="university-main-menu-button">
+							<span class="menu-click-link" id="university-main-menu-overlay">
+								<a href="javascript:void(0)"  class="menu-open" aria-haspopup="true" aria-expanded="false"><span class="text-menu">Menu</span><span id="icon-class" class="box-shadow-menu" style="margin-left: 9px;"><span class="sr-only">Open</span></span></a>
+								<a href="javascript:void(0)" class="menu-close"  aria-haspopup="true" aria-expanded="true" style="display:none; padding-right: 26px;" ><span class="text-menu">Menu</span><span class="close" id="remove-menu-icon"><span class="sr-only">Close</span></span></a>
+							</span>
+							<span>
+								<a href="javascript:void(0)" class="glyphicon glyphicon-search search-icon" aria-haspopup="true" aria-expanded="false" id="search-form-icon" style="height: 12px;"><span class="sr-only">Search</span></a>
+							</span>
+						</p>
+						<!--the search.html should contain search form for your site-->
+						<!-- THIS IS THE SEARCH -->
+						<div class="search-form" aria-label="search-form-icon" >
+							<form class="form-inline search-open" _lpchecked = "1"action="https://web.csulb.edu/search" method="get" id="google-appliance-block-form" accept-charset="UTF-8">
+								
+								<div class="form-group">
+									<label for="edit-search-keys"><span class="sr-only">Search</span></label>
+									<input class="form-text" id="edit-search-keys" maxlength="128" name="query" size="15" type="text" value=""><button type="submit" class="btn btn-primary" style="margin-right: 5px;margin-left:5px;">
+									Search
+									</button><p><input name="page" type="hidden" value="1"><input name="applied_filters" type="hidden" value=""><input name="sort" type="hidden" value="relevance"><input name="sortdir" type="hidden" value="desc"><input name="pagesize" type="hidden" value="10"><input name="col" type="hidden" value="11"></p>
+									
+								</div>
+								
+							</form>
+						</div>
+						<!-- THIS IS THE HEADER 2 FILE -->
+		</div>
+			</div>
+		<div class="jumbotron university-main-menu testing88" aria-labelledby="university-main-menu-overlay">
+					<div class="container">
+						<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-7 five-three">
+								<div class="row">
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/academic-affairs/colleges-departments?utm_source=CSULBHomepage&utm_medium=html&utm_campaign=AcademicsFlow" class="menu-heading auto-tab">ACADEMICS</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/academic-affairs/menu/academics/colleges-departments">Colleges &amp; Degrees</a></li>
+											<li><a href="https://www.csulb.edu/office-of-research-and-economic-development">Research</a></li>
+											<li><a href="https://www.csulb.edu/academic-affairs/academic-affairs-calendar?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Academic Calendar</a></li>
+											<li><a href="http://www.ccpe.csulb.edu/international/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">International Education</a></li>
+											<li><a href="https://www.csulb.edu/university-library?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Library</a></li>
+											<li><a href="https://www.csulb.edu/graduate-studies/graduate-studies">Graduate Studies</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/student-life" class="menu-heading">Campus Life</a></h3>
+										<ul class="menu">
+											<li><a href="http://www.longbeachstate.com/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Athletics</a></li>
+											<li><a href="https://www.csulb.edu/centers-organizations?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Centers &amp; Organizations</a></li>
+											<li><a href="https://www.csulb.edu/commencement" class="menu__link menu__link" tabindex="0">Commencement</a></li>
+											<li><a href="http://specialevents.csulb.edu/MasterCalendar/MasterCalendar.aspx?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Events</a></li>
+											<li><a href="https://www.csulb.edu/student-life" class="menu__link menu__link" tabindex="0">Housing</a></li>
+											<li><a href="https://www.csulb.edu/housing">Student Life</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/about-csulb" class="menu-heading">About</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/about-csulb?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">About Us</a></li>
+											<li><a href="https://www.csulb.edu/academic-affairs/program-review-and-assessment/wscuc/wscuc-accreditation">Accreditation</a></li>
+											<li><a href="https://www.csulb.edu/student-records/tuition-and-fees?utm_source=website&utm_medium=other&utm_content=menulink&utm_campaign=JumboMenu">Tuition and Fees</a></li>
+											<li><a href="https://www.csulb.edu/explore?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Explore</a></li>
+											<li><a href="https://www.csulb.edu/maps?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Parking & Maps</a></li>
+											<li><a href="https://www.csulb.edu/employment?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Careers with CSULB</a></li>
+
+
+										</ul>
+									</div><!-- end inner row -->
+									<div class="col-sm-4">
+										<h3><a href="http://web.csulb.edu/alumni/" class="menu-heading"><span class=" sr-only">C S U L B</span> Alumni</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/alumni?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Alumni Home</a></li>
+											<li><a href="https://www.csulb.edu/alumni/volunteers?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Alumni Volunteering</a></li>
+											<li><a href="https://giveto.csulb.edu/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu))/">Alumni Giving</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/menu/administration?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu?" class="menu-heading">Divisions</a></h3>
+										<ul class="menu menu-no-border">
+											<li><a href="https://www.csulb.edu/office-of-the-president?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Office of the President</a></li>
+											<li><a href="https://www.csulb.edu/office-of-the-provost">Office of the Provost</a></li>
+											<li><a href="https://www.csulb.edu/administration-finance?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Administration & Finance</a></li>
+											<li><a href="https://www.csulb.edu/students?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Student Affairs</a></li>
+											<li><a href="https://www.csulb.edu/university-relations-and-development">University Relations & Development</a></li>
+											<li><a href="https://www.csulb.edu/information-technology">Information Technology</a></li>
+
+										</ul>
+									</div>
+
+								</div>
+							</div>
+							<!-- end outer row -->
+						</div>
+						</div>
+						<div class="col-sm-12 edit1">
+							<div class="row">
+								<!-- <div class="col-sm-3 two-one hidden">
+									<div class="edit3 row">
+										<ul class="menu social-connection col-md-6 connect-app-icons menu-social-first-col">
+
+
+                                                <li><a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a></li>
+                                       			<li><a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a></li>
+
+											</ul>
+											<ul class="menu social-connection col-md-6 connect-app-icons menu-social-second-col">
+                                                <li><a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a></li>
+                                       			<li><a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a></li>
+											</ul>
+
+									</div>
+								</div> -->
+								<div class="col-sm-9 one-one row-margin-top">
+								<h3  tabindex="-1" style="width:90px;" class="menu-heading" id="skip_to_resources">RESOURCES</h3>
+								<div class="edit2 row">
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://sso.csulb.edu/">My CSULB</a></li>
+												<li><a href="https://bbcsulb.desire2learn.com/">BeachBoard</a></li>
+												<li><a href="https://www.csulb.edu/directory">Campus Directory</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://mail.csulb.edu/">Email</a></li>
+												<li><a href="https://www.csulb.edu/admissions">Admissions</a></li>
+												<li><a href="https://www.csulb.edu/enrollment-services">Enrollment Services</a></li>
+
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://www.csulb.edu/financial-aid?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Financial Aid</a></li>
+												<li><a href="https://www.csulb.edu/student-records/schedule-of-classes?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Schedule of Classes</a></li>
+												<li><a href="https://www.csulb.edu/student-records">Student Records</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://www.csulb.edu/49er-shops-at-the-beach">49er Shops</a></li>
+												<li><a href="https://www.csulb.edu/49er-foundation">49er Foundation</a></li>
+												<li><a id="last-item-header" href="https://www.csulb.edu/help?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Help</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+					<div id="vertical-menu"  tabindex="0">
+
+						<div id="header-menu-container" class="panel">
+							<ul id="root-menu">
+								<li>
+								<h3 class="back-to-main-menu" tabindex="0"><span class="glyphicon glyphicon-menu-left">&nbsp; </span>Back</h3>
+								</li>
+								<li>
+									<h3 tabindex="0">ACADEMICS</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/academic-affairs/menu/academics/colleges-departments">Colleges &amp; Degrees</a></li>
+										<li><a href="https://www.csulb.edu/office-of-research-and-economic-development">Research</a></li>
+										<li><a href="https://www.csulb.edu/academic-affairs/academic-affairs-calendar">Academic Calendar</a></li>
+										<li><a href="http://www.ccpe.csulb.edu/international">International Education</a></li>
+										<li><a href="https://www.csulb.edu/university-library">Library</a></li>
+										<li><a href="https://www.csulb.edu/graduate-studies/graduate-studies">Graduate Studies</a></li>
+									</ul>
+								</li>
+								<!-- we will keep this LI open by default -->
+								<li>
+									<h3 tabindex="0">CAMPUS LIFE</h3>
+									<ul>
+										<li><a href="http://www.longbeachstate.com/">Athletics</a></li>
+										<li><a href="https://www.csulb.edu/centers-organizations">Centers &amp; Organizations</a></li>
+										<li><a href="https://www.csulb.edu/commencement">Commencement</a></li>
+										<li><a href="http://specialevents.csulb.edu/MasterCalendar/MasterCalendar.aspx">Events</a></li>
+										<li><a href="https://www.csulb.edu/student-life">Housing</a></li>
+										<li><a href="https://www.csulb.edu/housing">Student Life</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">ABOUT</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/about-csulb">About Us</a></li>
+										<li><a href="https://www.csulb.edu/academic-affairs/program-review-and-assessment/wscuc/wscuc-accreditation">Accreditation</a></li>
+										<li><a href="https://www.csulb.edu/student-records/tuition-and-fees">Tuition and Fees</a></li>
+										<li><a href="https://www.csulb.edu/explore">Explore</a></li>
+										<li><a href="https://www.csulb.edu/maps">Parking & Maps</a></li>
+										<li><a href="https://www.csulb.edu/employment">Careers with CSULB</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">ALUMNI</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/alumni">Alumni Home</a></li>
+										<li><a href="https://www.csulb.edu/alumni/volunteers">Alumni Volunteering</a></li>
+										<li><a href="https://giveto.csulb.edu/">Alumni Giving</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">DIVISIONS</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/office-of-the-president">Office of the President</a></li>
+										<li><a href="https://www.csulb.edu/office-of-the-provost">Office of the Provost</a></li>
+										<li><a href="https://www.csulb.edu/administration-finance">Administration & Finance</a></li>
+										<li><a href="https://www.csulb.edu/students">Student Affairs</a></li>
+										<li><a href="https://www.csulb.edu/university-relations-and-development">University Relations & Development</a></li>
+										<li><a href="https://www.csulb.edu/information-technology">Information Technology</a></li>
+									</ul>
+								</li>
+								<!-- <li>
+									<h3 tabindex="0">SOCIAL MEDIA</h3>
+									<ul>
+										<li><a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a></li>
+                                        <li><a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a></li>
+                                        <li><a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a></li>
+                                        <li><a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a></li>
+									</ul>
+								</li> -->
+                <li>
+									<h3 tabindex="0">RESOURCES</h3>
+									<ul>
+										<li><a href="https://sso.csulb.edu/">My CSULB</a></li>
+										<li><a href="https://bbcsulb.desire2learn.com/">BeachBoard</a></li>
+										<li><a href="https://www.csulb.edu/directory">Campus Directory</a></li>
+										<li><a href="https://mail.csulb.edu/">Email</a></li>
+										<li><a href="https://www.csulb.edu/admissions">Admissions</a></li>
+										<li><a href="https://www.csulb.edu/enrollment-services">Enrollment Services</a></li>
+										<li><a href="https://www.csulb.edu/financial-aid">Financial Aid</a></li>
+										<li><a href="https://www.csulb.edu/student-records/schedule-of-classes">Schedule of Classes</a></li>
+										<li><a href="https://www.csulb.edu/student-records">Student Records</a></li>
+										<li><a href="https://www.csulb.edu/49er-shops-at-the-beach">49er Shops</a></li>
+										<li><a href="https://www.csulb.edu/49er-foundation">49er Foundation</a></li>
+										<li><a id="last-item-header" href="https://www.csulb.edu/help">Help</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+			</nav>
+		</div>
+
+						<div class="banner" aria-label="banner">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12 bgimage"><img src="https://www.csulb.edu/sites/default/files/images/banner_financialaid_students.jpg" alt="University Banner">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="page" data-scroll-speed="2">
+							
+							<div class="main-content">
+								<div class="container page-content">
+									<div class="row">
+										
+										
+										
+										<!-- content column -->
+										<div id="center-column" class="col-md-12 .col-xs-12 col-sm-12">
+											<div id="skip_content" class="skip_content" tabindex="-1"></div>
+											<div class="bs-example" role="navigation" aria-label="breadcrumb">
+												<ul class="breadcrumb">
+													<li><a href="https://www.csulb.edu/">Home</a></li>
+													<li class="crumbs-separator"></li>
+													<li><a href="index.html" id="current_soc">Schedule of Classes</a></li>
+													
+												</ul>
+											</div>
+											<h1 class="socheader">Schedule of Classes</h1>
+<h1>Spring 2026</h1><p class="update">Class offerings as of: DECEMBER 18, 2025</p><div id="external_links" class="hideFromPrint">
+  <div class="register">
+    <script type="text/javascript"> writeLink("/depts/enrollment/registration/class_schedule/how_to_register.html","Register Here"); </script>
+	<noscript><p><a href="/depts/enrollment/registration/class_schedule/how_to_register.html" target="_new"><span>Register Here</span></a></p></noscript>
+  </div>
+  <div class="textbooks"><a href="http://csulb.verbacompare.com/" target="_new"><span>Textbook Information</span></a></div>
+</div>
+
+<div id="pagenav"><ul>
+<li id="browseBySubject"><a href="index.html" class="activeTab"><span>By Subject</span></a></li>
+<li id="browseByCollege"><a href="../By_College/index.html"><span>By College</span></a></li>
+<li id="browseByGE"><a href="../By_GE_Requirement/index.html"><span>By GE Requirement</span></a></li>
+</ul></div><div id="pageContent">
+<div class="subjectContainer"><div class="header"><h2 class="departmentTitle">Computer Engr &amp; Computer Sci - (CECS)</h2><div class="globalNote"><p>Computer Engineering &amp; Computer Science majors must maintain at least a 2.00 cumulative GPA in order to enroll in CECS courses.</p></div></div>
+<div class="session">
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 80</span> - <span class="courseTitle">FOUNDATIONS FOR DATA COMPUTING</span></h4><span class="units">1 Unit</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9324</td><td></td><td></td><td><a href="#note1">1</a></td><td>ACT</td><td>TuTh</td><td>12:30-1:20PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-413</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 100</span> - <span class="courseTitle">CRIT THINK IN DIGITAL INFO AGE</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 1B (A3)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>10634</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td></td><td>SEM</td><td>MW</td><td>2-2:50PM</td><td></td><td>VEC-418</td><td>Golshani F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>10635</td><td></td><td></td><td></td><td>LAB</td><td>MW</td><td>3-4:15PM</td><td></td><td>VEC-418</td><td>Golshani F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 105</span> - <span class="courseTitle">INTRODUCTION TO CECS</span></h4><span class="units">1 Unit</span>
+<span class="courseInfo">GE: E</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7755</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td></td><td>SEM</td><td>M</td><td>1-1:50PM</td><td></td><td>DESN-112</td><td>Golshani F</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-105H-01</td></tr>
+<tr><th scope="row">02</th><td>10636</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td></td><td>SEM</td><td>W</td><td>1-1:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-112</td><td>Golshani F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 105H</span> - <span class="courseTitle">INTRODUCTION TO CECS</span></h4><span class="units">1 Unit</span>
+<span class="courseInfo">GE: E</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9400</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>M</td><td>1-1:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-112</td><td>Golshani F</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-105-01</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 174</span> - <span class="courseTitle">INTRO PROG &amp; PROBLEM SOLVING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1112</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>12-12:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-306</td><td>Nachawati S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>1781</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>1-2:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-403</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>2504</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>1-2:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-413</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+<div class="groupMessage">
+<h5>Group 2 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">04</th><td>2811</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>12:30-1:20PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-112</td><td>Nguyen K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>2845</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>TuTh</td><td>1:30-2:45PM</td><td></td><td>ECS-404</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">06</th><td>2846</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>TuTh</td><td>1:30-2:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 180</span> - <span class="courseTitle">DATA COMPUTING FOR EVERYONE</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 2 (B4)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9336</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>11-12:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-405</td><td>Nguyen K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 201</span> - <span class="courseTitle">COMPUTER LOGIC DESIGN I</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9334</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>8-8:50AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-112</td><td>Trajkovic J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>9335</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>9-10:15AM</td><td></td><td>ECS-413</td><td>Trajkovic J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>9491</td><td></td><td></td><td></td><td>LAB</td><td>MW</td><td>10:30-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-413</td><td>Trajkovic J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 211</span> - <span class="courseTitle">PRIN OF COMPUTER ENGINEERING I</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2502</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>9:30-10:20AM</td><td></td><td>ECS-411</td><td>Hernandez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>2503</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>TuTh</td><td>10:30-11:45AM</td><td></td><td>ECS-411</td><td>Hernandez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 225</span> - <span class="courseTitle">DIGITAL LOGIC AND ASSEMBLY PRO</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4414</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>9:30-10:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>KIN-059</td><td>Wu X</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>4516</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>8-9:15AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>VEC-518</td><td>Nachawati S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 228</span> - <span class="courseTitle">DISCRETE STRUC-COMPUTING APPL</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>3084</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>8-9:15AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>HC-120</td><td>Maples T</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-228H-02</td></tr>
+<tr><th scope="row">03</th><td>7762</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>12:30-1:45PM</td><td></td><td>ECS-414</td><td>Hu D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 228H</span> - <span class="courseTitle">DISCRETE STRUC-COMPUTING APPL</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>5654</td><td></td><td></td><td><a href="#note1">1,34</a></td><td>SEM</td><td>MW</td><td>8-9:15AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>HC-120</td><td>Maples T</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-228-01</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 229</span> - <span class="courseTitle">DISCRETE STRUCT COMP APPLIC II</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4172</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>12:30-1:45PM</td><td></td><td>FCS-008</td><td>Cleary S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>9362</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>2-3:15PM</td><td></td><td>VEC-518</td><td>Varela K</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-229H-03</td></tr>
+<tr><th scope="row">04</th><td>9738</td><td></td><td></td><td><a href="#note1">310</a></td><td>SEM</td><td>TuTh</td><td>9:30-10:45AM</td><td></td><td>ECS-403</td><td>Varela K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>10643</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>7-8:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Nguyen M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 229H</span> - <span class="courseTitle">DISCRETE STRUCT COMP APPLIC II</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>10645</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>2-3:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>VEC-518</td><td>Varela K</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-229-02</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 262</span> - <span class="courseTitle">INTRO TO EMBEDDED SYST PROG</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6441</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>8-9:50AM</td><td></td><td>ECS-411</td><td>Hernandez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>6442</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>F</td><td>10-12:45PM</td><td></td><td>ECS-411</td><td>Hernandez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 271</span> - <span class="courseTitle">INTRO TO NUMERICAL METHODS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9286</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td></td><td>ECS-411</td><td>Yaghmaei E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 274</span> - <span class="courseTitle">DATA STRUCTURES</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2505</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>8-9:50AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-306</td><td>Varela K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>2506</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>F</td><td>10-12:45PM</td><td></td><td>ECS-404</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>3426</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>F</td><td>10-12:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-403</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+<div class="groupMessage">
+<h5>Group 2 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">04</th><td>9380</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>11-11:50AM</td><td></td><td>ECS-416</td><td>Varela K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>9381</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>TuTh</td><td>12-1:15PM</td><td></td><td>ECS-416</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 275</span> - <span class="courseTitle">PROGRAMMING AND DATA STRUCTURE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4415</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5:30-6:20PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-308</td><td>Nguyen M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>4416</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>6:30-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>VEC-330</td><td>Nguyen M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 277</span> - <span class="courseTitle">OBJ ORIENTED APPL DEVELOPMENT</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">04</th><td>5664</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>11-11:50AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>HC-120</td><td>Cleary S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>5666</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>12-1:15PM</td><td></td><td>ECS-412</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">06</th><td>5667</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>12-1:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-416</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+<div class="groupMessage">
+<h5>Group 2 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">07</th><td>7882</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>3:30-4:20PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>HC-100</td><td>Cleary S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">08</th><td>10653</td><td></td><td></td><td></td><td>LAB</td><td>TuTh</td><td>4:30-5:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-405</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">09</th><td>7883</td><td></td><td></td><td></td><td>LAB</td><td>TuTh</td><td>4:30-5:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-414</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 281</span> - <span class="courseTitle">INTRO TO DATA VIS FOR DATA SCI</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>11056</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">310</a></td><td>SEM</td><td>MW</td><td>12:30-1:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Yaghmaei E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 301</span> - <span class="courseTitle">COMPUTER LOGIC DESIGN II</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9332</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>6-6:50PM</td><td></td><td>ECS-411</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-301H-03</td></tr>
+<tr><th scope="row">02</th><td>9333</td><td></td><td></td><td></td><td>LAB</td><td>MW</td><td>7-8:15PM</td><td></td><td>ECS-411</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-301H-04</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 301H</span> - <span class="courseTitle">COMPUTER LOGIC DESIGN II</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>10655</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>6-6:50PM</td><td></td><td>ECS-411</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-301-01</td></tr>
+<tr><th scope="row">04</th><td>10656</td><td></td><td></td><td></td><td>LAB</td><td>MW</td><td>7-8:15PM</td><td></td><td>ECS-411</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-301-02</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 302</span> - <span class="courseTitle">INTRO TO COMPUTER FORENSICS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>10749</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>7-7:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Allen R</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>10750</td><td></td><td></td><td></td><td>LAB</td><td>MW</td><td>8-9:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Allen R</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 303</span> - <span class="courseTitle">NETWORKS AND NETWORK SECURITY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6836</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>5-5:50PM</td><td></td><td>ECS-403</td><td>Samayoa C</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>6837</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>TuTh</td><td>6-7:15PM</td><td></td><td>ECS-403</td><td>Samayoa C</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+<div class="groupMessage">
+<h5>Group 2 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>12605</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>TuTh</td><td>6:30-7:20PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-404</td><td>Uuh L</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>12606</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>LAB</td><td>TuTh</td><td>7:30-8:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-404</td><td>Uuh L</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 311</span> - <span class="courseTitle">PRIN OF COMPUTER ENGINEERNG II</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2565</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>8-8:50AM</td><td></td><td>ECS-411</td><td>Hernandez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>2566</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>9-10:15AM</td><td></td><td>ECS-411</td><td>Hernandez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 323</span> - <span class="courseTitle">DATABASE FUNDAMENTALS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1114</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-416</td><td>Brown D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>1115</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-302</td><td>Brown D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>6557</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>2-3:15PM</td><td></td><td>ECS-302</td><td>Brown D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>11049</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>SEM</td><td>MW</td><td>12:30-1:45PM</td><td></td><td>ECS-405</td><td>Terrell N</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 325</span> - <span class="courseTitle">SYSTEM PROGRAMMING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6664</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5-6:15PM</td><td></td><td>HSCI-102</td><td>Gold S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>6665</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>5-6:15PM</td><td></td><td>VEC-518</td><td>Gold S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>9389</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>11-12:15PM</td><td></td><td>ECS-405</td><td>Terrell N</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 326</span> - <span class="courseTitle">OPERATING SYSTEMS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1116</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>5-6:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>FCS-008</td><td>Giacalone A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>1117</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td></td><td>HC-100</td><td>Xu H</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>10660</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>FCS-008</td><td>Giacalone A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 327</span> - <span class="courseTitle">INTRO NETWORKS &amp; DIST COMPUT</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2666</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-105</td><td>Morales Ponce O</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>3384</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5-6:15PM</td><td></td><td>COB-139A</td><td>Xu H</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-327H-03</td></tr>
+<tr><th scope="row">03</th><td>9460</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>2-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>VEC-518</td><td>Luti M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 327H</span> - <span class="courseTitle">INTRO NETWORKS &amp; DIST COMPUT</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>4754</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5-6:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>COB-139A</td><td>Xu H</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-327-02</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 328</span> - <span class="courseTitle">ALGORITHMS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1118</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>11-12:15PM</td><td></td><td>HC-100</td><td>Goldstein D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-328H-05</td></tr>
+<tr><th scope="row">03</th><td>6558</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5-6:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-112</td><td>Sharifian A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>1119</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>6:30-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-112</td><td>Sharifian A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 328H</span> - <span class="courseTitle">ALGORITHMS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">05</th><td>5673</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>11-12:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>HC-100</td><td>Goldstein D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-328-01</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 329</span> - <span class="courseTitle">CONCEPTS COMPUTER SCI THEORY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5932</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>8-9:15AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-105</td><td>Ebert T</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>6538</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>5:30-6:45PM</td><td></td><td>VEC-330</td><td>Nguyen M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>7202</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>12:30-1:45PM</td><td></td><td>VEC-518</td><td>Jurgensen C</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>9550</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td></td><td>VEC-518</td><td>Jurgensen C</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>8070</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>9:30-10:45AM</td><td></td><td>VEC-330</td><td>Qin X</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 341</span> - <span class="courseTitle">COMPUTER ARCHITECT ORGANIZATIN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4510</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>10-12:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>FCS-008</td><td>Wu X</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>10662</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>3:30-4:45PM</td><td></td><td>ECS-412</td><td>Ghaforyfard P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>11055</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>SEM</td><td>F</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>DESN-112</td><td>Seyyedhosseini M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 342</span> - <span class="courseTitle">PRINCPLE PROGRAMMING LANGUAGE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5933</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>2-3:15PM</td><td></td><td>ECS-412</td><td>Jurgensen C</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>5934</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Cleary S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>5935</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>3:30-4:45PM</td><td></td><td>ECS-407</td><td>Gold S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>10663</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>12:30-1:45PM</td><td></td><td>ECS-302</td><td>Jurgensen C</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>10664</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>9:30-10:45AM</td><td></td><td>ECS-405</td><td>Jurgensen C</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">06</th><td>10665</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td></td><td>ECS-407</td><td>Terrell N</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 343</span> - <span class="courseTitle">INTRO TO SOFTWARE ENGINEERING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>3808</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5-6:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>COB-140A</td><td>Murgolo F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>9508</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>9:30-10:45AM</td><td></td><td>ECS-404</td><td>Basit A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>9361</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>MW</td><td>3:30-4:45PM</td><td></td><td>ECS-404</td><td>Murgolo F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 346</span> - <span class="courseTitle">EMBEDDED SYSTEMS I</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6485</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>10-11:50AM</td><td></td><td>ECS-414</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>6486</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>F</td><td>12-2:45PM</td><td></td><td>ECS-414</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 347</span> - <span class="courseTitle">EMBEDDED SYSTEMS II</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5532</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>11-11:50AM</td><td></td><td>ECS-414</td><td>He M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>5533</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>12-1:15PM</td><td></td><td>ECS-414</td><td>He M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 361</span> - <span class="courseTitle">DIGITAL DESIGN TECH VERIFICATN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9432</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5:30-6:20PM</td><td></td><td>ECS-412</td><td>Ghaforyfard P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>9433</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>6:30-7:45PM</td><td></td><td>ECS-412</td><td>Ghaforyfard P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 378</span> - <span class="courseTitle">INTRO TO COMPUTER SECURITY PRI</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4624</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>11-12:15PM</td><td></td><td>ECS-403</td><td>Giacalone A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>4812</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5-6:15PM</td><td></td><td>ECS-404</td><td>Uuh L</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>6539</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>6:30-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>VEC-518</td><td>Uuh L</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>9510</td><td></td><td></td><td></td><td>SEM</td><td>F</td><td>9-11:45AM</td><td></td><td>HSCI-105</td><td>Addington S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 381</span> - <span class="courseTitle">STOCHASTIC COMPUTING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>10671</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>5:30-6:45PM</td><td></td><td>ECS-416</td><td>Zhao Y</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>10672</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>11-12:15PM</td><td></td><td>ECS-404</td><td>Zhao Y</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>12545</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-416</td><td>Zhao Y</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 406</span> - <span class="courseTitle">S TOPICS COMPUTER SCIENCE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>10673</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">9</a></td><td>SEM</td><td>MW</td><td>11-12:15PM</td><td></td><td>ECS-407</td><td>Golshani F</td><td>High-Tech Entrepreneurship<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 427</span> - <span class="courseTitle">DYNAMIC NETWORKS</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 4UD (UDD)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8021</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>12:30-1:45PM</td><td></td><td>VEC-518</td><td>Morales Ponce O</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>10762</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>9:30-10:45AM</td><td></td><td>ECS-412</td><td>Nguyen K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>12544</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>8-9:15AM</td><td></td><td>ECS-405</td><td>Nguyen K</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 429</span> - <span class="courseTitle">SEARCH ENGINE TECHNOLOGY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8911</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td></td><td>VEC-518</td><td>Qin X</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 440</span> - <span class="courseTitle">COMPUTER ARCHITECTURE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4506</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>8-8:50AM</td><td></td><td>ECS-308</td><td>Yaghmaei E</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-440H-03</td></tr>
+<tr><th scope="row">02</th><td>4507</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>9-10:15AM</td><td></td><td>ECS-414</td><td>Yaghmaei E</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-440H-04</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 440H</span> - <span class="courseTitle">COMPUTER ARCHITECTURE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>5484</td><td></td><td></td><td><a href="#note1">1,34</a></td><td>SEM</td><td>MW</td><td>8-8:50AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-308</td><td>Yaghmaei E</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-440-01</td></tr>
+<tr><th scope="row">04</th><td>5485</td><td></td><td></td><td><a href="#note1">1,34</a></td><td>LAB</td><td>MW</td><td>9-10:15AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-414</td><td>Yaghmaei E</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-440-02</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 443</span> - <span class="courseTitle">SOFTWARE PROJ MGMT AND TESTING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5941</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>6:30-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-412</td><td>Link D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 447</span> - <span class="courseTitle">EMBEDDED SYSTEMS III</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4493</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>3-3:50PM</td><td></td><td>ECS-414</td><td>He M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>4494</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>MW</td><td>4-5:15PM</td><td></td><td>ECS-414</td><td>He M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 448</span> - <span class="courseTitle">USER INTERFACE DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6917</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>11-12:15PM</td><td></td><td>ECS-308</td><td>Fu B</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>11054</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>SEM</td><td>TuTh</td><td>5-6:15PM</td><td></td><td>ECS-412</td><td>Fahim A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 449</span> - <span class="courseTitle">COMPUTER GRAPHICS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9363</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>2-3:15PM</td><td></td><td>ECS-403</td><td>Terrell N</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 450</span> - <span class="courseTitle">DATA VISUALIZATION</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8068</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5-6:15PM</td><td></td><td>VEC-518</td><td>Yaghmaei E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>10675</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>TuTh</td><td>9:30-10:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>VEC-402</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 451</span> - <span class="courseTitle">ARTIFICIAL INTELLIGENCE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9325</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>9:30-10:45AM</td><td></td><td>ECS-105</td><td>Moon J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 453</span> - <span class="courseTitle">MOBILE APPLICATION DEVELOPMENT</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5656</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>8-9:15AM</td><td></td><td>ECS-404</td><td>Nguyen P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>12676</td><td></td><td></td><td><a href="#note1">310</a></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td></td><td>VEC-402</td><td>Nguyen P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 455</span> - <span class="courseTitle">INTRO TO GAME PROGRAMMING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8109</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>12:30-1:45PM</td><td></td><td>ECS-405</td><td>Link D</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 456</span> - <span class="courseTitle">MACHINE LEARNING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5145</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>3:30-4:45PM</td><td></td><td>VEC-518</td><td>Luti M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>6528</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>10-12:45PM</td><td></td><td>VEC-518</td><td>Sarshar A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 457</span> - <span class="courseTitle">APPLIED MACHINE LEARNING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9592</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>1-3:45PM</td><td></td><td>ECS-403</td><td>Sarshar A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 458</span> - <span class="courseTitle">DEEP LEARNING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>10676</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>12:30-1:45PM</td><td></td><td>ECS-412</td><td>Moon J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 460</span> - <span class="courseTitle">SYSTEM ON CHIP DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>11195</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>SEM</td><td>MW</td><td>3-3:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-403</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-460H-03</td></tr>
+<tr><th scope="row">04</th><td>11196</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>LAB</td><td>MW</td><td>4-5:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-403</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-460H-04</td></tr>
+</table>
+<div class="groupMessage">
+<h5>Group 2 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">05</th><td>12333</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>7-7:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-416</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">06</th><td>12334</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>TuTh</td><td>8-9:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-416</td><td>Staff</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 460H</span> - <span class="courseTitle">SYSTEM ON CHIP DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>11197</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>SEM</td><td>MW</td><td>3-3:50PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-403</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-460-03</td></tr>
+<tr><th scope="row">04</th><td>11198</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>LAB</td><td>MW</td><td>4-5:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-403</td><td>Cregg D</td><td>Class instruction is: Face to Face - On Campus.<br>Class offered with CECS-460-04</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 463</span> - <span class="courseTitle">DIGITAL SIGNAL PROCESS DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<div class="groupMessage">
+<h5>Group 1 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>2741</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>Sa</td><td>8-9:50AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Mehrnia A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>3883</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>Sa</td><td>10-12:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Mehrnia A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+<div class="groupMessage">
+<h5>Group 2 Sections</h5>
+<p>Enrollment required for SEM,LAB in this group of sections.</p></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>12395</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>8-9:50AM</td><td></td><td>ECS-405</td><td>Chung F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>12396</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>F</td><td>10-12:45PM</td><td></td><td>ECS-405</td><td>Chung F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 470</span> - <span class="courseTitle">WEB PROGRAMING &amp; ACCESSIBILITY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9375</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>3:30-4:45PM</td><td></td><td>ECS-405</td><td>Nguyen P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>12376</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>F</td><td>9-11:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-308</td><td>Wang S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 474</span> - <span class="courseTitle">COMPUTER NET INTEROPERABILITY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6518</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>Sa</td><td>8-9:50AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-308</td><td>Tamayo J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>6519</td><td></td><td></td><td><a href="#note1">1</a></td><td>LAB</td><td>Sa</td><td>10-12:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-305</td><td>Tamayo J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 475</span> - <span class="courseTitle">SOFTWARE DVLPMNT WITH FRAMWRKS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1120</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>11-12:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>KIN-059</td><td>Nguyen P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>9518</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>9:30-10:45AM</td><td></td><td>ECS-414</td><td>Terrell N</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 478</span> - <span class="courseTitle">DATA SECURITY &amp; PRIVACY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>12367</td><td></td><td></td><td><a href="#note1">310</a></td><td>SEM</td><td>F</td><td>1-3:45PM</td><td></td><td>ECS-308</td><td>Wang S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>11050</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>MW</td><td>8-9:15AM</td><td></td><td>ECS-403</td><td>Addington S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>12548</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>SEM</td><td>TuTh</td><td>9:30-10:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-405</td><td>Giacalone A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 490A</span> - <span class="courseTitle">COMP ENGR SNR PRJCT I</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 2UD/5UD (UDB)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>3810</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>12:30-1:45PM</td><td></td><td>VEC-331</td><td>Hernandez E</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 490B</span> - <span class="courseTitle">COMPUTER ENGR SNR PROJECT II</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE AREA: F-Capstone</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>9344</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>8:30-9:45PM</td><td></td><td>ECS-306</td><td>Cregg D</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 491A</span> - <span class="courseTitle">COMPUTER SCI SENIOR PROJECT I</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 2UD/5UD (UDB)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5665</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td></td><td>ECS-404</td><td>Murgolo F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>5744</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>12:30-1:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-308</td><td>Hoffman F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>8110</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td></td><td>SEM</td><td>MW</td><td>11-12:15PM</td><td></td><td>VEC-330</td><td>Albinali F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>9465</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>6:30-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-404</td><td>Shahnawaz I</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>9492</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td></td><td>ECS-405</td><td>Albinali F</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 491B</span> - <span class="courseTitle">COMPUTER SCI SENIOR PROJECT II</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE AREA: F-Capstone</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>4413</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>11-12:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Hoffman F</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>4668</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>2-3:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>VEC-330</td><td>Hoffman F</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">03</th><td>6337</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>5-6:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Hoffman F</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">04</th><td>6338</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-403</td><td>Hoffman F</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">05</th><td>6339</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>9:30-10:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-412</td><td>Albinali F</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">06</th><td>6843</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td></td><td>SEM</td><td>MW</td><td>12:30-1:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-411</td><td>Albinali F</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">07</th><td>10682</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td></td><td>SEM</td><td>MW</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-413</td><td>Shahnawaz I</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">08</th><td>10683</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>2-3:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-413</td><td>Albinali F</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 497</span> - <span class="courseTitle">DIRECTED STUDIES</span></h4><span class="units">1-3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">21</th><td>4526</td><td></td><td></td><td><a href="#note1">1</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">22</th><td>4730</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">23</th><td>4801</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">24</th><td>5108</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">25</th><td>6621</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 524</span> - <span class="courseTitle">ADV TOPICS IN PROGRAMMING LANG</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7712</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">311</a></td><td>SEM</td><td>F</td><td>12-2:45PM</td><td></td><td>ECS-412</td><td>Hoffman M</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>F</td><td>12-2:45PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 528</span> - <span class="courseTitle">ADV ANALYSIS OF ALGORITHMS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8210</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>8-9:15AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-412</td><td>Ebert T</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>10686</td><td></td><td></td><td></td><td>SEM</td><td>F</td><td>8-10:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-412</td><td>Ebert T</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 529</span> - <span class="courseTitle">SEARCH ENGINE TECHNOLOGY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8909</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td></td><td>VEC-518</td><td>Qin X</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 530</span> - <span class="courseTitle">ADV COMPUTER ARCHITECTURE I</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6582</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>SEM</td><td>Sa</td><td>11-1:45PM</td><td></td><td>ECS-306</td><td>Yaghini P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 543</span> - <span class="courseTitle">ADVANCED SOFTWARE ENGINEERING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>10687</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-412</td><td>Basit A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>4626</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>11-12:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-403</td><td>Basit A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 544</span> - <span class="courseTitle">SOFTWARE TEST &amp; VERIFICATION</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>11051</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">311,1</a></td><td>SEM</td><td>TuTh</td><td>11-12:15PM</td><td></td><td>ECS-413</td><td>Hoffman M</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>11-12:15PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 550</span> - <span class="courseTitle">PATTERN RECOGNITION</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8089</td><td></td><td></td><td></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-404</td><td>Fahim A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 551</span> - <span class="courseTitle">ADV ARTIFICIAL INTELLIGENCE</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>11057</td><td></td><td></td><td><a href="#note1">311</a></td><td>SEM</td><td>TuTh</td><td>11-12:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-412</td><td>Moon J</td><td>Class instruction is: Hybrid (Face to Face &amp; Synch).</td></tr>
+<tr><th scope="row">02</th><td></td><td></td><td></td><td></td><td></td><td>TuTh</td><td>11-12:15PM</td><td></td><td>ONLINE-ONLY</td><td>Staff</td><td>additional meeting detail</td></tr>
+<tr><th scope="row">03</th><td>12674</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>TuTh</td><td>8-9:15AM</td><td></td><td>ECS-411</td><td>Asgari S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 552</span> - <span class="courseTitle">COMPUTER SIMULATION &amp; MODELING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6513</td><td></td><td></td><td><a href="#note1">310,1</a></td><td>SEM</td><td>Sa</td><td>4-6:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Mehrnia A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 553</span> - <span class="courseTitle">MACHINE VISION</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>9322</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>Sa</td><td>11-1:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-412</td><td>Sodagari S</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 571</span> - <span class="courseTitle">FUNDMTLS OF SEMNTIC WEB TECHNO</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9428</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>MW</td><td>5-6:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Luti M</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 574</span> - <span class="courseTitle">TOPICS DISTRIBUTED COMPUTING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">03</th><td>5672</td><td></td><td></td><td><a href="#note1">1</a></td><td>SEM</td><td>Sa</td><td>8-10:45AM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>VEC-518</td><td>Yaghini P</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 575</span> - <span class="courseTitle">OBJ ORIENTED ANALYSIS &amp; DESIGN</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8091</td><td></td><td></td><td></td><td>SEM</td><td>MW</td><td>6:30-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-105</td><td>Ghazarian A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 590</span> - <span class="courseTitle">S TOPICS COMPUTER SCIENCE</span></h4><span class="units">3-6 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">02</th><td>12675</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>Sa</td><td>1-3:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-407</td><td>Mehrnia A</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 697</span> - <span class="courseTitle">DIRECTED RESEARCH</span></h4><span class="units">1-3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>7167</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">16</th><td>3654</td><td></td><td></td><td><a href="#note1">1,3,180</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">17</th><td>3935</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">18</th><td>3936</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">19</th><td>4527</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">20</th><td>4700</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">21</th><td>4855</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">22</th><td>5110</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">CECS 698</span> - <span class="courseTitle">THESIS OR INDUSTRIAL PROJECT</span></h4><span class="units">3-6 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 12/18 05:02:14</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>1129</td><td></td><td></td><td><a href="#note1">8,180,1</a></td><td>SUP</td><td>TBA</td><td>NA</td><td></td><td>ECS-552</td><td>Sodagari S</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">17</th><td>3653</td><td></td><td></td><td><a href="#note1">1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">18</th><td>3937</td><td></td><td></td><td><a href="#note1">1,3,8</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">19</th><td>4561</td><td></td><td></td><td><a href="#note1">1,3,8</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">20</th><td>4701</td><td></td><td></td><td><a href="#note1">1,8</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">21</th><td>5111</td><td></td><td></td><td><a href="#note1">1,8</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">22</th><td>5542</td><td></td><td></td><td><a href="#note1">1,8,180</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">23</th><td>5791</td><td></td><td></td><td><a href="#note1">1,3,8</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ECS-552</td><td>Staff</td><td>Department Consent Required<br>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+</div>
+<div class="notesBlock"><h2 class="notesTitle"><a id="note1"></a>Class Notes for Computer Engr &amp; Computer Sci</h2><table class="classScheduleNotes"><tr><th scope="col" >Number</th><th scope="col">Note</th></tr><tr><td><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://www.csulb.edu/sites/default/files/u33991/reserve_capacity_icon_2.png" width="55" height="55" alt="Reserve Capacity" title="Reserve Capacity" /></a></td><td>Reserve Capacity - Reserved seats (AKA reserve capacity) is a new functionality added to the registration system that can save a certain number of seats for a specific group of students.</td></tr><tr><td><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></td><td>Zero Cost Course Materials - California Community Colleges and California State Universities now include a no cost symbol in the online campus course schedule that exclusively use digital course materials that are free of charge to students and therefore not required to be purchased.</td></tr>
+<tr><th scope="row">1</th><td><p>Prerequisite and/or co-requisite - see University Catalog.</p></td></tr>
+<tr><th scope="row">3</th><td><p>Work agreement necessary - inquire department office.</p></td></tr>
+<tr><th scope="row">8</th><td><p>Students must be advanced to candidacy.</p></td></tr>
+<tr><th scope="row">9</th><td><p>Special topic or variable content course - see descriptions on CSULB/Enrollment Services website or contact department office for a course description.</p></td></tr>
+<tr><th scope="row">34</th><td><p>This course is open only to students in the University Honors Program.</p></td></tr>
+<tr><th scope="row">180</th><td><p>Contact department office for more information.</p></td></tr>
+<tr><th scope="row">310</th><td><p>Face-to-Face On-Campus Instruction: Face-to-face instruction will take place in a classroom on campus. Check course syllabus for details.</p></td></tr>
+<tr><th scope="row">311</th><td><p>Hybrid Instruction: Class consists of both face-to-face and synchronous (meet times) online class meetings. Check course syllabus for details.</p></td></tr>
+</table></div>
+</div>
+</div></div></div></div></div>
+<footer class="footer">
+		  <div class="container">
+			<div class="col-sm-12 footer-columns" role="navigation" aria-label="footer-navigation">
+				<div class="row">
+					<div class="col-sm-2 three-footer-column">
+					<h3 class="menu-footer-heading">SERVICES</h3>
+						<ul class="menu-footer">
+							<li><a href="http://emergency.csulb.edu/">Emergency Information</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/caps/crisis.htm">Crisis Assistance</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/cares/">CARES Team</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/ati/">Accessibility</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/shs/">Student Health Center</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 three-footer-column">
+						<div class="row footer-border">
+						<h3 class="menu-footer-heading">Colleges</h3>
+							<div class="col-sm-6 footer-two-one">
+								<ul class="menu-footer" style="margin-right: 10px;">
+									<li><a href="http://web.csulb.edu/colleges/cota/">The Arts</a></li>
+									<li><a href="http://www.ced.csulb.edu/">Education</a></li>
+									<li><a href="http://web.csulb.edu/colleges/cba/">Business Administration</a></li>
+									<li><a href="http://www.ccpe.csulb.edu/ContinuingEd/default.aspx">Continuing &amp; Professional Education</a></li>
+									
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+										<li class="footer-single-column"><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+									
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<ul class="menu-footer footer-double-column">
+									<li><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+									<li><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+									<li><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+									<li><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 three-footer-column">
+						<div class="row footer-border">
+						 <h3 class="menu-footer-heading">Additional Resources</h3>
+							<div class="col-sm-6 footer-two-one">
+								<ul class="menu-footer" style="margin-right: 10px;">
+									<li><a href="http://www.csulb.edu/about/">About CSULB</a></li>
+									<li><a href="http://web.csulb.edu/employment/"><span class=" sr-only">University</span> Careers</a></li>
+									<li><a href="http://daf.csulb.edu/offices/ppfm/police/">University Police</a></li>
+									<li><a href="http://daf.csulb.edu/offices/its/catalog/directory.php">Campus Directory</a></li>
+								
+										<li class="footer-single-column"><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+										<li class="footer-single-column"><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+										<li class="footer-single-column"><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a></li>
+									
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<ul class="menu-footer footer-double-column">				
+									<li><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+									<li><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+									<li><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<ul class="menu-footer footer-border footer-without-h3">
+							<li><a href="http://www.calstate.edu/">CSU</a></li>
+							
+							<li><a href="http://www.csulb.edu/sitemap">Site Index</a></li>
+							<li><a href="/contact">Feedback </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- comment -->
+			<div class="panel-group footer-accordian" id="accordionFooter">
+				<!-- Panel  1 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseOne">
+							SERVICES   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">						
+								<li><a href="http://emergency.csulb.edu/">Emergency Information</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/caps/crisis.htm">Crisis Assistance</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/cares/">CARES Team</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/ati/">Accessibility</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/shs/">Student Health Center</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Panel  2 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseTwo">
+							Colleges   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseTwo" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">
+								<li><a href="http://web.csulb.edu/colleges/cota/">The Arts</a></li>
+								<li><a href="http://www.ced.csulb.edu/">Education</a></li>
+								<li><a href="http://web.csulb.edu/colleges/cba/">Business Administration</a></li>
+								<li><a href="http://www.ccpe.csulb.edu/ContinuingEd/default.aspx">Continuing &amp; Professional Education</a></li>
+								<li><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+								<li><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+								<li><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+								<li><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Panel  2 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseThree">
+							Additional Resources   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseThree" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">
+								<li><a href="http://www.csulb.edu/about/">About CSULB</a></li>
+								<li><a id="last-item-header" href="http://web.csulb.edu/employment/"><span class=" sr-only">University</span> Careers</a></li>
+								<li><a href="http://daf.csulb.edu/offices/ppfm/police/">University Police</a></li>
+								<li><a href="http://daf.csulb.edu/offices/its/catalog/directory.php">Campus Directory</a></li>
+								<li><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+								<li><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+								<li><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container container-table">
+			<div class="row">
+				<div class="col-md-12 text-center footer-social-link">
+					<a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a>
+                    <a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a>
+                    <a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a>
+                    <a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a>
+				</div>
+			</div>
+				<div class="row">
+					<div class="text-center col-md-6 col-md-offset-3">
+						<p class="footer-logo"><a href="http://www.csulb.edu">California State University <strong>Long Beach</strong></a></p>
+						<div class="vcard">
+							<div class="adr">
+								<div class="street-address">1250 Bellflower Boulevard</div>
+								<div><span class="locality">Long Beach, California</span> <span class="postal-code">90840</span></div>
+							</div>
+							<div class="tel">562.985.4111</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		</footer>
+        </div>
+        <script>
+	$( document ).ready(function() {
+    console.log( "ready!" );
+	var pathname = window.location.pathname;
+	var mypart = pathname.split("/").reverse()[1];
+	
+	if(mypart == 'By_Subject'){
+	$("#browseBySubject").addClass("activeTab");
+	}
+	
+	if(mypart == 'By_College'){
+	$("#browseByCollege").addClass("activeTab");
+	}
+	
+	if(mypart == 'By_GE_Requirement'){
+	$("#browseByGE").addClass("activeTab");
+	}
+});
+
+
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,SCM,410,SCM 410,SUSTAINABLE LOGISTICS MGMT,3,,01,2978,Spring_2026|SCM 410|01|2978,FALSE,\N,,LEC,MW,11-12:15PM,,COB-217,Robinson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,410,SCM 410,SUSTAINABLE LOGISTICS MGMT,3,,02,4252,Spring_2026|SCM 410|02|4252,FALSE,\N,,LEC,MW,12:30-1:45PM,,COB-217,Robinson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,411,SCM 411,OPERATIONS PLANNING & CONTROL,3,,01,3347,Spring_2026|SCM 411|01|3347,FALSE,\N,,LEC,TuTh,9:30-10:45AM,,COB-227,Su X,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,SCM,411,SCM 411,OPERATIONS PLANNING & CONTROL,3,,01,\N,Spring_2026|SCM 411|01|NOCLASS|227649c5f8aa1c5a,FALSE,\N,,,TuTh,9:30-10:45AM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,SCM,411,SCM 411,OPERATIONS PLANNING & CONTROL,3,,03,11185,Spring_2026|SCM 411|03|11185,FALSE,\N,,LEC,M,4-6:45PM,,COB-237A,Dexter S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,413,SCM 413,TOTAL QUALITY MANAGEMENT,3,,01,9115,Spring_2026|SCM 413|01|9115,FALSE,\N,,LEC,M,4-6:45PM,,COB-113,Ashraf H,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,414,SCM 414,GLOBAL SUPPLY CHAIN MANAGEMENT,3,,01,3108,Spring_2026|SCM 414|01|3108,FALSE,\N,,LEC,MW,12:30-1:45PM,,COB-122,Cumby S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,414,SCM 414,GLOBAL SUPPLY CHAIN MANAGEMENT,3,,02,2979,Spring_2026|SCM 414|02|2979,FALSE,\N,,LEC,MW,2-3:15PM,,COB-110,Cumby S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,414,SCM 414,GLOBAL SUPPLY CHAIN MANAGEMENT,3,,03,10878,Spring_2026|SCM 414|03|10878,FALSE,\N,310,LEC,Tu,7-9:45PM,,COB-114,Gebhart J,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,418,SCM 418,PROCUREMENT,3,,01,8738,Spring_2026|SCM 418|01|8738,FALSE,\N,,LEC,W,4-6:45PM,,COB-114,Del Rivero G,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,422,SCM 422,SUPPLY CHAIN ANALYTICS,3,,01,10568,Spring_2026|SCM 422|01|10568,FALSE,\N,311,LEC,Tu,7-9:45PM,,COB-111,Idug Y,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,SCM,422,SCM 422,SUPPLY CHAIN ANALYTICS,3,,01,\N,Spring_2026|SCM 422|01|NOCLASS|6876c5ddc04fb167,FALSE,\N,,,Tu,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,SCM,430,SCM 430,PROJECT MANAGEMENT,3,,01,8442,Spring_2026|SCM 430|01|8442,FALSE,\N,,LEC,M,4-6:45PM,,COB-217,Robinson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,430,SCM 430,PROJECT MANAGEMENT,3,,02,8443,Spring_2026|SCM 430|02|8443,FALSE,\N,,LEC,W,4-6:45PM,,COB-217,Robinson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,SCM,614,SCM 614,SUPPLY CHAIN MANAGEMENT,3,,01,9803,Spring_2026|SCM 614|01|9803,FALSE,\N,,SEM,Tu,7-9:45PM,,ONLINE-ONLY,Chen M,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,SCM,614,SCM 614,SUPPLY CHAIN MANAGEMENT,3,,01,\N,Spring_2026|SCM 614|01|NOCLASS|b7cca2f0a7d879ec,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,SCM,614,SCM 614,SUPPLY CHAIN MANAGEMENT,3,,02,9804,Spring_2026|SCM 614|02|9804,FALSE,\N,,SEM,Th,7-9:45PM,,ONLINE-ONLY,Greco V,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,SCM,614,SCM 614,SUPPLY CHAIN MANAGEMENT,3,,02,\N,Spring_2026|SCM 614|02|NOCLASS|866f1adc82e29596,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,SCM,614,SCM 614,SUPPLY CHAIN MANAGEMENT,3,,03,9833,Spring_2026|SCM 614|03|9833,FALSE,\N,,SEM,Tu,7-9:45PM,,ONLINE-ONLY,Williams C,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,SCM,614,SCM 614,SUPPLY CHAIN MANAGEMENT,3,,03,\N,Spring_2026|SCM 614|03|NOCLASS|1b0bdf96b011a456,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,SCM,614,SCM 614,SUPPLY CHAIN MANAGEMENT,3,,04,9846,Spring_2026|SCM 614|04|9846,FALSE,\N,,SEM,Th,7-9:45PM,,ONLINE-ONLY,Dexter S,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,SCM,614,SCM 614,SUPPLY CHAIN MANAGEMENT,3,,04,\N,Spring_2026|SCM 614|04|NOCLASS|38903be55171d70e,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
