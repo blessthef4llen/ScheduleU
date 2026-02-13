@@ -1,0 +1,21 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,AT,207,AT 207,PREVENTN & CARE ATHL INJURIES,3,,01,7639,Spring_2026|AT 207|01|7639,FALSE,\N,,SEM,Tu,1-2:50PM,available,KIN-083,Jarrett W,Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,207,AT 207,PREVENTN & CARE ATHL INJURIES,3,,02,7640,Spring_2026|AT 207|02|7640,FALSE,\N,,ACT,Th,1-2:50PM,available,KIN-083,Jarrett W,Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,504,AT 504,EVDNC BSD PRACT & TSTNG IN AT,1,,01,6310,Spring_2026|AT 504|01|6310,FALSE,\N,306,SEM,W,5-8:45PM,,ONLINE-ONLY,Roos K,Class meets from 01/21/26 - 02/11/26.Class instruction is: Synch. Online - Meet Times.
+Spring_2026,AT,506,AT 506,PUBLIC HEALTH & EPDMLGY IN AT,2,,01,11181,Spring_2026|AT 506|01|11181,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Roos K,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,AT,511,AT 511,AT CLINICAL EVALUATION II,3,,03,12291,Spring_2026|AT 511|03|12291,FALSE,\N,310,SEM,W,8-9:50AM,,KIN-083,Nakajima M,Class meets from 01/20/26 - 04/15/26.Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,511,AT 511,AT CLINICAL EVALUATION II,3,,03,\N,Spring_2026|AT 511|03|NOCLASS|92fe844bd83b9fc6,FALSE,\N,,,F,8-9:50AM,,KIN-083,Nakajima M,Class meets from 01/20/26 - 02/06/26.
+Spring_2026,AT,511,AT 511,AT CLINICAL EVALUATION II,3,,04,12292,Spring_2026|AT 511|04|12292,FALSE,\N,310,ACT,W,10-11:50AM,,KIN-083,Nakajima M,Class meets from 01/20/26 - 04/15/26.Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,511,AT 511,AT CLINICAL EVALUATION II,3,,04,\N,Spring_2026|AT 511|04|NOCLASS|751fc0267c63c2e6,FALSE,\N,,,F,10-11:50AM,,KIN-083,Nakajima M,Class meets from 01/20/26 - 02/06/26.
+Spring_2026,AT,521,AT 521,AT THERAPEUTIC INTERVNTIONS II,3,,03,12293,Spring_2026|AT 521|03|12293,FALSE,\N,310,SEM,M,8-9:50AM,,KIN-083,Roos K,Class meets from 01/20/26 - 04/20/26.Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,521,AT 521,AT THERAPEUTIC INTERVNTIONS II,3,,03,\N,Spring_2026|AT 521|03|NOCLASS|a08cef20484cedef,FALSE,\N,,,F,8-9:50AM,,KIN-083,Roos K,Class meets from 02/20/26 - 03/06/26.
+Spring_2026,AT,521,AT 521,AT THERAPEUTIC INTERVNTIONS II,3,,04,12294,Spring_2026|AT 521|04|12294,FALSE,\N,310,ACT,M,10-11:50AM,,KIN-083,Roos K,Class meets from 01/20/26 - 04/20/26.Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,521,AT 521,AT THERAPEUTIC INTERVNTIONS II,3,,04,\N,Spring_2026|AT 521|04|NOCLASS|14bdbacaa5a73612,FALSE,\N,,,F,10-11:50AM,,KIN-083,Roos K,Class meets from 02/20/26 - 03/06/26.
+Spring_2026,AT,525,AT 525,AT THERAPEUTIC INTERVENTIONS,2,,01,6315,Spring_2026|AT 525|01|6315,FALSE,\N,,SEM,TuTh,8-8:50AM,,KIN-083,Aja M,Class meets from 03/03/26 - 04/30/26.Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,525,AT 525,AT THERAPEUTIC INTERVENTIONS,2,,02,6316,Spring_2026|AT 525|02|6316,FALSE,\N,,ACT,TuTh,9-10:50AM,,KIN-083,Aja M,Class meets from 03/03/26 - 04/30/26.Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,582,AT 582,AT CLINICAL EDUCATION II,2,,01,6319,Spring_2026|AT 582|01|6319,FALSE,\N,,SEM,M,7-8:50PM,,KIN-083,Nakajima M,Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,584,AT 584,AT CLINICAL EDUCATION IV,2,,01,6331,Spring_2026|AT 584|01|6331,FALSE,\N,307,SEM,M,7-8:50PM,available,HC-135,Nakajima M,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,AT,584,AT 584,AT CLINICAL EDUCATION IV,2,,01,\N,Spring_2026|AT 584|01|NOCLASS|291f8baf18644515,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Nakajima M,additional meeting detail
+Spring_2026,AT,591,AT 591,SEMINAR IN ATHLETIC TRAINING,1,,01,6340,Spring_2026|AT 591|01|6340,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Nakajima M,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,AT,699A,AT 699A,APPLIED RESRCH PROJECT IN AT I,2,,01,6332,Spring_2026|AT 699A|01|6332,FALSE,\N,,SEM,W,5-6:50PM,,HHS1-205,Roos K,Class meets from 02/18/26 - 05/08/26.Class instruction is: Face to Face - On Campus.
+Spring_2026,AT,699C,AT 699C,APPLIED RESEARCH PRO IN AT III,2,,01,6333,Spring_2026|AT 699C|01|6333,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Nakajima M,Class instruction is: Asynch. Online-No Meet Times.

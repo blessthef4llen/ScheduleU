@@ -1,0 +1,7 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,HEBW,101A,HEBW 101A,FUNDAMENTALS OF HEBREW,4,GE: 3B (C2),01,7470,Spring_2026|HEBW 101A|01|7470,FALSE,\N,309,SEM,W,12-1:50PM,available,ONLINE-ONLY,Morris R,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,HEBW,101A,HEBW 101A,FUNDAMENTALS OF HEBREW,4,GE: 3B (C2),01,\N,Spring_2026|HEBW 101A|01|NOCLASS|95efd19eb8b900df,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Morris R,additional meeting detail
+Spring_2026,HEBW,101B,HEBW 101B,FUNDAMENTALS OF HEBREW,4,GE: 3B (C2),01,12336,Spring_2026|HEBW 101B|01|12336,FALSE,\N,"309,1",SEM,W,9-10:50AM,available,ONLINE-ONLY,Morris R,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,HEBW,101B,HEBW 101B,FUNDAMENTALS OF HEBREW,4,GE: 3B (C2),01,\N,Spring_2026|HEBW 101B|01|NOCLASS|e255bbbcd517294a,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Morris R,additional meeting detail
+Spring_2026,HEBW,210,HEBW 210,LOVE & MARRIAGE BIBLICAL TRADN,3,,01,7471,Spring_2026|HEBW 210|01|7471,FALSE,\N,309,LEC,W,2-3:15PM,available,ONLINE-ONLY,Morris R,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,HEBW,210,HEBW 210,LOVE & MARRIAGE BIBLICAL TRADN,3,,01,\N,Spring_2026|HEBW 210|01|NOCLASS|fccc42cb8613486c,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Morris R,additional meeting detail

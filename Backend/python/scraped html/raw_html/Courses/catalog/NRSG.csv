@@ -1,0 +1,125 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+NRSG 200,Foundations of Professional Nursing,6,,,Admission to the Nursing program,
+NRSG 250,Intermediate Medical Surgical Nursing,6,,,"NRSG 200 , NRSG 302 , and NRSG 305 , or consent of instructor",
+NRSG 302,Foundations of Clinical Pharmacology,3,,,"Admission to the undergraduate nursing program or consent of the instructor Systematic study of medications used for major body system disorders, their pharmacologic and therapeutic classifications, modes of action, dosages, routes of administration, contraindications and toxic effects",
+NRSG 305,Pathophysiology for Nurses,3,,,"Admission to the undergraduate nursing program or department consent Study of the pathogenesis with an emphasis on pathophysiological processes, understanding disease trajectory and interventions to limit disease progression",
+NRSG 306,Pathophysiology and Pharmacology for Registered Nurses,3,,,Admission to RN to BSN Program,
+NRSG 309,Introduction to Professional Practice,3,,,Admission to RN to BSN program,
+NRSG 312,Health Assessment,3,,,"Basic Program students: NRSG 200, NRSG 302, and NRSG 305",
+NRSG 314,Health Assessment for Registered Nurses,3,,,Admission to RN to BSN Program,
+NRSG 331,Advanced Acute Care Nursing,6,,,"NRSG 250 , NRSG 302 , NRSG 312 , and GERN 400 , or consent of instructor","NRSG 341 and NRSG 450 , or consent of instructor"
+NRSG 341,Psychiatric/Mental Health Nursing,6,,,"NRSG 250 , NRSG 302 , NRSG 312 , GERN 400 , or consent of instructor","NRSG 331 and NRSG 450 , or consent of instructor"
+NRSG 351,Maternal/Newborn Nursing and Women’s Health,6,,,"NRSG 331 , NRSG 341 , NRSG 450 , or consent of instructor","NRSG 361 and NRSG 456 , or consent of instructor"
+NRSG 361,Child Health Care,6,,,"NRSG 331 , NRSG 341 , and NRSG 450 , or consent of instructor","NRSG 351 and NRSG 456 , or consent of instructor"
+NRSG 402,Community Health Nursing,6,,,"For basic program students: NRSG 351 , NRSG 361 , NRSG 456 , or consent of instructor",Basic Program Students: NRSG 454 ; NRSG 458 or consent of instructor
+NRSG 406,Population Health,5,,,"NRSG 306, NRSG 309, NRSG 314, or consent of instructor",
+NRSG 450,Introduction to Nursing Research and Evidence-Based Practice,3,,,"NRSG 250 , NRSG 302 , NRSG 312 , and GERN 400 or consent of instructor","NRSG 331 and NRSG 341 Emphasizes application of research theory to evidence-based nursing practice, including ethics in nursing research and research process"
+NRSG 454,Professional Nursing Practice Preceptorship,6,,,"NRSG 351 , NRSG 361 , and NRSG 456 , or consent of instructor; RN-BSN program student pre-requisites: NRSG 305, NRSG 309, NRSG 312, or consent of instructor","NRSG 402 and NRSG 458 , or consent of instructor"
+NRSG 456,Health Care Delivery Systems and Nursing Leadership,3,,,"NRSG 331 , NRSG 341 , and NRSG 450 , or consent of instructor","NRSG 351 and NRSG 361 , or consent of instructor"
+NRSG 458,NCLEX-RN Preparatory Course,1,,,"NRSG 351 , NRSG 361 , and NRSG 456 Corequisites: NRSG 402 or NRSG 454 , or consent of instructor","NRSG 402 or NRSG 454 , or consent of instructor"
+NRSG 460,Research and Evidence-Based Practice,3,,,NRSG 309,
+NRSG 462,Health Systems Management and Nursing,3,,,Admission to RN to BSN Program,
+NRSG 464,Current Issues in Nursing,3,,,"NRSG 309, NRSG 460",
+NRSG 468,Bridging Nursing Education and Practice,3,,,"NRSG 309, NRSG 314, NRSG 460, and NRSG 462 or consent of instructor",
+NRSG 481,Parenting,3,,,"GE Foundation requirements, one or more Exploration courses, and upper division standing",
+NRSG 490,Independent Study,,,,Consent of any nursing faculty,
+NRSG 499,Selected Topics in Nursing,,,,Consent of instructor,
+NRSG 510,Advanced Pathophysiology for Advanced Practice Nursing,3,,,"Admission to the graduate nursing program and completion of upper division pathophysiology course, or department consent",
+NRSG 520,Advanced Pharmacology for Advanced Practice Nursing,3,,,"Admission to the graduate nursing program, or department consent",
+NRSG 530,Health Assessment for Advanced Practice Nursing,3,,,"Admission to the graduate nursing program and a grade of “C” or better in basic physical assessment course, or consent of instructor","Admission to the graduate nursing program and a grade of “C” or better in basic physical assessment course, or consent of instructor"
+NRSG 530A,Health Assessment for Advanced Practice Nursing Clinical Seminar,1,,,"Admission to the graduate nursing program and a grade of “C” or better in basic physical assessment course, or consent of instructor",NRSG 530
+NRSG 535,Advanced Pediatric Physical Assessment and Health Promotion,2,,,Admission to the Pediatric Primary Care nurse practitioner program or school nurse credential program or consent of the instructor,NRSG 535L
+NRSG 535L,Advanced Pediatric Physical Assessment Laboratory,1,,,Admission to the Pediatric Primary Care nurse practitioner program or school nurse credential program or consent of the instructor,NRSG 535
+NRSG 540,"Health Care Economics, Policy and Information Management for Advanced Practice Nursing",2,,,Admission to graduate nursing program or consent of instructor,
+NRSG 550,Human Diversity and Psychosocial Issues in Health Care for Advanced Practice Nursing,2,,,Admission to graduate nursing program or consent of instructor,
+NRSG 551A,Spanish Language Competency for Advanced Nursing Practice,3,,,Consent of instructor,
+NRSG 556C,Microteaching in Nursing,3,,,Graduate standing; NRSG 556A and 556B,
+NRSG 556L,Theoretical Concepts in Nursing Education: Practice Teaching,4,,,NRSG 556A or consent of instructor,
+NRSG 560,Foundations of Theoretical and Professional Roles for Advanced Practice Nurses,2,,,Admission to graduate nursing program or instructor consent,
+NRSG 590,Independent Study,,,,Consent of a nursing faculty member or department consent,
+NRSG 596,Research for Advanced Nursing Practice,3,,,"Admission to the graduate nursing program and upper division statistics, or consent of instructor",
+NRSG 610,Women’s Health Theories for Advanced Practice Nursing I,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596","NRSG 610A and NRSG 610B Epidemiology, etiology, differential diagnoses, management, and prevention of common health problems of women with a focus on the role of the nurse practitioner in health promotion, health protection, disease prevention in ambulatory health care settings"
+NRSG 610A,Women’s Health Clinical Studies for Advanced Practice Nursing I,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596",NRSG 610 and NRSG 610B
+NRSG 610B,Women’s Health Clinical Studies for Advanced Practice Nursing II,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596",NRSG 610 and NRSG 610A
+NRSG 611,Women’s Health Theories for Advanced Practice Nursing II,3,,,"A grade of “C” or better in NRSG 610 , NRSG 610A , and NRSG 610B",NRSG 611A and NRSG 611B
+NRSG 611A,Women’s Health Clinical Studies for Advanced Practice Nursing III,3,,,"A grade of “C” or better in NRSG 610 , NRSG 610A , and NRSG 610B",NRSG 611 and NRSG 611B
+NRSG 611B,Women’s Health Clinical Studies for Advanced Practice Nursing IV,3,,,"A grade of “C” or better in NRSG 610 , NRSG 610A , and NRSG 610B",NRSG 611 and NRSG 611A
+NRSG 612,Women’s Health Theories for Advanced Practice Nursing III,3,,,"NRSG 611 , NRSG 611A , NRSG 611B",NRSG 612A
+NRSG 612A,Women’s Health Clinical Studies for Advanced Practice Nursing V,3,,,"Admission to the graduate nursing program, NRSG 611 , NRSG 611A , and NRSG 611B",NRSG 612
+NRSG 620,Family Theories for Advanced Practice Nursing I,3,,,"Admission to graduate nursing program and NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 and NRSG 596 , or consent of instructor","NRSG 620A , NRSG 620B"
+NRSG 620A,Family Clinical Studies for Advanced Practice Nursing I,3,,,"Admission to graduate nursing program and NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , NRSG 596 , or consent of instructor","NRSG 620 , NRSG 620B"
+NRSG 620B,Family Clinical Studies for Advanced Practice Nursing II,3,,,"Admission to graduate nursing program and NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 and NRSG 596 , or consent of instructor","NRSG 620 , NRSG 620A"
+NRSG 621,Family Theories for Advanced Practice Nursing II,3,,,"NRSG 620 , NRSG 620A , NRSG 620B , or consent of instructor","NRSG 621A , NRSG 621B"
+NRSG 621A,Family Clinical Studies for Advanced Practice Nursing III,3,,,"NRSG 620 , NRSG 620A , NRSG 620B , or consent of instructor","NRSG 621 , NRSG 621B"
+NRSG 621B,Family Clinical Studies for Advanced Practice Nursing IV,3,,,"NRSG 620 , NRSG 620A , NRSG 620B , or consent of instructor","NRSG 621 , NRSG 621A"
+NRSG 630,Adult-Gerontology Primary Care Theories for Advanced Practice Nursing I,3,,,"Admission to graduate nursing program and NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , NRSG 596 and clinical pre-test, or departmental consent required","NRSG 630A , NRSG 630B"
+NRSG 630A,Adult-Gerontology Primary Care Clinical Studies for Advanced Practice Nursing I,3,,,"Admission to graduate nursing program and NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , NRSG 596 and clinical pre-test, or departmental consent required","NRSG 630 , NRSG 630B"
+NRSG 630B,Adult-Gerontology Primary Care Clinical Studies for Advanced Practice Nursing II,3,,,"Admission to graduate nursing program and NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , NRSG 596 , or consent of instructor","NRSG 630 , NRSG 630A"
+NRSG 631,Adult-Gerontology Primary Care Theories for Advanced Practice Nursing II,3,,,"NRSG 630 , NRSG 630A , NRSG 630B , or departmental consent required","NRSG 631A , NRSG 631B"
+NRSG 631A,Adult-Gerontology Primary Care Clinical Studies for Advanced Practice Nursing III,3,,,"NRSG 630 , NRSG 630A , NRSG 630B , or departmental consent required","NRSG 631 , NRSG 631B"
+NRSG 631B,Adult-Gerontology Primary Care Clinical Studies for Advanced Practice Nursing IV,3,,,"NRSG 630 , NRSG 630A , NRSG 630B , or departmental consent required","NRSG 631 , NRSG 631A"
+NRSG 640,Psychiatric-Mental Health Theory Across the Lifespan for Advanced Practice Nursing I,3,,,"Admission to PMHNP program; completion of NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 and NRSG 596 , or consent of instructor",NRSG 640A
+NRSG 640A,Psychiatric-Mental Health Across the Lifespan Clinical Studies for Advanced Practice Nursing I,3,,,"Admission to graduate nursing program and NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 and NRSG 596 , or consent of instructor",NRSG 640
+NRSG 641,Psychiatric-Mental Health Theory for Adults and Elderly for Advanced Practice Nursing I,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596",NRSG 641A and NRSG 641B
+NRSG 641A,Psychiatric-Mental Health Clinical Studies for Adults for Advanced Practice Nursing I,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596",NRSG 641 and NRSG 641B
+NRSG 641B,Psychiatric-Mental Health Clinical Studies for Elderly for Advanced Practice Nursing II,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596",NRSG 641 and NRSG 641A
+NRSG 642,Psychiatric-Mental Health Theory for Children and Adolescents Advanced Practice Nursing II.,3,,,"A grade of “C” or better in NRSG 641 , NRSG 641A and NRSG 641B",NRSG 642A and NRSG 642B
+NRSG 642A,Psychiatric-Mental Health Clinical Studies for Children for Advanced Practice Nursing III.,3,,,"A grade of “C” or better in NRSG 641 , NRSG 641A and NRSG 641B",NRSG 642 and NRSG 642B
+NRSG 642B,Psychiatric-Mental Health Clinical Studies for Adolescents for Advanced Practice Nursing IV.,3,,,"A grade of “C” or better in NRSG 641 , NRSG 641A and NRSG 641B",NRSG 642 and NRSG 642A
+NRSG 650,Pediatric Theories for Advanced Practice Nursing I,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596",NRSG 650A and NRSG 650B
+NRSG 650A,Pediatric Clinical Studies for Advanced Practice Nursing I,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596",NRSG 650 and NRSG 650B
+NRSG 650B,Pediatric Clinical Studies for Advanced Practice Nursing II,4,,,"A grade of “C” or better in NRSG 510 , NRSG 520 , NRSG 530 , NRSG 530A , NRSG 540 , NRSG 550 , NRSG 560 , and NRSG 596",NRSG 650 and NRSG 650A
+NRSG 651,Pediatric Theories for Advanced Practice Nursing II,3,,,"A grade of “C” or better in NRSG 650 , NRSG 650A , and NRSG 650B",NRSG 651A and NRSG 651B
+NRSG 651A,Pediatric Clinical Studies for Advanced Practice Nursing III,3,,,"A grade of “C” or better in NRSG 650 , NRSG 650A , and NRSG 650B",NRSG 651 and NRSG 651B
+NRSG 651B,Pediatric Clinical Studies for Advanced Practice Nursing IV,3,,,"A grade of “C” or better in NRSG 650 , NRSG 650A , and NRSG 650B",NRSG 651 and NRSG 651A
+NRSG 652,Pediatric Theories for Advanced Practice Nursing III,3,,,"NRSG 651 , NRSG 651A , NRSG 651B",NRSG 652A
+NRSG 652A,Pediatric Clinical for Advanced Practice Nursing V,3,,,"NRSG 651 , NRSG 651A , NRSG 651B",NRSG 652
+NRSG 679,Nursing and Health Systems Governance and Population-Based Care Delivery,3,,,"Admission to the NHSEM program, NRSG 559 The political realities associated with nursing and healthcare delivery are presented with strategies for changing policy and legislation",
+NRSG 692,Nursing Directed Project,,,,"Admission to graduate nursing program, advancement to candidacy, NRSG 596 and consent of school graduate advisor",
+NRSG 693,Executive Management Project,3,,,"Advancement to candidacy and completion of 21 graduate units Development of a comprehensive business plan for a new nursing and/ or health systems program or service or major revision of an existing program/service including vision, mission, goals, evaluative criteria, market analysis, pro-forma budget, options for financing, marketing and advertising",
+NRSG 695,Professional Literature/Comprehensive Examination,3,,,"NRSG 510 , NRSG 520 , NRSG 530 or NRSG 535 , NRSG 530A or NRSG 535L , NRSG 540 , NRSG 550 , NRSG 560 , NRSG 596 , theory and clinical course series for one of the Nurse Practitioner or CNS specialties, and advancement to candidacy, or consent of instructor and graduate advisor",
+NRSG 698,Thesis,,,,"Admission to graduate nursing program, advancement to candidacy, NRSG 596 , consent of school graduate advisor",
+NRSG 701,Advanced Pathophysiology for Advanced Practice Nursing,3,,,Admission to the DNP Graduate Program and/or consent of instructor,"NRSG 710, NRSG 709"
+NRSG 702,Advanced Pharmacology for Advanced Practice Nursing,3,,,Admission to the DNP Graduate Program and/or consent of instructor,"NRSG 703, NRSG 703L, NRSG 729A"
+NRSG 703,Health Assessment for Advanced Practice Nursing,3,,,"Admission to the DNP Graduate Program, completion of basic assessment course and/or consent of instructor","NRSG 703L, NRSG 702, NRSG 792A"
+NRSG 703L,Health Assessment for Advanced Practice Nursing Laboratory,1,,,"Admission to the DNP Graduate Program, completion of basic assessment course and/or consent of instructor","NRSG 703, NRSG 702, NRSG 792A"
+NRSG 704,Health Care Policy and Economic,3,,,Admission to the DNP Graduate Program and/or consent of instructor,"NRSG 705, NRSG 706, NRSG 707"
+NRSG 705,"Social Determinants of Health, Epidemiology, Population and Global Health",3,,,Admission to the DNP Graduate Program and/or consent of instructor,"NRSG 706, NRSG 704, NRSG 707"
+NRSG 706,Leadership and Roles for Advanced Practice,3,,,"Admission to the DNP Graduate Program, and/or consent of instructor","NRSG 705, NRSG 704, NRSG 707"
+NRSG 707,Humanism in Health and Health Care,2,,,Admission to the DNP Graduate Program and/or consent of instructor,"NRSG 704, NRSG 705, NRSG 706"
+NRSG 708,Informatics in Healthcare,3,,,Admission to the DNP Graduate Program and/or consent of instructor,NRSG 711
+NRSG 709,Data Management and Evaluation for Advanced Nursing Practice,3,,,Admission to the DNP Graduate Program and/or consent of instructor,"NRSG 710, NRSG 701"
+NRSG 710,Advanced Evidence-Based Practice,3,,,Admission to the DNP Graduate Program and/or consent of instructor,"NRSG 709, NRSG 701"
+NRSG 711,DNP Proposal Development,2,,,Admission to the DNP Graduate Program and/or consent of instructor,NRSG 708
+NRSG 712A,Learning and Instructional Theories Applied to Nursing,3,,,Admission to the DNP Graduate Program and/or consent of instructor,NRSG 712B
+NRSG 712B,Curriculum Development in Nursing,3,,,Admission to the DNP Graduate Program and/or consent of instructor,NRSG 712A
+NRSG 720,Family Nurse Practitioner Specialty Theory I,3,,,Admission to the DNP FNP program or consent of instructor and completion of the core courses,"NRSG 720L, NRSG 792B"
+NRSG 720L,Family Nurse Practitioner Clinical Practicum I,8,,,Admission to the DNP FNP program or consent of instructor and completion of the core courses,"NRSG 720, NRSG 792B"
+NRSG 721,Family Nurse Practitioner Specialty Theory II,3,,,"Admission to the DNP FNP program or consent of instructor and completion of Family Nurse Practitioner Specialty Theory I, Family Nurse Practitioner Clinical Residency I, and completion of the core courses","NRSG 721L, NRSG 792C"
+NRSG 721L,Family Nurse Practitioner Clinical Practicum II,8,,,Admission to the DNP FNP program or consent of instructor and completion of FNP Specialty Theory I and FNP Clinical Residency I,"NRSG 721, NRSG 792C"
+NRSG 722L,Family Nurse Practitioner Clinical Residency I,2,,,Admission to the DNP FNP program or consent of instructor and completion of FNP Clinical Residency I and II courses,"NRSG 795, NRSG 792D"
+NRSG 730,Adult Gerontology Primary Care Theories for Advanced Practice Nursing I,3,,,"Admission to the DNP Graduate AGPCNP Program, completion of the DNP core courses, clinical pre-test and/or consent of instructor","NRSG 730L, NRSG 792B"
+NRSG 730L,Adult Gerontology Primary Care Clinical Studies for Advanced Practice Nursing Practicum I,8,,,"Admission to the DNP Graduate AGPCNP Program, completion of the DNP core courses, clinical pre-test and/or consent of instructor","NRSG 730, NRSG 792B"
+NRSG 731,Adult Gerontology Primary Care Theories for Advanced Practice Nursing II,3,,,"Admission to the DNP Graduate AGPCNP Program, completion of DNP core classes, NRSG 730, NRSG 630L, clinical pre-test and/or consent of instructor","NRSG 731L, NRSG 792C"
+NRSG 731L,Adult Gerontology Primary Care Clinical Studies for Advanced Practice: Clinical Practicum II,8,,,"Admission to the DNP Graduate AGPCNP Program completion of the DNP Core courses, NRSG 730, NRSG 730L, clinical pre-test and/or consent of instructor","NRSG 731, NRSG 792C The focus is to prepare the DNP student to apply theoretical knowledge related to chronic illnesses of adult/geriatric patients in supervised primary clinical setting"
+NRSG 732L,Adult Gerontology Primary Care Clinical Residency I,2,,,"Admission to the DNP Graduate AGPCNP nursing program and completion of NRSG 730, NRSG 730L, NRSG 731, NRSG 731L","NRSG 795, NRSG 792D"
+NRSG 740,Psychiatric-Mental Health Theory for Adults and Elderly for Advanced Practice Nursing I,3,,,"Admission to the DNP Graduate Program, completion of core courses and/or consent of instructor",NRSG 740L
+NRSG 740L,Psychiatric-Mental Health Clinical Studies for Adults and Elderly for Advanced Practice Nursing Practicum I,8,,,"Admission to the DNP Graduate Program, completion of all DNP core classes and/or consent of the instructor","NRSG 740, NRSG 792B"
+NRSG 741,Psychiatric-Mental Health Theory for Children and Adolescents for Advanced Practice Nursing II,3,,,"Admission to the DNP Graduate Program, completion of all DNP core classes, NRSG 740, NRSG 740L, and/or consent of instructor","NRSG 741L, NRSG 792C"
+NRSG 741L,Psychiatric-Mental Health Clinical Studies for Children and Adolescents for Advanced Practice Nursing Practicum II,8,,,"Admission to the DNP Graduate Program, completion of all core classes, NRSG 740, NRSG 740L, and/or consent of instructor","NRSG 741, NRSG 792C"
+NRSG 742L,Psychiatric-Mental Health DNP Clinical Residency I,2,,,"Admission to the DNP Graduate Program, completion of all DNP core classes, and specialty classes and/or consent of instructor","NRSG 795, NRSG 792D"
+NRSG 750,Pediatric Theories for Advanced Practice Nursing I,3,,,"Admission to the DNP Graduate Program, completion of all core courses, clinical pre-test and/or consent of instructor","NRSG 750L, NRSG 792B"
+NRSG 750L,Pediatric Clinical Studies for Advanced Practice Nursing Practicum I,8,,,"Admission to the DNP Graduate Program, completion of all core courses, clinical pre-test, and/or consent of instructor",NRSG 750
+NRSG 751,Pediatric Theories for Advanced Practice Nursing II,3,,,"Admission to the DNP Graduate Program, completion of all core courses, NRSG 750, 750L and clinical pre-test and/or consent of instructor","NRSG 751L, NRSG 792C"
+NRSG 751L,Pediatric Clinical Studies for Advanced Practice Nursing Practicum II,8,,,"Admission to the DNP Graduate Program, completion of all core courses, NRSG 750, 750L, and clinical pre-test and/or consent of instructor",NRSG 751
+NRSG 752L,Pediatric Nurse Practitioner Clinical Residency I,2,,,"Admission to the DNP Graduate Program, completion of all core courses, DNP 650, 650L, 651, 651L, and clinical pre-test and/or consent of instructor","NRSG 795, NRSG 792D"
+NRSG 760,Adult Gerontology Acute Care Theories for Adv Practice Nursing I,3,,,"Admission to the DNP Graduate Program, completion of all core classes, clinical pre-test and/or consent of instructor","NRSG 760L, NRSG 792B"
+NRSG 760L,Adult Gerontology Acute Care Clinical Studies for Advanced Practice Nursing Practicum I,8,,,"Admission to the DNP Graduate Program, completion of all core classes, clinical pre-test and/or consent of instructor","NRSG 760, NRSG 792B"
+NRSG 761,Adult Gerontology Acute Care Theories for Adv Practice Nursing II,3,,,"Admission to the DNP Graduate Program, completion of all core classes, NRSG 760, NRSG 760L and clinical pre-test and/or consent of instructor","NRSG 761L, NRSG 792C"
+NRSG 761L,Adult Gerontology Acute Care Clinical Studies for Advanced Practice Nursing Practicum II,8,,,"Admission to the DNP Graduate Program, completion of all core classes, NRSG 760, NRSG 760L, and clinical pre-test and/or consent of instructor","NRSG 761, NRSG 792C"
+NRSG 762L,Adult Gerontology Acute Care Clinical Residency I,2,,,"Admission to the DNP Graduate Program, completion of all core courses, NRSG 760, NRSG 760L, NRSG 761, and NRSG 761L and/or consent of instructor","NRSG 795, NRSG 792D"
+NRSG 792A,Integrative Scholarship I: Evidence Based Practice,3,,,"Admission to the DNP Graduate Program, completion of Proposal Writing, Data Management, Advanced EBP courses and/or consent of instructor","NRSG 703, NRSG 703L, NRSG 702"
+NRSG 792B,Integrative Scholarship II,1,,,"Completion of Proposal Writing Course, Integrative Scholarship I and/or consent of the instructor",Enrollment in specialty NRSG DNP Clinical Courses Theory I and Practicum
+NRSG 792C,Integrative Scholarship III,2,,,"Completion of all DNP Core Courses, Integrative Scholarship I and II and/or consent of instructor",NRSG DNP Specialty Classes
+NRSG 792D,Integrative Scholarship IV,3,,,"Completion of all NRSG DNP Core Courses, Integrative Scholarship I, II, III and/or consent of instructor",NRSG Clinical Residency I
+NRSG 795,National Certification Review Course,1,,,Completion of all DNP and Clinical practicum courses and/or consent of instructor,"NRSG DNP Clinical Residency I, NRSG 792D"

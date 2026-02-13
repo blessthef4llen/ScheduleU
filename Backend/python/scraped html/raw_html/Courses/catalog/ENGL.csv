@@ -1,0 +1,81 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+ENGL 100A,Composition I,3,,,CSU General Education Written Communication Placement,
+ENGL 242,The Bible as Literature,3,,,One GE Foundation course,
+ENGL 300,Advanced Composition,3,,,GE Foundation requirements and upper-division standing,
+ENGL 301A,English Proficiency,3,,,ENGL 100B or equivalent,
+ENGL 301B,English Proficiency,3,,,ENGL 100B or equivalent,
+ENGL 304,Intermediate Creative Writing: Creative Nonfiction,3,,,One lower-division course in creative writing taken at an accredited college or university,
+ENGL 305,Intermediate Creative Writing: Fiction,3,,,One lower-division course in creative writing taken at an accredited college or university,
+ENGL 306,Intermediate Creative Writing: Poetry,3,,,One lower-division course in creative writing taken at an accredited college or university,
+ENGL 307,Intermediate Creative Writing: The Novel,3,,,One lower-division course in creative writing taken at an accredited college or university,
+ENGL 309,Applied Composition for Educators - K-8,3,,,Liberal Studies and English majors and pre-majors only,
+ENGL 317,Professional and Technical Writing,3,,,Score of 11 or higher on the GWAR Placement Examination or completion of the necessary portfolio course that is a prerequisite for a GWAR Writing Intensive Course,
+ENGL 318,Theory of Fiction and Film,3,,,Completion of GE Foundation courses; upper-division standing,
+ENGL 340,American Indian Literature,3,,,GE Foundation requirements,
+ENGL 363,Shakespeare I,4,,,ENGL 100B or GE English Composition (Area 1A); GE Foundation requirements,
+ENGL 366,Queer Literature and Queer Reading,3,,,GE foundations and completion of at least 60 units,GE foundations and completion of at least 60 units
+ENGL 370,Chicana/o and Latina/o Literature,3,,,GE Foundation and upper-division standing,
+ENGL 372,Comedy in the United States,3,,,"GE Foundation requirements, one or more Exploration courses, and upper-division standing",
+ENGL 375,U.S. Ethnic Writers,3,,,ENGL 100B or GE English Composition (Area 1A); GE Foundation requirements,
+ENGL 380,Approaches to English Studies,4,,,ENGL 180 or equivalent,
+ENGL 382,Women and Literature,3,,,GE Foundation requirements,
+ENGL 383,Science and Science Fiction,3,,,Completion of G,
+ENGL 385,The Short Story,3,,,ENGL 100B or GE English Composition (Area 1A); GE Foundation requirements,
+ENGL 386,Poetry,3,,,ENGL 100B or GE English Composition (Area 1A); GE Foundation requirements,
+ENGL 387,Comics and Graphic Narratives,3,,,G,
+ENGL 416,Technical Editing,4,,,GE Foundation requirements,
+ENGL 417,Proposal Writing,3,,,GE Foundation requirements,
+ENGL 418,Manual Writing,3,,,GE Foundation requirements,
+ENGL 419,"Writing in Science, Social Science, and Technology",3,,,GE Foundation requirements,
+ENGL 442,Sexing Chicana Literature,3,,,ENGL 100B or GE English Composition (Area 1A) and upper-division standing or consent of instructor,
+ENGL 444,Literature and Environment,3,,,"GE Foundation, one or more Explorations courses, and upper-division standing",
+ENGL 460,Anglophone Postcolonial Literature,3,,,GE Foundation Requirements and upper-division standing,
+ENGL 463,Shakespeare II,3,,,ENGL 363,
+ENGL 469,Selected Topics - Major English Writers,4,,,At least senior standing and 12 units of upper-division ENGL (including ENGL 380 ),
+ENGL 471A,African American Literature to Reconstruction,3,,,,Senior standing or consent of instructor
+ENGL 471B,African American Literature since Reconstruction,3,,,,Senior standing or consent of instructor
+ENGL 479,Selected Topics - Major American Writers,4,,,"At least senior standing , 12 units of upper-division ENGL (including ENGL 380 )",
+ENGL 482,Literature for Adolescents,4,,,One college course in literature,
+ENGL 488,Selected Topics in Rhetoric and Writing Studies,3,,,ENGL 100B or GE English Composition (Area 1A),
+ENGL 491,Applied Technical Writing,,,,Admission to Certificate Program in Technical and Professional Communication,
+ENGL 492A,Internship Technical ‑ Professional Writing and Editing,,,,Admission to Certificate Program in Technical and Professional Communication,
+ENGL 492B,Internship Technical ‑ Professional Writing and Editing,,,,Admission to Certificate Program in Technical and Professional Communication,
+ENGL 493,Professional Preparation for Writers,3,,,"Upper division standing, admission to the Professional Writing Certificate (PWC) program and completion of the PWC Area I requirements ( ENGL 416 , ENGL 417 , ENGL 418 , ENGL 419 ) OR permission of instructor",
+ENGL 494,Guided Project in Professional/Technical Writing,3,,,"Upper division standing, admission to the Professional Writing Certificate (PWC) program AND completion of the PWC Area I requirements ( ENGL 416 , ENGL 417 , ENGL 418 , ENGL 419 )",
+ENGL 495,Professional Writing Certificate Portfolio,3,,,"Upper division standing, admission to the Professional Writing Certificate (PWC) program AND completion of the PWC Area I requirements ( ENGL 416",
+ENGL 496A,RipRap Literary Journal - Producing a Literary Magazine,3,,,GE Foundation,
+ENGL 496B,RipRap Literary Journal - Producing a Literary Magazine,3,,,GE Foundation,
+ENGL 497,Theories and Practices of Individualized Writing Instruction,3,,,Consent of instructor,
+ENGL 499,Directed Studies,,,,Consent of instructor,
+ENGL 505A,Seminar in Prose Writing,4,,,Admission to the MFA in Creative Writing,
+ENGL 505B,Seminar in Prose Writing,4,,,Admission to the MFA in Creative Writing and ENGL 505A,
+ENGL 506A,Seminar in Poetry Writing,4,,,Admission to the MFA in Creative Writing,
+ENGL 506B,Seminar in Poetry Writing,4,,,Admission to the MFA in Creative Writing and ENGL 506A,
+ENGL 550,Old English Language and Literature,4,,,Consent of instructor,
+ENGL 551,Middle English Language and Literature,4,,,Consent of instructor,
+ENGL 560,Anglophone Postcolonial Literature,3,,,"GE Foundation Requirements Survey of literature of various genres written in English in countries other than the United States or Great Britain, often in former colonies of the British Empire",
+ENGL 571A,African American Literature to Reconstruction,3,,,,Graduate standing or consent of instructor
+ENGL 571B,African American Literature since Reconstruction,3,,,,Graduate standing or consent of instructor
+ENGL 596A,RipRap Literary Journal - Producing a Literary Magazine,3,,,Must be a student registered in MFA in Creative Writing or MA in English,
+ENGL 596B,RipRap Literary Journal - Producing a Literary Magazine,3,,,Must be a student registered in MFA in Creative Writing or MA in English,
+ENGL 598,Directed Studies,,,,"Baccalaureate degree, consent of instructor",
+ENGL 605A,Advanced Seminar in Prose Writing,4,,,"Admission to the MFA in Creative Writing, ENGL 505A , and ENGL 505B",
+ENGL 605B,Advanced Seminar in Prose Writing,4,,,"Admission to the MFA in Creative Writing, ENGL 505A , ENGL 505B , and ENGL 605A",
+ENGL 606A,Advanced Seminar in Poetry Writing,4,,,"Admission to the MFA in Creative Writing, ENGL 506A , and ENGL 506B",
+ENGL 606B,Advanced Seminar in Poetry Writing,4,,,"Admission to the MFA in Creative Writing, ENGL 506A , ENGL 506B , and ENGL 606A",
+ENGL 652,Seminar in the English Renaissance,4,,,,ENGL 696
+ENGL 653,Seminar in the Age of Milton,4,,,,ENGL 696
+ENGL 655,Seminar in Restoration and Eighteenth-Century Literature,4,,,,ENGL 696
+ENGL 656,Seminar in Romantic Literature,4,,,,ENGL 696
+ENGL 657,Seminar in Victorian Literature,4,,,,ENGL 696
+ENGL 659,Seminar in Twentieth-Century English Literature,4,,,,ENGL 696
+ENGL 671,Digital Rhetoric,4,,,,ENGL 696
+ENGL 672,Seminar in the Nineteenth-Century American Renaissance,4,,,,ENGL 696
+ENGL 673,Seminar in American Realism,4,,,,ENGL 696
+ENGL 674,Seminar in Twentieth-Century American Literature,4,,,,ENGL 696
+ENGL 681,Selected Topics - Seminar in Major Authors,4,,,,ENGL 696
+ENGL 683,Selected Topics - Seminar in English Studies,4,,,,ENGL 696
+ENGL 684,Seminar in Advanced Literary Theory,4,,,Completion of ENGL 696,
+ENGL 685,Seminar in Rhetorical History and Theory,4,,,,ENGL 696
+ENGL 697,Directed Research,,,,ENGL 696 and consent of instructor,
+ENGL 698,Thesis,,,,ENGL 696 and consent of instructor,

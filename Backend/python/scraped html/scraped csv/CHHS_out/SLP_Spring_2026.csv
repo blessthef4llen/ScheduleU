@@ -1,0 +1,39 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,SLP,100,SLP 100,INTRO COMM DSRDRS: MEDIA&CULTR,3,,01,10107,Spring_2026|SLP 100|01|10107,FALSE,\N,310,LEC,W,5-7:45PM,available,LA1-312,Navarro A,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,261,SLP 261,ANATOMY & PHYS SPEECH HEARING,3,,01,5677,Spring_2026|SLP 261|01|5677,FALSE,\N,,LEC,W,1-3:45PM,,HHS1-104,Alani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,271,SLP 271,PHONETICS,3,,01,5293,Spring_2026|SLP 271|01|5293,FALSE,\N,,LEC,Tu,5-7:45PM,available,LAB-126,Holl S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,329,SLP 329,LANGUAGE BIRTH TO ADOLESCENCE,3,,01,10128,Spring_2026|SLP 329|01|10128,FALSE,\N,310,LEC,M,9-11:45AM,,LAB-126,Daughrity B,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,329,SLP 329,LANGUAGE BIRTH TO ADOLESCENCE,3,,02,10141,Spring_2026|SLP 329|02|10141,FALSE,\N,310,LEC,Tu,9:30-12:15PM,,HSD-111,Daughrity B,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,330,SLP 330,SPEECH & HEARING SCIENCE,3,,01,5675,Spring_2026|SLP 330|01|5675,FALSE,\N,,LEC,M,1-3:45PM,,LAB-126,Alani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,330,SLP 330,SPEECH & HEARING SCIENCE,3,,02,7096,Spring_2026|SLP 330|02|7096,FALSE,\N,,LEC,Tu,12:30-3:15PM,,LAB-126,Alani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,373,SLP 373,INTRODUCTION TO AUDIOLOGY,3,,01,5292,Spring_2026|SLP 373|01|5292,FALSE,\N,,SEM,W,1-3:45PM,,LAB-126,Garcia E,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,373,SLP 373,INTRODUCTION TO AUDIOLOGY,3,,02,5674,Spring_2026|SLP 373|02|5674,FALSE,\N,,SEM,W,4-6:45PM,available,LAB-126,Garcia E,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,456,SLP 456,INTRO TO SPEECH SOUND DISORDER,3,,01,7076,Spring_2026|SLP 456|01|7076,FALSE,\N,310,LEC,W,5-7:45PM,available,LA2-100,Burton D,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,456,SLP 456,INTRO TO SPEECH SOUND DISORDER,3,,02,9219,Spring_2026|SLP 456|02|9219,FALSE,\N,310,LEC,W,1-3:45PM,available,HHS1-205,Stojanovic I,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,462,SLP 462,SLPA PRACTICUM,3,,01,7077,Spring_2026|SLP 462|01|7077,FALSE,\N,,SEM,F,9-11:45AM,available,LAB-126,Carias S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,466,SLP 466,MOTOR SPCH & FLUENCY DISORDERS,3,,01,5296,Spring_2026|SLP 466|01|5296,FALSE,\N,,SEM,M,9-11:45AM,available,LA5-148,Basu S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,466,SLP 466,MOTOR SPCH & FLUENCY DISORDERS,3,,02,5877,Spring_2026|SLP 466|02|5877,FALSE,\N,,SEM,Tu,12:30-3:15PM,,LA1-307,Basu S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,472,SLP 472,AUGMENTATIVE & ALTERNATIVE COM,3,,01,5302,Spring_2026|SLP 472|01|5302,FALSE,\N,,LEC,M,5-7:45PM,available,LA1-300,Yaghmai N,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,472,SLP 472,AUGMENTATIVE & ALTERNATIVE COM,3,,02,5878,Spring_2026|SLP 472|02|5878,FALSE,\N,,LEC,Th,12:30-3:15PM,available,LAB-126,Vento-Wilson M,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,477,SLP 477,INTRO SWALLOWING AND FEELING,3,,01,5289,Spring_2026|SLP 477|01|5289,FALSE,\N,,LEC,Th,12:30-3:15PM,,LA2-100,Alani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,477,SLP 477,INTRO SWALLOWING AND FEELING,3,,02,5676,Spring_2026|SLP 477|02|5676,FALSE,\N,,LEC,Tu,5-7:45PM,,LA4-105,Nguyen V,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,483,SLP 483,INTRODUCTION TO CLINICAL MGMT,3,,01,9476,Spring_2026|SLP 483|01|9476,FALSE,\N,,LEC,Th,9:30-12:15PM,available,LAB-126,Yu C,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,483,SLP 483,INTRODUCTION TO CLINICAL MGMT,3,,02,6580,Spring_2026|SLP 483|02|6580,FALSE,\N,310,LEC,Tu,5-7:45PM,available,AS-235,Herrera N,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,499,SLP 499,DIR STUDIES COMM DISORDERS,1,,01,5294,Spring_2026|SLP 499|01|5294,FALSE,\N,,SUP,TBA,NA,available,LAB-102,Sun L,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,SLP,575,SLP 575,EDUCATIONAL TOPICS IN SLP,3,,01,7152,Spring_2026|SLP 575|01|7152,FALSE,\N,310,SEM,F,9-11:45AM,available,LAB-117A,Vento-Wilson M,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,661,SLP 661,CGNTVE-COMM DISRDRS BRAIN INJU,3,,01,9495,Spring_2026|SLP 661|01|9495,FALSE,\N,310,SEM,Tu,9:30-12:15PM,,LAB-126,Sun L,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,666,SLP 666,SEM IN MOTOR SPEECH DISORDERS,3,,01,9496,Spring_2026|SLP 666|01|9496,FALSE,\N,310,SEM,Th,9:30-12:15PM,,LAB-114,Basu S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,669A,SLP 669A,MULTICLTRL CLIN PRAC DEV SPCH,4,,01,7958,Spring_2026|SLP 669A|01|7958,FALSE,\N,,SUP,MW,2-5:00PM,,LAB-114,Carias S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,669A,SLP 669A,MULTICLTRL CLIN PRAC DEV SPCH,4,,02,6560,Spring_2026|SLP 669A|02|6560,FALSE,\N,310,SUP,MW,2-5:00PM,,LAB-134,Yu C,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,669A,SLP 669A,MULTICLTRL CLIN PRAC DEV SPCH,4,,03,6561,Spring_2026|SLP 669A|03|6561,FALSE,\N,310,SUP,TuTh,2-5:00PM,,LAB-117A,Carias S,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,669J,SLP 669J,MLTCLTRL CLIN PRAC AQD NEUROG,4,,01,5299,Spring_2026|SLP 669J|01|5299,FALSE,\N,,SUP,MW,1-4:00PM,,LAB-117A,Gomez-Tydor K,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,669J,SLP 669J,MLTCLTRL CLIN PRAC AQD NEUROG,4,,02,5300,Spring_2026|SLP 669J|02|5300,FALSE,\N,,SUP,TuTh,1-4:00PM,,LAB-114,Yu C,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,670,SLP 670,CLIN INTRNSHP SPEECH-LANG PATH,5,,01,5297,Spring_2026|SLP 670|01|5297,FALSE,\N,,SUP,TBA,NA,available,OFF-CAMP,Gomez-Tydor K,Class instruction is: Face to Face - Off Campus.
+Spring_2026,SLP,672,SLP 672,SEMINAR IN AUGMENTIVE ALT COMM,3,,01,7576,Spring_2026|SLP 672|01|7576,FALSE,\N,,SEM,W,9-11:45AM,,LAB-126,Vento-Wilson M,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,678,SLP 678,CLIN METHD SPCH-LANG PATHOLOGY,1,,01,5579,Spring_2026|SLP 678|01|5579,FALSE,\N,310,SEM,M,12-12:50PM,available,LAB-117A,Gomez-Tydor K,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,678,SLP 678,CLIN METHD SPCH-LANG PATHOLOGY,1,,02,5884,Spring_2026|SLP 678|02|5884,FALSE,\N,310,SEM,M,1-1:50PM,,LAB-114,Yu C,Class instruction is: Face to Face - On Campus.
+Spring_2026,SLP,686A,SLP 686A,SPEECH-LANGUAGE PATHOLOGY,5,,01,5301,Spring_2026|SLP 686A|01|5301,FALSE,\N,,SUP,TBA,NA,available,OFF-CAMP,Gomez-Tydor K,Class instruction is: Face to Face - Off Campus.
+Spring_2026,SLP,695,SLP 695,DIRECTED READINGS,1,,01,5298,Spring_2026|SLP 695|01|5298,FALSE,\N,,ACT,F,12-12:50PM,available,LAB-126,Sun L,Instructor Consent RequiredClass instruction is: Hybrid(Face to Face & Async).
+Spring_2026,SLP,695,SLP 695,DIRECTED READINGS,1,,01,\N,Spring_2026|SLP 695|01|NOCLASS|92273b302e96421e,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Sun L,additional meeting detail
+Spring_2026,SLP,697,SLP 697,DIRECTED RESEARCH,1,,01,8113,Spring_2026|SLP 697|01|8113,FALSE,\N,305,SUP,TBA,NA,available,ONLINE-ONLY,Staff,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,SLP,698,SLP 698,THESIS,1,,01,5295,Spring_2026|SLP 698|01|5295,FALSE,\N,,SUP,TBA,NA,available,LAB-102,Sun L,Department Consent RequiredClass instruction is: Face to Face - On Campus.

@@ -1,0 +1,5 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+KOR 101,Fundamentals of Korean,4,,,,One GE Foundation course
+KOR 102,Fundamentals of Korean,4,,,,One GE Foundation course
+KOR 201,Intermediate Korean,4,,,"KOR 102 , or competency equivalent to KOR 102 and consent of instructor",
+KOR 202,Intermediate Korean,4,,,"KOR 201 , or competency equivalent to KOR 201 and consent of instructor",

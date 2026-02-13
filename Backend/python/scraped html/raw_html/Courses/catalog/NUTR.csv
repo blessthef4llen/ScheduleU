@@ -1,0 +1,37 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+NUTR 132,Introductory Nutrition,3,,,,One Foundation course
+NUTR 234,Orientation to Nutrition and Dietetics,3,,,NUTR majors only,
+NUTR 331,Nutrition through the Life Cycle,3,,,"BIOL 207 , NUTR 132","For Dietetics Concentration only; NUTR 234 Nutritional needs with emphasis on changes through the life cycle, including pregnancy and lactation, infancy, childhood, adolescence, adulthood, and aging"
+NUTR 335,Nutrition Assessment,3,,,NUTR 331,
+NUTR 336,Social and Cultural Aspects of Food and Health,3,,,"NUTR 132 and open to Dietetics, Nutritional Science, and Food Science majors and minors only",
+NUTR 337,Introduction to Nutrition Research Methods,3,,,NUTR 331,
+NUTR 436A,Advanced Nutrition I,3,,,"NUTR 331 Metabolism of proteins, fats, carbohydrates; interrelationship of nutrients; principles of determining nutritional requirements of individuals","NUTR 331 Metabolism of proteins, fats, carbohydrates; interrelationship of nutrients; principles of determining nutritional requirements of individuals"
+NUTR 436B,Advanced Nutrition II,3,,,Completion of at least 60 units,NUTR 436A
+NUTR 437,Nutrition Education and Counseling,3,,,NUTR 335 and NUTR 436B,
+NUTR 438A,Medical Nutrition Therapy I,3,,,NUTR 335 and NUTR 436B,
+NUTR 438B,Medical Nutrition Therapy II,3,,,NUTR 438A,
+NUTR 439,Nutrition and Aging,3,,,NUTR 132 or BIOL 207 or BIOL 301 or GERN 400 or consent of instructor,
+NUTR 461,Community Nutrition,3,,,"NUTR 331 , NUTR 336 , SOC 335",
+NUTR 468,Nutrition for Exercise and Performance,3,,,"KIN Fitness majors, NUTR 132 , KIN 301",
+NUTR 470,Applied Sports Nutrition,3,,,"Nutrition and Food Science majors, Nutrition Minors: NUTR 331 ; Kinesiology majors: NUTR 132 and KIN 301",
+NUTR 492K,Internship in Nutrition and Dietetics,3,,,Student must be a Family and Consumer Sciences: Nutrition and Dietetics major; have senior standing; have a 2,
+NUTR 497,Directed Studies,,,,"Upper division standing, consent of instructor",
+NUTR 498A,Senior Seminar for Nutrition & Dietetics I,1,,,NUTR 234 and NUTR 436B,
+NUTR 498B,Senior Seminar for Nutrition & Dietetics II,1,,,NUTR 234 and NUTR 436B,
+NUTR 530A,"Carbohydrates, Lipids and Proteins",3,,,"NUTR 335 , NUTR 436B",An upper division statistics course
+NUTR 530B,Vitamins and Minerals,3,,,"NUTR 335 , NUTR 436B",An upper division statistics course
+NUTR 531,Advanced Community Nutrition,3,,,"NUTR 436B and NUTR 335 , NUTR 461",
+NUTR 534,"Advanced Latino Nutrition, Health and Chronic Disease Prevention",3,,,H SC and FCS majors only,
+NUTR 539,Nutrition and Aging,3,,,NUTR 132 or BIOL 207 or BIOL 301 or GERN 400 or consent of instructor,
+NUTR 568,Nutrition for Exercise and Performance,3,,,"NUTR 132 , KIN 301 for the KIN Fitness option and the KIN Exercise Science option or BIOL 207 and Nutrition and Dietetics option",
+NUTR 570,Applied Sports Nutrition,3,,,Nutrition and Dietetics Food Science majors: NUTR 331 ; Kinesiology majors: NUTR 132 and KIN 301,
+NUTR 580,Using Media to Promote Nutrition,3,,,Graduate standing; NUTR 331 or equivalent,
+NUTR 590,Selected Topics in Nutrition and Dietetics,3,,,Enrollment in a graduate major in the Nutrition and Dietetics department; advancement to candidacy; instructor consent,
+NUTR 591A,Professional Practicum in Dietetics,3,,,Admission in the Academy of Nutrition and Dietetics Accredited Dietetic Internship,
+NUTR 591B,Seminar in Dietetic Practice,3,,,,NUTR 591A
+NUTR 591C,Professional Practicum in Dietetics,3,,,Admission to the Academy of Nutrition and Dietetics Individualized Supervised Practice Pathway (ISPP),
+NUTR 597,Independent Study,,,,A 400-level course in any of the Family and Consumer Sciences disciplines,
+NUTR 692,Directed Project,3,,,NUTR 697,
+NUTR 696,Research Methods,3,,,Upper-division course in statistics,
+NUTR 697,Directed Research,3,,,Advancement to candidacy,
+NUTR 698,Thesis,3,,,NUTR 697,

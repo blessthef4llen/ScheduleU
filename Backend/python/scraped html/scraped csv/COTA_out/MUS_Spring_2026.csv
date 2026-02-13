@@ -1,0 +1,298 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,MUS,100A,MUS 100A,CONCERT BAND,1,,01,7079,Spring_2026|MUS 100A|01|7079,FALSE,\N,5,ACT,Tu,7-9:45PM,available,UMC-A311,Garza M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100B,MUS 100B,SYMPHONIC BAND,1,,01,1434,Spring_2026|MUS 100B|01|1434,FALSE,\N,110,ACT,TuTh,1-3:15PM,available,UMC-A100,Friedrich A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100C,MUS 100C,WIND SYMPHONY,1,,01,1435,Spring_2026|MUS 100C|01|1435,FALSE,\N,110,ACT,TuTh,1-3:15PM,available,UMC-A311,Arnold J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100D,MUS 100D,BEL CANTO,1,,01,10496,Spring_2026|MUS 100D|01|10496,FALSE,\N,,ACT,TuTh,3-4:50PM,available,UMC-A301,Sokolov Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100D,MUS 100D,BEL CANTO,1,,01,\N,Spring_2026|MUS 100D|01|NOCLASS|7635b4f9defde8e1,FALSE,\N,,,F,1-1:50PM,,UMC-A100,Sokolov Z,additional meeting detail
+Spring_2026,MUS,100E,MUS 100E,CONCHORD CHOIR,1,,01,6530,Spring_2026|MUS 100E|01|6530,FALSE,\N,"310,5",ACT,Tu,7-9:45PM,available,UMC-A301,Mitton A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100F,MUS 100F,UNIVERSITY CHOIR,1,,01,1436,Spring_2026|MUS 100F|01|1436,FALSE,\N,110,ACT,TuTh,1-2:50PM,available,UMC-A301,Talberg J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100F,MUS 100F,UNIVERSITY CHOIR,1,,01,\N,Spring_2026|MUS 100F|01|NOCLASS|0df8844f2cf74268,FALSE,\N,,,F,1-1:50PM,,UMC-A301,Talberg J,additional meeting detail
+Spring_2026,MUS,100G,MUS 100G,CHAMBER CHOIR,1,,01,1437,Spring_2026|MUS 100G|01|1437,FALSE,\N,110,ACT,MW,1-2:50PM,available,UMC-A301,Talberg J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100G,MUS 100G,CHAMBER CHOIR,1,,01,\N,Spring_2026|MUS 100G|01|NOCLASS|c3a3e94e0c68ab58,FALSE,\N,,,F,2-2:50PM,,UMC-A301,Talberg J,additional meeting detail
+Spring_2026,MUS,100H,MUS 100H,CHAMBER ORCHESTRA,1,,01,8953,Spring_2026|MUS 100H|01|8953,FALSE,\N,,ACT,MW,1-2:50PM,,UMC-A311,Stosch J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100H,MUS 100H,CHAMBER ORCHESTRA,1,,02,10498,Spring_2026|MUS 100H|02|10498,FALSE,\N,,ACT,MW,3-4:50PM,,UMC-A311,Stosch J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100I,MUS 100I,ORCHESTRA AT THE BEACH,1,,01,7082,Spring_2026|MUS 100I|01|7082,FALSE,\N,,ACT,Th,7-9:45PM,available,UMC-A311,Jalo R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100K,MUS 100K,JAZZ LAB BAND,1,,01,8955,Spring_2026|MUS 100K|01|8955,FALSE,\N,,ACT,M,7-9:45PM,available,UMC-A307,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100L,MUS 100L,STUDIO JAZZ BAND,1,,01,1473,Spring_2026|MUS 100L|01|1473,FALSE,\N,110,ACT,TuTh,11-12:15PM,,UMC-A307,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100L,MUS 100L,STUDIO JAZZ BAND,1,,01,\N,Spring_2026|MUS 100L|01|NOCLASS|80f9f9b9b59ef8c9,FALSE,\N,,,F,2-2:50PM,,UMC-A307,Emerzian J,additional meeting detail
+Spring_2026,MUS,100M,MUS 100M,VOCAL JAZZ ENSEMBLE I,1,,01,6482,Spring_2026|MUS 100M|01|6482,FALSE,\N,"310,110",ACT,M,7-7:50PM,available,UMC-A504,Guter C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100M,MUS 100M,VOCAL JAZZ ENSEMBLE I,1,,01,\N,Spring_2026|MUS 100M|01|NOCLASS|604d284c846c9195,FALSE,\N,,,TuTh,1-2:50PM,,UMC-A307,Guter C,additional meeting detail
+Spring_2026,MUS,100N,MUS 100N,VOCAL JAZZ ENSEMBLE II,1,,01,3253,Spring_2026|MUS 100N|01|3253,FALSE,\N,110,ACT,TuTh,3-4:50PM,,UMC-A307,Buzzelli J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100N,MUS 100N,VOCAL JAZZ ENSEMBLE II,1,,01,\N,Spring_2026|MUS 100N|01|NOCLASS|277f0eee91955b9d,FALSE,\N,,,F,12-12:50PM,,UMC-A301,Buzzelli J,additional meeting detail
+Spring_2026,MUS,100O,MUS 100O,CONCERT JAZZ ORCHESTRA,1,,01,1472,Spring_2026|MUS 100O|01|1472,FALSE,\N,110,ACT,MW,11-12:15PM,,UMC-A307,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100O,MUS 100O,CONCERT JAZZ ORCHESTRA,1,,01,\N,Spring_2026|MUS 100O|01|NOCLASS|75147b665cf72d57,FALSE,\N,,,F,12-1:45PM,,UMC-A307,Jarvis J,additional meeting detail
+Spring_2026,MUS,100P,MUS 100P,VOCAL JAZZ ENSEMBLE III,1,,02,12649,Spring_2026|MUS 100P|02|12649,FALSE,\N,"110,310",ACT,M,5-5:50PM,,UMC-A307,Guter G,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,100P,MUS 100P,VOCAL JAZZ ENSEMBLE III,1,,02,\N,Spring_2026|MUS 100P|02|NOCLASS|f102e4f02c7d1b6c,FALSE,\N,,,W,6-7:50PM,,UMC-A307,Guter G,additional meeting detail
+Spring_2026,MUS,120A,MUS 120A,CLASS PIANO,1,,01,1438,Spring_2026|MUS 120A|01|1438,FALSE,\N,15,ACT,MW,9-9:50AM,available,UMC-C404,Grodin S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,120A,MUS 120A,CLASS PIANO,1,,02,7491,Spring_2026|MUS 120A|02|7491,FALSE,\N,15,ACT,TuTh,11-11:50AM,available,UMC-C404,Grodin S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,120B,MUS 120B,CLASS PIANO,1,,01,1439,Spring_2026|MUS 120B|01|1439,FALSE,\N,"1,15",ACT,MW,11-11:50AM,,UMC-C404,Grodin S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,120B,MUS 120B,CLASS PIANO,1,,02,5186,Spring_2026|MUS 120B|02|5186,FALSE,\N,"1,15",ACT,TuTh,12-12:50PM,available,UMC-C404,Manongdo E,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,120B,MUS 120B,CLASS PIANO,1,,03,7711,Spring_2026|MUS 120B|03|7711,FALSE,\N,"1,15",ACT,MW,2-2:50PM,,UMC-C404,Manongdo E,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,122A,MUS 122A,CLASS VOICE,1,,01,4691,Spring_2026|MUS 122A|01|4691,FALSE,\N,,ACT,MW,1-1:50PM,,UMC-C310,Hedgecock S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,125B,MUS 125B,INSTRUMENT METHODS: WOODWINDS,1,,01,7492,Spring_2026|MUS 125B|01|7492,FALSE,\N,,ACT,Th,11-12:50PM,available,UMC-C205,Mason J,Class instruction is: Face to Face - On Campus.Some seats reserved for music transfers
+Spring_2026,MUS,125C,MUS 125C,INSTRUMENT METHODS: BRASS,1,,01,5795,Spring_2026|MUS 125C|01|5795,FALSE,\N,"1,2,15",ACT,Tu,9-10:50AM,,UMC-A311,McBrien B,Class instruction is: Face to Face - On Campus.Some seats reserved for music transfers
+Spring_2026,MUS,125D,MUS 125D,INSTRUMENT METHODS: PERCUSSION,1,,01,5691,Spring_2026|MUS 125D|01|5691,FALSE,\N,"1,2,15",ACT,W,9-10:50AM,,UMC-A311,Fee T,Class instruction is: Face to Face - On Campus.Some seats reserved for music transfers
+Spring_2026,MUS,125E,MUS 125E,INSTRUMENT METHODS: STRINGS,1,,01,5211,Spring_2026|MUS 125E|01|5211,FALSE,\N,"1,2,15",ACT,W,11-12:50PM,,UMC-C205,Olinger C,Class instruction is: Face to Face - On Campus.Some seats reserved for music transfers
+Spring_2026,MUS,125F,MUS 125F,INSTRUMENT METHODS: DIGTL/ELEC,1,,01,6480,Spring_2026|MUS 125F|01|6480,FALSE,\N,"310,15",ACT,W,7-8:50PM,available,UMC-C205,Feinland D,Class instruction is: Face to Face - On Campus.Some seats reserved for permits
+Spring_2026,MUS,125H,MUS 125H,INSTRUMENT METHODS: VOICE,1,,02,11014,Spring_2026|MUS 125H|02|11014,FALSE,\N,"310,1,2,15",ACT,Th,9-10:50AM,,UMC-C205,Gibson M,Class instruction is: Face to Face - On Campus.Seats reserved for permits
+Spring_2026,MUS,128,MUS 128,GUITAR,1,,01,6920,Spring_2026|MUS 128|01|6920,FALSE,\N,5,ACT,W,1-2:50PM,,UMC-C205,Higgins M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,129,MUS 129,S TOPICS INDIV INSTR MUS MAJOR,1,,01,10706,Spring_2026|MUS 129|01|10706,FALSE,\N,"283,24",SUP,TBA,NA,available,UMC-C306,Staff,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,130,MUS 130,OPERA,1,,01,3447,Spring_2026|MUS 130|01|3447,FALSE,\N,"1,110",ACT,W,7-9:45PM,,UMC-A301,Doubin D,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,130,MUS 130,OPERA,1,,01,\N,Spring_2026|MUS 130|01|NOCLASS|b1428518d1785832,FALSE,\N,,,TuTh,3:30-5:20PM,,UMC-A100,Staff,additional meeting detail
+Spring_2026,MUS,130,MUS 130,OPERA,1,,01,\N,Spring_2026|MUS 130|01|NOCLASS|f593a316a7b1d764,FALSE,\N,,,TuTh,3:30-5:20PM,,UMC-C309,Staff,additional meeting detail
+Spring_2026,MUS,130,MUS 130,OPERA,1,,01,\N,Spring_2026|MUS 130|01|NOCLASS|70e26f37e3b7c606,FALSE,\N,,,TuTh,3:30-5:20PM,,UMC-A504,Staff,additional meeting detail
+Spring_2026,MUS,140,MUS 140,BASIC MUSIC THEORY,2,,01,5726,Spring_2026|MUS 140|01|5726,FALSE,\N,,SEM,MW,8-8:50AM,available,UMC-C402,Murray A,Class instruction is: Face to Face - On Campus.some seats reserved for music majors
+Spring_2026,MUS,140,MUS 140,BASIC MUSIC THEORY,2,,02,11169,Spring_2026|MUS 140|02|11169,FALSE,\N,,SEM,TuTh,8-8:50AM,available,UMC-C402,Barrera J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,141A,MUS 141A,MUSICIANSHIP I,2,,01,7493,Spring_2026|MUS 141A|01|7493,FALSE,\N,,LEC,TuTh,9:30-10:20AM,available,UMC-C403,Miller A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,141B,MUS 141B,MUSICIANSHIP II,2,,01,1459,Spring_2026|MUS 141B|01|1459,FALSE,\N,"1,15,2",LEC,MW,9:30-10:20AM,,UMC-C401,Foy J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,141B,MUS 141B,MUSICIANSHIP II,2,,02,5565,Spring_2026|MUS 141B|02|5565,FALSE,\N,"1,15,2",LEC,TuTh,9:30-10:20AM,,UMC-C401,Molina L,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,142A,MUS 142A,HARMONY I,3,,01,7494,Spring_2026|MUS 142A|01|7494,FALSE,\N,,SEM,TuTh,8-9:15AM,available,UMC-C403,Miller A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,142B,MUS 142B,HARMONY II,3,,01,1460,Spring_2026|MUS 142B|01|1460,FALSE,\N,"1,15,2",SEM,MW,8-9:15AM,,UMC-C401,Foy J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,142B,MUS 142B,HARMONY II,3,,02,5566,Spring_2026|MUS 142B|02|5566,FALSE,\N,"1,15,2",SEM,TuTh,8-9:15AM,,UMC-C401,Molina L,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,180,MUS 180,EXPLORING MUSIC,3,,01,9577,Spring_2026|MUS 180|01|9577,FALSE,\N,311,SEM,M,5-6:15PM,,MM-200,Carungcong M,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,MUS,180,MUS 180,EXPLORING MUSIC,3,,01,\N,Spring_2026|MUS 180|01|NOCLASS|e9393e8ce8f38b9a,FALSE,\N,,,W,5-6:15PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,MUS,180,MUS 180,EXPLORING MUSIC,3,,02,9578,Spring_2026|MUS 180|02|9578,FALSE,\N,,SEM,M,7-8:15PM,available,MM-200,Gibson M,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,MUS,180,MUS 180,EXPLORING MUSIC,3,,02,\N,Spring_2026|MUS 180|02|NOCLASS|8b06b4f82fef6e67,FALSE,\N,,,W,7-8:15PM,,ONLINE-ONLY,Gibson M,additional meeting detail
+Spring_2026,MUS,190,MUS 190,LISTENER APPROACH TO MUSIC,3,GE: 3A (C1),02,10756,Spring_2026|MUS 190|02|10756,FALSE,\N,34,LEC,MW,11-12:15PM,,UMC-C200,Zusman S,Honors SectionClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,191A,MUS 191A,WESTERN ART MUSIC I,3,GE: 3A (C1),01,6143,Spring_2026|MUS 191A|01|6143,FALSE,\N,"1,15",LEC,TuTh,11-12:15PM,,UMC-C100,Sabin P,Class instruction is: Face to Face - On Campus.reserved for music majors
+Spring_2026,MUS,191A,MUS 191A,WESTERN ART MUSIC I,3,GE: 3A (C1),02,10511,Spring_2026|MUS 191A|02|10511,FALSE,\N,,LEC,TuTh,4-5:15PM,,UMC-C100,Sabin P,Class instruction is: Face to Face - On Campus.reserved for music majors
+Spring_2026,MUS,191B,MUS 191B,WESTERN ART MUSIC II,3,GE: 3A (C1),01,6921,Spring_2026|MUS 191B|01|6921,FALSE,\N,"1,15",LEC,MW,11-12:15PM,available,UMC-C100,Fruchtman A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200A,MUS 200A,BRASS ENSEMBLE,1,,02,12805,Spring_2026|MUS 200A|02|12805,FALSE,\N,"1,310",ACT,W,5-6:50PM,available,UMC-A301,Sosa J,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200B,MUS 200B,NEW MUSIC ENSEMBLE,1,,01,1463,Spring_2026|MUS 200B|01|1463,FALSE,\N,1,ACT,Th,1-2:50PM,,UMC-C205,Matsuno M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200D,MUS 200D,UNIVERSITY STRING QUARTET,1,,01,5723,Spring_2026|MUS 200D|01|5723,FALSE,\N,1,ACT,NA,NA,available,UMC-C306,Hsu S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200E,MUS 200E,UNIVERSITY WIND QUINTET,1,,01,1464,Spring_2026|MUS 200E|01|1464,FALSE,\N,1,ACT,NA,NA,,UMC-C306,RG A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200F,MUS 200F,UNIVERSITY BRASS QUINTET,1,,01,5733,Spring_2026|MUS 200F|01|5733,FALSE,\N,1,ACT,NA,NA,,UMC-C306,Frear R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200G,MUS 200G,PIANO ENSEMBLE,1,,01,2298,Spring_2026|MUS 200G|01|2298,FALSE,\N,1,ACT,NA,NA,available,UMC-A505,Grodin S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200H,MUS 200H,PIANO CHAMBER MUSIC,1,,01,5808,Spring_2026|MUS 200H|01|5808,FALSE,\N,,ACT,NA,NA,,UMC-A506,Richey C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200I,MUS 200I,CANTUS (TENOR/BASS VOICES),1,,01,10515,Spring_2026|MUS 200I|01|10515,FALSE,\N,,ACT,M,7-9:45PM,,UMC-A301,Degan A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200J,MUS 200J,JAZZ COMBOS,1,,01,2494,Spring_2026|MUS 200J|01|2494,FALSE,\N,1,ACT,NA,NA,,NA,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200J,MUS 200J,JAZZ COMBOS,1,,02,8134,Spring_2026|MUS 200J|02|8134,FALSE,\N,1,ACT,Th,7-8:50PM,,UMC-A307,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200K,MUS 200K,PERFORMANCE,1,,01,4530,Spring_2026|MUS 200K|01|4530,FALSE,\N,,ACT,NA,NA,available,UMC-C306,Goode-Castro H,Class instruction is: Face to Face - On Campus.Reed Quintet
+Spring_2026,MUS,200K,MUS 200K,PERFORMANCE,1,,02,9593,Spring_2026|MUS 200K|02|9593,FALSE,\N,,ACT,NA,NA,,UMC-C306,Thaves D,Class instruction is: Face to Face - On Campus.Flute Quartet
+Spring_2026,MUS,200K,MUS 200K,PERFORMANCE,1,,03,10947,Spring_2026|MUS 200K|03|10947,FALSE,\N,"5,310",ACT,W,7-8:50PM,,UMC-A311,Sanchez E,Class instruction is: Face to Face - On Campus.Mariachi
+Spring_2026,MUS,200L,MUS 200L,BRASS CHAMBER MUSIC,1,,01,1465,Spring_2026|MUS 200L|01|1465,FALSE,\N,1,ACT,NA,NA,,UMC-C309,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200L,MUS 200L,BRASS CHAMBER MUSIC,1,,02,6603,Spring_2026|MUS 200L|02|6603,FALSE,\N,"310,1",ACT,NA,NA,available,NA,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200M,MUS 200M,PERCUSSION ENSEMBLE,1,,01,1466,Spring_2026|MUS 200M|01|1466,FALSE,\N,1,ACT,W,5-6:50PM,available,UMC-A311,Kallend M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200O,MUS 200O,WOODWIND CHAMBER MUSIC,1,,01,1467,Spring_2026|MUS 200O|01|1467,FALSE,\N,1,ACT,NA,NA,,NA,Thaves D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200O,MUS 200O,WOODWIND CHAMBER MUSIC,1,,02,6508,Spring_2026|MUS 200O|02|6508,FALSE,\N,310,ACT,NA,NA,,NA,Stoutenborough C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200P,MUS 200P,STRING CHAMBER MUSIC,1,,01,1468,Spring_2026|MUS 200P|01|1468,FALSE,\N,1,ACT,NA,NA,available,UMC-C205,Parnas Moller M,Class instruction is: Face to Face - On Campus.Orientation meeting - check BeachBoard/Canvas
+Spring_2026,MUS,200S,MUS 200S,COLLEGIUM-INSTRUMENTAL,1,,01,3180,Spring_2026|MUS 200S|01|3180,FALSE,\N,1,ACT,Tu,7-8:50PM,available,UMC-C309,Garrett D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200S,MUS 200S,COLLEGIUM-INSTRUMENTAL,1,,01,\N,Spring_2026|MUS 200S|01|NOCLASS|8defa4e929f526d7,FALSE,\N,,,Tu,7-8:50PM,,UMC-A504,Garrett D,additional meeting detail
+Spring_2026,MUS,200T,MUS 200T,SAXOPHONE ENSEMBLE,1,,01,1469,Spring_2026|MUS 200T|01|1469,FALSE,\N,1,ACT,F,9-10:50AM,,UMC-A311,Mason J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200U,MUS 200U,DIRECTED ACCOMPANYING,1,,01,1470,Spring_2026|MUS 200U|01|1470,FALSE,\N,1,ACT,NA,NA,available,UMC-A506,Chou S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200V,MUS 200V,SAXOPHONE QUARTET,1,,01,10517,Spring_2026|MUS 200V|01|10517,FALSE,\N,,ACT,F,1-2:50PM,,UMC-C205,Inoue C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200W,MUS 200W,LAPTOP ENSEMBLE,1,,01,3256,Spring_2026|MUS 200W|01|3256,FALSE,\N,1,ACT,F,10-11:50AM,available,UMC-A401,Herman M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,200Z,MUS 200Z,UNIVERSITY PERCUSSION GROUP,1,,01,1471,Spring_2026|MUS 200Z|01|1471,FALSE,\N,1,ACT,M,6-7:50PM,,UMC-A311,Atkatz T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,220A,MUS 220A,CLASS PIANO,1,,01,1474,Spring_2026|MUS 220A|01|1474,FALSE,\N,"1,15",ACT,MW,1-1:50PM,available,UMC-C404,Manongdo E,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,220A,MUS 220A,CLASS PIANO,1,,02,1475,Spring_2026|MUS 220A|02|1475,FALSE,\N,"1,15",ACT,TuTh,8-8:50AM,available,UMC-C404,Yang C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,220A,MUS 220A,CLASS PIANO,1,,03,8969,Spring_2026|MUS 220A|03|8969,FALSE,\N,"1,15",ACT,TuTh,1-1:50PM,available,UMC-C404,Jalo R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,220B,MUS 220B,CLASS PIANO,1,,01,1476,Spring_2026|MUS 220B|01|1476,FALSE,\N,"1,15",ACT,MW,10-10:50AM,,UMC-C404,Grodin S,Class instruction is: Face to Face - On Campus.Some seats reserved for graduating seniors
+Spring_2026,MUS,220B,MUS 220B,CLASS PIANO,1,,02,1477,Spring_2026|MUS 220B|02|1477,FALSE,\N,"1,15",ACT,TuTh,10-10:50AM,available,UMC-C404,Yang C,Class instruction is: Face to Face - On Campus.Some seats reserved for graduating seniors
+Spring_2026,MUS,220B,MUS 220B,CLASS PIANO,1,,03,3095,Spring_2026|MUS 220B|03|3095,FALSE,\N,"1,15",ACT,MW,12-12:50PM,available,UMC-C404,Yang C,Class instruction is: Face to Face - On Campus.Some seats reserved for graduating seniors
+Spring_2026,MUS,221B,MUS 221B,CLASS JAZZ PIANO II,1,,01,5807,Spring_2026|MUS 221B|01|5807,FALSE,\N,,ACT,M,6-6:50PM,available,UMC-C404,Guter G,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,224A,MUS 224A,ORCHESTRA LITERATURE: BRASS,1,,01,10520,Spring_2026|MUS 224A|01|10520,FALSE,\N,,ACT,M,3-4:15PM,available,UMC-C309,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,224B,MUS 224B,ORCHESTRA LITERATURE:WOODWINDS,1,,01,10521,Spring_2026|MUS 224B|01|10521,FALSE,\N,,ACT,W,3-4:15PM,available,UMC-C309,Stoutenborough C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,224C,MUS 224C,ORCHESTRA LITERATURE: PERCUSS,1,,01,7862,Spring_2026|MUS 224C|01|7862,FALSE,\N,15,ACT,F,11-12:50PM,available,UMC-A311,Atkatz T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,229,MUS 229,S TOPICS INDIV INSTR MUS MAJOR,2,,01,10708,Spring_2026|MUS 229|01|10708,FALSE,\N,"283,24",SUP,TBA,NA,available,UMC-C306,Staff,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,240,MUS 240,ADVANCED MUSICIANSHIP,2,,01,1510,Spring_2026|MUS 240|01|1510,FALSE,\N,"1,15",LEC,MW,11-11:50AM,available,UMC-C401,Miller A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,240,MUS 240,ADVANCED MUSICIANSHIP,2,,02,3917,Spring_2026|MUS 240|02|3917,FALSE,\N,"1,15",LEC,TuTh,11-11:50AM,available,UMC-C401,Molina L,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,240,MUS 240,ADVANCED MUSICIANSHIP,2,,03,8970,Spring_2026|MUS 240|03|8970,FALSE,\N,"1,15",LEC,TuTh,9:30-10:20AM,,UMC-C402,Verdie A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,272B,MUS 272B,JAZZ THEORY II,2,,01,4057,Spring_2026|MUS 272B|01|4057,FALSE,\N,"1,15",SEM,Tu,5-6:50PM,available,UMC-C401,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,273C,MUS 273C,GERMAN DICTION FOR SINGERS,1,,01,6145,Spring_2026|MUS 273C|01|6145,FALSE,\N,,SEM,W,4-4:50PM,,UMC-C403,Sung J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,293,MUS 293,HISTORY & APPRECIATION OF JAZZ,3,GE: 3A (C1),01,10502,Spring_2026|MUS 293|01|10502,FALSE,\N,,LEC,TuTh,11-12:15PM,available,UMC-A301,Briggs R,Class instruction is: Face to Face - On Campus.Some seats reserved for music majors
+Spring_2026,MUS,300A,MUS 300A,CONCERT BAND,1,,01,7080,Spring_2026|MUS 300A|01|7080,FALSE,\N,,ACT,Tu,7-9:45PM,available,UMC-A311,Garza M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300B,MUS 300B,SYMPHONIC BAND,1,,01,1511,Spring_2026|MUS 300B|01|1511,FALSE,\N,110,ACT,TuTh,1-3:15PM,,UMC-A100,Friedrich A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300C,MUS 300C,WIND SYMPHONY,1,,01,1512,Spring_2026|MUS 300C|01|1512,FALSE,\N,110,ACT,TuTh,1-3:15PM,,UMC-A311,Arnold J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300D,MUS 300D,BEL CANTO,1,,01,10497,Spring_2026|MUS 300D|01|10497,FALSE,\N,,ACT,TuTh,3-4:50PM,available,UMC-A301,Sokolov Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300D,MUS 300D,BEL CANTO,1,,01,\N,Spring_2026|MUS 300D|01|NOCLASS|6cb81a4011ee36a3,FALSE,\N,,,F,1-1:50PM,,UMC-A100,Sokolov Z,additional meeting detail
+Spring_2026,MUS,300E,MUS 300E,CONCHORD CHOIR,1,,01,6531,Spring_2026|MUS 300E|01|6531,FALSE,\N,"310,5",ACT,Tu,7-9:45PM,,UMC-A301,Mitton A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300F,MUS 300F,UNIVERSITY CHOIR,1,,01,1513,Spring_2026|MUS 300F|01|1513,FALSE,\N,110,ACT,TuTh,1-2:50PM,,UMC-A301,Talberg J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300F,MUS 300F,UNIVERSITY CHOIR,1,,01,\N,Spring_2026|MUS 300F|01|NOCLASS|e3e60e81a66f804c,FALSE,\N,,,F,1-1:50PM,,UMC-A301,Talberg J,additional meeting detail
+Spring_2026,MUS,300G,MUS 300G,CHAMBER CHOIR,1,,01,1514,Spring_2026|MUS 300G|01|1514,FALSE,\N,110,ACT,MW,1-2:50PM,,UMC-A301,Talberg J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300G,MUS 300G,CHAMBER CHOIR,1,,01,\N,Spring_2026|MUS 300G|01|NOCLASS|234589ed152d72e0,FALSE,\N,,,F,2-2:50PM,,UMC-A301,Talberg J,additional meeting detail
+Spring_2026,MUS,300H,MUS 300H,CHAMBER ORCHESTRA,1,,01,8954,Spring_2026|MUS 300H|01|8954,FALSE,\N,,ACT,MW,1-2:50PM,,UMC-A311,Stosch J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300H,MUS 300H,CHAMBER ORCHESTRA,1,,02,10499,Spring_2026|MUS 300H|02|10499,FALSE,\N,,ACT,MW,3-4:50PM,,UMC-A311,Stosch J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300I,MUS 300I,ORCHESTRA AT THE BEACH,1,,01,7083,Spring_2026|MUS 300I|01|7083,FALSE,\N,,ACT,Th,7-9:45PM,,UMC-A311,Jalo R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300K,MUS 300K,JAZZ LAB BAND,1,,01,8956,Spring_2026|MUS 300K|01|8956,FALSE,\N,,ACT,M,7-9:45PM,available,UMC-A307,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300L,MUS 300L,STUDIO JAZZ BAND,1,,01,1545,Spring_2026|MUS 300L|01|1545,FALSE,\N,110,ACT,TuTh,11-12:15PM,,UMC-A307,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300L,MUS 300L,STUDIO JAZZ BAND,1,,01,\N,Spring_2026|MUS 300L|01|NOCLASS|170639533ab2b362,FALSE,\N,,,F,2-2:50PM,,UMC-A307,Emerzian J,additional meeting detail
+Spring_2026,MUS,300M,MUS 300M,VOCAL JAZZ ENSEMBLE I,1,,01,6483,Spring_2026|MUS 300M|01|6483,FALSE,\N,"310,110",ACT,M,7-7:50PM,,UMC-A504,Guter C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300M,MUS 300M,VOCAL JAZZ ENSEMBLE I,1,,01,\N,Spring_2026|MUS 300M|01|NOCLASS|7d049501084afad0,FALSE,\N,,,TuTh,1-2:50PM,,UMC-A307,Guter C,additional meeting detail
+Spring_2026,MUS,300N,MUS 300N,VOCAL JAZZ ENSEMBLE II,1,,01,3254,Spring_2026|MUS 300N|01|3254,FALSE,\N,,ACT,TuTh,3-4:50PM,,UMC-A307,Buzzelli J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300N,MUS 300N,VOCAL JAZZ ENSEMBLE II,1,,01,\N,Spring_2026|MUS 300N|01|NOCLASS|e36fec77334c8de8,FALSE,\N,,,F,12-12:50PM,,UMC-A301,Buzzelli J,additional meeting detail
+Spring_2026,MUS,300O,MUS 300O,CONCERT JAZZ ORCHESTRA,1,,01,1544,Spring_2026|MUS 300O|01|1544,FALSE,\N,110,ACT,MW,11-12:15PM,available,UMC-A307,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300O,MUS 300O,CONCERT JAZZ ORCHESTRA,1,,01,\N,Spring_2026|MUS 300O|01|NOCLASS|dcd6d17d0fb67bb0,FALSE,\N,,,F,12-1:45PM,,UMC-A307,Jarvis J,additional meeting detail
+Spring_2026,MUS,300P,MUS 300P,VOCAL JAZZ ENSEMBLE III,1,,01,12650,Spring_2026|MUS 300P|01|12650,FALSE,\N,"110,310",ACT,M,5-5:50PM,available,UMC-A307,Guter G,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,300P,MUS 300P,VOCAL JAZZ ENSEMBLE III,1,,01,\N,Spring_2026|MUS 300P|01|NOCLASS|e71e33e0072fb621,FALSE,\N,,,W,6-7:50PM,,UMC-A307,Guter G,additional meeting detail
+Spring_2026,MUS,322,MUS 322,BEGINNING JAZZ TECHNIQUES,2,,01,7503,Spring_2026|MUS 322|01|7503,FALSE,\N,,LEC,M,8-9:50PM,,UMC-C205,Palmer M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,323,MUS 323,JUNIOR RECITAL,1,,01,1515,Spring_2026|MUS 323|01|1515,FALSE,\N,"1,15,18",SEM,NA,NA,,UMC-C306,Stosch J,Class instruction is: Face to Face - On Campus.reserved for passing recital approval
+Spring_2026,MUS,326,MUS 326,CONDUCTING,2,,01,4181,Spring_2026|MUS 326|01|4181,FALSE,\N,1,LEC,W,9:30-10:20AM,,UMC-A307,Garza M,Class instruction is: Face to Face - On Campus.reserved for 2026 graduates
+Spring_2026,MUS,326,MUS 326,CONDUCTING,2,,02,4182,Spring_2026|MUS 326|02|4182,FALSE,\N,,ACT,M,9-10:50AM,,UMC-A307,Garza M,Class instruction is: Face to Face - On Campus.reserved for 2026 graduates
+Spring_2026,MUS,329,MUS 329,S TOPICS INDIV INSTR MUS MAJOR,1,,01,10709,Spring_2026|MUS 329|01|10709,FALSE,\N,"283,24",SUP,TBA,NA,available,UMC-C306,Staff,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,330,MUS 330,OPERA,1,,01,3448,Spring_2026|MUS 330|01|3448,FALSE,\N,"1,110",ACT,W,7-9:45PM,,UMC-A301,Doubin D,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,330,MUS 330,OPERA,1,,01,\N,Spring_2026|MUS 330|01|NOCLASS|eb4ab2ee602a189e,FALSE,\N,,,TuTh,3:30-5:20PM,,UMC-A100,Staff,additional meeting detail
+Spring_2026,MUS,330,MUS 330,OPERA,1,,01,\N,Spring_2026|MUS 330|01|NOCLASS|42ce9db587c62476,FALSE,\N,,,TuTh,3:30-5:20PM,,UMC-C309,Staff,additional meeting detail
+Spring_2026,MUS,330,MUS 330,OPERA,1,,01,\N,Spring_2026|MUS 330|01|NOCLASS|43147076175cdf29,FALSE,\N,,,TuTh,3:30-5:20PM,,UMC-A504,Staff,additional meeting detail
+Spring_2026,MUS,332,MUS 332,OPERA COACHING,1,,01,2397,Spring_2026|MUS 332|01|2397,FALSE,\N,"1,15,2,180",ACT,NA,NA,available,UMC-C302,Doubin D,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,332,MUS 332,OPERA COACHING,1,,02,3455,Spring_2026|MUS 332|02|3455,FALSE,\N,"1,15,2,180",ACT,NA,NA,,UMC-C302,Doubin D,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,341,MUS 341,MUSICAL FORM AND ANALYSIS,3,,01,1532,Spring_2026|MUS 341|01|1532,FALSE,\N,"1,15",SEM,MW,11-12:15PM,available,UMC-C403,Herman M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,341,MUS 341,MUSICAL FORM AND ANALYSIS,3,,02,3908,Spring_2026|MUS 341|02|3908,FALSE,\N,"1,15",SEM,TuTh,11-12:15PM,,UMC-C403,Verdie A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,341,MUS 341,MUSICAL FORM AND ANALYSIS,3,,03,8974,Spring_2026|MUS 341|03|8974,FALSE,\N,"1,15",SEM,MW,9:30-10:45AM,,UMC-C402,Miller A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,342,MUS 342,MATERIALS OF MODERN MUSIC,3,,01,1533,Spring_2026|MUS 342|01|1533,FALSE,\N,"1,15",SEM,MW,11-12:15PM,,UMC-C402,Bargar R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,342,MUS 342,MATERIALS OF MODERN MUSIC,3,,02,4445,Spring_2026|MUS 342|02|4445,FALSE,\N,"1,15",SEM,TuTh,11-12:15PM,,UMC-C402,Guter G,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,342,MUS 342,MATERIALS OF MODERN MUSIC,3,,03,12469,Spring_2026|MUS 342|03|12469,FALSE,\N,310,SEM,MW,12:30-1:45PM,available,UMC-C402,Lord C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,350A,MUS 350A,COMPOSERS AND MUSICIANS,3,,01,6146,Spring_2026|MUS 350A|01|6146,FALSE,\N,,SEM,MW,8-9:15AM,available,UMC-C200,Fruchtman A,Class instruction is: Face to Face - On Campus.John Williams
+Spring_2026,MUS,350A,MUS 350A,COMPOSERS AND MUSICIANS,3,,02,10836,Spring_2026|MUS 350A|02|10836,FALSE,\N,,SEM,TuTh,9:30-10:45AM,available,UMC-C200,Sabin P,Class instruction is: Face to Face - On Campus.Beethoven
+Spring_2026,MUS,350C,MUS 350C,MUSIC OF A HISTORICAL ERA,3,,01,10513,Spring_2026|MUS 350C|01|10513,FALSE,\N,,SEM,MW,9:30-10:45AM,available,UMC-C200,Zusman S,Class instruction is: Face to Face - On Campus.Music of the Renaissance
+Spring_2026,MUS,350D,MUS 350D,MUSIC OF A GENRE,3,,01,9084,Spring_2026|MUS 350D|01|9084,FALSE,\N,,SEM,TuTh,1-2:15PM,available,UMC-C200,Briggs R,Class instruction is: Face to Face - On Campus.Hip-hop
+Spring_2026,MUS,363,MUS 363,MUSIC & THE VISUAL ARTS,3,GE: 3UD (UDC),01,5690,Spring_2026|MUS 363|01|5690,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Sabin P,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,MUS,363,MUS 363,MUSIC & THE VISUAL ARTS,3,GE: 3UD (UDC),02,6481,Spring_2026|MUS 363|02|6481,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Sabin P,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,MUS,371B,MUS 371B,IMPROVISATION TECHNIQUES II,2,,01,10504,Spring_2026|MUS 371B|01|10504,FALSE,\N,,LEC,Th,6-6:50PM,,UMC-A307,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,371B,MUS 371B,IMPROVISATION TECHNIQUES II,2,,02,10505,Spring_2026|MUS 371B|02|10505,FALSE,\N,,ACT,Tu,7-8:50PM,,UMC-A307,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,388,MUS 388,GEN MUSIC APPROACHES & LIT II,2,,01,10506,Spring_2026|MUS 388|01|10506,FALSE,\N,,SEM,M,11-12:50PM,,UMC-C205,Corallo J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400A,MUS 400A,BRASS ENSEMBLE,1,,02,12804,Spring_2026|MUS 400A|02|12804,FALSE,\N,"1,310",ACT,W,5-6:50PM,available,UMC-A301,Sosa J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400B,MUS 400B,NEW MUSIC ENSEMBLE,1,,01,1535,Spring_2026|MUS 400B|01|1535,FALSE,\N,1,ACT,Th,1-2:50PM,available,UMC-C205,Matsuno M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400D,MUS 400D,UNIVERSITY STRING QUARTET,1,,01,5724,Spring_2026|MUS 400D|01|5724,FALSE,\N,1,ACT,NA,NA,available,UMC-C306,Hsu S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400E,MUS 400E,UNIVERSITY WIND QUINTET,1,,01,1536,Spring_2026|MUS 400E|01|1536,FALSE,\N,1,ACT,NA,NA,,UMC-C306,RG A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400F,MUS 400F,UNIVERSITY BRASS QUINTET,1,,01,5734,Spring_2026|MUS 400F|01|5734,FALSE,\N,1,ACT,NA,NA,available,UMC-C306,Frear R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400G,MUS 400G,PIANO ENSEMBLE,1,,01,2299,Spring_2026|MUS 400G|01|2299,FALSE,\N,1,ACT,NA,NA,,UMC-A505,Grodin S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400H,MUS 400H,PIANO CHAMBER MUSIC,1,,01,5809,Spring_2026|MUS 400H|01|5809,FALSE,\N,,ACT,NA,NA,,UMC-A506,Richey C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400I,MUS 400I,CANTUS (TENOR/BASS VOICES),1,,01,10516,Spring_2026|MUS 400I|01|10516,FALSE,\N,,ACT,M,7-9:45PM,,UMC-A301,Degan A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400J,MUS 400J,JAZZ COMBOS,1,,02,2495,Spring_2026|MUS 400J|02|2495,FALSE,\N,1,ACT,NA,NA,,NA,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400J,MUS 400J,JAZZ COMBOS,1,,03,8135,Spring_2026|MUS 400J|03|8135,FALSE,\N,1,ACT,Th,7-8:50PM,available,UMC-A307,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400K,MUS 400K,PERFORMANCE,1,,01,4529,Spring_2026|MUS 400K|01|4529,FALSE,\N,,ACT,NA,NA,,UMC-C306,Goode-Castro H,Class instruction is: Face to Face - On Campus.Reed Quintet
+Spring_2026,MUS,400K,MUS 400K,PERFORMANCE,1,,02,9612,Spring_2026|MUS 400K|02|9612,FALSE,\N,,ACT,NA,NA,,UMC-C306,Thaves D,Class instruction is: Face to Face - On Campus.Flute Quartet
+Spring_2026,MUS,400K,MUS 400K,PERFORMANCE,1,,03,10948,Spring_2026|MUS 400K|03|10948,FALSE,\N,"5,310",ACT,W,7-8:50PM,,UMC-A311,Sanchez E,Class instruction is: Face to Face - On Campus.Mariachi
+Spring_2026,MUS,400L,MUS 400L,BRASS CHAMBER MUSIC,1,,01,1537,Spring_2026|MUS 400L|01|1537,FALSE,\N,1,ACT,NA,NA,,UMC-C309,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400L,MUS 400L,BRASS CHAMBER MUSIC,1,,02,6604,Spring_2026|MUS 400L|02|6604,FALSE,\N,"310,1",ACT,NA,NA,available,NA,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400M,MUS 400M,PERCUSSION ENSEMBLE,1,,01,1538,Spring_2026|MUS 400M|01|1538,FALSE,\N,1,ACT,W,5-6:50PM,,UMC-A311,Kallend M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400O,MUS 400O,WOODWIND CHAMBER MUSIC,1,,01,1539,Spring_2026|MUS 400O|01|1539,FALSE,\N,1,ACT,NA,NA,available,NA,Thaves D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400O,MUS 400O,WOODWIND CHAMBER MUSIC,1,,02,6509,Spring_2026|MUS 400O|02|6509,FALSE,\N,310,ACT,NA,NA,available,NA,Stoutenborough C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400P,MUS 400P,STRING CHAMBER MUSIC,1,,01,1540,Spring_2026|MUS 400P|01|1540,FALSE,\N,1,ACT,NA,NA,available,UMC-C205,Parnas Moller M,Class instruction is: Face to Face - On Campus.Orientation meeting - Check BeachBoard/Canvas
+Spring_2026,MUS,400S,MUS 400S,COLLEGIUM-INSTRUMENTAL,1,,01,3181,Spring_2026|MUS 400S|01|3181,FALSE,\N,1,ACT,Tu,7-8:50PM,,UMC-C309,Garrett D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400S,MUS 400S,COLLEGIUM-INSTRUMENTAL,1,,01,\N,Spring_2026|MUS 400S|01|NOCLASS|9f40e669fdd0808b,FALSE,\N,,,Tu,7-8:50PM,,UMC-A504,Garrett D,additional meeting detail
+Spring_2026,MUS,400T,MUS 400T,SAXOPHONE ENSEMBLE,1,,01,1541,Spring_2026|MUS 400T|01|1541,FALSE,\N,1,ACT,F,9-10:50AM,available,UMC-A311,Mason J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400U,MUS 400U,DIRECTED ACCOMPANYING,1,,01,1542,Spring_2026|MUS 400U|01|1542,FALSE,\N,1,ACT,NA,NA,available,UMC-A506,Chou S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400V,MUS 400V,SAXOPHONE QUARTET,1,,01,10518,Spring_2026|MUS 400V|01|10518,FALSE,\N,,ACT,F,1-2:50PM,,UMC-C205,Inoue C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400W,MUS 400W,LAPTOP ENSEMBLE,1,,01,3257,Spring_2026|MUS 400W|01|3257,FALSE,\N,1,ACT,F,10-11:50AM,,UMC-A401,Herman M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,400Z,MUS 400Z,UNIVERSITY PERCUSSION GROUP,1,,01,1543,Spring_2026|MUS 400Z|01|1543,FALSE,\N,1,ACT,M,6-7:50PM,available,UMC-A311,Atkatz T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,411B,MUS 411B,ADVANCED MEDIA SCORING PROJECT,3,,01,5589,Spring_2026|MUS 411B|01|5589,FALSE,\N,,SEM,Th,7-9:45PM,,UMC-C402,La Marca P,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,MUS,411B,MUS 411B,ADVANCED MEDIA SCORING PROJECT,3,,01,\N,Spring_2026|MUS 411B|01|NOCLASS|ad9694d12bcfd4d2,FALSE,\N,,,Th,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,MUS,417,MUS 417,BUSINESS OF MUSIC,2,,01,6927,Spring_2026|MUS 417|01|6927,FALSE,\N,,SEM,Th,4-5:50PM,available,UMC-C401,Barrera J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,422,MUS 422,ADV CHORAL CONDUCTING LIT,2,,01,10508,Spring_2026|MUS 422|01|10508,FALSE,\N,,LEC,M,9-9:50AM,,UMC-A301,Le H,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,422,MUS 422,ADV CHORAL CONDUCTING LIT,2,,02,10509,Spring_2026|MUS 422|02|10509,FALSE,\N,,ACT,W,9-10:50AM,,UMC-A301,Talberg J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,423A,MUS 423A,SENIOR RECITAL,1,,01,1546,Spring_2026|MUS 423A|01|1546,FALSE,\N,"1,15",SEM,NA,NA,available,UMC-C306,Stosch J,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,423B,MUS 423B,SENIOR COMPOSITION RECITAL,1,,01,2301,Spring_2026|MUS 423B|01|2301,FALSE,\N,"1,15",SEM,NA,NA,available,UMC-C306,Bargar R,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,423D,MUS 423D,BA SENIOR PROJECT,1,,01,1547,Spring_2026|MUS 423D|01|1547,FALSE,\N,"1,15",SUP,TBA,NA,available,UMC-C306,Dunnahoe S,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,424A,MUS 424A,ORCHESTRA LITERATURE: BRASS,1,,01,10523,Spring_2026|MUS 424A|01|10523,FALSE,\N,,ACT,M,3-4:15PM,available,UMC-C309,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,424B,MUS 424B,ORCHESTRA LITERATURE: WOODWIND,1,,01,10522,Spring_2026|MUS 424B|01|10522,FALSE,\N,,ACT,W,3-4:15PM,available,UMC-C309,Stoutenborough C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,424C,MUS 424C,ORCHESTRA LIT: PERCUSSION,1,,01,7863,Spring_2026|MUS 424C|01|7863,FALSE,\N,15,ACT,F,11-12:50PM,,UMC-A311,Atkatz T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,425,MUS 425,INSTRUMENTAL CONDUCTING II,2,,01,4135,Spring_2026|MUS 425|01|4135,FALSE,\N,"1,13",SEM,Th,9:30-10:20AM,,UMC-A100,Friedrich A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,425,MUS 425,INSTRUMENTAL CONDUCTING II,2,,02,4136,Spring_2026|MUS 425|02|4136,FALSE,\N,"1,13",ACT,Tu,9-10:50AM,,UMC-A100,Friedrich A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,429,MUS 429,S TOPICS INDIV INSTR MUS MAJOR,2,,01,10710,Spring_2026|MUS 429|01|10710,FALSE,\N,"283,24",SUP,TBA,NA,available,UMC-C306,Staff,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,430B,MUS 430B,INSTRUMENTAL ENSEMBLE LAB,1,,01,10760,Spring_2026|MUS 430B|01|10760,FALSE,\N,,ACT,M,9-10:50AM,available,UMC-A311,Thies T,Class instruction is: Face to Face - On Campus.reserved for 2026 graduates
+Spring_2026,MUS,436,MUS 436,OPERA REPERTOIRE,2,,01,10526,Spring_2026|MUS 436|01|10526,FALSE,\N,,LEC,M,4-5:50PM,,UMC-C402,Hahn A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,440D,MUS 440D,PRACT PIANO FOR EDUC MAJORS,2,,01,7504,Spring_2026|MUS 440D|01|7504,FALSE,\N,,LEC,MW,8-8:50AM,available,UMC-C404,Ju H,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,441,MUS 441,MUSICAL ANALYSIS,3,,02,12615,Spring_2026|MUS 441|02|12615,FALSE,\N,"1,15,310",SEM,M,7-9:45PM,available,UMC-C401,Herman M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,455,MUS 455,ELECTRONIC MUSIC,3,,01,10530,Spring_2026|MUS 455|01|10530,FALSE,\N,,SEM,Tu,4-6:45PM,,UMC-A401,Cooper R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,468,MUS 468,MUSIC AND FILM,3,GE: 3UD (UDC),01,1573,Spring_2026|MUS 468|01|1573,FALSE,\N,310,LEC,MW,12:30-1:45PM,,UMC-A100,Fruchtman A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,468,MUS 468,MUSIC AND FILM,3,GE: 3UD (UDC),02,3027,Spring_2026|MUS 468|02|3027,FALSE,\N,310,LEC,MW,9:30-10:45AM,,UMC-A100,Fruchtman A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,474B,MUS 474B,JAZZ ARRANGING II,2,,01,10528,Spring_2026|MUS 474B|01|10528,FALSE,\N,,SEM,W,7-8:50PM,available,UMC-C310,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,477,MUS 477,PIANO ACCOMPANYING,2,,01,3031,Spring_2026|MUS 477|01|3031,FALSE,\N,"1,13,15",SEM,NA,NA,available,UMC-C100,Richey C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,482B,MUS 482B,INSTRUMENTAL METHODS & LIT II,3,,01,7012,Spring_2026|MUS 482B|01|7012,FALSE,\N,"13,15",LEC,Tu,4-6:45PM,,UMC-C205,Thies T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,484,MUS 484,ARRANGING,2,,01,6992,Spring_2026|MUS 484|01|6992,FALSE,\N,"310,1,15",SEM,M,11-12:50PM,,UMC-C310,McBrien B,Class instruction is: Face to Face - On Campus.reserved for 2026 graduates
+Spring_2026,MUS,484,MUS 484,ARRANGING,2,,02,10906,Spring_2026|MUS 484|02|10906,FALSE,\N,,SEM,W,11-12:50PM,,UMC-C310,McBrien B,Class instruction is: Face to Face - On Campus.reserved for 2026 graduates
+Spring_2026,MUS,488,MUS 488,EMERGING PRACTICES MUSIC ED II,2,,01,7866,Spring_2026|MUS 488|01|7866,FALSE,\N,15,LEC,M,4-5:50PM,,UMC-C205,Thies T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,488,MUS 488,EMERGING PRACTICES MUSIC ED II,2,,02,10510,Spring_2026|MUS 488|02|10510,FALSE,\N,,LEC,M,6-7:50PM,available,UMC-C205,Thies T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,490,MUS 490,INTRODUCTION TO MUSIC CULTURES,3,GE: 3UD (UDC),01,9153,Spring_2026|MUS 490|01|9153,FALSE,\N,,LEC,TuTh,9:30-10:45AM,available,UMC-C100,Briggs R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,491,MUS 491,WRITING ABOUT MUSIC,3,GE: 3UD (UDC); GWAR: WI,01,5689,Spring_2026|MUS 491|01|5689,FALSE,\N,17,LEC,TuTh,9:30-10:45AM,,UMC-C310,O'Connell S,Class instruction is: Face to Face - On Campus.Some seats reserved for music majors
+Spring_2026,MUS,491,MUS 491,WRITING ABOUT MUSIC,3,GE: 3UD (UDC); GWAR: WI,02,5783,Spring_2026|MUS 491|02|5783,FALSE,\N,17,LEC,TuTh,11-12:15PM,,UMC-C310,O'Connell S,Class instruction is: Face to Face - On Campus.Some seats reserved for music majors
+Spring_2026,MUS,492B,MUS 492B,STUDIES IN KEYBOARD MUSIC,2,,01,10532,Spring_2026|MUS 492B|01|10532,FALSE,\N,,LEC,Th,2-3:50PM,,UMC-A505,Grodin S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,495,MUS 495,S TOPICS MUSIC,1,,01,7707,Spring_2026|MUS 495|01|7707,FALSE,\N,,LEC,NA,NA,available,UMC-C200,RG A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,495,MUS 495,S TOPICS MUSIC,1,,02,7709,Spring_2026|MUS 495|02|7709,FALSE,\N,,LEC,NA,NA,available,UMC-C200,Stone J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,496,MUS 496,RESEARCH METHODS,3,,01,8987,Spring_2026|MUS 496|01|8987,FALSE,\N,,SEM,Tu,7-9:45PM,available,UMC-C200,Lindau E,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,496,MUS 496,RESEARCH METHODS,3,,01,\N,Spring_2026|MUS 496|01|NOCLASS|0ae0593a1f864995,FALSE,\N,,,Tu,7-9:45PM,,UMC-C404,Lindau E,additional meeting detail
+Spring_2026,MUS,497G,MUS 497G,SONGWRITING,3,,01,10534,Spring_2026|MUS 497G|01|10534,FALSE,\N,,SEM,W,7-9:45PM,,UMC-C402,Richey C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500B,MUS 500B,SYMPHONIC BAND,1,,01,1575,Spring_2026|MUS 500B|01|1575,FALSE,\N,110,ACT,TuTh,1-3:15PM,,UMC-A100,Friedrich A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500C,MUS 500C,WIND SYMPHONY,1,,01,1576,Spring_2026|MUS 500C|01|1576,FALSE,\N,110,ACT,TuTh,1-3:15PM,,UMC-A311,Arnold J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500F,MUS 500F,UNIVERSITY CHOIR,1,,01,1577,Spring_2026|MUS 500F|01|1577,FALSE,\N,110,ACT,TuTh,1-2:50PM,available,UMC-A301,Talberg J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500F,MUS 500F,UNIVERSITY CHOIR,1,,01,\N,Spring_2026|MUS 500F|01|NOCLASS|018ab8b7555a718d,FALSE,\N,,,F,1-1:50PM,,UMC-A301,Talberg J,additional meeting detail
+Spring_2026,MUS,500G,MUS 500G,CHAMBER CHOIR,1,,01,1578,Spring_2026|MUS 500G|01|1578,FALSE,\N,110,ACT,MW,1-2:50PM,,UMC-A301,Talberg J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500G,MUS 500G,CHAMBER CHOIR,1,,01,\N,Spring_2026|MUS 500G|01|NOCLASS|8b877a40421de2a5,FALSE,\N,,,F,2-2:50PM,,UMC-A301,Talberg J,additional meeting detail
+Spring_2026,MUS,500H,MUS 500H,CHAMBER ORCHESTRA,1,,01,8981,Spring_2026|MUS 500H|01|8981,FALSE,\N,,ACT,MW,1-2:50PM,,UMC-A311,Stosch J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500H,MUS 500H,CHAMBER ORCHESTRA,1,,02,10500,Spring_2026|MUS 500H|02|10500,FALSE,\N,,ACT,MW,3-4:50PM,,UMC-A311,Stosch J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500K,MUS 500K,JAZZ LAB BAND,1,,01,8957,Spring_2026|MUS 500K|01|8957,FALSE,\N,,ACT,M,7-9:45PM,,UMC-A307,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500L,MUS 500L,STUDIO JAZZ BAND,1,,01,1597,Spring_2026|MUS 500L|01|1597,FALSE,\N,110,ACT,TuTh,11-12:15PM,available,UMC-A307,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500L,MUS 500L,STUDIO JAZZ BAND,1,,01,\N,Spring_2026|MUS 500L|01|NOCLASS|4a05f6597f24079a,FALSE,\N,,,F,2-2:50PM,,UMC-A307,Emerzian J,additional meeting detail
+Spring_2026,MUS,500M,MUS 500M,VOCAL JAZZ ENSEMBLE I,1,,01,6484,Spring_2026|MUS 500M|01|6484,FALSE,\N,"310,1",ACT,M,7-7:50PM,,UMC-A504,Guter C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500M,MUS 500M,VOCAL JAZZ ENSEMBLE I,1,,01,\N,Spring_2026|MUS 500M|01|NOCLASS|f18abd7ae1c0edd4,FALSE,\N,,,TuTh,1-2:50PM,,UMC-A307,Guter C,additional meeting detail
+Spring_2026,MUS,500N,MUS 500N,VOCAL JAZZ ENSEMBLE II,1,,01,3255,Spring_2026|MUS 500N|01|3255,FALSE,\N,,ACT,TuTh,3-4:50PM,,UMC-A307,Buzzelli J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500N,MUS 500N,VOCAL JAZZ ENSEMBLE II,1,,01,\N,Spring_2026|MUS 500N|01|NOCLASS|e64283a7fd5de587,FALSE,\N,,,F,12-12:50PM,,UMC-A301,Buzzelli J,additional meeting detail
+Spring_2026,MUS,500O,MUS 500O,CONCERT JAZZ ORCHESTRA,1,,01,1596,Spring_2026|MUS 500O|01|1596,FALSE,\N,110,ACT,MW,11-12:15PM,,UMC-A307,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500O,MUS 500O,CONCERT JAZZ ORCHESTRA,1,,01,\N,Spring_2026|MUS 500O|01|NOCLASS|95d320e7ee8877b5,FALSE,\N,,,F,12-1:45PM,,UMC-A307,Jarvis J,additional meeting detail
+Spring_2026,MUS,500P,MUS 500P,VOCAL JAZZ ENSEMBLE III,1,,01,12652,Spring_2026|MUS 500P|01|12652,FALSE,\N,"110,310",ACT,M,5-5:50PM,available,UMC-A307,Guter G,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,500P,MUS 500P,VOCAL JAZZ ENSEMBLE III,1,,01,\N,Spring_2026|MUS 500P|01|NOCLASS|f548922dee92a2b8,FALSE,\N,,,W,6-7:50PM,,UMC-A307,Guter G,additional meeting detail
+Spring_2026,MUS,511B,MUS 511B,ADVANCED MEDIA SCORING PROJECT,3,,01,5590,Spring_2026|MUS 511B|01|5590,FALSE,\N,,SEM,Th,7-9:45PM,available,UMC-C402,La Marca P,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,MUS,511B,MUS 511B,ADVANCED MEDIA SCORING PROJECT,3,,01,\N,Spring_2026|MUS 511B|01|NOCLASS|4ebefb98a1cb7974,FALSE,\N,,,Th,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,MUS,517,MUS 517,BUSINESS OF MUSIC,2,,01,6928,Spring_2026|MUS 517|01|6928,FALSE,\N,,SEM,Th,4-5:50PM,available,UMC-C401,Barrera J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,524A,MUS 524A,ORCHESTRA LITERATURE: BRASS,1,,01,10524,Spring_2026|MUS 524A|01|10524,FALSE,\N,,ACT,M,3-4:15PM,available,UMC-C309,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,524B,MUS 524B,ORCHESTRA LITERATURE: WOODWIND,1,,01,10525,Spring_2026|MUS 524B|01|10525,FALSE,\N,,ACT,W,3-4:15PM,available,UMC-C309,Stoutenborough C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,524C,MUS 524C,ORCHESTRA LIT: PERCUSSION,1,,01,7864,Spring_2026|MUS 524C|01|7864,FALSE,\N,15,ACT,F,11-12:50PM,available,UMC-A311,Atkatz T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,525,MUS 525,ADV INSTRUMENTAL CONDUCTING,2,,01,4137,Spring_2026|MUS 525|01|4137,FALSE,\N,"1,13",SEM,Th,9:30-10:20AM,,UMC-A100,Friedrich A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,525,MUS 525,ADV INSTRUMENTAL CONDUCTING,2,,02,4138,Spring_2026|MUS 525|02|4138,FALSE,\N,"1,13",ACT,Tu,9-10:50AM,,UMC-A100,Friedrich A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,529,MUS 529,S TOPICS INDIV INSTR MUS MAJOR,1,,01,10711,Spring_2026|MUS 529|01|10711,FALSE,\N,"283,24",SUP,TBA,NA,available,UMC-C306,Staff,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,530,MUS 530,OPERA,1,,02,5564,Spring_2026|MUS 530|02|5564,FALSE,\N,,ACT,NA,NA,,NA,Doubin D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,532,MUS 532,OPERA COACHING,1,,01,2398,Spring_2026|MUS 532|01|2398,FALSE,\N,"1,15,180",ACT,NA,NA,available,UMC-C302,Doubin D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,532,MUS 532,OPERA COACHING,1,,02,3456,Spring_2026|MUS 532|02|3456,FALSE,\N,"1,15,180,2",ACT,NA,NA,available,UMC-C302,Doubin D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,535B,MUS 535B,SONG LITERATURE II,2,,01,8978,Spring_2026|MUS 535B|01|8978,FALSE,\N,,LEC,W,4-5:50PM,available,UMC-C401,Buffett J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,536,MUS 536,OPERA REPERTOIRE,2,,01,10527,Spring_2026|MUS 536|01|10527,FALSE,\N,,LEC,M,4-5:50PM,available,UMC-C402,Hahn A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,541,MUS 541,SEMINAR MUSIC ANALYSIS,3,,01,3030,Spring_2026|MUS 541|01|3030,FALSE,\N,15,SEM,M,7-9:45PM,available,UMC-C402,Torres-Santos R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,545,MUS 545,GRADUATE COMPOSITION II,2,,01,4535,Spring_2026|MUS 545|01|4535,FALSE,\N,"1,15",SEM,W,5-6:50PM,available,UMC-C402,Torres-Santos R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,550,MUS 550,SEMINAR IN MUSICOLOGY,3,,01,7536,Spring_2026|MUS 550|01|7536,FALSE,\N,,SEM,M,4-6:45PM,available,UMC-C200,Dunnahoe S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,550,MUS 550,SEMINAR IN MUSICOLOGY,3,,02,10514,Spring_2026|MUS 550|02|10514,FALSE,\N,,SEM,Th,4-6:45PM,available,UMC-C200,Lindau E,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,555,MUS 555,ELECTRONIC MUSIC,3,,01,10531,Spring_2026|MUS 555|01|10531,FALSE,\N,,SEM,Tu,4-6:45PM,,UMC-A401,Cooper R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,574B,MUS 574B,JAZZ ARRANGING II,2,,01,10529,Spring_2026|MUS 574B|01|10529,FALSE,\N,,SEM,W,7-8:50PM,,UMC-C310,Jarvis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,577,MUS 577,PIANO ACCOMPANYING,2,,01,3032,Spring_2026|MUS 577|01|3032,FALSE,\N,"1,13,15",SEM,NA,NA,,UMC-C100,Richey C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,592B,MUS 592B,STUDIES IN KEYBOARD MUSIC,2,,01,10533,Spring_2026|MUS 592B|01|10533,FALSE,\N,,LEC,Th,2-3:50PM,available,UMC-A505,Grodin S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,595,MUS 595,S TOPICS MUSIC,1,,01,7708,Spring_2026|MUS 595|01|7708,FALSE,\N,,LEC,NA,NA,available,UMC-C200,RG A,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,595,MUS 595,S TOPICS MUSIC,1,,02,7710,Spring_2026|MUS 595|02|7710,FALSE,\N,,LEC,NA,NA,available,UMC-C200,Stone J,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,597G,MUS 597G,SONGWRITING,3,,01,10535,Spring_2026|MUS 597G|01|10535,FALSE,\N,,SEM,W,7-9:45PM,,UMC-C402,Richey C,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600A,MUS 600A,BRASS ENSEMBLE,1,,02,12803,Spring_2026|MUS 600A|02|12803,FALSE,\N,"1,310",ACT,W,5-6:50PM,available,UMC-A301,Sosa J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600B,MUS 600B,NEW MUSIC ENSEMBLE,1,,01,1588,Spring_2026|MUS 600B|01|1588,FALSE,\N,1,ACT,Th,1-2:50PM,available,UMC-C205,Matsuno M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600D,MUS 600D,UNIVERSITY STRING QUARTET,1,,01,5725,Spring_2026|MUS 600D|01|5725,FALSE,\N,1,ACT,NA,NA,,UMC-C306,Hsu S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600E,MUS 600E,UNIVERSITY WIND QUINTET,1,,01,1589,Spring_2026|MUS 600E|01|1589,FALSE,\N,1,ACT,NA,NA,,UMC-C306,RG A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600F,MUS 600F,UNIVERSITY BRASS QUINTET,1,,01,5735,Spring_2026|MUS 600F|01|5735,FALSE,\N,"1,10",ACT,NA,NA,available,UMC-C306,Frear R,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600G,MUS 600G,PIANO ENSEMBLE,1,,01,2300,Spring_2026|MUS 600G|01|2300,FALSE,\N,1,ACT,NA,NA,,UMC-A505,Grodin S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600H,MUS 600H,PIANO CHAMBER MUSIC,1,,01,5810,Spring_2026|MUS 600H|01|5810,FALSE,\N,,ACT,NA,NA,,UMC-A506,Richey C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600J,MUS 600J,JAZZ COMBOS,1,,02,2496,Spring_2026|MUS 600J|02|2496,FALSE,\N,1,ACT,NA,NA,,NA,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600J,MUS 600J,JAZZ COMBOS,1,,03,8136,Spring_2026|MUS 600J|03|8136,FALSE,\N,1,ACT,Th,7-8:50PM,,UMC-A307,Emerzian J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600K,MUS 600K,PERFORMANCE,1,,01,4528,Spring_2026|MUS 600K|01|4528,FALSE,\N,,ACT,NA,NA,available,UMC-C306,Goode-Castro H,Class instruction is: Face to Face - On Campus.Reed Quintet
+Spring_2026,MUS,600K,MUS 600K,PERFORMANCE,1,,02,9611,Spring_2026|MUS 600K|02|9611,FALSE,\N,,ACT,NA,NA,available,UMC-C306,Thaves D,Class instruction is: Face to Face - On Campus.Flute Quartet
+Spring_2026,MUS,600K,MUS 600K,PERFORMANCE,1,,03,10949,Spring_2026|MUS 600K|03|10949,FALSE,\N,"5,310",ACT,W,7-8:50PM,,UMC-A311,Sanchez E,Class instruction is: Face to Face - On Campus.Mariachi
+Spring_2026,MUS,600L,MUS 600L,BRASS CHAMBER MUSIC,1,,01,1590,Spring_2026|MUS 600L|01|1590,FALSE,\N,1,ACT,NA,NA,available,UMC-C309,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600L,MUS 600L,BRASS CHAMBER MUSIC,1,,02,6606,Spring_2026|MUS 600L|02|6606,FALSE,\N,"310,1",ACT,NA,NA,available,NA,Trapani S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600M,MUS 600M,PERCUSSION ENSEMBLE,1,,01,1591,Spring_2026|MUS 600M|01|1591,FALSE,\N,1,ACT,W,5-6:50PM,available,UMC-A311,Kallend M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600O,MUS 600O,WOODWIND CHAMBER MUSIC,1,,01,2334,Spring_2026|MUS 600O|01|2334,FALSE,\N,,ACT,NA,NA,,NA,Thaves D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600O,MUS 600O,WOODWIND CHAMBER MUSIC,1,,02,6510,Spring_2026|MUS 600O|02|6510,FALSE,\N,310,ACT,NA,NA,,NA,Stoutenborough C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600P,MUS 600P,STRING CHAMBER MUSIC,1,,01,1592,Spring_2026|MUS 600P|01|1592,FALSE,\N,1,ACT,NA,NA,,UMC-C205,Parnas Moller M,Class instruction is: Face to Face - On Campus.Orientation meeting - Check BeachBoard/Canvas
+Spring_2026,MUS,600S,MUS 600S,COLLEGIUM-INSTRUMENTAL,1,,01,3182,Spring_2026|MUS 600S|01|3182,FALSE,\N,1,ACT,Tu,7-8:50PM,,UMC-C309,Garrett D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600S,MUS 600S,COLLEGIUM-INSTRUMENTAL,1,,01,\N,Spring_2026|MUS 600S|01|NOCLASS|e140ad9d2712a458,FALSE,\N,,,Tu,7-8:50PM,,UMC-A504,Garrett D,additional meeting detail
+Spring_2026,MUS,600T,MUS 600T,SAXOPHONE ENSEMBLE,1,,01,1593,Spring_2026|MUS 600T|01|1593,FALSE,\N,1,ACT,F,9-10:50AM,available,UMC-A311,Mason J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600U,MUS 600U,DIRECTED ACCOMPANYING,1,,01,1594,Spring_2026|MUS 600U|01|1594,FALSE,\N,1,ACT,NA,NA,available,UMC-A506,Chou S,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600V,MUS 600V,SAXOPHONE QUARTET,1,,01,10519,Spring_2026|MUS 600V|01|10519,FALSE,\N,,ACT,F,1-2:50PM,available,UMC-C205,Inoue C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600W,MUS 600W,LAPTOP ENSEMBLE,1,,01,3258,Spring_2026|MUS 600W|01|3258,FALSE,\N,,ACT,F,10-11:50AM,,UMC-A401,Herman M,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,600Z,MUS 600Z,UNIVERSITY PERCUSSION GROUP,1,,01,1595,Spring_2026|MUS 600Z|01|1595,FALSE,\N,1,ACT,M,6-7:50PM,available,UMC-A311,Atkatz T,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,629,MUS 629,S TOPICS INDIV INSTR MUS MAJOR,2,,01,10712,Spring_2026|MUS 629|01|10712,FALSE,\N,"283,24",SUP,TBA,NA,available,UMC-C306,Staff,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,696,MUS 696,RESEARCH METHODS,3,,01,8988,Spring_2026|MUS 696|01|8988,FALSE,\N,,SEM,Tu,7-9:45PM,,UMC-C200,Lindau E,Class instruction is: Face to Face - On Campus.
+Spring_2026,MUS,696,MUS 696,RESEARCH METHODS,3,,01,\N,Spring_2026|MUS 696|01|NOCLASS|3090889061ff035a,FALSE,\N,,,Tu,7-9:45PM,,UMC-C404,Lindau E,additional meeting detail
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,01,1619,Spring_2026|MUS 698|01|1619,FALSE,\N,"15,180",SUP,TBA,NA,available,UMC-C306,Fruchtman A,Department Consent RequiredClass instruction is: Hybrid(Face to Face & Async).
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,01,\N,Spring_2026|MUS 698|01|NOCLASS|664b6c1a294640e8,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Fruchtman A,additional meeting detail
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,02,12377,Spring_2026|MUS 698|02|12377,FALSE,\N,15,SUP,TBA,NA,,UMC-C306,Arnold J,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,03,12378,Spring_2026|MUS 698|03|12378,FALSE,\N,15,SUP,TBA,NA,,UMC-C306,Bargar R,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,04,12379,Spring_2026|MUS 698|04|12379,FALSE,\N,15,SUP,TBA,NA,available,UMC-C306,Chou S,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,05,12380,Spring_2026|MUS 698|05|12380,FALSE,\N,15,SUP,TBA,NA,,UMC-C306,Frear R,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,06,12381,Spring_2026|MUS 698|06|12381,FALSE,\N,15,SUP,TBA,NA,,UMC-C306,Guter C,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,07,12382,Spring_2026|MUS 698|07|12382,FALSE,\N,15,SUP,TBA,NA,,UMC-C306,Hahn A,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,08,12461,Spring_2026|MUS 698|08|12461,FALSE,\N,15,SUP,TBA,NA,,UMC-C306,Jarvis J,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,09,12462,Spring_2026|MUS 698|09|12462,FALSE,\N,,SUP,TBA,NA,,UMC-C306,Olson J,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MUS,698,MUS 698,THESIS OR PROJECT,1,,10,12463,Spring_2026|MUS 698|10|12463,FALSE,\N,,SUP,TBA,NA,,UMC-C306,Simeonov M,Department Consent RequiredClass instruction is: Face to Face - On Campus.
