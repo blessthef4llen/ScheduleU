@@ -5,12 +5,14 @@ from pathlib import Path
 import psycopg
 from dotenv import load_dotenv
 
+# Load env from repo root and legacy backend location for team compatibility.
 load_dotenv()
 load_dotenv(Path(__file__).resolve().parents[1] / "Backend" / "python" / ".env")
 
 
 @contextmanager
 def get_connection():
+    # Shared DB connection context for all repository modules.
     url = os.getenv("DATABASE_URL")
     if not url:
         raise RuntimeError(
@@ -25,6 +27,7 @@ def get_connection():
 
 
 def fetch_courses():
+    # Legacy helper kept for course listing experiments.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute("SELECT * FROM v_course_listings;")
@@ -32,6 +35,7 @@ def fetch_courses():
 
 
 def fetch_schedule_details(user_id):
+    # Legacy helper kept for schedule detail reads.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute("SELECT * FROM v_schedule_details WHERE user_id = %s;", (user_id,))
@@ -39,6 +43,7 @@ def fetch_schedule_details(user_id):
 
 
 def fetch_reviews(course_id=None):
+    # Legacy helper for reading aggregated ratings view.
     with get_connection() as conn:
         with conn.cursor() as cur:
             if course_id:
@@ -49,6 +54,7 @@ def fetch_reviews(course_id=None):
 
 
 def insert_review(user_id, course_id, rating, comment):
+    # Legacy helper for creating review rows.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(

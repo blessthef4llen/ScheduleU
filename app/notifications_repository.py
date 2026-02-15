@@ -1,7 +1,9 @@
 from typing import Any, Dict, List, Optional
 from app.db import get_connection
 
+
 def create_notification(user_id: int, notif_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    # Stores typed notification payloads for Notification Center consumption.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
@@ -25,6 +27,7 @@ def create_notification(user_id: int, notif_type: str, payload: Dict[str, Any]) 
     }
 
 def list_notifications(user_id: int, unread_only: bool = False) -> List[Dict[str, Any]]:
+    # Supports unread filter for badge counts and focused inbox views.
     with get_connection() as conn:
         with conn.cursor() as cur:
             if unread_only:
@@ -45,6 +48,7 @@ def list_notifications(user_id: int, unread_only: bool = False) -> List[Dict[str
     ]
 
 def mark_read(user_id: int, notification_id: int) -> None:
+    # Marks a single notification as acknowledged by user.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(

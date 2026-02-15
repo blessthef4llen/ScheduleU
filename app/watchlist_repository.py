@@ -1,6 +1,7 @@
 from typing import Any, Dict, List, Optional
 from app.db import get_connection
 
+
 def add_watch(
     user_id: int,
     section_id: int,
@@ -8,6 +9,7 @@ def add_watch(
     quiet_hours: Optional[Dict[str, Any]] = None,
     channels: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
+    # Upsert keeps one active watch per user/section and updates thresholds/preferences.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
@@ -39,6 +41,7 @@ def add_watch(
     }
 
 def remove_watch(user_id: int, section_id: int) -> None:
+    # Soft-delete pattern keeps history and avoids hard row removal.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
@@ -48,6 +51,7 @@ def remove_watch(user_id: int, section_id: int) -> None:
         conn.commit()
 
 def list_watchlist(user_id: int) -> List[Dict[str, Any]]:
+    # Returns UI-ready watch rows from denormalized DB view.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
@@ -73,6 +77,7 @@ def list_watchlist(user_id: int) -> List[Dict[str, Any]]:
     return [dict(zip(cols, r)) for r in rows]
 
 def mark_notified(watch_id: int) -> None:
+    # Used by realtime monitor to prevent duplicate notifications.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+// Frontend shape used by both local state and backend demo-store responses.
 type SavedCourse = {
   id: string;
   code: string;
@@ -12,9 +13,11 @@ type SavedCourse = {
 };
 
 const storageKey = "scheduleu-uc4-saved-courses";
+// Backend defaults to local FastAPI instance; override with NEXT_PUBLIC_BACKEND_URL.
 const backendBaseUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://127.0.0.1:8000";
 const demoUserId = 1;
 
+// Starter data shown when there is no local or backend data yet.
 const starterSavedCourses: SavedCourse[] = [
   {
     id: "1",
@@ -60,6 +63,7 @@ const semesterHistory = [
   },
 ];
 
+// Simulated "save from builder" buttons for demo flow.
 const quickAddCourses: SavedCourse[] = [
   {
     id: "4",
@@ -88,6 +92,7 @@ const quickAddCourses: SavedCourse[] = [
 ];
 
 export default function Home() {
+  // Initialize from browser storage for fast render and offline resilience.
   const [savedCourses, setSavedCourses] = useState<SavedCourse[]>(() => {
     if (typeof window === "undefined") return starterSavedCourses;
     const stored = localStorage.getItem(storageKey);
@@ -107,11 +112,13 @@ export default function Home() {
       ? "Loaded saved classes from browser storage."
       : "Demo data loaded.";
   });
+  // Shows current backend connectivity state for demo transparency.
   const [backendStatus, setBackendStatus] = useState("Checking backend...");
 
   useEffect(() => {
     let cancelled = false;
 
+    // On first load, prefer backend demo-store data if service is up.
     async function syncFromBackendOnLoad() {
       try {
         const healthResponse = await fetch(`${backendBaseUrl}/health`);
@@ -134,6 +141,7 @@ export default function Home() {
         }
       } catch {
         if (cancelled) return;
+        // Keep working entirely client-side when API is down.
         setBackendStatus("Offline (local storage fallback)");
       }
     }
@@ -145,9 +153,11 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    // Local persistence keeps demo state stable across page refreshes.
     localStorage.setItem(storageKey, JSON.stringify(savedCourses));
   }, [savedCourses]);
 
+  // Lightweight summary metric shown in header cards.
   const totalUnits = useMemo(
     () => savedCourses.reduce((sum, course) => sum + course.units, 0),
     [savedCourses],

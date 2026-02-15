@@ -3,7 +3,9 @@ from app import realtime_sections_repository as sec_repo
 from app import notifications_repository as notif_repo
 from app import watchlist_repository as watch_repo
 
+
 def should_alert(min_open_seats: int, open_seats: Optional[int], new_status: Optional[str]) -> bool:
+    # Core UC4 notification rule: alert when status opens or seat threshold is met.
     if new_status and new_status.lower() == "open":
         # If status is open, alert even if seats missing; but prefer seat rule if provided
         if open_seats is None:
@@ -18,6 +20,7 @@ def process_section_update(
     open_seats: Optional[int],
     capacity: Optional[int],
 ) -> Dict[str, Any]:
+    # Applies section update, evaluates active watches, and emits notifications.
     old_status, old_open, old_cap = sec_repo.update_section_status(
         section_id=section_id,
         new_status=new_status,
@@ -40,6 +43,7 @@ def process_section_update(
             continue
 
         payload = {
+            # Payload shape intentionally rich so frontend can deep-link directly.
             "event": "seat_open",
             "course": {
                 "subject": snapshot["subject"],

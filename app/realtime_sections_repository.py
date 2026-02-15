@@ -1,6 +1,7 @@
 from typing import Any, Dict, List, Optional, Tuple
 from app.db import get_connection
 
+
 def update_section_status(
     section_id: int,
     new_status: Optional[str],
@@ -37,6 +38,7 @@ def update_section_status(
     return (old[0], old[1], old[2])
 
 def get_active_watches_for_section(section_id: int) -> List[Dict[str, Any]]:
+    # Finds currently active watch rules for the changed section.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
@@ -55,6 +57,7 @@ def get_active_watches_for_section(section_id: int) -> List[Dict[str, Any]]:
     ]
 
 def get_section_snapshot(section_id: int) -> Dict[str, Any]:
+    # Returns joined section/course context used in notification payloads.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(

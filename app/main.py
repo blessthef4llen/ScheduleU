@@ -10,8 +10,10 @@ from app import saved_classes_demo_store as demo_store
 from app import saved_classes_repository as saved_repo
 from app import watchlist_repository as watch_repo
 
+# Canonical UC4 API app used by local demos and team integration.
 app = FastAPI(title="ScheduleU UC4 Backend")
 
+# Allow local Next.js development ports to call this API directly.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -28,6 +30,7 @@ app.add_middleware(
 )
 
 
+# Existing UC4 payloads for watchlist/notification features.
 class WatchCreateRequest(BaseModel):
     user_id: int
     section_id: int
@@ -53,6 +56,7 @@ class MarkReadRequest(BaseModel):
     notification_id: int
 
 
+# DB-backed saved-class payloads (future builder integration target).
 class SavedClassCreateRequest(BaseModel):
     user_id: int
     section_id: int
@@ -70,6 +74,7 @@ class SavedClassResetRequest(BaseModel):
     term: Optional[str] = None
 
 
+# Demo-store payload used before full builder-to-section wiring is complete.
 class DemoSavedCourse(BaseModel):
     id: str
     code: str
@@ -86,6 +91,7 @@ class DemoSavedClassRequest(BaseModel):
 
 @app.get("/health")
 def health():
+    # Simple liveness check used by frontend startup sync.
     return {"status": "ok", "service": "scheduleu-uc4-backend"}
 
 
@@ -152,6 +158,7 @@ def update_section_status(payload: SectionStatusUpdateRequest):
 
 @app.get("/uc4/saved-classes/{user_id}")
 def list_saved_classes(user_id: int, term: Optional[str] = None):
+    # DB-first read path for eventual real course-builder save actions.
     try:
         courses = saved_repo.list_saved_classes(user_id=user_id, term=term)
         return {"source": "database", "courses": courses}
@@ -161,6 +168,7 @@ def list_saved_classes(user_id: int, term: Optional[str] = None):
 
 @app.post("/uc4/saved-classes")
 def add_saved_class(payload: SavedClassCreateRequest):
+    # Stores selected section inside schedule/schedule_items.
     try:
         row = saved_repo.add_saved_class(
             user_id=payload.user_id,
@@ -196,6 +204,7 @@ def reset_saved_classes(payload: SavedClassResetRequest):
 
 @app.get("/uc4/demo/saved-classes")
 def list_demo_saved_classes(user_id: int = 1):
+    # File-backed demo fallback while upstream builder wiring is pending.
     return {"source": "demo-store", "courses": demo_store.list_saved_classes(user_id)}
 
 

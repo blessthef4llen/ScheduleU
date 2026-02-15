@@ -4,6 +4,7 @@ from app.db import get_connection
 
 
 def list_saved_classes(user_id: int, term: Optional[str] = None) -> List[Dict[str, Any]]:
+    # Reads a flattened schedule+course view for frontend consumption.
     with get_connection() as conn:
         with conn.cursor() as cur:
             if term:
@@ -68,6 +69,7 @@ def list_saved_classes(user_id: int, term: Optional[str] = None) -> List[Dict[st
 
 
 def add_saved_class(user_id: int, section_id: int, term: str) -> Dict[str, Any]:
+    # Ensures the term schedule exists, then idempotently inserts schedule_items row.
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
@@ -85,6 +87,7 @@ def add_saved_class(user_id: int, section_id: int, term: str) -> Dict[str, Any]:
             if existing_schedule:
                 schedule_id = existing_schedule[0]
             else:
+                # Create term schedule on first save for this user/term pair.
                 cur.execute(
                     """
                     INSERT INTO schedules (user_id, term)
@@ -108,6 +111,7 @@ def add_saved_class(user_id: int, section_id: int, term: str) -> Dict[str, Any]:
             if inserted:
                 schedule_item_id = inserted[0]
             else:
+                # If duplicate insert was ignored, fetch the existing record.
                 cur.execute(
                     """
                     SELECT id
@@ -156,6 +160,7 @@ def add_saved_class(user_id: int, section_id: int, term: str) -> Dict[str, Any]:
 
 
 def remove_saved_class(user_id: int, section_id: int, term: Optional[str] = None) -> int:
+    # Removes a specific section from one term or all terms for the user.
     with get_connection() as conn:
         with conn.cursor() as cur:
             if term:
@@ -189,6 +194,7 @@ def remove_saved_class(user_id: int, section_id: int, term: Optional[str] = None
 
 
 def reset_saved_classes(user_id: int, term: Optional[str] = None) -> int:
+    # Bulk clear helper used by the demo "reset" action.
     with get_connection() as conn:
         with conn.cursor() as cur:
             if term:
@@ -220,6 +226,7 @@ def reset_saved_classes(user_id: int, term: Optional[str] = None) -> int:
 
 
 def _to_demo_status(section_status: Optional[str]) -> str:
+    # Normalizes DB section status values into UI-friendly labels.
     if not section_status:
         return "Planned"
     normalized = section_status.strip().lower()

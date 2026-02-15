@@ -2,9 +2,11 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List
 
+# File-backed fallback storage for UC4 demos without DB dependencies.
 DATA_DIR = Path(__file__).resolve().parents[1] / "Backend" / "python" / "demo_data"
 DATA_FILE = DATA_DIR / "saved_classes.json"
 
+# Default dataset seeded for first-time demo users.
 DEFAULT_COURSES = [
     {
         "id": "demo-1",
@@ -34,6 +36,7 @@ DEFAULT_COURSES = [
 
 
 def list_saved_classes(user_id: int) -> List[Dict[str, Any]]:
+    # Creates per-user starter data on first access.
     all_data = _load_all()
     user_key = str(user_id)
     if user_key not in all_data:
@@ -43,6 +46,7 @@ def list_saved_classes(user_id: int) -> List[Dict[str, Any]]:
 
 
 def upsert_saved_class(user_id: int, course: Dict[str, Any]) -> Dict[str, Any]:
+    # Replaces matching id entries; appends if course is new.
     all_data = _load_all()
     user_key = str(user_id)
     existing = all_data.get(user_key, DEFAULT_COURSES.copy())
@@ -63,6 +67,7 @@ def upsert_saved_class(user_id: int, course: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def remove_saved_class(user_id: int, course_id: str) -> int:
+    # Returns how many items were removed so callers can confirm behavior.
     all_data = _load_all()
     user_key = str(user_id)
     existing = all_data.get(user_key, [])
@@ -73,6 +78,7 @@ def remove_saved_class(user_id: int, course_id: str) -> int:
 
 
 def reset_saved_classes(user_id: int) -> None:
+    # Resets only this user's list, preserving other demo users.
     all_data = _load_all()
     all_data[str(user_id)] = DEFAULT_COURSES.copy()
     _save_all(all_data)
@@ -88,5 +94,6 @@ def _load_all() -> Dict[str, List[Dict[str, Any]]]:
 
 
 def _save_all(data: Dict[str, List[Dict[str, Any]]]) -> None:
+    # Persist JSON in a predictable path ignored by git.
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     DATA_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
