@@ -1,42 +1,43 @@
 import os
-from dotenv import load_dotenv
-import psycopg
 from contextlib import contextmanager
+from pathlib import Path
+
+import psycopg
+from dotenv import load_dotenv
 
 load_dotenv()
+load_dotenv(Path(__file__).resolve().parents[1] / "Backend" / "python" / ".env")
+
 
 @contextmanager
-# Function to establish database connection
 def get_connection():
     url = os.getenv("DATABASE_URL")
     if not url:
-        raise RuntimeError("DATABASE_URL not set. Copy .env.example to backend/python/.env and edit.")
-    
-    conn = psycopg.connect(url)
+        raise RuntimeError(
+            "DATABASE_URL is not set. Create a .env file (repo root or Backend/python) with DATABASE_URL."
+        )
 
+    conn = psycopg.connect(url)
     try:
         yield conn
     finally:
-        conn.close
- 
+        conn.close()
 
-    return psycopg.connect(url)
 
-# Function to fetch course listings
 def fetch_courses():
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute("SELECT * FROM v_course_listings;")
             return cur.fetchall()
 
-# Function to fetch schedule details
+
 def fetch_schedule_details(user_id):
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute("SELECT * FROM v_schedule_details WHERE user_id = %s;", (user_id,))
             return cur.fetchall()
 
-# Function to fetch course reviews
+
 def fetch_reviews(course_id=None):
     with get_connection() as conn:
         with conn.cursor() as cur:
@@ -46,7 +47,7 @@ def fetch_reviews(course_id=None):
                 cur.execute("SELECT * FROM v_course_ratings;")
             return cur.fetchall()
 
-# Function to insert a new review
+
 def insert_review(user_id, course_id, rating, comment):
     with get_connection() as conn:
         with conn.cursor() as cur:
@@ -55,6 +56,6 @@ def insert_review(user_id, course_id, rating, comment):
                 INSERT INTO reviews (user_id, course_id, rating, comment)
                 VALUES (%s, %s, %s, %s)
                 """,
-                (user_id, course_id, rating, comment)
+                (user_id, course_id, rating, comment),
             )
             conn.commit()

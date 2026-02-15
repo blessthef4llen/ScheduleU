@@ -12,8 +12,6 @@ type SavedCourse = {
 };
 
 const storageKey = "scheduleu-uc4-saved-courses";
-const backendBaseUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://127.0.0.1:8000";
-const demoUserId = 1;
 
 const starterSavedCourses: SavedCourse[] = [
   {
@@ -107,42 +105,6 @@ export default function Home() {
       ? "Loaded saved classes from browser storage."
       : "Demo data loaded.";
   });
-  const [backendStatus, setBackendStatus] = useState("Checking backend...");
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function syncFromBackendOnLoad() {
-      try {
-        const healthResponse = await fetch(`${backendBaseUrl}/health`);
-        if (!healthResponse.ok) throw new Error("backend health check failed");
-
-        const classesResponse = await fetch(
-          `${backendBaseUrl}/uc4/demo/saved-classes?user_id=${demoUserId}`,
-        );
-        if (!classesResponse.ok) throw new Error("backend classes fetch failed");
-
-        const data = (await classesResponse.json()) as { courses?: SavedCourse[] };
-        if (cancelled) return;
-
-        setBackendStatus("Connected (demo store)");
-        if (Array.isArray(data.courses) && data.courses.length > 0) {
-          setSavedCourses(data.courses);
-          setStatusMessage("Loaded saved classes from backend demo store.");
-        } else {
-          setStatusMessage("Backend connected. Using local/demo data.");
-        }
-      } catch {
-        if (cancelled) return;
-        setBackendStatus("Offline (local storage fallback)");
-      }
-    }
-
-    void syncFromBackendOnLoad();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   useEffect(() => {
     localStorage.setItem(storageKey, JSON.stringify(savedCourses));
@@ -153,50 +115,6 @@ export default function Home() {
     [savedCourses],
   );
 
-  async function pushCourseToBackend(course: SavedCourse) {
-    try {
-      const response = await fetch(`${backendBaseUrl}/uc4/demo/saved-classes`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ user_id: demoUserId, course }),
-      });
-      if (!response.ok) throw new Error("failed to push course");
-      setBackendStatus("Connected (demo store)");
-    } catch {
-      setBackendStatus("Offline (local storage fallback)");
-    }
-  }
-
-  async function removeCourseFromBackend(courseId: string) {
-    try {
-      const response = await fetch(
-        `${backendBaseUrl}/uc4/demo/saved-classes/${encodeURIComponent(courseId)}?user_id=${demoUserId}`,
-        {
-          method: "DELETE",
-        },
-      );
-      if (!response.ok) throw new Error("failed to remove course");
-      setBackendStatus("Connected (demo store)");
-    } catch {
-      setBackendStatus("Offline (local storage fallback)");
-    }
-  }
-
-  async function resetBackendDemoStore() {
-    try {
-      const response = await fetch(
-        `${backendBaseUrl}/uc4/demo/saved-classes/reset?user_id=${demoUserId}`,
-        {
-          method: "POST",
-        },
-      );
-      if (!response.ok) throw new Error("failed to reset backend demo");
-      setBackendStatus("Connected (demo store)");
-    } catch {
-      setBackendStatus("Offline (local storage fallback)");
-    }
-  }
-
   function handleQuickSave(course: SavedCourse) {
     if (savedCourses.some((saved) => saved.code === course.code)) {
       setStatusMessage(`${course.code} is already saved.`);
@@ -205,20 +123,17 @@ export default function Home() {
 
     setSavedCourses((prev) => [...prev, course]);
     setStatusMessage(`${course.code} saved to your class plan.`);
-    void pushCourseToBackend(course);
   }
 
   function handleRemoveCourse(id: string) {
     setSavedCourses((prev) => prev.filter((course) => course.id !== id));
     setStatusMessage("Course removed from saved classes.");
-    void removeCourseFromBackend(id);
   }
 
   function handleResetDemo() {
     localStorage.removeItem(storageKey);
     setSavedCourses(starterSavedCourses);
     setStatusMessage("Demo reset to starter saved classes.");
-    void resetBackendDemoStore();
   }
 
   return (
@@ -231,8 +146,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold sm:text-4xl">Saved Classes + Semester History</h1>
           <p className="mt-2 max-w-3xl text-slate-300">
             This screen demonstrates saving course data without a visible course-builder flow by
-            simulating quick-save actions and persisting results in browser storage + backend demo
-            store.
+            simulating quick-save actions and persisting results in browser storage.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <div className="rounded-lg bg-slate-800 px-3 py-2">
@@ -240,9 +154,6 @@ export default function Home() {
             </div>
             <div className="rounded-lg bg-slate-800 px-3 py-2">
               <span className="text-slate-400">Planned units:</span> {totalUnits}
-            </div>
-            <div className="rounded-lg bg-slate-800 px-3 py-2">
-              <span className="text-slate-400">Backend:</span> {backendStatus}
             </div>
             <button
               onClick={handleResetDemo}

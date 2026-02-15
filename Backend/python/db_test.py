@@ -1,5 +1,4 @@
 from app.db import get_connection
-import os
 
 
 def main():
@@ -23,8 +22,8 @@ def main():
                 LIMIT 5;
                 """
             )
-            rows = cur.fetchall():
-            
+            rows = cur.fetchall()
+
             for row in rows:
                 print(row)
 
