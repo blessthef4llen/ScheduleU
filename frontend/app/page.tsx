@@ -222,36 +222,36 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
+    <main className="min-h-screen bg-slate-100 text-slate-900">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <header className="mb-8 rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-emerald-400">
+        <header className="mb-8 rounded-2xl border border-cyan-200 bg-white p-6 shadow-sm">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-cyan-700">
             Use Case 4 Demo
           </p>
           <h1 className="text-3xl font-bold sm:text-4xl">Saved Classes + Semester History</h1>
-          <p className="mt-2 max-w-3xl text-slate-300">
+          <p className="mt-2 max-w-3xl text-slate-600">
             This screen demonstrates saving course data without a visible course-builder flow by
             simulating quick-save actions and persisting results in browser storage + backend demo
             store.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
-            <div className="rounded-lg bg-slate-800 px-3 py-2">
-              <span className="text-slate-400">Saved classes:</span> {savedCourses.length}
+            <div className="rounded-lg border border-cyan-200 bg-cyan-50 px-3 py-2">
+              <span className="text-cyan-700">Saved classes:</span> {savedCourses.length}
             </div>
-            <div className="rounded-lg bg-slate-800 px-3 py-2">
-              <span className="text-slate-400">Planned units:</span> {totalUnits}
+            <div className="rounded-lg border border-cyan-200 bg-cyan-50 px-3 py-2">
+              <span className="text-cyan-700">Planned units:</span> {totalUnits}
             </div>
-            <div className="rounded-lg bg-slate-800 px-3 py-2">
-              <span className="text-slate-400">Backend:</span> {backendStatus}
+            <div className="rounded-lg border border-cyan-200 bg-cyan-50 px-3 py-2">
+              <span className="text-cyan-700">Backend:</span> {backendStatus}
             </div>
             <button
               onClick={handleResetDemo}
-              className="rounded-lg border border-slate-700 px-3 py-2 text-slate-200 transition hover:border-slate-500 hover:bg-slate-800"
+              className="rounded-lg border border-sky-300 bg-gradient-to-r from-cyan-400 to-blue-600 px-3 py-2 font-semibold text-white transition hover:from-cyan-500 hover:to-blue-700"
             >
               Reset demo data
             </button>
           </div>
-          <p className="mt-4 rounded-lg bg-slate-800/80 px-3 py-2 text-sm text-emerald-300">
+          <p className="mt-4 rounded-lg border border-cyan-200 bg-cyan-50 px-3 py-2 text-sm text-cyan-800">
             {statusMessage}
           </p>
         </header>
@@ -262,24 +262,24 @@ export default function Home() {
             {savedCourses.map((course) => (
               <article
                 key={course.id}
-                className="rounded-xl border border-slate-800 bg-slate-900 p-4 shadow-lg shadow-slate-950/50"
+                className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm"
               >
                 <div className="mb-3 flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-sm text-slate-400">{course.term}</p>
+                    <p className="text-sm text-slate-500">{course.term}</p>
                     <h3 className="text-lg font-semibold">
                       {course.code}: {course.title}
                     </h3>
                   </div>
-                  <span className="rounded-md bg-emerald-500/20 px-2 py-1 text-xs font-semibold text-emerald-300">
+                  <span className="rounded-md bg-cyan-100 px-2 py-1 text-xs font-semibold text-cyan-700">
                     {course.status}
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-sm text-slate-300">
+                <div className="flex items-center justify-between text-sm text-slate-700">
                   <span>{course.units} units</span>
                   <button
                     onClick={() => handleRemoveCourse(course.id)}
-                    className="rounded-md border border-rose-500/30 px-2 py-1 text-rose-300 transition hover:bg-rose-500/10"
+                    className="rounded-md border border-rose-300 px-2 py-1 text-rose-700 transition hover:bg-rose-50"
                   >
                     Remove
                   </button>
@@ -293,15 +293,15 @@ export default function Home() {
           <h2 className="mb-4 text-2xl font-semibold">Simulated Quick Save</h2>
           <div className="grid gap-4 md:grid-cols-3">
             {quickAddCourses.map((course) => (
-              <div key={course.id} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
-                <p className="text-sm text-slate-400">{course.term}</p>
+              <div key={course.id} className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm">
+                <p className="text-sm text-slate-500">{course.term}</p>
                 <h3 className="mt-1 font-semibold">
                   {course.code}: {course.title}
                 </h3>
-                <p className="mt-1 text-sm text-slate-300">{course.units} units</p>
+                <p className="mt-1 text-sm text-slate-700">{course.units} units</p>
                 <button
                   onClick={() => handleQuickSave(course)}
-                  className="mt-3 w-full rounded-lg bg-emerald-500 px-3 py-2 font-semibold text-slate-900 transition hover:bg-emerald-400"
+                  className="mt-3 w-full rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 px-3 py-2 font-semibold text-white transition hover:from-cyan-500 hover:to-blue-700"
                 >
                   Save Course
                 </button>
@@ -314,14 +314,14 @@ export default function Home() {
           <h2 className="mb-4 text-2xl font-semibold">Dummy Semester History</h2>
           <div className="grid gap-4 md:grid-cols-3">
             {semesterHistory.map((semester) => (
-              <article key={semester.term} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+              <article key={semester.term} className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm">
                 <div className="mb-2 flex items-center justify-between">
                   <h3 className="font-semibold">{semester.term}</h3>
-                  <span className="text-sm text-slate-300">GPA: {semester.gpa}</span>
+                  <span className="text-sm text-slate-700">GPA: {semester.gpa}</span>
                 </div>
-                <ul className="space-y-2 text-sm text-slate-300">
+                <ul className="space-y-2 text-sm text-slate-700">
                   {semester.courses.map((course) => (
-                    <li key={course} className="rounded-md bg-slate-800 px-2 py-1">
+                    <li key={course} className="rounded-md border border-cyan-100 bg-cyan-50 px-2 py-1">
                       {course}
                     </li>
                   ))}
