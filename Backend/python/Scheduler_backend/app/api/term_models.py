@@ -2,6 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 
 
+# One blocked time window provided by the user.
 class BlockedTime(BaseModel):
     days: list[str] = Field(
         default_factory=list, 
@@ -18,6 +19,8 @@ class BlockedTime(BaseModel):
         description="End time of the block, e.g. '2:00PM'",
         examples=["2:00PM"]
     )
+
+# User constraints for building a single-term schedule.
 class TermConstraints(BaseModel):
     earliest_time: Optional[str] = Field(
         default=None, 
@@ -48,11 +51,13 @@ class TermConstraints(BaseModel):
         description="Future feature minimun instructor rating [0-5], section below are filtered out if below minimum"
     )
 
+# Request payload for term schedule generation.
 class TermScheduleRequest(BaseModel):
     term: str
     requested_courses: list[str]
     constraints: TermConstraints = Field(default_factory=TermConstraints)
 
+# One meeting row in the selected schedule output.
 class SelectedMeeting(BaseModel):
     type: Optional[str] = None
     day: str
@@ -62,11 +67,13 @@ class SelectedMeeting(BaseModel):
     instructor: Optional[str] = None
     comments: Optional[str] = None
 
+# One selected section with all of its meetings.
 class SelectedSection(BaseModel):
     course: str
     section_id: str
     meetings: list[SelectedMeeting]
 
+# Response payload for term schedule generation.
 class TermScheduleResponse(BaseModel):
     term: str
     selected_sections: list[SelectedSection] = Field(default_factory=list)

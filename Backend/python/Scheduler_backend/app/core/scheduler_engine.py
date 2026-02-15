@@ -4,6 +4,8 @@ from typing import Set, List, Dict, Optional
 from .deps_model import DependencyModel
 from .scheduling_models import TermSchedule, SchedulePlan
 
+
+# Return course units, with a default when units are missing.
 def units_of(model: DependencyModel, course: str) -> float:
     meta = model.courses.get(course)
     if meta and meta.units is not None:
@@ -21,6 +23,7 @@ def generate_plan(
     include_coreqs: bool = True,
     strict_coreq_same_term: bool = False,
 ) -> SchedulePlan:
+    # Build a term-by-term plan that respects prereqs, coreqs, and limits.
     warnings: List[str] = []
 
     # Expand targets to include transitive prereqs/coreqs if desired

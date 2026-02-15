@@ -2,6 +2,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional, List, Set
 
+
+# One meeting instance for a section.
 @dataclass(frozen=True)
 class MeetingBlock:
     days: Set[int]              # 0=Mon ... 6=Sun
@@ -12,6 +14,8 @@ class MeetingBlock:
     instructor: Optional[str] = None
     comments: Optional[str] = None
 
+
+# A schedulable section option for one course.
 @dataclass(frozen=True)
 class SectionOption:
     course: str

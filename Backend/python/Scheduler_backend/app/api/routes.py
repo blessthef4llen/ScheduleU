@@ -1,3 +1,4 @@
+# API route dependencies.
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
@@ -19,6 +20,7 @@ from app.core.section_scheduler import parse_days, parse_time_range, conflicts
 
 router = APIRouter()
 
+# Cached data loaded once at startup.
 DEP_MODEL = None
 MERGE_SUMMARY = None
 
@@ -67,6 +69,7 @@ def schedule_generate(req: GenerateRequest):
             raise HTTPException(status_code=400, detail={"unknown_courses": unknown})
 
     terms = req.terms if req.terms else ["Fall", "Spring"]
+    # If only seasonal labels are provided (e.g., Fall/Spring), expand them to a fixed planning horizon.
     if len(terms) <= 4 and all(("20" not in t) for t in terms):
         horizon = 12
         expanded = []
@@ -86,7 +89,7 @@ def schedule_generate(req: GenerateRequest):
         strict_coreq_same_term=req.strict_coreq_same_term,
     )
 
-    # Serialize response (your GenerateResponse expects dict-like or pydantic models)
+    # Convert planner output to API response format.
     plan_out = []
     for term_sched in plan.terms:
         courses_out = []
@@ -123,14 +126,15 @@ def term_schedule(req: TermScheduleRequest):
     # Load section options from Supabase
     options_by_course = load_section_options_for_courses(requested)
 
+    # Convert one time string to minutes.
     def _parse_single_time(t: str) -> int:
-    # accepts "09:00AM-09:01AM" trick to reuse parser
+        # Reuse the range parser by passing the same start/end time.
         rng = parse_time_range(f"{t}-{t}")
         if rng is None:
             raise ValueError(f"Bad time: {t}")
         return rng[0]
 
-    # Build blocked MeetingBlocks from request
+    # Build blocked time ranges from the request.
     blocked_blocks = []
     for b in req.constraints.blocked_times:
         days = set()
@@ -152,7 +156,7 @@ def term_schedule(req: TermScheduleRequest):
     for d in req.constraints.days_off:
         days_off_set |= parse_days(d)
 
-    # Filter options
+    # Apply user time/day filters before picking sections.
     for course, opts in list(options_by_course.items()):
         kept = []
         for sec in opts:
@@ -187,7 +191,7 @@ def term_schedule(req: TermScheduleRequest):
 
         options_by_course[course] = kept
 
-    # (MVP) No hard filtering yet on earliest/latest/days_off — we can add it next.
+    # Pick a conflict-free set from the remaining sections.
     best, failures = pick_sections(
         options_by_course,
         buffer_min=req.constraints.buffer_minutes,
@@ -200,12 +204,12 @@ def term_schedule(req: TermScheduleRequest):
             warnings.append(f"Section availability issues: {failures}")
         return TermScheduleResponse(term=req.term, unscheduled_courses=unscheduled, warnings=warnings)
 
-    # Build response
+    # Convert selected sections to API response format.
     selected_sections = []
     for sec in best:
         meetings = []
         for m in sec.meetings:
-            # convert day ints back to letters for readability
+            # Convert internal day numbers back to short labels.
             day_map_rev = {0: "M", 1: "T", 2: "W", 3: "Th", 4: "F", 5: "Sa", 6: "Su"}
             for d in sorted(m.days):
                 meetings.append({
@@ -233,4 +237,3 @@ def term_schedule(req: TermScheduleRequest):
         unscheduled_courses=unscheduled,
         warnings=[] if not unscheduled else ["Some requested courses could not be scheduled conflict-free."],
     )
-

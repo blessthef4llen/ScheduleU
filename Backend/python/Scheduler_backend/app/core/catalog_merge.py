@@ -8,6 +8,7 @@ from .deps_model import DependencyModel, CourseMeta
 from .catalog_loader import CatalogCourse
 
 
+# Summary of how catalog data overlaps dependency data.
 @dataclass(frozen=True)
 class MergeSummary:
     offered_count: int

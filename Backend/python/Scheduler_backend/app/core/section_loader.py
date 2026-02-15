@@ -10,6 +10,7 @@ from app.core.section_models import SectionOption, MeetingBlock
 from app.core.section_scheduler import parse_days, parse_time_range
 
 
+# Read an env var and trim whitespace.
 def _get_env(name: str, default: str) -> str:
     return os.getenv(name, default).strip()
 
@@ -39,9 +40,7 @@ def load_section_options_for_courses(
     if not norm_courses:
         return {}
 
-    # Fetch rows in pages (and filter by requested course list)
-    # Use .in_ on the raw course column (assumes values match what user passes or can be normalized similarly)
-    # We'll normalize after reading.
+    # Fetch rows in pages and normalize/filter in Python.
     select_cols = [course_col, section_col, type_col, day_col, time_col, loc_col, inst_col, comm_col]
     select_str = ",".join(select_cols)
 
@@ -62,9 +61,6 @@ def load_section_options_for_courses(
         if len(rows) < page_size:
             break
         start += page_size
-
-    # If the raw in_ filter missed due to formatting differences, fallback: fetch more broadly and filter in Python
-    # (Optional) — comment this in if needed later.
 
     # Group meeting rows into (course, section_id)
     grouped: Dict[Tuple[str, str], List[MeetingBlock]] = defaultdict(list)

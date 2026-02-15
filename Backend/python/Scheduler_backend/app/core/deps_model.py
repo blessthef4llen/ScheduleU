@@ -3,12 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, Set, List, Tuple, Optional
 
+
+# Basic course metadata used by the scheduler.
 @dataclass(frozen=True)
 class CourseMeta:
     code: str                 # normalized: "A/ST600", "CECS274"
     title: Optional[str] = None
     units: Optional[float] = None
 
+
+# In-memory prerequisite/corequisite graph.
 @dataclass
 class DependencyModel:
     # canonical course universe (ideally from full catalog; can start from deps-only)
@@ -18,6 +22,7 @@ class DependencyModel:
     prereqs: Dict[str, Set[str]]   # course -> prereq courses
     coreqs: Dict[str, Set[str]]    # course -> coreq courses
 
+    # Ensure a course exists in the model before adding edges.
     def ensure_course(self, code: str) -> None:
         if code not in self.courses:
             self.courses[code] = CourseMeta(code=code)

@@ -4,6 +4,7 @@ import os
 from supabase import create_client, Client
 
 
+# Lazily initialized shared Supabase client.
 _client: Client | None = None
 
 

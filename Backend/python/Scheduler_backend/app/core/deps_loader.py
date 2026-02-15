@@ -8,6 +8,7 @@ from .normalize import norm_course_code, split_codes
 from .supabase_client import get_supabase
 
 
+# Build DependencyModel from Supabase using configured table shape.
 def load_dependency_model_from_supabase() -> DependencyModel:
     """
     Loads prerequisites/corequisites from Supabase and returns DependencyModel.
@@ -55,6 +56,7 @@ def load_dependency_model_from_supabase() -> DependencyModel:
     coreqs: Dict[str, Set[str]] = {}
     model = DependencyModel(courses=courses, prereqs=prereqs, coreqs=coreqs)
 
+    # One row per dependency edge.
     if mode == "edges":
         select_cols = [course_col, required_col, type_col]
         if title_col:
@@ -92,6 +94,7 @@ def load_dependency_model_from_supabase() -> DependencyModel:
 
         return model
 
+    # One row per course with pipe-delimited prereq/coreq lists.
     if mode == "lists":
         select_cols = [course_col, prereq_col, coreq_col]
         if title_col:
@@ -124,6 +127,7 @@ def load_dependency_model_from_supabase() -> DependencyModel:
 
         return model
     
+    # One row per course with prereq/coreq columns split into lists.
     if mode == "edges_split":
         # Columns
         prereq_col = os.getenv("DEPS_PREREQ_COL", "prereq_code").strip()

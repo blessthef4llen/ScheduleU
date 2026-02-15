@@ -1,6 +1,9 @@
 from pydantic import BaseModel, Field
 from typing import Literal
 
+
+# Request payload for the schedule-generation endpoint.
+# This model captures user constraints and planner behavior toggles.
 class GenerateRequest(BaseModel):
     targets: list[str] = Field(..., description="Courses you want to schedule (e.g. major requirements).")
     completed: list[str] = Field(default_factory=list, description="Already completed courses")
@@ -12,18 +15,24 @@ class GenerateRequest(BaseModel):
     strict_coreq_same_term: bool = Field(default=False, description="If true, coreq must be in same term; else same or earlier.")
     unknown_course_policy: Literal["ignore", "error"] = "ignore"
 
+
+# A single course entry in the generated plan.
 class ScheduledCourse(BaseModel):
     course: str
     title: str | None = None
     units: float | None = None
 
+
+# One academic term in the generated schedule.
 class TermPlan(BaseModel):
     term: str
     courses: list[ScheduledCourse]
     total_units: float | None = None
 
+
+# Response payload returned by the schedule-generation endpoint.
+# Includes the plan plus anything the solver could not place.
 class GenerateResponse(BaseModel):
     plan: list[TermPlan]
     unscheduled: list[str] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
-

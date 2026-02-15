@@ -8,6 +8,7 @@ from .normalize import norm_course_code
 from .supabase_client import get_supabase
 
 
+# Catalog row used by scheduling metadata merge.
 @dataclass(frozen=True)
 class CatalogCourse:
     code: str
@@ -15,6 +16,7 @@ class CatalogCourse:
     units: Optional[float] = None
 
 
+# Parse unit values; return None for unsupported formats.
 def _parse_units(units_raw: Any) -> Optional[float]:
     if units_raw is None:
         return None
@@ -97,4 +99,3 @@ def load_catalog_from_supabase() -> Dict[str, CatalogCourse]:
         start += page_size
 
     return catalog
-

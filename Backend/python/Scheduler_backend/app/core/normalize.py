@@ -1,22 +1,11 @@
-"""
-Docstring for Backend.python.Scheduler_backend.app.core.normalize
-
-Normalizes the different course codes into a constant key
-"""
+"""Helpers for normalizing course code strings."""
 
 import re
 
-def norm_course_code(s: str) -> str:
-    """
-    Docstring for norm_course_code
-    
-    :param s: Description
-    :type s: str
-    :return: Description
-    :rtype: str
 
-    takes different course code formats and returns them without spaces
-    """
+# Match department + number + optional suffix in common course formats.
+def norm_course_code(s: str) -> str:
+    """Return a normalized course code key."""
 
     COURSE_TOKEN_RE = re.compile(r"\b([A-Z][A-Z/]{1,10})\s*([0-9]{2,3})([A-Z]?)\b")
     
@@ -30,6 +19,8 @@ def norm_course_code(s: str) -> str:
     dept, num, suff = m.group(1), m.group(2), m.group(3)
     return f"{dept}{num}{suff}"
 
+
+# Split pipe-delimited values and normalize each code.
 def split_codes(cell: str) -> list[str]:
     if not cell:
         return []

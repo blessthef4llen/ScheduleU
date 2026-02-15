@@ -27,6 +27,8 @@ DAY_MAP = {
     "SUN": 6,
 }
 
+
+# Parse many day-string formats into internal day indexes.
 def parse_days(day_str: str) -> Set[int]:
     """
     Supports formats like:
@@ -82,6 +84,8 @@ TIME_RE = re.compile(
     re.IGNORECASE
 )
 
+
+# Convert parsed hour/minute to minutes from midnight.
 def _to_minutes(h: int, m: int, ampm: Optional[str]) -> int:
     ampm_u = (ampm or "").upper()
     if ampm_u in ("AM", "PM"):
@@ -189,6 +193,7 @@ def pick_sections(
     Returns (best_schedule, failures)
     failures: course -> reason
     """
+    # Try courses with fewer options first to prune faster.
     courses = list(options_by_course.keys())
     courses.sort(key=lambda c: len(options_by_course.get(c, [])))
 
