@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-// Frontend shape used by both local state and backend demo-store responses.
 type SavedCourse = {
   id: string;
   code: string;
@@ -12,12 +11,19 @@ type SavedCourse = {
   status: "Planned" | "In Progress" | "Completed";
 };
 
-const storageKey = "scheduleu-uc4-saved-courses";
-// Backend defaults to local FastAPI instance; override with NEXT_PUBLIC_BACKEND_URL.
-const backendBaseUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://127.0.0.1:8000";
-const demoUserId = 1;
+type SemesterRecord = {
+  id: string;
+  term: string;
+  gpa: string;
+  notes: string;
+  courses: string[];
+};
 
-// Starter data shown when there is no local or backend data yet.
+const savedCoursesKey = "scheduleu-uc4-saved-courses";
+const semesterHistoryKey = "scheduleu-semester-history";
+const backendBaseUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://127.0.0.1:8000";
+const apiUserId = 1;
+
 const starterSavedCourses: SavedCourse[] = [
   {
     id: "1",
@@ -45,26 +51,31 @@ const starterSavedCourses: SavedCourse[] = [
   },
 ];
 
-const semesterHistory = [
+const starterSemesters: SemesterRecord[] = [
   {
+    id: "sem-1",
     term: "Fall 2025",
     gpa: "3.72",
+    notes: "Strong first term with solid CS/math base.",
     courses: ["CECS 174 - Intro Programming", "MATH 122 - Calculus I", "ENGL 100"],
   },
   {
+    id: "sem-2",
     term: "Winter 2026",
     gpa: "3.80",
+    notes: "Focused short-term session.",
     courses: ["COMM 110 - Oral Communication"],
   },
   {
+    id: "sem-3",
     term: "Spring 2026",
     gpa: "In Progress",
+    notes: "Continuing core major requirements.",
     courses: ["CECS 225 - Digital Logic", "MATH 123 - Calculus II", "PHYS 151"],
   },
 ];
 
-// Simulated "save from builder" buttons for demo flow.
-const quickAddCourses: SavedCourse[] = [
+const courseSuggestions: SavedCourse[] = [
   {
     id: "4",
     code: "CECS 277",
@@ -91,11 +102,16 @@ const quickAddCourses: SavedCourse[] = [
   },
 ];
 
+type ActiveView = "planner" | "semesters";
+
+function toCourseLabel(course: SavedCourse): string {
+  return `${course.code}: ${course.title}`;
+}
+
 export default function Home() {
-  // Initialize from browser storage for fast render and offline resilience.
   const [savedCourses, setSavedCourses] = useState<SavedCourse[]>(() => {
     if (typeof window === "undefined") return starterSavedCourses;
-    const stored = localStorage.getItem(storageKey);
+    const stored = localStorage.getItem(savedCoursesKey);
     if (!stored) return starterSavedCourses;
 
     try {
@@ -106,143 +122,264 @@ export default function Home() {
     }
   });
 
-  const [statusMessage, setStatusMessage] = useState(() => {
-    if (typeof window === "undefined") return "Demo data loaded.";
-    return localStorage.getItem(storageKey)
-      ? "Loaded saved classes from browser storage."
-      : "Demo data loaded.";
+  const [semesters, setSemesters] = useState<SemesterRecord[]>(() => {
+    if (typeof window === "undefined") return starterSemesters;
+    const stored = localStorage.getItem(semesterHistoryKey);
+    if (!stored) return starterSemesters;
+
+    try {
+      const parsed = JSON.parse(stored) as SemesterRecord[];
+      return Array.isArray(parsed) && parsed.length > 0 ? parsed : starterSemesters;
+    } catch {
+      return starterSemesters;
+    }
   });
-  // Shows current backend connectivity state for demo transparency.
+
+  const [statusMessage, setStatusMessage] = useState(() => {
+    if (typeof window === "undefined") return "Planner ready.";
+    return localStorage.getItem(savedCoursesKey)
+      ? "Loaded saved classes from local storage."
+      : "Planner ready.";
+  });
   const [backendStatus, setBackendStatus] = useState("Checking backend...");
+  const [activeView, setActiveView] = useState<ActiveView>("planner");
+  const [selectedTermByCourse, setSelectedTermByCourse] = useState<Record<string, string>>({});
+  const [selectedSavedBySemester, setSelectedSavedBySemester] = useState<Record<string, string>>({});
+  const [customCourseBySemester, setCustomCourseBySemester] = useState<Record<string, string>>({});
 
   useEffect(() => {
     let cancelled = false;
 
-    // On first load, prefer backend demo-store data if service is up.
-    async function syncFromBackendOnLoad() {
+    async function syncSavedClassesFromServer() {
       try {
         const healthResponse = await fetch(`${backendBaseUrl}/health`);
-        if (!healthResponse.ok) throw new Error("backend health check failed");
+        if (!healthResponse.ok) throw new Error("health check failed");
 
         const classesResponse = await fetch(
-          `${backendBaseUrl}/uc4/demo/saved-classes?user_id=${demoUserId}`,
+          `${backendBaseUrl}/uc4/demo/saved-classes?user_id=${apiUserId}`,
         );
-        if (!classesResponse.ok) throw new Error("backend classes fetch failed");
+        if (!classesResponse.ok) throw new Error("saved classes fetch failed");
 
         const data = (await classesResponse.json()) as { courses?: SavedCourse[] };
         if (cancelled) return;
 
-        setBackendStatus("Connected (demo store)");
+        setBackendStatus("Connected");
         if (Array.isArray(data.courses) && data.courses.length > 0) {
           setSavedCourses(data.courses);
-          setStatusMessage("Loaded saved classes from backend demo store.");
+          setStatusMessage("Loaded saved classes from server.");
         } else {
-          setStatusMessage("Backend connected. Using local/demo data.");
+          setStatusMessage("Connected to backend.");
         }
       } catch {
         if (cancelled) return;
-        // Keep working entirely client-side when API is down.
-        setBackendStatus("Offline (local storage fallback)");
+        setBackendStatus("Offline (local fallback)");
       }
     }
 
-    void syncFromBackendOnLoad();
+    void syncSavedClassesFromServer();
     return () => {
       cancelled = true;
     };
   }, []);
 
   useEffect(() => {
-    // Local persistence keeps demo state stable across page refreshes.
-    localStorage.setItem(storageKey, JSON.stringify(savedCourses));
+    localStorage.setItem(savedCoursesKey, JSON.stringify(savedCourses));
   }, [savedCourses]);
 
-  // Lightweight summary metric shown in header cards.
+  useEffect(() => {
+    localStorage.setItem(semesterHistoryKey, JSON.stringify(semesters));
+  }, [semesters]);
+
   const totalUnits = useMemo(
     () => savedCourses.reduce((sum, course) => sum + course.units, 0),
     [savedCourses],
   );
+
+  const semesterTerms = useMemo(() => semesters.map((semester) => semester.term), [semesters]);
 
   async function pushCourseToBackend(course: SavedCourse) {
     try {
       const response = await fetch(`${backendBaseUrl}/uc4/demo/saved-classes`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ user_id: demoUserId, course }),
+        body: JSON.stringify({ user_id: apiUserId, course }),
       });
-      if (!response.ok) throw new Error("failed to push course");
-      setBackendStatus("Connected (demo store)");
+      if (!response.ok) throw new Error("push failed");
+      setBackendStatus("Connected");
     } catch {
-      setBackendStatus("Offline (local storage fallback)");
+      setBackendStatus("Offline (local fallback)");
     }
   }
 
   async function removeCourseFromBackend(courseId: string) {
     try {
       const response = await fetch(
-        `${backendBaseUrl}/uc4/demo/saved-classes/${encodeURIComponent(courseId)}?user_id=${demoUserId}`,
-        {
-          method: "DELETE",
-        },
+        `${backendBaseUrl}/uc4/demo/saved-classes/${encodeURIComponent(courseId)}?user_id=${apiUserId}`,
+        { method: "DELETE" },
       );
-      if (!response.ok) throw new Error("failed to remove course");
-      setBackendStatus("Connected (demo store)");
+      if (!response.ok) throw new Error("remove failed");
+      setBackendStatus("Connected");
     } catch {
-      setBackendStatus("Offline (local storage fallback)");
+      setBackendStatus("Offline (local fallback)");
     }
   }
 
-  async function resetBackendDemoStore() {
+  async function resetBackendStore() {
     try {
       const response = await fetch(
-        `${backendBaseUrl}/uc4/demo/saved-classes/reset?user_id=${demoUserId}`,
-        {
-          method: "POST",
-        },
+        `${backendBaseUrl}/uc4/demo/saved-classes/reset?user_id=${apiUserId}`,
+        { method: "POST" },
       );
-      if (!response.ok) throw new Error("failed to reset backend demo");
-      setBackendStatus("Connected (demo store)");
+      if (!response.ok) throw new Error("reset failed");
+      setBackendStatus("Connected");
     } catch {
-      setBackendStatus("Offline (local storage fallback)");
+      setBackendStatus("Offline (local fallback)");
     }
   }
 
-  function handleQuickSave(course: SavedCourse) {
+  function handleAddSavedCourse(course: SavedCourse) {
     if (savedCourses.some((saved) => saved.code === course.code)) {
-      setStatusMessage(`${course.code} is already saved.`);
+      setStatusMessage(`${course.code} is already in your saved classes.`);
       return;
     }
 
     setSavedCourses((prev) => [...prev, course]);
-    setStatusMessage(`${course.code} saved to your class plan.`);
+    setStatusMessage(`${course.code} added to saved classes.`);
     void pushCourseToBackend(course);
   }
 
-  function handleRemoveCourse(id: string) {
+  function handleRemoveSavedCourse(id: string) {
     setSavedCourses((prev) => prev.filter((course) => course.id !== id));
-    setStatusMessage("Course removed from saved classes.");
+    setStatusMessage("Saved class removed.");
     void removeCourseFromBackend(id);
   }
 
-  function handleResetDemo() {
-    localStorage.removeItem(storageKey);
+  function handleResetSavedClasses() {
+    localStorage.removeItem(savedCoursesKey);
     setSavedCourses(starterSavedCourses);
-    setStatusMessage("Demo reset to starter saved classes.");
-    void resetBackendDemoStore();
+    setStatusMessage("Saved classes reset.");
+    void resetBackendStore();
+  }
+
+  function handleTermSelection(courseId: string, term: string) {
+    setSelectedTermByCourse((prev) => ({ ...prev, [courseId]: term }));
+  }
+
+  function assignSavedCourseToSemester(course: SavedCourse) {
+    const targetTerm = selectedTermByCourse[course.id] ?? semesterTerms[0];
+    if (!targetTerm) {
+      setStatusMessage("Create a semester first before assigning classes.");
+      return;
+    }
+
+    const label = toCourseLabel(course);
+    setSemesters((prev) =>
+      prev.map((semester) =>
+        semester.term === targetTerm && !semester.courses.includes(label)
+          ? { ...semester, courses: [...semester.courses, label] }
+          : semester,
+      ),
+    );
+    setStatusMessage(`${label} added to ${targetTerm}.`);
+  }
+
+  function updateSemester(semesterId: string, updates: Partial<SemesterRecord>) {
+    setSemesters((prev) =>
+      prev.map((semester) => (semester.id === semesterId ? { ...semester, ...updates } : semester)),
+    );
+  }
+
+  function addSemester() {
+    const nextIndex = semesters.length + 1;
+    const newSemester: SemesterRecord = {
+      id: `sem-${Date.now()}`,
+      term: `New Semester ${nextIndex}`,
+      gpa: "",
+      notes: "",
+      courses: [],
+    };
+    setSemesters((prev) => [...prev, newSemester]);
+    setStatusMessage("New semester created.");
+  }
+
+  function removeSemester(semesterId: string) {
+    setSemesters((prev) => prev.filter((semester) => semester.id !== semesterId));
+    setSelectedSavedBySemester((prev) => {
+      const next = { ...prev };
+      delete next[semesterId];
+      return next;
+    });
+    setCustomCourseBySemester((prev) => {
+      const next = { ...prev };
+      delete next[semesterId];
+      return next;
+    });
+    setStatusMessage("Semester removed.");
+  }
+
+  function addSavedCourseToSemesterByMenu(semesterId: string) {
+    const selectedCourseId = selectedSavedBySemester[semesterId];
+    if (!selectedCourseId) {
+      setStatusMessage("Select a saved class first.");
+      return;
+    }
+
+    const selectedCourse = savedCourses.find((course) => course.id === selectedCourseId);
+    if (!selectedCourse) {
+      setStatusMessage("Selected class not found.");
+      return;
+    }
+
+    const label = toCourseLabel(selectedCourse);
+    setSemesters((prev) =>
+      prev.map((semester) =>
+        semester.id === semesterId && !semester.courses.includes(label)
+          ? { ...semester, courses: [...semester.courses, label] }
+          : semester,
+      ),
+    );
+    setStatusMessage(`${label} assigned to semester.`);
+  }
+
+  function addCustomCourseToSemester(semesterId: string) {
+    const value = (customCourseBySemester[semesterId] ?? "").trim();
+    if (!value) {
+      setStatusMessage("Enter a class title before adding.");
+      return;
+    }
+
+    setSemesters((prev) =>
+      prev.map((semester) =>
+        semester.id === semesterId && !semester.courses.includes(value)
+          ? { ...semester, courses: [...semester.courses, value] }
+          : semester,
+      ),
+    );
+    setCustomCourseBySemester((prev) => ({ ...prev, [semesterId]: "" }));
+    setStatusMessage(`Added "${value}" to semester.`);
+  }
+
+  function removeCourseFromSemester(semesterId: string, courseLabel: string) {
+    setSemesters((prev) =>
+      prev.map((semester) =>
+        semester.id === semesterId
+          ? { ...semester, courses: semester.courses.filter((course) => course !== courseLabel) }
+          : semester,
+      ),
+    );
+    setStatusMessage("Course removed from semester.");
   }
 
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <header className="mb-8 rounded-2xl border border-cyan-200 bg-white p-6 shadow-sm">
+        <header className="mb-6 rounded-2xl border border-cyan-200 bg-white p-6 shadow-sm">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-cyan-700">
-            Use Case 4 Demo
+            Academic Planner
           </p>
-          <h1 className="text-3xl font-bold sm:text-4xl">Saved Classes + Semester History</h1>
+          <h1 className="text-3xl font-bold sm:text-4xl">Saved Classes + Semester Planning</h1>
           <p className="mt-2 max-w-3xl text-slate-600">
-            This screen demonstrates saving course data without a visible course-builder flow by
-            simulating quick-save actions and persisting results in browser storage + backend demo
-            store.
+            Save classes, assign them to semesters, and update previous term details in one place.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <div className="rounded-lg border border-cyan-200 bg-cyan-50 px-3 py-2">
@@ -255,10 +392,10 @@ export default function Home() {
               <span className="text-cyan-700">Backend:</span> {backendStatus}
             </div>
             <button
-              onClick={handleResetDemo}
+              onClick={handleResetSavedClasses}
               className="rounded-lg border border-sky-300 bg-gradient-to-r from-cyan-400 to-blue-600 px-3 py-2 font-semibold text-white transition hover:from-cyan-500 hover:to-blue-700"
             >
-              Reset demo data
+              Reset Saved Classes
             </button>
           </div>
           <p className="mt-4 rounded-lg border border-cyan-200 bg-cyan-50 px-3 py-2 text-sm text-cyan-800">
@@ -266,80 +403,227 @@ export default function Home() {
           </p>
         </header>
 
-        <section className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold">Saved Classes</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            {savedCourses.map((course) => (
-              <article
-                key={course.id}
-                className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm"
-              >
-                <div className="mb-3 flex items-start justify-between gap-4">
-                  <div>
+        <section className="mb-8 flex flex-wrap gap-3">
+          <button
+            onClick={() => setActiveView("planner")}
+            className={`rounded-lg px-4 py-2 font-semibold transition ${
+              activeView === "planner"
+                ? "bg-gradient-to-r from-cyan-400 to-blue-600 text-white"
+                : "border border-cyan-200 bg-white text-cyan-800 hover:bg-cyan-50"
+            }`}
+          >
+            Planner
+          </button>
+          <button
+            onClick={() => setActiveView("semesters")}
+            className={`rounded-lg px-4 py-2 font-semibold transition ${
+              activeView === "semesters"
+                ? "bg-gradient-to-r from-cyan-400 to-blue-600 text-white"
+                : "border border-cyan-200 bg-white text-cyan-800 hover:bg-cyan-50"
+            }`}
+          >
+            Edit Semesters
+          </button>
+        </section>
+
+        {activeView === "planner" ? (
+          <>
+            <section className="mb-8">
+              <h2 className="mb-4 text-2xl font-semibold">Saved Classes</h2>
+              <div className="grid gap-4 md:grid-cols-2">
+                {savedCourses.map((course) => (
+                  <article
+                    key={course.id}
+                    className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm"
+                  >
+                    <div className="mb-3 flex items-start justify-between gap-4">
+                      <div>
+                        <p className="text-sm text-slate-500">{course.term}</p>
+                        <h3 className="text-lg font-semibold">
+                          {course.code}: {course.title}
+                        </h3>
+                      </div>
+                      <span className="rounded-md bg-cyan-100 px-2 py-1 text-xs font-semibold text-cyan-700">
+                        {course.status}
+                      </span>
+                    </div>
+                    <div className="mb-3 text-sm text-slate-700">{course.units} units</div>
+                    <div className="mb-3 flex flex-col gap-2 sm:flex-row">
+                      <select
+                        value={selectedTermByCourse[course.id] ?? semesterTerms[0] ?? ""}
+                        onChange={(event) => handleTermSelection(course.id, event.target.value)}
+                        className="rounded-md border border-cyan-200 bg-white px-2 py-1 text-sm"
+                      >
+                        {semesterTerms.length === 0 ? (
+                          <option value="">No semesters available</option>
+                        ) : (
+                          semesterTerms.map((term) => (
+                            <option key={term} value={term}>
+                              {term}
+                            </option>
+                          ))
+                        )}
+                      </select>
+                      <button
+                        onClick={() => assignSavedCourseToSemester(course)}
+                        className="rounded-md border border-cyan-300 px-3 py-1 text-sm font-semibold text-cyan-800 transition hover:bg-cyan-50"
+                      >
+                        Add to Semester
+                      </button>
+                    </div>
+                    <button
+                      onClick={() => handleRemoveSavedCourse(course.id)}
+                      className="rounded-md border border-rose-300 px-2 py-1 text-sm text-rose-700 transition hover:bg-rose-50"
+                    >
+                      Remove
+                    </button>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-semibold">Add Classes</h2>
+              <div className="grid gap-4 md:grid-cols-3">
+                {courseSuggestions.map((course) => (
+                  <div key={course.id} className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm">
                     <p className="text-sm text-slate-500">{course.term}</p>
-                    <h3 className="text-lg font-semibold">
+                    <h3 className="mt-1 font-semibold">
                       {course.code}: {course.title}
                     </h3>
+                    <p className="mt-1 text-sm text-slate-700">{course.units} units</p>
+                    <button
+                      onClick={() => handleAddSavedCourse(course)}
+                      className="mt-3 w-full rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 px-3 py-2 font-semibold text-white transition hover:from-cyan-500 hover:to-blue-700"
+                    >
+                      Save Class
+                    </button>
                   </div>
-                  <span className="rounded-md bg-cyan-100 px-2 py-1 text-xs font-semibold text-cyan-700">
-                    {course.status}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between text-sm text-slate-700">
-                  <span>{course.units} units</span>
-                  <button
-                    onClick={() => handleRemoveCourse(course.id)}
-                    className="rounded-md border border-rose-300 px-2 py-1 text-rose-700 transition hover:bg-rose-50"
-                  >
-                    Remove
-                  </button>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold">Simulated Quick Save</h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            {quickAddCourses.map((course) => (
-              <div key={course.id} className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm">
-                <p className="text-sm text-slate-500">{course.term}</p>
-                <h3 className="mt-1 font-semibold">
-                  {course.code}: {course.title}
-                </h3>
-                <p className="mt-1 text-sm text-slate-700">{course.units} units</p>
-                <button
-                  onClick={() => handleQuickSave(course)}
-                  className="mt-3 w-full rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 px-3 py-2 font-semibold text-white transition hover:from-cyan-500 hover:to-blue-700"
-                >
-                  Save Course
-                </button>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
+            </section>
+          </>
+        ) : (
+          <section>
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <h2 className="text-2xl font-semibold">Semester History</h2>
+              <button
+                onClick={addSemester}
+                className="rounded-lg border border-sky-300 bg-gradient-to-r from-cyan-400 to-blue-600 px-3 py-2 text-sm font-semibold text-white transition hover:from-cyan-500 hover:to-blue-700"
+              >
+                Add Semester
+              </button>
+            </div>
 
-        <section>
-          <h2 className="mb-4 text-2xl font-semibold">Dummy Semester History</h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            {semesterHistory.map((semester) => (
-              <article key={semester.term} className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm">
-                <div className="mb-2 flex items-center justify-between">
-                  <h3 className="font-semibold">{semester.term}</h3>
-                  <span className="text-sm text-slate-700">GPA: {semester.gpa}</span>
-                </div>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  {semester.courses.map((course) => (
-                    <li key={course} className="rounded-md border border-cyan-100 bg-cyan-50 px-2 py-1">
-                      {course}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
+            <div className="grid gap-4 md:grid-cols-2">
+              {semesters.map((semester) => (
+                <article key={semester.id} className="rounded-xl border border-cyan-200 bg-white p-4 shadow-sm">
+                  <div className="mb-3 grid gap-2 sm:grid-cols-2">
+                    <label className="text-sm text-slate-600">
+                      Term
+                      <input
+                        value={semester.term}
+                        onChange={(event) => updateSemester(semester.id, { term: event.target.value })}
+                        className="mt-1 w-full rounded-md border border-cyan-200 px-2 py-1 text-sm"
+                      />
+                    </label>
+                    <label className="text-sm text-slate-600">
+                      GPA
+                      <input
+                        value={semester.gpa}
+                        onChange={(event) => updateSemester(semester.id, { gpa: event.target.value })}
+                        className="mt-1 w-full rounded-md border border-cyan-200 px-2 py-1 text-sm"
+                      />
+                    </label>
+                  </div>
+
+                  <label className="mb-3 block text-sm text-slate-600">
+                    Notes
+                    <textarea
+                      value={semester.notes}
+                      onChange={(event) => updateSemester(semester.id, { notes: event.target.value })}
+                      className="mt-1 w-full rounded-md border border-cyan-200 px-2 py-1 text-sm"
+                      rows={2}
+                    />
+                  </label>
+
+                  <div className="mb-3">
+                    <p className="mb-2 text-sm font-semibold text-slate-700">Courses</p>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      {semester.courses.map((course) => (
+                        <li
+                          key={`${semester.id}-${course}`}
+                          className="flex items-center justify-between gap-2 rounded-md border border-cyan-100 bg-cyan-50 px-2 py-1"
+                        >
+                          <span>{course}</span>
+                          <button
+                            onClick={() => removeCourseFromSemester(semester.id, course)}
+                            className="rounded border border-rose-300 px-2 py-1 text-xs text-rose-700 hover:bg-rose-50"
+                          >
+                            Remove
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-2 flex flex-col gap-2 sm:flex-row">
+                    <select
+                      value={selectedSavedBySemester[semester.id] ?? ""}
+                      onChange={(event) =>
+                        setSelectedSavedBySemester((prev) => ({
+                          ...prev,
+                          [semester.id]: event.target.value,
+                        }))
+                      }
+                      className="rounded-md border border-cyan-200 px-2 py-1 text-sm"
+                    >
+                      <option value="">Select a saved class</option>
+                      {savedCourses.map((course) => (
+                        <option key={`${semester.id}-${course.id}`} value={course.id}>
+                          {toCourseLabel(course)}
+                        </option>
+                      ))}
+                    </select>
+                    <button
+                      onClick={() => addSavedCourseToSemesterByMenu(semester.id)}
+                      className="rounded-md border border-cyan-300 px-3 py-1 text-sm font-semibold text-cyan-800 hover:bg-cyan-50"
+                    >
+                      Add Saved Class
+                    </button>
+                  </div>
+
+                  <div className="mb-3 flex flex-col gap-2 sm:flex-row">
+                    <input
+                      value={customCourseBySemester[semester.id] ?? ""}
+                      onChange={(event) =>
+                        setCustomCourseBySemester((prev) => ({
+                          ...prev,
+                          [semester.id]: event.target.value,
+                        }))
+                      }
+                      placeholder="Add custom class entry"
+                      className="rounded-md border border-cyan-200 px-2 py-1 text-sm"
+                    />
+                    <button
+                      onClick={() => addCustomCourseToSemester(semester.id)}
+                      className="rounded-md border border-cyan-300 px-3 py-1 text-sm font-semibold text-cyan-800 hover:bg-cyan-50"
+                    >
+                      Add Custom Class
+                    </button>
+                  </div>
+
+                  <button
+                    onClick={() => removeSemester(semester.id)}
+                    className="rounded-md border border-rose-300 px-2 py-1 text-sm text-rose-700 hover:bg-rose-50"
+                  >
+                    Remove Semester
+                  </button>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );
