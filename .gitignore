@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/frontend/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -15,10 +16,13 @@
 
 # next.js
 /.next/
+/frontend/.next/
 /out/
+/frontend/out/
 
 # production
 /build
+/frontend/build
 
 # misc
 .DS_Store
@@ -29,6 +33,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env.*
@@ -43,9 +50,14 @@ next-env.d.ts
 
 #venv
 venv
+.venv
+**/venv/
+**/.venv/
+Backend/python/venv/
 
 #pycache
 __pycache__/
+**/__pycache__/
 *.pyc
 
 #testcases
