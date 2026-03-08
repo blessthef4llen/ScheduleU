@@ -27,14 +27,14 @@ def load_section_options_for_courses(
 
     table = _get_env("SECTION_TABLE", "spring_2026")
     course_col = _get_env("SECTION_COURSE_COL", "course_code_full")
-    section_col = _get_env("SECTION_SECTION_COL", "section")
+    section_col = _get_env("SECTION_SECTION_COL", "sec")
 
     type_col = _get_env("SECTION_TYPE_COL", "type")
-    day_col = _get_env("SECTION_DAY_COL", "day")
+    day_col = _get_env("SECTION_DAY_COL", "days")
     time_col = _get_env("SECTION_TIME_COL", "time")
     loc_col = _get_env("SECTION_LOCATION_COL", "location")
     inst_col = _get_env("SECTION_INSTRUCTOR_COL", "instructor")
-    comm_col = _get_env("SECTION_COMMENTS_COL", "comments")
+    comm_col = _get_env("SECTION_COMMENTS_COL", "comment")
 
     norm_courses = [norm_course_code(c) for c in courses if norm_course_code(c)]
     if not norm_courses:

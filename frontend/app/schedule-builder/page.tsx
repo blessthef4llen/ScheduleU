@@ -8,6 +8,8 @@ type CartRow = {
   term_table: string
   course_code_full: string
   course_title: string | null
+  section: string | null
+  class_number: string | null
 }
 
 type SelectedMeeting = {
@@ -29,8 +31,22 @@ type SelectedSection = {
 type TermScheduleResponse = {
   term: string
   selected_sections: SelectedSection[]
+  generated_schedules?: ScheduleCandidate[]
   unscheduled_courses: string[]
   warnings: string[]
+}
+
+type ScheduleCandidate = {
+  rank: number
+  score: number
+  metrics: {
+    days_used: number
+    total_gap_minutes: number
+    earliest_start: number
+    latest_end: number
+  }
+  explanation_bullets?: string[]
+  selected_sections: SelectedSection[]
 }
 
 const backendBaseUrl = process.env.NEXT_PUBLIC_SCHEDULER_API_URL ?? 'http://localhost:8000'
@@ -224,6 +240,9 @@ export default function ScheduleBuilderPage() {
   const [earliestTime, setEarliestTime] = useState('')
   const [latestTime, setLatestTime] = useState('')
   const [bufferMinutes, setBufferMinutes] = useState(15)
+  const [rankingPreference, setRankingPreference] = useState('compact')
+  const [maxSchedules, setMaxSchedules] = useState(3)
+  const [selectedCandidateIndex, setSelectedCandidateIndex] = useState<number | null>(null)
   const [manualSubject, setManualSubject] = useState('')
   const [manualCourseNumber, setManualCourseNumber] = useState('')
   const [manualCourses, setManualCourses] = useState<string[]>([])
@@ -231,6 +250,8 @@ export default function ScheduleBuilderPage() {
   const [loadingNumbers, setLoadingNumbers] = useState(false)
   const [numberLoadError, setNumberLoadError] = useState('')
   const [honorsOnly, setHonorsOnly] = useState(false)
+  const [showCartEditor, setShowCartEditor] = useState(false)
+  const [removingCartKey, setRemovingCartKey] = useState<string | null>(null)
 
   const requestedCourses = useMemo(() => {
     const uniq = new Set<string>()
@@ -245,6 +266,24 @@ export default function ScheduleBuilderPage() {
     }
     return Array.from(uniq).sort()
   }, [cartRows, honorsOnly, manualCourses, selectedTermTable])
+
+  const lockedSections = useMemo(() => {
+    const seen = new Set<string>()
+    const locks: Array<{ course: string; section_id: string }> = []
+    for (const row of cartRows) {
+      if (selectedTermTable && row.term_table !== selectedTermTable) continue
+      if (!row.course_code_full || !row.section) continue
+      if (honorsOnly && !isHonorsCourseCode(row.course_code_full)) continue
+
+      const course = row.course_code_full.trim()
+      const sectionId = row.section.trim()
+      if (!course || !sectionId) continue
+      if (seen.has(course)) continue
+      seen.add(course)
+      locks.push({ course, section_id: sectionId })
+    }
+    return locks
+  }, [cartRows, honorsOnly, selectedTermTable])
 
   const addManualCourse = () => {
     const subject = manualSubject.trim().toUpperCase()
@@ -356,7 +395,7 @@ export default function ScheduleBuilderPage() {
 
       const { data, error: cartError } = await supabase
         .from('shopping_cart')
-        .select('term_table, course_code_full, course_title')
+        .select('term_table, course_code_full, course_title, section, class_number')
         .eq('user_id', authData.user.id)
 
       if (cartError) throw new Error(cartError.message)
@@ -377,6 +416,52 @@ export default function ScheduleBuilderPage() {
     }
   }
 
+  const removeCartItem = async (row: CartRow, rowIndex: number) => {
+    const key = `${row.term_table}|${row.course_code_full}|${row.section ?? ''}|${row.class_number ?? ''}|${rowIndex}`
+    setRemovingCartKey(key)
+    setError('')
+    setMessage('')
+
+    try {
+      const { data: authData, error: authError } = await supabase.auth.getUser()
+      if (authError) throw new Error(authError.message)
+      if (!authData.user) throw new Error('You must be logged in to edit your shopping cart.')
+
+      let q = supabase
+        .from('shopping_cart')
+        .delete()
+        .eq('user_id', authData.user.id)
+        .eq('term_table', row.term_table)
+        .eq('course_code_full', row.course_code_full)
+
+      if (row.section?.trim()) q = q.eq('section', row.section.trim())
+      else q = q.is('section', null)
+
+      if (row.class_number?.trim()) q = q.eq('class_number', row.class_number.trim())
+      else q = q.is('class_number', null)
+
+      const { error: deleteError } = await q
+      if (deleteError) throw new Error(deleteError.message)
+
+      setCartRows((prev) =>
+        prev.filter((item, idx) => {
+          if (idx !== rowIndex) return true
+          return !(
+            item.term_table === row.term_table &&
+            item.course_code_full === row.course_code_full &&
+            (item.section ?? '') === (row.section ?? '') &&
+            (item.class_number ?? '') === (row.class_number ?? '')
+          )
+        })
+      )
+      setMessage(`Removed ${row.course_code_full}${row.section ? ` (section ${row.section})` : ''} from cart.`)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to remove cart item.')
+    } finally {
+      setRemovingCartKey(null)
+    }
+  }
+
   const generateSchedule = async () => {
     setGenerating(true)
     setError('')
@@ -394,6 +479,7 @@ export default function ScheduleBuilderPage() {
       const payload = {
         term: tableToTermLabel(selectedTermTable),
         requested_courses: requestedCourses,
+        locked_sections: lockedSections,
         constraints: {
           earliest_time: earliestTime.trim() || null,
           latest_time: latestTime.trim() || null,
@@ -402,6 +488,8 @@ export default function ScheduleBuilderPage() {
             .map((d) => d.trim())
             .filter(Boolean),
           buffer_minutes: bufferMinutes,
+          ranking_preference: rankingPreference,
+          max_schedules: maxSchedules,
           blocked_times: [],
         },
       }
@@ -420,6 +508,7 @@ export default function ScheduleBuilderPage() {
       }
 
       setResult(raw as TermScheduleResponse)
+      setSelectedCandidateIndex(null)
       setMessage('Schedule generated successfully.')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to generate schedule.')
@@ -473,6 +562,14 @@ export default function ScheduleBuilderPage() {
             >
               {generating ? 'Generating...' : 'Generate Schedule'}
             </button>
+
+            <button
+              type="button"
+              onClick={() => setShowCartEditor((prev) => !prev)}
+              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
+            >
+              {showCartEditor ? 'Hide Cart Editor' : 'Edit Cart'}
+            </button>
           </div>
 
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
@@ -523,9 +620,38 @@ export default function ScheduleBuilderPage() {
                 <option value={15}>15</option>
                 <option value={20}>20</option>
                 <option value={30}>30</option>
-              </select>
+                </select>
+              </div>
             </div>
-          </div>
+
+            <div className="grid gap-3 md:grid-cols-2">
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">Ranking Preference</label>
+                <select
+                  value={rankingPreference}
+                  onChange={(e) => setRankingPreference(e.target.value)}
+                  className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                >
+                  <option value="compact">Compact (few days + fewer gaps)</option>
+                  <option value="fewest_days">Fewest days on campus</option>
+                  <option value="latest_start">Latest start times</option>
+                  <option value="earliest_end">Earliest end times</option>
+                </select>
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">Number of schedules</label>
+                <select
+                  value={maxSchedules}
+                  onChange={(e) => setMaxSchedules(Number(e.target.value))}
+                  className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                >
+                  <option value={1}>1</option>
+                  <option value={3}>3</option>
+                  <option value={5}>5</option>
+                  <option value={10}>10</option>
+                </select>
+              </div>
+            </div>
 
           <div>
             <label className="mb-1 block text-sm font-medium text-slate-700">Days Off (comma-separated)</label>
@@ -622,6 +748,42 @@ export default function ScheduleBuilderPage() {
             </div>
           )}
 
+          {showCartEditor && (
+            <div className="rounded-lg border border-slate-300 bg-slate-50 p-3 space-y-3">
+              <p className="text-sm font-medium text-slate-800">Shopping Cart Editor</p>
+              {cartRows.length === 0 ? (
+                <p className="text-sm text-slate-600">No cart items loaded yet. Click Load Shopping Cart first.</p>
+              ) : (
+                <div className="space-y-2">
+                  {cartRows.map((row, idx) => {
+                    const key = `${row.term_table}|${row.course_code_full}|${row.section ?? ''}|${row.class_number ?? ''}|${idx}`
+                    return (
+                      <div
+                        key={key}
+                        className="flex flex-col gap-2 rounded border border-slate-300 bg-white px-3 py-2 md:flex-row md:items-center md:justify-between"
+                      >
+                        <div className="text-sm text-slate-800">
+                          <span className="font-semibold">{row.course_code_full}</span>
+                          <span className="text-slate-600"> • {row.term_table}</span>
+                          {row.section ? <span className="text-slate-600"> • Section {row.section}</span> : null}
+                          {row.class_number ? <span className="text-slate-600"> • Class #{row.class_number}</span> : null}
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => removeCartItem(row, idx)}
+                          disabled={removingCartKey === key}
+                          className="rounded border border-red-300 bg-white px-3 py-1.5 text-sm font-medium text-red-700 transition-colors hover:bg-red-50 disabled:opacity-60"
+                        >
+                          {removingCartKey === key ? 'Removing...' : 'Remove'}
+                        </button>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+
           {message && (
             <p className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-700">
               {message}
@@ -641,13 +803,50 @@ export default function ScheduleBuilderPage() {
             </div>
 
             <div className="p-4 space-y-4">
+              {(result.generated_schedules?.length ?? 0) > 0 && (
+                <div className="space-y-3">
+                  <h2 className="text-lg font-semibold text-slate-900">Schedule Options</h2>
+                  <div className="grid gap-3 md:grid-cols-2">
+                    {result.generated_schedules!.map((candidate, idx) => (
+                      <button
+                        key={`candidate-${candidate.rank}-${idx}`}
+                        type="button"
+                        onClick={() => setSelectedCandidateIndex((prev) => (prev === idx ? null : idx))}
+                        className={`rounded-lg border p-3 text-left transition-all ${
+                          selectedCandidateIndex === idx
+                            ? 'border-blue-600 bg-blue-50 shadow-sm'
+                            : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-100'
+                        }`}
+                      >
+                        <p className="text-sm font-semibold text-slate-900">Option #{candidate.rank}</p>
+                        <p className="mt-1 text-xs text-slate-600">
+                          {candidate.metrics.days_used} day(s) • {candidate.metrics.total_gap_minutes} gap mins
+                        </p>
+                        {selectedCandidateIndex === idx && (
+                          <ul className="mt-2 list-disc pl-5 text-xs text-slate-700 space-y-1">
+                            {(candidate.explanation_bullets ?? []).slice(0, 3).map((b, i) => (
+                              <li key={`${candidate.rank}-b-${i}`}>{b}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {selectedCandidateIndex === null ? (
+                <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600">
+                  Select a schedule option above to view details.
+                </div>
+              ) : (
               <div>
                 <h2 className="mb-2 text-lg font-semibold text-slate-900">Selected Sections</h2>
-                {result.selected_sections.length === 0 ? (
+                {(result.generated_schedules?.[selectedCandidateIndex]?.selected_sections ?? result.selected_sections).length === 0 ? (
                   <p className="text-sm text-slate-600">No conflict-free sections selected.</p>
                 ) : (
                   <div className="space-y-3">
-                    {result.selected_sections.map((section) => (
+                    {(result.generated_schedules?.[selectedCandidateIndex]?.selected_sections ?? result.selected_sections).map((section) => (
                       <div key={`${section.course}-${section.section_id}`} className="rounded-lg border border-slate-300 bg-slate-100 p-3 transition-all hover:border-slate-400 hover:shadow-sm">
                         <p className="font-semibold text-slate-900">
                           {section.course} • Section {section.section_id}
@@ -667,6 +866,43 @@ export default function ScheduleBuilderPage() {
                   </div>
                 )}
               </div>
+              )}
+
+              {selectedCandidateIndex !== null && (result.generated_schedules?.[selectedCandidateIndex] ?? null) && (
+                <div>
+                  <h2 className="mb-2 text-lg font-semibold text-slate-900">Weekly Schedule View</h2>
+                  <div className="grid gap-3 md:grid-cols-5">
+                    {['M', 'T', 'W', 'Th', 'F'].map((day) => {
+                      const sections = (result.generated_schedules?.[selectedCandidateIndex]?.selected_sections ?? [])
+                      const dayMeetings = sections
+                        .flatMap((sec) =>
+                          sec.meetings
+                            .filter((m) => m.day === day)
+                            .map((m) => ({ course: sec.course, section_id: sec.section_id, ...m }))
+                        )
+                        .sort((a, b) => a.start.localeCompare(b.start))
+                      return (
+                        <div key={day} className="rounded-lg border border-slate-300 bg-slate-50 p-2">
+                          <p className="mb-2 text-sm font-semibold text-slate-800">{day}</p>
+                          {dayMeetings.length === 0 ? (
+                            <p className="text-xs text-slate-500">No classes</p>
+                          ) : (
+                            <div className="space-y-2">
+                              {dayMeetings.map((m, idx) => (
+                                <div key={`${day}-${m.course}-${m.section_id}-${idx}`} className="rounded border border-slate-300 bg-slate-200 px-2 py-1 text-xs text-slate-900">
+                                  <p className="font-semibold">{m.course} • {m.section_id}</p>
+                                  <p>{m.start}-{m.end}</p>
+                                  <p>{m.location ?? 'N/A'}</p>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
 
               {result.unscheduled_courses.length > 0 && (
                 <div>

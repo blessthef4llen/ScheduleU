@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 from typing import Dict, List, Optional, Set, Tuple
+from dataclasses import dataclass
 
 from app.core.section_models import SectionOption, MeetingBlock
 
@@ -34,33 +35,22 @@ def parse_days(day_str: str) -> Set[int]:
     Supports formats like:
       "MW", "TTh", "TR", "Mon/Wed", "M W", "T,Th"
     """
-    s = day_str.strip()
-    if not s:
+    raw = day_str.strip()
+    if not raw:
         return set()
 
-    s = s.replace("/", " ").replace(",", " ").replace("-", " ")
-    s = re.sub(r"\s+", " ", s).strip()
+    # Normalize separators and casing.
+    upper = raw.upper().replace("/", " ").replace(",", " ").replace("-", " ")
+    upper = re.sub(r"\s+", " ", upper).strip()
 
-    # Normalize common multi-letter tokens first
-    tokens: List[str] = []
-    i = 0
-    upper = s.upper()
-
-    # Detect "TH" as a token (or "TTH")
-    while i < len(upper):
-        if upper[i:i+2] == "TH":
-            tokens.append("TH")
-            i += 2
-        elif upper[i] in "MTWRF":
-            tokens.append(upper[i])
-            i += 1
-        elif upper[i].isalpha():
-            # Handle words like MON WED
-            # Split on spaces then map later
-            break
-        else:
-            i += 1
-
+    # Support compact forms (MW, TTH, TUTH) and spaced words (MON WED, TU TH).
+    # Use longest-first token matching to avoid splitting TH into T + H, etc.
+    compact = re.sub(r"[^A-Z]", "", upper)
+    if compact:
+        token_re = re.compile(r"MON|TUE|WED|THU|FRI|SAT|SUN|TH|TU|SA|SU|M|T|W|R|F")
+        tokens = token_re.findall(compact)
+    else:
+        tokens = []
     if not tokens:
         tokens = upper.split()
 
@@ -140,12 +130,15 @@ def parse_time_range(time_str: str) -> Optional[Tuple[int, int]]:
 def conflicts(a: MeetingBlock, b: MeetingBlock, buffer_min: int = 0) -> bool:
     if not (a.days & b.days):
         return False
-    # Apply buffer both ways
-    a_start = a.start_min - buffer_min
-    a_end = a.end_min + buffer_min
-    b_start = b.start_min - buffer_min
-    b_end = b.end_min + buffer_min
-    return not (a_end <= b_start or b_end <= a_start)
+    # If meetings overlap in time on any shared day, they conflict.
+    if not (a.end_min <= b.start_min or b.end_min <= a.start_min):
+        return True
+
+    # Meetings do not overlap; enforce one-way minimum gap.
+    # Exactly-equal buffer is allowed (reject only when gap < buffer).
+    if a.end_min <= b.start_min:
+        return (b.start_min - a.end_min) < buffer_min
+    return (a.start_min - b.end_min) < buffer_min
 
 def section_conflicts(sec: SectionOption, chosen: List[SectionOption], buffer_min: int = 0) -> bool:
     for other in chosen:
@@ -183,17 +176,93 @@ def score_schedule(chosen: List[SectionOption]) -> int:
 
     return -(day_penalty + gap_penalty)
 
-def pick_sections(
+
+@dataclass(frozen=True)
+class ScheduleMetrics:
+    days_used: int
+    total_gap_minutes: int
+    earliest_start: int
+    latest_end: int
+
+
+def compute_schedule_metrics(chosen: List[SectionOption]) -> ScheduleMetrics:
+    days_used_set = set()
+    by_day: Dict[int, List[Tuple[int, int]]] = {}
+    earliest_start = 24 * 60
+    latest_end = 0
+
+    for sec in chosen:
+        for m in sec.meetings:
+            earliest_start = min(earliest_start, m.start_min)
+            latest_end = max(latest_end, m.end_min)
+            for d in m.days:
+                days_used_set.add(d)
+                by_day.setdefault(d, []).append((m.start_min, m.end_min))
+
+    total_gap = 0
+    for intervals in by_day.values():
+        intervals.sort()
+        for i in range(1, len(intervals)):
+            prev_end = intervals[i - 1][1]
+            cur_start = intervals[i][0]
+            if cur_start > prev_end:
+                total_gap += (cur_start - prev_end)
+
+    if earliest_start == 24 * 60:
+        earliest_start = 0
+
+    return ScheduleMetrics(
+        days_used=len(days_used_set),
+        total_gap_minutes=total_gap,
+        earliest_start=earliest_start,
+        latest_end=latest_end,
+    )
+
+
+def score_schedule_by_preference(
+    chosen: List[SectionOption],
+    preference: str = "compact",
+    preferred_sections: Optional[Dict[str, str]] = None,
+) -> int:
+    m = compute_schedule_metrics(chosen)
+    p = (preference or "compact").strip().lower()
+
+    # Higher score = better ranking.
+    if p == "fewest_days":
+        base = -(m.days_used * 100000 + m.total_gap_minutes * 10 + m.latest_end)
+    elif p == "latest_start":
+        base = m.earliest_start * 100 - m.days_used * 1000 - m.total_gap_minutes
+    elif p == "earliest_end":
+        base = -(m.latest_end * 100 + m.total_gap_minutes * 10 + m.days_used * 1000)
+    else:
+        # compact (default): fewer days + fewer gaps + earlier finish.
+        base = -(m.days_used * 100000 + m.total_gap_minutes * 10 + m.latest_end)
+
+    # Prefer schedules that keep the user's selected sections when possible.
+    # This is a strong ranking bonus, but it is not a hard constraint.
+    if not preferred_sections:
+        return base
+    matched = 0
+    for sec in chosen:
+        pref = preferred_sections.get(sec.course)
+        if pref and sec.section_id.strip() == pref.strip():
+            matched += 1
+    return base + matched * 1_000_000
+
+
+def pick_ranked_schedules(
     options_by_course: Dict[str, List[SectionOption]],
     *,
     buffer_min: int = 0,
     max_solutions_checked: int = 20000,
-) -> Tuple[List[SectionOption], Dict[str, str]]:
+    max_results: int = 5,
+    ranking_preference: str = "compact",
+    preferred_sections: Optional[Dict[str, str]] = None,
+) -> Tuple[List[Tuple[List[SectionOption], int, ScheduleMetrics]], Dict[str, str]]:
     """
-    Returns (best_schedule, failures)
-    failures: course -> reason
+    Returns ranked schedules:
+      [ (sections, score, metrics), ... ]
     """
-    # Try courses with fewer options first to prune faster.
     courses = list(options_by_course.keys())
     courses.sort(key=lambda c: len(options_by_course.get(c, [])))
 
@@ -202,26 +271,35 @@ def pick_sections(
         if not options_by_course.get(c):
             failures[c] = "No sections available after filtering."
 
-    best: List[SectionOption] = []
-    best_score = -10**18
     checked = 0
+    candidates: List[Tuple[List[SectionOption], int, ScheduleMetrics]] = []
+    seen_keys: Set[Tuple[Tuple[str, str], ...]] = set()
+
+    def _schedule_key(chosen: List[SectionOption]) -> Tuple[Tuple[str, str], ...]:
+        return tuple(sorted((s.course, s.section_id) for s in chosen))
 
     def backtrack(i: int, chosen: List[SectionOption]):
-        nonlocal best, best_score, checked
+        nonlocal checked
         if checked >= max_solutions_checked:
             return
         if i == len(courses):
             checked += 1
-            sc = score_schedule(chosen)
-            if sc > best_score:
-                best_score = sc
-                best = chosen.copy()
+            key = _schedule_key(chosen)
+            if key in seen_keys:
+                return
+            seen_keys.add(key)
+            score = score_schedule_by_preference(
+                chosen,
+                ranking_preference,
+                preferred_sections=preferred_sections,
+            )
+            metrics = compute_schedule_metrics(chosen)
+            candidates.append((chosen.copy(), score, metrics))
             return
 
         course = courses[i]
         opts = options_by_course.get(course, [])
         if not opts:
-            # skip; failure recorded
             backtrack(i + 1, chosen)
             return
 
@@ -234,4 +312,25 @@ def pick_sections(
 
     backtrack(0, [])
 
+    candidates.sort(key=lambda t: t[1], reverse=True)
+    return candidates[: max(1, max_results)], failures
+
+def pick_sections(
+    options_by_course: Dict[str, List[SectionOption]],
+    *,
+    buffer_min: int = 0,
+    max_solutions_checked: int = 20000,
+) -> Tuple[List[SectionOption], Dict[str, str]]:
+    """
+    Returns (best_schedule, failures)
+    failures: course -> reason
+    """
+    ranked, failures = pick_ranked_schedules(
+        options_by_course,
+        buffer_min=buffer_min,
+        max_solutions_checked=max_solutions_checked,
+        max_results=1,
+        ranking_preference="compact",
+    )
+    best = ranked[0][0] if ranked else []
     return best, failures

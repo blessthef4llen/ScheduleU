@@ -13,7 +13,8 @@ from app.core.catalog_merge import merge_catalog_into_dependency_model
 
 from app.api.term_models import TermScheduleRequest, TermScheduleResponse
 from app.core.section_loader import load_section_options_for_courses
-from app.core.section_scheduler import pick_sections
+from app.core.section_scheduler import pick_ranked_schedules
+from app.core.schedule_explainer import generate_schedule_benefits
 from app.core.normalize import norm_course_code
 
 from app.core.section_scheduler import parse_days, parse_time_range, conflicts
@@ -125,6 +126,11 @@ def term_schedule(req: TermScheduleRequest):
 
     # Load section options from Supabase
     options_by_course = load_section_options_for_courses(requested)
+    locked_by_course = {
+        norm_course_code(item.course): item.section_id.strip()
+        for item in req.locked_sections
+        if norm_course_code(item.course) and item.section_id.strip()
+    }
 
     # Convert one time string to minutes.
     def _parse_single_time(t: str) -> int:
@@ -191,49 +197,94 @@ def term_schedule(req: TermScheduleRequest):
 
         options_by_course[course] = kept
 
-    # Pick a conflict-free set from the remaining sections.
-    best, failures = pick_sections(
+    # Pick ranked conflict-free schedules from the remaining sections.
+    ranked, failures = pick_ranked_schedules(
         options_by_course,
         buffer_min=req.constraints.buffer_minutes,
+        max_results=req.constraints.max_schedules,
+        ranking_preference=req.constraints.ranking_preference,
+        preferred_sections=locked_by_course,
     )
+    best = ranked[0][0] if ranked else []
 
     if not best:
         unscheduled = sorted(list(set(requested)))
         warnings = ["No conflict-free schedule found for the requested courses."]
+        if locked_by_course:
+            warnings.append("Some locked sections could not be used with the current constraints.")
         if failures:
             warnings.append(f"Section availability issues: {failures}")
-        return TermScheduleResponse(term=req.term, unscheduled_courses=unscheduled, warnings=warnings)
+        return TermScheduleResponse(
+            term=req.term,
+            unscheduled_courses=unscheduled,
+            warnings=warnings,
+        )
 
-    # Convert selected sections to API response format.
-    selected_sections = []
-    for sec in best:
-        meetings = []
-        for m in sec.meetings:
-            # Convert internal day numbers back to short labels.
-            day_map_rev = {0: "M", 1: "T", 2: "W", 3: "Th", 4: "F", 5: "Sa", 6: "Su"}
-            for d in sorted(m.days):
-                meetings.append({
-                    "type": m.meeting_type,
-                    "day": day_map_rev.get(d, str(d)),
-                    "start": f"{m.start_min//60:02d}:{m.start_min%60:02d}",
-                    "end": f"{m.end_min//60:02d}:{m.end_min%60:02d}",
-                    "location": m.location,
-                    "instructor": m.instructor,
-                    "comments": m.comments,
-                })
+    def _serialize_sections(section_list):
+        selected_sections = []
+        for sec in section_list:
+            meetings = []
+            for m in sec.meetings:
+                # Convert internal day numbers back to short labels.
+                day_map_rev = {0: "M", 1: "T", 2: "W", 3: "Th", 4: "F", 5: "Sa", 6: "Su"}
+                for d in sorted(m.days):
+                    meetings.append({
+                        "type": m.meeting_type,
+                        "day": day_map_rev.get(d, str(d)),
+                        "start": f"{m.start_min//60:02d}:{m.start_min%60:02d}",
+                        "end": f"{m.end_min//60:02d}:{m.end_min%60:02d}",
+                        "location": m.location,
+                        "instructor": m.instructor,
+                        "comments": m.comments,
+                    })
 
-        selected_sections.append({
-            "course": sec.course,
-            "section_id": sec.section_id,
-            "meetings": meetings,
+            selected_sections.append({
+                "course": sec.course,
+                "section_id": sec.section_id,
+                "meetings": meetings,
+            })
+        return selected_sections
+
+    selected_sections = _serialize_sections(best)
+    generated_schedules = []
+    for idx, (secs, score, metrics) in enumerate(ranked, start=1):
+        explanation_bullets = generate_schedule_benefits(
+            secs,
+            metrics,
+            req.constraints.ranking_preference,
+        )
+        generated_schedules.append({
+            "rank": idx,
+            "score": score,
+            "metrics": {
+                "days_used": metrics.days_used,
+                "total_gap_minutes": metrics.total_gap_minutes,
+                "earliest_start": metrics.earliest_start,
+                "latest_end": metrics.latest_end,
+            },
+            "explanation_bullets": explanation_bullets,
+            "selected_sections": _serialize_sections(secs),
         })
 
     scheduled_courses = {s["course"] for s in selected_sections}
     unscheduled = sorted([c for c in requested if c not in scheduled_courses])
+    warnings = [] if not unscheduled else ["Some requested courses could not be scheduled conflict-free."]
+
+    if locked_by_course and best:
+        best_selected = {sec.course: sec.section_id for sec in best}
+        matched = sum(
+            1 for c, sec_id in locked_by_course.items()
+            if best_selected.get(c, "").strip() == sec_id.strip()
+        )
+        if matched < len(locked_by_course):
+            warnings.append(
+                f"Used closest available alternatives for {len(locked_by_course) - matched} preferred section(s)."
+            )
 
     return TermScheduleResponse(
         term=req.term,
         selected_sections=selected_sections,
+        generated_schedules=generated_schedules,
         unscheduled_courses=unscheduled,
-        warnings=[] if not unscheduled else ["Some requested courses could not be scheduled conflict-free."],
+        warnings=warnings,
     )

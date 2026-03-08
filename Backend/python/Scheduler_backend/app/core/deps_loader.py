@@ -14,7 +14,10 @@ def load_dependency_model_from_supabase() -> DependencyModel:
     Loads prerequisites/corequisites from Supabase and returns DependencyModel.
 
     """
-    mode = os.getenv("DEPS_MODE", "edges").strip().lower()
+    mode = os.getenv("DEPS_MODE", "edges_split").strip().lower()
+    # Backward-compatible aliases.
+    if mode in {"edges", "edge_split"}:
+        mode = "edges_split"
     table = os.getenv("DEPS_TABLE", "course_dependencies").strip()
 
     # Common
@@ -89,4 +92,6 @@ def load_dependency_model_from_supabase() -> DependencyModel:
         return model
 
 
-    raise RuntimeError(f"Unsupported DEPS_MODE='{mode}'. Use 'edges', 'edge_split' or 'lists'.")
+    raise RuntimeError(
+        f"Unsupported DEPS_MODE='{mode}'. Use 'edges_split' (aliases: 'edges', 'edge_split')."
+    )
