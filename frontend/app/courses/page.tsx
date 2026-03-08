@@ -32,6 +32,8 @@ type SectionItem = {
 const SEMESTER_OPTIONS = [
   { label: 'Spring 2026', table: 'spring_2026' },
   { label: 'Summer 2026', table: 'summer_2026' },
+  { label: 'Fall 2026', table: 'fall_2026', disabled: true },
+  { label: 'Winter 2027', table: 'winter_2027', disabled: true },
   // Add additional semester tables here, e.g.:
   // { label: 'Fall 2026', table: 'fall_2026' },
 ]
@@ -164,6 +166,13 @@ function courseCodeFromRow(row: RawCourseRow): string {
   return codeRaw.replace(/\s+/g, ' ').trim()
 }
 
+function sectionSortParts(section: string): [number, string] {
+  const normalized = section.trim()
+  const match = normalized.match(/^(\d+)(.*)$/)
+  if (!match) return [Number.MAX_SAFE_INTEGER, normalized]
+  return [Number(match[1]), (match[2] || '').trim()]
+}
+
 function normalizeCourses(rows: RawCourseRow[]): CourseItem[] {
   const byCourse = new Map<string, CourseItem>()
 
@@ -221,6 +230,8 @@ export default function CoursesPage() {
   const [expandedCourseCode, setExpandedCourseCode] = useState<string | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
   const [pageSize, setPageSize] = useState(20)
+  const [savingKey, setSavingKey] = useState<string | null>(null)
+  const [saveMessage, setSaveMessage] = useState('')
 
   const courses = useMemo(() => normalizeCourses(rows), [rows])
   const sectionsByCourseCode = useMemo(() => {
@@ -246,6 +257,25 @@ export default function CoursesPage() {
       const current = map.get(code) ?? []
       current.push(section)
       map.set(code, current)
+    }
+
+    for (const [code, sectionList] of map.entries()) {
+      sectionList.sort((a, b) => {
+        const [aNum, aSuffix] = sectionSortParts(a.section)
+        const [bNum, bSuffix] = sectionSortParts(b.section)
+
+        if (aNum !== bNum) return aNum - bNum
+        if (aSuffix !== bSuffix) return aSuffix.localeCompare(bSuffix)
+
+        const aClass = Number.parseInt(a.class_number, 10)
+        const bClass = Number.parseInt(b.class_number, 10)
+        const aClassSafe = Number.isNaN(aClass) ? Number.MAX_SAFE_INTEGER : aClass
+        const bClassSafe = Number.isNaN(bClass) ? Number.MAX_SAFE_INTEGER : bClass
+
+        return aClassSafe - bClassSafe
+      })
+
+      map.set(code, sectionList)
     }
 
     return map
@@ -346,9 +376,52 @@ export default function CoursesPage() {
     }
   }
 
+  const addSectionToCart = async (section: SectionItem) => {
+    setSaveMessage('')
+    const key = `${section.course_code_full}|${section.class_number}|${section.section}`
+    setSavingKey(key)
+
+    try {
+      const { data: authData, error: authError } = await supabase.auth.getUser()
+      if (authError) throw new Error(authError.message)
+
+      const user = authData.user
+      if (!user) {
+        throw new Error('You must be logged in to add courses to your cart.')
+      }
+
+      const payload = {
+        user_id: user.id,
+        term_table: semesterTable,
+        section: section.section,
+        class_number: section.class_number,
+        course_code_full: section.course_code_full,
+        course_title: section.course_title,
+        units: section.units,
+        course_info: section.course_info,
+        type: section.type,
+        days: section.days,
+        time: section.time,
+        location: section.location,
+        instructor: section.instructor,
+        comment: section.comment,
+      }
+
+      const { error: insertError } = await supabase.from('shopping_cart').insert(payload)
+      if (insertError) throw new Error(insertError.message)
+
+      setSaveMessage(`Added ${section.course_code_full} (section ${section.section}) to cart.`)
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to add course to cart.'
+      setSaveMessage(`Cart error: ${message}`)
+    } finally {
+      setSavingKey(null)
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-slate-50 text-black p-6">
-      <div className="mx-auto max-w-5xl space-y-6">
+    <div className="min-h-screen bg-slate-50 text-black p-4 md:p-5">
+      <div className="mx-auto max-w-7xl space-y-4">
         <header className="space-y-2">
           <h1 className="text-3xl font-bold text-blue-700">Course Search</h1>
           <p className="text-slate-700">
@@ -356,7 +429,7 @@ export default function CoursesPage() {
           </p>
         </header>
 
-        <section className="bg-white border rounded-2xl shadow-sm p-4 md:p-6 space-y-4">
+        <section className="bg-white border rounded-2xl shadow-sm p-4 md:p-5 space-y-3">
           <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
             <div>
               <label htmlFor="semester" className="block text-sm font-medium text-slate-700 mb-1">
@@ -369,8 +442,8 @@ export default function CoursesPage() {
                 className="w-full rounded-lg border border-slate-300 px-3 py-2"
               >
                 {SEMESTER_OPTIONS.map((option) => (
-                  <option key={option.table} value={option.table}>
-                    {option.label}
+                  <option key={option.table} value={option.table} disabled={option.disabled}>
+                    {option.label}{option.disabled ? ' (Coming Soon)' : ''}
                   </option>
                 ))}
               </select>
@@ -466,9 +539,15 @@ export default function CoursesPage() {
               Error loading courses: {error}
             </p>
           )}
+
+          {saveMessage && (
+            <p className="rounded-lg border border-blue-200 bg-blue-50 text-blue-700 px-3 py-2 text-sm">
+              {saveMessage}
+            </p>
+          )}
         </section>
 
-        <section className="bg-white border rounded-2xl shadow-sm">
+        <section className="bg-white border rounded-2xl shadow-sm overflow-hidden">
           <div className="border-b px-4 py-3 text-sm text-slate-700">
             {loaded ? (
               <>
@@ -482,7 +561,7 @@ export default function CoursesPage() {
 
           <div className="divide-y">
             {paginatedCourses.map((course) => (
-              <article key={course.code} className="px-4 py-3">
+              <article key={course.code} className="px-4 py-2">
                 <button
                   type="button"
                   className="w-full rounded-lg p-2 text-left hover:bg-slate-50"
@@ -506,21 +585,38 @@ export default function CoursesPage() {
                       Sections ({sectionsByCourseCode.get(course.code)?.length ?? 0})
                     </div>
 
-                    <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                    <div className="flex flex-col gap-3">
                       {(sectionsByCourseCode.get(course.code) ?? []).map((section, idx) => (
-                        <div key={`${course.code}-${section.class_number}-${idx}`} className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700 space-y-1">
-                          <p><span className="font-semibold">section:</span> {section.section}</p>
-                          <p><span className="font-semibold">class_number:</span> {section.class_number}</p>
-                          <p><span className="font-semibold">course_code_full:</span> {section.course_code_full}</p>
-                          <p><span className="font-semibold">course_title:</span> {section.course_title}</p>
-                          <p><span className="font-semibold">units:</span> {section.units}</p>
-                          <p><span className="font-semibold">course_info:</span> {section.course_info}</p>
-                          <p><span className="font-semibold">type:</span> {section.type}</p>
-                          <p><span className="font-semibold">days:</span> {section.days}</p>
-                          <p><span className="font-semibold">time:</span> {section.time}</p>
-                          <p><span className="font-semibold">location:</span> {section.location}</p>
-                          <p><span className="font-semibold">instructor:</span> {section.instructor}</p>
-                          <p><span className="font-semibold">comment:</span> {section.comment}</p>
+                        <div key={`${course.code}-${section.class_number}-${idx}`} className="rounded-lg border border-slate-200 bg-white p-3">
+                          <div className="mb-2 text-sm font-semibold text-slate-800">
+                            Section {section.section || 'N/A'} • Class #{section.class_number || 'N/A'}
+                          </div>
+                          <div className="grid gap-2 lg:grid-cols-3 text-sm">
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Code</p><p className="text-slate-800 break-words">{section.course_code_full}</p></div>
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Type</p><p className="text-slate-800 break-words">{section.type}</p></div>
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Location</p><p className="text-slate-800 break-words">{section.location}</p></div>
+
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Title</p><p className="text-slate-800 break-words">{section.course_title}</p></div>
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Info</p><p className="text-slate-800 break-words">{section.course_info}</p></div>
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Days</p><p className="text-slate-800 break-words">{section.days}</p></div>
+
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Units</p><p className="text-slate-800 break-words">{section.units}</p></div>
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Instructor</p><p className="text-slate-800 break-words">{section.instructor}</p></div>
+                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Time</p><p className="text-slate-800 break-words">{section.time}</p></div>
+                          </div>
+
+                          <div className="mt-3">
+                            <button
+                              type="button"
+                              onClick={() => addSectionToCart(section)}
+                              disabled={savingKey === `${section.course_code_full}|${section.class_number}|${section.section}`}
+                              className="rounded bg-emerald-600 px-3 py-1.5 text-white text-sm font-medium hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed"
+                            >
+                              {savingKey === `${section.course_code_full}|${section.class_number}|${section.section}`
+                                ? 'Adding...'
+                                : 'Add to Shopping Cart'}
+                            </button>
+                          </div>
                         </div>
                       ))}
                     </div>
