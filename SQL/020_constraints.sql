@@ -39,6 +39,17 @@ ON schedule_items (section_id);
 CREATE UNIQUE INDEX IF NOT EXISTS ux_schedule_items_schedule_section
 ON schedule_items (schedule_id, section_id);
 
+-- social section sync
+-- Small helper indexes so friend/sync lookups stay quick.
+CREATE INDEX IF NOT EXISTS idx_social_sync_preferences_enabled
+ON social_sync_preferences (enabled);
+
+CREATE INDEX IF NOT EXISTS idx_user_friends_user
+ON user_friends (user_id);
+
+CREATE INDEX IF NOT EXISTS idx_user_friends_friend
+ON user_friends (friend_user_id);
+
 
 -- -------------------------
 -- Foreign Keys
@@ -80,6 +91,24 @@ ALTER TABLE schedule_items
         FOREIGN KEY (section_id) REFERENCES sections(id)
         ON DELETE CASCADE;
 
+ALTER TABLE social_sync_preferences
+    DROP CONSTRAINT IF EXISTS social_sync_preferences_user_id_fkey,
+    ADD CONSTRAINT social_sync_preferences_user_id_fkey
+        FOREIGN KEY (user_id) REFERENCES users(id)
+        ON DELETE CASCADE;
+
+ALTER TABLE user_friends
+    DROP CONSTRAINT IF EXISTS user_friends_user_id_fkey,
+    ADD CONSTRAINT user_friends_user_id_fkey
+        FOREIGN KEY (user_id) REFERENCES users(id)
+        ON DELETE CASCADE;
+
+ALTER TABLE user_friends
+    DROP CONSTRAINT IF EXISTS user_friends_friend_user_id_fkey,
+    ADD CONSTRAINT user_friends_friend_user_id_fkey
+        FOREIGN KEY (friend_user_id) REFERENCES users(id)
+        ON DELETE CASCADE;
+
 
 -- -------------------------
 -- CHECK Constraints
@@ -106,6 +135,11 @@ ALTER TABLE sections
     DROP CONSTRAINT IF EXISTS sections_open_le_capacity,
     ADD CONSTRAINT sections_open_le_capacity
         CHECK ((open_seats IS NULL) OR (capacity IS NULL) OR (open_seats <= capacity));
+
+ALTER TABLE user_friends
+    DROP CONSTRAINT IF EXISTS user_friends_not_self_check,
+    ADD CONSTRAINT user_friends_not_self_check
+        CHECK (user_id <> friend_user_id);
 
 
 -- -------------------------
@@ -142,6 +176,8 @@ ALTER TABLE users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE schedules ENABLE ROW LEVEL SECURITY;
 ALTER TABLE schedule_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE reviews ENABLE ROW LEVEL SECURITY;
+ALTER TABLE social_sync_preferences ENABLE ROW LEVEL SECURITY;
+ALTER TABLE user_friends ENABLE ROW LEVEL SECURITY;
 
 -- users: only see/insert/update your own row (by auth_uid)
 DROP POLICY IF EXISTS users_select_own ON users;
@@ -336,6 +372,115 @@ USING (
   EXISTS (
     SELECT 1 FROM users u
     WHERE u.id = reviews.user_id
+      AND u.auth_uid = auth.uid()
+  )
+);
+
+-- social_sync_preferences: only owner can read/write their own opt-in setting
+-- Keep privacy straightforward: you can manage your own row only.
+DROP POLICY IF EXISTS social_sync_preferences_select_own ON social_sync_preferences;
+CREATE POLICY social_sync_preferences_select_own
+ON social_sync_preferences
+AS PERMISSIVE
+FOR SELECT
+TO authenticated
+USING (
+  EXISTS (
+    SELECT 1 FROM users u
+    WHERE u.id = social_sync_preferences.user_id
+      AND u.auth_uid = auth.uid()
+  )
+);
+
+DROP POLICY IF EXISTS social_sync_preferences_insert_own ON social_sync_preferences;
+CREATE POLICY social_sync_preferences_insert_own
+ON social_sync_preferences
+AS PERMISSIVE
+FOR INSERT
+TO authenticated
+WITH CHECK (
+  EXISTS (
+    SELECT 1 FROM users u
+    WHERE u.id = social_sync_preferences.user_id
+      AND u.auth_uid = auth.uid()
+  )
+);
+
+DROP POLICY IF EXISTS social_sync_preferences_update_own ON social_sync_preferences;
+CREATE POLICY social_sync_preferences_update_own
+ON social_sync_preferences
+AS PERMISSIVE
+FOR UPDATE
+TO authenticated
+USING (
+  EXISTS (
+    SELECT 1 FROM users u
+    WHERE u.id = social_sync_preferences.user_id
+      AND u.auth_uid = auth.uid()
+  )
+)
+WITH CHECK (
+  EXISTS (
+    SELECT 1 FROM users u
+    WHERE u.id = social_sync_preferences.user_id
+      AND u.auth_uid = auth.uid()
+  )
+);
+
+DROP POLICY IF EXISTS social_sync_preferences_delete_own ON social_sync_preferences;
+CREATE POLICY social_sync_preferences_delete_own
+ON social_sync_preferences
+AS PERMISSIVE
+FOR DELETE
+TO authenticated
+USING (
+  EXISTS (
+    SELECT 1 FROM users u
+    WHERE u.id = social_sync_preferences.user_id
+      AND u.auth_uid = auth.uid()
+  )
+);
+
+-- user_friends: you may only read/write rows where you are the owner side (user_id)
+-- You can manage your own friend list rows, not someone else's.
+DROP POLICY IF EXISTS user_friends_select_own ON user_friends;
+CREATE POLICY user_friends_select_own
+ON user_friends
+AS PERMISSIVE
+FOR SELECT
+TO authenticated
+USING (
+  EXISTS (
+    SELECT 1 FROM users u
+    WHERE u.id = user_friends.user_id
+      AND u.auth_uid = auth.uid()
+  )
+);
+
+DROP POLICY IF EXISTS user_friends_insert_own ON user_friends;
+CREATE POLICY user_friends_insert_own
+ON user_friends
+AS PERMISSIVE
+FOR INSERT
+TO authenticated
+WITH CHECK (
+  EXISTS (
+    SELECT 1 FROM users u
+    WHERE u.id = user_friends.user_id
+      AND u.auth_uid = auth.uid()
+  )
+);
+
+DROP POLICY IF EXISTS user_friends_delete_own ON user_friends;
+CREATE POLICY user_friends_delete_own
+ON user_friends
+AS PERMISSIVE
+FOR DELETE
+TO authenticated
+USING (
+  EXISTS (
+    SELECT 1 FROM users u
+    WHERE u.id = user_friends.user_id
       AND u.auth_uid = auth.uid()
   )
 );

@@ -11,6 +11,10 @@ INSERT INTO users (email, name)
 SELECT 'wesley@csulb.edu', 'Wesley Chen'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email='wesley@csulb.edu');
 
+INSERT INTO users (email, name)
+SELECT 'taylor@csulb.edu', 'Taylor Park'
+WHERE NOT EXISTS (SELECT 1 FROM users WHERE email='taylor@csulb.edu');
+
 
 -- ---------- COURSES ----------
 -- NOTE: your current courses table includes instructor/status/meeting_time.
@@ -254,3 +258,122 @@ WHERE u.email='demo@csulb.edu'
     SELECT 1 FROM reviews r
     WHERE r.user_id=u.id AND r.course_id=c.id
   );
+
+
+-- ---------- SOCIAL SECTION SYNC ----------
+-- Opt-in preferences
+-- Keep demo users opted in so the feature works right away in local runs.
+INSERT INTO social_sync_preferences (user_id, enabled)
+SELECT id, TRUE
+FROM users
+WHERE email IN ('demo@csulb.edu', 'wesley@csulb.edu', 'taylor@csulb.edu')
+ON CONFLICT (user_id) DO UPDATE SET enabled = EXCLUDED.enabled, updated_at = now();
+
+-- Demo user friend graph
+-- Bidirectional inserts: each user can see the other in their own friend list.
+WITH demo_user AS (
+  SELECT id AS user_id FROM users WHERE email='demo@csulb.edu' LIMIT 1
+),
+wesley AS (
+  SELECT id AS user_id FROM users WHERE email='wesley@csulb.edu' LIMIT 1
+),
+taylor AS (
+  SELECT id AS user_id FROM users WHERE email='taylor@csulb.edu' LIMIT 1
+)
+INSERT INTO user_friends (user_id, friend_user_id)
+SELECT demo_user.user_id, wesley.user_id FROM demo_user, wesley
+ON CONFLICT (user_id, friend_user_id) DO NOTHING;
+
+WITH demo_user AS (
+  SELECT id AS user_id FROM users WHERE email='demo@csulb.edu' LIMIT 1
+),
+wesley AS (
+  SELECT id AS user_id FROM users WHERE email='wesley@csulb.edu' LIMIT 1
+)
+INSERT INTO user_friends (user_id, friend_user_id)
+SELECT wesley.user_id, demo_user.user_id FROM demo_user, wesley
+ON CONFLICT (user_id, friend_user_id) DO NOTHING;
+
+WITH demo_user AS (
+  SELECT id AS user_id FROM users WHERE email='demo@csulb.edu' LIMIT 1
+),
+taylor AS (
+  SELECT id AS user_id FROM users WHERE email='taylor@csulb.edu' LIMIT 1
+)
+INSERT INTO user_friends (user_id, friend_user_id)
+SELECT demo_user.user_id, taylor.user_id FROM demo_user, taylor
+ON CONFLICT (user_id, friend_user_id) DO NOTHING;
+
+WITH demo_user AS (
+  SELECT id AS user_id FROM users WHERE email='demo@csulb.edu' LIMIT 1
+),
+taylor AS (
+  SELECT id AS user_id FROM users WHERE email='taylor@csulb.edu' LIMIT 1
+)
+INSERT INTO user_friends (user_id, friend_user_id)
+SELECT taylor.user_id, demo_user.user_id FROM demo_user, taylor
+ON CONFLICT (user_id, friend_user_id) DO NOTHING;
+
+-- Friend schedules for sync demo
+-- Give friends a Spring 2026 schedule with different CECS 378 sections for overlap testing.
+INSERT INTO schedules (user_id, term)
+SELECT u.id, 'Spring 2026'
+FROM users u
+WHERE u.email='wesley@csulb.edu'
+  AND NOT EXISTS (
+    SELECT 1 FROM schedules s
+    WHERE s.user_id=u.id AND s.term='Spring 2026'
+  );
+
+INSERT INTO schedules (user_id, term)
+SELECT u.id, 'Spring 2026'
+FROM users u
+WHERE u.email='taylor@csulb.edu'
+  AND NOT EXISTS (
+    SELECT 1 FROM schedules s
+    WHERE s.user_id=u.id AND s.term='Spring 2026'
+  );
+
+WITH wesley_schedule AS (
+  SELECT s.id AS schedule_id
+  FROM schedules s
+  JOIN users u ON u.id = s.user_id
+  WHERE u.email='wesley@csulb.edu' AND s.term='Spring 2026'
+  LIMIT 1
+),
+wesley_section AS (
+  SELECT sec.id AS section_id
+  FROM sections sec
+  JOIN courses c ON c.id = sec.course_id
+  WHERE c.subject='CECS' AND c.number='378' AND sec.term='Spring 2026' AND sec.class_number=6539
+  LIMIT 1
+)
+INSERT INTO schedule_items (schedule_id, section_id)
+SELECT ws.schedule_id, sec.section_id
+FROM wesley_schedule ws, wesley_section sec
+WHERE NOT EXISTS (
+  SELECT 1 FROM schedule_items si
+  WHERE si.schedule_id = ws.schedule_id AND si.section_id = sec.section_id
+);
+
+WITH taylor_schedule AS (
+  SELECT s.id AS schedule_id
+  FROM schedules s
+  JOIN users u ON u.id = s.user_id
+  WHERE u.email='taylor@csulb.edu' AND s.term='Spring 2026'
+  LIMIT 1
+),
+taylor_section AS (
+  SELECT sec.id AS section_id
+  FROM sections sec
+  JOIN courses c ON c.id = sec.course_id
+  WHERE c.subject='CECS' AND c.number='378' AND sec.term='Spring 2026' AND sec.class_number=4624
+  LIMIT 1
+)
+INSERT INTO schedule_items (schedule_id, section_id)
+SELECT ts.schedule_id, sec.section_id
+FROM taylor_schedule ts, taylor_section sec
+WHERE NOT EXISTS (
+  SELECT 1 FROM schedule_items si
+  WHERE si.schedule_id = ts.schedule_id AND si.section_id = sec.section_id
+);

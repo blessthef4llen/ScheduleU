@@ -61,3 +61,19 @@ CREATE TABLE IF NOT EXISTS schedule_items (
     section_id  BIGINT NOT NULL,
     created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+-- Social section sync preference for each user (opted in or not).
+CREATE TABLE IF NOT EXISTS social_sync_preferences (
+    user_id    INTEGER PRIMARY KEY,
+    enabled    BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Simple directed friend links; app logic writes both directions.
+CREATE TABLE IF NOT EXISTS user_friends (
+    user_id        INTEGER NOT NULL,
+    friend_user_id INTEGER NOT NULL,
+    created_at     TIMESTAMPTZ NOT NULL DEFAULT now(),
+    PRIMARY KEY (user_id, friend_user_id)
+);

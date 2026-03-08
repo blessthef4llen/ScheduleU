@@ -63,3 +63,28 @@ FROM schedules sch
 JOIN schedule_items si ON si.schedule_id = sch.id
 JOIN sections sec ON sec.id = si.section_id
 JOIN courses c ON c.id = sec.course_id;
+
+CREATE OR REPLACE VIEW v_social_section_sync AS
+-- Flatten schedule + section + course data for social sharing queries.
+SELECT
+  sch.user_id,
+  sch.term,
+  sec.id AS section_id,
+  sec.sec,
+  sec.class_number,
+  sec.component_type,
+  sec.days,
+  sec.time_range,
+  sec.location,
+  sec.instructor,
+  sec.open_seats,
+  sec.capacity,
+  sec.status,
+  c.subject,
+  c.number,
+  c.title,
+  c.units
+FROM schedules sch
+JOIN schedule_items si ON si.schedule_id = sch.id
+JOIN sections sec ON sec.id = si.section_id
+JOIN courses c ON c.id = sec.course_id;
