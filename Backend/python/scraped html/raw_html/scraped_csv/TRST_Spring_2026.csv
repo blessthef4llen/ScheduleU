@@ -1,0 +1,14 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,TRST,201,TRST 201,MEANING IN TRANSIT,3,GE: 3B (C2),01,5272,Spring_2026|TRST 201|01|5272,FALSE,\N,"1,310",SEM,MW,2-3:15PM,available,LA1-212,Balzani A,Class instruction is: Face to Face - On Campus.
+Spring_2026,TRST,201,TRST 201,MEANING IN TRANSIT,3,GE: 3B (C2),02,5274,Spring_2026|TRST 201|02|5274,TRUE,\N,"1,310",SEM,TuTh,2-3:15PM,available,LA1-212,Taylor J,Class instruction is: Face to Face - On Campus.
+Spring_2026,TRST,301,TRST 301,"TRANS:ETHICS, THEORY, PRACTICE",3,GE: 4UD (UDD),01,5273,Spring_2026|TRST 301|01|5273,FALSE,\N,"1,310",SEM,MW,3:30-4:45PM,available,LA1-212,Tatro J,Class instruction is: Face to Face - On Campus.
+Spring_2026,TRST,301,TRST 301,"TRANS:ETHICS, THEORY, PRACTICE",3,GE: 4UD (UDD),02,6292,Spring_2026|TRST 301|02|6292,FALSE,\N,"1,310",SEM,TuTh,3:30-4:45PM,available,LA1-212,Meade A,Class instruction is: Face to Face - On Campus.
+Spring_2026,TRST,400,TRST 400,INDEPENDENT LANGUAGE STUDY,3,,01,5966,Spring_2026|TRST 400|01|5966,FALSE,\N,"1,3,305",SUP,TBA,NA,available,ONLINE-ONLY,Staff,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,TRST,401,TRST 401,TRANSLATION WORKSHOP,3,,01,5965,Spring_2026|TRST 401|01|5965,FALSE,\N,"1,310",SEM,Tu,5-7:45PM,available,LA1-212,Balzani A,Class instruction is: Face to Face - On Campus.
+Spring_2026,TRST,465,TRST 465,COMMUNITY INTERPRETING,3,,01,10169,Spring_2026|TRST 465|01|10169,FALSE,\N,"1,13,309",LEC,Tu,12-1:15PM,available,ONLINE-ONLY,Ziamandanis C,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,TRST,465,TRST 465,COMMUNITY INTERPRETING,3,,01,\N,Spring_2026|TRST 465|01|NOCLASS|6fea915514ff00a8,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Ziamandanis C,additional meeting detail
+Spring_2026,TRST,499,TRST 499,DIRECTED STUDY,1,,01,8013,Spring_2026|TRST 499|01|8013,FALSE,\N,"305,1,3",SUP,TBA,NA,available,ONLINE-ONLY,Staff,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,TRST,565,TRST 565,COMMUNITY INTERPRETING,3,,01,10170,Spring_2026|TRST 565|01|10170,FALSE,\N,"1,13,309",LEC,Tu,12-1:15PM,available,ONLINE-ONLY,Ziamandanis C,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,TRST,565,TRST 565,COMMUNITY INTERPRETING,3,,01,\N,Spring_2026|TRST 565|01|NOCLASS|e163f28503a4ffe8,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Ziamandanis C,additional meeting detail
+Spring_2026,TRST,599,TRST 599,DIRECTED STUDY,1,,01,9046,Spring_2026|TRST 599|01|9046,FALSE,\N,"1,3,305",SUP,TBA,NA,available,ONLINE-ONLY,Staff,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,TRST,696,TRST 696,RESEARCH MTHDS FOR TRANSLATORS,3,,01,6713,Spring_2026|TRST 696|01|6713,FALSE,\N,"1,310",LEC,W,5-7:45PM,available,LA1-212,Meade A,Class instruction is: Face to Face - On Campus.
