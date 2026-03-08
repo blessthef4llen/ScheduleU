@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { supabase } from '@/utils/supabase'
+import Link from 'next/link'
 
 type RawCourseRow = Record<string, unknown>
 
@@ -39,108 +40,134 @@ const SEMESTER_OPTIONS = [
 ]
 
 const SUBJECT_OPTIONS = [
-  'AAAS',
   'ACCT',
   'AFRS',
-  'AH',
+  'ASLD',
   'AIS',
   'AMST',
   'ANTH',
   'ARAB',
   'ART',
+  'AH',
+  'AAAS',
   'ASAM',
-  'ASLD',
+  'A/ST',
+  'ASTR',
   'AT',
   'ATHL',
-  'AXST_CLASSES',
-  'BLAW',
+  'BIOL',
   'BME',
-  'C E',
-  'CAFF',
+  'BLAW',
   'CBA',
-  'CDFS',
-  'CECS',
-  'CEM',
+  'OLNE',
+  'KHMR',
   'CH E',
-  'CHIN',
+  'CHEM',
   'CHLS',
+  'CDFS',
+  'CHIN',
   'CINE',
-  'CLA_CLASSES',
+  'C E',
   'CLSC',
   'COMM',
+  'CWL',
+  'CECS',
+  'XYZ',
+  'CEM',
+  'CAFF',
   'COUN',
   'CRJU',
-  'CWL',
   'DANC',
   'DESN',
   'DPT',
-  'E E',
+  'ERTH',
   'ECON',
-  'ED P',
-  'EDAD',
+  'EDLD',
   'EDCI',
   'EDEC',
   'EDEL',
-  'EDLD',
   'EDSE',
-  'EDSP',
   'EDSS',
-  'EESJ',
+  'EDSP',
+  'EDAD',
+  'ED P',
+  'ETEC',
+  'E E',
   'EMER',
   'ENGR',
+  'E T',
   'ENGL',
-  'ENV',
   'ES',
+  'ENV',
   'ES P',
-  'ETEC',
+  'EESJ',
+  'FMD',
   'FIL',
   'FIN',
-  'FMD',
-  'FREN',
   'FSCI',
-  'G S',
-  'GBA',
+  'FREN',
   'GEOG',
   'GERM',
   'GERN',
-  'GK',
   'GLST',
-  'H SC',
+  'GBA',
+  'GK',
   'HCA',
-  'HDEV',
+  'H SC',
   'HEBW',
   'HIST',
   'HM',
+  'HDEV',
   'HRM',
   'I S',
   'IB',
+  'INTL',
   'ITAL',
   'JAPN',
   'JOUR',
-  'KHMR',
   'KIN',
   'KOR',
   'LAT',
-  'LXSTCLASSES',
-  'M S',
-  'MAE',
+  'C/LA',
+  'L/ST',
+  'LING',
   'MGMT',
   'MKTG',
+  'MATH',
+  'MTED',
+  'MAE',
+  'M S',
   'MUS',
+  'NSCI',
   'NRSG',
   'NUTR',
+  'PHIL',
+  'PHSC',
+  'PHYS',
+  'POSC',
+  'PSY',
   'PPA',
   'REC',
+  'R/ST',
+  'RGR',
+  'RUSS',
+  'SCED',
   'S W',
-  'SCM',
-  'SDHE',
-  'SI_CLASSES',
+  'SOC',
+  'SPAN',
   'SLP',
+  'STAT',
+  'SDHE',
   'SRL',
+  'S/I',
+  'SCM',
   'THEA',
-  'UDCP',
-  'UHP',
+  'TRST',
   'UNIV',
+  'UHP',
+  'UDCP',
+  'VIET',
+  'WGSS',
 ] as const
 
 function asText(value: unknown, fallback = 'N/A'): string {
@@ -150,9 +177,25 @@ function asText(value: unknown, fallback = 'N/A'): string {
 }
 
 function splitCode(code: string): { subject: string; courseNumber: string } {
-  const match = code.match(/^([A-Za-z]+)\s*(.+)$/)
+  const match = code.trim().match(/^([A-Za-z_]+)\s*[-]?\s*(.+)$/)
   if (!match) return { subject: '', courseNumber: '' }
   return { subject: match[1].toUpperCase(), courseNumber: match[2].trim() }
+}
+
+function normalizeCourseNumber(subject: string, courseNumber: string): string {
+  const normalizedSubject = subject.trim().toUpperCase()
+  const normalizedNumber = courseNumber.trim()
+  if (normalizedSubject === 'UHP') {
+    return normalizedNumber.replace(/H$/i, '')
+  }
+  return normalizedNumber
+}
+
+function normalizeCourseCode(rawCode: string): string {
+  const cleaned = rawCode.replace(/\s+/g, ' ').trim()
+  const { subject, courseNumber } = splitCode(cleaned)
+  if (!subject || !courseNumber) return cleaned
+  return `${subject} ${normalizeCourseNumber(subject, courseNumber)}`.trim()
 }
 
 function courseCodeFromRow(row: RawCourseRow): string {
@@ -163,7 +206,7 @@ function courseCodeFromRow(row: RawCourseRow): string {
     asText(row.course_code, '') ||
     asText(row.course, '') ||
     'Unknown Course'
-  return codeRaw.replace(/\s+/g, ' ').trim()
+  return normalizeCourseCode(codeRaw)
 }
 
 function sectionSortParts(section: string): [number, string] {
@@ -171,6 +214,10 @@ function sectionSortParts(section: string): [number, string] {
   const match = normalized.match(/^(\d+)(.*)$/)
   if (!match) return [Number.MAX_SAFE_INTEGER, normalized]
   return [Number(match[1]), (match[2] || '').trim()]
+}
+
+function isHonorsCourse(subject: string, courseNumber: string): boolean {
+  return subject.trim().toUpperCase() === 'UHP' || /H$/i.test(courseNumber.trim())
 }
 
 function normalizeCourses(rows: RawCourseRow[]): CourseItem[] {
@@ -184,7 +231,7 @@ function normalizeCourses(rows: RawCourseRow[]): CourseItem[] {
       asText(row.course_code, '') ||
       asText(row.course, '') ||
       'Unknown Course'
-    const code = codeRaw.replace(/\s+/g, ' ').trim()
+    const code = normalizeCourseCode(codeRaw)
     const title =
       asText(row.course_title, '') ||
       asText(row.title, '') ||
@@ -207,7 +254,7 @@ function normalizeCourses(rows: RawCourseRow[]): CourseItem[] {
     byCourse.set(code, {
       code,
       subject: parsed.subject,
-      courseNumber: parsed.courseNumber,
+      courseNumber: normalizeCourseNumber(parsed.subject, parsed.courseNumber),
       title,
       units,
       sectionCount: 1,
@@ -224,6 +271,10 @@ export default function CoursesPage() {
   const [courseCodeFilter, setCourseCodeFilter] = useState('')
   const [titleFilter, setTitleFilter] = useState('')
   const [unitsFilter, setUnitsFilter] = useState('')
+  const [honorsOnly, setHonorsOnly] = useState(false)
+  const [courseNumberOptions, setCourseNumberOptions] = useState<string[]>([])
+  const [loadingCourseNumbers, setLoadingCourseNumbers] = useState(false)
+  const [courseNumberLoadError, setCourseNumberLoadError] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [loaded, setLoaded] = useState(false)
@@ -287,22 +338,106 @@ export default function CoursesPage() {
     const unitsQuery = unitsFilter.trim().toLowerCase()
 
     return courses.filter((course) => {
-      const matchesSubject = subjectFilter === 'all' || course.subject === subjectFilter
+      const matchesSubject =
+        subjectFilter === 'all' ||
+        (subjectFilter === 'UHP' ? course.subject === 'UHP' : course.subject === subjectFilter)
       const matchesCode =
-        !codeQuery ||
-        course.code.toLowerCase().includes(codeQuery) ||
-        course.courseNumber.toLowerCase().includes(codeQuery)
+        !codeQuery || course.courseNumber.toLowerCase() === codeQuery
       const matchesTitle = !titleQuery || course.title.toLowerCase().includes(titleQuery)
       const matchesUnits = !unitsQuery || course.units.toLowerCase().includes(unitsQuery)
+      const matchesHonors =
+        subjectFilter === 'UHP' || !honorsOnly || isHonorsCourse(course.subject, course.courseNumber)
 
       return (
         matchesSubject &&
         matchesCode &&
         matchesTitle &&
-        matchesUnits
+        matchesUnits &&
+        matchesHonors
       )
     })
-  }, [courses, courseCodeFilter, subjectFilter, titleFilter, unitsFilter])
+  }, [courses, courseCodeFilter, honorsOnly, subjectFilter, titleFilter, unitsFilter])
+
+  useEffect(() => {
+    const loadCourseNumbersForSubject = async () => {
+      setCourseCodeFilter('')
+      setCourseNumberOptions([])
+      setCourseNumberLoadError('')
+
+      if (subjectFilter === 'all' || !semesterTable) return
+
+      setLoadingCourseNumbers(true)
+      try {
+        const subjectUpper = subjectFilter.trim().toUpperCase()
+        const [{ data: bySubject, error: bySubjectError }, { data: byCode, error: byCodeError }] =
+          await Promise.all([
+            supabase
+              .from(semesterTable)
+              .select('subject,course_number,course_code_full')
+              .eq('subject', subjectUpper)
+              .limit(5000),
+            supabase
+              .from(semesterTable)
+              .select('subject,course_number,course_code_full')
+              .ilike('course_code_full', `${subjectUpper}%`)
+              .limit(5000),
+          ])
+
+        if (bySubjectError) throw new Error(bySubjectError.message)
+        if (byCodeError) throw new Error(byCodeError.message)
+
+        const mergedRows = [...(bySubject ?? []), ...(byCode ?? [])]
+        const deduped = new Map<string, Record<string, unknown>>()
+        for (const row of mergedRows) {
+          const key = `${String((row as Record<string, unknown>).subject ?? '')}|${String((row as Record<string, unknown>).course_number ?? '')}|${String((row as Record<string, unknown>).course_code_full ?? '')}`
+          deduped.set(key, row as Record<string, unknown>)
+        }
+        const numbers = new Set<string>()
+        for (const row of deduped.values()) {
+          const rowSubject = String((row as Record<string, unknown>).subject ?? '')
+            .trim()
+            .toUpperCase()
+          const codeFull = String((row as Record<string, unknown>).course_code_full ?? '')
+            .trim()
+            .toUpperCase()
+          const parsedFromCode = splitCode(codeFull)
+          const codeSubject = parsedFromCode.subject
+          const codeNumber = parsedFromCode.courseNumber
+
+          const belongsToSubject =
+            subjectFilter === 'UHP'
+              ? rowSubject === 'UHP' || codeSubject === 'UHP'
+              : rowSubject === subjectUpper || codeSubject === subjectUpper
+          if (!belongsToSubject) continue
+
+          const number =
+            String((row as Record<string, unknown>).course_number ?? '').trim() ||
+            codeNumber
+
+          if (!number) continue
+          const normalizedNumber = normalizeCourseNumber(subjectFilter, number)
+          if (!normalizedNumber) continue
+          if (honorsOnly && subjectFilter !== 'UHP' && !/H$/i.test(normalizedNumber)) continue
+          numbers.add(normalizedNumber)
+        }
+
+        setCourseNumberOptions(
+          Array.from(numbers).sort((a, b) =>
+            a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+          )
+        )
+      } catch (err) {
+        setCourseNumberOptions([])
+        setCourseNumberLoadError(
+          err instanceof Error ? `Could not load course numbers: ${err.message}` : 'Could not load course numbers.'
+        )
+      } finally {
+        setLoadingCourseNumbers(false)
+      }
+    }
+
+    void loadCourseNumbersForSubject()
+  }, [honorsOnly, semesterTable, subjectFilter])
 
   const totalPages = Math.max(1, Math.ceil(filteredCourses.length / pageSize))
   const paginatedCourses = useMemo(() => {
@@ -320,7 +455,7 @@ export default function CoursesPage() {
 
   useEffect(() => {
     setCurrentPage(1)
-  }, [subjectFilter, courseCodeFilter, titleFilter, unitsFilter, semesterTable, pageSize])
+  }, [subjectFilter, courseCodeFilter, titleFilter, unitsFilter, honorsOnly, semesterTable, pageSize])
 
   useEffect(() => {
     if (currentPage > totalPages) {
@@ -423,7 +558,28 @@ export default function CoursesPage() {
     <div className="min-h-screen bg-slate-50 text-black p-4 md:p-5">
       <div className="mx-auto max-w-7xl space-y-4">
         <header className="space-y-2">
-          <h1 className="text-3xl font-bold text-blue-700">Course Search</h1>
+          <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+            <h1 className="text-3xl font-bold text-blue-700">Course Search</h1>
+            <div className="flex items-center gap-2">
+              <Link
+                href="/dashboard"
+                aria-label="Back to dashboard"
+                title="Back to dashboard"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M3 10.5L12 3l9 7.5" />
+                  <path d="M5 9.5V21h14V9.5" />
+                </svg>
+              </Link>
+              <Link
+                href="/schedule-builder"
+                className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+              >
+                Open Schedule Builder
+              </Link>
+            </div>
+          </div>
           <p className="text-slate-700">
             Set filters, then load a semester and browse matching courses.
           </p>
@@ -505,17 +661,28 @@ export default function CoursesPage() {
 
             <div>
               <label htmlFor="courseCodeFilter" className="block text-sm font-medium text-slate-700 mb-1">
-                Course code
+                Course Number
               </label>
-              <input
+              <select
                 id="courseCodeFilter"
-                type="text"
                 value={courseCodeFilter}
                 onChange={(event) => setCourseCodeFilter(event.target.value)}
-                placeholder="e.g. 342 or 123"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2"
-                disabled={loading}
-              />
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                disabled={loading || subjectFilter === 'all' || loadingCourseNumbers}
+              >
+                <option value="">
+                  {subjectFilter === 'all'
+                    ? 'Pick subject first'
+                    : loadingCourseNumbers
+                      ? 'Loading course numbers...'
+                      : 'Select course number'}
+                </option>
+                {courseNumberOptions.map((num) => (
+                  <option key={num} value={num}>
+                    {num}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div>
@@ -532,11 +699,31 @@ export default function CoursesPage() {
                 disabled={loading}
               />
             </div>
+
+            <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+              <input
+                id="honorsOnly"
+                type="checkbox"
+                checked={honorsOnly}
+                onChange={(event) => setHonorsOnly(event.target.checked)}
+                className="h-4 w-4"
+                disabled={loading}
+              />
+              <label htmlFor="honorsOnly" className="text-sm font-medium text-slate-700">
+                Honors only (UHP or course number ending in H)
+              </label>
+            </div>
           </div>
 
           {error && (
             <p className="rounded-lg border border-red-200 bg-red-50 text-red-700 px-3 py-2 text-sm">
               Error loading courses: {error}
+            </p>
+          )}
+
+          {courseNumberLoadError && (
+            <p className="rounded-lg border border-amber-200 bg-amber-50 text-amber-700 px-3 py-2 text-sm">
+              {courseNumberLoadError}
             </p>
           )}
 
@@ -552,7 +739,7 @@ export default function CoursesPage() {
             {loaded ? (
               <>
                 Showing <span className="font-semibold">{paginatedCourses.length}</span> of{' '}
-                <span className="font-semibold">{courses.length}</span> courses
+                <span className="font-semibold">{filteredCourses.length}</span> courses
               </>
             ) : (
               'Load a semester to see available courses.'
@@ -564,7 +751,7 @@ export default function CoursesPage() {
               <article key={course.code} className="px-4 py-2">
                 <button
                   type="button"
-                  className="w-full rounded-lg p-2 text-left hover:bg-slate-50"
+                  className="w-full rounded-lg p-2 text-left transition-colors hover:bg-slate-200 focus-visible:bg-slate-200"
                   onClick={() =>
                     setExpandedCourseCode((prev) => (prev === course.code ? null : course.code))
                   }
@@ -587,22 +774,22 @@ export default function CoursesPage() {
 
                     <div className="flex flex-col gap-3">
                       {(sectionsByCourseCode.get(course.code) ?? []).map((section, idx) => (
-                        <div key={`${course.code}-${section.class_number}-${idx}`} className="rounded-lg border border-slate-200 bg-white p-3">
+                        <div key={`${course.code}-${section.class_number}-${idx}`} className="rounded-lg border border-slate-300 bg-slate-50 p-3 transition-all hover:border-slate-400 hover:shadow-sm">
                           <div className="mb-2 text-sm font-semibold text-slate-800">
                             Section {section.section || 'N/A'} • Class #{section.class_number || 'N/A'}
                           </div>
                           <div className="grid gap-2 lg:grid-cols-3 text-sm">
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Code</p><p className="text-slate-800 break-words">{section.course_code_full}</p></div>
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Type</p><p className="text-slate-800 break-words">{section.type}</p></div>
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Location</p><p className="text-slate-800 break-words">{section.location}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Code</p><p className="text-slate-900 break-words">{section.course_code_full}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Type</p><p className="text-slate-900 break-words">{section.type}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Location</p><p className="text-slate-900 break-words">{section.location}</p></div>
 
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Title</p><p className="text-slate-800 break-words">{section.course_title}</p></div>
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Info</p><p className="text-slate-800 break-words">{section.course_info}</p></div>
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Days</p><p className="text-slate-800 break-words">{section.days}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Title</p><p className="text-slate-900 break-words">{section.course_title}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Info</p><p className="text-slate-900 break-words">{section.course_info}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Days</p><p className="text-slate-900 break-words">{section.days}</p></div>
 
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Units</p><p className="text-slate-800 break-words">{section.units}</p></div>
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Instructor</p><p className="text-slate-800 break-words">{section.instructor}</p></div>
-                            <div className="rounded bg-slate-50 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Time</p><p className="text-slate-800 break-words">{section.time}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Units</p><p className="text-slate-900 break-words">{section.units}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Instructor</p><p className="text-slate-900 break-words">{section.instructor}</p></div>
+                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Time</p><p className="text-slate-900 break-words">{section.time}</p></div>
                           </div>
 
                           <div className="mt-3">
@@ -610,7 +797,7 @@ export default function CoursesPage() {
                               type="button"
                               onClick={() => addSectionToCart(section)}
                               disabled={savingKey === `${section.course_code_full}|${section.class_number}|${section.section}`}
-                              className="rounded bg-emerald-600 px-3 py-1.5 text-white text-sm font-medium hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="rounded bg-emerald-600 px-3 py-1.5 text-white text-sm font-medium transition-colors hover:bg-emerald-800 disabled:opacity-60 disabled:cursor-not-allowed"
                             >
                               {savingKey === `${section.course_code_full}|${section.class_number}|${section.section}`
                                 ? 'Adding...'

@@ -1,0 +1,694 @@
+'use client'
+
+import { useEffect, useMemo, useState } from 'react'
+import Link from 'next/link'
+import { supabase } from '@/utils/supabase'
+
+type CartRow = {
+  term_table: string
+  course_code_full: string
+  course_title: string | null
+}
+
+type SelectedMeeting = {
+  type?: string | null
+  day: string
+  start: string
+  end: string
+  location?: string | null
+  instructor?: string | null
+  comments?: string | null
+}
+
+type SelectedSection = {
+  course: string
+  section_id: string
+  meetings: SelectedMeeting[]
+}
+
+type TermScheduleResponse = {
+  term: string
+  selected_sections: SelectedSection[]
+  unscheduled_courses: string[]
+  warnings: string[]
+}
+
+const backendBaseUrl = process.env.NEXT_PUBLIC_SCHEDULER_API_URL ?? 'http://localhost:8000'
+const SEMESTER_OPTIONS = [
+  { label: 'Spring 2026', table: 'spring_2026' },
+  { label: 'Summer 2026', table: 'summer_2026' },
+  { label: 'Fall 2026', table: 'fall_2026', disabled: true },
+  { label: 'Winter 2027', table: 'winter_2027', disabled: true },
+] as const
+const SUBJECT_OPTIONS = [
+  'ACCT',
+  'AFRS',
+  'ASLD',
+  'AIS',
+  'AMST',
+  'ANTH',
+  'ARAB',
+  'ART',
+  'AH',
+  'AAAS',
+  'ASAM',
+  'A/ST',
+  'ASTR',
+  'AT',
+  'ATHL',
+  'BIOL',
+  'BME',
+  'BLAW',
+  'CBA',
+  'OLNE',
+  'KHMR',
+  'CH E',
+  'CHEM',
+  'CHLS',
+  'CDFS',
+  'CHIN',
+  'CINE',
+  'C E',
+  'CLSC',
+  'COMM',
+  'CWL',
+  'CECS',
+  'XYZ',
+  'CEM',
+  'CAFF',
+  'COUN',
+  'CRJU',
+  'DANC',
+  'DESN',
+  'DPT',
+  'ERTH',
+  'ECON',
+  'EDLD',
+  'EDCI',
+  'EDEC',
+  'EDEL',
+  'EDSE',
+  'EDSS',
+  'EDSP',
+  'EDAD',
+  'ED P',
+  'ETEC',
+  'E E',
+  'EMER',
+  'ENGR',
+  'E T',
+  'ENGL',
+  'ES',
+  'ENV',
+  'ES P',
+  'EESJ',
+  'FMD',
+  'FIL',
+  'FIN',
+  'FSCI',
+  'FREN',
+  'GEOG',
+  'GERM',
+  'GERN',
+  'GLST',
+  'GBA',
+  'GK',
+  'HCA',
+  'H SC',
+  'HEBW',
+  'HIST',
+  'HM',
+  'HDEV',
+  'HRM',
+  'I S',
+  'IB',
+  'INTL',
+  'ITAL',
+  'JAPN',
+  'JOUR',
+  'KIN',
+  'KOR',
+  'LAT',
+  'C/LA',
+  'L/ST',
+  'LING',
+  'MGMT',
+  'MKTG',
+  'MATH',
+  'MTED',
+  'MAE',
+  'M S',
+  'MUS',
+  'NSCI',
+  'NRSG',
+  'NUTR',
+  'PHIL',
+  'PHSC',
+  'PHYS',
+  'POSC',
+  'PSY',
+  'PPA',
+  'REC',
+  'R/ST',
+  'RGR',
+  'RUSS',
+  'SCED',
+  'S W',
+  'SOC',
+  'SPAN',
+  'SLP',
+  'STAT',
+  'SDHE',
+  'SRL',
+  'S/I',
+  'SCM',
+  'THEA',
+  'TRST',
+  'UNIV',
+  'UHP',
+  'UDCP',
+  'VIET',
+  'WGSS',
+] as const
+
+function tableToTermLabel(table: string): string {
+  const normalized = table.trim().toLowerCase()
+  const match = normalized.match(/^([a-z]+)_(\d{4})$/)
+  if (!match) return table
+  const season = match[1]
+  const year = match[2]
+  const seasonMap: Record<string, string> = {
+    spring: 'Spring',
+    summer: 'Summer',
+    fall: 'Fall',
+    winter: 'Winter',
+  }
+  return `${seasonMap[season] ?? season} ${year}`
+}
+
+function isHonorsCourseCode(courseCode: string): boolean {
+  const normalized = courseCode.trim().toUpperCase()
+  if (!normalized) return false
+  if (normalized === 'UHP' || normalized.startsWith('UHP ')) return true
+
+  const parts = normalized.split(/\s+/)
+  if (parts.length < 2) return false
+  const numberPart = parts.slice(1).join('')
+  return /H$/i.test(numberPart)
+}
+
+function splitCode(code: string): { subject: string; courseNumber: string } {
+  const match = code.trim().match(/^([A-Za-z_]+)\s*[-]?\s*(.+)$/)
+  if (!match) return { subject: '', courseNumber: '' }
+  return { subject: match[1].toUpperCase(), courseNumber: match[2].trim() }
+}
+
+function normalizeCourseNumber(subject: string, courseNumber: string): string {
+  const normalizedSubject = subject.trim().toUpperCase()
+  const normalizedNumber = courseNumber.trim()
+  if (normalizedSubject === 'UHP') {
+    return normalizedNumber.replace(/H$/i, '')
+  }
+  return normalizedNumber
+}
+
+export default function ScheduleBuilderPage() {
+  const [loadingCart, setLoadingCart] = useState(false)
+  const [generating, setGenerating] = useState(false)
+  const [error, setError] = useState('')
+  const [message, setMessage] = useState('')
+  const [cartRows, setCartRows] = useState<CartRow[]>([])
+  const [selectedTermTable, setSelectedTermTable] = useState(SEMESTER_OPTIONS[0].table)
+  const [result, setResult] = useState<TermScheduleResponse | null>(null)
+  const [daysOffText, setDaysOffText] = useState('')
+  const [earliestTime, setEarliestTime] = useState('')
+  const [latestTime, setLatestTime] = useState('')
+  const [bufferMinutes, setBufferMinutes] = useState(15)
+  const [manualSubject, setManualSubject] = useState('')
+  const [manualCourseNumber, setManualCourseNumber] = useState('')
+  const [manualCourses, setManualCourses] = useState<string[]>([])
+  const [manualNumberOptions, setManualNumberOptions] = useState<string[]>([])
+  const [loadingNumbers, setLoadingNumbers] = useState(false)
+  const [numberLoadError, setNumberLoadError] = useState('')
+  const [honorsOnly, setHonorsOnly] = useState(false)
+
+  const requestedCourses = useMemo(() => {
+    const uniq = new Set<string>()
+    for (const row of cartRows) {
+      if (selectedTermTable && row.term_table !== selectedTermTable) continue
+      if (honorsOnly && !isHonorsCourseCode(row.course_code_full)) continue
+      if (row.course_code_full) uniq.add(row.course_code_full)
+    }
+    for (const course of manualCourses) {
+      if (honorsOnly && !isHonorsCourseCode(course)) continue
+      if (course) uniq.add(course)
+    }
+    return Array.from(uniq).sort()
+  }, [cartRows, honorsOnly, manualCourses, selectedTermTable])
+
+  const addManualCourse = () => {
+    const subject = manualSubject.trim().toUpperCase()
+    const number = normalizeCourseNumber(subject, manualCourseNumber.trim().toUpperCase())
+    if (!subject || !number) return
+
+    const courseCode = `${subject} ${number}`.replace(/\s+/g, ' ')
+    setManualCourses((prev) => (prev.includes(courseCode) ? prev : [...prev, courseCode]))
+    setManualSubject('')
+    setManualCourseNumber('')
+  }
+
+  const removeManualCourse = (courseCode: string) => {
+    setManualCourses((prev) => prev.filter((c) => c !== courseCode))
+  }
+
+  useEffect(() => {
+    const loadCourseNumbersForSubject = async () => {
+      setManualCourseNumber('')
+      setManualNumberOptions([])
+      setNumberLoadError('')
+
+      const subject = manualSubject.trim().toUpperCase()
+      if (!subject || !selectedTermTable) return
+
+      setLoadingNumbers(true)
+      try {
+        const subjectUpper = subject.trim().toUpperCase()
+        const [{ data: bySubject, error: bySubjectError }, { data: byCode, error: byCodeError }] =
+          await Promise.all([
+            supabase
+              .from(selectedTermTable)
+              .select('subject,course_number,course_code_full')
+              .eq('subject', subjectUpper)
+              .limit(5000),
+            supabase
+              .from(selectedTermTable)
+              .select('subject,course_number,course_code_full')
+              .ilike('course_code_full', `${subjectUpper}%`)
+              .limit(5000),
+          ])
+
+        if (bySubjectError) throw new Error(bySubjectError.message)
+        if (byCodeError) throw new Error(byCodeError.message)
+
+        const mergedRows = [...(bySubject ?? []), ...(byCode ?? [])]
+        const deduped = new Map<string, Record<string, unknown>>()
+        for (const row of mergedRows) {
+          const key = `${String((row as Record<string, unknown>).subject ?? '')}|${String((row as Record<string, unknown>).course_number ?? '')}|${String((row as Record<string, unknown>).course_code_full ?? '')}`
+          deduped.set(key, row as Record<string, unknown>)
+        }
+        const numbers = new Set<string>()
+        for (const row of deduped.values()) {
+          const rowSubject = String((row as Record<string, unknown>).subject ?? '')
+            .trim()
+            .toUpperCase()
+          const codeFull = String((row as Record<string, unknown>).course_code_full ?? '')
+            .trim()
+            .toUpperCase()
+          const parsedFromCode = splitCode(codeFull)
+          const codeSubject = parsedFromCode.subject
+          const codeNumber = parsedFromCode.courseNumber
+
+          const belongsToSubject =
+            subject === 'UHP'
+              ? rowSubject === 'UHP' || codeSubject === 'UHP'
+              : rowSubject === subjectUpper || codeSubject === subjectUpper
+
+          if (!belongsToSubject) continue
+
+          const courseNumberRaw =
+            String((row as Record<string, unknown>).course_number ?? '').trim() ||
+            codeNumber
+
+          if (!courseNumberRaw) continue
+          const normalizedNumber = normalizeCourseNumber(subject, courseNumberRaw)
+          if (!normalizedNumber) continue
+          if (honorsOnly && subject !== 'UHP' && !/H$/i.test(normalizedNumber)) continue
+          numbers.add(normalizedNumber)
+        }
+
+        const sorted = Array.from(numbers).sort((a, b) =>
+          a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+        )
+        setManualNumberOptions(sorted)
+      } catch (err) {
+        setManualNumberOptions([])
+        setNumberLoadError(
+          err instanceof Error ? `Could not load course numbers: ${err.message}` : 'Could not load course numbers.'
+        )
+      } finally {
+        setLoadingNumbers(false)
+      }
+    }
+
+    void loadCourseNumbersForSubject()
+  }, [honorsOnly, manualSubject, selectedTermTable])
+
+  const loadCart = async () => {
+    setLoadingCart(true)
+    setError('')
+    setMessage('')
+    setResult(null)
+
+    try {
+      const { data: authData, error: authError } = await supabase.auth.getUser()
+      if (authError) throw new Error(authError.message)
+      if (!authData.user) throw new Error('You must be logged in to load your shopping cart.')
+
+      const { data, error: cartError } = await supabase
+        .from('shopping_cart')
+        .select('term_table, course_code_full, course_title')
+        .eq('user_id', authData.user.id)
+
+      if (cartError) throw new Error(cartError.message)
+
+      const rows = (data ?? []) as CartRow[]
+      setCartRows(rows)
+      if (!rows.length) {
+        setMessage('No cart items found. Add courses from the Courses page first.')
+      } else {
+        const firstTerm = rows.find((r) => r.term_table)?.term_table ?? ''
+        setSelectedTermTable((prev) => prev || firstTerm)
+        setMessage(`Loaded ${rows.length} cart row(s).`)
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load cart.')
+    } finally {
+      setLoadingCart(false)
+    }
+  }
+
+  const generateSchedule = async () => {
+    setGenerating(true)
+    setError('')
+    setMessage('')
+    setResult(null)
+
+    try {
+      if (!selectedTermTable) {
+        throw new Error('Select a term before generating a schedule.')
+      }
+      if (!requestedCourses.length) {
+        throw new Error('No courses found for this term in your shopping cart.')
+      }
+
+      const payload = {
+        term: tableToTermLabel(selectedTermTable),
+        requested_courses: requestedCourses,
+        constraints: {
+          earliest_time: earliestTime.trim() || null,
+          latest_time: latestTime.trim() || null,
+          days_off: daysOffText
+            .split(',')
+            .map((d) => d.trim())
+            .filter(Boolean),
+          buffer_minutes: bufferMinutes,
+          blocked_times: [],
+        },
+      }
+
+      const response = await fetch(`${backendBaseUrl}/term/schedule`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      const raw = await response.json()
+      if (!response.ok) {
+        throw new Error(raw?.detail ? JSON.stringify(raw.detail) : 'Schedule generation failed.')
+      }
+
+      setResult(raw as TermScheduleResponse)
+      setMessage('Schedule generated successfully.')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to generate schedule.')
+    } finally {
+      setGenerating(false)
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-slate-50 text-black p-4 md:p-6">
+      <div className="mx-auto max-w-6xl space-y-4">
+        <header className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-indigo-700">Schedule Builder</h1>
+            <p className="text-slate-700">Generate a conflict-aware term schedule from your shopping cart.</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/dashboard"
+              aria-label="Back to dashboard"
+              title="Back to dashboard"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-700 transition-colors hover:bg-slate-200"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M3 10.5L12 3l9 7.5" />
+                <path d="M5 9.5V21h14V9.5" />
+              </svg>
+            </Link>
+            <Link href="/courses" className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200">
+              Back to Courses
+            </Link>
+          </div>
+        </header>
+
+        <section className="rounded-2xl border bg-white p-4 md:p-5 space-y-4">
+          <div className="flex flex-wrap gap-3">
+            <button
+              type="button"
+              onClick={loadCart}
+              disabled={loadingCart}
+              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-800 disabled:opacity-60"
+            >
+              {loadingCart ? 'Loading Cart...' : 'Load Shopping Cart'}
+            </button>
+
+            <button
+              type="button"
+              onClick={generateSchedule}
+              disabled={generating || !requestedCourses.length}
+              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-800 disabled:opacity-60"
+            >
+              {generating ? 'Generating...' : 'Generate Schedule'}
+            </button>
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <label className="mb-1 block text-sm font-medium text-slate-700">Term</label>
+              <select
+                value={selectedTermTable}
+                onChange={(e) => setSelectedTermTable(e.target.value)}
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+              >
+                {SEMESTER_OPTIONS.map((option) => (
+                  <option key={option.table} value={option.table} disabled={option.disabled}>
+                    {option.label}{option.disabled ? ' (Coming Soon)' : ''}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="mb-1 block text-sm font-medium text-slate-700">Earliest Time</label>
+              <input
+                value={earliestTime}
+                onChange={(e) => setEarliestTime(e.target.value)}
+                placeholder="09:00AM"
+                className="w-full rounded-lg border border-slate-300 px-3 py-2"
+              />
+            </div>
+
+            <div>
+              <label className="mb-1 block text-sm font-medium text-slate-700">Latest Time</label>
+              <input
+                value={latestTime}
+                onChange={(e) => setLatestTime(e.target.value)}
+                placeholder="06:00PM"
+                className="w-full rounded-lg border border-slate-300 px-3 py-2"
+              />
+            </div>
+
+            <div>
+              <label className="mb-1 block text-sm font-medium text-slate-700">Buffer Minutes</label>
+              <select
+                value={bufferMinutes}
+                onChange={(e) => setBufferMinutes(Number(e.target.value))}
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+              >
+                <option value={0}>0</option>
+                <option value={10}>10</option>
+                <option value={15}>15</option>
+                <option value={20}>20</option>
+                <option value={30}>30</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">Days Off (comma-separated)</label>
+            <input
+              value={daysOffText}
+              onChange={(e) => setDaysOffText(e.target.value)}
+              placeholder="F or M,W"
+              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+            />
+          </div>
+
+          <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+            <input
+              id="honorsOnlyBuilder"
+              type="checkbox"
+              checked={honorsOnly}
+              onChange={(e) => setHonorsOnly(e.target.checked)}
+              className="h-4 w-4"
+            />
+            <label htmlFor="honorsOnlyBuilder" className="text-sm font-medium text-slate-700">
+              Honors only (UHP or course number ending in H)
+            </label>
+          </div>
+
+          <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 space-y-3">
+            <p className="text-sm font-medium text-slate-700">Manual Course Entry</p>
+            <div className="grid gap-2 md:grid-cols-[1fr_1fr_auto]">
+              <select
+                value={manualSubject}
+                onChange={(e) => setManualSubject(e.target.value)}
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+              >
+                <option value="">Select subject</option>
+                {SUBJECT_OPTIONS.map((subject) => (
+                  <option key={subject} value={subject}>
+                    {subject}
+                  </option>
+                ))}
+              </select>
+              <select
+                value={manualCourseNumber}
+                onChange={(e) => setManualCourseNumber(e.target.value)}
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                disabled={!manualSubject || loadingNumbers}
+              >
+                <option value="">
+                  {!manualSubject
+                    ? 'Pick subject first'
+                    : loadingNumbers
+                      ? 'Loading course numbers...'
+                      : 'Select course number'}
+                </option>
+                {manualNumberOptions.map((num) => (
+                  <option key={num} value={num}>
+                    {num}
+                  </option>
+                ))}
+              </select>
+              <button
+                type="button"
+                onClick={addManualCourse}
+                className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-800"
+              >
+                Add Course
+              </button>
+            </div>
+
+            {numberLoadError && (
+              <p className="rounded border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-700">
+                {numberLoadError}
+              </p>
+            )}
+
+            {manualCourses.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {manualCourses.map((course) => (
+                  <button
+                    key={course}
+                    type="button"
+                    onClick={() => removeManualCourse(course)}
+                    className="rounded-full border border-indigo-300 bg-white px-3 py-1 text-sm text-indigo-700 transition-colors hover:bg-indigo-100"
+                    title="Click to remove"
+                  >
+                    {course} ×
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {!!requestedCourses.length && (
+            <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
+              Requesting {requestedCourses.length} unique course(s): {requestedCourses.join(', ')}
+            </div>
+          )}
+
+          {message && (
+            <p className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-700">
+              {message}
+            </p>
+          )}
+          {error && (
+            <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+              {error}
+            </p>
+          )}
+        </section>
+
+        {result && (
+          <section className="rounded-2xl border bg-white overflow-hidden">
+            <div className="border-b px-4 py-3 text-sm text-slate-700">
+              Generated term: <span className="font-semibold">{result.term}</span>
+            </div>
+
+            <div className="p-4 space-y-4">
+              <div>
+                <h2 className="mb-2 text-lg font-semibold text-slate-900">Selected Sections</h2>
+                {result.selected_sections.length === 0 ? (
+                  <p className="text-sm text-slate-600">No conflict-free sections selected.</p>
+                ) : (
+                  <div className="space-y-3">
+                    {result.selected_sections.map((section) => (
+                      <div key={`${section.course}-${section.section_id}`} className="rounded-lg border border-slate-300 bg-slate-100 p-3 transition-all hover:border-slate-400 hover:shadow-sm">
+                        <p className="font-semibold text-slate-900">
+                          {section.course} • Section {section.section_id}
+                        </p>
+                        <div className="mt-2 space-y-2 text-sm text-slate-700">
+                          {section.meetings.map((meeting, idx) => (
+                            <div
+                              key={`${section.section_id}-${idx}`}
+                              className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5 text-slate-900"
+                            >
+                              {meeting.day} {meeting.start}-{meeting.end} • {meeting.type ?? 'N/A'} • {meeting.location ?? 'N/A'} • {meeting.instructor ?? 'N/A'}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {result.unscheduled_courses.length > 0 && (
+                <div>
+                  <h2 className="mb-2 text-lg font-semibold text-slate-900">Unscheduled Courses</h2>
+                  <p className="text-sm text-amber-700">{result.unscheduled_courses.join(', ')}</p>
+                </div>
+              )}
+
+              {result.warnings.length > 0 && (
+                <div>
+                  <h2 className="mb-2 text-lg font-semibold text-slate-900">Warnings</h2>
+                  <ul className="list-disc pl-5 text-sm text-amber-700">
+                    {result.warnings.map((warning) => (
+                      <li key={warning}>{warning}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
+  )
+}
