@@ -1,0 +1,10 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,ENGL,100B,ENGL 100B,COMPOSITION II,3,GE: 1A (A2),01,10734,Summer_2026|ENGL 100B|01|10734,FALSE,\N,310,SEM,TuTh,9:30-1:15PM,available,LA2-100,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,ENGL,363,ENGL 363,SHAKESPEARE I,4,GE: 3UD (UDC),02,10877,Summer_2026|ENGL 363|02|10877,FALSE,\N,310,LEC,TuWTh,12-3:20PM,available,LA1-312,MitchellSmith I,Class instruction is: Face to Face - On Campus.
+Summer_2026,ENGL,372,ENGL 372,COMEDY IN THE UNITED STATES,3,GE: 3UD (UDC),01,10448,Summer_2026|ENGL 372|01|10448,FALSE,\N,306,LEC,MW,5-9:00PM,available,ONLINE-ONLY,Locklin Z,Class instruction is: Synch. Online - Meet Times.
+Summer_2026,ENGL,474,ENGL 474,20TH CENTURY AMERICAN LIT,3,,01,10345,Summer_2026|ENGL 474|01|10345,FALSE,\N,310,SEM,TuTh,6-9:45PM,available,LA2-100,Tayyar P,Class instruction is: Face to Face - On Campus.
+Summer_2026,ENGL,574,ENGL 574,20TH CENTURY AMERICAN LIT,3,,01,10346,Summer_2026|ENGL 574|01|10346,FALSE,\N,310,SEM,TuTh,6-9:45PM,available,LA2-100,Tayyar P,Class instruction is: Face to Face - On Campus.
+Summer_2026,ENGL,459,ENGL 459,ENGLISH LIT 20TH CENTURY,3,,01,10447,Summer_2026|ENGL 459|01|10447,FALSE,\N,"306,1",SEM,MW,5:30-9:15PM,available,ONLINE-ONLY,Saunders B,Class instruction is: Synch. Online - Meet Times.
+Summer_2026,ENGL,475,ENGL 475,THE AMERICAN SHORT STORY,3,,01,10452,Summer_2026|ENGL 475|01|10452,FALSE,\N,"1,13,310",SEM,TuTh,1-4:45PM,available,LA2-100,Trevino R,Class instruction is: Face to Face - On Campus.
+Summer_2026,ENGL,559,ENGL 559,ENGLISH LIT 20TH CENTURY,3,,01,10446,Summer_2026|ENGL 559|01|10446,FALSE,\N,"306,13,1",SEM,MW,5:30-9:15PM,available,ONLINE-ONLY,Saunders B,Class instruction is: Synch. Online - Meet Times.
+Summer_2026,ENGL,575,ENGL 575,THE AMERICAN SHORT STORY,3,,01,10451,Summer_2026|ENGL 575|01|10451,FALSE,\N,"1,13,310",SEM,TuTh,1-4:45PM,available,LA2-100,Trevino R,Class instruction is: Face to Face - On Campus.

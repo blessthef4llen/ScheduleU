@@ -1,0 +1,15 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,COUN,507,COUN 507,FNDTNS CAREER DEV K-12 SCHOOLS,3,,02,11015,Summer_2026|COUN 507|02|11015,FALSE,\N,311,SEM,W,3-7:00PM,available,LA1-204,Stewart S,Class meets on 05/27/26.Class instruction is: Hybrid (Face to Face & Synch).
+Summer_2026,COUN,507,COUN 507,FNDTNS CAREER DEV K-12 SCHOOLS,3,,02,\N,Summer_2026|COUN 507|02|NOCLASS|dc94c1d7d8666f99,FALSE,\N,,,W,3-7:00PM,,LA1-204,Staff,Class meets on 07/01/26.
+Summer_2026,COUN,507,COUN 507,FNDTNS CAREER DEV K-12 SCHOOLS,3,,02,\N,Summer_2026|COUN 507|02|NOCLASS|e367af376fcd5663,FALSE,\N,,,W,4-6:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,COUN,608,COUN 608,PSYCHOLOGICAL ASSESSMNT & TEST,3,,01,10354,Summer_2026|COUN 608|01|10354,FALSE,\N,306,SEM,Tu,4-7:45PM,,ONLINE-ONLY,Mestyanek M,Class instruction is: Synch. Online - Meet Times.
+Summer_2026,COUN,643D,COUN 643D,COUNSELING FIELD WORK COUN PSY,3,,01,10376,Summer_2026|COUN 643D|01|10376,FALSE,\N,306,SUP,M,4-5:30PM,available,ONLINE-ONLY,Bowling S,Class meets on 06/01/26.Department Consent RequiredClass instruction is: Online - Mixed Meet Times.
+Summer_2026,COUN,643D,COUN 643D,COUNSELING FIELD WORK COUN PSY,3,,01,\N,Summer_2026|COUN 643D|01|NOCLASS|312843e9ec632d37,FALSE,\N,,,M,4-5:30PM,,ONLINE-ONLY,Bowling S,Class meets on 06/08/26.
+Summer_2026,COUN,643D,COUN 643D,COUNSELING FIELD WORK COUN PSY,3,,01,\N,Summer_2026|COUN 643D|01|NOCLASS|6366a04e448f4ec1,FALSE,\N,,,M,2:30-5:30PM,,ONLINE-ONLY,Bowling S,Class meets on 08/10/26.
+Summer_2026,COUN,643D,COUN 643D,COUNSELING FIELD WORK COUN PSY,3,,01,\N,Summer_2026|COUN 643D|01|NOCLASS|369bcd2e443de4f9,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Bowling S,additional meeting detail
+Summer_2026,COUN,644D,COUN 644D,ADV COUNSELING FLD WK COUN PSY,3,,02,11051,Summer_2026|COUN 644D|02|11051,FALSE,\N,309,SUP,W,4-5:30PM,available,ONLINE-ONLY,Mestyanek M,Class meets on 05/27/26.Department Consent RequiredClass instruction is: Online - Mixed Meet Times.
+Summer_2026,COUN,644D,COUN 644D,ADV COUNSELING FLD WK COUN PSY,3,,02,\N,Summer_2026|COUN 644D|02|NOCLASS|3479971c7e6dd56e,FALSE,\N,,,W,4-5:30PM,,ONLINE-ONLY,Staff,Class meets on 06/10/26.
+Summer_2026,COUN,644D,COUN 644D,ADV COUNSELING FLD WK COUN PSY,3,,02,\N,Summer_2026|COUN 644D|02|NOCLASS|34ad1c70cf726bac,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,COUN,644D,COUN 644D,ADV COUNSELING FLD WK COUN PSY,3,,03,11053,Summer_2026|COUN 644D|03|11053,FALSE,\N,309,SUP,W,4-5:30PM,available,ONLINE-ONLY,Staff,Class meets on 06/03/26.Department Consent RequiredClass instruction is: Online - Mixed Meet Times.
+Summer_2026,COUN,644D,COUN 644D,ADV COUNSELING FLD WK COUN PSY,3,,03,\N,Summer_2026|COUN 644D|03|NOCLASS|b7228a365bb7e0f5,FALSE,\N,,,W,4-5:30PM,,ONLINE-ONLY,Staff,Class meets on 06/17/26.
+Summer_2026,COUN,644D,COUN 644D,ADV COUNSELING FLD WK COUN PSY,3,,03,\N,Summer_2026|COUN 644D|03|NOCLASS|5abc518c00e60c23,FALSE,\N,,,TBA,NA,,ONLINE-ONLY,Staff,additional meeting detail

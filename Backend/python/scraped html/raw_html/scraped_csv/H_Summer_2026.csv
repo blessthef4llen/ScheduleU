@@ -1,0 +1,29 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,H,SC 425,H SC 425,HUMAN SEXUALITY & SEX EDUCATN,3,GE: 4UD (UDD),01,10266,Summer_2026|H SC 425|01|10266,FALSE,\N,"1,21,305",LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 150,H SC 150,MEDICAL TERMINOLOGY,3,,01,10207,Summer_2026|H SC 150|01|10207,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 400,H SC 400,PRINCIPLES OF EPIDEMIOLOGY,3,,01,10030,Summer_2026|H SC 400|01|10030,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 401,H SC 401,COMMUNITY HEALTH EDUCATION,3,,01,10022,Summer_2026|H SC 401|01|10022,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 403,H SC 403,COMMUNITY HEALTH STATISTICS,3,GE: 2UD/5UD (UDB),01,10449,Summer_2026|H SC 403|01|10449,FALSE,\N,309,SEM,MW,9:30-12:15PM,available,ONLINE-ONLY,Staff,Class instruction is: Online - Mixed Meet Times.
+Summer_2026,H,SC 403,H SC 403,COMMUNITY HEALTH STATISTICS,3,GE: 2UD/5UD (UDB),01,\N,Summer_2026|H SC 403|01|NOCLASS|44499ea2b306fb9c,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,H,SC 405,H SC 405,HEALTH EDU EVAL & MEASUREMENT,3,,01,10450,Summer_2026|H SC 405|01|10450,FALSE,\N,309,SEM,TuTh,9:30-12:15PM,available,ONLINE-ONLY,Staff,Class instruction is: Online - Mixed Meet Times.
+Summer_2026,H,SC 405,H SC 405,HEALTH EDU EVAL & MEASUREMENT,3,,01,\N,Summer_2026|H SC 405|01|NOCLASS|6f1a546473b7d10d,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,H,SC 411B,H SC 411B,HSC-SECONDARY TEACHERS,3,,01,10016,Summer_2026|H SC 411B|01|10016,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 422,H SC 422,ENVIRONMENTAL HEALTH,3,GE: 2UD/5UD (UDB),01,10265,Summer_2026|H SC 422|01|10265,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 430,H SC 430,SCHOOL HEALTH PROGRAM,3,,01,10178,Summer_2026|H SC 430|01|10178,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 460B,H SC 460B,PUB HLTH MAPS&SPATIAL ANALYSIS,3,,02,11028,Summer_2026|H SC 460B|02|11028,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 460B,H SC 460B,PUB HLTH MAPS&SPATIAL ANALYSIS,3,,03,11034,Summer_2026|H SC 460B|03|11034,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 440,H SC 440,APPLD CONCEPTS HEALTH SCIENCE,3,GWAR: WI,02,11029,Summer_2026|H SC 440|02|11029,FALSE,\N,309,LEC,M,4-6:45PM,available,ONLINE-ONLY,Staff,Class instruction is: Online - Mixed Meet Times.
+Summer_2026,H,SC 440,H SC 440,APPLD CONCEPTS HEALTH SCIENCE,3,GWAR: WI,02,\N,Summer_2026|H SC 440|02|NOCLASS|40fccded73685089,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,H,SC 485,H SC 485,INTERNSHIP COMMUNITY HEALTH ED,3,,01,10433,Summer_2026|H SC 485|01|10433,FALSE,\N,309,SEM,Tu,4-6:45PM,available,ONLINE-ONLY,Staff,Class instruction is: Online - Mixed Meet Times.
+Summer_2026,H,SC 485,H SC 485,INTERNSHIP COMMUNITY HEALTH ED,3,,01,\N,Summer_2026|H SC 485|01|NOCLASS|49a363b1190c85ec,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,H,SC 227,H SC 227,DRUGS & HEALTH,3,GE: E,01,10282,Summer_2026|H SC 227|01|10282,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 260,H SC 260,INTRODUCTION TO PHIT,3,,01,11031,Summer_2026|H SC 260|01|11031,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 360,H SC 360,PUBLC HLTH INFORMATICS: DATA,3,,01,11032,Summer_2026|H SC 360|01|11032,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 402,H SC 402,CONCEPTS OF COMMUNITY HEALTH,3,,01,10434,Summer_2026|H SC 402|01|10434,FALSE,\N,"309,21,1",SEM,TuTh,1-3:45PM,available,ONLINE-ONLY,Staff,Class instruction is: Online - Mixed Meet Times.
+Summer_2026,H,SC 402,H SC 402,CONCEPTS OF COMMUNITY HEALTH,3,,01,\N,Summer_2026|H SC 402|01|NOCLASS|05b3ddffe6c78175,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,H,SC 407,H SC 407,HEALTH EQUITY SOC JUSTICE US,3,GE: 3UD (UDC),01,10330,Summer_2026|H SC 407|01|10330,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 420,H SC 420,GLOBAL HEALTH,3,GE: 4UD (UDD),01,10702,Summer_2026|H SC 420|01|10702,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 421,H SC 421,HEALTH BEHAVIOR,3,,01,10179,Summer_2026|H SC 421|01|10179,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,H,SC 460A,H SC 460A,EMERGING TECHNOLOGIES PUB HLTH,3,,01,10461,Summer_2026|H SC 460A|01|10461,FALSE,\N,309,LEC,TuTh,4-6:45PM,available,ONLINE-ONLY,Staff,Class instruction is: Online - Mixed Meet Times.
+Summer_2026,H,SC 460A,H SC 460A,EMERGING TECHNOLOGIES PUB HLTH,3,,01,\N,Summer_2026|H SC 460A|01|NOCLASS|3f3d0fd8336cbd51,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,H,SC 508,H SC 508,PUBLIC HLTH POLICY&LEADERSHIP,3,,01,10267,Summer_2026|H SC 508|01|10267,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Staff,Class instruction is: Asynch. Online-No Meet Times.
