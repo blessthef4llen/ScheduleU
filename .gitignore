@@ -23,12 +23,16 @@
 # production
 /build
 /frontend/build
+/dist/
 
 # misc
 .DS_Store
 *.pem
 
 # debug
+.vercel
+.vscode/
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -38,11 +42,9 @@ yarn-error.log*
 /frontend/yarn-error.log*
 
 # env files (can opt-in for committing if needed)
+.env*
 .env.*
 .env
-
-# vercel
-.vercel
 
 # typescript
 *.tsbuildinfo

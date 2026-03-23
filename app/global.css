@@ -1,0 +1,85 @@
+/* ===== RESET ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+
+  background: linear-gradient(
+    90deg,
+    #2bb3c0,
+    #3c6fd1
+  );
+
+  color: white;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links button {
+  margin-left: 15px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-links button:hover {
+  opacity: 0.75;
+}
+
+/* ===== PAGE ===== */
+.page-container {
+  padding: 60px;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.page-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ===== BUTTON ===== */
+.primary-btn {
+  background: linear-gradient(
+    90deg,
+    #2bb3c0,
+    #3c6fd1
+  );
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
