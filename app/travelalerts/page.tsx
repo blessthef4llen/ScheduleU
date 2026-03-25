@@ -2,7 +2,6 @@ export default function TravelAlertsPage() {
   return (
 
     <div className="pageContainer">
-
       <h1 style={{color:"white"}}>
         Travel Alerts
       </h1>
