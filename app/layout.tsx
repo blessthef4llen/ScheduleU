@@ -22,6 +22,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <Link href="/notifications" className="app-nav-link">
                   Notifications
                 </Link>
+                <Link href="/registration-countdown" className="app-nav-link">
+                  Registration Countdown
+                </Link>
                 <Link href="/about" className="app-nav-link">
                   About Us
                 </Link>
