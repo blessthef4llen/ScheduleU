@@ -1,18 +1,30 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { supabase } from '@/utils/supabase';
+
+type ProfileRow = {
+  major: string | null
+  grad_year: number | string | null
+  grad_term?: string | null
+}
 
 export default function UserProfile() {
   const [activeTab, setActiveTab] = useState('Profile Information');
   const [status, setStatus] = useState('Junior');
   const [creditLoad, setCreditLoad] = useState(12);
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [major, setMajor] = useState('');
+  const [gradYear, setGradYear] = useState('');
+  const [userEmail, setUserEmail] = useState('');
   const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     const fetchUserData = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (user?.email) {
+        setUserEmail(user.email);
+
         const { data } = await supabase
           .from('users')
           .select('phone_number, student_status, credit_load')
@@ -23,6 +35,32 @@ export default function UserProfile() {
           setPhoneNumber(data.phone_number || '');
           setStatus(data.student_status || 'Junior');
           setCreditLoad(data.credit_load || 12);
+        }
+
+        const primaryProfile = await supabase
+          .from('profiles')
+          .select('major, grad_year, grad_term')
+          .eq('id', user.id)
+          .single();
+        let profileData = primaryProfile.data as ProfileRow | null;
+
+        if (!profileData) {
+          const fallback = await supabase
+            .from('profiles')
+            .select('major, grad_year')
+            .eq('id', user.id)
+            .single();
+
+          profileData = (fallback.data as ProfileRow | null);
+        }
+
+        if (profileData) {
+          setMajor(profileData.major || '');
+          setGradYear(
+            ('grad_term' in profileData && profileData.grad_term)
+              ? profileData.grad_term
+              : (profileData.grad_year ? String(profileData.grad_year) : '')
+          );
         }
       }
     };
@@ -64,7 +102,7 @@ export default function UserProfile() {
           <span className="font-bold text-xl uppercase italic">ScheduleU</span>
         </div>
         <div className="flex items-center gap-6 text-sm">
-          <span>About us</span>
+          <Link href="/dashboard" className="hover:opacity-80">Dashboard</Link>
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-blue-600 font-bold border-2 border-white shadow-sm">👤</div>
           <div className="flex flex-col gap-1 cursor-pointer">
             <div className="w-6 h-0.5 bg-white"></div>
@@ -102,7 +140,10 @@ export default function UserProfile() {
 
             {activeTab === 'Profile Information' && (
               <ProfileInfo
+                userEmail={userEmail}
                 phoneNumber={phoneNumber}
+                major={major}
+                gradYear={gradYear}
                 setPhoneNumber={setPhoneNumber}
               />
             )}
@@ -132,7 +173,19 @@ export default function UserProfile() {
   );
 }
 
-function ProfileInfo({ phoneNumber, setPhoneNumber }: { phoneNumber: string; setPhoneNumber: (value: string) => void }) {
+function ProfileInfo({
+  userEmail,
+  phoneNumber,
+  major,
+  gradYear,
+  setPhoneNumber,
+}: {
+  userEmail: string
+  phoneNumber: string
+  major: string
+  gradYear: string
+  setPhoneNumber: (value: string) => void
+}) {
   const [isEditing, setIsEditing] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -156,11 +209,11 @@ function ProfileInfo({ phoneNumber, setPhoneNumber }: { phoneNumber: string; set
   };
 
   const info = [
-    { label: "Name", value: "Elbe Shark", editable: false },
-    { label: "Email", value: "ES@student.csulb.edu", editable: false },
+    { label: "Name", value: "Not available", editable: false },
+    { label: "Email", value: userEmail, editable: false },
     { label: "MFA Phone", value: phoneNumber, editable: true },
-    { label: "Graduation Year", value: "2026", editable: false },
-    { label: "Major", value: "Computer Science", editable: false },
+    { label: "Graduation Year", value: gradYear, editable: false },
+    { label: "Major", value: major, editable: false },
   ];
 
   return (

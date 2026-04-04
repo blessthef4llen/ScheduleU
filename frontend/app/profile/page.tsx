@@ -1,12 +1,41 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { supabase } from '@/utils/supabase'
 import Link from 'next/link'
+import { buildMajorGroups, MAJOR_GROUPS, type MajorGroup, type MajorRow } from '@/data/majors'
+
+const CURRENT_YEAR = new Date().getFullYear()
+const TERM_NAMES = ['Spring', 'Summer', 'Fall', 'Winter'] as const
+
+const TERM_OPTIONS = Array.from({ length: 7 }, (_, offset) => CURRENT_YEAR + offset).flatMap((year) =>
+  TERM_NAMES.map((term) => `${term} ${year}`)
+)
 
 export default function ProfilePage() {
   const [major, setMajor] = useState('')
-  const [gradYear, setGradYear] = useState('')
+  const [gradTerm, setGradTerm] = useState('')
   const [message, setMessage] = useState('')
+  const [majorGroups, setMajorGroups] = useState<MajorGroup[]>(MAJOR_GROUPS)
+
+  useEffect(() => {
+    const loadMajors = async () => {
+      const { data, error } = await supabase
+        .from('majors')
+        .select('college,major_name,college_sort_order,major_sort_order')
+        .eq('is_active', true)
+        .order('college_sort_order', { ascending: true })
+        .order('major_sort_order', { ascending: true })
+
+      if (error || !data) return
+
+      const groups = buildMajorGroups(data as MajorRow[])
+      if (groups.length > 0) {
+        setMajorGroups(groups)
+      }
+    }
+
+    void loadMajors()
+  }, [])
 
   const updateProfile = async () => {
     const { data: { user } } = await supabase.auth.getUser()
@@ -15,14 +44,32 @@ export default function ProfilePage() {
       return
     }
 
-    const { error } = await supabase
+    const payload = {
+      id: user.id,
+      major,
+      grad_year: Number.parseInt(gradTerm.split(' ').at(-1) ?? '', 10) || null,
+      grad_term: gradTerm || null,
+      email: user.email,
+    }
+
+    let { error } = await supabase
       .from('profiles')
-      .upsert({
+      .upsert(payload)
+
+    if (error?.message?.includes('grad_term')) {
+      const fallbackPayload = {
         id: user.id,
         major,
-        grad_year: parseInt(gradYear),
+        grad_year: Number.parseInt(gradTerm.split(' ').at(-1) ?? '', 10) || null,
         email: user.email,
-      })
+      }
+
+      const fallbackResult = await supabase
+        .from('profiles')
+        .upsert(fallbackPayload)
+
+      error = fallbackResult.error
+    }
 
     if (error) setMessage(`❌ Error: ${error.message}`)
     else setMessage('✅ Profile updated successfully!')
@@ -40,17 +87,34 @@ export default function ProfilePage() {
             Back to Dashboard
           </Link>
         </div>
-        <input
-          className="w-full border p-3 rounded mb-4"
-          placeholder="Major (e.g. CS)"
+        <select
+          className="w-full border p-3 rounded mb-4 bg-white"
+          value={major}
           onChange={(e) => setMajor(e.target.value)}
-        />
-        <input
-          className="w-full border p-3 rounded mb-4"
-          type="number"
-          placeholder="Grad Year"
-          onChange={(e) => setGradYear(e.target.value)}
-        />
+        >
+          <option value="">Select your major</option>
+          {majorGroups.map((group) => (
+            <optgroup key={group.college} label={group.college}>
+              {group.majors.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+        <select
+          className="w-full border p-3 rounded mb-4 bg-white"
+          value={gradTerm}
+          onChange={(e) => setGradTerm(e.target.value)}
+        >
+          <option value="">Select expected graduation term</option>
+          {TERM_OPTIONS.map((term) => (
+            <option key={term} value={term}>
+              {term}
+            </option>
+          ))}
+        </select>
         <button
           onClick={updateProfile}
           className="w-full bg-blue-600 text-white py-3 rounded font-bold"
