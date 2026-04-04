@@ -1,0 +1,13 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+SUST 601,Sustainability & Society,3,,,MS Graduate Standing,
+SUST 602,Sustainability Science,3,,,MS Graduate Standing,
+SUST 603,Sustainability Case Studies,3,,,MS Graduate Standing,
+SUST 604,Data Analytics and Sustainability,3,,,MS Graduate Standing,
+SUST 605,Sustainability and Organization Theory,3,,,MS Graduate Standing,
+SUST 606,"Environmental Law, Politics, and Ethics",3,,,MS Graduate Standing,
+SUST 607,Decision Making and Uncertainty,3,,,MS Graduate Standing,
+SUST 608,Benefit Cost Analysis,3,,,MS Graduate Standing,
+SUST 609,Environmental Economics and Policy,3,,,MS Graduate Standing,
+SUST 610,Sustainability and Strategic Management,3,,,MS Graduate Standing,
+SUST 699A,Project Orientation and Support,3,,,"SUST 601 , SUST 602 , SUST 603 , SUST 604 , SUST 605 , SUST 606 , SUST 607 , SUST 608 , SUST 609 , SUST 610 , SUST 610 or Advisor Consent",
+SUST 699B,Applied Professional Project,3,,,SUST 699A with a “C” or better,

@@ -1,0 +1,45 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,CEM,121,CEM 121,CONSTRUCTION DRAWING I,2,,01,6258,Spring_2026|CEM 121|01|6258,FALSE,\N,,LAB,MW,7-9:45PM,available,VEC-322,Pulley M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,121,CEM 121,CONSTRUCTION DRAWING I,2,,02,12668,Spring_2026|CEM 121|02|12668,FALSE,\N,310,LAB,TuTh,7-9:45PM,available,EN2-103,Hamadani A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,125,CEM 125,FUNDAMENTALS OF CONSTRUCTION,3,,03,8731,Spring_2026|CEM 125|03|8731,FALSE,\N,,SEM,M,10-11:50AM,available,VEC-321,Goitom T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,125,CEM 125,FUNDAMENTALS OF CONSTRUCTION,3,,04,8732,Spring_2026|CEM 125|04|8732,FALSE,\N,,ACT,W,10-11:50AM,available,VEC-321,Goitom T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,200,CEM 200,CONCRETE CONSTRUCTION,1,,01,3072,Spring_2026|CEM 200|01|3072,FALSE,\N,,SEM,M,9-9:50AM,,VEC-321,Thompson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,200L,CEM 200L,CONCRETE CONSTRUCTION LAB,1,,01,3073,Spring_2026|CEM 200L|01|3073,FALSE,\N,,LAB,M,10-12:45PM,,EN3-117,Thompson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,200L,CEM 200L,CONCRETE CONSTRUCTION LAB,1,,02,7344,Spring_2026|CEM 200L|02|7344,FALSE,\N,,LAB,F,10-12:45PM,available,EN3-117,Thompson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,202,CEM 202,PROB & STAT CONSTRUC ENGR MGMT,2,,01,4159,Spring_2026|CEM 202|01|4159,FALSE,\N,,SEM,W,9-9:50AM,,EN2-105,Neguse H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,202,CEM 202,PROB & STAT CONSTRUC ENGR MGMT,2,,02,4160,Spring_2026|CEM 202|02|4160,FALSE,\N,,ACT,W,10-11:50AM,,EN2-105,Neguse H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,204,CEM 204,APPLIED MECHANICS-STATICS,3,,01,1132,Spring_2026|CEM 204|01|1132,FALSE,\N,1,SEM,Tu,12:30-2:20PM,available,VEC-322,Nguyen H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,204,CEM 204,APPLIED MECHANICS-STATICS,3,,02,2777,Spring_2026|CEM 204|02|2777,FALSE,\N,,ACT,Th,12:30-2:20PM,available,VEC-322,Nguyen H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,206,CEM 206,TRENDS CONSTRUCTION ENGR MGMT,2,,01,5803,Spring_2026|CEM 206|01|5803,FALSE,\N,,SEM,Tu,6-6:50PM,,VEC-321,Alborzi A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,206,CEM 206,TRENDS CONSTRUCTION ENGR MGMT,2,,02,5804,Spring_2026|CEM 206|02|5804,FALSE,\N,,LAB,Tu,7-9:45PM,,VEC-321,Alborzi A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,225,CEM 225,RES/LIGHT COM CONST PRAC & EST,3,,03,9454,Spring_2026|CEM 225|03|9454,FALSE,\N,310,SEM,Tu,9:30-11:20AM,,VEC-227,Bollinger J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,225,CEM 225,RES/LIGHT COM CONST PRAC & EST,3,,04,9455,Spring_2026|CEM 225|04|9455,FALSE,\N,310,ACT,Th,9:30-11:20AM,,VEC-227,Bollinger J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,304,CEM 304,APPL MECHANIC STRENGTH MATRLS,2,,03,9340,Spring_2026|CEM 304|03|9340,FALSE,\N,1,SEM,Tu,5-5:50PM,,VEC-322,Nguyen H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,304,CEM 304,APPL MECHANIC STRENGTH MATRLS,2,,04,9341,Spring_2026|CEM 304|04|9341,FALSE,\N,,ACT,Th,5-6:50PM,,VEC-322,Nguyen H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,315,CEM 315,CONSTRUCTION SAFETY,2,,01,4813,Spring_2026|CEM 315|01|4813,FALSE,\N,,SEM,M,3-3:50PM,,VEC-321,Nasr E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,315,CEM 315,CONSTRUCTION SAFETY,2,,02,4814,Spring_2026|CEM 315|02|4814,FALSE,\N,,ACT,W,3-4:50PM,,VEC-321,Nasr E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,324,CEM 324,COMM INSTL INDUST CON PRCT&EST,3,,01,5704,Spring_2026|CEM 324|01|5704,FALSE,\N,,SEM,W,6-7:50PM,,EN2-107,Shehab T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,324,CEM 324,COMM INSTL INDUST CON PRCT&EST,3,,02,5705,Spring_2026|CEM 324|02|5705,FALSE,\N,,ACT,W,8-9:50PM,,EN2-107,Shehab T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,335,CEM 335,SOIL MECHANICS TECHNOLOGY,2,,02,9429,Spring_2026|CEM 335|02|9429,FALSE,\N,,SEM,Tu,5-6:50PM,,EN2-105,Hosler J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,335L,CEM 335L,SOIL MACHANICS TECHNOLOGY LAB,1,,03,9431,Spring_2026|CEM 335L|03|9431,FALSE,\N,310,LAB,Tu,7-9:45PM,available,EN3-113,Hosler J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,335L,CEM 335L,SOIL MACHANICS TECHNOLOGY LAB,1,,04,9451,Spring_2026|CEM 335L|04|9451,FALSE,\N,,LAB,Tu,11-1:45PM,,EN3-113,Alborzi A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,373,CEM 373,FUNDAMNTLS ALT PROJ DELIVERY,3,,01,3244,Spring_2026|CEM 373|01|3244,FALSE,\N,,SEM,M,1-2:50PM,,VEC-322,Nasr E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,373,CEM 373,FUNDAMNTLS ALT PROJ DELIVERY,3,,02,3245,Spring_2026|CEM 373|02|3245,FALSE,\N,,ACT,W,1-2:50PM,,VEC-322,Nasr E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,385,CEM 385,"MECH, ELECT, PLUM EQUIP BUILD",3,,01,8369,Spring_2026|CEM 385|01|8369,FALSE,\N,,LEC,TuTh,7-7:50PM,,VEC-322,Pulley M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,385,CEM 385,"MECH, ELECT, PLUM EQUIP BUILD",3,,02,8370,Spring_2026|CEM 385|02|8370,FALSE,\N,,ACT,TuTh,8-8:50PM,,VEC-322,Pulley M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,415,CEM 415,JOB SITE MGMT PROBLEM SOLVING,1,,01,8371,Spring_2026|CEM 415|01|8371,FALSE,\N,,LAB,W,7-9:45PM,,VEC-115,Fait D,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,421,CEM 421,"CONSTR PLANNING, SCHED & CONTR",3,,01,2384,Spring_2026|CEM 421|01|2384,FALSE,\N,,SEM,M,6-7:50PM,available,VEC-321,Nasr T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,421,CEM 421,"CONSTR PLANNING, SCHED & CONTR",3,,02,2396,Spring_2026|CEM 421|02|2396,FALSE,\N,,ACT,M,8-9:50PM,available,VEC-321,Nasr T,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,424,CEM 424,EARTHWRK CIVIL WORK CONST PRAC,3,,01,12365,Spring_2026|CEM 424|01|12365,FALSE,\N,310,SEM,Tu,2-3:50PM,available,VEC-516A,Balali V,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,424,CEM 424,EARTHWRK CIVIL WORK CONST PRAC,3,,02,12366,Spring_2026|CEM 424|02|12366,FALSE,\N,310,ACT,Th,2-3:50PM,available,VEC-516A,Balali V,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,426,CEM 426,BUSINESS & CONSTRUCTION LAW,3,,01,4487,Spring_2026|CEM 426|01|4487,FALSE,\N,,SEM,F,1-3:45PM,,VEC-322,Snarr G,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,429,CEM 429,ADV ESTIMATING & BIDDING,3,,01,7032,Spring_2026|CEM 429|01|7032,FALSE,\N,310,SEM,Th,6-7:50PM,available,VEC-417,Hernandez Gaytan V,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,429,CEM 429,ADV ESTIMATING & BIDDING,3,,02,7033,Spring_2026|CEM 429|02|7033,FALSE,\N,310,ACT,Th,8-9:50PM,available,VEC-417,Hernandez Gaytan V,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,437,CEM 437,STRUCTURAL BUILDING SYSTEMS,3,,03,9338,Spring_2026|CEM 437|03|9338,FALSE,\N,,SEM,Tu,3-4:50PM,,VEC-321,Nguyen H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,437,CEM 437,STRUCTURAL BUILDING SYSTEMS,3,,04,9339,Spring_2026|CEM 437|04|9339,FALSE,\N,,ACT,Th,3-4:50PM,,VEC-321,Nguyen H,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,476,CEM 476,HEAVY CIVIL CONSTRUCTION,3,,01,11026,Spring_2026|CEM 476|01|11026,FALSE,\N,310,SEM,M,6-7:50PM,available,ET-019,Lahlou M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,476,CEM 476,HEAVY CIVIL CONSTRUCTION,3,,02,11027,Spring_2026|CEM 476|02|11027,FALSE,\N,310,ACT,M,8-9:50PM,available,ET-019,Lahlou M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,481,CEM 481,SUSTAINABILITY BUILT ENVIRONM,3,,02,11002,Spring_2026|CEM 481|02|11002,FALSE,\N,310,SEM,W,7-9:45PM,available,VEC-401,Alborzi A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,483,CEM 483,VIRTUAL DESGN AND CONSTRUCTION,3,,01,9278,Spring_2026|CEM 483|01|9278,FALSE,\N,310,SEM,Tu,6-8:45PM,available,VEC-401,Ghadiri M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,490,CEM 490,CONSTRUCTN PROJECT MANAGEMENT,3,GE: 2UD/5UD (UDB),01,5740,Spring_2026|CEM 490|01|5740,FALSE,\N,,SEM,Th,6-7:50PM,available,VEC-321,Fait D,Class instruction is: Face to Face - On Campus.
+Spring_2026,CEM,490,CEM 490,CONSTRUCTN PROJECT MANAGEMENT,3,GE: 2UD/5UD (UDB),02,5741,Spring_2026|CEM 490|02|5741,FALSE,\N,,ACT,Th,8-9:50PM,available,VEC-321,Fait D,Class instruction is: Face to Face - On Campus.

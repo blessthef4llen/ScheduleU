@@ -1,0 +1,129 @@
+term,code,display_code,name,href
+spring_2026,ACCT,ACCT,Accountancy,ACCT.html
+spring_2026,AFRS,AFRS,Africana Studies,AFRS.html
+spring_2026,ASLD,ASLD,Am Sign Lang Ling&Deaf Culture,ASLD.html
+spring_2026,AIS,AIS,American Indian Studies,AIS.html
+spring_2026,AMST,AMST,American Studies,AMST.html
+spring_2026,ANTH,ANTH,Anthropology,ANTH.html
+spring_2026,ARAB,ARAB,Arabic,ARAB.html
+spring_2026,ART,ART,Art,ART.html
+spring_2026,AH,AH,Art History,AH.html
+spring_2026,AAAS,AAAS,Asian & Asian American Studies,AAAS.html
+spring_2026,ASAM,ASAM,Asian American Studies,ASAM.html
+spring_2026,AST,A/ST,Asian Studies,AxST.html
+spring_2026,ASTR,ASTR,Astronomy,ASTR.html
+spring_2026,AT,AT,Athletic Training,AT.html
+spring_2026,ATHL,ATHL,Athletics,ATHL.html
+spring_2026,BIOL,BIOL,Biology,BIOL.html
+spring_2026,BME,BME,Biomedical Engineering,BME.html
+spring_2026,BLAW,BLAW,Business Law,BLAW.html
+spring_2026,CBA,CBA,"Business, College of",CBA.html
+spring_2026,OLNE,OLNE,CSU OnLine - LB ONLY,OLNE.html
+spring_2026,KHMR,KHMR,Cambodian,KHMR.html
+spring_2026,CHE,CH E,Chemical Engineering,CHzE.html
+spring_2026,CHEM,CHEM,Chemistry & Biochemistry,CHEM.html
+spring_2026,CHLS,CHLS,Chicano & Latino Studies,CHLS.html
+spring_2026,CDFS,CDFS,Child Developmnt & Family Stds,CDFS.html
+spring_2026,CHIN,CHIN,Chinese,CHIN.html
+spring_2026,CINE,CINE,Cinematic Arts,CINE.html
+spring_2026,CE,C E,Civil Engineering,CzE.html
+spring_2026,CLSC,CLSC,Classics,CLSC.html
+spring_2026,COMM,COMM,Communication Studies,COMM.html
+spring_2026,CWL,CWL,Comparative World Literature,CWL.html
+spring_2026,CECS,CECS,Computer Engr & Computer Sci,CECS.html
+spring_2026,XYZ,XYZ,Concurrent Enrollment,XYZ.html
+spring_2026,CEM,CEM,Construction Engineering Mgmt,CEM.html
+spring_2026,CAFF,CAFF,Consumer Affairs,CAFF.html
+spring_2026,COUN,COUN,Counseling,COUN.html
+spring_2026,CRJU,CRJU,Criminology & Criminal Justice,CRJU.html
+spring_2026,DANC,DANC,Dance,DANC.html
+spring_2026,DESN,DESN,Design,DESN.html
+spring_2026,DPT,DPT,Doctor of Physical Therapy,DPT.html
+spring_2026,ERTH,ERTH,Earth Science,ERTH.html
+spring_2026,ECON,ECON,Economics,ECON.html
+spring_2026,EDLD,EDLD,Educ Leadership Doctorate,EDLD.html
+spring_2026,EDCI,EDCI,Education - Curr & Instruction,EDCI.html
+spring_2026,EDEC,EDEC,Education - Early Childhood,EDEC.html
+spring_2026,EDEL,EDEL,Education - Elementary,EDEL.html
+spring_2026,EDSE,EDSE,Education - Secondary,EDSE.html
+spring_2026,EDSS,EDSS,Education - Single Subject,EDSS.html
+spring_2026,EDSP,EDSP,Education Specialist,EDSP.html
+spring_2026,EDAD,EDAD,Educational Administration,EDAD.html
+spring_2026,EDP,ED P,Educational Psychology,EDzP.html
+spring_2026,ETEC,ETEC,Educational Technology,ETEC.html
+spring_2026,EE,E E,Electrical Engineering,EzE.html
+spring_2026,EMER,EMER,Emergency Services Adm,EMER.html
+spring_2026,ENGR,ENGR,Engineering,ENGR.html
+spring_2026,ET,E T,Engineering Technology,EzT.html
+spring_2026,ENGL,ENGL,English,ENGL.html
+spring_2026,ES,ES,Enrollment Services,ES.html
+spring_2026,ENV,ENV,Environmental Engineering,ENV.html
+spring_2026,ESP,ES P,Environmental Science & Policy,ESzP.html
+spring_2026,EESJ,EESJ,"Equity, Educ, & Social Justice",EESJ.html
+spring_2026,FMD,FMD,Fashion Merchandising & Design,FMD.html
+spring_2026,FIL,FIL,Filipino,FIL.html
+spring_2026,FIN,FIN,Finance,FIN.html
+spring_2026,FSCI,FSCI,Food Science,FSCI.html
+spring_2026,FREN,FREN,French,FREN.html
+spring_2026,GEOG,GEOG,Geography,GEOG.html
+spring_2026,GERM,GERM,German,GERM.html
+spring_2026,GERN,GERN,Gerontology,GERN.html
+spring_2026,GLST,GLST,Global Studies,GLST.html
+spring_2026,GBA,GBA,Graduate Business Admin,GBA.html
+spring_2026,GK,GK,Greek,GK.html
+spring_2026,HCA,HCA,Health Care Administration,HCA.html
+spring_2026,HSC,H SC,Health Science,HzSC.html
+spring_2026,HEBW,HEBW,Hebrew,HEBW.html
+spring_2026,HIST,HIST,History,HIST.html
+spring_2026,HM,HM,Hospitality Management,HM.html
+spring_2026,HDEV,HDEV,Human Development,HDEV.html
+spring_2026,HRM,HRM,Human Resources Management,HRM.html
+spring_2026,IS,I S,Information Systems,IzS.html
+spring_2026,IB,IB,International Business,IB.html
+spring_2026,INTL,INTL,International Education,INTL.html
+spring_2026,ITAL,ITAL,Italian,ITAL.html
+spring_2026,JAPN,JAPN,Japanese,JAPN.html
+spring_2026,JOUR,JOUR,Journalism,JOUR.html
+spring_2026,KIN,KIN,Kinesiology,KIN.html
+spring_2026,KOR,KOR,Korean,KOR.html
+spring_2026,LAT,LAT,Latin,LAT.html
+spring_2026,CLA,C/LA,"Liberal Arts, College of",CxLA.html
+spring_2026,LST,L/ST,Liberal Studies,LxST.html
+spring_2026,LING,LING,Linguistics,LING.html
+spring_2026,MGMT,MGMT,Management,MGMT.html
+spring_2026,MKTG,MKTG,Marketing,MKTG.html
+spring_2026,MATH,MATH,Mathematics,MATH.html
+spring_2026,MTED,MTED,Mathematics Education,MTED.html
+spring_2026,MAE,MAE,Mechanical & Aerospace Engr,MAE.html
+spring_2026,MS,M S,Military Science,MzS.html
+spring_2026,MUS,MUS,Music,MUS.html
+spring_2026,NSCI,NSCI,Natural Sciences,NSCI.html
+spring_2026,NRSG,NRSG,Nursing,NRSG.html
+spring_2026,NUTR,NUTR,Nutrition and Dietetics,NUTR.html
+spring_2026,PHIL,PHIL,Philosophy,PHIL.html
+spring_2026,PHSC,PHSC,Physical Science,PHSC.html
+spring_2026,PHYS,PHYS,Physics,PHYS.html
+spring_2026,POSC,POSC,Political Science,POSC.html
+spring_2026,PSY,PSY,Psychology,PSY.html
+spring_2026,PPA,PPA,Public Policy & Administration,PPA.html
+spring_2026,REC,REC,Recreation,REC.html
+spring_2026,RST,R/ST,Religious Studies,RxST.html
+spring_2026,RGR,RGR,Romance German Russian Lang,RGR.html
+spring_2026,RUSS,RUSS,Russian,RUSS.html
+spring_2026,SCED,SCED,Science Education,SCED.html
+spring_2026,SW,S W,Social Work,SzW.html
+spring_2026,SOC,SOC,Sociology,SOC.html
+spring_2026,SPAN,SPAN,Spanish,SPAN.html
+spring_2026,SLP,SLP,Speech-Language-Pathology,SLP.html
+spring_2026,STAT,STAT,Statistics,STAT.html
+spring_2026,SDHE,SDHE,Student Development Higher ED,SDHE.html
+spring_2026,SRL,SRL,Student Rec & Leadership,SRL.html
+spring_2026,SI,S/I,Supplemental Instruction,SxI.html
+spring_2026,SCM,SCM,Supply Chain Management,SCM.html
+spring_2026,THEA,THEA,Theatre Arts,THEA.html
+spring_2026,TRST,TRST,Translation Studies,TRST.html
+spring_2026,UNIV,UNIV,University,UNIV.html
+spring_2026,UHP,UHP,University Honors Program,UHP.html
+spring_2026,UDCP,UDCP,Urban Dual Credential Program,UDCP.html
+spring_2026,VIET,VIET,Vietnamese,VIET.html
+spring_2026,WGSS,WGSS,Women's Gender Sexuality Stds,WGSS.html

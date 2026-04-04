@@ -1,0 +1,7 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+RUSS 100,Accelerated Elementary Russian,6,,,,Any Foundation course
+RUSS 200,Accelerated Intermediate Russian,6,,,RUSS 100 or a minimum of 3 years of high-school Russian,Any Foundation course
+RUSS 310,Russian Literature in English,3,,,"GE Foundation requirements, and any GE Exploration course in literature or European history",
+RUSS 410,Introduction to Russian Civilization,3,,,"GE Foundation requirements, one or more Explorations courses, and upper-division standing",
+RUSS 428,Russian Cinema,3,,,Completion of GE Foundation courses; upper-division standing,
+RUSS 499,Directed Studies in Russian,,,,"Senior standing, consent of instructor",

@@ -1,0 +1,11 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+NSCI 190A,Experience Success Program - 1,1,,,Open to Freshman only,
+NSCI 190B,Experience Success Program - 2,1,,,NSCI 190A,
+NSCI 191,Selected Topics in Natural Sciences and Mathematics,,,,"Lower division pre-major in Biology, Biochemistry, Chemistry, Geology, Marine Biology, Microbiology, or Physics Specific topics of current interest in the natural sciences",
+NSCI 390,Experience Success Program for STEM Transfer Students,1,,,Open only to first semester transfer students with majors in CNSM or COE,
+NSCI 490,Special Topics in the Natural Sciences,,,,At least upper division standing in the College of Natural Sciences and Mathematics and consent of instructor,
+NSCI 490L,"Special Topics in the Natural Sciences, Laboratory",,,,At least upper division standing in the College of Natural Sciences and Mathematics and consent of instructor,
+NSCI 492,Internships in Natural Science,3,,,"Major in the College of Natural Sciences and Mathematics, completion of 9 units of upper division science coursework, a 2",
+NSCI 501,Project Management for Scientists,3,,,Consent of instructor,
+NSCI 502,Leadership and Management for Scientists,3,,,Consent of instructor,
+NSCI 505,Professional Ethics,3,,,Consent of instructor,

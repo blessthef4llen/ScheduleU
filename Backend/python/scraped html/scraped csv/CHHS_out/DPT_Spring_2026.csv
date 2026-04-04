@@ -1,0 +1,48 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,DPT,705B,DPT 705B,BIOMECHANICS II AND GAIT,3,,01,9466,Spring_2026|DPT 705B|01|9466,FALSE,\N,310,LEC,M,8-9:50AM,available,HSD-103,Krishnan V,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,705B,DPT 705B,BIOMECHANICS II AND GAIT,3,,02,9467,Spring_2026|DPT 705B|02|9467,FALSE,\N,310,LAB,M,10-12:45PM,,HSD-103,Krishnan V,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,705B,DPT 705B,BIOMECHANICS II AND GAIT,3,,03,9468,Spring_2026|DPT 705B|03|9468,FALSE,\N,,LAB,M,10-12:45PM,available,HSD-103B,Krishnan V,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,709,DPT 709,EXERCISE SCI FOR PHYS THERAPY,3,,03,9469,Spring_2026|DPT 709|03|9469,FALSE,\N,310,LEC,Tu,10-11:50AM,,ET-115,Gray R,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,709,DPT 709,EXERCISE SCI FOR PHYS THERAPY,3,,06,9470,Spring_2026|DPT 709|06|9470,FALSE,\N,,LAB,W,1-3:45PM,,ET-117,Gray R,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,709,DPT 709,EXERCISE SCI FOR PHYS THERAPY,3,,07,9471,Spring_2026|DPT 709|07|9471,FALSE,\N,,LAB,W,9-11:45AM,,ET-117,Gray R,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,710,DPT 710,PATHOLOGY FOR PHYSICAL THERAPY,3,,02,9444,Spring_2026|DPT 710|02|9444,FALSE,\N,,LEC,M,2-4:45PM,available,ET-115,Rodrigues J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,731,DPT 731,PHYS THERAPY PRIN ACUTE CARE,2,,04,8010,Spring_2026|DPT 731|04|8010,FALSE,\N,,LEC,W,8-8:50AM,,SSC-040,Rodrigues J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,731,DPT 731,PHYS THERAPY PRIN ACUTE CARE,2,,05,8011,Spring_2026|DPT 731|05|8011,FALSE,\N,,LAB,W,9-11:45AM,,SSC-040,Rodrigues J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,731,DPT 731,PHYS THERAPY PRIN ACUTE CARE,2,,07,9472,Spring_2026|DPT 731|07|9472,FALSE,\N,,LAB,W,1-3:45PM,,SSC-040,Rodrigues J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,732,DPT 732,EVAL MGMT OF INDIV WITH MSK I,3,,04,7175,Spring_2026|DPT 732|04|7175,FALSE,\N,310,LEC,Th,10-11:50AM,,ET-115,Ozaki K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,732,DPT 732,EVAL MGMT OF INDIV WITH MSK I,3,,05,9531,Spring_2026|DPT 732|05|9531,FALSE,\N,,LAB,Th,1-3:45PM,,HSD-103,Ozaki K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,732,DPT 732,EVAL MGMT OF INDIV WITH MSK I,3,,07,8012,Spring_2026|DPT 732|07|8012,FALSE,\N,310,LAB,Th,1-3:45PM,,HSD-103B,Ivey C,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,734,DPT 734,EVA MGMT OF INDI WITH MSK III,2,,05,9483,Spring_2026|DPT 734|05|9483,FALSE,\N,,LEC,Tu,1-1:50PM,available,ET-115,Miller M,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,734,DPT 734,EVA MGMT OF INDI WITH MSK III,2,,06,9484,Spring_2026|DPT 734|06|9484,FALSE,\N,,LAB,Tu,2-4:45PM,available,ET-117,Miller M,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,734,DPT 734,EVA MGMT OF INDI WITH MSK III,2,,07,9485,Spring_2026|DPT 734|07|9485,FALSE,\N,,LAB,Tu,9-11:45AM,available,ET-117,Miller M,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,736,DPT 736,ORTHOTICS AND PROSTHETICS,2,,04,8019,Spring_2026|DPT 736|04|8019,FALSE,\N,,LEC,M,3-3:50PM,available,HSD-103,Regan S,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,736,DPT 736,ORTHOTICS AND PROSTHETICS,2,,05,8020,Spring_2026|DPT 736|05|8020,FALSE,\N,,LAB,M,4-6:45PM,,HSD-103,Long A,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,736,DPT 736,ORTHOTICS AND PROSTHETICS,2,,06,9529,Spring_2026|DPT 736|06|9529,FALSE,\N,,LAB,M,4-6:45PM,available,HSD-103B,Long A,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,740,DPT 740,EVAL MGMT OF NEUROLOGIC DISORD,2,,04,8027,Spring_2026|DPT 740|04|8027,FALSE,\N,,LEC,Tu,1-1:50PM,available,HSD-103,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,740,DPT 740,EVAL MGMT OF NEUROLOGIC DISORD,2,,05,8028,Spring_2026|DPT 740|05|8028,FALSE,\N,,LAB,Tu,2-4:45PM,,HSD-103,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,740,DPT 740,EVAL MGMT OF NEUROLOGIC DISORD,2,,06,9486,Spring_2026|DPT 740|06|9486,FALSE,\N,,LAB,Tu,2-4:45PM,available,HSD-103B,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,743,DPT 743,ELECTRONEUROMYOGRAPHIC MGMT,3,,01,7984,Spring_2026|DPT 743|01|7984,FALSE,\N,,LEC,M,8-9:50AM,available,ET-117,Campbell J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,743,DPT 743,ELECTRONEUROMYOGRAPHIC MGMT,3,,02,9459,Spring_2026|DPT 743|02|9459,FALSE,\N,,LAB,M,10-12:45PM,,ET-115,Campbell J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,743,DPT 743,ELECTRONEUROMYOGRAPHIC MGMT,3,,07,7995,Spring_2026|DPT 743|07|7995,FALSE,\N,,LAB,M,10-12:45PM,available,ET-115,Campbell J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,745,DPT 745,MGMT OF PEDIATRIC POPULATION,3,,01,5192,Spring_2026|DPT 745|01|5192,FALSE,\N,,LEC,W,8-9:50AM,available,HSD-103,Spina N,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,745,DPT 745,MGMT OF PEDIATRIC POPULATION,3,,02,5193,Spring_2026|DPT 745|02|5193,FALSE,\N,,LAB,W,10-12:50PM,,HSD-103,Spina N,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,745,DPT 745,MGMT OF PEDIATRIC POPULATION,3,,03,5194,Spring_2026|DPT 745|03|5194,FALSE,\N,,LAB,W,10-12:50PM,available,HSD-103B,Spina N,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,771,DPT 771,HEALTH CARE DELIVERY II,2,,01,9506,Spring_2026|DPT 771|01|9506,FALSE,\N,,LEC,Th,1-2:50PM,available,ET-115,Pelonis J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,783,DPT 783,NEUROLOG INTEGR CLINIC EXP II,1,,01,3386,Spring_2026|DPT 783|01|3386,FALSE,\N,,SEM,Tu,9-9:50AM,,HSD-103,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,783,DPT 783,NEUROLOG INTEGR CLINIC EXP II,1,,02,3387,Spring_2026|DPT 783|02|3387,FALSE,\N,,SEM,Tu,10-10:50AM,available,HSD-103,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,783,DPT 783,NEUROLOG INTEGR CLINIC EXP II,1,,03,3388,Spring_2026|DPT 783|03|3388,FALSE,\N,,SEM,Tu,11-11:50AM,available,HSD-103,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,783,DPT 783,NEUROLOG INTEGR CLINIC EXP II,1,,04,3389,Spring_2026|DPT 783|04|3389,FALSE,\N,,SEM,Th,9-9:50AM,available,HSD-103,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,783,DPT 783,NEUROLOG INTEGR CLINIC EXP II,1,,05,3390,Spring_2026|DPT 783|05|3390,FALSE,\N,,SEM,Th,10-10:50AM,,HSD-103,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,783,DPT 783,NEUROLOG INTEGR CLINIC EXP II,1,,06,3391,Spring_2026|DPT 783|06|3391,FALSE,\N,,SEM,Th,11-11:50AM,,HSD-103,DeMars K,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,785,DPT 785,CLINICAL INTERNSHIP I,6,,01,12578,Spring_2026|DPT 785|01|12578,FALSE,\N,,SUP,TBA,NA,,OFF-CAMP,Gustafson S,"Class instruction is: Face to Face - Off Campus.For clinical, internship, and field placements, face-to-face will take place in community locations (off-campus). Contact department and faculty for location details; check course syllabus for details."
+Spring_2026,DPT,786,DPT 786,CLINICAL INTERNSHIP II,6,,01,3710,Spring_2026|DPT 786|01|3710,FALSE,\N,,SUP,TBA,NA,,OFF-CAMP,DeMars K,Class instruction is: Face to Face - Off Campus.
+Spring_2026,DPT,786,DPT 786,CLINICAL INTERNSHIP II,6,,02,3711,Spring_2026|DPT 786|02|3711,FALSE,\N,,SUP,TBA,NA,,OFF-CAMP,Miller M,Class instruction is: Face to Face - Off Campus.
+Spring_2026,DPT,786,DPT 786,CLINICAL INTERNSHIP II,6,,03,3812,Spring_2026|DPT 786|03|3812,FALSE,\N,,SUP,TBA,NA,,OFF-CAMP,Gustafson S,Class instruction is: Face to Face - Off Campus.
+Spring_2026,DPT,786,DPT 786,CLINICAL INTERNSHIP II,6,,04,4846,Spring_2026|DPT 786|04|4846,FALSE,\N,,SUP,TBA,NA,,OFF-CAMP,Spina N,Class instruction is: Face to Face - Off Campus.
+Spring_2026,DPT,786,DPT 786,CLINICAL INTERNSHIP II,6,,06,10563,Spring_2026|DPT 786|06|10563,FALSE,\N,,SUP,TBA,NA,available,OFF-CAMP,Campbell J,Class instruction is: Face to Face - Off Campus.
+Spring_2026,DPT,799B,DPT 799B,DOCTORAL PROJECT - 2ND SEM,2,,01,8080,Spring_2026|DPT 799B|01|8080,FALSE,\N,,SUP,TBA,NA,,ECS-103,Krishnan V,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,799B,DPT 799B,DOCTORAL PROJECT - 2ND SEM,2,,02,8076,Spring_2026|DPT 799B|02|8076,FALSE,\N,,SUP,TBA,NA,,ECS-103,Rodrigues J,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,799B,DPT 799B,DOCTORAL PROJECT - 2ND SEM,2,,03,8077,Spring_2026|DPT 799B|03|8077,FALSE,\N,,SUP,TBA,NA,,ECS-103,Teng S,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,799B,DPT 799B,DOCTORAL PROJECT - 2ND SEM,2,,04,8078,Spring_2026|DPT 799B|04|8078,FALSE,\N,,SUP,TBA,NA,available,ECS-103,Beneck G,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,799B,DPT 799B,DOCTORAL PROJECT - 2ND SEM,2,,06,8079,Spring_2026|DPT 799B|06|8079,FALSE,\N,,SUP,TBA,NA,,ECS-103,Dyo M,Class instruction is: Face to Face - On Campus.
+Spring_2026,DPT,799B,DPT 799B,DOCTORAL PROJECT - 2ND SEM,2,,07,9532,Spring_2026|DPT 799B|07|9532,FALSE,\N,,SUP,TBA,NA,,ECS-103,Campbell J,Class instruction is: Face to Face - On Campus.

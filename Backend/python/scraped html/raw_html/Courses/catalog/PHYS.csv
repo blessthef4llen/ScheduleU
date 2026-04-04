@@ -1,0 +1,13 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+PHYS 100A,General Physics,4,,,or higher,
+PHYS 152,Electricity and Magnetism,4,,,; Prerequisite/Corequisite:,
+PHYS 254,Applied Modern Physics,3,,,or ; Prerequisite/Corequisite:,
+PHYS 310,Analytical Mechanics,3,,,or or,or or
+PHYS 340A,Electricity and Magnetism I,3,,,",",or
+PHYS 350,Quantum Physics I,3,,,", Prerequisites/Corequisites: or",or
+PHYS 380,Electronics,4,,,", Network analysis and complex impedance, transistor circuits, operational amplifiers, active filters and oscillators, digital electronics, analog-digital interfacing, microprocessors",
+PHYS 385,Materials Science,3,,,"or and and ( or or ), completion of or is strongly recommended",
+PHYS 385C,Materials Science Colloquium,1,,,"or and and ( or or ), completion of or is strongly recommended",
+PHYS 385L,Materials Science Laboratory,2,,,"or and and ( or or ), completion of or is strongly recommended",
+PHYS 390,Exploring Physics Teaching,3,,,and consent of instructor,
+PHYS 401,Preparing for the Physics Profession,1,,,PHYS 310 or consent of instructor,

@@ -1,0 +1,11 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+FSCI 338,"Food Law, Safety, and Regulation",3,,,A grade of “C” or better in BIOL 201 and ( FSCI 232 or FSCI 332),
+FSCI 432,Food Chemistry and Analysis,3,,,"CHEM 227 or CHEM 220B, FSCI 232 or equivalent",
+FSCI 435,Food Processing and Preservation,3,,,FSCI 232 or consent of instructor,
+FSCI 469,Food Product Development,3,,,"Grade of “C” or better in FSCI 232 , and in FSCI 435",FSCI 432 Industrial concepts and technology as they apply to food product development and formulation
+FSCI 492F,Internship in Food Science,3,,,Student must be a Family and Consumer Sciences: Food Science major; have senior standing; have a 2,
+FSCI 497,Directed Studies,,,,"Upper division standing, consent of instructor",
+FSCI 532,Food Chemistry and Analysis,3,,,"CHEM 227 , FSCI 232 or equivalent",
+FSCI 535,Food Processing and Preservation,3,,,FSCI 232 or consent of instructor,
+FSCI 590,Selected Topics in Food Science,3,,,Enrollment in a graduate major in the Food Science department; advancement to candidacy; instructor consent,
+FSCI 597,Independent Study,,,,A 400-level course in any of the Family and Consumer Sciences disciplines,

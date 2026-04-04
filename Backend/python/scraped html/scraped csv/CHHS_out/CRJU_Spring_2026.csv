@@ -1,0 +1,146 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,CRJU,101,CRJU 101,CRIM JUSTICE SYSTEM IN SOCIETY,3,GE: 4C (D3),01,6443,Spring_2026|CRJU 101|01|6443,FALSE,\N,5,LEC,MW,11-12:15PM,,FCS-126,Lopez A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,101,CRJU 101,CRIM JUSTICE SYSTEM IN SOCIETY,3,GE: 4C (D3),02,7411,Spring_2026|CRJU 101|02|7411,FALSE,\N,5,LEC,TuTh,12:30-1:45PM,,LA2-120,Nash B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,101,CRJU 101,CRIM JUSTICE SYSTEM IN SOCIETY,3,GE: 4C (D3),03,9941,Spring_2026|CRJU 101|03|9941,FALSE,\N,"5,305",LEC,NA,NA,,ONLINE-ONLY,McCluskey D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,230,CRJU 230,FORENSIC SCIENCES SURVEY,3,,01,7426,Spring_2026|CRJU 230|01|7426,FALSE,\N,,LEC,MW,8-9:15AM,available,HHS1-204,Wang Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,230,CRJU 230,FORENSIC SCIENCES SURVEY,3,,02,8454,Spring_2026|CRJU 230|02|8454,FALSE,\N,,LEC,MW,9:30-10:45AM,,HHS1-204,Wang Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,300,CRJU 300,"RESEARCH, WRITING, & REASONING",3,,01,7412,Spring_2026|CRJU 300|01|7412,FALSE,\N,,LEC,TuTh,8-9:15AM,,HSD-119,Cunningham K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,300,CRJU 300,"RESEARCH, WRITING, & REASONING",3,,02,7413,Spring_2026|CRJU 300|02|7413,FALSE,\N,,LEC,MW,11-12:15PM,,HSD-119,Peterson E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,300,CRJU 300,"RESEARCH, WRITING, & REASONING",3,,04,7415,Spring_2026|CRJU 300|04|7415,FALSE,\N,,LEC,TuTh,9:30-10:45AM,,HSD-119,Cunningham K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,300,CRJU 300,"RESEARCH, WRITING, & REASONING",3,,05,7416,Spring_2026|CRJU 300|05|7416,FALSE,\N,,LEC,MW,2-3:15PM,,HSD-119,Peterson E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,300,CRJU 300,"RESEARCH, WRITING, & REASONING",3,,06,7417,Spring_2026|CRJU 300|06|7417,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Peterson E,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,300,CRJU 300,"RESEARCH, WRITING, & REASONING",3,,07,7418,Spring_2026|CRJU 300|07|7418,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Burrows V,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,300,CRJU 300,"RESEARCH, WRITING, & REASONING",3,,08,7419,Spring_2026|CRJU 300|08|7419,FALSE,\N,,LEC,TuTh,3:30-4:45PM,,HSD-119,Beckner A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,300,CRJU 300,"RESEARCH, WRITING, & REASONING",3,,09,9030,Spring_2026|CRJU 300|09|9030,FALSE,\N,,LEC,TuTh,2-3:15PM,,ET-107,Peterson E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,301,CRJU 301,CRIMINAL COURTS,3,,01,2599,Spring_2026|CRJU 301|01|2599,FALSE,\N,,LEC,TuTh,8-9:15AM,available,HHS1-105,Choi A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,301,CRJU 301,CRIMINAL COURTS,3,,02,5121,Spring_2026|CRJU 301|02|5121,FALSE,\N,,LEC,TuTh,9:30-10:45AM,,HHS1-105,Choi A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,301,CRJU 301,CRIMINAL COURTS,3,,03,6029,Spring_2026|CRJU 301|03|6029,FALSE,\N,,LEC,Th,7-9:45PM,available,ET-107,Bogardus K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,301,CRJU 301,CRIMINAL COURTS,3,,04,7136,Spring_2026|CRJU 301|04|7136,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Van Brakle M,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,301,CRJU 301,CRIMINAL COURTS,3,,05,8456,Spring_2026|CRJU 301|05|8456,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Ellis C,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,301,CRJU 301,CRIMINAL COURTS,3,,06,10116,Spring_2026|CRJU 301|06|10116,FALSE,\N,,LEC,TuTh,2-3:15PM,,HSD-113,Lopez A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,302,CRJU 302,POLICING,3,,01,7423,Spring_2026|CRJU 302|01|7423,FALSE,\N,,LEC,MW,8-9:15AM,available,HHS1-105,Mori K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,302,CRJU 302,POLICING,3,,02,4936,Spring_2026|CRJU 302|02|4936,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Florek J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,302,CRJU 302,POLICING,3,,03,6030,Spring_2026|CRJU 302|03|6030,FALSE,\N,307,LEC,Th,11-12:15PM,available,HHS1-105,Perez N,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,302,CRJU 302,POLICING,3,,03,\N,Spring_2026|CRJU 302|03|NOCLASS|3e148d9c39e717b7,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,302,CRJU 302,POLICING,3,,04,7831,Spring_2026|CRJU 302|04|7831,FALSE,\N,307,LEC,Tu,11-12:15PM,,HHS1-105,Ku Mazzeo E,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,302,CRJU 302,POLICING,3,,04,\N,Spring_2026|CRJU 302|04|NOCLASS|3b493d53e35bca7f,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,302,CRJU 302,POLICING,3,,05,10109,Spring_2026|CRJU 302|05|10109,FALSE,\N,,LEC,M,7-9:45PM,available,ET-107,Frantz J,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,302,CRJU 302,POLICING,3,,06,10117,Spring_2026|CRJU 302|06|10117,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,LeBaron P,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,303,CRJU 303,CORRECTIONS THEORY POLICY PRAC,3,,01,2601,Spring_2026|CRJU 303|01|2601,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Ireland C,Class instruction is: Asynch. Online-No Meet Times.QM Certified
+Spring_2026,CRJU,303,CRJU 303,CORRECTIONS THEORY POLICY PRAC,3,,02,6032,Spring_2026|CRJU 303|02|6032,FALSE,\N,307,LEC,M,2-3:15PM,,HHS1-204,Chavez E,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,303,CRJU 303,CORRECTIONS THEORY POLICY PRAC,3,,02,\N,Spring_2026|CRJU 303|02|NOCLASS|de038b3a021b0965,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,303,CRJU 303,CORRECTIONS THEORY POLICY PRAC,3,,04,6455,Spring_2026|CRJU 303|04|6455,FALSE,\N,,LEC,TuTh,12:30-1:45PM,,HHS1-204,Morgan S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,303,CRJU 303,CORRECTIONS THEORY POLICY PRAC,3,,05,8081,Spring_2026|CRJU 303|05|8081,FALSE,\N,,LEC,TuTh,2-3:15PM,available,HHS1-204,Morgan S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,303,CRJU 303,CORRECTIONS THEORY POLICY PRAC,3,,06,10165,Spring_2026|CRJU 303|06|10165,FALSE,\N,,LEC,TuTh,12:30-1:45PM,,HSD-113,Lopez A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,01,2980,Spring_2026|CRJU 304|01|2980,FALSE,\N,,SEM,MW,8-9:15AM,,HSD-119,Schug R,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,02,2981,Spring_2026|CRJU 304|02|2981,FALSE,\N,,SEM,TuTh,9:30-10:45AM,,HSD-113,Renner M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,03,5732,Spring_2026|CRJU 304|03|5732,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Tolbert T,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,04,7424,Spring_2026|CRJU 304|04|7424,FALSE,\N,,SEM,TuTh,2-3:15PM,,HSD-119,Diaz M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,05,7901,Spring_2026|CRJU 304|05|7901,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Diaz M,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,06,7915,Spring_2026|CRJU 304|06|7915,FALSE,\N,,SEM,TuTh,11-12:15PM,,HSD-119,Renner M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,07,8459,Spring_2026|CRJU 304|07|8459,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Martin K,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,08,8458,Spring_2026|CRJU 304|08|8458,FALSE,\N,,SEM,MW,9:30-10:45AM,,HSD-119,Barno M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,09,10099,Spring_2026|CRJU 304|09|10099,FALSE,\N,,SEM,TuTh,8-9:15AM,,HHS1-204,Barno M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,10,10379,Spring_2026|CRJU 304|10|10379,FALSE,\N,,SEM,MW,12:30-1:45PM,,HSD-119,Renner M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,11,10560,Spring_2026|CRJU 304|11|10560,FALSE,\N,,SEM,MW,12:30-1:45PM,,HHS1-105,Barno M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,304,CRJU 304,CRIMINOLOGICAL THEORY,3,GWAR: WI,13,12430,Spring_2026|CRJU 304|13|12430,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Mendie D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,320,CRJU 320,C J RESEARCH METHODS,3,,01,2603,Spring_2026|CRJU 320|01|2603,FALSE,\N,,LEC,TuTh,8-9:15AM,,HSD-113,Van Brakle M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,320,CRJU 320,C J RESEARCH METHODS,3,,02,2977,Spring_2026|CRJU 320|02|2977,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Florek J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,320,CRJU 320,C J RESEARCH METHODS,3,,03,5774,Spring_2026|CRJU 320|03|5774,FALSE,\N,307,LEC,W,2-3:15PM,,VEC-202,Punla-Martinez C,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,320,CRJU 320,C J RESEARCH METHODS,3,,03,\N,Spring_2026|CRJU 320|03|NOCLASS|59e7f908187fecc5,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Vickovic S,additional meeting detail
+Spring_2026,CRJU,320,CRJU 320,C J RESEARCH METHODS,3,,04,6889,Spring_2026|CRJU 320|04|6889,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Vickovic S,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,325,CRJU 325,STATISTICS FOR CRIM JUSTICE,4,GE: 2UD/5UD (UDB),01,2597,Spring_2026|CRJU 325|01|2597,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Nash B,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,325,CRJU 325,STATISTICS FOR CRIM JUSTICE,4,GE: 2UD/5UD (UDB),02,2598,Spring_2026|CRJU 325|02|2598,FALSE,\N,,LEC,MW,9-10:50AM,,ET-109,Fischer R,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,325,CRJU 325,STATISTICS FOR CRIM JUSTICE,4,GE: 2UD/5UD (UDB),03,4943,Spring_2026|CRJU 325|03|4943,FALSE,\N,,LEC,MW,11-12:50PM,,ET-109,Fischer R,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,325,CRJU 325,STATISTICS FOR CRIM JUSTICE,4,GE: 2UD/5UD (UDB),04,5956,Spring_2026|CRJU 325|04|5956,FALSE,\N,,LEC,TuTh,2-3:50PM,,ET-109,Renner M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,325,CRJU 325,STATISTICS FOR CRIM JUSTICE,4,GE: 2UD/5UD (UDB),05,12369,Spring_2026|CRJU 325|05|12369,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Land A,Class instruction is: Asynch. Online-No Meet Times.Seats reserved for CRJU graduating seniors
+Spring_2026,CRJU,325,CRJU 325,STATISTICS FOR CRIM JUSTICE,4,GE: 2UD/5UD (UDB),07,12429,Spring_2026|CRJU 325|07|12429,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Land A,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,330,CRJU 330,"CRIM ETHICS, VALUES, DIVERSITY",3,,01,2604,Spring_2026|CRJU 330|01|2604,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Tolbert T,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,330,CRJU 330,"CRIM ETHICS, VALUES, DIVERSITY",3,,02,2605,Spring_2026|CRJU 330|02|2605,FALSE,\N,,LEC,TuTh,9:30-10:45AM,,ET-009,Ku Mazzeo E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,330,CRJU 330,"CRIM ETHICS, VALUES, DIVERSITY",3,,03,7425,Spring_2026|CRJU 330|03|7425,FALSE,\N,"305,278",LEC,NA,NA,,ONLINE-ONLY,Ireland C,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,330,CRJU 330,"CRIM ETHICS, VALUES, DIVERSITY",3,,04,6970,Spring_2026|CRJU 330|04|6970,FALSE,\N,"278,307",LEC,Tu,5-6:15PM,available,HSD-111,Carlisle C,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,330,CRJU 330,"CRIM ETHICS, VALUES, DIVERSITY",3,,04,\N,Spring_2026|CRJU 330|04|NOCLASS|167602fdbef5a372,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Carlisle C,additional meeting detail
+Spring_2026,CRJU,340,CRJU 340,SUBSTANTIVE CRIMINAL LAW,3,,01,2589,Spring_2026|CRJU 340|01|2589,FALSE,\N,307,LEC,Tu,11-12:15PM,,ONLINE-ONLY,Binnall J,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,CRJU,340,CRJU 340,SUBSTANTIVE CRIMINAL LAW,3,,01,\N,Spring_2026|CRJU 340|01|NOCLASS|f6d9f104f1e35194,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,340,CRJU 340,SUBSTANTIVE CRIMINAL LAW,3,,02,4952,Spring_2026|CRJU 340|02|4952,FALSE,\N,307,LEC,Th,11-12:15PM,,ONLINE-ONLY,Binnall J,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,CRJU,340,CRJU 340,SUBSTANTIVE CRIMINAL LAW,3,,02,\N,Spring_2026|CRJU 340|02|NOCLASS|c6f15625d34d3399,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,340,CRJU 340,SUBSTANTIVE CRIMINAL LAW,3,,03,8041,Spring_2026|CRJU 340|03|8041,FALSE,\N,,LEC,MW,11-12:15PM,,HHS1-105,Choi A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,340,CRJU 340,SUBSTANTIVE CRIMINAL LAW,3,,04,8087,Spring_2026|CRJU 340|04|8087,FALSE,\N,,LEC,MW,9:30-10:45AM,available,HHS1-105,Choi A,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,350,CRJU 350,CONSTITUTNL CRIMINAL PROCEDURE,3,,01,2590,Spring_2026|CRJU 350|01|2590,FALSE,\N,278,LEC,MW,2-3:15PM,,HHS1-105,Barno M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,350,CRJU 350,CONSTITUTNL CRIMINAL PROCEDURE,3,,02,2591,Spring_2026|CRJU 350|02|2591,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Bogardus K,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,350,CRJU 350,CONSTITUTNL CRIMINAL PROCEDURE,3,,03,2819,Spring_2026|CRJU 350|03|2819,FALSE,\N,,LEC,TuTh,9:30-10:45AM,,HHS1-204,Barno M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,350,CRJU 350,CONSTITUTNL CRIMINAL PROCEDURE,3,,04,7573,Spring_2026|CRJU 350|04|7573,FALSE,\N,,LEC,Tu,7-9:45PM,,ET-107,Bogardus K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,350,CRJU 350,CONSTITUTNL CRIMINAL PROCEDURE,3,,05,9557,Spring_2026|CRJU 350|05|9557,FALSE,\N,,LEC,W,7-9:45PM,,ET-107,Bogardus K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,401,CRJU 401,VICTIMOLOGY,3,,01,7427,Spring_2026|CRJU 401|01|7427,FALSE,\N,"279,305",LEC,NA,NA,,ONLINE-ONLY,Tolbert T,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,402,CRJU 402,CRIME AND INEQUALITY,3,,01,10108,Spring_2026|CRJU 402|01|10108,FALSE,\N,,LEC,MW,3:30-4:45PM,,HHS1-204,Chavez E,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,402,CRJU 402,CRIME AND INEQUALITY,3,,02,12408,Spring_2026|CRJU 402|02|12408,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Lopez A,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,403,CRJU 403,COMP CRIM TRANSNATIONAL CRIMES,3,,01,8735,Spring_2026|CRJU 403|01|8735,FALSE,\N,,LEC,MW,12:30-1:45PM,available,HHS1-204,Wang Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,404,CRJU 404,HOMELAND SECURITY,3,,01,6046,Spring_2026|CRJU 404|01|6046,FALSE,\N,279,LEC,M,7-9:45PM,,HHS1-105,Khan S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,406,CRJU 406,DELINQUENCY/JUVENILE JUST SYST,3,,01,7571,Spring_2026|CRJU 406|01|7571,FALSE,\N,"279,305",LEC,NA,NA,,ONLINE-ONLY,Tom K,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,406,CRJU 406,DELINQUENCY/JUVENILE JUST SYST,3,,02,10119,Spring_2026|CRJU 406|02|10119,FALSE,\N,,LEC,TuTh,11-12:15PM,,HSD-113,Tom K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,407,CRJU 407,WHITE COLLAR CRIME,3,,01,6388,Spring_2026|CRJU 407|01|6388,FALSE,\N,,LEC,TuTh,11-12:15PM,,HHS1-204,Vickovic S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,407,CRJU 407,WHITE COLLAR CRIME,3,,02,9478,Spring_2026|CRJU 407|02|9478,FALSE,\N,"279,305",LEC,NA,NA,,ONLINE-ONLY,McCluskey D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,409,CRJU 409,DRUGS AND THE DRUG WAR,3,,01,4273,Spring_2026|CRJU 409|01|4273,FALSE,\N,279,SEM,Th,4-6:45PM,available,HHS1-201,Diaz M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,412,CRJU 412,CRIMINAL INVESTIGATION,3,,01,2607,Spring_2026|CRJU 412|01|2607,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,McCluskey D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,412,CRJU 412,CRIMINAL INVESTIGATION,3,,02,5790,Spring_2026|CRJU 412|02|5790,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,McCluskey D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,412,CRJU 412,CRIMINAL INVESTIGATION,3,,03,7074,Spring_2026|CRJU 412|03|7074,FALSE,\N,,LEC,M,7-9:45PM,,HHS1-201,Mori K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,424,CRJU 424,SUCCESSFUL REENTRY THRY & PRAC,3,,01,12409,Spring_2026|CRJU 424|01|12409,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Madrigal A,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,430,CRJU 430,CRIMINAL EVIDENCE AND TRIALS,3,,01,7430,Spring_2026|CRJU 430|01|7430,FALSE,\N,,SEM,TuTh,2-3:15PM,,HHS1-104,Guluzian K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,440,CRJU 440,CRIMINALISTICS: FORNSC SCI LAB,3,,01,7997,Spring_2026|CRJU 440|01|7997,FALSE,\N,279,LEC,Tu,9:30-12:15PM,,SSC-045,Guluzian K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,440,CRJU 440,CRIMINALISTICS: FORNSC SCI LAB,3,,02,8460,Spring_2026|CRJU 440|02|8460,FALSE,\N,,LEC,W,8-10:45AM,,SSC-045,Guluzian K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,442,CRJU 442,FORENSIC PSYCHOLOGY,3,,01,4272,Spring_2026|CRJU 442|01|4272,FALSE,\N,279,LEC,MW,11-12:15PM,,HHS1-204,Schug R,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,443,CRJU 443,FORENSIC PATHOLOGY,3,,01,8468,Spring_2026|CRJU 443|01|8468,FALSE,\N,,LEC,Th,7-9:45PM,,HHS1-105,Elias B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,444,CRJU 444,FORENSIC PHOTOGRAPHY,3,,01,10118,Spring_2026|CRJU 444|01|10118,FALSE,\N,,LEC,W,11-1:45PM,,SSC-045,Guluzian K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,450,CRJU 450,DOMESTIC VIOLENCE/CRIM JUS SYS,3,,01,9558,Spring_2026|CRJU 450|01|9558,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Magana E,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,460,CRJU 460,INTRO TO CRIME ANALYSIS,3,,01,6049,Spring_2026|CRJU 460|01|6049,FALSE,\N,"279,307",LEC,M,1-2:15PM,,ET-109,Ku Mazzeo E,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,460,CRJU 460,INTRO TO CRIME ANALYSIS,3,,01,\N,Spring_2026|CRJU 460|01|NOCLASS|1a275b6f193364da,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,462,CRJU 462,CRIME MAPPING,3,,01,10096,Spring_2026|CRJU 462|01|10096,FALSE,\N,279,LEC,Th,4-6:45PM,available,ET-109,Martin K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,463,CRJU 463,INTELLIGENCE ANALYSIS,3,,01,10097,Spring_2026|CRJU 463|01|10097,FALSE,\N,"279,307",LEC,M,5-6:15PM,available,HHS1-204,Preciado V,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,463,CRJU 463,INTELLIGENCE ANALYSIS,3,,01,\N,Spring_2026|CRJU 463|01|NOCLASS|b7a34fe0da98a936,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,490,CRJU 490,S TOPICS CRIMINAL JUSTICE,3,,01,7525,Spring_2026|CRJU 490|01|7525,FALSE,\N,"279,9",LEC,TuTh,3:30-4:45PM,,ET-107,Nash B,"Media, Crime and the CJ SystemClass instruction is: Face to Face - On Campus."
+Spring_2026,CRJU,490,CRJU 490,S TOPICS CRIMINAL JUSTICE,3,,02,10551,Spring_2026|CRJU 490|02|10551,FALSE,\N,9,LEC,NA,NA,,ONLINE-ONLY,Kiltz L,CybersecurityClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,01,6082,Spring_2026|CRJU 493|01|6082,FALSE,\N,"3,308",SEM,NA,NA,,OFF-CAMP,Martin K,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,02,6385,Spring_2026|CRJU 493|02|6385,FALSE,\N,"3,308",SEM,NA,NA,,OFF-CAMP,Chavez E,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,03,6386,Spring_2026|CRJU 493|03|6386,FALSE,\N,"3,308",SEM,NA,NA,,OFF-CAMP,Tolbert T,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,04,6387,Spring_2026|CRJU 493|04|6387,FALSE,\N,"3,308",SEM,NA,NA,available,OFF-CAMP,Morgan S,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,05,6593,Spring_2026|CRJU 493|05|6593,FALSE,\N,"3,308",SEM,NA,NA,,OFF-CAMP,Choi A,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,06,6608,Spring_2026|CRJU 493|06|6608,FALSE,\N,"3,308",SEM,NA,NA,,OFF-CAMP,Van Brakle M,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,07,6778,Spring_2026|CRJU 493|07|6778,FALSE,\N,"3,308",SEM,NA,NA,,OFF-CAMP,Tom K,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,08,12680,Spring_2026|CRJU 493|08|12680,FALSE,\N,"3,308",SEM,NA,NA,,OFF-CAMP,Perez N,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,09,12710,Spring_2026|CRJU 493|09|12710,FALSE,\N,"3,308",SEM,NA,NA,,OFF-CAMP,Vickovic S,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,493,CRJU 493,INTERNSHIP,3,,10,12779,Spring_2026|CRJU 493|10|12779,FALSE,\N,"3,308",SEM,NA,NA,available,OFF-CAMP,Tolbert T,Department Consent RequiredClass instruction is: Face to Face - Off Campus.
+Spring_2026,CRJU,497,CRJU 497,DIRECTED RESRCH/INDPNDNT STUDY,3,,01,4784,Spring_2026|CRJU 497|01|4784,FALSE,\N,3,SUP,TBA,NA,available,ONLINE-ONLY,Nash B,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,497,CRJU 497,DIRECTED RESRCH/INDPNDNT STUDY,3,,02,5778,Spring_2026|CRJU 497|02|5778,FALSE,\N,3,SUP,TBA,NA,,ONLINE-ONLY,Perez N,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,497,CRJU 497,DIRECTED RESRCH/INDPNDNT STUDY,3,,03,9295,Spring_2026|CRJU 497|03|9295,FALSE,\N,3,SUP,TBA,NA,available,ONLINE-ONLY,Schug R,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,497,CRJU 497,DIRECTED RESRCH/INDPNDNT STUDY,3,,04,10393,Spring_2026|CRJU 497|04|10393,FALSE,\N,3,SUP,TBA,NA,available,ONLINE-ONLY,Fischer R,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,497,CRJU 497,DIRECTED RESRCH/INDPNDNT STUDY,3,,05,10395,Spring_2026|CRJU 497|05|10395,FALSE,\N,3,SUP,TBA,NA,available,ONLINE-ONLY,Scott-Hayward C,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,498,CRJU 498,SENIOR THESIS,3,,01,10559,Spring_2026|CRJU 498|01|10559,FALSE,\N,,SUP,TBA,NA,,ONLINE-ONLY,Morgan S,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,498,CRJU 498,SENIOR THESIS,3,,02,12316,Spring_2026|CRJU 498|02|12316,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Diaz M,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,525,CRJU 525,ADV STATS FOR CRIM JUSTICE,3,,01,2600,Spring_2026|CRJU 525|01|2600,FALSE,\N,,LEC,Tu,4-6:45PM,available,ET-109,Perez N,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,530,CRJU 530,"CJ ETHICS, VALUES, DIVERSITY",3,,03,12276,Spring_2026|CRJU 530|03|12276,FALSE,\N,"305,278",LEC,NA,NA,,ONLINE-ONLY,Ireland C,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,555,CRJU 555,LAW JUSTICE SOCIAL CONTROL,3,,01,5657,Spring_2026|CRJU 555|01|5657,FALSE,\N,,SEM,W,4-6:45PM,available,HSD-119,Van Brakle M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,601,CRJU 601,VICTIMOLOGY,3,,01,7435,Spring_2026|CRJU 601|01|7435,FALSE,\N,"279,305",LEC,NA,NA,,ONLINE-ONLY,Tolbert T,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,604,CRJU 604,HOMELAND SECURITY,3,,02,6048,Spring_2026|CRJU 604|02|6048,FALSE,\N,279,LEC,M,7-9:45PM,,HHS1-105,Khan S,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,606,CRJU 606,DELINQUENCY JUVENILE JUST SYS,3,,01,7572,Spring_2026|CRJU 606|01|7572,FALSE,\N,"279,305",LEC,NA,NA,available,ONLINE-ONLY,Tom K,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,607,CRJU 607,WHITE COLLAR CRIME,3,,01,10378,Spring_2026|CRJU 607|01|10378,FALSE,\N,"279,305",LEC,NA,NA,,ONLINE-ONLY,McCluskey D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,609,CRJU 609,DRUGS AND THE DRUG WAR,3,,01,7434,Spring_2026|CRJU 609|01|7434,FALSE,\N,279,SEM,Th,4-6:45PM,,HHS1-201,Diaz M,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,640,CRJU 640,FORENSIC SCI IN THE CRIME LAB,3,,01,7998,Spring_2026|CRJU 640|01|7998,FALSE,\N,279,LEC,Tu,9:30-12:15PM,,SSC-045,Guluzian K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,642,CRJU 642,FORENSIC PSYCHOLOGY,3,,01,6753,Spring_2026|CRJU 642|01|6753,FALSE,\N,279,LEC,MW,11-12:15PM,,HHS1-204,Schug R,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,643,CRJU 643,FORENSIC PATHOLOGY,3,,01,10325,Spring_2026|CRJU 643|01|10325,FALSE,\N,279,LEC,Th,7-9:45PM,,HHS1-105,Elias B,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,660,CRJU 660,INTRO TO CRIME ANALYSIS,3,,01,6050,Spring_2026|CRJU 660|01|6050,FALSE,\N,"279,307",LEC,M,1-2:15PM,,ET-109,Ku Mazzeo E,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,660,CRJU 660,INTRO TO CRIME ANALYSIS,3,,01,\N,Spring_2026|CRJU 660|01|NOCLASS|d0ec798cf289bb56,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,662,CRJU 662,CRIME MAPPING,3,,01,10328,Spring_2026|CRJU 662|01|10328,FALSE,\N,279,LEC,Th,4-6:45PM,,ET-109,Martin K,Class instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,663,CRJU 663,INTELLIGENCE ANALYSIS,3,,01,10098,Spring_2026|CRJU 663|01|10098,FALSE,\N,279,LEC,M,5-6:15PM,,HHS1-204,Preciado V,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,CRJU,663,CRJU 663,INTELLIGENCE ANALYSIS,3,,01,\N,Spring_2026|CRJU 663|01|NOCLASS|6389539be88576da,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,CRJU,690,CRJU 690,S TOPICS CRIMINAL JUSTICE,3,,01,10103,Spring_2026|CRJU 690|01|10103,FALSE,\N,"279,9",LEC,TuTh,3:30-4:45PM,,ET-107,Nash B,"Media, Crime and the CJ SystemClass instruction is: Face to Face - On Campus."
+Spring_2026,CRJU,691,CRJU 691,CJ INSTRUCTIONAL STRATEGIES,3,,01,4486,Spring_2026|CRJU 691|01|4486,FALSE,\N,309,SUP,TBA,NA,,ONLINE-ONLY,Diaz M,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.Four face-to-face will be scheduled over the course of the semester
+Spring_2026,CRJU,693,CRJU 693,INTERNSHIP,3,,01,12349,Spring_2026|CRJU 693|01|12349,FALSE,\N,"308,3",SEM,NA,NA,,OFF-CAMP,Martin K,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,CRJU,695,CRJU 695,DIR READINGS/INDEPENDENT STUDY,1,,01,7156,Spring_2026|CRJU 695|01|7156,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Vickovic S,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,695,CRJU 695,DIR READINGS/INDEPENDENT STUDY,1,,02,9393,Spring_2026|CRJU 695|02|9393,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Diaz M,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,697,CRJU 697,DIRECTED RESEARCH,3,,01,10120,Spring_2026|CRJU 697|01|10120,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Ku Mazzeo E,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,697,CRJU 697,DIRECTED RESEARCH,3,,02,12319,Spring_2026|CRJU 697|02|12319,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Morgan S,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,698,CRJU 698,THESIS II,3,,01,6890,Spring_2026|CRJU 698|01|6890,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Diaz M,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,698,CRJU 698,THESIS II,3,,02,6891,Spring_2026|CRJU 698|02|6891,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Perez N,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,698,CRJU 698,THESIS II,3,,03,6892,Spring_2026|CRJU 698|03|6892,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Scott-Hayward C,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,698,CRJU 698,THESIS II,3,,04,10121,Spring_2026|CRJU 698|04|10121,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Vickovic S,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,CRJU,698,CRJU 698,THESIS II,3,,05,10122,Spring_2026|CRJU 698|05|10122,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Schug R,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.

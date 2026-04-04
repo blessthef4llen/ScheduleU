@@ -1,0 +1,12 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,EDAD,621B,EDAD 621B,SEM EQUITY & EDU LEADERSHIP,1,,01,9922,Spring_2026|EDAD 621B|01|9922,FALSE,\N,,SEM,Tu,6-7:50PM,available,ONLINE-ONLY,Biolchino E,Class meets on 02/03/26. Class instruction is: Online - Mixed Meet Times.
+Spring_2026,EDAD,621B,EDAD 621B,SEM EQUITY & EDU LEADERSHIP,1,,01,\N,Spring_2026|EDAD 621B|01|NOCLASS|fc508766465340ea,FALSE,\N,,,Tu,6-7:50PM,,ONLINE-ONLY,Biolchino E,Class meets on 05/05/26.
+Spring_2026,EDAD,621B,EDAD 621B,SEM EQUITY & EDU LEADERSHIP,1,,01,\N,Spring_2026|EDAD 621B|01|NOCLASS|2bdd82177645ab6e,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Biolchino E,additional meeting detail
+Spring_2026,EDAD,651,EDAD 651,URBAN SCHOOLS & COMMUNITIES,2,,02,12792,Spring_2026|EDAD 651|02|12792,FALSE,\N,309,SEM,Tu,6-8:00PM,available,ONLINE-ONLY,Rodgers D,Class meets on 03/03/26. Class instruction is: Online - Mixed Meet Times.
+Spring_2026,EDAD,651,EDAD 651,URBAN SCHOOLS & COMMUNITIES,2,,02,\N,Spring_2026|EDAD 651|02|NOCLASS|a4ebdb2c736d62d4,FALSE,\N,,,Tu,6-8:00PM,,ONLINE-ONLY,Rodgers D,Class meets on 03/17/26.
+Spring_2026,EDAD,651,EDAD 651,URBAN SCHOOLS & COMMUNITIES,2,,02,\N,Spring_2026|EDAD 651|02|NOCLASS|bba5cb210888edf1,FALSE,\N,,,Tu,6-8:00PM,,ONLINE-ONLY,Staff,Class meets on 04/07/26.
+Spring_2026,EDAD,651,EDAD 651,URBAN SCHOOLS & COMMUNITIES,2,,02,\N,Spring_2026|EDAD 651|02|NOCLASS|f42c1b85425a7c28,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Rodgers D,additional meeting detail
+Spring_2026,EDAD,655A,EDAD 655A,INTRO INSTR LEADER FOR EQUITY,3,,01,9924,Spring_2026|EDAD 655A|01|9924,FALSE,\N,,SEM,Th,6-8:00PM,available,ONLINE-ONLY,Vang M,Class meets from 01/22/26 - 01/29/26. Class instruction is: Online - Mixed Meet Times.
+Spring_2026,EDAD,655A,EDAD 655A,INTRO INSTR LEADER FOR EQUITY,3,,01,\N,Spring_2026|EDAD 655A|01|NOCLASS|8458ce4c4da2c913,FALSE,\N,,,Th,6-8:00PM,,ONLINE-ONLY,Vang M,Class meets from 02/12/26 - 02/26/26.
+Spring_2026,EDAD,655A,EDAD 655A,INTRO INSTR LEADER FOR EQUITY,3,,01,\N,Spring_2026|EDAD 655A|01|NOCLASS|13294d3edd407332,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Vang M,additional meeting detail
+Spring_2026,EDAD,680,EDAD 680,FIELD EXPERIENCE IN EDUC ADMIN,3,,01,7727,Spring_2026|EDAD 680|01|7727,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Glass S,Department Consent Required Class instruction is: Asynch. Online-No Meet Times.

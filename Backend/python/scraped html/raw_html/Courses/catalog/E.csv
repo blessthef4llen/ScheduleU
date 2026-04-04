@@ -1,0 +1,153 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+E E 186,Introduction to Programming and Applications for Electrical Engineers,3,,,,ENGL 100B or equivalent
+E E 200H,Trends in Electrical Engineering,1,,,Engr Honors Program track I or II,
+E E 202,Computer Methods in Engineering,3,,,E E 186 and MATH 123 all with a grade of “C” or better,
+E E 210,Electro-Magnetic Foundations in Electrical Engineering,3,,,PHYS 151 all with a grade of “C” or better,"MATH 123 , E E 210L"
+E E 210L,Electro-Magnetic Foundations in Electrical Engineering Laboratory,1,,,,E E 210
+E E 211,Electric and Electronic Circuits,3,,,( E E 210 / E E 210L or PHYS 152 ) and ( MATH 123 or equivalent) all with a grade of “C” or better,
+E E 211L,Electric Circuits Laboratory,1,,,,E E 211
+E E 220,Materials Sciences for Electrical Engineers,3,,,E E 210 or PHYS 152 all with a grade of “C” or better,
+E E 301,Digital System Design,3,,,E E 201 with a grade of “C” or better,
+E E 301H,Digital System Design,3,,,E E 201 with a “C” or better,
+E E 310,Signals and Systems,3,,,E E 200 Fundamental concepts of signals and systems,E E 200 Fundamental concepts of signals and systems
+E E 310H,Signals and Systems,3,,,E E 211 ; and MATH 370A or equivalent all with a grade of “C” or better and Engr Honors Program track I or II,E E 202
+E E 330,Analog Electronic Circuits I,4,,,"E E 211 , E E 211L both with a grade of “C” or better",
+E E 346,Microprocessor Principles and Applications,3,,,"E E 201 , E E 202 all with a grade of “C” or better",
+E E 350,Energy Conversion Principles,3,,,"( E E 202 or equivalent) and E E 211 and E E 211L , or consent of instructor all with a grade of “C” or better",
+E E 350H,Energy Conversion Principles,3,,,E E 202 and E E 211 and E E 211L with a “C” or better,
+E E 360,Electromagnetic Fields,3,,,"MATH 224 , E E 310 all with a grade of “C” or better",
+E E 370,Control Systems,3,,,"E E 202 and E E 310 , all with a grade of “C” or better",E E 370L
+E E 370H,Control Systems,3,,,"E E 202 and (E E 310 or E E 310H), all with a grade of “C” or better",E E 370L
+E E 370L,Control Systems Laboratory,1,,,E E 202 and E E 310 with a grade of “C” or better,E E 370
+E E 380,"Probability, Statistics, and Stochastic Modeling",3,,,MATH 123 and ( E E 202 or BME 201 ); Completion of at least 60 units; Completion of the entire GE Foundations; Completion of at lease one GE Explorations class,
+E E 381,Probability and Statistics with Applications to Computing,3,,,CECS 229 with a grade of “C” or better,
+E E 382,Communication Systems I,3,,,"E E 202 and E E 310, all with a grade of “C” or better",
+E E 382H,Communication Systems I,3,,,"E E 202 and (E E 310 or E E 310H) , all with a grade of “C” or better",
+E E 386,Digital Signal Processing,3,,,E E 310 or CECS 301 all with a grade of “C” or better,
+E E 386H,Digital Signal Processing,3,,,( E E 310 or E E 310H ) or ( CECS 301 or CECS 301H ) with a “C” or better,
+E E 400D,Electrical Engineering Design Project,3,,,"(E E 301 or E E 346) , E E 330 , E E 350, E E 370 , and (E E 382 or E E 386) all with a grade of “C” or better",
+E E 405,Selected Topics in Electrical Engineering,3,,,Senior standing in electrical engineering or consent of instructor or graduate standing,
+E E 406,Medical Instrumentation and Measurements,3,,,E E 330 with a grade of “C” or better or consent of instructor or graduate standing,
+E E 406L,Biomedical Engineering Laboratory,1,,,,E E 406
+E E 407,Applications of Computers in Medicine,3,,,E E 346 with a grade of “C” or better or consent of instructor or graduate standing,
+E E 412,Fractals in Engineering,3,,,E E 310 with a grade of “C” or better or graduate standing,
+E E 420,Solid State Electronic Devices,3,,,"PHYS 254 or E E 220, with a grade of “C” or better or graduate standing",
+E E 427,Digital Filter Design and Audio Processing,3,,,E E 386 with a grade of “C” or better or consent of instructor,
+E E 428,Speech Signal Processing,3,,,,E E 486 or consent of instructor
+E E 430,Analog Electronic Circuits II,3,,,E E 330 with a grade of “C” or better,E E 370
+E E 430H,Analog Electronic Circuits II,3,,,E E 330 with a “C” or better,E E 370 or E E 370H
+E E 430L,Analog Electronics Laboratory II,1,,,,E E 430
+E E 434,Mixed-Signal IC Design,3,,,E E 201 and E E 330 all with a grade of “C” or better or consent of instructor,
+E E 435,Microelectronics,3,,,E E 201 and E E 330 all with a grade of “C” or better,
+E E 436,Microfabrication and Nanotechnology,3,,,E E 330 and ( PHYS 254 or E E 220); or MAE 300 all with a grade of “C” or better,
+E E 442,Mechatronic Systems Design,3,,,"( E E 202 and E E 346 ) or ( MAE 300 and MAE 376 ) all with a grade of “C” or better, or consent of instructor Sensor and actuator characteristics, selection criteria, and modeling",
+E E 444,Microprocessor Based System Design,3,,,E E 346 with a grade of “C” or better or graduate standing,
+E E 447,Design of Electronic Systems,3,,,"( E E 301 or E E 435 ) and E E 346 and E E 430 all with a grade of “C” or better, or graduate standing",E E 400D or graduate standing
+E E 450,Power Electronics,3,,,E E 350 with a grade of “C” or better or graduate standing,E E 370 or graduate standing
+E E 451,Electric Vehicles,3,,,E E 350 and ( E E 370 or MAE 376 ) all with a grade of “C” or better; or graduate standing,
+E E 452,Power System Analysis,3,,,E E 350 with a grade of “C” or better or consent of instructor or graduate standing,
+E E 453,Protection of Power Systems,3,,,"E E 310 , E E 350 all with a grade of “C” or better",
+E E 458,Design of Power System Components,3,,,E E 330 and (either E E 450 or E E 452 or E E 453 ) all with a grade of “C” or better; or graduate standing,E E 400D or graduate standing
+E E 462,Electromagnetics and Applications to Wireless Systems,3,,,E E 310 with a grade of “C” or better or graduate standing,
+E E 470,Digital Control,3,,,"E E 370 , E E 370L , and E E 386 all with a grade of “C” or better",
+E E 471,Design of Control Systems,3,,,E E 370 with a grade of “C” or better or graduate standing,"E E 400D Second integrative learning capstone course, focusing on the design of compensators using root-locus and Bode-plot methods"
+E E 474,Robot Modeling and Control,3,,,E E 370 with a grade of “C” or better,
+E E 476,Neural Networks and Fuzzy Logic,3,,,E E 386 with a grade of “C” or better or consent of instructor,
+E E 481,Satellite Communication Systems,3,,,E E 482 with a grade of “C” or better,
+E E 482,Communication Systems II,3,,,"E E 380 , E E 382 all with a grade of “C” or better",
+E E 483,Digital Image Processing,3,,,E E 386 with a grade of “C” or better or graduate standing,
+E E 486,Digital Signal Processing for Multimedia Communications,3,,,E E 386 with a grade of “C” or better or graduate standing,
+E E 488,Communication System Design,3,,,,E E 400D or graduate standing
+E E 489,Digital Signal Processing Design,3,,,,E E 400D or graduate standing
+E E 490,Special Problems,,,,Minimum GPA of 2,
+E E 503,Optimization Theory and Techniques,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 505,Advanced Engineering Mathematics for Electrical Engineers,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 508,Probability Theory and Random Processes,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 509,Network Theory,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 511,Linear Systems Analysis,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 526,High Speed Communication Circuits,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 527,Digital Filter Design and Audio Processing,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 528,Speech Signal Processing,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 531,CMOS Electronics,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 532,Analog Signal Processing,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 534,Mixed-Signal IC Design,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 535,VLSI Design,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 535A,Microelectronics,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 536,Microfabrication and Nanotechnology,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 545,Computer Communication Networks,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 546,Advanced Microprocessors and Embedded Controllers II,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 550,Power Electronics and Applications,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 551,Theory and Applications of DC/DC Converters,3,,,E E 550 with a grade of “C” or better,
+E E 553,Protection of Power Systems,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 554,Power Systems Applications,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 556,Solar Power Systems,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 566,RF and Microwave Electronics,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 574,Robot Modeling and Control,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 575,Non-Linear Control Systems,3,,,E E 511 with a grade of “C” or better,
+E E 576,Neural Networks and Fuzzy Logic,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 581,Satellite Communication Systems,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 583,Digital Image Processing,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 585,Advanced Digital Signal Processing,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 587,Fiber Optic Networks,3,,,Open to Electrical Engineering MS and Engineering MS students only,
+E E 588,DSP for MMO Communication Systems,3,,,E E 508,
+E E 589,Multiuser Communications,3,,,E E 508,
+E E 590,Selected Topics in Electrical Engineering,3,,,Graduate standing in electrical engineering and consent of instructor,
+E E 591,Adaptive Systems,3,,,Open to Engineering MS and Electrical Engineering MS students only,
+E E 592,Wireless Communications,3,,,E E 508 or consent of instructor,
+E E 697,Directed Research,3,,,Departmental consent required,
+E E 698,Thesis or Industrial Project,3,,,Advancement to Candidacy,
+E T 202,Probability and Statistics for Technology,3,,,High school algebra,E T 202L
+E T 202L,Probability and Statistics for Technology Laboratory,1,,,"2 yrs high school algebra, geometry, and intermediate algebra (or MATH 010) or equivalent",E T 202
+E T 204,Applied Mechanics-Statics,3,,,"MATH 122 , PHYS 100A all with a grade of “C” or better",
+E T 205,Computer Systems and Programming,1,,,,E T 205L
+E T 205L,Computer Systems and Programming Lab,1,,,,E T 205
+E T 250,Circuit Analysis I,2,,,PHYS 100B with a grade of “C” or better,ET 250L
+E T 250L,Circuit Analysis I Laboratory,1,,,PHYS 100B with a grade of “C” or better,E T 250
+E T 252,Circuit Analysis II,2,,,"MATH 122 , E T 250 , E T 250L ; all with a grade of “C” or better",E T 252L
+E T 252L,Circuit Analysis II Laboratory,1,,,"MATH 122 , E T 250 , E T 250L ; all with a grade of “C” or better",E T 252
+E T 255,Introduction To Digital Electronics,2,,,,E T 255L
+E T 255L,Introduction to Digital Electronics Laboratory,1,,,,E T 255
+E T 260,Solid-State Electronics I,2,,,E T 252 E T 252L all with a grade of “C” or better,E T 260L
+E T 260L,Solid State Electronics I Laboratory,1,,,"E T 252 , E T 252L all with a grade of “C” or better",E T 260
+E T 286,Introduction to Object-Oriented Programming,2,,,"E T 205 , E T 205L all with a grade of “C” or better",E T 286L
+E T 286L,Introduction to Object-Oriented Programming Laboratory,1,,,"E T 205 , E T 205L all with a grade of “C” or better",E T 286
+E T 304,Applied Mechanics Strength of Materials,2,,,E T 204 with a grade of “C” or better,
+E T 309,Industrial Communications and Leadership,3,,,E T 101 with a grade of “C” or better,
+E T 311,Quality Engineering Technology,3,,,"E T 202 , E T 202L all with a grade of “C” or better",
+E T 312,Statistical Quality Control,3,,,E T 311 all with a grade of “C” or better,
+E T 341,Solid State Electronics II,2,,,"ENGR 203 , ENGR 203L , E T 260 , E T 260L all with a grade of “C” or better",E T 341L
+E T 341L,Solid State Electronics II Laboratory,1,,,"ENGR 203, ENGR 203L, ET 260, ET 260L all with a grade of “C” or better",ET 341
+E T 350,Motors and Generators,2,,,"E T 252 , E T 252L all with a grade of “C” or better",E T 350L
+E T 350L,Motors and Generators Laboratory,1,,,"E T 252 , E T 252L all with a grade of “C” or better",E T 350
+E T 360,Control Instrumentation,2,,,"E T 260 , E T 260L all with a grade of “C” or better",E T 360L
+E T 360L,Control Instrumentation Laboratory,1,,,"E T 260 , E T 260L all with a grade of “C” or better",E T 360
+E T 386,Introduction to Microprocessors,2,,,"E T 286 , E T 286L all with a grade of “C” or better",E T 386L
+E T 386L,Introduction to Microprocessors Laboratory,1,,,"E T 286 , E T 286L all with a grade of “C” or better",E T 286
+E T 387,Robot Programming and Mechatronics,2,,,"E T 205 , E T 205L all with a grade of “C” or better",E T 387L
+E T 387L,Robot Programming and Mechatronics Laboratory,1,,,"E T 205 , E T 205L all with a grade of “C” or better",E T 387
+E T 388,Technical Applications Using Programming Languages,2,,,"E T 286 , E T 286L all with a grade of “C” or better",E T 388L
+E T 388L,Technical Applications Using Programming Languages Laboratory,1,,,"E T 286 , E T 286L all with a grade of “C” or better",E T 388
+E T 409,Selected Topics in Engineering Technology,,,,"Senior standing in ET, consent of instructor",
+E T 442,Computer Circuits,2,,,"E T 255 , E T 255L all with a grade of “C” or better",
+E T 442L,Computer Circuits Laboratory,1,,,"E T 255 , E T 255L all with a grade of “C” or better",
+E T 444,Telecommunications,3,,,"E T 360 , E T 360L all with a grade of “C” or better",
+E T 445,Microelectronics,2,,,"E T 350 , E T 350L all with a grade of “C” or better",E T 445L
+E T 445L,Microelectronics Laboratory,1,,,"E T 350 , E T 350L all with a grade of “C” or better",E T 445
+E T 447,Industrial Applications of Electronic Circuits,2,,,"E T 341 , E T 341L all with a grade of “C” or better",E T 447L
+E T 447L,Industrial Applications of Electronic Circuits Laboratory,1,,,"E T 341 , E T 341L all with a grade of “C” or better",E T 447
+E T 460,Electronics Project Design and Development,2,,,"E T 341 , E T 341L all with a grade of “C” or better and senior standing",E T 460L
+E T 460L,Electronics Project Design and Development Laboratory,1,,,"E T 341 , E T 341L all with a grade of “C” or better and senior standing",E T 460
+E T 486,Data Structures,2,,,"E T 388 , E T 388L all with a grade of “C” or better",E T 486L
+E T 486L,Data Structures Laboratory,1,,,"E T 388 , E T 388L all with a grade of “C” or better",E T 486
+E T 488,Microcomputer Systems,2,,,"E T 386 , E T 386L all with a grade of “C” or better",E T 488L
+E T 488L,Microcomputer Systems Laboratory,1,,,"E T 386 , E T 386L all with a grade of “C” or better",E T 488
+E T 489,Computer Interfacing,2,,,"E T 442 , E T 442L , E T 488 , E T 488L all with a grade of “C” or better",E T 489L
+E T 489L,Computer Interfacing Laboratory,1,,,"E T 442 , E T 442L , E T 488 , E T 488L all with a grade of “C” or better",E T 489
+E T 491,Embedded Processors and Systems,2,,,"E T 488, E T 488L all with a grade of “C” or better",E T 491L
+E T 491L,Embedded Processors and Systems Laboratory,1,,,"ET 488, ET 488L all with a grade of “C” or better",ET 491
+E T 492,Computer Controlled Industrial Systems,2,,,"E T 286 , E T 286L all with a grade of “C” or better",E T 492L
+E T 492L,Computer Controlled Industrial Systems Laboratory,1,,,"E T 286 , E T 286L all with a grade of “C” or better",E T 492
+E T 494,Applied Systems Development Project,2,,,"E T 386 , E T 386L all with a grade of “C” or better",E T 494L
+E T 494L,Applied Systems Development Project Laboratory,1,,,"E T 386 , E T 386L all with a grade of “C” or better",E T 494
+E T 497,Computer Network Technology,2,,,"E T 386 , E T 386L all with a grade of “C” or better",E T 497L
+E T 497L,Computer Network Technology Laboratory,1,,,"E T 386 , E T 386L all with a grade of “C” or better",E T 497

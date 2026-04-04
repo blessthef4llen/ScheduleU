@@ -1,0 +1,49 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,REC,121A,REC 121A,SAILING,1,,01,6759,Spring_2026|REC 121A|01|6759,FALSE,\N,,ACT,F,10-11:50AM,,OFF-CAMP,Wenzel D,Class instruction is: Face to Face - Off Campus.
+Spring_2026,REC,121A,REC 121A,SAILING,1,,02,10041,Spring_2026|REC 121A|02|10041,FALSE,\N,,ACT,F,12-1:50PM,available,OFF-CAMP,Wenzel D,Class instruction is: Face to Face - Off Campus.
+Spring_2026,REC,141,REC 141,INTRO TO LEISURE SERVICES,3,GE: 4C (D3),01,2308,Spring_2026|REC 141|01|2308,FALSE,\N,310,LEC,MW,9:30-10:45AM,,HHS1-201,Allen G,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,141,REC 141,INTRO TO LEISURE SERVICES,3,GE: 4C (D3),02,11025,Spring_2026|REC 141|02|11025,FALSE,\N,310,LEC,MW,11-12:15PM,,PSY-200,Goldstein J,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,168,REC 168,INTRO TO TRAVEL AND TOURISM,3,GE: 4C (D3),02,10933,Spring_2026|REC 168|02|10933,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Seguancia R,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,201,REC 201,TEAMWORK AND GROUP DYNAMICS,3,GE: E,02,5557,Spring_2026|REC 201|02|5557,FALSE,\N,310,LEC,TuTh,9:30-10:45AM,,ET-105,Allen G,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,201,REC 201,TEAMWORK AND GROUP DYNAMICS,3,GE: E,03,6754,Spring_2026|REC 201|03|6754,FALSE,\N,,LEC,TuTh,12:30-1:45PM,,ET-105,Huebner C,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,201,REC 201,TEAMWORK AND GROUP DYNAMICS,3,GE: E,06,7942,Spring_2026|REC 201|06|7942,FALSE,\N,,LEC,MW,9:30-10:45AM,available,ET-107,Garner R,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,201,REC 201,TEAMWORK AND GROUP DYNAMICS,3,GE: E,07,7943,Spring_2026|REC 201|07|7943,FALSE,\N,,LEC,MW,11-12:15PM,,ET-107,Garner R,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,201,REC 201,TEAMWORK AND GROUP DYNAMICS,3,GE: E,08,8394,Spring_2026|REC 201|08|8394,FALSE,\N,,LEC,MW,12:30-1:45PM,,ET-107,Garner R,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,220,REC 220,UNIVERSALITY OF PLAY,3,GE: E,03,7898,Spring_2026|REC 220|03|7898,FALSE,\N,,LEC,MW,2-3:15PM,,HHS1-201,Goldstein J,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,220,REC 220,UNIVERSALITY OF PLAY,3,GE: E,04,7908,Spring_2026|REC 220|04|7908,FALSE,\N,,LEC,TuTh,8-9:15AM,available,ET-105,Allen G,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,243C,REC 243C,DESERT EXPEDITION,3,,01,5577,Spring_2026|REC 243C|01|5577,FALSE,\N,,ACT,NA,NA,,OFF-CAMP,Darensbourg J,Class instruction is: Face to Face - Off Campus.
+Spring_2026,REC,245,REC 245,WILDERNESS WATER EXPEDITION,3,,01,6757,Spring_2026|REC 245|01|6757,FALSE,\N,,LEC,NA,NA,,OFF-CAMP,Darensbourg J,Class instruction is: Face to Face - Off Campus.
+Spring_2026,REC,247A,REC 247A,TECHNIQUES OF ROCK CLIMBING,2,,01,6758,Spring_2026|REC 247A|01|6758,FALSE,\N,,ACT,NA,NA,available,OFF-CAMP,Foust C,Class instruction is: Face to Face - Off Campus.
+Spring_2026,REC,321,REC 321,LEADERSHIP IN REC & LEISURE,3,,01,6749,Spring_2026|REC 321|01|6749,FALSE,\N,,LEC,MW,2-3:15PM,,HHS1-101,Wagner M,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,325,REC 325,ADV PROGRAM & EVENT MANAGEMENT,3,,01,3709,Spring_2026|REC 325|01|3709,FALSE,\N,310,LEC,MW,12:30-1:45PM,available,ET-229,Allen G,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,326,REC 326,FNDMNTLS DIG ONLN MEDIA STRAT,3,,02,11206,Spring_2026|REC 326|02|11206,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Seguancia R,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,331,REC 331,DYNAMICS OF OUTDOOR RECREATION,3,,01,10932,Spring_2026|REC 331|01|10932,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Reyes C,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,340,REC 340,LEISURE CONTEMPORARY SOCIETY,3,GE: 4UD (UDD),11,7328,Spring_2026|REC 340|11|7328,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Robertson S,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,340,REC 340,LEISURE CONTEMPORARY SOCIETY,3,GE: 4UD (UDD),12,7329,Spring_2026|REC 340|12|7329,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Robertson S,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,340,REC 340,LEISURE CONTEMPORARY SOCIETY,3,GE: 4UD (UDD),13,7330,Spring_2026|REC 340|13|7330,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Reyes C,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,340,REC 340,LEISURE CONTEMPORARY SOCIETY,3,GE: 4UD (UDD),14,7331,Spring_2026|REC 340|14|7331,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Hayes R,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,340,REC 340,LEISURE CONTEMPORARY SOCIETY,3,GE: 4UD (UDD),15,7332,Spring_2026|REC 340|15|7332,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Tapper F,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,340,REC 340,LEISURE CONTEMPORARY SOCIETY,3,GE: 4UD (UDD),16,8397,Spring_2026|REC 340|16|8397,FALSE,\N,,LEC,MW,4-5:15PM,available,ET-105,Goldstein J,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,341,REC 341,EVALUATION & RESEARCH,3,,01,1811,Spring_2026|REC 341|01|1811,FALSE,\N,1,LEC,MW,11-12:15PM,available,HHS1-201,Fulthorp K,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,351,REC 351,FND INCLUS RECREATION THERAPY,3,,01,4129,Spring_2026|REC 351|01|4129,FALSE,\N,310,LEC,MW,12:30-1:45PM,available,HHS1-201,Lee C,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,416,REC 416,AQUATIC FACILITY MANAGEMENT,3,,01,6762,Spring_2026|REC 416|01|6762,FALSE,\N,,LEC,NA,NA,,ONLINE-ONLY,Tapper F,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,421,REC 421,SUPERVISORY & ADMINIS PRACTICE,3,,01,8393,Spring_2026|REC 421|01|8393,FALSE,\N,,LEC,MW,9:30-10:45AM,available,ET-229,Richmond L,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,451,REC 451,MGMT ADMIN REC THERAPY SERVS,3,,02,5107,Spring_2026|REC 451|02|5107,FALSE,\N,310,SEM,TuTh,11-12:15PM,,ET-229,Yang H,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,456,REC 456,RT FOR PSYCH DISORDERS,3,,01,7847,Spring_2026|REC 456|01|7847,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,LaPlace P,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,458,REC 458,CLINICAL TECHNIQUE REC THERAPY,3,,01,4519,Spring_2026|REC 458|01|4519,FALSE,\N,310,LEC,TuTh,12:30-1:45PM,available,ET-229,Lee C,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,462,REC 462,TRAVEL TOURISM RESORT REC MGMT,3,,01,9391,Spring_2026|REC 462|01|9391,FALSE,\N,309,LEC,TuTh,9:30-10:45AM,available,ET-229,Reyes C,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,469,REC 469,DISABILITY ISSUES & INTERVENTN,3,,01,7326,Spring_2026|REC 469|01|7326,FALSE,\N,,LEC,NA,NA,,ONLINE-ONLY,Yang H,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,480,REC 480,PHILOSOPHY OF REC & LEISURE,3,,02,9172,Spring_2026|REC 480|02|9172,FALSE,\N,310,SEM,MW,11-12:15PM,available,ET-229,Richmond L,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,REC,485,REC 485,FIELD WORK,3,,01,4079,Spring_2026|REC 485|01|4079,FALSE,\N,,SUP,TBA,NA,available,ONLINE-ONLY,Fulthorp K,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,485,REC 485,FIELD WORK,3,,02,5824,Spring_2026|REC 485|02|5824,FALSE,\N,,SUP,TBA,NA,available,ONLINE-ONLY,Yang H,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,498,REC 498,INTERNSHIP,6,,01,3179,Spring_2026|REC 498|01|3179,FALSE,\N,305,SUP,TBA,NA,,ONLINE-ONLY,Yang H,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,498,REC 498,INTERNSHIP,6,,02,5817,Spring_2026|REC 498|02|5817,FALSE,\N,305,SUP,TBA,NA,available,ONLINE-ONLY,Fulthorp K,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,516,REC 516,AQUATIC FACILITY MANAGEMENT,3,,01,6763,Spring_2026|REC 516|01|6763,FALSE,\N,,LEC,NA,NA,available,ONLINE-ONLY,Tapper F,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,521,REC 521,RECREATION ADMINISTRATION,3,,01,5156,Spring_2026|REC 521|01|5156,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Fulthorp K,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,558,REC 558,CLIN TECHNIQUES IN REC THERAPY,3,,01,6445,Spring_2026|REC 558|01|6445,FALSE,\N,310,LEC,TuTh,12:30-1:45PM,available,ET-229,Lee C,Class instruction is: Face to Face - On Campus.
+Spring_2026,REC,569,REC 569,DISABILITY ISSUES & INTERVENTN,3,,01,7327,Spring_2026|REC 569|01|7327,FALSE,\N,,LEC,NA,NA,,ONLINE-ONLY,Yang H,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,591,REC 591,RESEARCH PROPOSAL WRITING,3,,01,10426,Spring_2026|REC 591|01|10426,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Richmond L,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,595,REC 595,DATA ANALYSIS IN REC ADMIN,3,,01,10924,Spring_2026|REC 595|01|10924,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Lee C,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,692,REC 692,DIRECTED PROJECT,1,,01,5820,Spring_2026|REC 692|01|5820,FALSE,\N,,SUP,TBA,NA,available,ONLINE-ONLY,Richmond L,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,697,REC 697,DIRECTED STUDIES,3,,01,5208,Spring_2026|REC 697|01|5208,FALSE,\N,,SUP,TBA,NA,available,ONLINE-ONLY,Richmond L,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,REC,698,REC 698,THESIS,1,,01,11147,Spring_2026|REC 698|01|11147,FALSE,\N,305,SUP,TBA,NA,available,ONLINE-ONLY,Richmond L,Department Consent RequiredClass instruction is: Asynch. Online-No Meet Times.

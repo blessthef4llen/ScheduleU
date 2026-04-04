@@ -1,0 +1,6 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,RUSS,200,RUSS 200,ACCEL INTERMEDIATE RUSSIAN,6,GE: 3B (C2),01,5270,Spring_2026|RUSS 200|01|5270,FALSE,\N,"1,138,312",SEM,TuTh,12-1:50PM,available,LA2-106,Odell J,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,RUSS,200,RUSS 200,ACCEL INTERMEDIATE RUSSIAN,6,GE: 3B (C2),01,\N,Spring_2026|RUSS 200|01|NOCLASS|474a8015cc3d7c3d,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Odell J,additional meeting detail
+Spring_2026,RUSS,200,RUSS 200,ACCEL INTERMEDIATE RUSSIAN,6,GE: 3B (C2),02,8820,Spring_2026|RUSS 200|02|8820,FALSE,\N,"1,138,312",SEM,TuTh,12-1:50PM,available,ONLINE-ONLY,Odell J,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,RUSS,200,RUSS 200,ACCEL INTERMEDIATE RUSSIAN,6,GE: 3B (C2),02,\N,Spring_2026|RUSS 200|02|NOCLASS|dcf0e2b1e0d87a3a,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Odell J,additional meeting detail
+Spring_2026,RUSS,499,RUSS 499,DIRECTED STUDIES,1,,01,3949,Spring_2026|RUSS 499|01|3949,FALSE,\N,"1,3,305",SUP,TBA,NA,available,ONLINE-ONLY,Staff,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.

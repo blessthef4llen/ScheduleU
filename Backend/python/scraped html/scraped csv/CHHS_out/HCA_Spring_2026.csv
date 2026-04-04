@@ -1,0 +1,86 @@
+term,subject_code,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,HCA,202,HCA 202,HEATH CARE IN AMERICA,3,GE: 4C (D3),01,1381,Spring_2026|HCA 202|01|1381,FALSE,\N,"27,306",LEC,TuTh,8-9:15AM,available,ONLINE-ONLY,Washburn K,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,300,HCA 300,HEALTH CARE SYSTEM,3,,01,2927,Spring_2026|HCA 300|01|2927,FALSE,\N,"27,310",LEC,TuTh,9:30-10:45AM,,HHS1-200,Brown D,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,300,HCA 300,HEALTH CARE SYSTEM,3,,02,2953,Spring_2026|HCA 300|02|2953,FALSE,\N,"27,307",LEC,W,12:30-1:45PM,available,HHS1-100,Lott J,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,HCA,300,HCA 300,HEALTH CARE SYSTEM,3,,02,\N,Spring_2026|HCA 300|02|NOCLASS|e6938368d4a47ac0,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Lott J,additional meeting detail
+Spring_2026,HCA,300,HCA 300,HEALTH CARE SYSTEM,3,,04,10621,Spring_2026|HCA 300|04|10621,FALSE,\N,306,LEC,Tu,7-9:45PM,available,ONLINE-ONLY,Lott J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,300,HCA 300,HEALTH CARE SYSTEM,3,,05,12351,Spring_2026|HCA 300|05|12351,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Vega A,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,312,HCA 312,HEALTH PERSONNEL MANAGEMENT,3,,01,3410,Spring_2026|HCA 312|01|3410,FALSE,\N,"306,1,27",LEC,W,7-9:45PM,available,ONLINE-ONLY,Atkins C,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,312,HCA 312,HEALTH PERSONNEL MANAGEMENT,3,,02,5190,Spring_2026|HCA 312|02|5190,FALSE,\N,"1,305",LEC,MW,2-3:15PM,available,LA4-120,Gerard N,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,312,HCA 312,HEALTH PERSONNEL MANAGEMENT,3,,03,6349,Spring_2026|HCA 312|03|6349,FALSE,\N,"1,305",LEC,NA,NA,,ONLINE-ONLY,Gerard N,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,320,HCA 320,OPERATIONS MGMT HEALTH ADMIN,3,,01,2405,Spring_2026|HCA 320|01|2405,FALSE,\N,"1,27,310",LEC,Tu,4-6:45PM,available,HC-130,Atkins C,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,327,HCA 327,MEDICAL BILLING & CODING,3,,01,6856,Spring_2026|HCA 327|01|6856,FALSE,\N,,LEC,NA,NA,,ONLINE-ONLY,Perley R,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,327,HCA 327,MEDICAL BILLING & CODING,3,,03,7092,Spring_2026|HCA 327|03|7092,FALSE,\N,305,LEC,M,4-6:45PM,available,ONLINE-ONLY,Perley R,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,340,HCA 340,LEGAL ASPECTS OF HEALTH ADMIN,3,,01,2855,Spring_2026|HCA 340|01|2855,FALSE,\N,"27,1,310",LEC,TuTh,2-3:15PM,,HC-122,Brown D,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,340,HCA 340,LEGAL ASPECTS OF HEALTH ADMIN,3,,02,3411,Spring_2026|HCA 340|02|3411,FALSE,\N,"27,1,310",LEC,W,4-6:45PM,,HC-122,Knego T,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,340,HCA 340,LEGAL ASPECTS OF HEALTH ADMIN,3,,03,5995,Spring_2026|HCA 340|03|5995,FALSE,\N,"1,27,310",LEC,Tu,4-6:45PM,available,HHS1-200,Knego T,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,341,HCA 341,FINANCIAL MGMT HEALTH CARE,3,GE: 2UD/5UD (UDB),02,3350,Spring_2026|HCA 341|02|3350,FALSE,\N,"305,27,1",LEC,NA,NA,,ONLINE-ONLY,Qi Y,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,341,HCA 341,FINANCIAL MGMT HEALTH CARE,3,GE: 2UD/5UD (UDB),03,5996,Spring_2026|HCA 341|03|5996,FALSE,\N,"305,1,27",LEC,NA,NA,available,ONLINE-ONLY,Qi Y,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,341,HCA 341,FINANCIAL MGMT HEALTH CARE,3,GE: 2UD/5UD (UDB),04,8008,Spring_2026|HCA 341|04|8008,FALSE,\N,306,LEC,Th,7-9:45PM,available,ONLINE-ONLY,Keele D,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,353,HCA 353,MKTG HEALTH SERV ORGANIZATIONS,3,,01,2856,Spring_2026|HCA 353|01|2856,FALSE,\N,"306,1,27",LEC,TuTh,8-9:15AM,,ONLINE-ONLY,Martinez L,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,353,HCA 353,MKTG HEALTH SERV ORGANIZATIONS,3,,02,3153,Spring_2026|HCA 353|02|3153,FALSE,\N,"306,1,27",LEC,Tu,7-9:45PM,,ONLINE-ONLY,Martinez L,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,353,HCA 353,MKTG HEALTH SERV ORGANIZATIONS,3,,03,4050,Spring_2026|HCA 353|03|4050,FALSE,\N,"27,1,310",LEC,M,4-6:45PM,available,ET-107,Orihuela M,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,410,HCA 410,HEALTH MANAGEMENT ORGANIZATION,3,,01,3083,Spring_2026|HCA 410|01|3083,FALSE,\N,"1,27,307",LEC,MW,11-12:15PM,,SPA-212,Gerard N,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,HCA,410,HCA 410,HEALTH MANAGEMENT ORGANIZATION,3,,01,\N,Spring_2026|HCA 410|01|NOCLASS|ebc5c5625f12eec4,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Gerard N,additional meeting detail
+Spring_2026,HCA,410,HCA 410,HEALTH MANAGEMENT ORGANIZATION,3,,02,3089,Spring_2026|HCA 410|02|3089,FALSE,\N,"306,1,27",LEC,Tu,4-6:45PM,,ONLINE-ONLY,Vega A,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,410,HCA 410,HEALTH MANAGEMENT ORGANIZATION,3,,03,4546,Spring_2026|HCA 410|03|4546,FALSE,\N,"1,27,307",LEC,Th,4-6:45PM,available,SPA-208,Unaka N,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,HCA,410,HCA 410,HEALTH MANAGEMENT ORGANIZATION,3,,03,\N,Spring_2026|HCA 410|03|NOCLASS|b04d226cf7565a89,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Unaka N,additional meeting detail
+Spring_2026,HCA,416,HCA 416,MANAGEMENT & INFO SYSTEMS,3,,01,3412,Spring_2026|HCA 416|01|3412,FALSE,\N,"27,1,310",LEC,MW,12:30-1:45PM,available,SPA-005,Hawkinson Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,416,HCA 416,MANAGEMENT & INFO SYSTEMS,3,,03,5709,Spring_2026|HCA 416|03|5709,FALSE,\N,"306,1,27",LEC,Tu,4-6:45PM,,ONLINE-ONLY,Lee M,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,416,HCA 416,MANAGEMENT & INFO SYSTEMS,3,,04,5710,Spring_2026|HCA 416|04|5710,FALSE,\N,"311,1,27",LEC,Th,7-9:45PM,available,SPA-005,Goto N,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,HCA,416,HCA 416,MANAGEMENT & INFO SYSTEMS,3,,04,\N,Spring_2026|HCA 416|04|NOCLASS|ab947ac6f2a83886,FALSE,\N,,,Th,7-9:45PM,,ONLINE-ONLY,Goto N,additional meeting detail
+Spring_2026,HCA,416,HCA 416,MANAGEMENT & INFO SYSTEMS,3,,05,6351,Spring_2026|HCA 416|05|6351,FALSE,\N,"306,1,27",LEC,W,4-6:45PM,,ONLINE-ONLY,Ramirez J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,417,HCA 417,"TECHNOLOGY, ETHICS & SOCIETY",3,GE: 4UD (UDD); GWAR: WI,01,2852,Spring_2026|HCA 417|01|2852,FALSE,\N,"1,305",SEM,NA,NA,,ONLINE-ONLY,Durocher A,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,417,HCA 417,"TECHNOLOGY, ETHICS & SOCIETY",3,GE: 4UD (UDD); GWAR: WI,02,2899,Spring_2026|HCA 417|02|2899,FALSE,\N,"305,1",SEM,NA,NA,,ONLINE-ONLY,Reich A,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,417,HCA 417,"TECHNOLOGY, ETHICS & SOCIETY",3,GE: 4UD (UDD); GWAR: WI,03,9269,Spring_2026|HCA 417|03|9269,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Rivera B,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,417,HCA 417,"TECHNOLOGY, ETHICS & SOCIETY",3,GE: 4UD (UDD); GWAR: WI,04,5071,Spring_2026|HCA 417|04|5071,FALSE,\N,"305,1",SEM,NA,NA,,ONLINE-ONLY,Reich A,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,417,HCA 417,"TECHNOLOGY, ETHICS & SOCIETY",3,GE: 4UD (UDD); GWAR: WI,06,6600,Spring_2026|HCA 417|06|6600,FALSE,\N,"305,1",SEM,NA,NA,,ONLINE-ONLY,O'Lawrence H,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,419,HCA 419,HEALTHCARE DATABASE MANAGEMENT,3,,01,12317,Spring_2026|HCA 419|01|12317,FALSE,\N,306,SEM,Tu,4-6:45PM,available,ONLINE-ONLY,Ramirez J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,420,HCA 420,HEALTHCARE DATA VISUALIZATION,3,,01,12318,Spring_2026|HCA 420|01|12318,FALSE,\N,306,SEM,W,4-6:45PM,available,ONLINE-ONLY,Chu L,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,421,HCA 421,HEALTHCARE DATA ANALYTICS CAPS,3,,01,9434,Spring_2026|HCA 421|01|9434,FALSE,\N,,SEM,W,9-11:45AM,available,HHS1-200,Goto N,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,422,HCA 422,GLOBL ISSUES HEALTH SERVICES,3,GE: 4UD (UDD),01,2382,Spring_2026|HCA 422|01|2382,FALSE,\N,"309,1,27",LEC,NA,NA,available,ONLINE-ONLY,Helton J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,422,HCA 422,GLOBL ISSUES HEALTH SERVICES,3,GE: 4UD (UDD),02,5137,Spring_2026|HCA 422|02|5137,FALSE,\N,"309,1,27",LEC,TuTh,12:30-1:45PM,available,ONLINE-ONLY,Helton J,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,HCA,422,HCA 422,GLOBL ISSUES HEALTH SERVICES,3,GE: 4UD (UDD),02,\N,Spring_2026|HCA 422|02|NOCLASS|d355be18b8e06b94,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HCA,428,HCA 428,POPULATION HEALTH MGMT FOR HCA,3,,01,4013,Spring_2026|HCA 428|01|4013,FALSE,\N,"27,1,309",LEC,M,11-12:15PM,,ONLINE-ONLY,Hays N,Class instruction is: Online - Mixed Meet Times.
+Spring_2026,HCA,428,HCA 428,POPULATION HEALTH MGMT FOR HCA,3,,01,\N,Spring_2026|HCA 428|01|NOCLASS|7ad92730975c5151,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HCA,428,HCA 428,POPULATION HEALTH MGMT FOR HCA,3,,02,4120,Spring_2026|HCA 428|02|4120,FALSE,\N,"27,1,310",LEC,Tu,4-6:45PM,available,SPA-208,Hays N,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,450,HCA 450,QA IN HEALTH CARE,3,,01,3679,Spring_2026|HCA 450|01|3679,FALSE,\N,"27,1,307",LEC,Tu,11-12:15PM,,ECS-404,Billimoria R,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,HCA,450,HCA 450,QA IN HEALTH CARE,3,,01,\N,Spring_2026|HCA 450|01|NOCLASS|ff952f38477fbd41,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HCA,450,HCA 450,QA IN HEALTH CARE,3,,02,3680,Spring_2026|HCA 450|02|3680,FALSE,\N,"27,1,307",LEC,Th,11-12:15PM,available,SPA-005,Billimoria R,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,HCA,450,HCA 450,QA IN HEALTH CARE,3,,02,\N,Spring_2026|HCA 450|02|NOCLASS|10a6d176d3b7cb19,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HCA,450,HCA 450,QA IN HEALTH CARE,3,,03,3689,Spring_2026|HCA 450|03|3689,FALSE,\N,"27,1,305",LEC,NA,NA,,ONLINE-ONLY,Oka J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,451,HCA 451,ECONOMICS OF HEALTH,3,,01,5998,Spring_2026|HCA 451|01|5998,FALSE,\N,"305,1,27",LEC,NA,NA,,ONLINE-ONLY,Keele D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,457,HCA 457,WORKING AROUND THE WORLD,3,GE: 4UD (UDD),01,2853,Spring_2026|HCA 457|01|2853,FALSE,\N,"305,1",SEM,NA,NA,available,ONLINE-ONLY,Alaei A,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,457,HCA 457,WORKING AROUND THE WORLD,3,GE: 4UD (UDD),02,2915,Spring_2026|HCA 457|02|2915,FALSE,\N,"305,1",SEM,NA,NA,,ONLINE-ONLY,Martinez L,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,457,HCA 457,WORKING AROUND THE WORLD,3,GE: 4UD (UDD),05,6945,Spring_2026|HCA 457|05|6945,FALSE,\N,,SEM,NA,NA,,ONLINE-ONLY,Thomas B,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,457,HCA 457,WORKING AROUND THE WORLD,3,GE: 4UD (UDD),06,11204,Spring_2026|HCA 457|06|11204,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Nguyen E,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,465,HCA 465,ANALYSIS & EVALUATION,3,,01,2406,Spring_2026|HCA 465|01|2406,FALSE,\N,"1,27,311",SEM,W,9-10:15AM,available,SPA-005,Latif B,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,HCA,465,HCA 465,ANALYSIS & EVALUATION,3,,01,\N,Spring_2026|HCA 465|01|NOCLASS|1366c3987b66e7e5,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HCA,465,HCA 465,ANALYSIS & EVALUATION,3,,03,4014,Spring_2026|HCA 465|03|4014,FALSE,\N,"307,1,27",SEM,Th,12:30-1:45PM,,SPA-005,Latif B,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,HCA,465,HCA 465,ANALYSIS & EVALUATION,3,,03,\N,Spring_2026|HCA 465|03|NOCLASS|f424c327ed5f7b21,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HCA,465,HCA 465,ANALYSIS & EVALUATION,3,,04,5265,Spring_2026|HCA 465|04|5265,FALSE,\N,"1,27,310",SEM,M,4-6:45PM,available,SPA-005,Reich A,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,465,HCA 465,ANALYSIS & EVALUATION,3,,05,8007,Spring_2026|HCA 465|05|8007,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Chu L,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,468,HCA 468,PRIN RISK MGMT PATIENT SAFETY,3,,02,8009,Spring_2026|HCA 468|02|8009,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Lu Y,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,468,HCA 468,PRIN RISK MGMT PATIENT SAFETY,3,,04,6352,Spring_2026|HCA 468|04|6352,FALSE,\N,"1,27,305",LEC,NA,NA,,ONLINE-ONLY,Lu Y,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,468,HCA 468,PRIN RISK MGMT PATIENT SAFETY,3,,05,9458,Spring_2026|HCA 468|05|9458,FALSE,\N,306,LEC,MW,9:30-10:45AM,available,ONLINE-ONLY,Berry D,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,468,HCA 468,PRIN RISK MGMT PATIENT SAFETY,3,,06,9535,Spring_2026|HCA 468|06|9535,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Keele D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,480,HCA 480,INTERNSHIP HEALTH CARE ADMIN,3,,01,5943,Spring_2026|HCA 480|01|5943,FALSE,\N,"306,1,27",SEM,Tu,4-6:45PM,available,ONLINE-ONLY,Freshman B,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,480,HCA 480,INTERNSHIP HEALTH CARE ADMIN,3,,02,5944,Spring_2026|HCA 480|02|5944,FALSE,\N,"1,27,310",SEM,Th,4-6:45PM,available,SPA-112,Ludke D,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,480,HCA 480,INTERNSHIP HEALTH CARE ADMIN,3,,03,12275,Spring_2026|HCA 480|03|12275,FALSE,\N,306,SEM,M,4-6:45PM,available,ONLINE-ONLY,Newman J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,480,HCA 480,INTERNSHIP HEALTH CARE ADMIN,3,,07,9390,Spring_2026|HCA 480|07|9390,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Newman J,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,481,HCA 481,INTERNSHIP AND CAREERS IN HCA,3,,02,5945,Spring_2026|HCA 481|02|5945,FALSE,\N,"305,1,27",SEM,NA,NA,,ONLINE-ONLY,Freshman B,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,481,HCA 481,INTERNSHIP AND CAREERS IN HCA,3,,04,5946,Spring_2026|HCA 481|04|5946,FALSE,\N,"305,1,27",SEM,NA,NA,,ONLINE-ONLY,Freshman B,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,481,HCA 481,INTERNSHIP AND CAREERS IN HCA,3,,06,9224,Spring_2026|HCA 481|06|9224,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Gotz C,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,481,HCA 481,INTERNSHIP AND CAREERS IN HCA,3,,10,12312,Spring_2026|HCA 481|10|12312,FALSE,\N,310,SEM,W,4-6:45PM,,HHS1-201,Erlyana E,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,481,HCA 481,INTERNSHIP AND CAREERS IN HCA,3,,11,12313,Spring_2026|HCA 481|11|12313,FALSE,\N,310,SEM,Tu,7-9:45PM,available,HHS1-200,Erlyana E,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,510,HCA 510,HUMAN RES MGMT IN HEALTH CARE,3,,02,12277,Spring_2026|HCA 510|02|12277,FALSE,\N,"306,1,27",SEM,W,4-6:45PM,,ONLINE-ONLY,Freshman B,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,517,HCA 517,ADV HEALTHCARE INFO SYS MGMT,3,,03,6584,Spring_2026|HCA 517|03|6584,FALSE,\N,"311,1,27",SEM,M,4-6:45PM,,FCS-120,Hawkinson Z,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,HCA,517,HCA 517,ADV HEALTHCARE INFO SYS MGMT,3,,03,\N,Spring_2026|HCA 517|03|NOCLASS|8858ac90cd9ae618,FALSE,\N,,,M,4-6:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HCA,524,HCA 524,ADV LEGAL ETHL ASPTS HEALTH AD,3,,04,6534,Spring_2026|HCA 524|04|6534,FALSE,\N,307,SEM,M,7-9:45PM,,HC-133,Durocher A,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,HCA,524,HCA 524,ADV LEGAL ETHL ASPTS HEALTH AD,3,,04,\N,Spring_2026|HCA 524|04|NOCLASS|6b1276e715ec31c3,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,HCA,527,HCA 527,RSRCH MTHDS IN HLTH CARE MNGMT,3,,01,4021,Spring_2026|HCA 527|01|4021,FALSE,\N,"310,1,27",SEM,Tu,4-6:45PM,,SPA-005,Lu Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,527,HCA 527,RSRCH MTHDS IN HLTH CARE MNGMT,3,,02,6855,Spring_2026|HCA 527|02|6855,FALSE,\N,,SEM,Th,4-6:45PM,,SPA-005,Lee M,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,528,HCA 528,MANAGING POPULATION HEALTH,3,,01,6407,Spring_2026|HCA 528|01|6407,FALSE,\N,306,SEM,Th,7-9:45PM,available,ONLINE-ONLY,Richards S,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,HCA,538,HCA 538,MGMT CHLLNGS IN LONG TERM CARE,3,,01,7496,Spring_2026|HCA 538|01|7496,FALSE,\N,,SEM,NA,NA,,ONLINE-ONLY,Perley R,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,HCA,550,HCA 550,CQI IN HEALTH SERVICES,3,,02,8785,Spring_2026|HCA 550|02|8785,FALSE,\N,,SEM,M,4-6:45PM,available,VEC-110,Billimoria R,Class instruction is: Face to Face - On Campus.
+Spring_2026,HCA,580,HCA 580,INTERNSHIP IN HCA,3,,02,12315,Spring_2026|HCA 580|02|12315,FALSE,\N,306,SEM,Tu,7-9:45PM,available,ONLINE-ONLY,Gotz C,Class instruction is: Synch. Online - Meet Times.

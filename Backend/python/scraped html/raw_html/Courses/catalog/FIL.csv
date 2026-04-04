@@ -1,0 +1,5 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+FIL 101,Fundamentals of Filipino,4,,,,One GE Foundation course
+FIL 102,Fundamentals of Filipino,4,,,"One GE Foundation course which may be taken concurrently, and competency for FIL 101",
+FIL 201,Intermediate Filipino,4,,,FIL 102 or competency equivalent to FIL 102,
+FIL 202,Intermediate Filipino,4,,,FIL 201 or competency equivalent to FIL 201,

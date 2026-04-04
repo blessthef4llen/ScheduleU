@@ -1,0 +1,7 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,LAT,101A,LAT 101A,INTRODUCTORY LATIN,3,GE: 3B (C2),01,6791,Spring_2026|LAT 101A|01|6791,FALSE,\N,307,LEC,NA,NA,,ONLINE-ONLY,Librandi D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,LAT,101B,LAT 101B,INTRODUCTORY LATIN,3,GE: 3B (C2),03,12552,Spring_2026|LAT 101B|03|12552,FALSE,\N,312,LEC,MW,2-3:15PM,available,ONLINE-ONLY,Librandi D,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,LAT,101B,LAT 101B,INTRODUCTORY LATIN,3,GE: 3B (C2),04,12553,Spring_2026|LAT 101B|04|12553,FALSE,\N,310,LEC,MW,2-3:15PM,available,ET-107,Librandi D,Class instruction is: Face to Face - On Campus.
+Spring_2026,LAT,301,LAT 301,INTERMEDIATE LATIN,4,,01,10478,Spring_2026|LAT 301|01|10478,FALSE,\N,,SEM,TuTh,3:30-4:45PM,available,LA5-353,Chew K,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,LAT,301,LAT 301,INTERMEDIATE LATIN,4,,01,\N,Spring_2026|LAT 301|01|NOCLASS|c738d44680845e0d,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Chew K,additional meeting detail
+Spring_2026,LAT,499,LAT 499,DIRECTED STUDIES,1,,01,1930,Spring_2026|LAT 499|01|1930,FALSE,\N,"3,305",SUP,TBA,NA,available,ONLINE-ONLY,Chew K,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.

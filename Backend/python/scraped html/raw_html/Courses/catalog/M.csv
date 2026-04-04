@@ -1,0 +1,17 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+M S 101L,Leadership Laboratory,1,,,Accepted as a cadet in the Army ROTC Program; Corequisite: M S 101,M S 101
+M S 102,Basic Leadership,1,,,,M S 101 or consent of instructor
+M S 102L,Leadership Laboratory,1,,,Accepted as a cadet in the Army ROTC Program; Corequisite: M S 102,M S 102
+M S 201,Individual Leadership Studies,2,,,"M S 101 , M S 102 or concurrent enrollment in M S 102",
+M S 201L,Leadership Laboratory,2,,,Accepted as a cadet in the Army ROTC Program; Corequisite: M S 201,M S 201
+M S 202,Leadership and Teamwork,2,,,M S 201 or consent of instructor,
+M S 202L,Leadership Laboratory,2,,,Accepted as a cadet in the Army ROTC Program; Corequisite: M S 202,M S 202
+M S 301,Leadership and Problem Solving,3,,,M S 202 and consent of instructor,
+M S 301L,Leadership Laboratory,1,,,Accepted as a cadet in the Army ROTC Program; Corequisite: M S 301,M S 301
+M S 302,Leadership and Ethics,3,,,M S 301 and consent of instructor,
+M S 302L,Leadership Laboratory,1,,,Accepted as a cadet in the Army ROTC Program; Corequisite: M S 302,M S 302
+M S 401,Leadership and Management,3,,,M S 302 and consent of instructor,
+M S 401L,Leadership Laboratory,2,,,Accepted as a cadet in the Army ROTC Program; Corequisite: M S 402,M S 402
+M S 402,Officership,3,,,M S 302 and consent of instructor,
+M S 402L,Leadership Laboratory,2,,,Accepted as a cadet in the Army ROTC Program; Corequisite: M S 402,M S 402
+M S 497,Independent Studies,,,,Consent of Program Director and prior approval of topic,

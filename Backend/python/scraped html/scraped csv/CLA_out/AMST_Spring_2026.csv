@@ -1,0 +1,15 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,AMST,142,AMST 142,RACE AND HOLLYWOOD,3,GE: 3A (C1),01,6660,Spring_2026|AMST 142|01|6660,FALSE,\N,310,LEC,MW,11-12:15PM,,MM-200,Gomer J,Class instruction is: Face to Face - On Campus.
+Spring_2026,AMST,300,AMST 300,INTRO TO AMERICAN STUDIES,3,,01,4289,Spring_2026|AMST 300|01|4289,FALSE,\N,310,LEC,TuTh,11-12:15PM,available,LA5-244,Mizelle B,Class instruction is: Face to Face - On Campus.
+Spring_2026,AMST,310,AMST 310,FOODWAYS IN CONTEMPORARY AMER,3,GE: 3UD (UDC),01,10220,Spring_2026|AMST 310|01|10220,FALSE,\N,310,LEC,Th,6:30-9:15PM,,LA5-244,Farrish C,Class instruction is: Face to Face - On Campus.
+Spring_2026,AMST,350,AMST 350,CALIFORNIA CULTURE,3,GE: 3UD (UDC),01,3060,Spring_2026|AMST 350|01|3060,FALSE,\N,310,SEM,MW,9:30-10:45AM,,SPA-103,Bender K,Class instruction is: Face to Face - On Campus.
+Spring_2026,AMST,350,AMST 350,CALIFORNIA CULTURE,3,GE: 3UD (UDC),02,5446,Spring_2026|AMST 350|02|5446,FALSE,\N,311,SEM,Tu,12:30-1:45PM,,SPA-105,Jackson B,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,AMST,350,AMST 350,CALIFORNIA CULTURE,3,GE: 3UD (UDC),02,\N,Spring_2026|AMST 350|02|NOCLASS|9ac654049d867695,FALSE,\N,,,Th,12:30-1:45PM,,ONLINE-ONLY,Jackson B,additional meeting detail
+Spring_2026,AMST,350,AMST 350,CALIFORNIA CULTURE,3,GE: 3UD (UDC),03,5447,Spring_2026|AMST 350|03|5447,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Bender K,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,AMST,350,AMST 350,CALIFORNIA CULTURE,3,GE: 3UD (UDC),04,5973,Spring_2026|AMST 350|04|5973,FALSE,\N,305,SEM,NA,NA,,ONLINE-ONLY,Jackson B,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,AMST,350,AMST 350,CALIFORNIA CULTURE,3,GE: 3UD (UDC),05,9489,Spring_2026|AMST 350|05|9489,FALSE,\N,310,SEM,MW,2-3:15PM,,LA1-307,Bender K,Class instruction is: Face to Face - On Campus.
+Spring_2026,AMST,351,AMST 351,CELEBRITY IN AMER CULTURE,3,GE: 4UD (UDD),01,10221,Spring_2026|AMST 351|01|10221,FALSE,\N,310,SEM,MW,12:30-1:45PM,available,LA3-106,Hashima L,Class instruction is: Face to Face - On Campus.
+Spring_2026,AMST,360,AMST 360,EXPL AMER POP CULT,3,,01,4963,Spring_2026|AMST 360|01|4963,FALSE,\N,305,LEC,NA,NA,,ONLINE-ONLY,Jackson B,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,AMST,421,AMST 421,ANIMALS IN AMER CULTURE,3,GE: 4UD (UDD),01,8560,Spring_2026|AMST 421|01|8560,FALSE,\N,310,SEM,TuTh,2-3:15PM,,LA1-204,Mizelle B,Class instruction is: Face to Face - On Campus.
+Spring_2026,AMST,498,AMST 498,SENIOR SEMINAR IN AMER STUDIES,3,,02,10956,Spring_2026|AMST 498|02|10956,FALSE,\N,310,SEM,M,6:30-9:15PM,available,LA3-108,Gomer J,Class instruction is: Face to Face - On Campus.
+Spring_2026,AMST,499,AMST 499,DIR STUDIES IN AMERICAN STUDIE,1,,01,9435,Spring_2026|AMST 499|01|9435,FALSE,\N,305,SUP,TBA,NA,available,ONLINE-ONLY,Mizelle B,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.

@@ -1,0 +1,23 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+EDSS 300A,T - Introduction to Teaching,3,,,Advanced sophomore or junior standing,
+EDSS 450A,Curriculum and Methods in Teaching Art,3,,,EDSS 300A,
+EDSS 450B,Curriculum and Methods in Teaching Dance,3,,,EDSS 300B,
+EDSS 450C,Curriculum and Methods in Teaching Science,4,,,EDSS 300C,
+EDSS 450D,Curriculum and Methods in Teaching Health Science,3,,,EDSS 300D,
+EDSS 450E,Curriculum and Methods in Teaching Ethnic Studies,3,,,Admission to the Single Subject Credential Program or permission of the Director of the Single Subject Credential Program,
+EDSS 450F,Curriculum and Methods in Teaching World Languages,3,,,EDSS 300F,
+EDSS 450G,Curriculum and Methods in Teaching English,3,,,EDSS 300G,
+EDSS 450M,Curriculum and Methods in Teaching Mathematics,3,,,EDSS 300M,
+EDSS 450N,Curriculum and Methods in Teaching Music,3,,,EDSS 300N,
+EDSS 450P,Curriculum and Methods in Teaching Physical Education,3,,,EDSS 300P,
+EDSS 450S,Curriculum and Methods in Teaching Social Science,3,,,EDSS 300S,
+EDSS 450T,Curriculum and Methods in Teaching Theater,3,,,EDSS 300T,
+EDSS 472A,Student Teaching,7,,,"EDSS 450A , EDSS 450B , EDSS 450C , EDSS 450D , EDSS 450F , EDSS 450G , EDSS 450M , EDSS 450N , EDSS 450P , EDSS 450S , or EDSS 450T",EDSS 473A-Z
+EDSS 472B,Student Teaching,8,,,"EDSS 450A , EDSS 450B , EDSS 450C , EDSS 450D , EDSS 450F , EDSS 450G , EDSS 450M , EDSS 450N , EDSS 450P , EDSS 450S , or EDSS 450T",EDSS 473A-Z
+EDSS 472C,Student Teaching,5,,,"EDSS 450A , EDSS 450B , EDSS 450C , EDSS 450D , EDSS 450F , EDSS 450G , EDSS 450M , EDSS 450N , EDSS 450P , EDSS 450S , or EDSS 450T",EDSS 473A-Z Student teaching in the candidate’s subject for a minimum of five periods daily for the length of the placement school’s semester (approximately 20 weeks)
+EDSS 473A,Z - Student Teaching Seminar,3,,,"EDSS 450A , EDSS 450B , EDSS 450C , EDSS 450D , EDSS 450F , EDSS 450G , EDSS 450M , EDSS 450N , EDSS 450P , EDSS 450S , or EDSS 450T (450 suffix must match 473 suffix with the exception of Z)",
+EDSS 490,Selected Topics - Academic Subjects,,,,Department Consent Required,EDSS 472A
+EDSS 497,Independent Study,,,,Consent of instructor and Single Subject Program Coordinator,
+EDSS 572A,Intern Student Teaching,7,,,Admission to the Single Subject Intern Program; offer of intern teaching position from a cooperating school district; submission of application to student teach by the deadline and approval for advancement to intern student teaching by the Credential Advisor and Director of the Single Subject Credential Program,EDSS 473A-Z
+EDSS 572B,Intern Student Teaching,8,,,Admission to the Single Subject Intern Program; offer of intern teaching position from a cooperating school district; submission of application to student teach by the deadline and approval for advancement to intern student teaching by the Credential Advisor and Director of the Single Subject Credential Program,EDSS 473A-Z
+EDSS 572C,Intern Student Teaching,5,,,Admission to the Single Subject Intern Program; offer of intern teaching position from a cooperating school district; submission of application to student teach by the deadline and approval for advancement to intern student teaching by the Credential Advisor and Director of the Single Subject Credential Program,EDSS 473A-Z

@@ -1,0 +1,26 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+ENGR 101,Introduction to the Engineering Profession,1,,,Freshman standing or consent of instructor,MATH 111 or MATH 113 or MATH 122 Freshman orientation seminar on careers in engineering
+ENGR 101H,Introduction to the Engineering Profession,1,,,,MATH 111 or MATH 113 or MATH 122 or MATH 123 or MATH 224
+ENGR 102,Academic Success Skills,1,,,ENGR 101 with a grade of “C” or better,
+ENGR 102H,Academic Success Skills,1,,,ENGR 101 or ENGR 101H with a grade of “C” or better,
+ENGR 130,"Health, Energy, Environment, Transportation (HEET)",3,,,"Completion of high school classes in geometry, algebra, chemistry, and environmental sciences",
+ENGR 170,Introduction to Solid Modeling and Engineering Graphics,2,,,Knowledge of geometry and intermediate algebra,
+ENGR 203,Engineering Problems and Analysis,3,,,MATH 122 with a grade of “C” or better; Corequisite: ENGR 203L,ENGR 203L
+ENGR 203L,Engineering Problems and Analysis Laboratory,1,,,MATH 122 with a grade of “C” or better; Corequisite: ENGR 203,ENGR 203
+ENGR 302,Energy and Environment: A Global Perspective,3,,,G,
+ENGR 310,Business Communications in Engineering Profession,3,,,"GWAR Requisites: WPE score of 8, 9, or 10, or ENGL 301A with a grade of “C” or better or student group",
+ENGR 340,Guitar Electronics: Engineering Sound,3,,,"Upper division standing, GE Foundation requirements, one course from G",
+ENGR 350,"Computers, Ethics and Society",3,,,Completion of at least 60 units,
+ENGR 361,Scientific Research Communication,,,,G,
+ENGR 370,Astronautics and Space,3,,,"GE Foundation requirements, one or more Exploration courses, and upper-division standing",
+ENGR 390,Information and Communication Technology for Sustainability,3,,,Completion of GE Foundation requirements and upper-division standing,"ENGR 350 or other ethics course, or consent of instructor Information and communication technology and Sustainability"
+ENGR 392,"Water: People, Politics, and Processes",3,,,GE Foundation requirements,
+ENGR 492B,Internship In Engineering,,,,"Major in the College of Engineering, completion of 9 units of upper division COE coursework, a 2",
+ENGR 498H,Honors Thesis,,,,Senior standing,
+ENGR 691,Curricular Practical Training,1,,,"Graduate Standing, Completion of 18 units of graduate work, Advancement to Candidacy, and good standing",
+ENGR 790,Selected Topics in Engineering,,,,MS or equivalent and formally admitted to the Ph,
+ENGR 796,Doctoral Seminar,2,,,Graduate Standing,
+ENGR 797A,Preparation for Ph.D. Preliminary Examinations,,,,Graduate Standing,
+ENGR 797B,Preparation for Ph.D. Qualifying Examination,,,,Graduate Standing,
+ENGR 797C,Research for Ph.D. Dissertation,,,,Graduate Standing,
+ENGR 798,Doctoral Dissertation,,,,Successful completion of the Ph,

@@ -1,0 +1,20 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+MTED 110,The Real Number System for Elementary and Middle School Teachers,3,,,Appropriate CSU Multiple Measures placement or concurrent enrollment in MTED 90,Appropriate CSU Multiple Measures placement or concurrent enrollment in MTED 90
+MTED 211,Geometry and Measurement for Elementary Teachers,3,,,MTED 110 with a grade of “C” or better and one year of high school geometry,
+MTED 301,Computer Applications in Mathematics for Teachers,3,,,MTED 110 or MATH 122 or EDSS 300A-T (M) or concurrent enrollment in EDSS 300A-T (M) Designed for pre-service or in service teachers,MTED 110 or MATH 122 or EDSS 300A-T (M) or concurrent enrollment in EDSS 300A-T (M) Designed for pre-service or in service teachers
+MTED 305,Algebraic and Statistical Thinking for Elementary and Middle School Teachers,3,,,"“C” or better in MTED 110 Algebraic, statistical, and probabilistic thinking and content relevant to teaching K-8 mathematics",
+MTED 312,Geometry and Measurement for Mathematics Specialists in Elementary and Middle Schools,4,,,"“C” or better in MTED 110 Exploration, conjecture, justification of geometric relationships, and applications relevant to teaching geometry (K-10)",
+MTED 371,Mathematical Modeling for Secondary Mathematics Teachers,3,,,"MATH 224 , MATH 233 , MATH 247 Introduction to the mathematical modeling cycle and its implementation in the secondary school curriculum",
+MTED 411,Topics and Issues in Secondary School Mathematics,3,,,"MATH 310 , MATH 341 , MATH 355 , MATH 380 , MTED 371 , and EDSS 300A-T (choose M)",MATH 444 or MATH 445
+MTED 495,Special Topics in Mathematics Education,,,,Consent of instructor,
+MTED 500,Advanced Perspectives of Concepts Foundational to Algebra for Teachers,3,,,"Multiple Subjects Credential, or consent of instructor",
+MTED 511,Mathematics Teaching and Learning,3,,,Consent of instructor,
+MTED 512,Curriculum and Assessment in Mathematics,3,,,MTED 511 or consent of instructor,
+MTED 540,Algebra in the School Curriculum,3,,,​ MTED 511,​ MTED 511
+MTED 550,Geometry and Measurement in the School Curriculum,3,,,​ MTED 511,​ MTED 511
+MTED 560,Analysis in the Secondary Curriculum,3,,,MTED 511,MTED 511
+MTED 570,Mathematical Modeling in the School Curriculum,3,,,,MTED 511 ​ or consent of instructor
+MTED 580,Probability and Statistics in the School Curriculum,3,,,​ MTED 511,​ MTED 511
+MTED 590,Special Topics in Mathematics Education,,,,Consent of instructor,
+MTED 697,Directed Studies in Mathematics Education,,,,"MTED 511 , MTED 512 ; EDP 520 ; Advancement to Candidacy; consent of instructor",
+MTED 698,Thesis in Mathematics Education,,,,"MTED 511 , MTED 512 ; Advancement to Candidacy; consent of instructor",

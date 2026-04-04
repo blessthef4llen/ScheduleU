@@ -1,0 +1,32 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,EDEC,400,EDEC 400,INTRO TO EARLY CHILDHOOD EDUC,3,,02,11120,Spring_2026|EDEC 400|02|11120,FALSE,\N,311,LEC,Th,7-9:45PM,available,LA1-302,Reyes D,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,EDEC,400,EDEC 400,INTRO TO EARLY CHILDHOOD EDUC,3,,02,\N,Spring_2026|EDEC 400|02|NOCLASS|529fb0d5fb29bce9,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,EDEC,410,EDEC 410,SOC-EMO COG LRNG ERLY CHILD ED,3,,01,10030,Spring_2026|EDEC 410|01|10030,FALSE,\N,311,LEC,Sa,9-11:45AM,available,EED-040,Perez-Gonzalez A,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,410,EDEC 410,SOC-EMO COG LRNG ERLY CHILD ED,3,,01,\N,Spring_2026|EDEC 410|01|NOCLASS|2ee739d8cbec28a3,FALSE,\N,,,Sa,9-11:45AM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,EDEC,420,EDEC 420,CULTR & LING DIV EARL CHILD ED,3,,01,10031,Spring_2026|EDEC 420|01|10031,FALSE,\N,311,LEC,Sa,12:30-3:15PM,available,EED-040,Perez-Gonzalez A,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,420,EDEC 420,CULTR & LING DIV EARL CHILD ED,3,,01,\N,Spring_2026|EDEC 420|01|NOCLASS|1064f7ac8bea2fcb,FALSE,\N,,,Sa,12:30-3:15PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,EDEC,430,EDEC 430,ADV EAR INTE YOUNG CHILD & FAM,3,,01,10032,Spring_2026|EDEC 430|01|10032,FALSE,\N,311,LEC,Th,7-9:45PM,available,LA5-250,Laney C,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,430,EDEC 430,ADV EAR INTE YOUNG CHILD & FAM,3,,01,\N,Spring_2026|EDEC 430|01|NOCLASS|59ae2b2057a80687,FALSE,\N,,,Th,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,EDEC,430,EDEC 430,ADV EAR INTE YOUNG CHILD & FAM,3,,03,11128,Spring_2026|EDEC 430|03|11128,FALSE,\N,307,LEC,W,7-9:45PM,available,LA2-202,Laney C,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,EDEC,430,EDEC 430,ADV EAR INTE YOUNG CHILD & FAM,3,,03,\N,Spring_2026|EDEC 430|03|NOCLASS|fcafaa29b20dab9c,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,EDEC,455,EDEC 455,TEACH EARLY LANG & LIT (K-3RD),3,,03,11028,Spring_2026|EDEC 455|03|11028,FALSE,\N,311,LEC,Tu,7-9:45PM,available,AS-244,Hamm D,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,455,EDEC 455,TEACH EARLY LANG & LIT (K-3RD),3,,03,\N,Spring_2026|EDEC 455|03|NOCLASS|a326bad3fedd5ca7,FALSE,\N,,,Tu,7-9:45PM,,ONLINE-ONLY,Hamm D,additional meeting detail
+Spring_2026,EDEC,455,EDEC 455,TEACH EARLY LANG & LIT (K-3RD),3,,05,11140,Spring_2026|EDEC 455|05|11140,FALSE,\N,307,LEC,Sa,9-11:45AM,available,AS-235,Hamm D,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,EDEC,455,EDEC 455,TEACH EARLY LANG & LIT (K-3RD),3,,05,\N,Spring_2026|EDEC 455|05|NOCLASS|304d04e2b51a5203,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Hamm D,additional meeting detail
+Spring_2026,EDEC,460,EDEC 460,INT HIS-SOC SCI CONCEPT IN ECE,3,,02,11037,Spring_2026|EDEC 460|02|11037,FALSE,\N,311,LEC,M,7-9:45PM,available,EED-040,Perez-Gonzalez A,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,460,EDEC 460,INT HIS-SOC SCI CONCEPT IN ECE,3,,02,\N,Spring_2026|EDEC 460|02|NOCLASS|45daaad88e4042c8,FALSE,\N,,,M,7-9:45PM,,ONLINE-ONLY,Perez-Gonzalez A,additional meeting detail
+Spring_2026,EDEC,465,EDEC 465,MATH PEDAGOGY IN ECE,3,,02,11085,Spring_2026|EDEC 465|02|11085,FALSE,\N,307,LEC,Sa,12:30-3:15PM,available,AS-235,Hamm D,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,EDEC,465,EDEC 465,MATH PEDAGOGY IN ECE,3,,02,\N,Spring_2026|EDEC 465|02|NOCLASS|92c9cf2712003393,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Hamm D,additional meeting detail
+Spring_2026,EDEC,470,EDEC 470,"SCI, NUTR, AND HEA IN ECE",3,,02,11032,Spring_2026|EDEC 470|02|11032,FALSE,\N,311,LEC,W,7-9:45PM,available,EED-041,Lealiiee J,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,470,EDEC 470,"SCI, NUTR, AND HEA IN ECE",3,,02,\N,Spring_2026|EDEC 470|02|NOCLASS|c9bcffc409429358,FALSE,\N,,,W,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,EDEC,519,EDEC 519,TEACHER AS RESEARCHER,3,,02,11030,Spring_2026|EDEC 519|02|11030,FALSE,\N,"27,311",SEM,Th,7-9:45PM,available,AS-244,Saito L,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,519,EDEC 519,TEACHER AS RESEARCHER,3,,02,\N,Spring_2026|EDEC 519|02|NOCLASS|bb29cc88dc099688,FALSE,\N,,,Th,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,EDEC,520,EDEC 520,EARLY CHLDHD CURR & ASSESSMNT,3,,02,11031,Spring_2026|EDEC 520|02|11031,FALSE,\N,"27,311",SEM,M,7-9:45PM,available,EED-041,Laney C,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,520,EDEC 520,EARLY CHLDHD CURR & ASSESSMNT,3,,02,\N,Spring_2026|EDEC 520|02|NOCLASS|6a0a7a5ed77b3f91,FALSE,\N,,,M,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,EDEC,623,EDEC 623,LDRSHP ADVOC SUPRVSN IN ECED,3,,03,12268,Spring_2026|EDEC 623|03|12268,FALSE,\N,"307,27",SEM,Tu,7-9:45PM,available,ED2-158,Laney C,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,EDEC,623,EDEC 623,LDRSHP ADVOC SUPRVSN IN ECED,3,,03,\N,Spring_2026|EDEC 623|03|NOCLASS|ff05c10eac60734e,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Laney C,additional meeting detail
+Spring_2026,EDEC,695,EDEC 695,SEM IN EARLY CHLDHD EDUC,3,,01,7944,Spring_2026|EDEC 695|01|7944,FALSE,\N,"311,27",SEM,W,7-9:45PM,available,EED-040,Piker R,Department Consent Required Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,EDEC,695,EDEC 695,SEM IN EARLY CHLDHD EDUC,3,,01,\N,Spring_2026|EDEC 695|01|NOCLASS|3038ce95f07e5649,FALSE,\N,,,W,7-9:45PM,,ONLINE-ONLY,Piker R,additional meeting detail
+Spring_2026,EDEC,698,EDEC 698,THESIS STUDY EARLY CHLDHD ED,3,,01,3204,Spring_2026|EDEC 698|01|3204,FALSE,\N,,SUP,TBA,NA,available,OFF-CAMP,Staff,Department Consent Required Class instruction is: Face to Face - Off Campus.
+Spring_2026,EDEC,526,EDEC 526,ADV STUDY INFANT & TODDLR PROG,3,,01,10297,Spring_2026|EDEC 526|01|10297,FALSE,\N,,SEM,Tu,7-9:45PM,available,HC-130,Lee F,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,EDEC,526,EDEC 526,ADV STUDY INFANT & TODDLR PROG,3,,01,\N,Spring_2026|EDEC 526|01|NOCLASS|8febf01eed488049,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Lee F,additional meeting detail

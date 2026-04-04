@@ -1,0 +1,33 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+EDP 419,Educational Statistics,3,,,Satisfactory completion of an undergraduate mathematics course suitable for general education math credit and/or a lower division statistics course,
+EDP 490,Selected Topics in Educational Psychology,,,,Department Consent is required,
+EDP 492,Internships in the Human Services,3,,,Department Consent is required,
+EDP 497,Independent Study,,,,Department Consent is required,
+EDP 517,Individual and Group Counseling in Schools,2,,,Admission to the School Psychology Program; Completion of EDP 560 and EDP 603,
+EDP 518,School Crisis Response,3,,,"EDP 528 Students will learn about the impact of school crises on children and school communities, and how to prepare and respond to these events, including trauma screening and triage, threat assessment, suicide prevention, and dealing with death at schools",
+EDP 519,Quantitative Educational Data Analysis I,3,,,EDP 419,
+EDP 520,Quantitative Research Methods in Education,3,,,"For majors in EDS in School Psychology: EDP 400 , EDP 419",
+EDP 524A,Psychoeducational Assessment of Diverse Student Populations,3,,,,"EDP 528 , EDP 524B"
+EDP 524B,Psychoeducational Assessment: Clinical Applications,2,,,,"EDP 528 , EDP 524A"
+EDP 524C,Psychoeducational Assessment II: Clinical Applications,2,,,"EDP 528 , EDP 524A , EDP 524B",
+EDP 527,Advanced Assessment for Intervention,3,,,EDP 579A,
+EDP 528,Introduction to School Psychology,3,,,School Psychology Majors Only,
+EDP 536,Collaborative Consultation in the Schools,3,,,,EDP 528 or COUN 506
+EDP 541,Seminar in Educational Measurement and Assessment,3,,,"EDP 419 , EDP 519 and EDP 520",
+EDP 579A,Academic Assessment and Intervention,3,,,Open to admitted School Psychology students only,EDP 579B
+EDP 579B,Academic Assessment and Intervention: Clinical Applications,2,,,Open to admitted School Psychology students only,EDP 579A
+EDP 590,Selected Topics in Educational Psychology,,,,Department Consent is required,
+EDP 595,Qualitative Research Methods in Education,3,,,For majors in EDS in School Psychology: EDP 419,
+EDP 596,Program Evaluation in Education,3,,,EDP 520 or EDP 595,
+EDP 603,Mental and Behavioral Health in Schools,3,,,Admission to the School Psychology Program,
+EDP 604,Seminar in Human Development,3,,,"EDP 301 or EDP 302 , and EDP 400 or EDP 419 Theories and issues in developmental psychology, cognitive, linguistic, perceptual, biological, psychomotor, social and emotional development; nature-nurture and individual differences Letter grade only (A-F)",
+EDP 641A,School Psychology Practicum,2,,,"Admission to School Psychology program, EDP 524A , EDP 524B , and EDP 528",
+EDP 641B,School Psychology Practicum,2,,,EDP 641A,
+EDP 642A,Field Work I ‑ School Psychology,,,,"EDP 579A , EDP 641B , and EDP 560 Students complete 200 hours of supervised school psychology fieldwork per unit for a maximum of 3 units (600 Hours)",
+EDP 642B,Field Work II ‑ School Psychology,,,,"EDP 579A , EDP 641A Students complete 200 hours of supervised school psychology fieldwork per unit for a maximum of 3 units (600 Hours)",
+EDP 643,Systemic Approaches to Interventions in Schools,3,,,EDP 579A Curriculum based assessment and academic interventions Applying implementation science to promote or improve implementation of multi-tiered systems of support (MTSS),
+EDP 695,School Psychology Capstone,3,,,"EDP 579, EDP 527",
+EDP 696,Thesis Study: Plan Development and Organizing Aspects,3,,,EDP 400 or EDP 419 and EDP 520 or EDP 595,
+EDP 697,Directed Research,,,,Department consent is required,
+EDP 698,Thesis,3,,,EDP 519 or EDP 520 or EDP 595,
+EDP 699,Project,3,,,"Advancement to candidacy; approval by committee chair, department chair, and associate dean",

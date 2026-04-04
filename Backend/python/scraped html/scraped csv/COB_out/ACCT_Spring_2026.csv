@@ -1,0 +1,106 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,01,9090,Spring_2026|ACCT 201|01|9090,FALSE,\N,,SEM,MW,8-9:15AM,,COB-140,Johnson D,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,04,8601,Spring_2026|ACCT 201|04|8601,FALSE,\N,,SEM,TuTh,11-12:15PM,,COB-217,Zhang I,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,05,7318,Spring_2026|ACCT 201|05|7318,FALSE,\N,,SEM,MW,11-12:15PM,,COB-139,Sinha D,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,08,3683,Spring_2026|ACCT 201|08|3683,FALSE,\N,,SEM,NA,NA,,ONLINE-ONLY,Sinha D,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,09,7580,Spring_2026|ACCT 201|09|7580,FALSE,\N,,SEM,TuTh,11-12:15PM,,COB-218,Sundararaman R,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,10,7585,Spring_2026|ACCT 201|10|7585,FALSE,\N,311,SEM,TuTh,8-9:15AM,,COB-122,Johnson D,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,10,\N,Spring_2026|ACCT 201|10|NOCLASS|50f4d127a51894e5,FALSE,\N,,,TuTh,8-9:15AM,,ONLINE-ONLY,Johnson D,additional meeting detail
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,11,7587,Spring_2026|ACCT 201|11|7587,FALSE,\N,,SEM,TuTh,12:30-1:45PM,,COB-122,Zhang I,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,12,8602,Spring_2026|ACCT 201|12|8602,FALSE,\N,,SEM,TuTh,9:30-10:45AM,,COB-122,Zhang I,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,13,8699,Spring_2026|ACCT 201|13|8699,FALSE,\N,311,SEM,MW,8-9:15AM,,COB-122,Mari R,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,13,\N,Spring_2026|ACCT 201|13|NOCLASS|3b1946a8dfdeacf6,FALSE,\N,,,MW,8-9:15AM,,ONLINE-ONLY,Mari R,additional meeting detail
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,14,8700,Spring_2026|ACCT 201|14|8700,FALSE,\N,,SEM,MW,2-3:15PM,,COB-217,Sinha D,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,15,10092,Spring_2026|ACCT 201|15|10092,FALSE,\N,,SEM,TuTh,9:30-10:45AM,,COB-235,Yang Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,16,10093,Spring_2026|ACCT 201|16|10093,FALSE,\N,,SEM,TuTh,11-12:15PM,available,COB-227,Yang Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,201,ACCT 201,ELEM FINANCIAL ACCOUNTING,3,,17,10094,Spring_2026|ACCT 201|17|10094,FALSE,\N,,SEM,TuTh,12:30-1:45PM,,COB-218,Yang Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,01,7319,Spring_2026|ACCT 202|01|7319,FALSE,\N,,SEM,MW,11-12:15PM,,COB-122,Hao P,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,02,3110,Spring_2026|ACCT 202|02|3110,FALSE,\N,310,SEM,TuTh,11-12:15PM,,COB-122,Kabutey M,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,03,3111,Spring_2026|ACCT 202|03|3111,FALSE,\N,,SEM,TuTh,9:30-10:45AM,,COB-218,Kabutey M,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,04,6343,Spring_2026|ACCT 202|04|6343,FALSE,\N,310,SEM,TuTh,2-3:15PM,,COB-235,Kabutey M,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,05,3682,Spring_2026|ACCT 202|05|3682,FALSE,\N,,SEM,NA,NA,,ONLINE-ONLY,Lin P,Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,06,7588,Spring_2026|ACCT 202|06|7588,FALSE,\N,,SEM,MW,9:30-10:45AM,,COB-228,Hao P,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,07,4649,Spring_2026|ACCT 202|07|4649,FALSE,\N,311,SEM,M,4-6:45PM,available,COB-122,Masterson M,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,07,\N,Spring_2026|ACCT 202|07|NOCLASS|abd0c038dc12227f,FALSE,\N,,,M,4-6:45PM,,ONLINE-ONLY,Masterson M,additional meeting detail
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,08,5640,Spring_2026|ACCT 202|08|5640,FALSE,\N,311,SEM,TuTh,8-9:15AM,,COB-228,Mari R,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,08,\N,Spring_2026|ACCT 202|08|NOCLASS|ca7c0b486404809b,FALSE,\N,,,TuTh,8-9:15AM,,ONLINE-ONLY,Mari R,additional meeting detail
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,09,7728,Spring_2026|ACCT 202|09|7728,FALSE,\N,,SEM,MW,2-3:15PM,available,COB-123,Hao P,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,11,9091,Spring_2026|ACCT 202|11|9091,FALSE,\N,306,SEM,MW,5-6:15PM,,ONLINE-ONLY,Johnson D,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,12,9645,Spring_2026|ACCT 202|12|9645,FALSE,\N,311,SEM,W,4-6:45PM,available,COB-110,Mashintchian J,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,12,\N,Spring_2026|ACCT 202|12|NOCLASS|ee73508182e01a74,FALSE,\N,,,W,4-6:45PM,,ONLINE-ONLY,Mashintchian J,additional meeting detail
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,13,10291,Spring_2026|ACCT 202|13|10291,FALSE,\N,,SEM,MW,11-12:15PM,,CPCE-308,Smith Jones L,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,202,ACCT 202,MANAGERIAL ACCOUNTING,3,,14,10868,Spring_2026|ACCT 202|14|10868,FALSE,\N,,SEM,F,9-11:45AM,available,COB-139A,Masterson M,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300A,ACCT 300A,INTERMEDIATE ACCOUNTING,4,,01,4690,Spring_2026|ACCT 300A|01|4690,FALSE,\N,311,SEM,M,6-9:50PM,,COB-123,Rivera A,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,300A,ACCT 300A,INTERMEDIATE ACCOUNTING,4,,01,\N,Spring_2026|ACCT 300A|01|NOCLASS|3528b62d4692071f,FALSE,\N,,,M,6-9:50PM,,ONLINE-ONLY,Rivera A,additional meeting detail
+Spring_2026,ACCT,300A,ACCT 300A,INTERMEDIATE ACCOUNTING,4,,02,3663,Spring_2026|ACCT 300A|02|3663,FALSE,\N,,SEM,MW,12-1:50PM,,COB-123,Wang V,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300A,ACCT 300A,INTERMEDIATE ACCOUNTING,4,,04,5054,Spring_2026|ACCT 300A|04|5054,FALSE,\N,,SEM,MW,10-11:50AM,,COB-218,Lacey J,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300A,ACCT 300A,INTERMEDIATE ACCOUNTING,4,,05,7586,Spring_2026|ACCT 300A|05|7586,FALSE,\N,,SEM,MW,4-5:50PM,,KIN-058,Wang V,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300A,ACCT 300A,INTERMEDIATE ACCOUNTING,4,,06,12480,Spring_2026|ACCT 300A|06|12480,FALSE,\N,311,SEM,Tu,6-9:45PM,,COB-235,Shodiya W,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,300A,ACCT 300A,INTERMEDIATE ACCOUNTING,4,,06,\N,Spring_2026|ACCT 300A|06|NOCLASS|3832aa6509b0faf9,FALSE,\N,,,Tu,6-9:45PM,,ONLINE-ONLY,Shodiya W,additional meeting detail
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,01,8461,Spring_2026|ACCT 300B|01|8461,FALSE,\N,310,SEM,MW,4-5:50PM,,COB-218,Gaynor G,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,02,5541,Spring_2026|ACCT 300B|02|5541,FALSE,\N,311,SEM,Tu,6-9:50PM,,COB-123,Smith Jones L,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,02,\N,Spring_2026|ACCT 300B|02|NOCLASS|995115bc77939903,FALSE,\N,,,Tu,6-9:50PM,,ONLINE-ONLY,Smith Jones L,additional meeting detail
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,03,5347,Spring_2026|ACCT 300B|03|5347,FALSE,\N,,SEM,TuTh,2-3:50PM,available,COB-123,Chung S,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,04,6824,Spring_2026|ACCT 300B|04|6824,FALSE,\N,,SEM,TuTh,4-5:50PM,available,COB-123,Chung S,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,05,8462,Spring_2026|ACCT 300B|05|8462,FALSE,\N,,SEM,M,6-9:50PM,available,COB-218,Gaynor G,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,07,8463,Spring_2026|ACCT 300B|07|8463,FALSE,\N,,SEM,TuTh,12-1:50PM,available,COB-123,Chung S,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,08,10869,Spring_2026|ACCT 300B|08|10869,FALSE,\N,,SEM,MW,8-9:50AM,,COB-218,Rivera A,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,300B,ACCT 300B,INTERMEDIATE ACCOUNTING,4,,08,\N,Spring_2026|ACCT 300B|08|NOCLASS|3afd03b9b461f09b,FALSE,\N,,,MW,8-9:50AM,,ONLINE-ONLY,Rivera A,additional meeting detail
+Spring_2026,ACCT,320,ACCT 320,COST ACCOUNTING,4,,01,1003,Spring_2026|ACCT 320|01|1003,FALSE,\N,311,SEM,W,6-9:50PM,,COB-122,Bedard B,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,320,ACCT 320,COST ACCOUNTING,4,,01,\N,Spring_2026|ACCT 320|01|NOCLASS|7c34a0c4dd98602c,FALSE,\N,,,W,6-9:50PM,,ONLINE-ONLY,Bedard B,additional meeting detail
+Spring_2026,ACCT,320,ACCT 320,COST ACCOUNTING,4,,02,1004,Spring_2026|ACCT 320|02|1004,FALSE,\N,311,SEM,M,6-9:50PM,available,HHS1-104,Palmer J,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,320,ACCT 320,COST ACCOUNTING,4,,02,\N,Spring_2026|ACCT 320|02|NOCLASS|5d3fd91bd814c5e3,FALSE,\N,,,M,6-9:50PM,,ONLINE-ONLY,Palmer J,additional meeting detail
+Spring_2026,ACCT,320,ACCT 320,COST ACCOUNTING,4,,04,10903,Spring_2026|ACCT 320|04|10903,FALSE,\N,310,SEM,Th,6-9:50PM,,COB-123,Howard J,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,320,ACCT 320,COST ACCOUNTING,4,,05,8464,Spring_2026|ACCT 320|05|8464,FALSE,\N,,SEM,MW,8-9:50AM,,COB-237B,Smith Jones L,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,320,ACCT 320,COST ACCOUNTING,4,,06,8465,Spring_2026|ACCT 320|06|8465,FALSE,\N,,SEM,MW,2-3:50PM,,COB-218,Smith Jones L,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,351,ACCT 351,FEDERAL TAX LAW,4,,01,1005,Spring_2026|ACCT 351|01|1005,FALSE,\N,311,SEM,MW,12-1:50PM,,COB-218,Lee Y,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,351,ACCT 351,FEDERAL TAX LAW,4,,03,3986,Spring_2026|ACCT 351|03|3986,FALSE,\N,,SEM,TuTh,2-3:50PM,,COB-218,Howard J,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,351,ACCT 351,FEDERAL TAX LAW,4,,04,4196,Spring_2026|ACCT 351|04|4196,FALSE,\N,,SEM,TuTh,4-5:50PM,,COB-218,Howard J,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,352,ACCT 352,VOLUNTARY INCOME TAX ASSIST.,1,,01,4488,Spring_2026|ACCT 352|01|4488,FALSE,\N,,SEM,NA,NA,available,COB-412,Krishnan S,Instructor Consent Required Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,400,ACCT 400,ADVANCED ACCOUNTING,4,,01,2914,Spring_2026|ACCT 400|01|2914,FALSE,\N,,SEM,Tu,6-9:50PM,available,COB-218,Palmer J,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,465,ACCT 465,INTERNATIONAL ACCOUNTING,3,,01,1006,Spring_2026|ACCT 465|01|1006,FALSE,\N,,SEM,Th,7-9:45PM,available,COB-216,Galeas M,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,465,ACCT 465,INTERNATIONAL ACCOUNTING,3,,01,\N,Spring_2026|ACCT 465|01|NOCLASS|829c409fb6ce60ba,FALSE,\N,,,Th,7-9:45PM,,ONLINE-ONLY,Staff,additional meeting detail
+Spring_2026,ACCT,470,ACCT 470,AUDITING,4,GE AREA: F-Capstone,01,1007,Spring_2026|ACCT 470|01|1007,FALSE,\N,,SEM,TuTh,10-11:50AM,,COB-123,Simitian R,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,470,ACCT 470,AUDITING,4,GE AREA: F-Capstone,02,2347,Spring_2026|ACCT 470|02|2347,FALSE,\N,,SEM,TuTh,2-3:50PM,,COB-122,Zhang S,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,470,ACCT 470,AUDITING,4,GE AREA: F-Capstone,04,6449,Spring_2026|ACCT 470|04|6449,FALSE,\N,311,SEM,W,6-9:50PM,,COB-123,Sharpstone L,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,470,ACCT 470,AUDITING,4,GE AREA: F-Capstone,04,\N,Spring_2026|ACCT 470|04|NOCLASS|65a6b0dec8f57c26,FALSE,\N,,,W,6-9:50PM,,ONLINE-ONLY,Sharpstone L,additional meeting detail
+Spring_2026,ACCT,470,ACCT 470,AUDITING,4,GE AREA: F-Capstone,05,9158,Spring_2026|ACCT 470|05|9158,FALSE,\N,311,SEM,MW,4-5:50PM,,COB-123,Sharpstone L,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,470,ACCT 470,AUDITING,4,GE AREA: F-Capstone,05,\N,Spring_2026|ACCT 470|05|NOCLASS|19a6ae184bed615f,FALSE,\N,,,MW,4-5:50PM,,ONLINE-ONLY,Sharpstone L,additional meeting detail
+Spring_2026,ACCT,470,ACCT 470,AUDITING,4,GE AREA: F-Capstone,06,10870,Spring_2026|ACCT 470|06|10870,FALSE,\N,311,SEM,Th,6-9:50PM,,COB-122,Simitian R,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,470,ACCT 470,AUDITING,4,GE AREA: F-Capstone,06,\N,Spring_2026|ACCT 470|06|NOCLASS|7d261128e7008fa6,FALSE,\N,,,Th,6-9:50PM,,ONLINE-ONLY,Simitian R,additional meeting detail
+Spring_2026,ACCT,480,ACCT 480,ACCT SYSTEMS & DATA PROCESSING,4,,01,1008,Spring_2026|ACCT 480|01|1008,FALSE,\N,,SEM,MW,12:30-1:45PM,,COB-240,Landa S,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ACCT,480,ACCT 480,ACCT SYSTEMS & DATA PROCESSING,4,,01,\N,Spring_2026|ACCT 480|01|NOCLASS|37154122582fe6cc,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Landa S,additional meeting detail
+Spring_2026,ACCT,480,ACCT 480,ACCT SYSTEMS & DATA PROCESSING,4,,02,1009,Spring_2026|ACCT 480|02|1009,FALSE,\N,,SEM,MW,3:30-4:45PM,,COB-240,Landa S,Class instruction is: Hybrid(Face to Face & Async).
+Spring_2026,ACCT,480,ACCT 480,ACCT SYSTEMS & DATA PROCESSING,4,,02,\N,Spring_2026|ACCT 480|02|NOCLASS|bff99c3d418fe6e1,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Landa S,additional meeting detail
+Spring_2026,ACCT,480,ACCT 480,ACCT SYSTEMS & DATA PROCESSING,4,,03,8695,Spring_2026|ACCT 480|03|8695,FALSE,\N,,SEM,Tu,6-9:50PM,available,ONLINE-ONLY,Flessing H,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,ACCT,480,ACCT 480,ACCT SYSTEMS & DATA PROCESSING,4,,04,4089,Spring_2026|ACCT 480|04|4089,FALSE,\N,,SEM,M,6-9:50PM,,COB-236,Landa S,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,493,ACCT 493,ACCOUNTING INTERNSHIPS,3,,01,2688,Spring_2026|ACCT 493|01|2688,FALSE,\N,,SEM,NA,NA,available,COB-412,Lacey J,Class instruction is: Face to Face - On Campus.
+Spring_2026,ACCT,500,ACCT 500,FINANCIAL ACCOUNTING,3,,01,3896,Spring_2026|ACCT 500|01|3896,FALSE,\N,,SEM,Tu,7-9:45PM,,ONLINE-ONLY,Sparks B,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,ACCT,500,ACCT 500,FINANCIAL ACCOUNTING,3,,05,12640,Spring_2026|ACCT 500|05|12640,FALSE,\N,311,SEM,Tu,7-9:45PM,available,COB-139,Mashintchian J,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,500,ACCT 500,FINANCIAL ACCOUNTING,3,,05,\N,Spring_2026|ACCT 500|05|NOCLASS|11629cac71079733,FALSE,\N,,,Tu,7-9:45PM,,ONLINE-ONLY,Mashintchian J,additional meeting detail
+Spring_2026,ACCT,605,ACCT 605,SEMINAR IN ACCOUNTING INFO.,4,,01,5473,Spring_2026|ACCT 605|01|5473,FALSE,\N,,SEM,W,6-9:50PM,available,COB-240,Smith R,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,605,ACCT 605,SEMINAR IN ACCOUNTING INFO.,4,,01,\N,Spring_2026|ACCT 605|01|NOCLASS|a5c379d6597182d8,FALSE,\N,,,W,7-9:45PM,,ONLINE-ONLY,Smith R,additional meeting detail
+Spring_2026,ACCT,605,ACCT 605,SEMINAR IN ACCOUNTING INFO.,4,,02,5586,Spring_2026|ACCT 605|02|5586,FALSE,\N,,SEM,Th,6-9:50PM,available,COB-237B,Smith R,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,605,ACCT 605,SEMINAR IN ACCOUNTING INFO.,4,,02,\N,Spring_2026|ACCT 605|02|NOCLASS|f2a7ef6460377201,FALSE,\N,,,Th,6-8:45PM,,ONLINE-ONLY,Smith R,additional meeting detail
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,01,5612,Spring_2026|ACCT 610|01|5612,FALSE,\N,,SEM,W,7-9:45PM,,ONLINE-ONLY,Palmer J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,ACCT,611,ACCT 611,SEM. AUDITING & ASSURANCE SVCS,4,,01,5613,Spring_2026|ACCT 611|01|5613,FALSE,\N,,SEM,W,6-9:50PM,available,COB-218,Zhang S,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,611,ACCT 611,SEM. AUDITING & ASSURANCE SVCS,4,,01,\N,Spring_2026|ACCT 611|01|NOCLASS|c22170c4537579d7,FALSE,\N,,,W,6-9:50PM,,ONLINE-ONLY,Zhang S,additional meeting detail
+Spring_2026,ACCT,611,ACCT 611,SEM. AUDITING & ASSURANCE SVCS,4,,02,5614,Spring_2026|ACCT 611|02|5614,FALSE,\N,,SEM,Th,6-9:50PM,available,COB-218,Zhang S,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,611,ACCT 611,SEM. AUDITING & ASSURANCE SVCS,4,,02,\N,Spring_2026|ACCT 611|02|NOCLASS|993790a11cd463de,FALSE,\N,,,Th,6-9:50PM,,ONLINE-ONLY,Zhang S,additional meeting detail
+Spring_2026,ACCT,622,ACCT 622,TAXATION PARTNERSHIPS S CORP.,4,,03,5742,Spring_2026|ACCT 622|03|5742,FALSE,\N,,SEM,Sa,9-12:50PM,available,COB-114,Conn R,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,622,ACCT 622,TAXATION PARTNERSHIPS S CORP.,4,,03,\N,Spring_2026|ACCT 622|03|NOCLASS|d9a7a7b6038e766a,FALSE,\N,,,Sa,9-12:50PM,,ONLINE-ONLY,Conn R,additional meeting detail
+Spring_2026,ACCT,622,ACCT 622,TAXATION PARTNERSHIPS S CORP.,4,,04,10872,Spring_2026|ACCT 622|04|10872,FALSE,\N,311,SEM,Sa,9-12:50PM,available,COB-218,Lee Y,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,ACCT,622,ACCT 622,TAXATION PARTNERSHIPS S CORP.,4,,04,\N,Spring_2026|ACCT 622|04|NOCLASS|66ba1c536f68e9b6,FALSE,\N,,,Sa,9-12:50PM,,ONLINE-ONLY,Lee Y,additional meeting detail
+Spring_2026,ACCT,697,ACCT 697,DIRECTED STUDIES IN ACCT,1,,01,9724,Spring_2026|ACCT 697|01|9724,FALSE,\N,305,SUP,TBA,NA,available,ONLINE-ONLY,Smith R,Department Consent Required Class instruction is: Asynch. Online-No Meet Times.
+Spring_2026,ACCT,500,ACCT 500,FINANCIAL ACCOUNTING,3,,02,9812,Spring_2026|ACCT 500|02|9812,FALSE,\N,306,SEM,M,6-8:45PM,,ONLINE-ONLY,Lee Y,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,ACCT,500,ACCT 500,FINANCIAL ACCOUNTING,3,,02,\N,Spring_2026|ACCT 500|02|NOCLASS|b48182849fa49299,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Lee Y,additional meeting detail
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,02,9810,Spring_2026|ACCT 610|02|9810,FALSE,\N,307,SEM,Th,6-8:45PM,,ONLINE-ONLY,Lin P,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,02,\N,Spring_2026|ACCT 610|02|NOCLASS|6888a45f477df447,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Lin P,additional meeting detail
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,03,9811,Spring_2026|ACCT 610|03|9811,FALSE,\N,307,SEM,Tu,6-8:45PM,,ONLINE-ONLY,Lin P,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,03,\N,Spring_2026|ACCT 610|03|NOCLASS|3fdd5dc683116632,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Lin P,additional meeting detail
+Spring_2026,ACCT,500,ACCT 500,FINANCIAL ACCOUNTING,3,,03,9837,Spring_2026|ACCT 500|03|9837,FALSE,\N,306,SEM,Tu,6-8:45PM,,ONLINE-ONLY,Simitian R,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,ACCT,500,ACCT 500,FINANCIAL ACCOUNTING,3,,03,\N,Spring_2026|ACCT 500|03|NOCLASS|d6c66be808a9477b,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Simitian R,additional meeting detail
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,04,9835,Spring_2026|ACCT 610|04|9835,FALSE,\N,307,SEM,Tu,6-8:45PM,,ONLINE-ONLY,Nabi J,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,04,\N,Spring_2026|ACCT 610|04|NOCLASS|f039c9f1812dd668,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Nabi J,additional meeting detail
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,05,9836,Spring_2026|ACCT 610|05|9836,FALSE,\N,307,SEM,Th,6-8:45PM,,ONLINE-ONLY,Nabi J,Class instruction is: Online - Mixed Meet Times. Some seats are reserved for the following group(s): OMBA majors only.
+Spring_2026,ACCT,610,ACCT 610,MANAGERIAL ACCOUNTING CONTROL,3,,05,\N,Spring_2026|ACCT 610|05|NOCLASS|815d826c14f531fe,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Nabi J,additional meeting detail

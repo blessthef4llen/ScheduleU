@@ -1,0 +1,50 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+HCA 202,Introduction to Health Care in America,3,,,"Completion of one GE foundation course US health care system with its delivery and financing mechanisms as well as the technical, economic, political and social forces responsible for changes in the health care system",
+HCA 300,The Health Care System,3,,,"Open to Health Care Administration majors, pre-majors, Health Care Administration Certificate, and BS in Applied Data Science students only",
+HCA 312,Health Personnel Management,3,,,HCA 300,HCA 300
+HCA 320,Operations Management in Health Administration,3,,,,HCA 300
+HCA 327,Medical Billing & Coding,3,,,Open to Health Care Administration majors and pre-majors only,
+HCA 340,Legal Aspects of Health Administration,3,,,,HCA 300
+HCA 341,Financial Management of Health Care Institutions,3,,,Completion of entire foundation courses,HCA 300
+HCA 353,Marketing for Health Services Organizations,3,,,“C” or better in ECON 101 or ECON 300,HCA 300
+HCA 410,Health Management and Organization,3,,,,HCA 300
+HCA 416,Management and Information Systems,3,,,"Open to Health Care Administration majors, pre-majors, Healthcare Data Analytics Certificate, and BS in Applied Data Science students only",
+HCA 417,"Technology, Ethics, and Society",3,,,Upper division standing; GE Foundations; Score of 11 or higher on the GWAR Placement Examination or completion of the necessary portfolio course that is a prerequisite for a GWAR Writing Intensive course,
+HCA 419,Healthcare Database Management,3,,,GE Foundations,
+HCA 420,Healthcare Data Visualization,3,,,GE Foundations,
+HCA 421,Healthcare Data Analytics Capstone,3,,,GE Foundations,
+HCA 422,Global Issues in Health Services,3,,,"GE Foundation, one or more Exploration courses and upper division standing",
+HCA 428,Population Health Management for Health Care Administrators,3,,,,"HCA 300 , HCA majors and ABS in BS in Applied Data Science majors only"
+HCA 432,Leadership in Health Care,3,,,"HCA 300 , HCA 312 , HCA 410",
+HCA 438,Perspectives on Long-Term Care Across the Lifespan,3,,,Health Care Administration majors only; HCA 300 Functions and essential skills to manage long-term care (LTC) organizations and facilities; institutional arrangements; patient/family/community relations; workforce management; marketing; ethical issues; abuse and mandated reporting,
+HCA 450,Quality Assurance in Health Care,3,,,HCA 300 with a grade of “C” or better,
+HCA 451,Economics of Health,3,,,A grade of “C” or better in ECON 101 or ECON 300,
+HCA 452,Medical Group Practice Management,3,,,HCA 300 and HCA 341,
+HCA 457,Working Around the World,3,,,"GE Foundation requirements, one or more Exploration courses, upper division standing",
+HCA 465,Analysis and Evaluation of Health Care Services,3,,,A grade of “C” or better in HDEV 190 or PSY 110 or SOC 170 or STAT 108 or STAT 118,
+HCA 470,Latinas/Latinos: Health Status and Health Care Access,3,,,"GE Foundation, one or more Exploration courses, upper division standing",
+HCA 472,Applications of Health Care Risk Management,3,,,HCA 468,
+HCA 480,Internship in Health Care Administration,3,,,"”C” or better in HCA 300 , HCA 312 , HCA 341 , HCA 410 , HCA 416 , HCA 465 , ( H SC 150 or HCA 327 )",
+HCA 481,Internship and Career Development in Health Care Administration,3,,,HCA majors only and a grade of “C” or better in HCA 480,
+HCA 490,Selected Topics in Health Care Administration,,,,Freshmen are prohibited from enrolling in upper division courses,
+HCA 499,Directed Studies,,,,Consent of instructor,
+HCA 502,The Health Care System,3,,,Open to HCA graduate students only,
+HCA 503,Health Care Economics,3,,,ECON 101 or ECON 300,
+HCA 505,Organization and Systems of Health Care,3,,,,HCA 502 and HCA majors only
+HCA 510,Human Resources Management in Health Care,3,,,,"HCA 502 Management of human resources in the health care system including human resource planning and staffing, training and development, performance appraisal, job design and analysis, and compensation"
+HCA 515,Advanced Financial Management in Health Care,3,,,ACCT 201 or ACCT 500 ; HCA 502 ; Health Care Administration graduate students only,
+HCA 517,Advanced Healthcare Information Systems Management,3,,,HCA majors only and HCA 502,
+HCA 524,Advanced Legal and Ethical Aspects of Health Administration,3,,,HCA 502 and Health Care Administration majors only,
+HCA 527,Research Methods in Health Care Management,3,,,"PSY 110 or SOC 170 or SOC 250 or STAT 108 , HCA 502 , and HCA majors only",
+HCA 528,Managing Population Health,3,,,"Health Care Administration majors only, HCA 502 Fundamental epidemiologic concepts and applications in health care management practice",
+HCA 530,Strategic Planning and Marketing in Health Care,3,,,,HCA graduate students only and HCA 502 with a grade of “C” or better
+HCA 535,Quantitative Methods for Health Administration,3,,,PSY 110 or SOC 170 or SOC 250 or STAT 108,
+HCA 536,Hospital Management,3,,,HCA 502 and Health Care Administration majors only,
+HCA 537,Managed Care,3,,,HCA 502 and Health Care Administration majors only,
+HCA 538,Management Challenges in Long Term Care,3,,,Health Care Administration majors only and HCA 502,
+HCA 550,Continuous Quality Improvement in Health Services,3,,,PSY 110 or SOC 170 or SOC 250 or STAT 108,
+HCA 552,Medical Group Practice Management,3,,,HCA 502 and Heath Care Administration majors only,
+HCA 580,Internship in Health Care Administration,3,,,HCA majors only,
+HCA 590,Selected Topics in Health Care Administration,,,,Open to HCA graduate students only,
+HCA 599,Directed Studies,,,,Consent of instructor,
+HCA 698,Project,3,,,Advancement to candidacy & completion of minimum 27 graduate units in HCA;Open to HCA graduate students only,

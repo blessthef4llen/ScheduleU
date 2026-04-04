@@ -1,0 +1,39 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,BME,100,BME 100,BIOMEDICAL ENGINEERING,1,GE: E,02,9368,Spring_2026|BME 100|02|9368,FALSE,\N,,SEM,F,9-9:50AM,available,VEC-518,Maldonado M,Class instruction is: Face to Face - On Campus. Class offered with BME-100H-02
+Spring_2026,BME,100H,BME 100H,BIOMEDICAL ENGINEERING,1,GE: E,02,9369,Spring_2026|BME 100H|02|9369,FALSE,\N,,SEM,F,9-9:50AM,available,VEC-518,Maldonado M,Class instruction is: Face to Face - On Campus. Class offered with BME-100-02
+Spring_2026,BME,200,BME 200,REGULATORY BASICS & COMPLIANCE,1,,01,11009,Spring_2026|BME 200|01|11009,FALSE,\N,310,LEC,M,5-5:50PM,,ET-239,Dooley Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,201,BME 201,PRGRMNG FOR BIOMEDICAL ENGNRS,3,,01,4439,Spring_2026|BME 201|01|4439,FALSE,\N,,SEM,W,10-11:50AM,available,ET-239,Torres L,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,201,BME 201,PRGRMNG FOR BIOMEDICAL ENGNRS,3,,02,4440,Spring_2026|BME 201|02|4440,FALSE,\N,,LAB,M,9-11:45AM,available,ET-239,Torres L,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,205,BME 205,MEDICAL ELECTRONICS,2,,01,5399,Spring_2026|BME 205|01|5399,FALSE,\N,,LEC,M,8-8:50AM,,ET-239,Raman S,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,205,BME 205,MEDICAL ELECTRONICS,2,,02,7390,Spring_2026|BME 205|02|7390,FALSE,\N,,LAB,Th,8-10:45AM,,ET-239,Raman S,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,211,BME 211,BIOMECHANICS,3,,01,4673,Spring_2026|BME 211|01|4673,FALSE,\N,,SEM,W,3-4:50PM,,ET-239,Maldonado M,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,211,BME 211,BIOMECHANICS,3,,02,4682,Spring_2026|BME 211|02|4682,FALSE,\N,,LAB,M,2-4:45PM,,ET-239,Maldonado M,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,301,BME 301,BIOMEDICAL SIGNALS AND SYSTEMS,3,,01,4669,Spring_2026|BME 301|01|4669,FALSE,\N,,SEM,Tu,11-12:50PM,,ET-241,Tran D,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,301,BME 301,BIOMEDICAL SIGNALS AND SYSTEMS,3,,02,4736,Spring_2026|BME 301|02|4736,FALSE,\N,,LAB,Th,11-1:45PM,,ET-241,Tran D,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,304,BME 304,BIOMEDICAL SIGNAL PROCESSING,3,,01,5647,Spring_2026|BME 304|01|5647,FALSE,\N,,SEM,Tu,2-3:50PM,,ET-239,Hu D,Class instruction is: Face to Face - On Campus. Class offered with BME-304H-01
+Spring_2026,BME,304,BME 304,BIOMEDICAL SIGNAL PROCESSING,3,,02,5648,Spring_2026|BME 304|02|5648,FALSE,\N,,LAB,Th,2-4:45PM,,ET-239,Tran D,Class instruction is: Face to Face - On Campus. Class offered with BME-304H-02
+Spring_2026,BME,304H,BME 304H,BIOMEDICAL SIGNAL PROCESSING,3,,01,5937,Spring_2026|BME 304H|01|5937,FALSE,\N,,SEM,Tu,2-3:50PM,,ET-239,Hu D,Class instruction is: Face to Face - On Campus. Class offered with BME-304-01
+Spring_2026,BME,304H,BME 304H,BIOMEDICAL SIGNAL PROCESSING,3,,02,5938,Spring_2026|BME 304H|02|5938,FALSE,\N,,LAB,Th,2-4:45PM,,ET-239,Tran D,Class instruction is: Face to Face - On Campus. Class offered with BME-304-02
+Spring_2026,BME,311,BME 311,BIOMECHANICS II,3,,01,4676,Spring_2026|BME 311|01|4676,FALSE,\N,,SEM,M,6-7:50PM,,ET-239,Radner Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,311,BME 311,BIOMECHANICS II,3,,02,10611,Spring_2026|BME 311|02|10611,FALSE,\N,,LAB,W,5-7:45PM,,ET-239,Radner Z,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,315,BME 315,BIOINFORMATICS AND GENOMICS,3,,01,4674,Spring_2026|BME 315|01|4674,FALSE,\N,,SEM,M,12-1:50PM,available,ET-239,Fahim A,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,315,BME 315,BIOINFORMATICS AND GENOMICS,3,,02,4675,Spring_2026|BME 315|02|4675,FALSE,\N,,LAB,W,12-2:45PM,available,ET-239,Fahim A,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,320,BME 320,BIOMED DATA AQUISITION ANALYS,3,,01,5400,Spring_2026|BME 320|01|5400,FALSE,\N,310,LEC,Th,5-6:50PM,,ET-239,Moussavi M,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,320,BME 320,BIOMED DATA AQUISITION ANALYS,3,,02,4677,Spring_2026|BME 320|02|4677,FALSE,\N,310,LAB,Tu,5-7:45PM,,ET-241,Moussavi M,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,320,BME 320,BIOMED DATA AQUISITION ANALYS,3,,04,12496,Spring_2026|BME 320|04|12496,FALSE,\N,310,LAB,Tu,8-10:45AM,,ET-241,Ayala P,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,370,BME 370,BIO-FLUIDS AND TRANSPORT,3,,01,4678,Spring_2026|BME 370|01|4678,FALSE,\N,,SEM,M,9-10:50AM,,ET-241,Ahrar S,Class instruction is: Face to Face - On Campus. Class offered with BME-370H-01
+Spring_2026,BME,370,BME 370,BIO-FLUIDS AND TRANSPORT,3,,02,4679,Spring_2026|BME 370|02|4679,FALSE,\N,,LAB,W,9-11:45AM,,ET-241,Ahrar S,Class instruction is: Face to Face - On Campus. Class offered with BME-370H-02
+Spring_2026,BME,370H,BME 370H,BIO-FLUIDS AND TRANSPORT,3,,01,5939,Spring_2026|BME 370H|01|5939,FALSE,\N,,SEM,M,9-10:50AM,available,ET-241,Ahrar S,Class instruction is: Face to Face - On Campus. Class offered with BME-370-01
+Spring_2026,BME,370H,BME 370H,BIO-FLUIDS AND TRANSPORT,3,,02,5940,Spring_2026|BME 370H|02|5940,FALSE,\N,,LAB,W,9-11:45AM,available,ET-241,Ahrar S,Class instruction is: Face to Face - On Campus. Class offered with BME-370-02
+Spring_2026,BME,406,BME 406,SLCTD TOPICS IN BIOMEDICAL ENG,3,,01,10616,Spring_2026|BME 406|01|10616,FALSE,\N,,SEM,F,3-4:50PM,available,ET-239,Lo R,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,406,BME 406,SLCTD TOPICS IN BIOMEDICAL ENG,3,,02,10617,Spring_2026|BME 406|02|10617,FALSE,\N,,LAB,Th,2-4:45PM,available,ET-241,Lo R,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,425,BME 425,BIOMATERIALS,3,,01,5854,Spring_2026|BME 425|01|5854,FALSE,\N,,SEM,Tu,8-9:50AM,available,ET-239,Maldonado M,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,425,BME 425,BIOMATERIALS,3,,03,8332,Spring_2026|BME 425|03|8332,FALSE,\N,,LAB,Th,8-10:45AM,available,ET-241,Maldonado M,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,455,BME 455,COMPUTATIONAL BIOMEDICINE,3,,01,4927,Spring_2026|BME 455|01|4927,FALSE,\N,,SEM,Tu,11-12:50PM,available,ET-239,Fahim A,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,455,BME 455,COMPUTATIONAL BIOMEDICINE,3,,02,4928,Spring_2026|BME 455|02|4928,FALSE,\N,,LAB,Th,11-1:45PM,available,ET-239,Fahim A,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,460,BME 460,BIOMEDICAL INSTRUMENTATION,3,,01,4929,Spring_2026|BME 460|01|4929,FALSE,\N,,LEC,W,8-9:50AM,available,ET-239,Raman S,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,460,BME 460,BIOMEDICAL INSTRUMENTATION,3,,02,4930,Spring_2026|BME 460|02|4930,FALSE,\N,,LAB,F,8-10:45AM,available,ET-239,Raman S,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,490A,BME 490A,BIOMEDICAL ENGINEERING CAPSTON,3,,01,5594,Spring_2026|BME 490A|01|5594,FALSE,\N,,SEM,F,1-2:50PM,available,ET-239,Khoo I,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,490A,BME 490A,BIOMEDICAL ENGINEERING CAPSTON,3,,02,5595,Spring_2026|BME 490A|02|5595,FALSE,\N,,LAB,M,2-4:45PM,available,ET-241,Demircan E,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,490B,BME 490B,BIOMEDICAL ENGINEERING CAPSTON,3,,01,5716,Spring_2026|BME 490B|01|5716,FALSE,\N,,SEM,F,11-12:50PM,,ET-239,Ahrar S,Class instruction is: Face to Face - On Campus.
+Spring_2026,BME,490B,BME 490B,BIOMEDICAL ENGINEERING CAPSTON,3,,02,5717,Spring_2026|BME 490B|02|5717,FALSE,\N,,LAB,W,1-3:45PM,,ET-241,Ahrar S,Class instruction is: Face to Face - On Campus.

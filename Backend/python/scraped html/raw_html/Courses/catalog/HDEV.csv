@@ -1,0 +1,23 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+HDEV 190,Elementary Statistics,4,,,,Eligible to take General Education Quantitative Reasoning Course as determined by the CSU Multiple Measures of Academic Proficiency
+HDEV 218,"Environmental Justice, Health, and Human Development",3,,,ENGL 100B or AFRS 100B or AIS 100B or ASAM 100B or CHLS 104B,ENGL 100B or AFRS 100B or AIS 100B or ASAM 100B or CHLS 104B
+HDEV 300,Death and Dying,3,,,"GE Foundation requirements, upper-division standing, ANTH 120 or HDEV 180 or PSY 100 or SOC 100",
+HDEV 303,Interdisciplinary Approaches to Health Disparities,3,,,Completion of at least 60 units,
+HDEV 305,Life Course and Generation in the Arab World,3,,,Completion of at least 60 units,
+HDEV 306,Immigrant Youth in Long Beach,3,,,Completion of at least 60 units,
+HDEV 307,Childhood Development in a Diverse World,3,,,"GE Foundation requirements, ANTH 120 or HDEV 180 or PSY 100 or SOC 100 with a “C” or better",
+HDEV 308,Pseudoscience vs. Science: The Impact of (Un)Scientific Data on Human Development,3,,,"Completion of at least 60 units, completion of the entire Foundation, and completion of at least one GE Course from the Explorations stage","GE Foundation requirements, upper-division standing"
+HDEV 320,From Data to Insights: Quantitative Methods in Human Development,4,,,HDEV 190 or PSY 110 or SOC 170 with a “C” or better; and HDEV 307 with a “C” or better; and HDEV 357 with a “C” or better,
+HDEV 327,Approaches to Adolescence and Emerging Adulthood,3,,,Completion of at least 60 units,
+HDEV 335,Community STEPs: HDEV training and experience,1,,,"HDEV 307 or HDEV 327 or HDEV 357 Gain skills, training, and experience and purpose through human development-related community engagement","HDEV 307 or HDEV 327 or HDEV 357 Gain skills, training, and experience and purpose through human development-related community engagement"
+HDEV 337,STEPs to Graduate Study: Preparation for HDEV graduate study,1,,,"HDEV 307 or HDEV 327 or HDEV 357 with a “C” or better This course explores skills, training, and experience needed for graduate study in human development and related fields","HDEV 307 or HDEV 327 or HDEV 357 with a “C” or better This course explores skills, training, and experience needed for graduate study in human development and related fields"
+HDEV 340,Families and Work: Life Course Processes,3,,,HDEV 307 with a “C” or better and HDEV 357 with a “C” or better,
+HDEV 357,Adulthood and Aging in a Diverse World,3,,,"GE Foundation requirements, ANTH 120 or HDEV 180 or PSY 100 or SOC 100 with a “C” or better",
+HDEV 360,Cultural Foundations for Human Development,3,,,HDEV 307 with a “C” or better and HDEV 357 with a “C” or better,
+HDEV 375,Everyday Ruptures: Risk & Resilience in Human Development,3,,,HDEV 307 and HDEV 357 with a “C” or better,
+HDEV 404,Living and Dying in a Digital Age,3,,,HDEV 320 with a “C” or better; or HDEV 310 with a “C” or better; or consent of instructor,
+HDEV 405,Latin American Childhoods,3,,,ANTH 120 or HDEV 180 or PSY 100 or SOC 100 with a “C” or better,
+HDEV 416,"Society to Synapses: Relationships, the Brain, and Shaping the Human Mind",3,,,HDEV 320 or HDEV 310 or PSY 220 with a “C” or better,
+HDEV 470,Seminar/Practicum,3,,,HDEV 320 with a “C” or better; or consent of the instructor,
+HDEV 490,Selected Topics in Human Development,3,,,"GE Foundation requirements, upper-division standing and consent of instructor",
+HDEV 499,Independent Study,,,,Consent of instructor and chair,

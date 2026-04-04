@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="#F9A600">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Schedule of Classes</title>
+		<!-- THIS IS THE FRAMEWORK FILE -->
+<link rel="stylesheet" href="/misc/ut2/framework/bootstrap/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+<link rel="stylesheet" href="/misc/ut2/css/style.min.css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/misc/ut2/fonts/font-awesome/css/font-awesome.min.css">
+<!-- SmartMenus core CSS (required) -->
+<link href='/misc/ut2/css/sm-core-css.css' rel='stylesheet' type='text/css' />
+<!-- "sm-blue" menu theme (optional, you can use your own CSS, too) -->
+<link href='/misc/ut2/css/sm-blue.css' rel='stylesheet' type='text/css' />
+<!-- compiled and minified jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="/misc/ut2/framework/bootstrap/js/bootstrap.min.js"></script>
+<script src="/misc/ut2/js/custom.js"></script>
+<!-- SmartMenus jQuery plugin -->
+<script src="/misc/ut2/js/jquery.smartmenus.js" type="text/javascript"></script>
+
+
+
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-193316-2', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- Apply your own custom javascripts and css styles here. Please adhere to the web style guidelines provided to you and refer to the CMS resources site for more information. -->
+		<style>
+		#alphaRow a {margin-right:6px;color:#555;padding:.25em;}
+		#alphaRow a:hover{color:#000 !important;background-color:#f9a600;}
+		#alphaRow{background-color:#e4e1d9;padding:.5em;text-align:center;font-size:1.2em;}
+		/*.indexList ul li a{color:#555;}*/
+		.textbooks{background-color:#222;border:0;padding:6px 18px;-webkit-border-top-right-radius:0.5em;-webkit-border-bottom-right-radius:0.5em;-webkit-border-bottom-left-radius:0.5em;-webkit-border-top-left-radius:0.5em;-moz-border-radius-topright:0.5em;-moz-border-radius-bottomright:0.5em;-moz-border-radius-bottomleft:0.5em;-moz-border-radius-topleft:0.5em; color:#000;width:25%;margin:auto;text-align:center;margin-bottom:2em;}
+		.textbooks a {color:#edaa00;text-decoration:none;}
+		.textbooks a:hover,a:visited{color:#edaa00!important;text-decoration:none!important;}
+		.textbooks span{color:#edaa00;}
+		#pagenav ul {list-style:none;clear:both;}
+		#pagenav ul li{width:30%;float:left;}
+		#browseBySubject,#browseByCollege,#browseByGE{padding:1em;background-color:#d7d2c5;font-size:1em;margin-right:.25em;}
+		#browseBySubject a,#browseByCollege a ,#browseByGE a {color:#555!important;text-decoration:none;}
+		.indexHeader h2{clear:both;padding-top:1em;}
+		.activeTab{background-color:#edaa00!important;}
+		.departmentTitle{padding-top:3em;}
+		ul li {font-size:1.2em;line-height:1.2em;content:"\25CF";color:#A74300;position:relative;left:-20px;margin-right:-10px;}
+		a {color:#A74300;}
+		.page-content ol li {color:#000;display:list-item;font-family:Lato,sans-serif;font-size:16px;font-weight:300;line-height:24px;list-style-position:outside;margin-bottom:8px;word-wrap:break-word;-webkit-font-smoothing:antialiased;padding-left:5px;list-style-type:decimal;}
+		.breadcrumb{padding:20px;}
+		.sectionTable{width:100%;overflow-x:auto;display:block;max-width: 100%;white-space: nowrap;}
+		.toplink{margin-bottom:1em;}
+		table.sectionTable td {border: 1px solid #eee;}
+		.dot {text-align: center;}
+		.courseBlock {
+		overflow-y: scroll;
+		width: 100%;
+		max-width: 100%;
+		border: 1px solid #EFEFEF;
+		}
+		h3 { margin: 1.25em auto 0 auto; }
+		</style>
+	</head>
+	<body>
+		<!-- THIS IS THE HEADER 1 FILE -->
+		<p class="jump-navigation">
+			<a href="#skip_content" id="sr_skip_content" class="sr-only sr-only-focusable">Jump to Content</a>
+			<a href="#skip_to_resources" id="sr_skip_to_resources" class="sr-only sr-only-focusable">Jump to Resources</a>
+		</p>
+		<div id="navigation" role="navigation" aria-label="primary">
+			<nav class="navbar navbar-default  navbar-fixed-top top-navigation">
+				<div class="container" id="content" tabindex="-1">
+					<div class="navbar-header">
+						<span class="navbar-brand"><a href="https://www.csulb.edu"><img class="university-name" src="/misc/ut2/imgs/logo_university_name.png" alt="CALIFORNIA STATE UNIVERSITY LONG BEACH"/></a>
+						<a class="university-name-abbr-link" href="https://www.csulb.edu"><img class="university-name-abbr" src="/misc/ut2/imgs/csulb.png" alt="CSULB logo for mobile devices"/></a><span class="border-line"></span><a class="department-name" style="display:inline-block;" href="https://www.csulb.edu/registration-and-records">Registration & Records</a></span>
+						
+						<p id="university-main-menu-button">
+							<span class="menu-click-link" id="university-main-menu-overlay">
+								<a href="javascript:void(0)"  class="menu-open" aria-haspopup="true" aria-expanded="false"><span class="text-menu">Menu</span><span id="icon-class" class="box-shadow-menu" style="margin-left: 9px;"><span class="sr-only">Open</span></span></a>
+								<a href="javascript:void(0)" class="menu-close"  aria-haspopup="true" aria-expanded="true" style="display:none; padding-right: 26px;" ><span class="text-menu">Menu</span><span class="close" id="remove-menu-icon"><span class="sr-only">Close</span></span></a>
+							</span>
+							<span>
+								<a href="javascript:void(0)" class="glyphicon glyphicon-search search-icon" aria-haspopup="true" aria-expanded="false" id="search-form-icon" style="height: 12px;"><span class="sr-only">Search</span></a>
+							</span>
+						</p>
+						<!--the search.html should contain search form for your site-->
+						<!-- THIS IS THE SEARCH -->
+						<div class="search-form" aria-label="search-form-icon" >
+							<form class="form-inline search-open" _lpchecked = "1"action="https://web.csulb.edu/search" method="get" id="google-appliance-block-form" accept-charset="UTF-8">
+								
+								<div class="form-group">
+									<label for="edit-search-keys"><span class="sr-only">Search</span></label>
+									<input class="form-text" id="edit-search-keys" maxlength="128" name="query" size="15" type="text" value=""><button type="submit" class="btn btn-primary" style="margin-right: 5px;margin-left:5px;">
+									Search
+									</button><p><input name="page" type="hidden" value="1"><input name="applied_filters" type="hidden" value=""><input name="sort" type="hidden" value="relevance"><input name="sortdir" type="hidden" value="desc"><input name="pagesize" type="hidden" value="10"><input name="col" type="hidden" value="11"></p>
+									
+								</div>
+								
+							</form>
+						</div>
+						<!-- THIS IS THE HEADER 2 FILE -->
+		</div>
+			</div>
+		<div class="jumbotron university-main-menu testing88" aria-labelledby="university-main-menu-overlay">
+					<div class="container">
+						<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-7 five-three">
+								<div class="row">
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/academic-affairs/colleges-departments?utm_source=CSULBHomepage&utm_medium=html&utm_campaign=AcademicsFlow" class="menu-heading auto-tab">ACADEMICS</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/academic-affairs/menu/academics/colleges-departments">Colleges &amp; Degrees</a></li>
+											<li><a href="https://www.csulb.edu/office-of-research-and-economic-development">Research</a></li>
+											<li><a href="https://www.csulb.edu/academic-affairs/academic-affairs-calendar?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Academic Calendar</a></li>
+											<li><a href="http://www.ccpe.csulb.edu/international/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">International Education</a></li>
+											<li><a href="https://www.csulb.edu/university-library?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Library</a></li>
+											<li><a href="https://www.csulb.edu/graduate-studies/graduate-studies">Graduate Studies</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/student-life" class="menu-heading">Campus Life</a></h3>
+										<ul class="menu">
+											<li><a href="http://www.longbeachstate.com/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Athletics</a></li>
+											<li><a href="https://www.csulb.edu/centers-organizations?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Centers &amp; Organizations</a></li>
+											<li><a href="https://www.csulb.edu/commencement" class="menu__link menu__link" tabindex="0">Commencement</a></li>
+											<li><a href="http://specialevents.csulb.edu/MasterCalendar/MasterCalendar.aspx?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Events</a></li>
+											<li><a href="https://www.csulb.edu/student-life" class="menu__link menu__link" tabindex="0">Housing</a></li>
+											<li><a href="https://www.csulb.edu/housing">Student Life</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/about-csulb" class="menu-heading">About</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/about-csulb?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">About Us</a></li>
+											<li><a href="https://www.csulb.edu/academic-affairs/program-review-and-assessment/wscuc/wscuc-accreditation">Accreditation</a></li>
+											<li><a href="https://www.csulb.edu/student-records/tuition-and-fees?utm_source=website&utm_medium=other&utm_content=menulink&utm_campaign=JumboMenu">Tuition and Fees</a></li>
+											<li><a href="https://www.csulb.edu/explore?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Explore</a></li>
+											<li><a href="https://www.csulb.edu/maps?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Parking & Maps</a></li>
+											<li><a href="https://www.csulb.edu/employment?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Careers with CSULB</a></li>
+
+
+										</ul>
+									</div><!-- end inner row -->
+									<div class="col-sm-4">
+										<h3><a href="http://web.csulb.edu/alumni/" class="menu-heading"><span class=" sr-only">C S U L B</span> Alumni</a></h3>
+										<ul class="menu">
+											<li><a href="https://www.csulb.edu/alumni?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Alumni Home</a></li>
+											<li><a href="https://www.csulb.edu/alumni/volunteers?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Alumni Volunteering</a></li>
+											<li><a href="https://giveto.csulb.edu/?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu))/">Alumni Giving</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<h3><a href="https://www.csulb.edu/menu/administration?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu?" class="menu-heading">Divisions</a></h3>
+										<ul class="menu menu-no-border">
+											<li><a href="https://www.csulb.edu/office-of-the-president?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Office of the President</a></li>
+											<li><a href="https://www.csulb.edu/office-of-the-provost">Office of the Provost</a></li>
+											<li><a href="https://www.csulb.edu/administration-finance?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Administration & Finance</a></li>
+											<li><a href="https://www.csulb.edu/students?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Student Affairs</a></li>
+											<li><a href="https://www.csulb.edu/university-relations-and-development">University Relations & Development</a></li>
+											<li><a href="https://www.csulb.edu/information-technology">Information Technology</a></li>
+
+										</ul>
+									</div>
+
+								</div>
+							</div>
+							<!-- end outer row -->
+						</div>
+						</div>
+						<div class="col-sm-12 edit1">
+							<div class="row">
+								<!-- <div class="col-sm-3 two-one hidden">
+									<div class="edit3 row">
+										<ul class="menu social-connection col-md-6 connect-app-icons menu-social-first-col">
+
+
+                                                <li><a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a></li>
+                                       			<li><a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a></li>
+
+											</ul>
+											<ul class="menu social-connection col-md-6 connect-app-icons menu-social-second-col">
+                                                <li><a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a></li>
+                                       			<li><a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a></li>
+											</ul>
+
+									</div>
+								</div> -->
+								<div class="col-sm-9 one-one row-margin-top">
+								<h3  tabindex="-1" style="width:90px;" class="menu-heading" id="skip_to_resources">RESOURCES</h3>
+								<div class="edit2 row">
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://sso.csulb.edu/">My CSULB</a></li>
+												<li><a href="https://bbcsulb.desire2learn.com/">BeachBoard</a></li>
+												<li><a href="https://www.csulb.edu/directory">Campus Directory</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://mail.csulb.edu/">Email</a></li>
+												<li><a href="https://www.csulb.edu/admissions">Admissions</a></li>
+												<li><a href="https://www.csulb.edu/enrollment-services">Enrollment Services</a></li>
+
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://www.csulb.edu/financial-aid?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Financial Aid</a></li>
+												<li><a href="https://www.csulb.edu/student-records/schedule-of-classes?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Schedule of Classes</a></li>
+												<li><a href="https://www.csulb.edu/student-records">Student Records</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-3">
+											<ul class="menu menu-no-border">
+												<li><a href="https://www.csulb.edu/49er-shops-at-the-beach">49er Shops</a></li>
+												<li><a href="https://www.csulb.edu/49er-foundation">49er Foundation</a></li>
+												<li><a id="last-item-header" href="https://www.csulb.edu/help?utm_source=website&utm_medium=homepage&utm_content=menulink&utm_campaign=JumboMenu">Help</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+					<div id="vertical-menu"  tabindex="0">
+
+						<div id="header-menu-container" class="panel">
+							<ul id="root-menu">
+								<li>
+								<h3 class="back-to-main-menu" tabindex="0"><span class="glyphicon glyphicon-menu-left">&nbsp; </span>Back</h3>
+								</li>
+								<li>
+									<h3 tabindex="0">ACADEMICS</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/academic-affairs/menu/academics/colleges-departments">Colleges &amp; Degrees</a></li>
+										<li><a href="https://www.csulb.edu/office-of-research-and-economic-development">Research</a></li>
+										<li><a href="https://www.csulb.edu/academic-affairs/academic-affairs-calendar">Academic Calendar</a></li>
+										<li><a href="http://www.ccpe.csulb.edu/international">International Education</a></li>
+										<li><a href="https://www.csulb.edu/university-library">Library</a></li>
+										<li><a href="https://www.csulb.edu/graduate-studies/graduate-studies">Graduate Studies</a></li>
+									</ul>
+								</li>
+								<!-- we will keep this LI open by default -->
+								<li>
+									<h3 tabindex="0">CAMPUS LIFE</h3>
+									<ul>
+										<li><a href="http://www.longbeachstate.com/">Athletics</a></li>
+										<li><a href="https://www.csulb.edu/centers-organizations">Centers &amp; Organizations</a></li>
+										<li><a href="https://www.csulb.edu/commencement">Commencement</a></li>
+										<li><a href="http://specialevents.csulb.edu/MasterCalendar/MasterCalendar.aspx">Events</a></li>
+										<li><a href="https://www.csulb.edu/student-life">Housing</a></li>
+										<li><a href="https://www.csulb.edu/housing">Student Life</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">ABOUT</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/about-csulb">About Us</a></li>
+										<li><a href="https://www.csulb.edu/academic-affairs/program-review-and-assessment/wscuc/wscuc-accreditation">Accreditation</a></li>
+										<li><a href="https://www.csulb.edu/student-records/tuition-and-fees">Tuition and Fees</a></li>
+										<li><a href="https://www.csulb.edu/explore">Explore</a></li>
+										<li><a href="https://www.csulb.edu/maps">Parking & Maps</a></li>
+										<li><a href="https://www.csulb.edu/employment">Careers with CSULB</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">ALUMNI</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/alumni">Alumni Home</a></li>
+										<li><a href="https://www.csulb.edu/alumni/volunteers">Alumni Volunteering</a></li>
+										<li><a href="https://giveto.csulb.edu/">Alumni Giving</a></li>
+									</ul>
+								</li>
+								<li>
+									<h3 tabindex="0">DIVISIONS</h3>
+									<ul>
+										<li><a href="https://www.csulb.edu/office-of-the-president">Office of the President</a></li>
+										<li><a href="https://www.csulb.edu/office-of-the-provost">Office of the Provost</a></li>
+										<li><a href="https://www.csulb.edu/administration-finance">Administration & Finance</a></li>
+										<li><a href="https://www.csulb.edu/students">Student Affairs</a></li>
+										<li><a href="https://www.csulb.edu/university-relations-and-development">University Relations & Development</a></li>
+										<li><a href="https://www.csulb.edu/information-technology">Information Technology</a></li>
+									</ul>
+								</li>
+								<!-- <li>
+									<h3 tabindex="0">SOCIAL MEDIA</h3>
+									<ul>
+										<li><a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a></li>
+                                        <li><a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a></li>
+                                        <li><a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a></li>
+                                        <li><a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a></li>
+									</ul>
+								</li> -->
+                <li>
+									<h3 tabindex="0">RESOURCES</h3>
+									<ul>
+										<li><a href="https://sso.csulb.edu/">My CSULB</a></li>
+										<li><a href="https://bbcsulb.desire2learn.com/">BeachBoard</a></li>
+										<li><a href="https://www.csulb.edu/directory">Campus Directory</a></li>
+										<li><a href="https://mail.csulb.edu/">Email</a></li>
+										<li><a href="https://www.csulb.edu/admissions">Admissions</a></li>
+										<li><a href="https://www.csulb.edu/enrollment-services">Enrollment Services</a></li>
+										<li><a href="https://www.csulb.edu/financial-aid">Financial Aid</a></li>
+										<li><a href="https://www.csulb.edu/student-records/schedule-of-classes">Schedule of Classes</a></li>
+										<li><a href="https://www.csulb.edu/student-records">Student Records</a></li>
+										<li><a href="https://www.csulb.edu/49er-shops-at-the-beach">49er Shops</a></li>
+										<li><a href="https://www.csulb.edu/49er-foundation">49er Foundation</a></li>
+										<li><a id="last-item-header" href="https://www.csulb.edu/help">Help</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+			</nav>
+		</div>
+
+						<div class="banner" aria-label="banner">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12 bgimage"><img src="https://www.csulb.edu/sites/default/files/images/banner_financialaid_students.jpg" alt="University Banner">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="page" data-scroll-speed="2">
+							
+							<div class="main-content">
+								<div class="container page-content">
+									<div class="row">
+										
+										
+										
+										<!-- content column -->
+										<div id="center-column" class="col-md-12 .col-xs-12 col-sm-12">
+											<div id="skip_content" class="skip_content" tabindex="-1"></div>
+											<div class="bs-example" role="navigation" aria-label="breadcrumb">
+												<ul class="breadcrumb">
+													<li><a href="https://www.csulb.edu/">Home</a></li>
+													<li class="crumbs-separator"></li>
+													<li><a href="index.html" id="current_soc">Schedule of Classes</a></li>
+													
+												</ul>
+											</div>
+											<h1 class="socheader">Schedule of Classes</h1>
+<h1>Spring 2026</h1><p class="update">Class offerings as of: JANUARY 28, 2026</p><div id="external_links" class="hideFromPrint">
+  <div class="register">
+    <script type="text/javascript"> writeLink("/depts/enrollment/registration/class_schedule/how_to_register.html","Register Here"); </script>
+	<noscript><p><a href="/depts/enrollment/registration/class_schedule/how_to_register.html" target="_new"><span>Register Here</span></a></p></noscript>
+  </div>
+  <div class="textbooks"><a href="http://csulb.verbacompare.com/" target="_new"><span>Textbook Information</span></a></div>
+</div>
+
+<div id="pagenav"><ul>
+<li id="browseBySubject"><a href="../By_Subject/index.html"><span>By Subject</span></a></li>
+<li id="browseByCollege"><a href="index.html" class="activeTab"><span>By College</span></a></li>
+<li id="browseByGE"><a href="../By_GE_Requirement/index.html"><span>By GE Requirement</span></a></li>
+</ul></div><div id="pageContent">
+<div class="indexHeader"><h2>College of Liberal Arts</h2></div>
+<div class="subjectContainer"><div class="header"><h2 class="departmentTitle">Translation Studies - (TRST)</h2><div class="globalNote"><p> </p></div></div>
+<div class="session">
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 201</span> - <span class="courseTitle">MEANING IN TRANSIT</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 3B (C2)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5272</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>MW</td><td>2-3:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>LA1-212</td><td>Balzani A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>5274</td><td><div class="dot"><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></div></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>TuTh</td><td>2-3:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>LA1-212</td><td>Taylor J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 301</span> - <span class="courseTitle">TRANS:ETHICS, THEORY, PRACTICE</span></h4><span class="units">3 Units</span>
+<span class="courseInfo">GE: 4UD (UDD)</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5273</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>MW</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>LA1-212</td><td>Tatro J</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+<tr><th scope="row">02</th><td>6292</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>TuTh</td><td>3:30-4:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>LA1-212</td><td>Meade A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 400</span> - <span class="courseTitle">INDEPENDENT LANGUAGE STUDY</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5966</td><td></td><td></td><td><a href="#note1">1,3,305</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Staff</td><td>Department Consent Required<br>Class instruction is: Asynch. Online-No Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 401</span> - <span class="courseTitle">TRANSLATION WORKSHOP</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>5965</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>SEM</td><td>Tu</td><td>5-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>LA1-212</td><td>Balzani A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 465</span> - <span class="courseTitle">COMMUNITY INTERPRETING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>10169</td><td></td><td></td><td><a href="#note1">1,13,309</a></td><td>LEC</td><td>Tu</td><td>12-1:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Ziamandanis C</td><td>Class instruction is: Online - Mixed Meet Times.</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Ziamandanis C</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 499</span> - <span class="courseTitle">DIRECTED STUDY</span></h4><span class="units">1-3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>8013</td><td></td><td></td><td><a href="#note1">305,1,3</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Asynch. Online-No Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 565</span> - <span class="courseTitle">COMMUNITY INTERPRETING</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>10170</td><td></td><td></td><td><a href="#note1">1,13,309</a></td><td>LEC</td><td>Tu</td><td>12-1:15PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Ziamandanis C</td><td>Class instruction is: Online - Mixed Meet Times.</td></tr>
+<tr><th scope="row">01</th><td></td><td></td><td></td><td></td><td></td><td>NA</td><td>NA</td><td></td><td>ONLINE-ONLY</td><td>Ziamandanis C</td><td>additional meeting detail</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 599</span> - <span class="courseTitle">DIRECTED STUDY</span></h4><span class="units">1-3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>9046</td><td></td><td></td><td><a href="#note1">1,3,305</a></td><td>SUP</td><td>TBA</td><td>NA</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>ONLINE-ONLY</td><td>Staff</td><td>Instructor Consent Required<br>Class instruction is: Asynch. Online-No Meet Times.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+<div class="courseBlock"><div class="courseHeader"><h4><span class="courseCode">TRST 696</span> - <span class="courseTitle">RESEARCH MTHDS FOR TRANSLATORS</span></h4><span class="units">3 Units</span>
+<div class="clearit"></div></div>
+<table class="sectionTable"><tr><th scope="col">SEC.</th><th scope="col">CLASS #</th><th scope="col">NO MATERIAL <br/> COST </th><th scope="col">RESERVE <br/> CAPACITY </th><th scope="col">CLASS NOTES</th><th scope="col">TYPE</th><th scope="col">DAYS</th><th scope="col">TIME</th><th scope="col">OPEN SEATS <br/> as of 01/28 05:02:07</th><th scope="col">LOCATION</th><th scope="col">INSTRUCTOR</th><th scope="col">COMMENT</th></tr>
+<tr><th scope="row">01</th><td>6713</td><td></td><td></td><td><a href="#note1">1,310</a></td><td>LEC</td><td>W</td><td>5-7:45PM</td><td><div class="dot"><img src="https://web.csulb.edu/depts/enrollment/registration/assets/green_dot.png" width="16" height="16" alt="Seats available" title="Seats available" /></div></td><td>LA1-212</td><td>Meade A</td><td>Class instruction is: Face to Face - On Campus.</td></tr>
+</table>
+</div><div class="toplink"><div class="gototop"><a class="gotop" href="#" onclick="MGJS.goTop();return false;"><img 
+src="https://www.csulb.edu/misc/depot/assets/layout/layout_top_arrow.gif" alt="Back to top" 
+width="17" height="8" /></a></div></div>
+</div>
+<div class="notesBlock"><h2 class="notesTitle"><a id="note1"></a>Class Notes for Translation Studies</h2><table class="classScheduleNotes"><tr><th scope="col" >Number</th><th scope="col">Note</th></tr><tr><td><a href="https://www.csulb.edu/student-records/reserved-seats-reserve-capacity-faqs" border=0><img src="https://www.csulb.edu/sites/default/files/u33991/reserve_capacity_icon_2.png" width="55" height="55" alt="Reserve Capacity" title="Reserve Capacity" /></a></td><td>Reserve Capacity - Reserved seats (AKA reserve capacity) is a new functionality added to the registration system that can save a certain number of seats for a specific group of students.</td></tr><tr><td><img src="https://www.csulb.edu/sites/default/files/images/no_cost_black_and_gold_sm.png" alt="Zero Cost Course Materials" title="Zero Cost Course Materials" /></td><td>Zero Cost Course Materials - California Community Colleges and California State Universities now include a no cost symbol in the online campus course schedule that exclusively use digital course materials that are free of charge to students and therefore not required to be purchased.</td></tr>
+<tr><th scope="row">1</th><td><p>Prerequisite and/or co-requisite - see University Catalog.</p></td></tr>
+<tr><th scope="row">3</th><td><p>Work agreement necessary - inquire department office.</p></td></tr>
+<tr><th scope="row">13</th><td><p>Double numbered course.  400 level/undergraduates; 500 level/graduates.</p></td></tr>
+<tr><th scope="row">305</th><td><p>Online Asynchronous Instruction: instructor and students participate at different times; no set schedule for face-to-face or synchronous online meetings; check course syllabus for details.</p></td></tr>
+<tr><th scope="row">309</th><td><p>Online Mixed Meeting (Synchronous and Asynchronous) Instruction: Instructor and students participate online at the same time on a set schedule, and online at different times. Check course syllabus for details. Camera use may be required for synchronous online courses. Student in need of appropriate technology resources should contact ATS-help@csulb.edu</p></td></tr>
+<tr><th scope="row">310</th><td><p>Face-to-Face On-Campus Instruction: Face-to-face instruction will take place in a classroom on campus. Check course syllabus for details.</p></td></tr>
+</table></div>
+</div>
+</div></div></div></div></div>
+<footer class="footer">
+		  <div class="container">
+			<div class="col-sm-12 footer-columns" role="navigation" aria-label="footer-navigation">
+				<div class="row">
+					<div class="col-sm-2 three-footer-column">
+					<h3 class="menu-footer-heading">SERVICES</h3>
+						<ul class="menu-footer">
+							<li><a href="http://emergency.csulb.edu/">Emergency Information</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/caps/crisis.htm">Crisis Assistance</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/cares/">CARES Team</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/ati/">Accessibility</a></li>
+							<li><a href="http://web.csulb.edu/divisions/students/shs/">Student Health Center</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 three-footer-column">
+						<div class="row footer-border">
+						<h3 class="menu-footer-heading">Colleges</h3>
+							<div class="col-sm-6 footer-two-one">
+								<ul class="menu-footer" style="margin-right: 10px;">
+									<li><a href="http://web.csulb.edu/colleges/cota/">The Arts</a></li>
+									<li><a href="http://www.ced.csulb.edu/">Education</a></li>
+									<li><a href="http://web.csulb.edu/colleges/cba/">Business Administration</a></li>
+									<li><a href="http://www.ccpe.csulb.edu/ContinuingEd/default.aspx">Continuing &amp; Professional Education</a></li>
+									
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+										<li class="footer-single-column"><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+										<li class="footer-single-column"><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+									
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<ul class="menu-footer footer-double-column">
+									<li><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+									<li><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+									<li><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+									<li><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 three-footer-column">
+						<div class="row footer-border">
+						 <h3 class="menu-footer-heading">Additional Resources</h3>
+							<div class="col-sm-6 footer-two-one">
+								<ul class="menu-footer" style="margin-right: 10px;">
+									<li><a href="http://www.csulb.edu/about/">About CSULB</a></li>
+									<li><a href="http://web.csulb.edu/employment/"><span class=" sr-only">University</span> Careers</a></li>
+									<li><a href="http://daf.csulb.edu/offices/ppfm/police/">University Police</a></li>
+									<li><a href="http://daf.csulb.edu/offices/its/catalog/directory.php">Campus Directory</a></li>
+								
+										<li class="footer-single-column"><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+										<li class="footer-single-column"><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+										<li class="footer-single-column"><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a></li>
+									
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<ul class="menu-footer footer-double-column">				
+									<li><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+									<li><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+									<li><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<ul class="menu-footer footer-border footer-without-h3">
+							<li><a href="http://www.calstate.edu/">CSU</a></li>
+							
+							<li><a href="http://www.csulb.edu/sitemap">Site Index</a></li>
+							<li><a href="/contact">Feedback </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- comment -->
+			<div class="panel-group footer-accordian" id="accordionFooter">
+				<!-- Panel  1 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseOne">
+							SERVICES   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">						
+								<li><a href="http://emergency.csulb.edu/">Emergency Information</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/caps/crisis.htm">Crisis Assistance</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/cares/">CARES Team</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/ati/">Accessibility</a></li>
+								<li><a href="http://web.csulb.edu/divisions/students/shs/">Student Health Center</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Panel  2 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseTwo">
+							Colleges   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseTwo" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">
+								<li><a href="http://web.csulb.edu/colleges/cota/">The Arts</a></li>
+								<li><a href="http://www.ced.csulb.edu/">Education</a></li>
+								<li><a href="http://web.csulb.edu/colleges/cba/">Business Administration</a></li>
+								<li><a href="http://www.ccpe.csulb.edu/ContinuingEd/default.aspx">Continuing &amp; Professional Education</a></li>
+								<li><a href="http://web.csulb.edu/colleges/coe/">Engineering</a></li>							
+								<li><a href="http://web.csulb.edu/colleges/cla/">Liberal Arts</a></li>							
+								<li><a href="http://web.csulb.edu/colleges/chhs/">Health &amp; Human Services</a></li>									
+								<li><a href="http://www.csulb.edu/colleges/cnsm/">Natural Sciences &amp; Mathematics</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Panel  2 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordionFooter" href="#FootercollapseThree">
+							Additional Resources   <span style="float: right" class=""></span>
+							</a>
+						</h4>
+					</div>
+					<div id="FootercollapseThree" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul class="menu-panel">
+								<li><a href="http://www.csulb.edu/about/">About CSULB</a></li>
+								<li><a id="last-item-header" href="http://web.csulb.edu/employment/"><span class=" sr-only">University</span> Careers</a></li>
+								<li><a href="http://daf.csulb.edu/offices/ppfm/police/">University Police</a></li>
+								<li><a href="http://daf.csulb.edu/offices/its/catalog/directory.php">Campus Directory</a></li>
+								<li><a href="http://www.csulb.edu/divisions/urad/papubs/media/">Media Relations</a></li>
+								<li><a href="http://www.csulb.edu/marketing-communications">Marketing &amp; Communications </a></li>
+								<li><a href="http://www.csulb.edu/feedback/"><span class="sr-only">C S U L B</span> Contact Us</a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container container-table">
+			<div class="row">
+				<div class="col-md-12 text-center footer-social-link">
+					<a class="fa fa-facebook" href="https://www.facebook.com/csulb" target="_blank"><span class="sr-only">C S U L B facebook</span> </a>
+                    <a class="fa fa-instagram" href="http://instagram.com/csulongbeach" target="_blank"><span class="sr-only">C S U L B Instagram</span> </a>
+                    <a class="fa fa-twitter" href="https://twitter.com/csulb" target="_blank"><span class="sr-only">C S U L B twitter</span> </a>
+                    <a class="fa fa-youtube-play" href="https://www.youtube.com/user/csulbwebteam" target="_blank"><span class="sr-only">C S U L B youtube</span> </a>
+				</div>
+			</div>
+				<div class="row">
+					<div class="text-center col-md-6 col-md-offset-3">
+						<p class="footer-logo"><a href="http://www.csulb.edu">California State University <strong>Long Beach</strong></a></p>
+						<div class="vcard">
+							<div class="adr">
+								<div class="street-address">1250 Bellflower Boulevard</div>
+								<div><span class="locality">Long Beach, California</span> <span class="postal-code">90840</span></div>
+							</div>
+							<div class="tel">562.985.4111</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		</footer>
+        </div>
+        <script>
+	$( document ).ready(function() {
+    console.log( "ready!" );
+	var pathname = window.location.pathname;
+	var mypart = pathname.split("/").reverse()[1];
+	
+	if(mypart == 'By_Subject'){
+	$("#browseBySubject").addClass("activeTab");
+	}
+	
+	if(mypart == 'By_College'){
+	$("#browseByCollege").addClass("activeTab");
+	}
+	
+	if(mypart == 'By_GE_Requirement'){
+	$("#browseByGE").addClass("activeTab");
+	}
+});
+
+
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+FREN 100A,Elementary French 1 for Spanish Speakers,4,,,Two semesters of college Spanish or 3 years of high school or be native or heritage speaker of Spanish,
+FREN 100B,Elementary French 2 for Spanish Speakers,4,,,FREN 100A ; or FREN 101A with 2 semesters of college Spanish or 3 years of high school Spanish; or be heritage or native speakers of Spanish,
+FREN 101,Fundamentals of French,6,,,,Any Foundation course
+FREN 101A,Elementary French 1,4,,,,Any Foundation course
+FREN 101B,Elementary French 2,4,,,,Any Foundation course
+FREN 200,Accelerated Intermediate French for Spanish Speakers,6,,,FREN 100B or FREN 101B or 3 years of high school French and 2 years of college Spanish or be native or heritage Spanish speaker,
+FREN 201,Accelerated Intermediate French,6,,,"FREN 101 , FREN 100B , or FREN 101B or a minimum of 3 years of high-school French",Any Foundation course
+FREN 201A,Intermediate French 1,4,,,"FREN 101B or three years of high school French or equivalent, GE Foundation requirement (or entering competency equivalent to FREN 101B and completion of concurrent enrollment in at least one Foundation course)",
+FREN 201B,Intermediate French 2,4,,,"FREN 201A or four years of high school French or equivalent, GE Foundation requirement (or entering competency equivalent to FREN 201A and completion or concurrent enrollment in at lest one Foundation course)",
+FREN 214,Intermediate Conversation,3,,,FREN 101B,
+FREN 240,Paris Past and Present,3,,,,One GE Foundation course
+FREN 312,French Composition in Context,3,,,"FREN 200, 201B or equivalent",
+FREN 312A,Advanced French I,3,,,Upper-division standing in French or equivalent,
+FREN 312B,Advanced French II,3,,,Upper-division standing in French or equivalent,
+FREN 314,Advanced Conversation,3,,,,FREN 312 or FREN 312A and FREN 312B or equivalent
+FREN 315,Introduction to Direct Translation French-English,3,,,,FREN 312 or instructor approval
+FREN 316,Introduction to Inverse Translation English-French,3,,,FREN 312,
+FREN 320,French for the Professions,3,,,,FREN 312 or FREN 312A and FREN 312B or equivalent
+FREN 333,Survey of French Literature I,4,,,Upper-division status in French,
+FREN 334,Survey of French Literature II,4,,,Upper-division status in French,
+FREN 335,Survey of French Literature I,3,,,Upper division standing in French,
+FREN 336,Survey of French Literature II,3,,,Upper division standing in French,
+FREN 337,Survey of French Lit III,3,,,Upper division standing in French,
+FREN 411,Exploring the Text,3,,,FREN 312 or FREN 312A and FREN 312B or equivalent,
+FREN 440,Modern French Culture and Society,3,,,Completion of at least 60 units Prerequisites: Score of 11 or higher on the GWAR Placement Examination or completion of the necessary portfolio course that is a prerequisite for a GWAR Writing Intensive Course,
+FREN 456,French Cinema,3,,,Completion of GE Foundation courses; upper-division standing,
+FREN 460,The Art of Translation,3,,,Upper-division or graduate standing,
+FREN 480,Senior Seminar: Self and Society,3,,,"Two 400-level French courses, or consent of instructor",
+FREN 494,Internship in French,,,,Consent of instructor and department chair,
+FREN 499,Directed Studies,,,,Consent of instructor and department chair,
+FREN 560,The Art of Translation,3,,,Upper-division or graduate standing,
+FREN 562,Reading French Women Writers,3,,,Consent of instructor,
+FREN 571,French Literature of the Renaissance,3,,,Consent of instructor,
+FREN 572,French Literature of the Seventeenth Century,3,,,Consent of instructor,
+FREN 574,The Age of Enlightenment,3,,,Consent of instructor,
+FREN 575,Selected Topics - Seminar in Francophone Literature,3,,,Consent of instructor,
+FREN 577,French Literature of the Nineteenth Century,3,,,Consent of instructor,
+FREN 579,French Literature of the Twentieth Century,3,,,Consent of instructor,
+FREN 580,Self and Society,3,,,"Two 400-level French courses, or consent of instructor",
+FREN 599,Directed Studies,,,,Graduate Standing and consent of instructor and department chair,
+FREN 604,Selected Topics - Seminar in a Century of French Literature,3,,,Corresponding 400/500-level century survey course or consent of instructor,
+FREN 604F,Selected Topics - French Literature Seminar: 19th-20th Century,3,,,Corresponding 400/500-level century survey course or consent of instructor,
+FREN 688,Seminar in French Literature or Culture,3,,,Graduate standing in French,
+FREN 697,Directed Research,,,,Consent of department chair,
+FREN 698,Thesis,3,,,Consent of Graduate Advisor,

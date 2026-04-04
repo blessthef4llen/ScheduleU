@@ -1,0 +1,31 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+CEM 200,Concrete Construction,1,,,CEM 125 with a grade of “C” or better,CEM 200L
+CEM 200L,Concrete Construction Laboratory,1,,,,CEM 200
+CEM 202,Probability and Statistics for Construction Engineering Management,2,,,High School Algebra,
+CEM 204,Applied Mechanics-Statics,3,,,MATH 122 and PHYS 100A or PHYS 151 all with a grade of “C” or better,
+CEM 206,Trends in Construction Engineering Management,2,,,"C E 101 , CEM 121 and CEM 125 all with a grade of “C” or better",
+CEM 225,Residential and Light Commercial Construction Practices and Estimating,3,,,"CEM 121 , CEM 125 with a grade of “C” or better",
+CEM 304,Applied Mechanics Strength of Materials,2,,,CEM 204 with a grade of “C” or better,
+CEM 315,Construction Safety,2,,,CEM 225 with a grade of “C” or better,
+CEM 324,"Commercial, Institutional and Industrial Construction Practices and Estimating",3,,,,"CEM 315 Fundamental of commercial construction, including building layout, shallow and deep foundations, introduction to formwork systems, high strength, heavy and light weigh concrete, framing, flooring, and roofing systems, construction and expansion joints, masonry, and steel construction"
+CEM 335,Soil Mechanics Technology,2,,,"CEM 200, CEM 200L, and CEM 304 all with a grade of “C” or better",CEM 335L
+CEM 335L,Soil Mechanics Technology Laboratory,1,,,"CEM 200, CEM 200L, and CEM 304 all with a grade of “C” or better",CEM 335
+CEM 373,Fundamentals of Alternative Project Delivery,3,,,"CEM 315 General overview of the attributes of all major project delivery systems, procurement methodologies and contracting approaches",
+CEM 385,"Mechanical, Electrical, Plumbing Equipment for Buildings",3,,,CEM 324,CEM 324
+CEM 405,Construction Management Problem Solving,1,,,Instructor consent,
+CEM 409,Directed Studies in Construction Engineering Management,3,,,Senior standing in CEM or consent of instructor,
+CEM 415,Job Site Management Problem Solving,1,,,CEM 324 with a grade of “C” or better,
+CEM 421,"Construction Planning, Scheduling, and Control",3,,,"C E 406 , CEM 324 all with a grade of “C” or better",
+CEM 424,Earthwork and Civil Works Construction Practices,3,,,"CEM 324 , C E 406 all with a grade of “C” or better",
+CEM 426,Business and Construction Law,3,,,CEM 324 ; BLAW 220 or BLAW 320 all with a grade of “C” or better,
+CEM 429,Advanced Estimating and Bidding,3,,,"CEM 206 , CEM 315 , CEM 324 , and CEM 385 all with a grade of “C” or better",
+CEM 432,Facility Administration,3,,,CEM 421 with a grade of “C” or better,
+CEM 437,Structural Building Systems,3,,,CEM 304 with a grade of “C” or better,
+CEM 473,Principles of Design-Build,3,,,CEM 373,
+CEM 476,Heavy Civil Construction Principles and Practices,3,,,,CEM 424 Comprehensive coverage of the construction principles and practices utilized in current heavy civil industry
+CEM 481,Sustainability in the Built Environment,3,,,CEM 324 with a grade of “C” or better,CEM 429
+CEM 482,Sustainability in Infrastructure Systems,3,,,,CEM 429
+CEM 483,Virtual Design and Construction,3,,,CEM 206 with a grade of “C” or better,CEM 421 or CEM 429
+CEM 485,CEM Senior Seminar,3,,,CEM 429 with a grade of “C” or better or consent of instructor,
+CEM 486,Infrastructure Management,3,,,,CEM 424
+CEM 490,Construction Project Management,3,,,"CEM 335 , CEM 335L , CEM 373 , CEM 421, CEM 424 and CEM 429 with a grade of “C” or better",

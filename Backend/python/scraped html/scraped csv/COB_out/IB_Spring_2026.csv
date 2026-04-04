@@ -1,0 +1,14 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,01,8218,Spring_2026|IB 300|01|8218,FALSE,\N,,LEC,M,7-9:45PM,,COB-140,Macaulay C,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,01,\N,Spring_2026|IB 300|01|NOCLASS|cc2c02ac4e0baca9,FALSE,\N,,,M,7-9:45PM,,ONLINE-ONLY,Macaulay C,additional meeting detail
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,02,8219,Spring_2026|IB 300|02|8219,FALSE,\N,,LEC,MW,12:30-1:45PM,,COB-139A,Acc-Nikmehr N,Class instruction is: Face to Face - On Campus.
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,03,8220,Spring_2026|IB 300|03|8220,FALSE,\N,,LEC,F,10-12:45PM,,COB-139,Hernandez W,Class instruction is: Face to Face - On Campus.
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,04,8221,Spring_2026|IB 300|04|8221,FALSE,\N,,LEC,TuTh,2-3:15PM,,COB-140,Barrulas Yefremian C,Class instruction is: Face to Face - On Campus.
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,05,12271,Spring_2026|IB 300|05|12271,FALSE,\N,311,LEC,Th,4-6:45PM,,COB-140A,Chi R,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,05,\N,Spring_2026|IB 300|05|NOCLASS|24b9f44b799aefb8,FALSE,\N,,,Th,4-6:45PM,,ONLINE-ONLY,Chi R,additional meeting detail
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,07,9895,Spring_2026|IB 300|07|9895,FALSE,\N,,LEC,TuTh,11-12:15PM,,COB-140,Shin H,Class instruction is: Face to Face - On Campus.
+Spring_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,09,12432,Spring_2026|IB 300|09|12432,FALSE,\N,310,LEC,TuTh,2-3:15PM,,COB-112,Del Rivero G,Class instruction is: Face to Face - On Campus.
+Spring_2026,IB,494A,IB 494A,SHORT-TERM STUDY ABROAD-ASIA,3,,01,8250,Spring_2026|IB 494A|01|8250,FALSE,\N,,SEM,W,7-9:45PM,,COB-114,Chen M,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,IB,494A,IB 494A,SHORT-TERM STUDY ABROAD-ASIA,3,,01,\N,Spring_2026|IB 494A|01|NOCLASS|6920e03ecbc8227f,FALSE,\N,,,W,7-9:45PM,,ONLINE-ONLY,Chen M,additional meeting detail
+Spring_2026,IB,494B,IB 494B,SHORT-TERM STUDY ABROAD-EUROPE,3,,01,8466,Spring_2026|IB 494B|01|8466,FALSE,\N,,SEM,Tu,4-6:45PM,,COB-216,Barrulas Yefremian C,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,IB,494B,IB 494B,SHORT-TERM STUDY ABROAD-EUROPE,3,,01,\N,Spring_2026|IB 494B|01|NOCLASS|bdafc7772602c807,FALSE,\N,,,Tu,4-6:45PM,,ONLINE-ONLY,Barrulas Yefremian C,additional meeting detail

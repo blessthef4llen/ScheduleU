@@ -1,0 +1,9 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,KOR,101,KOR 101,FUNDAMENTALS OF KOREAN,4,GE: 3B (C2),01,5093,Spring_2026|KOR 101|01|5093,FALSE,\N,311,LEC,Th,12-1:50PM,available,PSY-152,Lee H,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,KOR,101,KOR 101,FUNDAMENTALS OF KOREAN,4,GE: 3B (C2),01,\N,Spring_2026|KOR 101|01|NOCLASS|87329c8d6a21d97e,FALSE,\N,,,Tu,12-1:50PM,,ONLINE-ONLY,Lee H,additional meeting detail
+Spring_2026,KOR,101,KOR 101,FUNDAMENTALS OF KOREAN,4,GE: 3B (C2),02,5990,Spring_2026|KOR 101|02|5990,FALSE,\N,311,LEC,Th,2-3:50PM,,PSY-152,Lee H,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,KOR,101,KOR 101,FUNDAMENTALS OF KOREAN,4,GE: 3B (C2),02,\N,Spring_2026|KOR 101|02|NOCLASS|816488a47ae3d5ee,FALSE,\N,,,Tu,2-3:50PM,,ONLINE-ONLY,Lee H,additional meeting detail
+Spring_2026,KOR,102,KOR 102,FUNDAMENTALS OF KOREAN,4,GE: 3B (C2),01,2474,Spring_2026|KOR 102|01|2474,FALSE,\N,311,LEC,W,1-2:50PM,available,SPA-108,Park J,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,KOR,102,KOR 102,FUNDAMENTALS OF KOREAN,4,GE: 3B (C2),01,\N,Spring_2026|KOR 102|01|NOCLASS|8a7a39b13f1689b4,FALSE,\N,,,M,1-2:50PM,,ONLINE-ONLY,Park J,additional meeting detail
+Spring_2026,KOR,102,KOR 102,FUNDAMENTALS OF KOREAN,4,GE: 3B (C2),02,3132,Spring_2026|KOR 102|02|3132,FALSE,\N,311,LEC,Tu,4-5:50PM,available,LA2-100,Park J,Class instruction is: Hybrid (Face to Face & Synch).
+Spring_2026,KOR,102,KOR 102,FUNDAMENTALS OF KOREAN,4,GE: 3B (C2),02,\N,Spring_2026|KOR 102|02|NOCLASS|a5524ebdd0afda77,FALSE,\N,,,Th,4-5:50PM,,ONLINE-ONLY,Park J,additional meeting detail

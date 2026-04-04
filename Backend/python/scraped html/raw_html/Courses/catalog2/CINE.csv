@@ -1,0 +1,69 @@
+course_code_full,course_title,units,course_info,class_notes_ref,prereq_course,coreq_courses
+CINE 101,Understanding Film,3,,,"Enrollment in, or completion of, at least one GE Foundation An introduction to the world of cinema that focuses on the fundamental vocabulary of film analysis, as well as the critical issues in and around cinema, including ideology, representation, genre, authorship, and media industries","Enrollment in, or completion of, at least one GE Foundation An introduction to the world of cinema that focuses on the fundamental vocabulary of film analysis, as well as the critical issues in and around cinema, including ideology, representation, genre, authorship, and media industries"
+CINE 170,On-Set Safety and Best Practices,3,,,CINE 100; CINE Pre-Major only,CINE 100; CINE Pre-Major only
+CINE 201,Film History I: Origins to 1960,3,,,Completion of GE Foundation Courses with a “C” or better,
+CINE 202,Film History II: 1960 to Present,3,,,CINE 101 or CINE 299 with a “C” or better; CINE 201 with a “C” or better; CINE Major or Pre-Major or CINE Minor only; Sophomore standing,
+CINE 205,Film History,3,,,"CINE 299 ; Cinematic Arts Pre-major, major, or minor status; English Communication (GE Area 1A) Foundation course; sophomore standing",
+CINE 206,History of Broadcasting,3,,,"CINE 299 ; CINE Pre-major, major, or minor status; English Communication (GE Area 1A) Foundation course; sophomore standing",
+CINE 207,Introduction to Screenwriting,3,,,CINE 101 or CINE 299 with a “C” or better; CINE 201 or CINE 205 with a “C” or better; CINE Major or Pre-Major or CINE Minor only; Sophomore standing,
+CINE 210,"Sight, Sound & Story",3,,,,CINE 170 or CINE 370 with a “C” or better and CINE 272 with a “C” or better; CINE Major or Pre-Major only; Sophomore standing
+CINE 220,The Visual Story,3,,,CINE 210 or CINE 208 with a “C” or better; CINE Major or Pre-Major only,CINE 170 or CINE 370 with a “C” or better; Sophomore standing
+CINE 272,Editing I Lab,1,,,,CINE 208 or CINE 210 with a “C” or better; CINE Major or Pre-Major only
+CINE 299,Media Aesthetics,3,,,"FEA Pre-major, major or minor status",
+CINE 300,Orientation to Cinematic Arts,2,,,"Enrollment in, or completion of, at least one GE Foundation; CINE Major / Pre-Major","Enrollment in, or completion of, at least one GE Foundation; CINE Major / Pre-Major"
+CINE 301,Critical Debates in Film and Media,3,,,CINE 101 or CINE 299 with a “C” or better; Junior or Senior standing,
+CINE 305,Production Workshop I,3,,,CINE 208 or CINE 210 with a “C” or better; CINE Major only; Junior or Senior standing,
+CINE 309,Production I: Cinematography,3,,,,CINE 208
+CINE 310,The World and Culture Through Film,3,,,CINE 201 or CINE 202 or CINE 205 with a “C” or better; CINE 101 or CINE 299 with a “C” or better; CINE Major or minor only; Junior or Senior standing,
+CINE 315,Digital Culture,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 322,Experimental Filmmaking,3,,,Major status or consent of instructor; CINE 208 or CINE 305 ; Junior standing Workshop in production of experimental films,
+CINE 323,Cinematic Lighting,4,,,CINE 208 or CINE 210 or CINE 220 with a “C” or better; CINE Cinematography sub-plan or CINE General Studies sub-plan only,CINE 170 or CINE 370 with a “C” or better
+CINE 327,Producing I,3,,,,CINE 305 or CINE 336 with a “C” or better; CINE Production Management sub-plan or CINE Producing sub-plan or CINE General Studies sub-plan; Junior or Senior standing
+CINE 328,Lighting,3,,,CINE 309 ; FEA Narrative Production option,
+CINE 336,Production II: Film Production,3,,,,CINE 328 ; FEA Narrative Production option only; Junior or Senior standing
+CINE 337,Digital Arts Production,3,,,CINE Postproduction sub-plan or CINE minor; Completion of GE Foundation courses; Junior or Senior standing,
+CINE 340,Production III: Advanced Production A,3,,,CINE 336 ; CINE Production & Directing sub-plan; Junior or Senior standing,
+CINE 344,Directing I,3,,,CINE 305 with a “C” or better; CINE Directing or CINE Postproduction or General Studies CINE sub-plan,
+CINE 345,Directing II,3,,,CINE 344 ; CINE Directing sub-plan,
+CINE 347,Introduction to Visual Effects,3,,,CINE 415 or CINE 272 with “C” or better; CINE Postproduction or General Studies CINE sub-plan; Junior or Senior standing,
+CINE 348,Acting for Filmmakers,3,,,CINE 202 and CINE 220 ; CINE Major only,CINE 305
+CINE 350,Hollywood Does Rome,3,,,CLSC 100 or CLSC 101 or CLSC 202 or consent of instructor,
+CINE 355,Introduction to Documentary Filmmaking,4,,,CINE 380 and CINE 374 with “C” or better; CINE Documentary Filmmaking or CINE General Studies sub-plan,CINE 380 and CINE 374 with “C” or better; CINE Documentary Filmmaking or CINE General Studies sub-plan
+CINE 362,Black Cinemas,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 363,Queer Film and Media,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 364,Cinemas of Rebellion and Resistance,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 370,On-Set Safety and Best Practices,3,,,CINE Majors only; Junior or Senior standing,CINE Majors only; Junior or Senior standing
+CINE 374,Editing Documentary,3,,,CINE 272 with “C” or better; CINE Documentary Filmmaking or PostProduction or CINE General Studies sub-plan,
+CINE 380,Documentary History and Theory,3,,,"CINE 101 or CINE 299 with a “C” or better, completion of at least 60 units",
+CINE 381,Directing the Documentary,3,,,,CINE 380 and CINE 415 ; FEA Creative Nonfiction Production sub-plan; Junior or Senior standing
+CINE 384,Film Festival Experience & Analysis,3,,,CINE Documentary Filmmaking sub-plan; and consent of instructor,CINE 381
+CINE 385,Collaborative Script Development,3,,,CINE 305 with a “C” or better; CINE Screenwriting or CINE Directing sub-plan or CINE Producing sub-plan; Junior or Senior standing,
+CINE 395,Film Genres,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 416,Editing II,4,,,CINE 415 or CINE 272 with “C” or better; CINE Postproduction or CINE General Studies sub-plan; or consent of instructor,
+CINE 417,Editing III,4,,,CINE 416 with “C” or better; Postproduction sub- plan; Junior or Senior standing,
+CINE 418,Color Correction,3,,,CINE 415 or CINE 416 or CINE 323 with “C” or better,
+CINE 419,The Writers Room,3,,,CINE 409,
+CINE 420,Advanced Audio,3,,,CINE 320 with a “C” or better; CINE Posproduction sub-plan only; Junior or Senior standing,
+CINE 424,Production Workshop III,3,,,CINE 422 or CINE 416 ; CINE Postproduction sub-plan or CINE Directing sub-plan or CINE Producing sub-plan,
+CINE 425,Advanced Cinematography II,4,,,,CINE 422
+CINE 426,Critical Television Studies and Culture,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 427,Producing II: Producing Feature Films,3,,,CINE 327 ; CINE major or minor; Junior or Senior standing,
+CINE 428,Korean Cinema,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 429,Japanese Cinema,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 437,3D Computer Generated Imagery,3,,,CINE 337 or CINE 347 with a “C” or better,
+CINE 438,Television Studio Directing,3,,,CINE 338 ; FEA Broadcast Production or FEA Production Management sub-plan or FEA minor; Junior or Senior standing,
+CINE 445,Cinema and Migration,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 452,Film and Media Theory,3,,,CINE 301 or CINE 310 with a ‘C’ or better; CINE Major only; Junior or Senior standing,
+CINE 453,Mind-Game Film,3,,,Completion of GE Foundation courses with “C” or better,
+CINE 454,Italian Cinema,3,,,Completion of GE Foundation courses; upper-division standing,
+CINE 455,Intermediate Documentary Filmmaking,4,,,"CINE 380 , CINE 374 , and CINE 355 , each with ‘C’ or Better; CINE Documentary Filmmaking sub-plan",
+CINE 456,French Cinema,3,,,Completion of GE Foundation courses; upper-division standing,
+CINE 457,German Cinema,3,,,Completion of GE Foundation courses; upper-division standing,
+CINE 458,Russian Cinema,3,,,Completion of GE Foundation courses; upper-division standing,
+CINE 460,Spanish Cinema,3,,,Completion of GE Foundation courses; upper-division standing,
+CINE 462,East Asian Cinemas,3,,,Completion of GE Foundation requirements; upper-division standing,
+CINE 463,Southeast Asian Cinemas,3,,,Completion of GE Foundation requirements; upper-division standing,
+CINE 465,Advanced Documentary Filmmaking,4,,,CINE 455 with ‘C’ or Better; CINE Documentary Filmmaking sub-plan,"CINE 307 , or CINE 323 , or CINE 416"
+CINE 471,Senior Seminar in Critical Studies,3,,,CINE 452 with a ‘C’ or better; CINE Critical Studies sub-plan only; Senior standing,
+CINE 486,Alternative Media,3,,,GWAR portfolio course or score of 11 or higher on the GWAR Placement Exam,
+CINE 490,Special Topics in Cinematic Arts,3,,,"CINE major status, upper-division standing; department consent",
