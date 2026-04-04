@@ -18,6 +18,11 @@ const LINKS = [
     title: 'Profile',
     description: 'Update major and graduation year information.',
   },
+  {
+    href: '/transcript-import',
+    title: 'Transcript Import',
+    description: 'Upload a transcript PDF and extract completed courses for review.',
+  },
 ]
 
 export default function DashboardPage() {

@@ -1,7 +1,7 @@
 # API route dependencies.
 from __future__ import annotations
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, File, HTTPException, UploadFile
 
 from app.api.models import GenerateRequest, GenerateResponse
 from app.core.normalize import norm_course_code
@@ -12,10 +12,11 @@ from app.core.catalog_loader import load_catalog_from_supabase
 from app.core.catalog_merge import merge_catalog_into_dependency_model
 
 from app.api.term_models import TermScheduleRequest, TermScheduleResponse
+from app.api.transcript_models import TranscriptParseResponse
 from app.core.section_loader import load_section_options_for_courses
 from app.core.section_scheduler import pick_ranked_schedules
 from app.core.schedule_explainer import generate_schedule_benefits
-from app.core.normalize import norm_course_code
+from app.core.transcript_parser import parse_transcript_pdf
 
 from app.core.section_scheduler import parse_days, parse_time_range, conflicts
 
@@ -287,4 +288,36 @@ def term_schedule(req: TermScheduleRequest):
         generated_schedules=generated_schedules,
         unscheduled_courses=unscheduled,
         warnings=warnings,
+    )
+
+
+@router.post("/transcript/parse", response_model=TranscriptParseResponse)
+async def transcript_parse(file: UploadFile = File(...)):
+    filename = (file.filename or "").lower()
+    if not filename.endswith(".pdf"):
+        raise HTTPException(status_code=400, detail="Upload a PDF transcript.")
+
+    file_bytes = await file.read()
+    if not file_bytes:
+        raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+
+    known_courses = set(DEP_MODEL.courses.keys()) if DEP_MODEL is not None else set()
+    try:
+        parsed = parse_transcript_pdf(file_bytes, known_courses=known_courses)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=f"Failed to parse transcript PDF: {exc}") from exc
+
+    return TranscriptParseResponse(
+        student={
+            "name": parsed.student_name,
+            "student_id": parsed.student_id,
+        },
+        extracted_courses=parsed.courses,
+        grouped_by_term=parsed.grouped_by_term,
+        unmatched_lines=parsed.unmatched_lines,
+        warnings=parsed.warnings,
+        total_pages=parsed.total_pages,
+        extracted_text_chars=parsed.extracted_text_chars,
     )
