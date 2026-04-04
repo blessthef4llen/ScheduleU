@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
 import { supabase } from '@/utils/supabase'
 
 type CartRow = {
@@ -50,12 +51,17 @@ type ScheduleCandidate = {
 }
 
 const backendBaseUrl = process.env.NEXT_PUBLIC_SCHEDULER_API_URL ?? 'http://localhost:8000'
+type SemesterOption = {
+  label: string
+  table: string
+  disabled?: boolean
+}
 const SEMESTER_OPTIONS = [
   { label: 'Spring 2026', table: 'spring_2026' },
   { label: 'Summer 2026', table: 'summer_2026' },
   { label: 'Fall 2026', table: 'fall_2026', disabled: true },
   { label: 'Winter 2027', table: 'winter_2027', disabled: true },
-] as const
+] as const satisfies readonly SemesterOption[]
 const SUBJECT_OPTIONS = [
   'ACCT',
   'AFRS',
@@ -234,7 +240,7 @@ export default function ScheduleBuilderPage() {
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
   const [cartRows, setCartRows] = useState<CartRow[]>([])
-  const [selectedTermTable, setSelectedTermTable] = useState(SEMESTER_OPTIONS[0].table)
+  const [selectedTermTable, setSelectedTermTable] = useState<string>(SEMESTER_OPTIONS[0].table)
   const [result, setResult] = useState<TermScheduleResponse | null>(null)
   const [daysOffText, setDaysOffText] = useState('')
   const [earliestTime, setEarliestTime] = useState('')
@@ -590,11 +596,14 @@ export default function ScheduleBuilderPage() {
                 onChange={(e) => setSelectedTermTable(e.target.value)}
                 className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
               >
-                {SEMESTER_OPTIONS.map((option) => (
-                  <option key={option.table} value={option.table} disabled={option.disabled}>
-                    {option.label}{option.disabled ? ' (Coming Soon)' : ''}
+                {SEMESTER_OPTIONS.map((option) => {
+                  const disabled = 'disabled' in option ? Boolean(option.disabled) : false
+                  return (
+                  <option key={option.table} value={option.table} disabled={disabled}>
+                    {option.label}{disabled ? ' (Coming Soon)' : ''}
                   </option>
-                ))}
+                  )
+                })}
               </select>
             </div>
 
@@ -867,7 +876,12 @@ export default function ScheduleBuilderPage() {
                               key={`${section.section_id}-${idx}`}
                               className="rounded-xl border border-slate-100 bg-white px-2 py-1.5 text-slate-900"
                             >
-                              {meeting.day} {meeting.start}-{meeting.end} • {meeting.type ?? 'N/A'} • {meeting.location ?? 'N/A'} • {meeting.instructor ?? 'N/A'}
+                              <div>
+                                {meeting.day} {meeting.start}-{meeting.end} • {meeting.type ?? 'N/A'} • {meeting.location ?? 'N/A'} • {meeting.instructor ?? 'N/A'}
+                              </div>
+                              <div className="mt-1">
+                                <ProfessorRatingBadge instructor={meeting.instructor ?? 'N/A'} />
+                              </div>
                             </div>
                           ))}
                         </div>

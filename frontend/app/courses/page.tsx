@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { supabase } from '@/utils/supabase'
+import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
 import Link from 'next/link'
 
 type RawCourseRow = Record<string, unknown>
@@ -798,7 +799,7 @@ export default function CoursesPage() {
                             <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Days</p><p className="text-slate-900 break-words">{section.days}</p></div>
 
                             <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Units</p><p className="text-slate-900 break-words">{section.units}</p></div>
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Instructor</p><p className="text-slate-900 break-words">{section.instructor}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Instructor</p><p className="text-slate-900 break-words">{section.instructor}</p><div className="mt-1"><ProfessorRatingBadge instructor={section.instructor} /></div></div>
                             <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Time</p><p className="text-slate-900 break-words">{section.time}</p></div>
                           </div>
 

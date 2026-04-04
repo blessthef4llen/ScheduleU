@@ -1,9 +1,10 @@
 # API route dependencies.
 from __future__ import annotations
 
-from fastapi import APIRouter, File, HTTPException, UploadFile
+from fastapi import APIRouter, File, HTTPException, Query, UploadFile
 
 from app.api.models import GenerateRequest, GenerateResponse
+from app.api.professor_models import ProfessorRatingLookupResponse
 from app.core.normalize import norm_course_code
 from app.core.scheduler_engine import generate_plan
 
@@ -16,6 +17,7 @@ from app.api.transcript_models import TranscriptParseResponse
 from app.core.section_loader import load_section_options_for_courses
 from app.core.section_scheduler import pick_ranked_schedules
 from app.core.schedule_explainer import generate_schedule_benefits
+from app.core.rmp_client import lookup_professor_rating
 from app.core.transcript_parser import parse_transcript_pdf
 
 from app.core.section_scheduler import parse_days, parse_time_range, conflicts
@@ -55,6 +57,11 @@ def health():
         "courses_in_model": len(DEP_MODEL.courses),
         "merge_summary": (MERGE_SUMMARY.__dict__ if MERGE_SUMMARY else None),
     }
+
+
+@router.get("/professors/rating", response_model=ProfessorRatingLookupResponse)
+def professor_rating(name: str = Query(..., min_length=1)):
+    return lookup_professor_rating(name)
 
 
 @router.post("/schedule/generate", response_model=GenerateResponse)
