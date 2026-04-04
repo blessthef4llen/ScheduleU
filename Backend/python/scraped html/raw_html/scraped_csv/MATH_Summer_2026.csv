@@ -1,0 +1,6 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,MATH,122,MATH 122,CALCULUS I,4,GE: 2 (B4),01,10019,Summer_2026|MATH 122|01|10019,FALSE,\N,"1,27,136,310",SEM,MTuWThF,9:30-11:10AM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,MATH,122,MATH 122,CALCULUS I,4,GE: 2 (B4),02,10020,Summer_2026|MATH 122|02|10020,FALSE,\N,"27,310",ACT,MTuWThF,11:20-12:25PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,MATH,370A,MATH 370A,APPLIED MATH I,3,,01,10359,Summer_2026|MATH 370A|01|10359,FALSE,\N,"1,27,136,310",SEM,MWTh,5-7:40PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,MATH,380,MATH 380,PROBABILITY AND STATISTICS,3,,01,10357,Summer_2026|MATH 380|01|10357,FALSE,\N,310,SEM,MWTh,5-7:40PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,MATH,698,MATH 698,THESIS OR PROJECT,1,,01,10457,Summer_2026|MATH 698|01|10457,FALSE,\N,,SUP,TBA,NA,available,NA,Staff,Class instruction is: Face to Face - On Campus.

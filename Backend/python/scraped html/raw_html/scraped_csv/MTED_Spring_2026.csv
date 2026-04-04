@@ -1,0 +1,22 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,MTED,90,MTED 90,FOUNDATIONS REAL NUMBER,1,,02,9179,Spring_2026|MTED 90|02|9179,FALSE,\N,,ACT,W,12-1:50PM,available,LA5-257,Benken B,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,110,MTED 110,REAL NUM SYS ELEM MID SCH TCHR,3,GE: 2 (B4),01,5697,Spring_2026|MTED 110|01|5697,FALSE,\N,,SEM,Tu,10-11:50AM,,LA5-257,Amadi L,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,110,MTED 110,REAL NUM SYS ELEM MID SCH TCHR,3,GE: 2 (B4),02,5698,Spring_2026|MTED 110|02|5698,FALSE,\N,,LAB,Th,10-11:50AM,,LA5-257,Amadi L,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,211,MTED 211,GEOM & MEASURE ELEM TEACHERS,3,,01,5764,Spring_2026|MTED 211|01|5764,FALSE,\N,,SEM,Tu,8-9:50AM,,LA5-259,Diaz C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,211,MTED 211,GEOM & MEASURE ELEM TEACHERS,3,,02,5765,Spring_2026|MTED 211|02|5765,FALSE,\N,,LAB,Th,8-9:50AM,,LA5-259,Diaz C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,301,MTED 301,COMPUTER APPS MATH FOR TEACHRS,3,,01,1432,Spring_2026|MTED 301|01|1432,FALSE,\N,"306,1,27,136",SEM,M,4-5:50PM,available,ONLINE-ONLY,DiOrio J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,MTED,301,MTED 301,COMPUTER APPS MATH FOR TEACHRS,3,,02,1783,Spring_2026|MTED 301|02|1783,FALSE,\N,"306,27",LAB,W,4-5:50PM,available,ONLINE-ONLY,DiOrio J,Class instruction is: Synch. Online - Meet Times.
+Spring_2026,MTED,305,MTED 305,ALG & STAT THINKING K-8 TCHRS,3,,01,5403,Spring_2026|MTED 305|01|5403,FALSE,\N,,SEM,M,8-9:50AM,available,LA5-261,Conlon J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,305,MTED 305,ALG & STAT THINKING K-8 TCHRS,3,,02,5404,Spring_2026|MTED 305|02|5404,FALSE,\N,,LAB,W,8-9:50AM,available,LA5-261,Conlon J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,312,MTED 312,GEOM/MEAS FOR MATH SPECIALISTS,4,,01,5712,Spring_2026|MTED 312|01|5712,FALSE,\N,,SEM,TuTh,4-5:50PM,available,LA5-259,Nguyen D,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,371,MTED 371,MATH MODELING FOR TEACHERS,3,,01,4976,Spring_2026|MTED 371|01|4976,FALSE,\N,,SEM,Tu,4-5:50PM,available,LA5-261,Sover C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,371,MTED 371,MATH MODELING FOR TEACHERS,3,,02,5025,Spring_2026|MTED 371|02|5025,FALSE,\N,,LAB,Th,4-5:50PM,available,LA5-265,Sover C,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,402,MTED 402,PROB SOLV APP MATH ELEM MS TCH,3,,01,1433,Spring_2026|MTED 402|01|1433,FALSE,\N,"1,27,147",SEM,Tu,2-3:50PM,available,LA5-265,Johnson A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,402,MTED 402,PROB SOLV APP MATH ELEM MS TCH,3,,02,1784,Spring_2026|MTED 402|02|1784,FALSE,\N,27,LAB,Th,2-3:50PM,available,LA5-265,Johnson A,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,411,MTED 411,TOPICS & ISSUES SECONDARY MATH,3,,01,5411,Spring_2026|MTED 411|01|5411,FALSE,\N,,SEM,M,12-1:50PM,available,LA5-265,Chesler J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,411,MTED 411,TOPICS & ISSUES SECONDARY MATH,3,,02,5412,Spring_2026|MTED 411|02|5412,FALSE,\N,,LAB,W,12-1:50PM,available,LA5-265,Chesler J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,512,MTED 512,MATH CURRICULUM & ASSESSMENT,3,,01,2663,Spring_2026|MTED 512|01|2663,FALSE,\N,"306,1,27",SEM,W,5:30-8:15PM,available,LA5-265,Bharaj P,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,540,MTED 540,ALGEBRA IN SCHOOL CURRICULUM,3,,01,10009,Spring_2026|MTED 540|01|10009,FALSE,\N,,SEM,M,5:30-8:15PM,,LA5-265,Chesler J,Class instruction is: Face to Face - On Campus.
+Spring_2026,MTED,697,MTED 697,DIRECTED STUDIES IN MATH ED,1,,01,9668,Spring_2026|MTED 697|01|9668,FALSE,\N,,SUP,TBA,NA,,FO3-109,Bharaj P,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MTED,697,MTED 697,DIRECTED STUDIES IN MATH ED,1,,02,12670,Spring_2026|MTED 697|02|12670,FALSE,\N,,SUP,TBA,NA,available,FO3-108,Benken B,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,MTED,698,MTED 698,THESIS IN MATH ED,1,,02,12583,Spring_2026|MTED 698|02|12583,FALSE,\N,,SUP,TBA,NA,,FO3-116,Bharaj P,Department Consent RequiredClass instruction is: Face to Face - On Campus.

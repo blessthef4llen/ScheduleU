@@ -1,0 +1,11 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,E,E 211,E E 211,ELECTRIC & ELECTRONIC CIRCUITS,3,,01,11046,Summer_2026|E E 211|01|11046,FALSE,\N,310,SEM,MW,9-1:05PM,available,VEC-516A,Talebi M,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 360,E E 360,ELECTROMAGNETIC FIELDS,3,,01,10689,Summer_2026|E E 360|01|10689,FALSE,\N,1,SEM,MW,9-1:05PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 400D,E E 400D,ELECT ENGR DESIGN PROJECT,3,GE AREA: F-Capstone,01,11002,Summer_2026|E E 400D|01|11002,FALSE,\N,"1,310",SEM,TuTh,8:30-11:00AM,available,ECS-317,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 400D,E E 400D,ELECT ENGR DESIGN PROJECT,3,GE AREA: F-Capstone,02,11003,Summer_2026|E E 400D|02|11003,FALSE,\N,"1,310",LAB,TuTh,12-3:45PM,available,ECS-317,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 350,E E 350,ENERGY CONVERSION PRINCIPLES,3,,01,10588,Summer_2026|E E 350|01|10588,FALSE,\N,"1,310",SEM,TuTh,8:30-11:00AM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 350,E E 350,ENERGY CONVERSION PRINCIPLES,3,,02,10589,Summer_2026|E E 350|02|10589,FALSE,\N,"1,310",LAB,TuTh,12-3:45PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 381,E E 381,PRBLITY & STATS COMPUTING,3,,01,10625,Summer_2026|E E 381|01|10625,FALSE,\N,"1,310",SEM,TuTh,4-7:45PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 382,E E 382,COMMUNICATION SYSTEMS I,3,,01,10657,Summer_2026|E E 382|01|10657,FALSE,\N,"1,310",SEM,M,9:30-2:30PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 382,E E 382,COMMUNICATION SYSTEMS I,3,,02,10658,Summer_2026|E E 382|02|10658,FALSE,\N,"310,1",LAB,W,8:30-4:00PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,E,E 442,E E 442,MECHATRONICS SYSTEMS DESIGN,3,,02,10986,Summer_2026|E E 442|02|10986,FALSE,\N,"1,310",SEM,TuTh,1-4:45PM,available,EN2-204,Marayong P,Class instruction is: Face to Face - On Campus.Class offered with MAE-490G-02

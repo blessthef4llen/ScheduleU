@@ -1,0 +1,8 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,PHIL,101,PHIL 101,THE MEANING OF LIFE,3,"GE: 3B (C2), E",02,10871,Summer_2026|PHIL 101|02|10871,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Nolan L,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,PHIL,160,PHIL 160,ETHICS AND SOCIETY,3,GE: 3B (C2),01,10872,Summer_2026|PHIL 160|01|10872,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Wallis C,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,PHIL,352,PHIL 352,PHILOSOPHY OF LAW,3,"GE: 3UD (UDC), 4UD (UDD); GWAR: WI",01,10648,Summer_2026|PHIL 352|01|10648,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Wieland N,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,PHIL,352,PHIL 352,PHILOSOPHY OF LAW,3,"GE: 3UD (UDC), 4UD (UDD); GWAR: WI",02,10887,Summer_2026|PHIL 352|02|10887,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Wieland N,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,PHIL,400,PHIL 400,BUSINESS ETHICS,3,"GE: 3UD (UDC), 4UD (UDD)",02,10870,Summer_2026|PHIL 400|02|10870,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Wright C,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,PHIL,403,PHIL 403,MEDICAL ETHICS,3,GE: 3UD (UDC); GWAR: WI,02,10647,Summer_2026|PHIL 403|02|10647,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Dieveney P,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,PHIL,370,PHIL 370,RATIONALITY AND DECISIONS,3,GE: 2UD/5UD (UDB),01,10412,Summer_2026|PHIL 370|01|10412,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Wright W,Class instruction is: Asynch. Online-No Meet Times.

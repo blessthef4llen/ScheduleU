@@ -1,0 +1,34 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Spring_2026,STAT,90,STAT 90,FOUNDATIONS FOR STATISTICS,1,,01,4975,Spring_2026|STAT 90|01|4975,FALSE,\N,,ACT,W,2-3:50PM,,VEC-110,Chavez-Bonilla D,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,90,STAT 90,FOUNDATIONS FOR STATISTICS,1,,05,5560,Spring_2026|STAT 90|05|5560,FALSE,\N,,ACT,F,10-11:50AM,available,LA5-347,Chavez-Bonilla D,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,108,STAT 108,STATISTICS FOR EVERYDAY LIFE,3,GE: 2 (B4),13C,7271,Spring_2026|STAT 108|13C|7271,FALSE,\N,,LEC,MW,8-8:50AM,available,PSY-150,Thompson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,108,STAT 108,STATISTICS FOR EVERYDAY LIFE,3,GE: 2 (B4),19,11267,Spring_2026|STAT 108|19|11267,FALSE,\N,310,ACT,W,9-10:50AM,,HC-106,Thompson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,108,STAT 108,STATISTICS FOR EVERYDAY LIFE,3,GE: 2 (B4),15C2,7383,Spring_2026|STAT 108|15C2|7383,FALSE,\N,,ACT,Th,8-9:50AM,available,LA5-153,Costello J,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,108,STAT 108,STATISTICS FOR EVERYDAY LIFE,3,GE: 2 (B4),16C3,7384,Spring_2026|STAT 108|16C3|7384,FALSE,\N,,ACT,Th,10-11:50AM,,LA5-153,Costello J,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,108,STAT 108,STATISTICS FOR EVERYDAY LIFE,3,GE: 2 (B4),17C4,9709,Spring_2026|STAT 108|17C4|9709,FALSE,\N,310,ACT,F,8-9:50AM,available,LA5-153,Staff,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,108,STAT 108,STATISTICS FOR EVERYDAY LIFE,3,GE: 2 (B4),18C5,9710,Spring_2026|STAT 108|18C5|9710,FALSE,\N,310,ACT,F,10-11:50AM,available,LA5-153,Luong S,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,118,STAT 118,INTRO BUSINESS STATISTICS,3,GE: 2 (B4),02,4368,Spring_2026|STAT 118|02|4368,FALSE,\N,,SEM,TuTh,11-12:15PM,available,HSCI-100,Kim S,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,118,STAT 118,INTRO BUSINESS STATISTICS,3,GE: 2 (B4),03,6668,Spring_2026|STAT 118|03|6668,FALSE,\N,,SEM,MW,11-12:15PM,,HC-100,Thompson J,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,280,STAT 280,INTRODUCTION TO DATA MINING,3,,01,10884,Spring_2026|STAT 280|01|10884,FALSE,\N,,SEM,TuTh,2-3:15PM,available,LA5-347,Suzuki C,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,381,STAT 381,MATHEMATICAL STATISTICS,3,,01,4292,Spring_2026|STAT 381|01|4292,FALSE,\N,,SEM,MW,12:30-1:45PM,,LA5-343,Suzuki C,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,381,STAT 381,MATHEMATICAL STATISTICS,3,,03,9759,Spring_2026|STAT 381|03|9759,FALSE,\N,310,SEM,TuTh,2-3:15PM,,LA5-353,Padilla F,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,381,STAT 381,MATHEMATICAL STATISTICS,3,,04,12287,Spring_2026|STAT 381|04|12287,FALSE,\N,310,SEM,MW,8-9:15AM,available,LA5-169,Acosta V,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,450,STAT 450,APPL MULTIVARIATE STAT ANAL,3,,01,4973,Spring_2026|STAT 450|01|4973,FALSE,\N,,SEM,MW,5:30-6:45PM,available,LA5-147,Le R,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,473,STAT 473,STATISTICAL MACHINE LEARNING,3,,01,6361,Spring_2026|STAT 473|01|6361,FALSE,\N,,SEM,MW,12:30-1:45PM,available,LA5-255,Padilla F,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,473,STAT 473,STATISTICAL MACHINE LEARNING,3,,03,9438,Spring_2026|STAT 473|03|9438,FALSE,\N,310,SEM,TuTh,12:30-1:45PM,available,LA5-255,Padilla F,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,475,STAT 475,INTRO TO SAS PROGRAMMING,3,,01,4330,Spring_2026|STAT 475|01|4330,FALSE,\N,,SEM,TuTh,11-12:15PM,available,LA5-255,Korosteleva O,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,479,STAT 479,APP NEURAL NETWORK & DEEP LRNG,3,,01,10091,Spring_2026|STAT 479|01|10091,FALSE,\N,,LEC,F,9-11:45AM,available,LA5-151,Moon H,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,491,STAT 491,STATISTICAL MODELING IN EPIDEM,3,,01,9365,Spring_2026|STAT 491|01|9365,FALSE,\N,,LEC,MW,2-3:15PM,available,LA5-271,Korosteleva O,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,497,STAT 497,DIRECTED STUDIES,1,,01,4412,Spring_2026|STAT 497|01|4412,FALSE,\N,,SUP,TBA,NA,available,FO3-208,Korosteleva O,Instructor Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,STAT,510,STAT 510,REGRESSION ANALYSIS,3,,01,4974,Spring_2026|STAT 510|01|4974,FALSE,\N,310,SEM,MW,4-5:15PM,available,LA5-265,Lee S,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,520,STAT 520,STATISTICAL INFERENCE,3,,01,2796,Spring_2026|STAT 520|01|2796,FALSE,\N,"1,27",SEM,TuTh,5:30-6:45PM,available,LA5-257,Suaray K,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,530,STAT 530,EXPERIMENTAL DESIGN & ANALYSIS,3,,02,6953,Spring_2026|STAT 530|02|6953,FALSE,\N,,SEM,TuTh,4-5:15PM,available,LA5-343,Kim S,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,544,STAT 544,STATISTICAL CONSULTING,3,,01,10885,Spring_2026|STAT 544|01|10885,FALSE,\N,,SEM,MW,2-3:15PM,available,LA5-257,Lee S,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,560,STAT 560,NONPARAMETRIC STATISTICS,3,,01,7324,Spring_2026|STAT 560|01|7324,FALSE,\N,,SEM,MW,7-8:15PM,,LA5-147,Le R,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,574,STAT 574,DATA MINING,3,,01,6657,Spring_2026|STAT 574|01|6657,FALSE,\N,,SEM,W,4-6:45PM,available,PH1-228,Korosteleva O,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,590,STAT 590,SURVIVAL ANALYSIS,3,,01,6658,Spring_2026|STAT 590|01|6658,FALSE,\N,,SEM,TuTh,12:30-1:45PM,available,LA5-147,Korosteleva O,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,695,STAT 695,SEMINAR IN APPLIED STATISTICS,1,,01,12791,Spring_2026|STAT 695|01|12791,FALSE,\N,305,LEC,NA,NA,,FO3-216,Suaray K,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Spring_2026,STAT,697,STAT 697,DIRECT STUDIES APPL STATICS,1,,02,7180,Spring_2026|STAT 697|02|7180,FALSE,\N,,SUP,TBA,NA,available,FO3-216,Suaray K,Department Consent RequiredClass instruction is: Face to Face - On Campus.
+Spring_2026,STAT,698,STAT 698,THESIS OR PROJECT,1,,01,4876,Spring_2026|STAT 698|01|4876,FALSE,\N,,SUP,TBA,NA,,FO3-214,Moon H,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,698,STAT 698,THESIS OR PROJECT,1,,02,5825,Spring_2026|STAT 698|02|5825,FALSE,\N,,SUP,TBA,NA,,FO3-208,Lee S,Class instruction is: Face to Face - On Campus.
+Spring_2026,STAT,698,STAT 698,THESIS OR PROJECT,1,,07,8173,Spring_2026|STAT 698|07|8173,FALSE,\N,,SUP,TBA,NA,,FO3-208,Korosteleva O,Class instruction is: Face to Face - On Campus.
