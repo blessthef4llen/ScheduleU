@@ -8,7 +8,9 @@ CREATE TABLE IF NOT EXISTS users (
     id       SERIAL PRIMARY KEY,
     email    TEXT NOT NULL,
     name     TEXT,
-    auth_uid UUID
+    auth_uid       UUID,
+    student_status TEXT,        -- Freshman, Senior, etc.
+    credit_load    INTEGER      -- 12, 15, etc.
 );
 
 CREATE TABLE IF NOT EXISTS courses (
