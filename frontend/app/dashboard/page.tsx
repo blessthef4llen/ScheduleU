@@ -1,55 +1,93 @@
-'use client'
+"use client";
+import Link from 'next/link';
 
-import Link from 'next/link'
-
-const LINKS = [
-  {
-    href: '/courses',
-    title: 'Course Search',
-    description: 'Browse course offerings, filter by subject/course number, and add sections to cart.',
-  },
-  {
-    href: '/schedule-builder',
-    title: 'Schedule Builder',
-    description: 'Generate a conflict-aware schedule from shopping cart or manual course selections.',
-  },
-  {
-    href: '/profile',
-    title: 'Profile',
-    description: 'Update major and graduation year information.',
-  },
-  {
-    href: '/transcript-import',
-    title: 'Transcript Import',
-    description: 'Upload a transcript PDF and extract completed courses for review.',
-  },
-]
+type ToolCard = {
+  name: string
+  icon: string
+  href?: string
+  status?: string
+}
 
 export default function DashboardPage() {
-  return (
-    <div className="min-h-screen bg-slate-50 text-black p-4 md:p-6">
-      <div className="mx-auto max-w-5xl space-y-4">
-        <header className="rounded-2xl border bg-white p-5">
-          <h1 className="text-3xl font-bold text-indigo-700">Dashboard</h1>
-          <p className="mt-1 text-slate-700">
-            Temporary navigation hub for ScheduleU pages.
-          </p>
-        </header>
+  const tools: ToolCard[] = [
+    { name: "Schedule Planner", icon: "📅", href: "/schedule-builder" },
+    { name: "AI Scheduler", icon: "🤖", href: "/schedule-builder" },
+    { name: "Progress Tracker", icon: "📈", href: "/transcript-import" },
+    { name: "Notification Center", icon: "🔔", status: "Coming Soon" },
+    { name: "Marketplace", icon: "🛒", status: "Coming Soon" },
+    { name: "Social Hub", icon: "👥", status: "Coming Soon" },
+    { name: "Daily Tips", icon: "💡", status: "Coming Soon" },
+    { name: "Browse and Search", icon: "🔍", href: "/courses" },
+  ];
 
-        <section className="grid gap-3 md:grid-cols-2">
-          {LINKS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-xl border border-slate-300 bg-slate-100 p-4 transition-all hover:border-indigo-400 hover:bg-indigo-100 hover:shadow-sm"
-            >
-              <h2 className="font-semibold text-slate-900">{item.title}</h2>
-              <p className="mt-1 text-sm text-slate-700">{item.description}</p>
-              <p className="mt-2 text-xs text-indigo-700 font-medium">{item.href}</p>
-            </Link>
-          ))}
-        </section>
-      </div>
+  return (
+    <div className="min-h-screen bg-white font-sans">
+      <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
+        <Link href="/" className="text-2xl font-bold text-white tracking-tight hover:opacity-80">
+          ScheduleU
+        </Link>
+
+        <nav className="flex items-center gap-6 text-white">
+          <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
+          <Link href="/profile" className="text-sm font-medium hover:opacity-80">Setup</Link>
+          <Link href="/user-profile" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+            <span className="text-schu-teal text-xs">👤</span>
+          </Link>
+          <div className="flex flex-col gap-1 cursor-pointer">
+            <div className="w-6 h-0.5 bg-white"></div>
+            <div className="w-6 h-0.5 bg-white"></div>
+            <div className="w-6 h-0.5 bg-white"></div>
+          </div>
+        </nav>
+      </header>
+
+      <main className="max-w-6xl mx-auto p-12">
+        <div className="flex justify-between items-end mb-12">
+          <h2 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Dashboard</h2>
+          <div className="flex gap-4 text-xs font-bold text-slate-500 uppercase">
+            <Link href="/courses" className="hover:text-schu-teal transition-colors">Browse Courses</Link>
+            <Link href="/schedule-builder" className="hover:text-schu-teal transition-colors">Build Schedule</Link>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {tools.map((tool) => {
+            const card = (
+              <>
+                <div className={`w-full aspect-square border-2 rounded-sm p-6 mb-3 transition-all bg-white flex items-center justify-center ${
+                  tool.href
+                    ? 'border-slate-100 group-hover:shadow-xl'
+                    : 'border-slate-200 opacity-70'
+                }`}>
+                  <span className="text-5xl">{tool.icon}</span>
+                </div>
+                <p className="text-[11px] font-bold text-slate-800 uppercase text-center tracking-tight">
+                  {tool.name}
+                </p>
+                {tool.status ? (
+                  <p className="mt-1 text-[10px] font-bold text-slate-400 uppercase text-center tracking-wide">
+                    {tool.status}
+                  </p>
+                ) : null}
+              </>
+            )
+
+            if (!tool.href) {
+              return (
+                <div key={tool.name} className="flex flex-col items-center">
+                  {card}
+                </div>
+              )
+            }
+
+            return (
+              <Link key={tool.name} href={tool.href} className="flex flex-col items-center group cursor-pointer">
+                {card}
+              </Link>
+            )
+          })}
+        </div>
+      </main>
     </div>
-  )
+  );
 }

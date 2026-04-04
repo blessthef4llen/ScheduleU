@@ -1,36 +1,36 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { supabase } from '@/utils/supabase'
+import { useState } from 'react';
+import { supabase } from '@/utils/supabase';
+import { useRouter } from 'next/navigation';
 
 export default function UpdatePasswordPage() {
-  const [newPassword, setNewPassword] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState('')
-  const router = useRouter()
+  const [newPassword, setNewPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const router = useRouter();
 
-  const handleUpdate = async (event: React.FormEvent) => {
-    event.preventDefault()
-    setLoading(true)
-    setMessage('')
+  const handleUpdate = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
 
     const { error } = await supabase.auth.updateUser({
-      password: newPassword,
-    })
+      password: newPassword
+    });
 
     if (error) {
-      setMessage(`Error: ${error.message}`)
-      setLoading(false)
-      return
-    }
+      setMessage(`Error: ${error.message}`);
+      setLoading(false);
+    } else {
+      setMessage("Success! Password updated. Redirecting to login...");
 
-    setMessage('Success! Password updated. Redirecting to login...')
-    setTimeout(() => {
-      router.push('/login')
-    }, 2000)
-  }
+      setTimeout(() => {
+        router.push('/login');
+      }, 2000);
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
@@ -45,7 +45,7 @@ export default function UpdatePasswordPage() {
             <label className="block text-sm font-bold text-gray-700 mb-2 text-left">New Password</label>
             <div className="relative">
               <input
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition"
                 value={newPassword}
@@ -55,10 +55,10 @@ export default function UpdatePasswordPage() {
               />
               <button
                 type="button"
-                onClick={() => setShowPassword((prev) => !prev)}
+                onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600"
               >
-                {showPassword ? 'Hide' : 'Show'}
+                {showPassword ? "🔒" : "👁️"}
               </button>
             </div>
           </div>
@@ -70,20 +70,18 @@ export default function UpdatePasswordPage() {
               loading ? 'bg-blue-300' : 'bg-blue-600 hover:bg-blue-700 active:scale-95'
             }`}
           >
-            {loading ? 'SAVING...' : 'CONFIRM NEW PASSWORD'}
+            {loading ? "SAVING..." : "CONFIRM NEW PASSWORD"}
           </button>
         </form>
 
         {message && (
-          <div
-            className={`p-4 rounded-xl text-center text-sm font-bold ${
-              message.startsWith('Error') ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-600'
-            }`}
-          >
+          <div className={`p-4 rounded-xl text-center text-sm font-bold animate-pulse ${
+            message.startsWith('Error') ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-600'
+          }`}>
             {message}
           </div>
         )}
       </div>
     </div>
-  )
+  );
 }

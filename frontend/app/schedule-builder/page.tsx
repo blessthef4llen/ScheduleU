@@ -518,38 +518,48 @@ export default function ScheduleBuilderPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-black p-4 md:p-6">
+    <div className="min-h-screen bg-white text-black">
+      <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
+        <Link href="/dashboard" className="text-2xl font-bold text-white tracking-tight hover:opacity-80">
+          ScheduleU
+        </Link>
+        <nav className="flex items-center gap-6 text-white">
+          <Link href="/courses" className="text-sm font-medium hover:opacity-80">Courses</Link>
+          <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
+        </nav>
+      </header>
+      <div className="p-4 md:p-6">
       <div className="mx-auto max-w-6xl space-y-4">
         <header className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-indigo-700">Schedule Builder</h1>
-            <p className="text-slate-700">Generate a conflict-aware term schedule from your shopping cart.</p>
+            <h1 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Schedule Builder</h1>
+            <p className="text-slate-500 font-medium">Generate a conflict-aware term schedule from your shopping cart.</p>
           </div>
           <div className="flex items-center gap-2">
             <Link
               href="/dashboard"
               aria-label="Back to dashboard"
               title="Back to dashboard"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-700 transition-colors hover:bg-slate-200"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 transition-colors hover:bg-slate-50"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M3 10.5L12 3l9 7.5" />
                 <path d="M5 9.5V21h14V9.5" />
               </svg>
             </Link>
-            <Link href="/courses" className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200">
+            <Link href="/courses" className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50">
               Back to Courses
             </Link>
           </div>
         </header>
 
-        <section className="rounded-2xl border bg-white p-4 md:p-5 space-y-4">
+        <section className="rounded-2xl border border-slate-100 bg-white p-4 md:p-5 space-y-4 shadow-sm">
           <div className="flex flex-wrap gap-3">
             <button
               type="button"
               onClick={loadCart}
               disabled={loadingCart}
-              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-800 disabled:opacity-60"
+              className="rounded-xl schu-gradient px-4 py-2 text-sm font-black text-white transition-colors hover:opacity-90 disabled:opacity-60 shadow-sm"
             >
               {loadingCart ? 'Loading Cart...' : 'Load Shopping Cart'}
             </button>
@@ -558,7 +568,7 @@ export default function ScheduleBuilderPage() {
               type="button"
               onClick={generateSchedule}
               disabled={generating || !requestedCourses.length}
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-800 disabled:opacity-60"
+              className="rounded-xl bg-[#1e4e8c] px-4 py-2 text-sm font-black text-white transition-colors hover:opacity-90 disabled:opacity-60 shadow-sm"
             >
               {generating ? 'Generating...' : 'Generate Schedule'}
             </button>
@@ -566,7 +576,7 @@ export default function ScheduleBuilderPage() {
             <button
               type="button"
               onClick={() => setShowCartEditor((prev) => !prev)}
-              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
+              className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50"
             >
               {showCartEditor ? 'Hide Cart Editor' : 'Edit Cart'}
             </button>
@@ -574,11 +584,11 @@ export default function ScheduleBuilderPage() {
 
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <label className="mb-1 block text-sm font-medium text-slate-700">Term</label>
+              <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Term</label>
               <select
                 value={selectedTermTable}
                 onChange={(e) => setSelectedTermTable(e.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
               >
                 {SEMESTER_OPTIONS.map((option) => (
                   <option key={option.table} value={option.table} disabled={option.disabled}>
@@ -589,31 +599,31 @@ export default function ScheduleBuilderPage() {
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-medium text-slate-700">Earliest Time</label>
+              <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Earliest Time</label>
               <input
                 value={earliestTime}
                 onChange={(e) => setEarliestTime(e.target.value)}
                 placeholder="09:00AM"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2"
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-medium text-slate-700">Latest Time</label>
+              <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Latest Time</label>
               <input
                 value={latestTime}
                 onChange={(e) => setLatestTime(e.target.value)}
                 placeholder="06:00PM"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2"
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-medium text-slate-700">Buffer Minutes</label>
+              <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Buffer Minutes</label>
               <select
                 value={bufferMinutes}
                 onChange={(e) => setBufferMinutes(Number(e.target.value))}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
               >
                 <option value={0}>0</option>
                 <option value={10}>10</option>
@@ -626,11 +636,11 @@ export default function ScheduleBuilderPage() {
 
             <div className="grid gap-3 md:grid-cols-2">
               <div>
-                <label className="mb-1 block text-sm font-medium text-slate-700">Ranking Preference</label>
+                <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Ranking Preference</label>
                 <select
                   value={rankingPreference}
                   onChange={(e) => setRankingPreference(e.target.value)}
-                  className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                  className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
                 >
                   <option value="compact">Compact (few days + fewer gaps)</option>
                   <option value="fewest_days">Fewest days on campus</option>
@@ -639,11 +649,11 @@ export default function ScheduleBuilderPage() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-slate-700">Number of schedules</label>
+                <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Number of schedules</label>
                 <select
                   value={maxSchedules}
                   onChange={(e) => setMaxSchedules(Number(e.target.value))}
-                  className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                  className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
                 >
                   <option value={1}>1</option>
                   <option value={3}>3</option>
@@ -654,16 +664,16 @@ export default function ScheduleBuilderPage() {
             </div>
 
           <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Days Off (comma-separated)</label>
+            <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Days Off (comma-separated)</label>
             <input
               value={daysOffText}
               onChange={(e) => setDaysOffText(e.target.value)}
               placeholder="F or M,W"
-              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+              className="w-full rounded-xl border-2 border-gray-100 px-3 py-2"
             />
           </div>
 
-          <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+          <div className="flex items-center gap-2 rounded-xl border border-slate-100 bg-gray-50 px-3 py-2">
             <input
               id="honorsOnlyBuilder"
               type="checkbox"
@@ -676,13 +686,13 @@ export default function ScheduleBuilderPage() {
             </label>
           </div>
 
-          <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 space-y-3">
+          <div className="rounded-xl border border-slate-100 bg-gray-50 p-4 space-y-3">
             <p className="text-sm font-medium text-slate-700">Manual Course Entry</p>
             <div className="grid gap-2 md:grid-cols-[1fr_1fr_auto]">
               <select
                 value={manualSubject}
                 onChange={(e) => setManualSubject(e.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
               >
                 <option value="">Select subject</option>
                 {SUBJECT_OPTIONS.map((subject) => (
@@ -694,7 +704,7 @@ export default function ScheduleBuilderPage() {
               <select
                 value={manualCourseNumber}
                 onChange={(e) => setManualCourseNumber(e.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
                 disabled={!manualSubject || loadingNumbers}
               >
                 <option value="">
@@ -713,7 +723,7 @@ export default function ScheduleBuilderPage() {
               <button
                 type="button"
                 onClick={addManualCourse}
-                className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-800"
+                className="rounded-xl schu-gradient px-4 py-2 text-sm font-black text-white transition-colors hover:opacity-90"
               >
                 Add Course
               </button>
@@ -732,7 +742,7 @@ export default function ScheduleBuilderPage() {
                     key={course}
                     type="button"
                     onClick={() => removeManualCourse(course)}
-                    className="rounded-full border border-indigo-300 bg-white px-3 py-1 text-sm text-indigo-700 transition-colors hover:bg-indigo-100"
+                    className="rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50"
                     title="Click to remove"
                   >
                     {course} ×
@@ -749,7 +759,7 @@ export default function ScheduleBuilderPage() {
           )}
 
           {showCartEditor && (
-            <div className="rounded-lg border border-slate-300 bg-slate-50 p-3 space-y-3">
+            <div className="rounded-xl border border-slate-100 bg-gray-50 p-4 space-y-3">
               <p className="text-sm font-medium text-slate-800">Shopping Cart Editor</p>
               {cartRows.length === 0 ? (
                 <p className="text-sm text-slate-600">No cart items loaded yet. Click Load Shopping Cart first.</p>
@@ -760,7 +770,7 @@ export default function ScheduleBuilderPage() {
                     return (
                       <div
                         key={key}
-                        className="flex flex-col gap-2 rounded border border-slate-300 bg-white px-3 py-2 md:flex-row md:items-center md:justify-between"
+                        className="flex flex-col gap-2 rounded-xl border border-slate-100 bg-white px-3 py-2 md:flex-row md:items-center md:justify-between"
                       >
                         <div className="text-sm text-slate-800">
                           <span className="font-semibold">{row.course_code_full}</span>
@@ -772,7 +782,7 @@ export default function ScheduleBuilderPage() {
                           type="button"
                           onClick={() => removeCartItem(row, idx)}
                           disabled={removingCartKey === key}
-                          className="rounded border border-red-300 bg-white px-3 py-1.5 text-sm font-medium text-red-700 transition-colors hover:bg-red-50 disabled:opacity-60"
+                          className="rounded-xl border border-red-200 bg-white px-3 py-1.5 text-sm font-bold text-red-700 transition-colors hover:bg-red-50 disabled:opacity-60"
                         >
                           {removingCartKey === key ? 'Removing...' : 'Remove'}
                         </button>
@@ -797,8 +807,8 @@ export default function ScheduleBuilderPage() {
         </section>
 
         {result && (
-          <section className="rounded-2xl border bg-white overflow-hidden">
-            <div className="border-b px-4 py-3 text-sm text-slate-700">
+          <section className="rounded-2xl border border-slate-100 bg-white overflow-hidden shadow-sm">
+            <div className="border-b px-4 py-3 text-sm text-slate-700 bg-gray-50/70">
               Generated term: <span className="font-semibold">{result.term}</span>
             </div>
 
@@ -812,10 +822,10 @@ export default function ScheduleBuilderPage() {
                         key={`candidate-${candidate.rank}-${idx}`}
                         type="button"
                         onClick={() => setSelectedCandidateIndex((prev) => (prev === idx ? null : idx))}
-                        className={`rounded-lg border p-3 text-left transition-all ${
+                        className={`rounded-xl border p-3 text-left transition-all ${
                           selectedCandidateIndex === idx
-                            ? 'border-blue-600 bg-blue-50 shadow-sm'
-                            : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-100'
+                            ? 'border-[#46BDC1] bg-cyan-50 shadow-sm'
+                            : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
                         }`}
                       >
                         <p className="text-sm font-semibold text-slate-900">Option #{candidate.rank}</p>
@@ -836,7 +846,7 @@ export default function ScheduleBuilderPage() {
               )}
 
               {selectedCandidateIndex === null ? (
-                <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600">
+                  <div className="rounded-xl border border-slate-100 bg-gray-50 px-3 py-2 text-sm text-slate-600">
                   Select a schedule option above to view details.
                 </div>
               ) : (
@@ -847,7 +857,7 @@ export default function ScheduleBuilderPage() {
                 ) : (
                   <div className="space-y-3">
                     {(result.generated_schedules?.[selectedCandidateIndex]?.selected_sections ?? result.selected_sections).map((section) => (
-                      <div key={`${section.course}-${section.section_id}`} className="rounded-lg border border-slate-300 bg-slate-100 p-3 transition-all hover:border-slate-400 hover:shadow-sm">
+                      <div key={`${section.course}-${section.section_id}`} className="rounded-xl border border-slate-100 bg-gray-50 p-3 transition-all hover:shadow-sm">
                         <p className="font-semibold text-slate-900">
                           {section.course} • Section {section.section_id}
                         </p>
@@ -855,7 +865,7 @@ export default function ScheduleBuilderPage() {
                           {section.meetings.map((meeting, idx) => (
                             <div
                               key={`${section.section_id}-${idx}`}
-                              className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5 text-slate-900"
+                              className="rounded-xl border border-slate-100 bg-white px-2 py-1.5 text-slate-900"
                             >
                               {meeting.day} {meeting.start}-{meeting.end} • {meeting.type ?? 'N/A'} • {meeting.location ?? 'N/A'} • {meeting.instructor ?? 'N/A'}
                             </div>
@@ -882,14 +892,14 @@ export default function ScheduleBuilderPage() {
                         )
                         .sort((a, b) => a.start.localeCompare(b.start))
                       return (
-                        <div key={day} className="rounded-lg border border-slate-300 bg-slate-50 p-2">
+                        <div key={day} className="rounded-xl border border-slate-100 bg-gray-50 p-2">
                           <p className="mb-2 text-sm font-semibold text-slate-800">{day}</p>
                           {dayMeetings.length === 0 ? (
                             <p className="text-xs text-slate-500">No classes</p>
                           ) : (
                             <div className="space-y-2">
                               {dayMeetings.map((m, idx) => (
-                                <div key={`${day}-${m.course}-${m.section_id}-${idx}`} className="rounded border border-slate-300 bg-slate-200 px-2 py-1 text-xs text-slate-900">
+                                <div key={`${day}-${m.course}-${m.section_id}-${idx}`} className="rounded-xl border border-slate-100 bg-white px-2 py-1 text-xs text-slate-900">
                                   <p className="font-semibold">{m.course} • {m.section_id}</p>
                                   <p>{m.start}-{m.end}</p>
                                   <p>{m.location ?? 'N/A'}</p>
@@ -924,6 +934,7 @@ export default function ScheduleBuilderPage() {
             </div>
           </section>
         )}
+      </div>
       </div>
     </div>
   )

@@ -125,26 +125,36 @@ export default function TranscriptImportPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 text-black md:p-6">
+    <div className="min-h-screen bg-white text-black">
+      <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
+        <Link href="/dashboard" className="text-2xl font-bold text-white tracking-tight hover:opacity-80">
+          ScheduleU
+        </Link>
+        <nav className="flex items-center gap-6 text-white">
+          <Link href="/courses" className="text-sm font-medium hover:opacity-80">Courses</Link>
+          <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
+        </nav>
+      </header>
+      <div className="p-4 md:p-6">
       <div className="mx-auto max-w-6xl space-y-4">
         <header className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-indigo-700">Transcript Import</h1>
-            <p className="text-slate-700">
+            <h1 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Transcript Import</h1>
+            <p className="text-slate-500 font-medium">
               Upload a transcript PDF to extract completed courses for review.
             </p>
           </div>
           <Link
             href="/dashboard"
-            className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
+            className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50"
           >
             Back to Dashboard
           </Link>
         </header>
 
-        <section className="rounded-2xl border bg-white p-4 shadow-sm md:p-5 space-y-4">
+        <section className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm md:p-5 space-y-4">
           <div className="space-y-2">
-            <label htmlFor="transcript-file" className="block text-sm font-medium text-slate-700">
+            <label htmlFor="transcript-file" className="block text-xs font-black text-slate-500 uppercase tracking-wider">
               Transcript PDF
             </label>
             <input
@@ -152,7 +162,7 @@ export default function TranscriptImportPage() {
               type="file"
               accept="application/pdf"
               onChange={(event) => setFile(event.target.files?.[0] ?? null)}
-              className="block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm"
+              className="block w-full rounded-xl border-2 border-gray-100 bg-white px-3 py-2 text-sm"
             />
             <p className="text-xs text-slate-500">
               First pass only: this works best on text-based PDFs. Scanned image PDFs will likely need OCR.
@@ -163,7 +173,7 @@ export default function TranscriptImportPage() {
             type="button"
             onClick={handleUpload}
             disabled={loading}
-            className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-800 disabled:opacity-60"
+            className="rounded-xl schu-gradient px-4 py-2 text-sm font-black text-white transition-colors hover:opacity-90 disabled:opacity-60 shadow-sm"
           >
             {loading ? 'Parsing Transcript...' : 'Upload and Parse'}
           </button>
@@ -183,32 +193,32 @@ export default function TranscriptImportPage() {
 
         {result && (
           <>
-            <section className="rounded-2xl border bg-white p-4 shadow-sm md:p-5">
+            <section className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm md:p-5">
               <h2 className="text-lg font-semibold text-slate-900">Parse Summary</h2>
               <div className="mt-3 flex flex-wrap gap-3">
                 <button
                   type="button"
                   onClick={handleSaveCourses}
                   disabled={saving || result.extracted_courses.length === 0}
-                  className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-800 disabled:opacity-60"
+                  className="rounded-xl bg-[#1e4e8c] px-4 py-2 text-sm font-black text-white transition-colors hover:opacity-90 disabled:opacity-60 shadow-sm"
                 >
                   {saving ? 'Saving Courses...' : 'Save Courses to My Account'}
                 </button>
               </div>
               <div className="mt-3 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
-                <div className="rounded-lg border bg-slate-50 px-3 py-2">
+                <div className="rounded-xl border border-slate-100 bg-gray-50 px-3 py-2">
                   <p className="text-xs uppercase tracking-wide text-slate-500">Student</p>
                   <p className="text-sm text-slate-900">{result.student.name || 'Not detected'}</p>
                 </div>
-                <div className="rounded-lg border bg-slate-50 px-3 py-2">
+                <div className="rounded-xl border border-slate-100 bg-gray-50 px-3 py-2">
                   <p className="text-xs uppercase tracking-wide text-slate-500">Student ID</p>
                   <p className="text-sm text-slate-900">{result.student.student_id || 'Not detected'}</p>
                 </div>
-                <div className="rounded-lg border bg-slate-50 px-3 py-2">
+                <div className="rounded-xl border border-slate-100 bg-gray-50 px-3 py-2">
                   <p className="text-xs uppercase tracking-wide text-slate-500">Pages</p>
                   <p className="text-sm text-slate-900">{result.total_pages}</p>
                 </div>
-                <div className="rounded-lg border bg-slate-50 px-3 py-2">
+                <div className="rounded-xl border border-slate-100 bg-gray-50 px-3 py-2">
                   <p className="text-xs uppercase tracking-wide text-slate-500">Extracted Courses</p>
                   <p className="text-sm text-slate-900">{result.extracted_courses.length}</p>
                 </div>
@@ -226,18 +236,18 @@ export default function TranscriptImportPage() {
               )}
             </section>
 
-            <section className="rounded-2xl border bg-white p-4 shadow-sm md:p-5">
+            <section className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm md:p-5">
               <h2 className="text-lg font-semibold text-slate-900">Courses By Term</h2>
               <div className="mt-4 space-y-4">
                 {result.grouped_by_term.length === 0 ? (
                   <p className="text-sm text-slate-600">No courses were extracted.</p>
                 ) : (
                   result.grouped_by_term.map((group) => (
-                    <div key={group.term} className="rounded-xl border border-slate-300 bg-slate-50 p-3">
+                    <div key={group.term} className="rounded-xl border border-slate-100 bg-gray-50 p-3">
                       <h3 className="text-base font-semibold text-slate-900">{group.term}</h3>
                       <div className="mt-3 grid gap-3">
                         {group.courses.map((course) => (
-                          <div key={`${group.term}-${course.course_code}-${course.raw_line}`} className="rounded-lg border border-slate-300 bg-white p-3">
+                          <div key={`${group.term}-${course.course_code}-${course.raw_line}`} className="rounded-xl border border-slate-100 bg-white p-3">
                             <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
                               <p className="font-semibold text-slate-900">{course.course_code}</p>
                               <p className="text-xs text-slate-500">
@@ -258,14 +268,14 @@ export default function TranscriptImportPage() {
             </section>
 
             {result.unmatched_lines.length > 0 && (
-              <section className="rounded-2xl border bg-white p-4 shadow-sm md:p-5">
+              <section className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm md:p-5">
                 <h2 className="text-lg font-semibold text-slate-900">Unmatched Lines</h2>
                 <p className="mt-1 text-sm text-slate-600">
                   These lines looked course-like but were not confidently parsed.
                 </p>
                 <div className="mt-3 space-y-2">
                   {result.unmatched_lines.map((line, index) => (
-                    <div key={`${index}-${line}`} className="rounded-lg border border-slate-300 bg-slate-50 px-3 py-2 text-sm text-slate-700">
+                    <div key={`${index}-${line}`} className="rounded-xl border border-slate-100 bg-gray-50 px-3 py-2 text-sm text-slate-700">
                       {line}
                     </div>
                   ))}
@@ -274,6 +284,7 @@ export default function TranscriptImportPage() {
             )}
           </>
         )}
+      </div>
       </div>
     </div>
   )

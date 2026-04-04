@@ -555,17 +555,27 @@ export default function CoursesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-black p-4 md:p-5">
+    <div className="min-h-screen bg-white text-black">
+      <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
+        <Link href="/dashboard" className="text-2xl font-bold text-white tracking-tight hover:opacity-80">
+          ScheduleU
+        </Link>
+        <nav className="flex items-center gap-6 text-white">
+          <Link href="/schedule-builder" className="text-sm font-medium hover:opacity-80">Planner</Link>
+          <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
+        </nav>
+      </header>
+      <div className="p-4 md:p-5">
       <div className="mx-auto max-w-7xl space-y-4">
         <header className="space-y-2">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-            <h1 className="text-3xl font-bold text-blue-700">Course Search</h1>
+            <h1 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Course Search</h1>
             <div className="flex items-center gap-2">
               <Link
                 href="/dashboard"
                 aria-label="Back to dashboard"
                 title="Back to dashboard"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
               >
                 <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M3 10.5L12 3l9 7.5" />
@@ -574,28 +584,28 @@ export default function CoursesPage() {
               </Link>
               <Link
                 href="/schedule-builder"
-                className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+                className="inline-flex items-center justify-center schu-gradient px-4 py-2 text-sm font-black text-white rounded-lg shadow-sm hover:opacity-90"
               >
                 Open Schedule Builder
               </Link>
             </div>
           </div>
-          <p className="text-slate-700">
+          <p className="text-slate-500 font-medium">
             Set filters, then load a semester and browse matching courses.
           </p>
         </header>
 
-        <section className="bg-white border rounded-2xl shadow-sm p-4 md:p-5 space-y-3">
+        <section className="bg-white border border-slate-100 rounded-2xl shadow-sm p-4 md:p-5 space-y-3">
           <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <label htmlFor="semester" className="block text-sm font-medium text-slate-700 mb-1">
+              <label htmlFor="semester" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
                 Semester
               </label>
               <select
                 id="semester"
                 value={semesterTable}
                 onChange={(event) => setSemesterTable(event.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
               >
                 {SEMESTER_OPTIONS.map((option) => (
                   <option key={option.table} value={option.table} disabled={option.disabled}>
@@ -608,7 +618,7 @@ export default function CoursesPage() {
             <button
               onClick={loadCourses}
               disabled={loading}
-              className="rounded-lg bg-blue-600 text-white font-semibold px-5 py-2.5 hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="rounded-xl schu-gradient text-white font-black px-5 py-2.5 hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed shadow-sm"
             >
               {loading ? 'Loading...' : 'Load Courses'}
             </button>
@@ -616,14 +626,14 @@ export default function CoursesPage() {
 
           <div className="grid gap-3 md:grid-cols-2">
             <div>
-              <label htmlFor="subjectFilter" className="block text-sm font-medium text-slate-700 mb-1">
+              <label htmlFor="subjectFilter" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
                 Subject
               </label>
               <select
                 id="subjectFilter"
                 value={subjectFilter}
                 onChange={(event) => setSubjectFilter(event.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
                 disabled={loading}
               >
                 <option value="all">All subjects</option>
@@ -636,14 +646,14 @@ export default function CoursesPage() {
             </div>
 
             <div>
-              <label htmlFor="unitsFilter" className="block text-sm font-medium text-slate-700 mb-1">
+              <label htmlFor="unitsFilter" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
                 Units
               </label>
               <select
                 id="unitsFilter"
                 value={unitsFilter}
                 onChange={(event) => setUnitsFilter(event.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
                 disabled={loading}
               >
                 <option value="">All units</option>
@@ -660,14 +670,14 @@ export default function CoursesPage() {
             </div>
 
             <div>
-              <label htmlFor="courseCodeFilter" className="block text-sm font-medium text-slate-700 mb-1">
+              <label htmlFor="courseCodeFilter" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
                 Course Number
               </label>
               <select
                 id="courseCodeFilter"
                 value={courseCodeFilter}
                 onChange={(event) => setCourseCodeFilter(event.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
                 disabled={loading || subjectFilter === 'all' || loadingCourseNumbers}
               >
                 <option value="">
@@ -686,7 +696,7 @@ export default function CoursesPage() {
             </div>
 
             <div>
-              <label htmlFor="titleFilter" className="block text-sm font-medium text-slate-700 mb-1">
+              <label htmlFor="titleFilter" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
                 Course title
               </label>
               <input
@@ -695,12 +705,12 @@ export default function CoursesPage() {
                 value={titleFilter}
                 onChange={(event) => setTitleFilter(event.target.value)}
                 placeholder="e.g. Data Structures"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2"
                 disabled={loading}
               />
             </div>
 
-            <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+            <div className="flex items-center gap-2 rounded-xl border border-slate-100 bg-gray-50 px-3 py-2">
               <input
                 id="honorsOnly"
                 type="checkbox"
@@ -734,8 +744,8 @@ export default function CoursesPage() {
           )}
         </section>
 
-        <section className="bg-white border rounded-2xl shadow-sm overflow-hidden">
-          <div className="border-b px-4 py-3 text-sm text-slate-700">
+        <section className="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden">
+          <div className="border-b px-4 py-3 text-sm text-slate-700 bg-gray-50/70">
             {loaded ? (
               <>
                 Showing <span className="font-semibold">{paginatedCourses.length}</span> of{' '}
@@ -751,7 +761,7 @@ export default function CoursesPage() {
               <article key={course.code} className="px-4 py-2">
                 <button
                   type="button"
-                  className="w-full rounded-lg p-2 text-left transition-colors hover:bg-slate-200 focus-visible:bg-slate-200"
+                  className="w-full rounded-xl p-3 text-left transition-colors hover:bg-slate-50 focus-visible:bg-slate-50"
                   onClick={() =>
                     setExpandedCourseCode((prev) => (prev === course.code ? null : course.code))
                   }
@@ -774,22 +784,22 @@ export default function CoursesPage() {
 
                     <div className="flex flex-col gap-3">
                       {(sectionsByCourseCode.get(course.code) ?? []).map((section, idx) => (
-                        <div key={`${course.code}-${section.class_number}-${idx}`} className="rounded-lg border border-slate-300 bg-slate-50 p-3 transition-all hover:border-slate-400 hover:shadow-sm">
+                        <div key={`${course.code}-${section.class_number}-${idx}`} className="rounded-xl border border-slate-100 bg-gray-50 p-4 transition-all hover:shadow-sm">
                           <div className="mb-2 text-sm font-semibold text-slate-800">
                             Section {section.section || 'N/A'} • Class #{section.class_number || 'N/A'}
                           </div>
                           <div className="grid gap-2 lg:grid-cols-3 text-sm">
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Code</p><p className="text-slate-900 break-words">{section.course_code_full}</p></div>
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Type</p><p className="text-slate-900 break-words">{section.type}</p></div>
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Location</p><p className="text-slate-900 break-words">{section.location}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Code</p><p className="text-slate-900 break-words">{section.course_code_full}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Type</p><p className="text-slate-900 break-words">{section.type}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Location</p><p className="text-slate-900 break-words">{section.location}</p></div>
 
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Title</p><p className="text-slate-900 break-words">{section.course_title}</p></div>
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Info</p><p className="text-slate-900 break-words">{section.course_info}</p></div>
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Days</p><p className="text-slate-900 break-words">{section.days}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Title</p><p className="text-slate-900 break-words">{section.course_title}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Info</p><p className="text-slate-900 break-words">{section.course_info}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Days</p><p className="text-slate-900 break-words">{section.days}</p></div>
 
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Units</p><p className="text-slate-900 break-words">{section.units}</p></div>
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Instructor</p><p className="text-slate-900 break-words">{section.instructor}</p></div>
-                            <div className="rounded border border-slate-300 bg-slate-200 px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-600">Time</p><p className="text-slate-900 break-words">{section.time}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Units</p><p className="text-slate-900 break-words">{section.units}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Instructor</p><p className="text-slate-900 break-words">{section.instructor}</p></div>
+                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Time</p><p className="text-slate-900 break-words">{section.time}</p></div>
                           </div>
 
                           <div className="mt-3">
@@ -797,7 +807,7 @@ export default function CoursesPage() {
                               type="button"
                               onClick={() => addSectionToCart(section)}
                               disabled={savingKey === `${section.course_code_full}|${section.class_number}|${section.section}`}
-                              className="rounded bg-emerald-600 px-3 py-1.5 text-white text-sm font-medium transition-colors hover:bg-emerald-800 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="rounded-xl schu-gradient px-3 py-1.5 text-white text-sm font-black transition-colors hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed"
                             >
                               {savingKey === `${section.course_code_full}|${section.class_number}|${section.section}`
                                 ? 'Adding...'
@@ -876,6 +886,7 @@ export default function CoursesPage() {
             </div>
           )}
         </section>
+      </div>
       </div>
     </div>
   )
