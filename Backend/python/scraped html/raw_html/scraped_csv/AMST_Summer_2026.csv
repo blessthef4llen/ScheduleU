@@ -1,0 +1,4 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,AMST,142,AMST 142,RACE AND HOLLYWOOD,3,GE: 3A (C1),01,10105,Summer_2026|AMST 142|01|10105,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Gomer J,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,AMST,350,AMST 350,CALIFORNIA CULTURE,3,GE: 3UD (UDC),01,10087,Summer_2026|AMST 350|01|10087,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Hashima L,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,AMST,350,AMST 350,CALIFORNIA CULTURE,3,GE: 3UD (UDC),02,10250,Summer_2026|AMST 350|02|10250,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Jackson B,Class instruction is: Asynch. Online-No Meet Times.

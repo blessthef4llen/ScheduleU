@@ -1,0 +1,4 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,EDEL,462,EDEL 462,"TEACH/LRNG MATH, K-8",3,,01,10538,Summer_2026|EDEL 462|01|10538,FALSE,\N,"307,1,10,93",LEC,TuTh,4-6:45PM,available,NA,Staff,"Class instruction is: Hybrid(Face to Face & Async).In order to begin the hours for fieldwork in this course, you will need a valid Certificate of Clearance and proof of a negative TB test."
+Summer_2026,EDEL,462,EDEL 462,"TEACH/LRNG MATH, K-8",3,,01,\N,Summer_2026|EDEL 462|01|NOCLASS|798af3f977e09e30,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
+Summer_2026,EDEL,472,EDEL 472,TEACH/LRNG HIS-SOC SCI K-8,3,,01,10837,Summer_2026|EDEL 472|01|10837,FALSE,\N,,LEC,MW,4-6:00PM,available,NA,Staff,Class instruction is: Face to Face - On Campus.

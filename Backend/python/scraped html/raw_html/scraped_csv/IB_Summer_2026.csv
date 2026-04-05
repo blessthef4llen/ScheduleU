@@ -1,0 +1,4 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,07,10916,Summer_2026|IB 300|07|10916,FALSE,\N,311,LEC,MW,8-12:00PM,,COB-112,Chen M,Class instruction is: Hybrid (Face to Face & Synch).
+Summer_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,07,\N,Summer_2026|IB 300|07|NOCLASS|1a90cdec9645f5e6,FALSE,\N,,,MW,8-12:00PM,,ONLINE-ONLY,Chen M,additional meeting detail
+Summer_2026,IB,300,IB 300,INTERNATIONAL BUSINESS,3,,06,10902,Summer_2026|IB 300|06|10902,FALSE,\N,310,LEC,TuTh,3-6:45PM,available,COB-112,Chen M,Class instruction is: Face to Face - On Campus.

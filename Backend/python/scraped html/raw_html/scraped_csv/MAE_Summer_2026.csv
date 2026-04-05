@@ -1,0 +1,28 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,MAE,272,MAE 272,INTRO MANUFACTURING PROCESSES,2,,01,10240,Summer_2026|MAE 272|01|10240,FALSE,\N,"1,310",SEM,MW,9-10:20AM,available,ET-019,Yoozbashizadeh M,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,272,MAE 272,INTRO MANUFACTURING PROCESSES,2,,01,\N,Summer_2026|MAE 272|01|NOCLASS|86e370c0eea86823,FALSE,\N,,,NA,NA,,NA,Staff,additional meeting detail
+Summer_2026,MAE,272,MAE 272,INTRO MANUFACTURING PROCESSES,2,,02,10241,Summer_2026|MAE 272|02|10241,FALSE,\N,"1,310",LAB,MW,10:30-2:15PM,available,ET-019,Yoozbashizadeh M,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,272,MAE 272,INTRO MANUFACTURING PROCESSES,2,,02,\N,Summer_2026|MAE 272|02|NOCLASS|6f23bf17807eb8e9,FALSE,\N,,,NA,NA,,NA,Staff,additional meeting detail
+Summer_2026,MAE,305,MAE 305,NUMERICAL METHODS IN MAE,3,GE: 2UD/5UD (UDB),01,10012,Summer_2026|MAE 305|01|10012,FALSE,\N,"1,310",SEM,TuTh,9-12:45PM,available,ECS-210,Esfandiari R,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,330,MAE 330,ENGR THERMODYNAMICS I,3,,01,10353,Summer_2026|MAE 330|01|10353,FALSE,\N,"310,1",SEM,MW,8:35-12:40PM,,VEC-202,Madadi E,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,333,MAE 333,ENGINEERING FLUID DYNAMICS,3,,01,10397,Summer_2026|MAE 333|01|10397,FALSE,\N,"310,1",SEM,TuTh,5-8:45PM,available,VEC-202,Khattab A,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,350,MAE 350,FLIGHT MECHANICS,3,,01,10400,Summer_2026|MAE 350|01|10400,FALSE,\N,310,SEM,MW,8:45-12:55PM,available,VEC-112,Schmitz A,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,371,MAE 371,ANALYTICL MECHANCS II DYNAMICS,3,,01,10392,Summer_2026|MAE 371|01|10392,FALSE,\N,310,SEM,TuTh,1-4:45PM,available,ECS-210,Minaie B,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,373,MAE 373,MECHANICS OF DEFORMABLE BODIES,3,,01,10352,Summer_2026|MAE 373|01|10352,FALSE,\N,"310,1",SEM,MW,1-5:05PM,available,VEC-202,Abdallah S,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,375,MAE 375,KINEMATICS DYNAMICS MECHANISMS,3,,01,10343,Summer_2026|MAE 375|01|10343,FALSE,\N,"1,310",SEM,MWF,8:30-10:15AM,,EN2-204,Roy S,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,375,MAE 375,KINEMATICS DYNAMICS MECHANISMS,3,,01,\N,Summer_2026|MAE 375|01|NOCLASS|857a7b12a78ccc88,FALSE,\N,,,NA,NA,,NA,Staff,additional meeting detail
+Summer_2026,MAE,375,MAE 375,KINEMATICS DYNAMICS MECHANISMS,3,,02,10344,Summer_2026|MAE 375|02|10344,FALSE,\N,"1,310",LAB,MWF,10:20-1:00PM,,EN2-204,Roy S,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,375,MAE 375,KINEMATICS DYNAMICS MECHANISMS,3,,02,\N,Summer_2026|MAE 375|02|NOCLASS|5051441413918f01,FALSE,\N,,,NA,NA,,NA,Staff,additional meeting detail
+Summer_2026,MAE,376,MAE 376,MODELING ANALYSIS DYNAMIC SYS,3,,02,10990,Summer_2026|MAE 376|02|10990,FALSE,\N,"1,310",SEM,TuTh,1-4:45PM,available,VEC-202,Karami N,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,431,MAE 431,HEAT TRANSFER SYSTEMS DESIGN,3,,01,10151,Summer_2026|MAE 431|01|10151,FALSE,\N,"1,310",SEM,TuTh,2-5:45PM,available,VEC-112,Dhillon N,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,322,MAE 322,ENGR MATERLS & MATERIALS PROC,3,,01,10168,Summer_2026|MAE 322|01|10168,FALSE,\N,"1,305",SEM,NA,NA,available,ONLINE-ONLY,Yavari P,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,MAE,330,MAE 330,ENGR THERMODYNAMICS I,3,,02,10991,Summer_2026|MAE 330|02|10991,FALSE,\N,"1,310",SEM,TuTh,1-4:45PM,available,VEC-113,Hashempour D,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,334,MAE 334,AERODYNAMICS I,3,,01,10399,Summer_2026|MAE 334|01|10399,FALSE,\N,"310,1",SEM,MW,1-4:45PM,available,VEC-113,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,336,MAE 336,POWER PLANT DESIGN,3,,01,10711,Summer_2026|MAE 336|01|10711,FALSE,\N,"310,1",SEM,TuTh,1-4:45PM,available,VEC-202,Ayegba P,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,371,MAE 371,ANALYTICL MECHANCS II DYNAMICS,3,,02,10203,Summer_2026|MAE 371|02|10203,FALSE,\N,"1,310",SEM,TuTh,9-12:45PM,,VEC-202,Janani S,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,373,MAE 373,MECHANICS OF DEFORMABLE BODIES,3,,02,10351,Summer_2026|MAE 373|02|10351,FALSE,\N,"310,1",SEM,MW,1-4:45PM,available,VEC-112,Saeidi M,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,376,MAE 376,MODELING ANALYSIS DYNAMIC SYS,3,,01,10398,Summer_2026|MAE 376|01|10398,FALSE,\N,310,SEM,TuTh,1-4:45PM,available,VEC-112,Staff,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,431,MAE 431,HEAT TRANSFER SYSTEMS DESIGN,3,,02,10992,Summer_2026|MAE 431|02|10992,FALSE,\N,"1,310",SEM,MW,9-12:45PM,available,ECS-210,Hsu J,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,476,MAE 476,MECH CONTROL SYSTEMS I,3,,03,11020,Summer_2026|MAE 476|03|11020,FALSE,\N,"1,310",SEM,MWF,1-2:40PM,available,ECS-208,Liu T,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,476,MAE 476,MECH CONTROL SYSTEMS I,3,,04,11021,Summer_2026|MAE 476|04|11021,FALSE,\N,"1,310",LAB,MWF,2:45-5:15PM,available,ECS-208,Liu T,Class instruction is: Face to Face - On Campus.
+Summer_2026,MAE,490G,MAE 490G,MECHATRONICS SYSTEMS DESIGN,3,,02,10985,Summer_2026|MAE 490G|02|10985,FALSE,\N,"1,310",SEM,TuTh,1-4:45PM,,EN2-204,Marayong P,Class instruction is: Face to Face - On Campus.Class offered with E E-442-02

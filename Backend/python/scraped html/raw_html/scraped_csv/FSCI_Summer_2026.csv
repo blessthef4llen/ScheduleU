@@ -1,0 +1,4 @@
+term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
+Summer_2026,FSCI,101,FSCI 101,FRANKEN FOOD: FACT OR SCI FI,3,GE: 1B (A3),01,10498,Summer_2026|FSCI 101|01|10498,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Rock C,Class instruction is: Asynch. Online-No Meet Times.
+Summer_2026,FSCI,492F,FSCI 492F,INTERNSHIP IN FOOD SCIENCE,3,,01,10311,Summer_2026|FSCI 492F|01|10311,FALSE,\N,305,SEM,NA,NA,available,ONLINE-ONLY,Koster B,Instructor Consent RequiredClass instruction is: Asynch. Online-No Meet Times.
+Summer_2026,FSCI,101,FSCI 101,FRANKEN FOOD: FACT OR SCI FI,3,GE: 1B (A3),02,10743,Summer_2026|FSCI 101|02|10743,FALSE,\N,305,LEC,NA,NA,available,ONLINE-ONLY,Rock C,Class instruction is: Asynch. Online-No Meet Times.
