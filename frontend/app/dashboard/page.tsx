@@ -16,6 +16,8 @@ export default function DashboardPage() {
     { name: "Notification Center", icon: "🔔", href: "/notifications", subtitle: "See live academic alerts" },
     { name: "Registration Timer", icon: "⏳", href: "/registration-countdown", subtitle: "Track your appointment window" },
     { name: "Travel Alerts", icon: "🚌", href: "/travelalerts", subtitle: "Monitor campus commute updates" },
+    { name: "Marketplace", icon: "🛒", href: "/marketplace", subtitle: "Browse student listings" },
+    { name: "Social Hub", icon: "👥", href: "/social-hub", subtitle: "Connect with your campus community" },
     { name: "Profile Setup", icon: "👤", href: "/user-profile", subtitle: "Manage your student profile" },
     { name: "Browse Courses", icon: "🔍", href: "/courses", subtitle: "Search sections and filters" },
   ];
@@ -23,7 +25,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-white font-sans">
       <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
-        <Link href="/" className="text-2xl font-bold text-white tracking-tight hover:opacity-80">
+        <Link href="/" className="text-2xl font-bold text-white tracking-tight hover:opacity-80 transition-opacity">
           ScheduleU
         </Link>
 
@@ -34,10 +36,10 @@ export default function DashboardPage() {
           <Link href="/user-profile" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
             <span className="text-schu-teal text-xs">👤</span>
           </Link>
-          <div className="flex flex-col gap-1 cursor-pointer">
-            <div className="w-6 h-0.5 bg-white"></div>
-            <div className="w-6 h-0.5 bg-white"></div>
-            <div className="w-6 h-0.5 bg-white"></div>
+          <div className="flex flex-col gap-1 cursor-pointer group">
+            <div className="w-6 h-0.5 bg-white group-hover:bg-slate-200"></div>
+            <div className="w-6 h-0.5 bg-white group-hover:bg-slate-200"></div>
+            <div className="w-6 h-0.5 bg-white group-hover:bg-slate-200"></div>
           </div>
         </nav>
       </header>
@@ -54,13 +56,9 @@ export default function DashboardPage() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {tools.map((tool) => {
-            const card = (
+            const cardContent = (
               <>
-                <div className={`w-full aspect-square border-2 rounded-sm p-6 mb-3 transition-all bg-white flex items-center justify-center ${
-                  tool.href
-                    ? 'border-slate-100 group-hover:shadow-xl'
-                    : 'border-slate-200 opacity-70'
-                }`}>
+                <div className="w-full aspect-square border-2 rounded-sm p-6 mb-3 transition-all bg-white flex items-center justify-center border-slate-100 group-hover:shadow-xl group-hover:border-schu-teal/30">
                   <span className="text-5xl">{tool.icon}</span>
                 </div>
                 <p className="text-[11px] font-bold text-slate-800 uppercase text-center tracking-tight">
@@ -70,13 +68,13 @@ export default function DashboardPage() {
                   {tool.subtitle}
                 </p>
               </>
-            )
+            );
 
             return (
               <Link key={tool.name} href={tool.href} className="flex flex-col items-center group cursor-pointer">
-                {card}
+                {cardContent}
               </Link>
-            )
+            );
           })}
         </div>
       </main>
