@@ -1,9 +1,0 @@
-term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
-Summer_2026,HDEV,180,HDEV 180,LIFESPAN HUMAN DEVELOPMENT,3,"GE: 4C (D3), E",01,10090,Summer_2026|HDEV 180|01|10090,FALSE,\N,"1,17,305",LEC,NA,NA,available,ONLINE-ONLY,Kelly K,Class instruction is: Asynch. Online-No Meet Times.
-Summer_2026,HDEV,190,HDEV 190,ELEMENTARY STATISTICS,4,GE: 2 (B4),01,10515,Summer_2026|HDEV 190|01|10515,FALSE,\N,"1,17,305",SEM,NA,NA,available,ONLINE-ONLY,Schryer E,Class instruction is: Asynch. Online-No Meet Times.
-Summer_2026,HDEV,190,HDEV 190,ELEMENTARY STATISTICS,4,GE: 2 (B4),02,10516,Summer_2026|HDEV 190|02|10516,FALSE,\N,309,ACT,Th,9:30-11:15AM,available,ONLINE-ONLY,Schryer E,Class instruction is: Online - Mixed Meet Times.
-Summer_2026,HDEV,190,HDEV 190,ELEMENTARY STATISTICS,4,GE: 2 (B4),02,\N,Summer_2026|HDEV 190|02|NOCLASS|a1a0ab7805688e0d,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
-Summer_2026,HDEV,190,HDEV 190,ELEMENTARY STATISTICS,4,GE: 2 (B4),03,10594,Summer_2026|HDEV 190|03|10594,FALSE,\N,"309,1,17",ACT,Th,11:30-1:15PM,available,ONLINE-ONLY,Schryer E,Class instruction is: Online - Mixed Meet Times.
-Summer_2026,HDEV,190,HDEV 190,ELEMENTARY STATISTICS,4,GE: 2 (B4),03,\N,Summer_2026|HDEV 190|03|NOCLASS|6b66c2308c1a0d56,FALSE,\N,,,NA,NA,,ONLINE-ONLY,Staff,additional meeting detail
-Summer_2026,HDEV,470,HDEV 470,SEMINAR & PRACTICUM,3,,01,10332,Summer_2026|HDEV 470|01|10332,FALSE,\N,"1,18,180,217,306",LEC,W,11-12:15PM,available,ONLINE-ONLY,El Ouardani C,Class instruction is: Synch. Online - Meet Times.
-Summer_2026,HDEV,470,HDEV 470,SEMINAR & PRACTICUM,3,,02,10033,Summer_2026|HDEV 470|02|10033,FALSE,\N,"1,180,217,308",ACT,NA,NA,available,OFF-CAMP,El Ouardani C,Class instruction is: Face to Face - Off Campus.

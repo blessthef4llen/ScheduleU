@@ -1,8 +1,0 @@
-term,subject,course_number,course_code_full,course_title,units,course_info,sec,class_number,section_uid,no_material_cost,reserve_capacity,class_notes_ref,type,days,time,open_seats,location,instructor,comment
-Summer_2026,C,E 205,C E 205,ANALYTICAL MECHANICS I STATICS,3,,01,10413,Summer_2026|C E 205|01|10413,FALSE,\N,308,SEM,TuWTh,9:30-11:10AM,available,VEC-227,Staff,Class instruction is: Face to Face - On Campus.
-Summer_2026,C,E 205,C E 205,ANALYTICAL MECHANICS I STATICS,3,,02,10414,Summer_2026|C E 205|02|10414,FALSE,\N,308,ACT,TuWTh,11:20-1:00PM,available,VEC-227,Staff,Class instruction is: Face to Face - On Campus.
-Summer_2026,C,E 335,C E 335,FLUID MECHANICS,3,,01,10237,Summer_2026|C E 335|01|10237,FALSE,\N,310,SEM,MW,4-8:05PM,available,VEC-227,Bonazzi A,Class instruction is: Face to Face - On Campus.
-Summer_2026,C,E 335,C E 335,FLUID MECHANICS,3,,01,\N,Summer_2026|C E 335|01|NOCLASS|cdb0c85e171b369f,FALSE,\N,,,NA,NA,,NA,Staff,additional meeting detail
-Summer_2026,C,E 205,C E 205,ANALYTICAL MECHANICS I STATICS,3,,03,11049,Summer_2026|C E 205|03|11049,FALSE,\N,310,SEM,TuWTh,9:30-11:10AM,available,VEC-227,Redman J,Class instruction is: Face to Face - On Campus.
-Summer_2026,C,E 205,C E 205,ANALYTICAL MECHANICS I STATICS,3,,04,11050,Summer_2026|C E 205|04|11050,FALSE,\N,310,ACT,TuWTh,11:20-1:00PM,available,VEC-227,Redman J,Class instruction is: Face to Face - On Campus.
-Summer_2026,C,E 406,C E 406,PROJECT COST-BENEFIT ANALYSIS,3,GE: 4UD (UDD),01,10335,Summer_2026|C E 406|01|10335,FALSE,\N,310,SEM,MW,3-6:45PM,available,VEC-322,Shehab T,Class instruction is: Face to Face - On Campus.
