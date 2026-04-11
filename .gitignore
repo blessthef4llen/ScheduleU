@@ -39,18 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Python (local tooling; scraped/backend tree not tracked)
-venv
-.venv
-**/venv/
-**/.venv/
-__pycache__/
-**/__pycache__/
-*.pyc
-
-# testcases
-test_cases.txt
-
-# Windows-incompatible / large Python artifacts (see repo history)
-Backend/python/
