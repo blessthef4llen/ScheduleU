@@ -1,33 +1,56 @@
 import { NextResponse } from "next/server";
+import { getRegistrationWindowForUser } from "@/lib/services/registration";
+import { requireAuthUser } from "@/lib/supabaseRoute";
 import { createServerSupabase } from "@/lib/supabaseServer";
 
 type ReminderRequest = {
-  user_id?: string;
   registration_at?: string;
 };
 
-function isUuid(v: string): boolean {
-  return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v);
+function jsonError(message: string, status: number, details?: string) {
+  return NextResponse.json({ error: message, ...(details ? { details } : {}) }, { status });
 }
 
 export async function POST(req: Request) {
   try {
-    const body = (await req.json()) as ReminderRequest;
-    const userId = (body.user_id ?? "").trim();
-    const registrationAtIso = (body.registration_at ?? "").trim();
+    const auth = await requireAuthUser();
+    if (!auth.user) {
+      return jsonError("Unauthorized", 401, auth.error);
+    }
 
-    if (!userId || !isUuid(userId) || !registrationAtIso) {
-      return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
+    const userId = auth.user.id;
+    let body: ReminderRequest;
+    try {
+      body = (await req.json()) as ReminderRequest;
+    } catch {
+      return jsonError("Invalid JSON body", 400);
+    }
+
+    const registrationAtIso = (body.registration_at ?? "").trim();
+    if (!registrationAtIso) {
+      return jsonError("Invalid payload", 400, "registration_at is required");
     }
 
     const registrationAt = new Date(registrationAtIso);
     if (Number.isNaN(registrationAt.getTime())) {
-      return NextResponse.json({ error: "Invalid registration_at" }, { status: 400 });
+      return jsonError("Invalid registration_at", 400);
+    }
+
+    const { data: appt, error: apptError } = await getRegistrationWindowForUser(auth.supabase, userId);
+    if (apptError) {
+      console.error("[registration-reminder] appointment lookup failed", apptError.message);
+      return jsonError("Failed to verify appointment", 500, apptError.message);
+    }
+    if (!appt?.registration_time) {
+      return jsonError("No registration appointment found for user", 400);
+    }
+
+    const stored = new Date(appt.registration_time).getTime();
+    if (Number.isNaN(stored) || Math.abs(stored - registrationAt.getTime()) > 60_000) {
+      return jsonError("registration_at does not match your stored appointment", 400);
     }
 
     const supabase = createServerSupabase();
-
-    // Deterministic signature: type + user_id + appointment ISO in message.
     const type = "registration_reminder_24h";
     const signature = `[registration_at=${registrationAt.toISOString()}]`;
     const message = `Registration Reminder: Your registration opens in 24 hours. ${signature}`;
@@ -42,10 +65,7 @@ export async function POST(req: Request) {
 
     if (existsError) {
       console.error("[registration-reminder] check failed", existsError.message);
-      return NextResponse.json(
-        { error: "Failed to check reminder status", details: existsError.message },
-        { status: 500 }
-      );
+      return jsonError("Failed to check reminder status", 500, existsError.message);
     }
 
     if (existing && existing.length > 0) {
@@ -62,17 +82,13 @@ export async function POST(req: Request) {
 
     if (insertError) {
       console.error("[registration-reminder] insert failed", insertError.message);
-      return NextResponse.json(
-        { error: "Failed to create reminder", details: insertError.message },
-        { status: 500 }
-      );
+      return jsonError("Failed to create reminder", 500, insertError.message);
     }
 
     return NextResponse.json({ created: true });
   } catch (e) {
     const message = e instanceof Error ? e.message : "Unknown error";
     console.error("[registration-reminder] unexpected", message);
-    return NextResponse.json({ error: "Request failed", details: message }, { status: 500 });
+    return jsonError("Request failed", 500, message);
   }
 }
-

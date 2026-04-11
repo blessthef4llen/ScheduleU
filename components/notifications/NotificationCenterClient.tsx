@@ -75,11 +75,8 @@ export default function NotificationCenterClient({
       const id = userData.user.id;
       setUserId(id);
 
-      const { data, error } = await supabase
-        .from("notification_center")
-        .select("*")
-        .eq("user_id", id)
-        .order("created_at", { ascending: false });
+      const res = await fetch("/api/notifications");
+      const json = (await res.json()) as { notifications?: NotificationRecord[]; error?: string };
 
       // #region agent log
       fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
@@ -91,15 +88,19 @@ export default function NotificationCenterClient({
           hypothesisId: "H3",
           location: "components/notifications/NotificationCenterClient.tsx:73",
           message: "client center notifications fetch result",
-          data: { count: data?.length ?? 0, hasError: Boolean(error), errorCode: error?.code ?? null },
+          data: {
+            count: json.notifications?.length ?? 0,
+            hasError: !res.ok,
+            errorCode: json.error ?? null,
+          },
           timestamp: Date.now(),
         }),
       }).catch(() => {});
       // #endregion
-      if (error) {
+      if (!res.ok) {
         setClientFetchError(true);
-      } else if (data) {
-        setNotifications(data as NotificationRecord[]);
+      } else if (json.notifications) {
+        setNotifications(json.notifications);
         setClientFetchError(false);
       }
     }
@@ -172,13 +173,20 @@ export default function NotificationCenterClient({
   }, [notifications, activeFilter, searchValue, sortBy]);
 
   const markAsRead = async (id: string) => {
-    const supabase = getSupabase();
-    await supabase.from("notification_center").update({ is_read: true }).eq("id", id);
+    await fetch("/api/notifications", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
     setNotifications((prev) => prev.map((n) => (n.id === id ? { ...n, is_read: true } : n)));
   };
 
   const dismissNotification = async (id: string) => {
-    await supabase.from("notification_center").delete().eq("id", id);
+    await fetch("/api/notifications", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
     setNotifications((prev) => prev.filter((n) => n.id !== id));
   };
 
@@ -222,7 +230,7 @@ export default function NotificationCenterClient({
       ) : null}
       {clientFetchError ? (
         <AlertBanner>
-          Notifications are temporarily unavailable from Supabase. Please verify your session and table access policy.
+          Notifications are temporarily unavailable from the server API. Please verify your session and try again.
         </AlertBanner>
       ) : null}
 

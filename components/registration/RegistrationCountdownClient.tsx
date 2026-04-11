@@ -15,7 +15,7 @@ import type { RegistrationWindowRow } from "./types";
 
 type StatusTone = "info" | "urgent" | "unread" | "read";
 
-const DEMO_ALWAYS = true;
+const DEMO_ALWAYS = process.env.NEXT_PUBLIC_REGISTRATION_DEMO_ALWAYS !== "false";
 const DEMO_SECONDS_FROM_NOW = 30;
 
 function formatAppointment(d: Date): { dayText: string; timeText: string } {
@@ -68,21 +68,18 @@ export default function RegistrationCountdownClient() {
       setNotSignedIn(false);
       setUserId(userData.user.id);
 
-      const { data, error } = await supabase
-        .from("registration_windows")
-        .select("registration_time,user_id,id")
-        .eq("user_id", userData.user.id)
-        .order("registration_time", { ascending: true })
-        .limit(1);
-
-      if (error) {
-        setLoadError(error.message);
+      const res = await fetch("/api/registration-appointment");
+      if (!res.ok) {
+        const errBody = await res.json().catch(() => ({}));
+        const msg = typeof errBody.error === "string" ? errBody.error : res.statusText;
+        setLoadError(msg);
         setRegistrationAt(null);
         setLoading(false);
         return;
       }
 
-      const row = (data?.[0] ?? null) as RegistrationWindowRow | null;
+      const json = (await res.json()) as { appointment?: RegistrationWindowRow | null };
+      const row = json.appointment ?? null;
       const ts = row?.registration_time ?? null;
       if (!ts) {
         setRegistrationAt(null);

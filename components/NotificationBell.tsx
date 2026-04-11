@@ -42,11 +42,8 @@ export default function NotificationBell() {
     if (!userId) return;
 
     async function fetchNotifications() {
-      const { data, error } = await supabase
-        .from("notification_center")
-        .select("*")
-        .eq("user_id", userId)
-        .order("created_at", { ascending: false });
+      const res = await fetch("/api/notifications");
+      const json = (await res.json()) as { notifications?: NotificationRecord[]; error?: string };
 
       // #region agent log
       fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
@@ -58,12 +55,17 @@ export default function NotificationBell() {
           hypothesisId: "H3",
           location: "components/NotificationBell.tsx:48",
           message: "client notification fetch result",
-          data: { userIdPresent: Boolean(userId), count: data?.length ?? 0, hasError: Boolean(error), errorCode: error?.code ?? null },
+          data: {
+            userIdPresent: Boolean(userId),
+            count: json.notifications?.length ?? 0,
+            hasError: !res.ok,
+            errorCode: json.error ?? null,
+          },
           timestamp: Date.now(),
         }),
       }).catch(() => {});
       // #endregion
-      if (data) setNotifications(data);
+      if (json.notifications) setNotifications(json.notifications);
     }
 
     fetchNotifications();
@@ -100,7 +102,7 @@ export default function NotificationBell() {
           }).catch(() => {});
           // #endregion
           if (payload.new.user_id === userId) {
-            setNotifications((prev) => [payload.new, ...prev]);
+            setNotifications((prev) => [payload.new as NotificationRecord, ...prev]);
           }
         }
       )
@@ -116,10 +118,11 @@ export default function NotificationBell() {
 
   // 🔹 Mark as read
   const markRead = async (id: string) => {
-    await supabase
-      .from("notification_center")
-      .update({ is_read: true })
-      .eq("id", id);
+    await fetch("/api/notifications", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
 
     setNotifications((prev) =>
       prev.map((n) =>
@@ -130,11 +133,11 @@ export default function NotificationBell() {
 
   // 🔹 Delete notification
   const deleteNotif = async (id: string) => {
-    const supabase = getSupabase();
-    await supabase
-      .from("notification_center")
-      .delete()
-      .eq("id", id);
+    await fetch("/api/notifications", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
 
     setNotifications((prev) =>
       prev.filter((n) => n.id !== id)

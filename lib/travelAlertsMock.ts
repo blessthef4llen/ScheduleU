@@ -1,22 +1,6 @@
-export type TravelCategory = "shuttle" | "parking" | "weather" | "advisory";
+import type { TravelAlert } from "@/lib/types/travelAlert";
 
-export type TravelShuttleStatus = "on-time" | "delayed";
-
-export type TravelPriority = "high" | "normal";
-
-export type TravelAlert = {
-  id: string;
-  category: TravelCategory;
-  title: string;
-  message: string;
-  route?: string;
-  location?: string;
-  shuttleStatus?: TravelShuttleStatus;
-  updatedLabel: string;
-  priority: TravelPriority;
-  /** Lower = more recent for sort */
-  sortIndex: number;
-};
+export type { TravelCategory, TravelShuttleStatus, TravelPriority, TravelAlert, TravelFilterTab } from "@/lib/types/travelAlert";
 
 export const TRAVEL_MOCK_ALERTS: TravelAlert[] = [
   {
@@ -92,8 +76,6 @@ export const TRAVEL_MOCK_ALERTS: TravelAlert[] = [
     sortIndex: 5,
   },
 ];
-
-export type TravelFilterTab = "all" | "shuttle" | "advisory" | "delayed";
 
 export function pickFeaturedAlert(alerts: TravelAlert[]): TravelAlert | null {
   if (alerts.length === 0) return null;
