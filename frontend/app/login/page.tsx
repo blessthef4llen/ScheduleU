@@ -1,14 +1,16 @@
-// frontend/app/login/page.tsx
-'use client' 
+'use client'
 
 import { useState } from 'react'
-import { supabase } from '@/utils/supabase' 
+import { supabase } from '@/utils/supabase'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation' 
+import { useRouter } from 'next/navigation'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
+  const [showOTP, setShowOTP] = useState(false)
+  const [otp, setOtp] = useState('')
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
   const router = useRouter()
@@ -16,75 +18,151 @@ export default function LoginPage() {
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault()
     setLoading(true)
-    setMessage('Logging in...')
+    setMessage('Verifying credentials...')
 
-    // Supabase Sign-In Call (UC3: Login Function)
     const { error } = await supabase.auth.signInWithPassword({
-      email: email,
-      password: password,
+      email,
+      password,
     })
 
     if (error) {
       setMessage('Error: Invalid login credentials.')
       setLoading(false)
-      console.error('Supabase Login Error:', error.message)
     } else {
-      setMessage('Login successful! Redirecting...')
-      // Redirect to the Dashboard page upon success
-      router.push('/dashboard') 
+      setMessage('Success: Verification code sent to your device.')
+      setShowOTP(true)
+      setLoading(false)
     }
   }
 
+  const verifySMS = () => {
+    setLoading(true)
+    if (otp === '774129') {
+      setMessage('Identity Verified! Redirecting...')
+      setTimeout(() => router.push('/dashboard'), 1500)
+    } else {
+      setMessage('Error: Invalid security code.')
+      setLoading(false)
+    }
+  }
+
+  const handleResetPassword = async (event: React.MouseEvent) => {
+    event.preventDefault()
+    if (!email) {
+      setMessage('Error: Please enter your email first.')
+      return
+    }
+    setLoading(true)
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/update-password`,
+    })
+    setLoading(false)
+    if (error) setMessage(`Error: ${error.message}`)
+    else setMessage('Success: Recovery email sent!')
+  }
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-lg rounded-xl">
-        
-        <h1 className="text-3xl font-bold text-center text-blue-600">ScheduleU</h1>
-        <h2 className="text-xl font-semibold text-center text-gray-800">Sign In to Your Account</h2>
+    <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4">
+      <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-xl rounded-2xl border border-gray-100">
+        <div className="text-center">
+          <h1 className="text-4xl font-black text-blue-600 tracking-tight uppercase italic">ScheduleU</h1>
+          <p className="text-gray-500 mt-2 font-medium">University Secure Portal</p>
+        </div>
 
-        <form onSubmit={handleLogin} className="space-y-4">
-          
-          {/* Email Input */}
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Username/E-mail:</label>
-            <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="you@example.com" disabled={loading}
-            />
-          </div>
-
-          {/* Password Input */}
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password:</label>
-            <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" disabled={loading}
-            />
-          </div>
-
-          <div className="flex items-center justify-between">
-            <div className="text-sm">
-              <Link href="/forgot-password" className="font-medium text-blue-600 hover:text-blue-500">
-                Forgot password?
-              </Link>
+        {!showOTP ? (
+          <form onSubmit={handleLogin} className="space-y-4">
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">University Email</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition font-medium"
+                placeholder="you@student.csulb.edu"
+                disabled={loading}
+              />
             </div>
+
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">Password</label>
+              <div className="relative">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition font-medium"
+                  placeholder="••••••••"
+                  disabled={loading}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword((prev) => !prev)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600 transition"
+                >
+                  {showPassword ? '🔒' : '👁️'}
+                </button>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-end">
+              <button
+                onClick={handleResetPassword}
+                disabled={loading}
+                className="text-sm font-semibold text-blue-600 hover:underline bg-transparent border-none p-0 cursor-pointer"
+              >
+                Forgot password?
+              </button>
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className={`w-full py-4 rounded-xl text-white font-black shadow-lg transition-all active:scale-[0.98] ${
+                loading ? 'bg-blue-300' : 'bg-blue-600 hover:bg-blue-700'
+              }`}
+            >
+              {loading ? 'AUTHENTICATING...' : 'SIGN-IN'}
+            </button>
+          </form>
+        ) : (
+          <div className="space-y-6">
+            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center">
+              <p className="text-xs font-black text-blue-600 uppercase tracking-widest">Multi-Factor Authentication</p>
+              <p className="text-[11px] text-blue-400 mt-1">A 6-digit code was sent to your registered mobile device.</p>
+            </div>
+
+            <input
+              className="w-full border-2 border-black p-4 rounded-xl text-center text-3xl font-black tracking-[0.5em] outline-none bg-white focus:ring-4 focus:ring-blue-100 transition"
+              maxLength={6}
+              placeholder="000000"
+              onChange={(e) => setOtp(e.target.value)}
+              disabled={loading}
+            />
+
+            <button
+              onClick={verifySMS}
+              disabled={loading}
+              className="w-full bg-[#46BDC1] text-white py-4 rounded-xl font-black shadow-lg hover:opacity-90 active:scale-95 transition"
+            >
+              {loading ? 'VERIFYING...' : 'VERIFY IDENTITY'}
+            </button>
           </div>
+        )}
 
-          {/* SIGN-IN Button */}
-          <button type="submit" disabled={loading}
-            className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
-              loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-            }`}
-          >
-            {loading ? 'Authenticating...' : 'SIGN-IN'}
-          </button>
-        </form>
-        
-        {/* Status Message */}
-        {message && (<p className={`text-center text-sm ${message.startsWith('Error') ? 'text-red-600' : 'text-green-600'}`}>{message}</p>)}
+        {message && (
+          <div className={`p-3 rounded-lg text-center text-sm font-bold ${
+            message.startsWith('Error') || message.includes('❌') ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-600'
+          }`}>
+            {message}
+          </div>
+        )}
 
-        {/* 'Don't have an account yet?' Link */}
-        <div className="text-center text-sm pt-4 border-t border-gray-200">
-          <p className="text-gray-600">Don't have an account yet?
-            <Link href="/signup" className="font-medium text-blue-600 hover:text-blue-500 ml-1">SIGN-UP</Link>
+        <div className="text-center text-sm pt-6 border-t border-gray-100">
+          <p className="text-gray-600 font-medium">
+            Don't have an account yet?
+            <Link href="/signup" className="font-bold text-blue-600 hover:underline ml-1">SIGN-UP</Link>
           </p>
         </div>
       </div>

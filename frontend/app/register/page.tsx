@@ -23,12 +23,15 @@ export default function Register() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 text-black">
-      <div className="p-8 bg-white shadow-2xl rounded-3xl w-full max-w-md border">
-        <h1 className="text-3xl font-bold mb-6 text-center text-blue-700">Join ScheduleU</h1>
-        <input type="email" placeholder="email@school.edu" className="border p-4 rounded-xl w-full mb-4" onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" className="border p-4 rounded-xl w-full mb-4" onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={handleSignUp} className="w-full bg-blue-600 text-white p-4 rounded-xl font-bold">Create Account</button>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-black p-4">
+      <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-xl rounded-2xl border border-gray-100">
+        <div className="text-center">
+          <h1 className="text-4xl font-black text-blue-600 tracking-tight uppercase italic">ScheduleU</h1>
+          <p className="text-gray-500 mt-2 font-medium">Create your university account</p>
+        </div>
+        <input type="email" placeholder="email@school.edu" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition font-medium" onChange={(e) => setEmail(e.target.value)} />
+        <input type="password" placeholder="Password" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition font-medium" onChange={(e) => setPassword(e.target.value)} />
+        <button onClick={handleSignUp} className="w-full py-4 rounded-xl text-white font-black shadow-lg transition-all active:scale-[0.98] bg-blue-600 hover:bg-blue-700">Create Account</button>
         {message && <p className="mt-4 text-center font-medium">{message}</p>}
       </div>
     </div>
