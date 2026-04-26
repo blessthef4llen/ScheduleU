@@ -70,6 +70,7 @@ class LockedSection(BaseModel):
 class TermScheduleRequest(BaseModel):
     term: str
     requested_courses: list[str]
+    completed_courses: list[str] = Field(default_factory=list)
     locked_sections: list[LockedSection] = Field(default_factory=list)
     constraints: TermConstraints = Field(default_factory=TermConstraints)
 

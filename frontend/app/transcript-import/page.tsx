@@ -276,7 +276,7 @@ export default function TranscriptImportPage() {
         raw_line: course.raw_line,
         matched_catalog: course.matched_catalog,
         confidence: course.confidence,
-        source: 'transcript_import',
+        source: 'completed_courses',
       }))
 
       const { error: upsertError } = await supabase

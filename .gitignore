@@ -62,3 +62,6 @@ __pycache__/
 
 #testcases
 test_cases.txt
+
+# local notes
+local-notes/

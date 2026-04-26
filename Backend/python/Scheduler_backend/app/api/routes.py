@@ -129,15 +129,36 @@ def schedule_generate(req: GenerateRequest):
 def term_schedule(req: TermScheduleRequest):
     # Normalize requested courses
     requested = [norm_course_code(c) for c in req.requested_courses if norm_course_code(c)]
+    completed = {norm_course_code(c) for c in req.completed_courses if norm_course_code(c)}
     if not requested:
         return TermScheduleResponse(term=req.term, warnings=["No valid requested_courses provided."])
 
+    blocked_by_prereq = {}
+    eligible_requested = []
+    for course in requested:
+        unmet = sorted([p for p in DEP_MODEL.all_prereqs(course) if p not in completed]) if DEP_MODEL is not None else []
+        if unmet:
+            blocked_by_prereq[course] = unmet
+        else:
+            eligible_requested.append(course)
+
+    if not eligible_requested:
+        warnings = ["No requested courses are currently eligible because prerequisite requirements are not satisfied."]
+        warnings.extend(
+            [f"{course} is blocked by missing prerequisites: {', '.join(unmet)}" for course, unmet in blocked_by_prereq.items()]
+        )
+        return TermScheduleResponse(
+            term=req.term,
+            unscheduled_courses=sorted(set(requested)),
+            warnings=warnings,
+        )
+
     # Load section options from Supabase
-    options_by_course = load_section_options_for_courses(requested)
+    options_by_course = load_section_options_for_courses(eligible_requested)
     locked_by_course = {
         norm_course_code(item.course): item.section_id.strip()
         for item in req.locked_sections
-        if norm_course_code(item.course) and item.section_id.strip()
+        if norm_course_code(item.course) and item.section_id.strip() and norm_course_code(item.course) in set(eligible_requested)
     }
 
     # Convert one time string to minutes.
@@ -216,15 +237,19 @@ def term_schedule(req: TermScheduleRequest):
     best = ranked[0][0] if ranked else []
 
     if not best:
-        unscheduled = sorted(list(set(requested)))
+        unscheduled = sorted(list(set(eligible_requested)))
+        unscheduled.extend(sorted(blocked_by_prereq.keys()))
         warnings = ["No conflict-free schedule found for the requested courses."]
         if locked_by_course:
             warnings.append("Some locked sections could not be used with the current constraints.")
         if failures:
             warnings.append(f"Section availability issues: {failures}")
+        warnings.extend(
+            [f"{course} is blocked by missing prerequisites: {', '.join(unmet)}" for course, unmet in blocked_by_prereq.items()]
+        )
         return TermScheduleResponse(
             term=req.term,
-            unscheduled_courses=unscheduled,
+            unscheduled_courses=sorted(set(unscheduled)),
             warnings=warnings,
         )
 
@@ -275,8 +300,12 @@ def term_schedule(req: TermScheduleRequest):
         })
 
     scheduled_courses = {s["course"] for s in selected_sections}
-    unscheduled = sorted([c for c in requested if c not in scheduled_courses])
+    unscheduled = sorted([c for c in eligible_requested if c not in scheduled_courses])
+    unscheduled.extend(sorted(blocked_by_prereq.keys()))
     warnings = [] if not unscheduled else ["Some requested courses could not be scheduled conflict-free."]
+    warnings.extend(
+        [f"{course} is blocked by missing prerequisites: {', '.join(unmet)}" for course, unmet in blocked_by_prereq.items()]
+    )
 
     if locked_by_course and best:
         best_selected = {sec.course: sec.section_id for sec in best}
@@ -293,7 +322,7 @@ def term_schedule(req: TermScheduleRequest):
         term=req.term,
         selected_sections=selected_sections,
         generated_schedules=generated_schedules,
-        unscheduled_courses=unscheduled,
+        unscheduled_courses=sorted(set(unscheduled)),
         warnings=warnings,
     )
 
