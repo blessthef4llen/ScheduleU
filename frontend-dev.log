@@ -1,0 +1,16 @@
+
+> schedule-u@0.1.0 dev
+> next dev --webpack
+
+▲ Next.js 16.2.0 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.56.1:3000
+- Environments: .env.local
+✓ Ready in 1196ms
+
+○ Compiling /dashboard ...
+ GET /dashboard 200 in 7.6s (next.js: 7.2s, application-code: 393ms)
+ GET /notifications 200 in 2.1s (next.js: 1674ms, application-code: 400ms)
+ GET /registration-countdown 200 in 856ms (next.js: 708ms, application-code: 148ms)
+ GET /ai-workload-scorer 200 in 857ms (next.js: 706ms, application-code: 151ms)
+ GET /travelalerts 200 in 1021ms (next.js: 849ms, application-code: 172ms)

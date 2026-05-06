@@ -4,10 +4,30 @@ import { cookies } from "next/headers";
 /**
  * Supabase client bound to the current request cookies (user session) for Route Handlers.
  */
+function getRouteSupabaseEnv(): { supabaseUrl: string; supabaseAnonKey: string } {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const missing = [
+    !supabaseUrl ? "NEXT_PUBLIC_SUPABASE_URL" : null,
+    !supabaseAnonKey ? "NEXT_PUBLIC_SUPABASE_ANON_KEY" : null,
+  ].filter(Boolean);
+
+  if (missing.length > 0) {
+    throw new Error(
+      `ScheduleU Supabase route client is missing ${missing.join(
+        " and "
+      )}. Add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to .env.local, then restart npm run dev.`
+    );
+  }
+
+  return { supabaseUrl: supabaseUrl!, supabaseAnonKey: supabaseAnonKey! };
+}
+
 export async function createSupabaseRouteClient() {
   const cookieStore = await cookies();
+  const { supabaseUrl, supabaseAnonKey } = getRouteSupabaseEnv();
 
-  return createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
+  return createServerClient(supabaseUrl, supabaseAnonKey, {
     cookies: {
       getAll() {
         return cookieStore.getAll();

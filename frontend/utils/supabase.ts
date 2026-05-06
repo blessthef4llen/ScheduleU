@@ -1,6 +1,20 @@
-import { createClient } from '@supabase/supabase-js'
+"use client";
 
-const supabaseUrl = 'https://rrmvpaiscnxeildyufmk.supabase.co'
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJybXZwYWlzY254ZWlsZHl1Zm1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM5MzE2OTgsImV4cCI6MjA3OTUwNzY5OH0.lll6ka__K2gO3XjpVAUx06lT5fHlcyfUdqGVP-2hDwc'
+import { createClient } from "@supabase/supabase-js";
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const missing = [
+  !supabaseUrl ? "NEXT_PUBLIC_SUPABASE_URL" : null,
+  !supabaseAnonKey ? "NEXT_PUBLIC_SUPABASE_ANON_KEY" : null,
+].filter(Boolean);
+
+if (missing.length > 0) {
+  throw new Error(
+    `ScheduleU Supabase browser client is missing ${missing.join(
+      " and "
+    )}. Add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to .env.local, then restart npm run dev.`
+  );
+}
+
+export const supabase = createClient(supabaseUrl!, supabaseAnonKey!);
