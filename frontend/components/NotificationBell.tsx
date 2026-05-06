@@ -41,6 +41,7 @@ export default function NotificationBell() {
   useEffect(() => {
     if (!userId) return;
 
+    const supabase = getSupabase();
     async function fetchNotifications() {
       const { data, error } = await supabase
         .from("notification_center")
@@ -100,7 +101,7 @@ export default function NotificationBell() {
           }).catch(() => {});
           // #endregion
           if (payload.new.user_id === userId) {
-            setNotifications((prev) => [payload.new, ...prev]);
+            setNotifications((prev) => [payload.new as NotificationRecord, ...prev]);
           }
         }
       )
@@ -116,6 +117,7 @@ export default function NotificationBell() {
 
   // 🔹 Mark as read
   const markRead = async (id: string) => {
+    const supabase = getSupabase();
     await supabase
       .from("notification_center")
       .update({ is_read: true })

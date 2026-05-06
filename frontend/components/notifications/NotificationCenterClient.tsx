@@ -178,6 +178,7 @@ export default function NotificationCenterClient({
   };
 
   const dismissNotification = async (id: string) => {
+    const supabase = getSupabase();
     await supabase.from("notification_center").delete().eq("id", id);
     setNotifications((prev) => prev.filter((n) => n.id !== id));
   };

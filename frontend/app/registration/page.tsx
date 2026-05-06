@@ -13,6 +13,7 @@ export default function RegistrationPage() {
   // 🔹 STEP A: Get user
   useEffect(() => {
     async function getUser() {
+      const supabase = getSupabase();
       const { data } = await supabase.auth.getUser();
       if (data.user) {
         console.log("USER ID FROM APP:", data.user.id);
@@ -48,6 +49,7 @@ export default function RegistrationPage() {
   useEffect(() => {
     if (!userId) return;
 
+    const supabase = getSupabase();
     const channel = supabase
       .channel("registration_changes")
       .on(
@@ -57,7 +59,7 @@ export default function RegistrationPage() {
           schema: "public",
           table: "registration_windows",
         },
-        (payload) => {
+        (payload: { new: { registration_time: string } }) => {
           const newTime = payload.new.registration_time;
           setTargetDate(new Date(newTime));
         }
