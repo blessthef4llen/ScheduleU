@@ -4,6 +4,8 @@ export type NotificationRecord = {
   created_at: string;
   is_read: boolean;
   type: string | null;
+  title?: string;
+  priority?: "low" | "normal" | "high" | "urgent";
   user_id?: string;
 };
 

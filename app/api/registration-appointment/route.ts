@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAuthUser } from "@/lib/supabaseRoute";
 import { getRegistrationWindowForUser } from "@/lib/services/registration";
-
-function jsonError(message: string, status: number, details?: string) {
-  return NextResponse.json({ error: message, ...(details ? { details } : {}) }, { status });
-}
+import { jsonError } from "@/lib/apiJson";
 
 export async function GET() {
   const auth = await requireAuthUser();

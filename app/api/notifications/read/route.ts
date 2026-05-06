@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
 import { markNotificationReadForUser } from "@/lib/services/notifications";
 import { requireAuthUser } from "@/lib/supabaseRoute";
-
-function jsonError(message: string, status: number, details?: string) {
-  return NextResponse.json({ error: message, ...(details ? { details } : {}) }, { status });
-}
+import { jsonError } from "@/lib/apiJson";
 
 /** @deprecated Prefer PATCH /api/notifications */
 export async function POST(req: Request) {
