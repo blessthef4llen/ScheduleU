@@ -18,7 +18,7 @@ export default function DashboardPage() {
     { name: "Travel Alerts", icon: "🚌", href: "/travelalerts", subtitle: "Monitor campus commute updates" },
     { name: "Marketplace", icon: "🛒", href: "/marketplace", subtitle: "Browse student listings" },
     { name: "Social Hub", icon: "👥", href: "/social-hub", subtitle: "Connect with your campus community" },
-    { name: "Profile Setup", icon: "👤", href: "/user-profile", subtitle: "Manage your student profile" },
+    { name: "Parking Tracker", icon: "🚗", href: "/parking", subtitle: "Find and verify open lots" },
     { name: "Browse Courses", icon: "🔍", href: "/courses", subtitle: "Search sections and filters" },
   ];
 
@@ -33,6 +33,7 @@ export default function DashboardPage() {
           <Link href="/notifications" className="text-sm font-medium hover:opacity-80">Notifications</Link>
           <Link href="/registration-countdown" className="text-sm font-medium hover:opacity-80">Registration</Link>
           <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
+          <Link href="/profile" className="text-sm font-medium hover:opacity-80">Setup</Link>
           <Link href="/user-profile" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
             <span className="text-schu-teal text-xs">👤</span>
           </Link>
@@ -56,9 +57,11 @@ export default function DashboardPage() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {tools.map((tool) => {
+            const isParking = tool.name === "Parking Tracker";
+
             const cardContent = (
               <>
-                <div className="w-full aspect-square border-2 rounded-sm p-6 mb-3 transition-all bg-white flex items-center justify-center border-slate-100 group-hover:shadow-xl group-hover:border-schu-teal/30">
+                <div className={`w-full aspect-square border-2 rounded-sm p-6 mb-3 transition-all bg-white flex items-center justify-center border-slate-100 group-hover:shadow-xl ${isParking ? 'group-hover:border-pink-400' : 'group-hover:border-schu-teal/30'}`}>
                   <span className="text-5xl">{tool.icon}</span>
                 </div>
                 <p className="text-[11px] font-bold text-slate-800 uppercase text-center tracking-tight">
