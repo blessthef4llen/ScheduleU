@@ -125,6 +125,7 @@ def schedule_generate(req: GenerateRequest):
 
     return GenerateResponse(plan=plan_out, unscheduled=plan.unscheduled, warnings=plan.warnings)
 
+
 @router.post("/term/schedule", response_model=TermScheduleResponse)
 def term_schedule(req: TermScheduleRequest):
     # Normalize requested courses

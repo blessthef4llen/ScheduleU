@@ -65,3 +65,6 @@ test_cases.txt
 
 # local notes
 local-notes/
+
+# scraped course HTML
+/Backend/python/scraped html/

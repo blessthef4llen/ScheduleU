@@ -5,7 +5,7 @@ from typing import Optional
 # One blocked time window provided by the user.
 class BlockedTime(BaseModel):
     days: list[str] = Field(
-        default_factory=list, 
+        default_factory=list,
         description="Days this block applys to, e.g. ['M','W'] or ['T','TH']",
         examples=[["M", "W"]]
     )
@@ -20,23 +20,24 @@ class BlockedTime(BaseModel):
         examples=["2:00PM"]
     )
 
+
 # User constraints for building a single-term schedule.
 class TermConstraints(BaseModel):
     earliest_time: Optional[str] = Field(
-        default=None, 
+        default=None,
         description="Earliest allowed start time, e.g. '09:00AM'"
     )
     latest_time: Optional[str] = Field(
-        default=None, 
+        default=None,
         description="Latest allowed end time, e.g. '06:00PM'"
     )
     days_off: list[str] = Field(
-        default_factory=list, 
+        default_factory=list,
         description="Days to avoid, e.g. ['F']"
     )
     buffer_minutes: int = Field(
-        default=15, 
-        ge=0, 
+        default=15,
+        ge=0,
         le=60
     )
     blocked_times: list[BlockedTime] = Field(
@@ -45,7 +46,7 @@ class TermConstraints(BaseModel):
     )
 
     min_instructor_ratings: Optional[float] = Field(
-        default= None,
+        default=None,
         ge=0,
         le=5,
         description="Future feature minimun instructor rating [0-5], section below are filtered out if below minimum"
@@ -61,6 +62,7 @@ class TermConstraints(BaseModel):
         description="How many ranked schedule options to return."
     )
 
+
 class LockedSection(BaseModel):
     course: str
     section_id: str
@@ -74,6 +76,7 @@ class TermScheduleRequest(BaseModel):
     locked_sections: list[LockedSection] = Field(default_factory=list)
     constraints: TermConstraints = Field(default_factory=TermConstraints)
 
+
 # One meeting row in the selected schedule output.
 class SelectedMeeting(BaseModel):
     type: Optional[str] = None
@@ -83,6 +86,7 @@ class SelectedMeeting(BaseModel):
     location: Optional[str] = None
     instructor: Optional[str] = None
     comments: Optional[str] = None
+
 
 # One selected section with all of its meetings.
 class SelectedSection(BaseModel):
@@ -97,6 +101,7 @@ class ScheduleCandidate(BaseModel):
     metrics: dict
     explanation_bullets: list[str] = Field(default_factory=list)
     selected_sections: list[SelectedSection] = Field(default_factory=list)
+
 
 # Response payload for term schedule generation.
 class TermScheduleResponse(BaseModel):
