@@ -4,20 +4,20 @@ import Link from 'next/link';
 type ToolCard = {
   name: string
   icon: string
-  href?: string
-  status?: string
+  href: string
+  subtitle: string
 }
 
 export default function DashboardPage() {
   const tools: ToolCard[] = [
-    { name: "Schedule Planner", icon: "📅", href: "/schedule-builder" },
-    { name: "AI Scheduler", icon: "🤖", href: "/schedule-builder" },
-    { name: "Progress Tracker", icon: "📈", href: "/transcript-import" },
-    { name: "Notification Center", icon: "🔔", status: "Coming Soon" },
-    { name: "Marketplace", icon: "🛒", status: "Coming Soon" },
-    { name: "Social Hub", icon: "👥", status: "Coming Soon" },
-    { name: "Daily Tips", icon: "💡", status: "Coming Soon" },
-    { name: "Browse and Search", icon: "🔍", href: "/courses" },
+    { name: "Schedule Planner", icon: "📅", href: "/schedule-builder", subtitle: "Build class combinations" },
+    { name: "AI Workload", icon: "🤖", href: "/ai-workload-scorer", subtitle: "Estimate semester intensity" },
+    { name: "Progress Tracker", icon: "📈", href: "/transcript-import", subtitle: "Import transcript progress" },
+    { name: "Notification Center", icon: "🔔", href: "/notifications", subtitle: "See live academic alerts" },
+    { name: "Registration Timer", icon: "⏳", href: "/registration-countdown", subtitle: "Track your appointment window" },
+    { name: "Travel Alerts", icon: "🚌", href: "/travelalerts", subtitle: "Monitor campus commute updates" },
+    { name: "Profile Setup", icon: "👤", href: "/user-profile", subtitle: "Manage your student profile" },
+    { name: "Browse Courses", icon: "🔍", href: "/courses", subtitle: "Search sections and filters" },
   ];
 
   return (
@@ -28,8 +28,9 @@ export default function DashboardPage() {
         </Link>
 
         <nav className="flex items-center gap-6 text-white">
+          <Link href="/notifications" className="text-sm font-medium hover:opacity-80">Notifications</Link>
+          <Link href="/registration-countdown" className="text-sm font-medium hover:opacity-80">Registration</Link>
           <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
-          <Link href="/profile" className="text-sm font-medium hover:opacity-80">Setup</Link>
           <Link href="/user-profile" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
             <span className="text-schu-teal text-xs">👤</span>
           </Link>
@@ -47,6 +48,7 @@ export default function DashboardPage() {
           <div className="flex gap-4 text-xs font-bold text-slate-500 uppercase">
             <Link href="/courses" className="hover:text-schu-teal transition-colors">Browse Courses</Link>
             <Link href="/schedule-builder" className="hover:text-schu-teal transition-colors">Build Schedule</Link>
+            <Link href="/travelalerts" className="hover:text-schu-teal transition-colors">Travel Alerts</Link>
           </div>
         </div>
 
@@ -64,21 +66,11 @@ export default function DashboardPage() {
                 <p className="text-[11px] font-bold text-slate-800 uppercase text-center tracking-tight">
                   {tool.name}
                 </p>
-                {tool.status ? (
-                  <p className="mt-1 text-[10px] font-bold text-slate-400 uppercase text-center tracking-wide">
-                    {tool.status}
-                  </p>
-                ) : null}
+                <p className="mt-1 text-[10px] font-bold text-slate-400 uppercase text-center tracking-wide">
+                  {tool.subtitle}
+                </p>
               </>
             )
-
-            if (!tool.href) {
-              return (
-                <div key={tool.name} className="flex flex-col items-center">
-                  {card}
-                </div>
-              )
-            }
 
             return (
               <Link key={tool.name} href={tool.href} className="flex flex-col items-center group cursor-pointer">
