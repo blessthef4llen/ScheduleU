@@ -8,9 +8,9 @@ import SectionCard from "@/components/ui/SectionCard";
 import NotificationFilters from "./NotificationFilters";
 import NotificationItem from "./NotificationItem";
 import NotificationStatsRow from "./NotificationStatsRow";
+import { buildDemoNotifications } from "./demoNotifications";
 import { getCategory, isUrgent } from "./helpers";
 import type { NotificationFilter, NotificationRecord } from "./types";
-import Link from "next/link";
 import { getSupabase } from "@/lib/supabaseClient";
 
 type NotificationCenterClientProps = {
@@ -24,7 +24,7 @@ export default function NotificationCenterClient({
 }: NotificationCenterClientProps) {
   const [notifications, setNotifications] = useState<NotificationRecord[]>(initialNotifications);
   const [userId, setUserId] = useState("");
-  const [notSignedIn, setNotSignedIn] = useState(false);
+  const [isDemoMode, setIsDemoMode] = useState(false);
   const [clientFetchError, setClientFetchError] = useState(false);
   const [activeFilter, setActiveFilter] = useState<NotificationFilter>("all");
   const [searchValue, setSearchValue] = useState("");
@@ -68,14 +68,24 @@ export default function NotificationCenterClient({
       }).catch(() => {});
       // #endregion
       if (!userData.user) {
-        setNotSignedIn(true);
+        setNotifications(buildDemoNotifications());
+        setIsDemoMode(true);
+        setClientFetchError(false);
         return;
       }
-      setNotSignedIn(false);
+      setIsDemoMode(false);
       const id = userData.user.id;
       setUserId(id);
 
-      const res = await fetch("/api/notifications");
+      let res: Response;
+      try {
+        res = await fetch("/api/notifications");
+      } catch {
+        setNotifications(buildDemoNotifications());
+        setIsDemoMode(true);
+        setClientFetchError(true);
+        return;
+      }
       const json = (await res.json()) as { notifications?: NotificationRecord[]; error?: string };
 
       // #region agent log
@@ -98,9 +108,16 @@ export default function NotificationCenterClient({
       }).catch(() => {});
       // #endregion
       if (!res.ok) {
+        setNotifications(buildDemoNotifications());
+        setIsDemoMode(true);
         setClientFetchError(true);
-      } else if (json.notifications) {
+      } else if (json.notifications?.length) {
         setNotifications(json.notifications);
+        setIsDemoMode(false);
+        setClientFetchError(false);
+      } else {
+        setNotifications(buildDemoNotifications());
+        setIsDemoMode(true);
         setClientFetchError(false);
       }
     }
@@ -173,6 +190,10 @@ export default function NotificationCenterClient({
   }, [notifications, activeFilter, searchValue, sortBy]);
 
   const markAsRead = async (id: string) => {
+    if (isDemoMode) {
+      setNotifications((prev) => prev.map((n) => (n.id === id ? { ...n, is_read: true } : n)));
+      return;
+    }
     await fetch("/api/notifications", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -182,6 +203,10 @@ export default function NotificationCenterClient({
   };
 
   const dismissNotification = async (id: string) => {
+    if (isDemoMode) {
+      setNotifications((prev) => prev.filter((n) => n.id !== id));
+      return;
+    }
     await fetch("/api/notifications", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
@@ -214,23 +239,15 @@ export default function NotificationCenterClient({
       <AlertBanner>
         Stay proactive: unread and urgent notifications are prioritized so you can act on schedule changes quickly.
       </AlertBanner>
+      {isDemoMode ? <AlertBanner>Preview Notifications: showing realistic demo data.</AlertBanner> : null}
       {isDataUnavailable ? (
         <AlertBanner>
           Server database is unavailable right now. Loading notifications directly from Supabase client session.
         </AlertBanner>
       ) : null}
-      {notSignedIn ? (
-        <AlertBanner>
-          You are not signed in.{" "}
-          <Link href="/login" style={{ fontWeight: 700, color: "#1e3a8a" }}>
-            Go to Login
-          </Link>{" "}
-          to load notifications tied to your account.
-        </AlertBanner>
-      ) : null}
       {clientFetchError ? (
         <AlertBanner>
-          Notifications are temporarily unavailable from the server API. Please verify your session and try again.
+          Notifications are temporarily unavailable from the server API. Showing demo preview data.
         </AlertBanner>
       ) : null}
 

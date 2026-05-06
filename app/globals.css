@@ -289,11 +289,30 @@ a {
   box-shadow: var(--shadow-hover);
 }
 
+.notification-item--unread {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border-color: #bfdbfe;
+}
+
+.notification-item--urgent {
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  border-color: #fdba74;
+  box-shadow: 0 10px 24px rgba(249, 115, 22, 0.16);
+}
+
 .notification-item__top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 12px;
+}
+
+.notification-item__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .notification-item__title {
@@ -331,6 +350,10 @@ a {
   border-left-color: #14b8a6;
 }
 
+.notif-accent--seats {
+  border-left-color: #14b8a6;
+}
+
 .notif-accent--registration {
   border-left-color: #2563eb;
 }
@@ -341,6 +364,42 @@ a {
 
 .notif-accent--urgent {
   border-left-color: #f97316;
+}
+
+.notification-priority {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 4px 10px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.notification-priority--low {
+  color: #155e75;
+  background: #cffafe;
+  border-color: #a5f3fc;
+}
+
+.notification-priority--normal {
+  color: #1e3a8a;
+  background: #dbeafe;
+  border-color: #bfdbfe;
+}
+
+.notification-priority--high {
+  color: #9a3412;
+  background: #ffedd5;
+  border-color: #fdba74;
+}
+
+.notification-priority--urgent {
+  color: #7f1d1d;
+  background: #fee2e2;
+  border-color: #fca5a5;
 }
 
 /* Travel / shuttle alerts (blinkers + legacy badges shared with dashboard) */
