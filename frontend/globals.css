@@ -5,7 +5,15 @@
   --schu-blue: #1e4e8c;
 
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #172033;
+  --surface: #ffffff;
+  --surface-2: #f6f8fb;
+  --surface-3: #eef2f7;
+  --border: #dbe4f0;
+  --text-strong: #172033;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --shadow-color: rgba(15, 23, 42, 0.08);
 }
 
 @theme inline {
@@ -18,11 +26,24 @@
   --color-schu-blue: var(--schu-blue);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #1e293b;
-  }
+:root[data-theme="dark"] {
+  --background: #09111f;
+  --foreground: #e5edf7;
+  --surface: #111c2d;
+  --surface-2: #162235;
+  --surface-3: #1c2a40;
+  --border: #2a3b57;
+  --text-strong: #f8fafc;
+  --text-main: #d4deeb;
+  --text-muted: #91a3bb;
+  --shadow-color: rgba(2, 6, 23, 0.45);
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(79, 209, 197, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(30, 78, 140, 0.08), transparent 24%),
+    var(--background);
 }
 
 body {
@@ -32,8 +53,119 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 .schu-gradient {
   background: linear-gradient(to right, var(--schu-teal), var(--schu-blue));
+}
+
+:root[data-theme="dark"] .schu-gradient {
+  background: linear-gradient(135deg, #57e2d4, #3367b2);
+}
+
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] .min-h-screen {
+  background-color: transparent !important;
+}
+
+:root[data-theme="dark"] .bg-white,
+:root[data-theme="dark"] .bg-white\/90,
+:root[data-theme="dark"] .bg-white\/95,
+:root[data-theme="dark"] .bg-gray-50,
+:root[data-theme="dark"] .bg-gray-50\/50,
+:root[data-theme="dark"] .bg-gray-50\/70,
+:root[data-theme="dark"] .bg-slate-50,
+:root[data-theme="dark"] .bg-slate-50\/50,
+:root[data-theme="dark"] .bg-slate-100 {
+  background-color: var(--surface) !important;
+}
+
+:root[data-theme="dark"] .border,
+:root[data-theme="dark"] .border-gray-50,
+:root[data-theme="dark"] .border-gray-100,
+:root[data-theme="dark"] .border-gray-200,
+:root[data-theme="dark"] .border-slate-100,
+:root[data-theme="dark"] .border-slate-200,
+:root[data-theme="dark"] .border-slate-300,
+:root[data-theme="dark"] .border-blue-200,
+:root[data-theme="dark"] .border-red-200,
+:root[data-theme="dark"] .border-white {
+  border-color: var(--border) !important;
+}
+
+:root[data-theme="dark"] .text-black,
+:root[data-theme="dark"] .text-slate-900,
+:root[data-theme="dark"] .text-slate-800,
+:root[data-theme="dark"] .text-slate-700,
+:root[data-theme="dark"] .text-slate-600,
+:root[data-theme="dark"] .text-slate-500,
+:root[data-theme="dark"] .text-slate-400,
+:root[data-theme="dark"] .text-gray-400,
+:root[data-theme="dark"] .text-gray-500,
+:root[data-theme="dark"] .text-gray-600,
+:root[data-theme="dark"] .text-\[\#1D4E5F\] {
+  color: var(--text-main) !important;
+}
+
+:root[data-theme="dark"] .text-slate-900,
+:root[data-theme="dark"] .text-slate-800,
+:root[data-theme="dark"] .font-black,
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4,
+:root[data-theme="dark"] strong {
+  color: var(--text-strong);
+}
+
+:root[data-theme="dark"] .shadow-sm,
+:root[data-theme="dark"] .shadow-md,
+:root[data-theme="dark"] .shadow-lg,
+:root[data-theme="dark"] .shadow-xl {
+  box-shadow: 0 18px 40px var(--shadow-color) !important;
+}
+
+:root[data-theme="dark"] .hover\:bg-slate-50:hover,
+:root[data-theme="dark"] .hover\:bg-gray-50:hover,
+:root[data-theme="dark"] .hover\:bg-blue-100:hover,
+:root[data-theme="dark"] .hover\:bg-red-50:hover {
+  background-color: var(--surface-2) !important;
+}
+
+:root[data-theme="dark"] .hover\:text-schu-teal:hover {
+  color: #7be9de !important;
+}
+
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] button {
+  color: var(--text-main);
+}
+
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea {
+  background-color: var(--surface) !important;
+  border-color: var(--border) !important;
+}
+
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder {
+  color: var(--text-muted);
+}
+
+:root[data-theme="dark"] .bg-green-500 {
+  background-color: #15803d !important;
+}
+
+:root[data-theme="dark"] .text-red-700 {
+  color: #fca5a5 !important;
+}
+
+:root[data-theme="dark"] .text-blue-700,
+:root[data-theme="dark"] .text-blue-600,
+:root[data-theme="dark"] .hover\:text-blue-500:hover {
+  color: #8fc2ff !important;
 }

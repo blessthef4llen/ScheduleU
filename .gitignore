@@ -1,7 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-node_modules/
+/node_modules
+/frontend/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -15,14 +16,14 @@ node_modules/
 
 # next.js
 /.next/
+/frontend/.next/
 /out/
+/frontend/out/
 
 # production
-/build/
+/build
+/frontend/build
 /dist/
-
-# env files (do not commit)
-.env*
 
 # misc
 .DS_Store
@@ -30,21 +31,30 @@ node_modules/
 .vercel
 .vscode/
 
-# debug logs
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# env files
+.env*
+.env.*
+.env
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-# Python (local tooling; scraped/backend tree not tracked)
+# Python
 venv
 .venv
 **/venv/
 **/.venv/
+Backend/python/venv/
 __pycache__/
 **/__pycache__/
 *.pyc
@@ -52,5 +62,8 @@ __pycache__/
 # testcases
 test_cases.txt
 
-# Windows-incompatible / large Python artifacts (see repo history)
-Backend/python/
+# local notes
+local-notes/
+
+# scraped course HTML
+/Backend/python/scraped html/
