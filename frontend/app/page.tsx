@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import { ThemeToggle } from "../components/theme-toggle";
 
 export default function HomePage() {
   return (
@@ -18,7 +19,10 @@ export default function HomePage() {
         </div>
 
         <nav className="flex items-center gap-8">
-          <Link href="/about" className="text-sm font-medium hover:text-schu-teal transition-colors">About us</Link>
+          <div className="flex items-center gap-3">
+            <Link href="/about" className="text-sm font-medium hover:text-schu-teal transition-colors">About us</Link>
+            <ThemeToggle />
+          </div>
           <Link href="/dashboard" className="text-sm font-medium hover:text-schu-teal transition-colors">Get Started</Link>
           <Link href="/login" className="schu-gradient text-white px-5 py-2 rounded-md text-sm font-bold shadow-sm hover:opacity-90 transition-opacity">
             Login/Sign-up &gt;

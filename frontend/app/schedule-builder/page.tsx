@@ -258,6 +258,9 @@ export default function ScheduleBuilderPage() {
   const [honorsOnly, setHonorsOnly] = useState(false)
   const [showCartEditor, setShowCartEditor] = useState(false)
   const [removingCartKey, setRemovingCartKey] = useState<string | null>(null)
+  const hasPrereqWarnings = result?.warnings.some((warning) =>
+    warning.toLowerCase().includes('prerequisite')
+  ) ?? false
 
   const requestedCourses = useMemo(() => {
     const uniq = new Set<string>()
@@ -482,9 +485,29 @@ export default function ScheduleBuilderPage() {
         throw new Error('No courses found for this term in your shopping cart.')
       }
 
+      const { data: authData, error: authError } = await supabase.auth.getUser()
+      if (authError) throw new Error(authError.message)
+      if (!authData.user) throw new Error('You must be logged in to generate a schedule.')
+
+      const { data: completedData, error: completedError } = await supabase
+        .from('completed_courses')
+        .select('course_code')
+        .eq('auth_user_id', authData.user.id)
+
+      if (completedError) throw new Error(`Could not load completed courses: ${completedError.message}`)
+
+      const completedCourses = Array.from(
+        new Set(
+          (completedData ?? [])
+            .map((row) => String(row.course_code ?? '').trim())
+            .filter(Boolean)
+        )
+      )
+
       const payload = {
         term: tableToTermLabel(selectedTermTable),
         requested_courses: requestedCourses,
+        completed_courses: completedCourses,
         locked_sections: lockedSections,
         constraints: {
           earliest_time: earliestTime.trim() || null,
@@ -943,6 +966,25 @@ export default function ScheduleBuilderPage() {
                       <li key={warning}>{warning}</li>
                     ))}
                   </ul>
+                  {hasPrereqWarnings && (
+                    <div className="mt-3 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-800">
+                      If this looks inaccurate, update your completed courses in your profile and transcript records, then generate the schedule again.
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        <Link
+                          href="/transcript-import"
+                          className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-3 py-1.5 font-bold text-white transition-colors hover:bg-blue-700"
+                        >
+                          Update Completed Courses
+                        </Link>
+                        <Link
+                          href="/user-profile"
+                          className="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-3 py-1.5 font-bold text-blue-700 transition-colors hover:bg-blue-100"
+                        >
+                          Open Profile
+                        </Link>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
