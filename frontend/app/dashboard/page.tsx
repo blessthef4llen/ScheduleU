@@ -15,8 +15,8 @@ export default function DashboardPage() {
     { name: "Progress Tracker", icon: "📈", href: "/transcript-import" },
     { name: "Notification Center", icon: "🔔", href: "/NotificationCenter" },
     { name: "Marketplace", icon: "🛒", href: "/marketplace" },
-    { name: "Social Hub", icon: "👥", href: "/social-hub" }, // ACTIVATED
-    { name: "Daily Tips", icon: "💡", status: "Coming Soon" },
+    { name: "Social Hub", icon: "👥", href: "/social-hub" },
+    { name: "Parking Tracker", icon: "🚗", href: "/parking" }, // NOW ACTIVE!
     { name: "Browse and Search", icon: "🔍", href: "/courses" },
   ];
 
@@ -30,9 +30,9 @@ export default function DashboardPage() {
         <nav className="flex items-center gap-6 text-white">
           <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
           <Link href="/profile" className="text-sm font-medium hover:opacity-80">Setup</Link>
-          <Link href="/user-profile" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-            <span className="text-schu-teal text-xs">👤</span>
-          </Link>
+          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+            <span className="text-schu-teal text-xs font-bold">BH</span>
+          </div>
           <div className="flex flex-col gap-1 cursor-pointer group">
             <div className="w-6 h-0.5 bg-white group-hover:bg-slate-200"></div>
             <div className="w-6 h-0.5 bg-white group-hover:bg-slate-200"></div>
@@ -52,11 +52,13 @@ export default function DashboardPage() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {tools.map((tool) => {
+            const isParking = tool.name === "Parking Tracker";
+            
             const cardContent = (
               <>
                 <div className={`w-full aspect-square border-2 rounded-sm p-6 mb-3 transition-all bg-white flex items-center justify-center ${
                   tool.href
-                    ? 'border-slate-100 group-hover:shadow-xl group-hover:border-schu-teal/30'
+                    ? `border-slate-100 group-hover:shadow-xl ${isParking ? 'group-hover:border-pink-400' : 'group-hover:border-schu-teal/30'}`
                     : 'border-slate-200 opacity-70 cursor-not-allowed'
                 }`}>
                   <span className="text-5xl">{tool.icon}</span>
