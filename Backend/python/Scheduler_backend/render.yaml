@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: scheduleu-backend
+    runtime: python
+    rootDir: Backend/python/Scheduler_backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
