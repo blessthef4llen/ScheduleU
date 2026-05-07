@@ -31,42 +31,9 @@ export default function NotificationCenterClient({
   const [sortBy, setSortBy] = useState<"newest" | "priority" | "unread">("newest");
 
   useEffect(() => {
-    // #region agent log
-    fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "9abcf7" },
-      body: JSON.stringify({
-        sessionId: "9abcf7",
-        runId: "post-fix",
-        hypothesisId: "H5",
-        location: "components/notifications/NotificationCenterClient.tsx:37",
-        message: "notification center initial state",
-        data: { initialCount: initialNotifications.length, isDataUnavailable },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
-  }, [initialNotifications.length, isDataUnavailable]);
-
-  useEffect(() => {
     async function getUserAndNotifications() {
       const supabase = getSupabase();
       const { data: userData } = await supabase.auth.getUser();
-      // #region agent log
-      fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "9abcf7" },
-        body: JSON.stringify({
-          sessionId: "9abcf7",
-          runId: "post-fix",
-          hypothesisId: "H2",
-          location: "components/notifications/NotificationCenterClient.tsx:49",
-          message: "client center auth user fetched",
-          data: { hasUser: Boolean(userData.user), userIdLength: userData.user?.id?.length ?? 0 },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       if (!userData.user) {
         setNotSignedIn(true);
         return;
@@ -80,22 +47,6 @@ export default function NotificationCenterClient({
         .select("*")
         .eq("user_id", id)
         .order("created_at", { ascending: false });
-
-      // #region agent log
-      fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "9abcf7" },
-        body: JSON.stringify({
-          sessionId: "9abcf7",
-          runId: "post-fix",
-          hypothesisId: "H3",
-          location: "components/notifications/NotificationCenterClient.tsx:73",
-          message: "client center notifications fetch result",
-          data: { count: data?.length ?? 0, hasError: Boolean(error), errorCode: error?.code ?? null },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       if (error) {
         setClientFetchError(true);
       } else if (data) {
@@ -117,21 +68,6 @@ export default function NotificationCenterClient({
         { event: "INSERT", schema: "public", table: "notification_center" },
         (payload) => {
           const matches = payload.new.user_id === userId;
-          // #region agent log
-          fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "9abcf7" },
-            body: JSON.stringify({
-              sessionId: "9abcf7",
-              runId: "post-fix",
-              hypothesisId: "H4",
-              location: "components/notifications/NotificationCenterClient.tsx:108",
-              message: "client center realtime insert observed",
-              data: { payloadUserId: payload.new.user_id ?? null, currentUserId: userId, matched: matches },
-              timestamp: Date.now(),
-            }),
-          }).catch(() => {});
-          // #endregion
           if (matches) {
             setNotifications((prev) => [payload.new as NotificationRecord, ...prev]);
           }

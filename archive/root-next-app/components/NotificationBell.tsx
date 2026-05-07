@@ -17,21 +17,6 @@ export default function NotificationBell() {
     async function getUser() {
       const supabase = getSupabase();
       const { data } = await supabase.auth.getUser();
-      // #region agent log
-      fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "9abcf7" },
-        body: JSON.stringify({
-          sessionId: "9abcf7",
-          runId: "pre-fix",
-          hypothesisId: "H2",
-          location: "components/NotificationBell.tsx:24",
-          message: "auth user fetched",
-          data: { hasUser: Boolean(data.user), userIdLength: data.user?.id?.length ?? 0 },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       if (data.user) setUserId(data.user.id);
     }
     getUser();
@@ -44,27 +29,6 @@ export default function NotificationBell() {
     async function fetchNotifications() {
       const res = await fetch("/api/notifications");
       const json = (await res.json()) as { notifications?: NotificationRecord[]; error?: string };
-
-      // #region agent log
-      fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "9abcf7" },
-        body: JSON.stringify({
-          sessionId: "9abcf7",
-          runId: "pre-fix",
-          hypothesisId: "H3",
-          location: "components/NotificationBell.tsx:48",
-          message: "client notification fetch result",
-          data: {
-            userIdPresent: Boolean(userId),
-            count: json.notifications?.length ?? 0,
-            hasError: !res.ok,
-            errorCode: json.error ?? null,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       if (json.notifications) setNotifications(json.notifications);
     }
 
@@ -86,21 +50,6 @@ export default function NotificationBell() {
           table: "notification_center",
         },
         (payload) => {
-          // #region agent log
-          fetch("http://127.0.0.1:7680/ingest/09abfa1e-0ca2-4235-a673-180a60d980ca", {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "9abcf7" },
-            body: JSON.stringify({
-              sessionId: "9abcf7",
-              runId: "pre-fix",
-              hypothesisId: "H4",
-              location: "components/NotificationBell.tsx:78",
-              message: "realtime insert payload observed",
-              data: { payloadUserId: payload.new.user_id ?? null, currentUserId: userId, matched: payload.new.user_id === userId },
-              timestamp: Date.now(),
-            }),
-          }).catch(() => {});
-          // #endregion
           if (payload.new.user_id === userId) {
             setNotifications((prev) => [payload.new as NotificationRecord, ...prev]);
           }
