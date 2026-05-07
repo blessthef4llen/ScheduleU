@@ -19,6 +19,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <Link href="/" className="app-nav-link">
                   Dashboard
                 </Link>
+                <Link href="/planner" className="app-nav-link">
+                  Planner
+                </Link>
                 <Link href="/about" className="app-nav-link">
                   About Us
                 </Link>

@@ -141,12 +141,16 @@ export default function TranscriptImportPage() {
   useEffect(() => {
     if (!manualSelectedCourse) return
 
-    const selected = manualCourseOptions.find((option) => option.courseCode === manualSelectedCourse)
-    if (!selected) return
+    const syncSelectedCourse = Promise.resolve().then(() => {
+      const selected = manualCourseOptions.find((option) => option.courseCode === manualSelectedCourse)
+      if (!selected) return
 
-    setManualCourseCode(selected.courseCode)
-    setManualTitle(selected.title)
-    setManualUnits(selected.units)
+      setManualCourseCode(selected.courseCode)
+      setManualTitle(selected.title)
+      setManualUnits(selected.units)
+    })
+
+    void syncSelectedCourse
   }, [manualCourseOptions, manualSelectedCourse])
 
   const addManualCourse = () => {
@@ -310,9 +314,9 @@ export default function TranscriptImportPage() {
       <div className="mx-auto max-w-6xl space-y-4">
         <header className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Transcript Import</h1>
+            <h1 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Progress Tracker</h1>
             <p className="text-slate-500 font-medium">
-              Upload a transcript PDF to extract completed courses for review.
+              Upload completed coursework, then visualize how it applies to your degree plan.
             </p>
           </div>
           <Link
@@ -322,6 +326,21 @@ export default function TranscriptImportPage() {
             Back to Dashboard
           </Link>
         </header>
+
+        <section className="rounded-2xl border border-cyan-100 bg-gradient-to-br from-white via-cyan-50 to-blue-50 p-4 shadow-sm md:p-5">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-xs font-black uppercase tracking-wider text-[#1e4e8c]">Degree Visualizer</p>
+              <h2 className="mt-1 text-xl font-black text-slate-800">See your progress by requirement group</h2>
+              <p className="mt-1 text-sm font-medium text-slate-600">
+                Open the visualizer after importing courses to compare completed units, remaining courses, and what-if major options.
+              </p>
+            </div>
+            <Link href="/planner/degree-audit" className="inline-flex items-center justify-center rounded-xl bg-[#1e4e8c] px-4 py-2 text-sm font-black text-white shadow-sm transition-opacity hover:opacity-90">
+              Open Degree Visualizer
+            </Link>
+          </div>
+        </section>
 
         <section className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm md:p-5 space-y-4">
           <div className="space-y-2">

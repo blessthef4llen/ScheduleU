@@ -553,6 +553,7 @@ export default function ScheduleBuilderPage() {
           ScheduleU
         </Link>
         <nav className="flex items-center gap-6 text-white">
+          <Link href="/planner" className="text-sm font-medium hover:opacity-80">Planner</Link>
           <Link href="/courses" className="text-sm font-medium hover:opacity-80">Courses</Link>
           <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
         </nav>
@@ -579,8 +580,26 @@ export default function ScheduleBuilderPage() {
             <Link href="/courses" className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50">
               Back to Courses
             </Link>
+            <Link href="/planner" className="inline-flex items-center justify-center rounded-lg schu-gradient px-4 py-2 text-sm font-black text-white shadow-sm transition-opacity hover:opacity-90">
+              Open Planner
+            </Link>
           </div>
         </header>
+
+        <section className="rounded-2xl border border-cyan-100 bg-gradient-to-br from-white via-cyan-50 to-blue-50 p-4 md:p-5 shadow-sm">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-xs font-black uppercase tracking-wider text-[#1e4e8c]">Interactive Planner</p>
+              <h2 className="mt-1 text-xl font-black text-slate-800">Need the drag-and-drop calendar?</h2>
+              <p className="mt-1 text-sm font-medium text-slate-600">
+                Use the planner to place sections on a weekly calendar, check conflicts, and export class numbers.
+              </p>
+            </div>
+            <Link href="/planner" className="inline-flex items-center justify-center rounded-xl bg-[#1e4e8c] px-4 py-2 text-sm font-black text-white shadow-sm transition-opacity hover:opacity-90">
+              Launch Planner
+            </Link>
+          </div>
+        </section>
 
         <section className="rounded-2xl border border-slate-100 bg-white p-4 md:p-5 space-y-4 shadow-sm">
           <div className="flex flex-wrap gap-3">

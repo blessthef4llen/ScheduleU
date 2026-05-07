@@ -21,6 +21,7 @@ export default function PageLayout({ label, title, subtitle, children }: PageLay
           </Link>
           <nav className={styles.links} aria-label="ScheduleU feature navigation">
             <Link href="/dashboard">Dashboard</Link>
+            <Link href="/planner">Planner</Link>
             <Link href="/notifications">Notifications</Link>
             <Link href="/registration-countdown">Registration</Link>
             <Link href="/ai-workload-scorer">AI Workload</Link>
