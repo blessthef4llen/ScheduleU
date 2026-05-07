@@ -476,6 +476,13 @@ export async function addSectionWithChecks(params: {
 
   const label = candidate.section.course_code_full ?? `SEC ${candidate.section.id}`;
   const candidateBlocks = buildBlocks(candidate.section.days, candidate.section.time_range, label);
+  if (candidateBlocks.length === 0) {
+    return {
+      ok: false,
+      msg: "This course cannot be selected because its meeting time has not been confirmed.",
+    };
+  }
+
   const conflict = findConflict(candidateBlocks, existingBlocks);
   if (conflict) {
     const candidateBlock = conflict.candidate;
