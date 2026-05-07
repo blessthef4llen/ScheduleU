@@ -1,46 +1,46 @@
 # ScheduleU
 
-ScheduleU is a scheduling platform for CSULB students. It combines a polished dashboard UI with real-time notifications and travel alerts so students can stay on top of schedule changes and campus commute updates.
+`frontend/` is now the canonical Next.js app for this repo.
 
-## What it does
+The older root-level Next app and duplicate files were moved into `archive/` so the active project structure is no longer split across two parallel app trees.
 
-- Build and monitor your academic schedule in one place.
-- Receive real-time updates in a Notification Center (seat openings, registration reminders, planning alerts).
-- Monitor Travel Alerts for shuttle routes, delays, and campus transit advisories.
+## Active app
 
-## Key features
+- App root: `frontend/`
+- Deploy target: Vercel with root directory set to `frontend`
+- Main services: Next.js, Supabase, Postgres
 
-- **Notification Center**: per-user notifications with live updates (Supabase Realtime).
-- **Travel Alerts**: shuttle status + commute advisories with filters, featured alert, and demo fallback data.
-- **Shuttle tracking/status**: on-time vs delayed indicators in the Travel Alerts UI.
-
-## Tech stack
-
-- **Next.js (App Router)** for the frontend UI
-- **Supabase** for auth, database, and realtime updates
-
-## Getting started (local dev)
-
-1. Install dependencies:
+## Local development
 
 ```bash
+cd frontend
 npm install
-```
-
-2. Create `.env.local` with your Supabase credentials:
-
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-
-3. Run the dev server:
-
-```bash
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Create `frontend/.env.local` from `frontend/.env.example` and fill in:
 
-## Notes
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
+- `DATABASE_URL`
+- `NEXT_PUBLIC_SITE_URL`
+- `NEXT_PUBLIC_SCHEDULER_API_URL`
+- `NEXT_PUBLIC_ENCRYPTION_KEY`
 
-- The Notification Center UI loads notifications for the currently signed-in Supabase Auth user (matching `notification_center.user_id` to the signed-in user id).
-- Travel Alerts fetches from `/api/travel-alerts` and may show demo alerts if the API returns empty data.
+## Deployment
+
+Deploy `frontend/` to Vercel.
+
+Recommended setup:
+
+1. Import the GitHub repo into Vercel.
+2. Set the project root directory to `frontend`.
+3. Add the environment variables from `frontend/.env.example`.
+4. Run a production check locally with `cd frontend && npm run build`.
+
+## Repo notes
+
+- `archive/root-next-app/` contains the archived duplicate root Next.js app.
+- `archive/duplicate-files/` contains obviously redundant duplicate files such as `page 2.tsx` and `theme-toggle 2.tsx`.
+- `Backend/python/` is still separate from the Vercel frontend deployment. Any feature using `NEXT_PUBLIC_SCHEDULER_API_URL` still expects that backend to exist somewhere.

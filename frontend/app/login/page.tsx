@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('') 
   const [showPassword, setShowPassword] = useState(false)
   const [showOTP, setShowOTP] = useState(false)
   const [otp, setOtp] = useState('')
@@ -15,34 +15,48 @@ export default function LoginPage() {
   const [message, setMessage] = useState('')
   const router = useRouter()
 
+  // 1. Send the numerical OTP to the user's email
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault()
     setLoading(true)
-    setMessage('Verifying credentials...')
+    setMessage('Sending your 8-digit security code...')
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithOtp({
       email,
-      password,
+      options: {
+        // DEPLOYMENT FIX: Set to true so new students can sign up 
+        // through this form without manual dashboard entry.
+        shouldCreateUser: true, 
+      },
     })
 
     if (error) {
-      setMessage('Error: Invalid login credentials.')
+      setMessage(`Error: ${error.message}`)
       setLoading(false)
     } else {
-      setMessage('Success: Verification code sent to your device.')
+      setMessage('Success: Check your university email for your 8-digit code.')
       setShowOTP(true)
       setLoading(false)
     }
   }
 
-  const verifySMS = () => {
+  // 2. Verify the 8-digit code
+  const verifyOTP = async () => {
     setLoading(true)
-    if (otp === '774129') {
+    setMessage('Verifying security code...')
+
+    const { error } = await supabase.auth.verifyOtp({
+      email,
+      token: otp,
+      type: 'email',
+    })
+
+    if (error) {
+      setMessage(`Error: ${error.message}`)
+      setLoading(false)
+    } else {
       setMessage('Identity Verified! Redirecting...')
       setTimeout(() => router.push('/dashboard'), 1500)
-    } else {
-      setMessage('Error: Invalid security code.')
-      setLoading(false)
     }
   }
 
@@ -130,30 +144,38 @@ export default function LoginPage() {
           <div className="space-y-6">
             <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center">
               <p className="text-xs font-black text-blue-600 uppercase tracking-widest">Multi-Factor Authentication</p>
-              <p className="text-[11px] text-blue-400 mt-1">A 6-digit code was sent to your registered mobile device.</p>
+              <p className="text-[11px] text-blue-400 mt-1">An 8-digit code was sent to your email.</p>
             </div>
 
             <input
-              className="w-full border-2 border-black p-4 rounded-xl text-center text-3xl font-black tracking-[0.5em] outline-none bg-white focus:ring-4 focus:ring-blue-100 transition"
-              maxLength={6}
-              placeholder="000000"
+              className="w-full border-2 border-black p-4 rounded-xl text-center text-3xl font-black tracking-[0.2em] outline-none bg-white focus:ring-4 focus:ring-blue-100 transition"
+              maxLength={8}
+              placeholder="00000000"
+              value={otp}
               onChange={(e) => setOtp(e.target.value)}
               disabled={loading}
             />
 
             <button
-              onClick={verifySMS}
+              onClick={verifyOTP}
               disabled={loading}
               className="w-full bg-[#46BDC1] text-white py-4 rounded-xl font-black shadow-lg hover:opacity-90 active:scale-95 transition"
             >
               {loading ? 'VERIFYING...' : 'VERIFY IDENTITY'}
+            </button>
+            
+            <button 
+              onClick={() => setShowOTP(false)}
+              className="w-full text-xs font-bold text-gray-400 uppercase tracking-tighter hover:text-blue-600 transition"
+            >
+              Back to Login
             </button>
           </div>
         )}
 
         {message && (
           <div className={`p-3 rounded-lg text-center text-sm font-bold ${
-            message.startsWith('Error') || message.includes('❌') ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-600'
+            message.startsWith('Error') ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-600'
           }`}>
             {message}
           </div>

@@ -50,11 +50,15 @@ export default function HomePage() {
         </div>
 
         <div className="flex-1 flex justify-center">
+          {/* Fixed the src path to match your file in the public folder */}
           <img
-            src="/Untitled design.png"
+            src="/hero-image.png" 
             alt="ScheduleU Graphic"
-            className="w-full max-w-xl h-auto drop-shadow-xl"
-            onError={(e) => e.currentTarget.style.display = 'none'}
+            className="w-full max-w-xl h-auto drop-shadow-xl transition-all duration-500"
+            onError={(e) => {
+              console.error("Image failed to load. Check public/hero-image.png exists.");
+              e.currentTarget.style.display = 'none';
+            }}
           />
         </div>
       </main>
