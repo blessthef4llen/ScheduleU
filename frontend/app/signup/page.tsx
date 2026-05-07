@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { getAuthRedirectUrl } from '@/lib/authRedirect'
 import { supabase } from '@/utils/supabase'
 import Link from 'next/link'
 
@@ -25,6 +26,9 @@ export default function SignUpPage() {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        emailRedirectTo: getAuthRedirectUrl('/dashboard'),
+      },
     })
 
     if (error) {
@@ -34,6 +38,32 @@ export default function SignUpPage() {
       setMessage('Success! Check your email for a confirmation link.')
       setLoading(false)
     }
+  }
+
+  const handleResendConfirmation = async () => {
+    if (!email) {
+      setMessage('Error: Please enter your email first.')
+      return
+    }
+
+    setLoading(true)
+    setMessage('Resending your confirmation email...')
+
+    const { error } = await supabase.auth.resend({
+      type: 'signup',
+      email,
+      options: {
+        emailRedirectTo: getAuthRedirectUrl('/dashboard'),
+      },
+    })
+
+    if (error) {
+      setMessage(`Error: ${error.message}`)
+    } else {
+      setMessage('Success: Confirmation email resent.')
+    }
+
+    setLoading(false)
   }
 
   return (
@@ -91,6 +121,15 @@ export default function SignUpPage() {
             }`}
           >
             {loading ? 'Processing...' : 'SIGN-UP'}
+          </button>
+
+          <button
+            type="button"
+            onClick={handleResendConfirmation}
+            disabled={loading}
+            className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            Resend Confirmation Email
           </button>
         </form>
 

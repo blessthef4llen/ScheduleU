@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { getAuthRedirectUrl } from '@/lib/authRedirect'
 import { supabase } from '@/utils/supabase'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -40,6 +41,32 @@ export default function LoginPage() {
     }
   }
 
+  const handleResendOtp = async () => {
+    if (!email) {
+      setMessage('Error: Please enter your email first.')
+      return
+    }
+
+    setLoading(true)
+    setMessage('Resending your security code...')
+
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: {
+        shouldCreateUser: true,
+      },
+    })
+
+    if (error) {
+      setMessage(`Error: ${error.message}`)
+    } else {
+      setMessage('Success: A fresh sign-in code has been sent to your email.')
+      setShowOTP(true)
+    }
+
+    setLoading(false)
+  }
+
   // 2. Verify the 8-digit code
   const verifyOTP = async () => {
     setLoading(true)
@@ -68,7 +95,7 @@ export default function LoginPage() {
     }
     setLoading(true)
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/update-password`,
+      redirectTo: getAuthRedirectUrl('/update-password'),
     })
     setLoading(false)
     if (error) setMessage(`Error: ${error.message}`)
@@ -162,6 +189,15 @@ export default function LoginPage() {
               className="w-full bg-[#46BDC1] text-white py-4 rounded-xl font-black shadow-lg hover:opacity-90 active:scale-95 transition"
             >
               {loading ? 'VERIFYING...' : 'VERIFY IDENTITY'}
+            </button>
+
+            <button
+              type="button"
+              onClick={handleResendOtp}
+              disabled={loading}
+              className="w-full rounded-xl border border-[var(--border-soft)] bg-[var(--bg-surface)] px-4 py-3 text-sm font-bold text-[var(--text-primary)] transition hover:bg-[var(--bg-soft)] disabled:opacity-60"
+            >
+              {loading ? 'SENDING...' : 'RESEND CODE'}
             </button>
             
             <button 

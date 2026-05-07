@@ -56,7 +56,7 @@ export default function HeaderMenu({
             className="absolute inset-0 bg-slate-950/45 backdrop-blur-[2px]"
             onClick={() => setOpen(false)}
           />
-          <aside className="absolute right-0 top-0 flex h-full w-[min(22rem,85vw)] flex-col gap-5 border-l border-[var(--border-soft)] bg-[var(--bg-elevated)] px-5 py-6 text-[var(--text-primary)] shadow-2xl">
+          <aside className="absolute right-0 top-0 flex h-full w-[min(22rem,85vw)] flex-col gap-5 border-l border-[var(--border-soft)] bg-[var(--bg-surface)] px-5 py-6 text-[var(--text-primary)] shadow-2xl">
             <div className="flex items-center justify-between gap-3">
               <p className="text-sm font-black uppercase tracking-[0.2em] text-[var(--text-muted)]">
                 {title}
