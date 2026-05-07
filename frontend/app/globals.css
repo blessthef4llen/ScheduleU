@@ -153,6 +153,30 @@ a {
   max-width: 760px;
 }
 
+.section-heading-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-heading {
+  margin: 0;
+  font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
+  font-weight: 800;
+  color: var(--text-strong);
+}
+
+.section-intro {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  max-width: 68ch;
+}
+
+.section-intro--compact {
+  margin-top: 0;
+}
+
 .section-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-soft);
@@ -355,6 +379,12 @@ a {
   flex-wrap: wrap;
 }
 
+.notification-item__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .notification-item__time {
   color: var(--text-muted);
   font-size: 0.78rem;
@@ -378,6 +408,11 @@ a {
 
 .notif-accent--urgent {
   border-left-color: #f97316;
+}
+
+.alert-banner__link {
+  color: var(--text-strong);
+  font-weight: 700;
 }
 
 /* Travel / shuttle alerts (blinkers + legacy badges shared with dashboard) */
