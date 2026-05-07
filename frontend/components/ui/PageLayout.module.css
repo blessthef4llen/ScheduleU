@@ -1083,6 +1083,52 @@
   min-width: 0;
 }
 
+.shell :global(.planner-filter-grid) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.shell :global(.planner-filter-field) {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shell :global(.planner-filter-field span) {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.shell :global(.planner-filter-field .field) {
+  width: 100%;
+  min-width: 0;
+  font-size: 0.8rem;
+}
+
+.shell :global(.planner-filter-reset) {
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #fff;
+  color: #1e3a8a;
+  margin-top: 10px;
+  padding: 7px 11px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.shell :global(.planner-filter-reset:hover) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.12);
+}
+
 .shell :global(.planner-course-list) {
   display: flex;
   flex-direction: column;
@@ -1601,6 +1647,7 @@
 
   .shell :global(.planner-stat-row),
   .shell :global(.planner-course-meta-grid),
+  .shell :global(.planner-filter-grid),
   .shell :global(.degree-course-columns) {
     grid-template-columns: 1fr;
   }

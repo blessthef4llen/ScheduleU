@@ -27,6 +27,7 @@ router = APIRouter()
 # Cached data loaded once at startup.
 DEP_MODEL = None
 MERGE_SUMMARY = None
+STARTUP_ERROR = None
 
 
 @router.on_event("startup")
@@ -34,24 +35,33 @@ def startup_load() -> None:
     """
     Load all required data from Supabase once at startup.
     """
-    global DEP_MODEL, MERGE_SUMMARY
+    global DEP_MODEL, MERGE_SUMMARY, STARTUP_ERROR
 
-    DEP_MODEL = load_dependency_model_from_supabase()
+    try:
+        DEP_MODEL = load_dependency_model_from_supabase()
 
-    # If you have a Spring/offered-courses table/view, load & merge it.
-    # If you don't want term-scoped offerings yet, you can skip this merge.
-    catalog = load_catalog_from_supabase()
-    MERGE_SUMMARY = merge_catalog_into_dependency_model(
-        DEP_MODEL,
-        catalog=catalog,
-        add_catalog_only_courses=True
-    )
+        # If you have a Spring/offered-courses table/view, load & merge it.
+        # If you don't want term-scoped offerings yet, you can skip this merge.
+        catalog = load_catalog_from_supabase()
+        MERGE_SUMMARY = merge_catalog_into_dependency_model(
+            DEP_MODEL,
+            catalog=catalog,
+            add_catalog_only_courses=True
+        )
+        STARTUP_ERROR = None
+    except Exception as exc:
+        DEP_MODEL = None
+        MERGE_SUMMARY = None
+        STARTUP_ERROR = str(exc)
 
 
 @router.get("/health")
 def health():
     if DEP_MODEL is None:
-        return {"ok": False, "error": "Dependency model not loaded"}
+        return {
+            "ok": False,
+            "error": STARTUP_ERROR or "Dependency model not loaded",
+        }
     return {
         "ok": True,
         "courses_in_model": len(DEP_MODEL.courses),

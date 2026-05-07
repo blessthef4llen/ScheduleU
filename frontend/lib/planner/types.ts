@@ -18,6 +18,8 @@ export type SectionLite = {
   section_uid?: string | null;
   term_table?: string | null;
   term?: string | null;
+  subject?: string | null;
+  course_number?: string | number | null;
   course_code_full: string | null;
   course_title?: string | null;
   units?: number | null;
