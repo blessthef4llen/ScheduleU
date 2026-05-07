@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import HeaderMenu from '@/components/HeaderMenu'
 import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
 import { supabase } from '@/utils/supabase'
 
@@ -235,6 +236,13 @@ function normalizeCourseNumber(subject: string, courseNumber: string): string {
 }
 
 export default function ScheduleBuilderPage() {
+  const menuItems = [
+    { href: '/dashboard', label: 'Dashboard' },
+    { href: '/planner', label: 'Planner' },
+    { href: '/courses', label: 'Courses' },
+    { href: '/user-profile', label: 'Profile' },
+  ]
+
   const [loadingCart, setLoadingCart] = useState(false)
   const [generating, setGenerating] = useState(false)
   const [error, setError] = useState('')
@@ -547,37 +555,33 @@ export default function ScheduleBuilderPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-black">
-      <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
+    <div className="min-h-screen text-[var(--text-primary)]">
+      <header className="flex items-center justify-between bg-schu-teal px-4 py-3 shadow-md sm:px-6 lg:px-8">
         <Link href="/dashboard" className="text-2xl font-bold text-white tracking-tight hover:opacity-80">
           ScheduleU
         </Link>
-        <nav className="flex items-center gap-6 text-white">
-          <Link href="/planner" className="text-sm font-medium hover:opacity-80">Planner</Link>
-          <Link href="/courses" className="text-sm font-medium hover:opacity-80">Courses</Link>
-          <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
-        </nav>
+        <HeaderMenu items={menuItems} title="Builder" />
       </header>
       <div className="p-4 md:p-6">
       <div className="mx-auto max-w-6xl space-y-4">
         <header className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Schedule Builder</h1>
-            <p className="text-slate-500 font-medium">Generate a conflict-aware term schedule from your shopping cart.</p>
+            <h1 className="text-4xl font-black uppercase tracking-tighter text-[var(--text-strong)]">Schedule Builder</h1>
+            <p className="font-medium text-[var(--text-secondary)]">Generate a conflict-aware term schedule from your shopping cart.</p>
           </div>
           <div className="flex items-center gap-2">
             <Link
               href="/dashboard"
               aria-label="Back to dashboard"
               title="Back to dashboard"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 transition-colors hover:bg-slate-50"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)]"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M3 10.5L12 3l9 7.5" />
                 <path d="M5 9.5V21h14V9.5" />
               </svg>
             </Link>
-            <Link href="/courses" className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50">
+            <Link href="/courses" className="inline-flex items-center justify-center rounded-lg border px-4 py-2 text-sm font-bold transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)]">
               Back to Courses
             </Link>
             <Link href="/planner" className="inline-flex items-center justify-center rounded-lg schu-gradient px-4 py-2 text-sm font-black text-white shadow-sm transition-opacity hover:opacity-90">
@@ -586,12 +590,12 @@ export default function ScheduleBuilderPage() {
           </div>
         </header>
 
-        <section className="rounded-2xl border border-cyan-100 bg-gradient-to-br from-white via-cyan-50 to-blue-50 p-4 md:p-5 shadow-sm">
+        <section className="rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--hero-gradient)] border-[var(--border-soft)]">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-xs font-black uppercase tracking-wider text-[#1e4e8c]">Interactive Planner</p>
-              <h2 className="mt-1 text-xl font-black text-slate-800">Need the drag-and-drop calendar?</h2>
-              <p className="mt-1 text-sm font-medium text-slate-600">
+              <p className="text-xs font-black uppercase tracking-wider text-schu-blue">Interactive Planner</p>
+              <h2 className="mt-1 text-xl font-black text-[var(--text-strong)]">Need the drag-and-drop calendar?</h2>
+              <p className="mt-1 text-sm font-medium text-[var(--text-secondary)]">
                 Use the planner to place sections on a weekly calendar, check conflicts, and export class numbers.
               </p>
             </div>
@@ -601,7 +605,7 @@ export default function ScheduleBuilderPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-slate-100 bg-white p-4 md:p-5 space-y-4 shadow-sm">
+        <section className="space-y-4 rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
           <div className="flex flex-wrap gap-3">
             <button
               type="button"
@@ -624,7 +628,7 @@ export default function ScheduleBuilderPage() {
             <button
               type="button"
               onClick={() => setShowCartEditor((prev) => !prev)}
-              className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50"
+              className="rounded-xl border px-4 py-2 text-sm font-bold transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)]"
             >
               {showCartEditor ? 'Hide Cart Editor' : 'Edit Cart'}
             </button>
@@ -632,11 +636,11 @@ export default function ScheduleBuilderPage() {
 
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Term</label>
+              <label className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">Term</label>
               <select
                 value={selectedTermTable}
                 onChange={(e) => setSelectedTermTable(e.target.value)}
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
+                className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
               >
                 {SEMESTER_OPTIONS.map((option) => {
                   const disabled = 'disabled' in option ? Boolean(option.disabled) : false
@@ -650,31 +654,31 @@ export default function ScheduleBuilderPage() {
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Earliest Time</label>
+              <label className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">Earliest Time</label>
               <input
                 value={earliestTime}
                 onChange={(e) => setEarliestTime(e.target.value)}
                 placeholder="09:00AM"
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2"
+                className="w-full rounded-xl border-2 px-3 py-2 bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Latest Time</label>
+              <label className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">Latest Time</label>
               <input
                 value={latestTime}
                 onChange={(e) => setLatestTime(e.target.value)}
                 placeholder="06:00PM"
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2"
+                className="w-full rounded-xl border-2 px-3 py-2 bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Buffer Minutes</label>
+              <label className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">Buffer Minutes</label>
               <select
                 value={bufferMinutes}
                 onChange={(e) => setBufferMinutes(Number(e.target.value))}
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
+                className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
               >
                 <option value={0}>0</option>
                 <option value={10}>10</option>
@@ -687,11 +691,11 @@ export default function ScheduleBuilderPage() {
 
             <div className="grid gap-3 md:grid-cols-2">
               <div>
-                <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Ranking Preference</label>
+                <label className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">Ranking Preference</label>
                 <select
                   value={rankingPreference}
                   onChange={(e) => setRankingPreference(e.target.value)}
-                  className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
+                  className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
                 >
                   <option value="compact">Compact (few days + fewer gaps)</option>
                   <option value="fewest_days">Fewest days on campus</option>
@@ -700,11 +704,11 @@ export default function ScheduleBuilderPage() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Number of schedules</label>
+                <label className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">Number of schedules</label>
                 <select
                   value={maxSchedules}
                   onChange={(e) => setMaxSchedules(Number(e.target.value))}
-                  className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
+                  className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
                 >
                   <option value={1}>1</option>
                   <option value={3}>3</option>
@@ -715,16 +719,16 @@ export default function ScheduleBuilderPage() {
             </div>
 
           <div>
-            <label className="mb-1 block text-xs font-black text-slate-500 uppercase tracking-wider">Days Off (comma-separated)</label>
+            <label className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">Days Off (comma-separated)</label>
             <input
               value={daysOffText}
               onChange={(e) => setDaysOffText(e.target.value)}
               placeholder="F or M,W"
-              className="w-full rounded-xl border-2 border-gray-100 px-3 py-2"
+              className="w-full rounded-xl border-2 px-3 py-2 bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
             />
           </div>
 
-          <div className="flex items-center gap-2 rounded-xl border border-slate-100 bg-gray-50 px-3 py-2">
+          <div className="flex items-center gap-2 rounded-xl border px-3 py-2 bg-[var(--bg-soft)] border-[var(--border-soft)]">
             <input
               id="honorsOnlyBuilder"
               type="checkbox"
@@ -732,7 +736,7 @@ export default function ScheduleBuilderPage() {
               onChange={(e) => setHonorsOnly(e.target.checked)}
               className="h-4 w-4"
             />
-            <label htmlFor="honorsOnlyBuilder" className="text-sm font-medium text-slate-700">
+            <label htmlFor="honorsOnlyBuilder" className="text-sm font-medium text-[var(--text-primary)]">
               Honors only (UHP or course number ending in H)
             </label>
           </div>

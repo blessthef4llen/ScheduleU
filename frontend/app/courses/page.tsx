@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { supabase } from '@/utils/supabase'
 import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
+import HeaderMenu from '@/components/HeaderMenu'
 import Link from 'next/link'
 
 type RawCourseRow = Record<string, unknown>
@@ -266,6 +267,12 @@ function normalizeCourses(rows: RawCourseRow[]): CourseItem[] {
 }
 
 export default function CoursesPage() {
+  const menuItems = [
+    { href: '/dashboard', label: 'Dashboard' },
+    { href: '/schedule-builder', label: 'Schedule Builder' },
+    { href: '/user-profile', label: 'Profile' },
+  ]
+
   const [semesterTable, setSemesterTable] = useState(SEMESTER_OPTIONS[0].table)
   const [rows, setRows] = useState<RawCourseRow[]>([])
   const [subjectFilter, setSubjectFilter] = useState('all')
@@ -556,27 +563,24 @@ export default function CoursesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-black">
-      <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
+    <div className="min-h-screen text-[var(--text-primary)]">
+      <header className="flex items-center justify-between bg-schu-teal px-4 py-3 shadow-md sm:px-6 lg:px-8">
         <Link href="/dashboard" className="text-2xl font-bold text-white tracking-tight hover:opacity-80">
           ScheduleU
         </Link>
-        <nav className="flex items-center gap-6 text-white">
-          <Link href="/schedule-builder" className="text-sm font-medium hover:opacity-80">Planner</Link>
-          <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
-        </nav>
+        <HeaderMenu items={menuItems} title="Courses" />
       </header>
       <div className="p-4 md:p-5">
       <div className="mx-auto max-w-7xl space-y-4">
         <header className="space-y-2">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-            <h1 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Course Search</h1>
+            <h1 className="text-4xl font-black uppercase tracking-tighter text-[var(--text-strong)]">Course Search</h1>
             <div className="flex items-center gap-2">
               <Link
                 href="/dashboard"
                 aria-label="Back to dashboard"
                 title="Back to dashboard"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)]"
               >
                 <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M3 10.5L12 3l9 7.5" />
@@ -591,22 +595,22 @@ export default function CoursesPage() {
               </Link>
             </div>
           </div>
-          <p className="text-slate-500 font-medium">
+          <p className="font-medium text-[var(--text-secondary)]">
             Set filters, then load a semester and browse matching courses.
           </p>
         </header>
 
-        <section className="bg-white border border-slate-100 rounded-2xl shadow-sm p-4 md:p-5 space-y-3">
+        <section className="space-y-3 rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
           <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <label htmlFor="semester" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+              <label htmlFor="semester" className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
                 Semester
               </label>
               <select
                 id="semester"
                 value={semesterTable}
                 onChange={(event) => setSemesterTable(event.target.value)}
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
+                className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
               >
                 {SEMESTER_OPTIONS.map((option) => (
                   <option key={option.table} value={option.table} disabled={option.disabled}>
@@ -627,14 +631,14 @@ export default function CoursesPage() {
 
           <div className="grid gap-3 md:grid-cols-2">
             <div>
-              <label htmlFor="subjectFilter" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+              <label htmlFor="subjectFilter" className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
                 Subject
               </label>
               <select
                 id="subjectFilter"
                 value={subjectFilter}
                 onChange={(event) => setSubjectFilter(event.target.value)}
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
+                className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
                 disabled={loading}
               >
                 <option value="all">All subjects</option>
@@ -647,14 +651,14 @@ export default function CoursesPage() {
             </div>
 
             <div>
-              <label htmlFor="unitsFilter" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+              <label htmlFor="unitsFilter" className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
                 Units
               </label>
               <select
                 id="unitsFilter"
                 value={unitsFilter}
                 onChange={(event) => setUnitsFilter(event.target.value)}
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
+                className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
                 disabled={loading}
               >
                 <option value="">All units</option>
@@ -671,14 +675,14 @@ export default function CoursesPage() {
             </div>
 
             <div>
-              <label htmlFor="courseCodeFilter" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+              <label htmlFor="courseCodeFilter" className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
                 Course Number
               </label>
               <select
                 id="courseCodeFilter"
                 value={courseCodeFilter}
                 onChange={(event) => setCourseCodeFilter(event.target.value)}
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2 bg-white font-medium"
+                className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
                 disabled={loading || subjectFilter === 'all' || loadingCourseNumbers}
               >
                 <option value="">
@@ -697,7 +701,7 @@ export default function CoursesPage() {
             </div>
 
             <div>
-              <label htmlFor="titleFilter" className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+              <label htmlFor="titleFilter" className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
                 Course title
               </label>
               <input
@@ -706,12 +710,12 @@ export default function CoursesPage() {
                 value={titleFilter}
                 onChange={(event) => setTitleFilter(event.target.value)}
                 placeholder="e.g. Data Structures"
-                className="w-full rounded-xl border-2 border-gray-100 px-3 py-2"
+                className="w-full rounded-xl border-2 px-3 py-2 bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
                 disabled={loading}
               />
             </div>
 
-            <div className="flex items-center gap-2 rounded-xl border border-slate-100 bg-gray-50 px-3 py-2">
+            <div className="flex items-center gap-2 rounded-xl border px-3 py-2 bg-[var(--bg-soft)] border-[var(--border-soft)]">
               <input
                 id="honorsOnly"
                 type="checkbox"
@@ -720,7 +724,7 @@ export default function CoursesPage() {
                 className="h-4 w-4"
                 disabled={loading}
               />
-              <label htmlFor="honorsOnly" className="text-sm font-medium text-slate-700">
+              <label htmlFor="honorsOnly" className="text-sm font-medium text-[var(--text-primary)]">
                 Honors only (UHP or course number ending in H)
               </label>
             </div>
@@ -745,8 +749,8 @@ export default function CoursesPage() {
           )}
         </section>
 
-        <section className="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden">
-          <div className="border-b px-4 py-3 text-sm text-slate-700 bg-gray-50/70">
+        <section className="overflow-hidden rounded-2xl border shadow-sm bg-[var(--bg-elevated)] border-[var(--border-soft)]">
+          <div className="border-b px-4 py-3 text-sm bg-[var(--bg-soft)] text-[var(--text-primary)] border-[var(--border-soft)]">
             {loaded ? (
               <>
                 Showing <span className="font-semibold">{paginatedCourses.length}</span> of{' '}
@@ -762,45 +766,45 @@ export default function CoursesPage() {
               <article key={course.code} className="px-4 py-2">
                 <button
                   type="button"
-                  className="w-full rounded-xl p-3 text-left transition-colors hover:bg-slate-50 focus-visible:bg-slate-50"
+                  className="w-full rounded-xl p-3 text-left transition-colors hover:bg-[var(--bg-soft)] focus-visible:bg-[var(--bg-soft)]"
                   onClick={() =>
                     setExpandedCourseCode((prev) => (prev === course.code ? null : course.code))
                   }
                 >
                   <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
-                    <h2 className="font-semibold text-slate-900">{course.code}</h2>
-                    <div className="text-sm text-slate-600">
+                    <h2 className="font-semibold text-[var(--text-strong)]">{course.code}</h2>
+                    <div className="text-sm text-[var(--text-secondary)]">
                       {course.units} units • {course.sectionCount} section
                       {course.sectionCount === 1 ? '' : 's'}
                     </div>
                   </div>
-                  <p className="text-slate-700 mt-1">{course.title}</p>
+                  <p className="mt-1 text-[var(--text-primary)]">{course.title}</p>
                 </button>
 
                 {expandedCourseCode === course.code && (
                   <div className="mt-2">
-                    <div className="mb-2 text-sm font-medium text-slate-700">
+                    <div className="mb-2 text-sm font-medium text-[var(--text-primary)]">
                       Sections ({sectionsByCourseCode.get(course.code)?.length ?? 0})
                     </div>
 
                     <div className="flex flex-col gap-3">
                       {(sectionsByCourseCode.get(course.code) ?? []).map((section, idx) => (
-                        <div key={`${course.code}-${section.class_number}-${idx}`} className="rounded-xl border border-slate-100 bg-gray-50 p-4 transition-all hover:shadow-sm">
-                          <div className="mb-2 text-sm font-semibold text-slate-800">
+                        <div key={`${course.code}-${section.class_number}-${idx}`} className="rounded-xl border p-4 transition-all hover:shadow-sm bg-[var(--bg-soft)] border-[var(--border-soft)]">
+                          <div className="mb-2 text-sm font-semibold text-[var(--text-strong)]">
                             Section {section.section || 'N/A'} • Class #{section.class_number || 'N/A'}
                           </div>
                           <div className="grid gap-2 lg:grid-cols-3 text-sm">
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Code</p><p className="text-slate-900 break-words">{section.course_code_full}</p></div>
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Type</p><p className="text-slate-900 break-words">{section.type}</p></div>
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Location</p><p className="text-slate-900 break-words">{section.location}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Code</p><p className="break-words text-[var(--text-primary)]">{section.course_code_full}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Type</p><p className="break-words text-[var(--text-primary)]">{section.type}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Location</p><p className="break-words text-[var(--text-primary)]">{section.location}</p></div>
 
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Title</p><p className="text-slate-900 break-words">{section.course_title}</p></div>
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Info</p><p className="text-slate-900 break-words">{section.course_info}</p></div>
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Days</p><p className="text-slate-900 break-words">{section.days}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Title</p><p className="break-words text-[var(--text-primary)]">{section.course_title}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Info</p><p className="break-words text-[var(--text-primary)]">{section.course_info}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Days</p><p className="break-words text-[var(--text-primary)]">{section.days}</p></div>
 
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Units</p><p className="text-slate-900 break-words">{section.units}</p></div>
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Instructor</p><p className="text-slate-900 break-words">{section.instructor}</p><div className="mt-1"><ProfessorRatingBadge instructor={section.instructor} /></div></div>
-                            <div className="rounded-xl border border-slate-100 bg-white px-2 py-1.5"><p className="text-xs uppercase tracking-wide text-slate-500">Time</p><p className="text-slate-900 break-words">{section.time}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Units</p><p className="break-words text-[var(--text-primary)]">{section.units}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Instructor</p><p className="break-words text-[var(--text-primary)]">{section.instructor}</p><div className="mt-1"><ProfessorRatingBadge instructor={section.instructor} /></div></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Time</p><p className="break-words text-[var(--text-primary)]">{section.time}</p></div>
                           </div>
 
                           <div className="mt-3">
@@ -836,12 +840,12 @@ export default function CoursesPage() {
 
           {loaded && filteredCourses.length > 0 && (
             <div className="border-t px-4 py-3 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-              <div className="flex items-center gap-2 text-sm text-slate-700">
+              <div className="flex items-center gap-2 text-sm text-[var(--text-primary)]">
                 <span>Courses per page:</span>
                 <select
                   value={pageSize}
                   onChange={(event) => setPageSize(Number(event.target.value))}
-                  className="rounded border border-slate-300 px-2 py-1 bg-white"
+                  className="rounded border px-2 py-1 bg-[var(--bg-surface)] border-[var(--border-soft)]"
                 >
                   <option value={10}>10</option>
                   <option value={20}>20</option>
@@ -855,7 +859,7 @@ export default function CoursesPage() {
                   type="button"
                   onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
                   disabled={currentPage === 1}
-                  className="rounded border border-slate-300 px-3 py-1 text-sm disabled:opacity-50"
+                  className="rounded border px-3 py-1 text-sm disabled:opacity-50 border-[var(--border-soft)] text-[var(--text-primary)]"
                 >
                   Prev
                 </button>
@@ -868,7 +872,7 @@ export default function CoursesPage() {
                     className={`rounded border px-3 py-1 text-sm ${
                       page === currentPage
                         ? 'bg-blue-600 text-white border-blue-600'
-                        : 'border-slate-300 text-slate-700'
+                        : 'border-[var(--border-soft)] text-[var(--text-primary)] bg-[var(--bg-surface)]'
                     }`}
                   >
                     {page}
@@ -879,7 +883,7 @@ export default function CoursesPage() {
                   type="button"
                   onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
                   disabled={currentPage === totalPages}
-                  className="rounded border border-slate-300 px-3 py-1 text-sm disabled:opacity-50"
+                  className="rounded border px-3 py-1 text-sm disabled:opacity-50 border-[var(--border-soft)] text-[var(--text-primary)]"
                 >
                   Next
                 </button>

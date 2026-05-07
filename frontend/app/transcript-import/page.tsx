@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import HeaderMenu from '@/components/HeaderMenu'
 import { supabase } from '@/utils/supabase'
 
 type TranscriptCourse = {
@@ -56,6 +57,12 @@ const MANUAL_TERM_TABLE_OPTIONS: readonly SemesterOption[] = [
 ]
 
 export default function TranscriptImportPage() {
+  const menuItems = [
+    { href: '/dashboard', label: 'Dashboard' },
+    { href: '/courses', label: 'Courses' },
+    { href: '/user-profile', label: 'Profile' },
+  ]
+
   const [file, setFile] = useState<File | null>(null)
   const [loading, setLoading] = useState(false)
   const [saving, setSaving] = useState(false)
@@ -300,39 +307,36 @@ export default function TranscriptImportPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-black">
-      <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
+    <div className="min-h-screen text-[var(--text-primary)]">
+      <header className="flex items-center justify-between bg-schu-teal px-4 py-3 shadow-md sm:px-6 lg:px-8">
         <Link href="/dashboard" className="text-2xl font-bold text-white tracking-tight hover:opacity-80">
           ScheduleU
         </Link>
-        <nav className="flex items-center gap-6 text-white">
-          <Link href="/courses" className="text-sm font-medium hover:opacity-80">Courses</Link>
-          <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
-        </nav>
+        <HeaderMenu items={menuItems} title="Progress" />
       </header>
       <div className="p-4 md:p-6">
       <div className="mx-auto max-w-6xl space-y-4">
         <header className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Progress Tracker</h1>
-            <p className="text-slate-500 font-medium">
+            <h1 className="text-4xl font-black uppercase tracking-tighter text-[var(--text-strong)]">Progress Tracker</h1>
+            <p className="font-medium text-[var(--text-secondary)]">
               Upload completed coursework, then visualize how it applies to your degree plan.
             </p>
           </div>
           <Link
             href="/dashboard"
-            className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50"
+            className="inline-flex items-center justify-center rounded-lg border px-4 py-2 text-sm font-bold transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)]"
           >
             Back to Dashboard
           </Link>
         </header>
 
-        <section className="rounded-2xl border border-cyan-100 bg-gradient-to-br from-white via-cyan-50 to-blue-50 p-4 shadow-sm md:p-5">
+        <section className="rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--hero-gradient)] border-[var(--border-soft)]">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-xs font-black uppercase tracking-wider text-[#1e4e8c]">Degree Visualizer</p>
-              <h2 className="mt-1 text-xl font-black text-slate-800">See your progress by requirement group</h2>
-              <p className="mt-1 text-sm font-medium text-slate-600">
+              <p className="text-xs font-black uppercase tracking-wider text-schu-blue">Degree Visualizer</p>
+              <h2 className="mt-1 text-xl font-black text-[var(--text-strong)]">See your progress by requirement group</h2>
+              <p className="mt-1 text-sm font-medium text-[var(--text-secondary)]">
                 Open the visualizer after importing courses to compare completed units, remaining courses, and what-if major options.
               </p>
             </div>
@@ -342,9 +346,9 @@ export default function TranscriptImportPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm md:p-5 space-y-4">
+        <section className="space-y-4 rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
           <div className="space-y-2">
-            <label htmlFor="transcript-file" className="block text-xs font-black text-slate-500 uppercase tracking-wider">
+            <label htmlFor="transcript-file" className="block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
               Transcript PDF
             </label>
             <input
@@ -352,9 +356,9 @@ export default function TranscriptImportPage() {
               type="file"
               accept="application/pdf"
               onChange={(event) => setFile(event.target.files?.[0] ?? null)}
-              className="block w-full rounded-xl border-2 border-gray-100 bg-white px-3 py-2 text-sm"
+              className="block w-full rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
             />
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-[var(--text-muted)]">
               First pass only: this works best on text-based PDFs. Scanned image PDFs will likely need OCR.
             </p>
           </div>
@@ -381,10 +385,10 @@ export default function TranscriptImportPage() {
           )}
         </section>
 
-        <section className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm md:p-5 space-y-4">
+        <section className="space-y-4 rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
           <div>
-            <h2 className="text-lg font-semibold text-slate-900">Add Completed Course Manually</h2>
-            <p className="mt-1 text-sm text-slate-600">
+            <h2 className="text-lg font-semibold text-[var(--text-strong)]">Add Completed Course Manually</h2>
+            <p className="mt-1 text-sm text-[var(--text-secondary)]">
               Use this when a transcript course is missing or you want to demo progress tracking without a PDF.
             </p>
           </div>
@@ -393,7 +397,7 @@ export default function TranscriptImportPage() {
             <select
               value={manualCatalogTable}
               onChange={(event) => setManualCatalogTable(event.target.value)}
-              className="rounded-xl border-2 border-gray-100 px-3 py-2 text-sm bg-white"
+              className="rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
             >
               {MANUAL_TERM_TABLE_OPTIONS.map((option) => (
                 <option key={option.table} value={option.table}>
@@ -410,7 +414,7 @@ export default function TranscriptImportPage() {
                 setManualTitle('')
                 setManualUnits('')
               }}
-              className="rounded-xl border-2 border-gray-100 px-3 py-2 text-sm bg-white"
+              className="rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
               disabled={manualCatalogLoading}
             >
               <option value="all">All subjects</option>
@@ -423,7 +427,7 @@ export default function TranscriptImportPage() {
             <select
               value={manualSelectedCourse}
               onChange={(event) => setManualSelectedCourse(event.target.value)}
-              className="rounded-xl border-2 border-gray-100 px-3 py-2 text-sm bg-white"
+              className="rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
               disabled={manualCatalogLoading || manualCourseOptions.length === 0}
             >
               <option value="">
@@ -447,35 +451,35 @@ export default function TranscriptImportPage() {
               value={manualCourseCode}
               onChange={(event) => setManualCourseCode(event.target.value)}
               placeholder="CECS 274"
-              className="rounded-xl border-2 border-gray-100 px-3 py-2 text-sm"
+              className="rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
             />
             <input
               type="text"
               value={manualTitle}
               onChange={(event) => setManualTitle(event.target.value)}
               placeholder="Course title"
-              className="rounded-xl border-2 border-gray-100 px-3 py-2 text-sm"
+              className="rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
             />
             <input
               type="text"
               value={manualTerm}
               onChange={(event) => setManualTerm(event.target.value)}
               placeholder="Spring 2026"
-              className="rounded-xl border-2 border-gray-100 px-3 py-2 text-sm"
+              className="rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
             />
             <input
               type="text"
               value={manualGrade}
               onChange={(event) => setManualGrade(event.target.value)}
               placeholder="A"
-              className="rounded-xl border-2 border-gray-100 px-3 py-2 text-sm"
+              className="rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
             />
             <input
               type="text"
               value={manualUnits}
               onChange={(event) => setManualUnits(event.target.value)}
               placeholder="3"
-              className="rounded-xl border-2 border-gray-100 px-3 py-2 text-sm"
+              className="rounded-xl border-2 px-3 py-2 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)]"
             />
           </div>
 

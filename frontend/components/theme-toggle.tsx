@@ -38,7 +38,12 @@ export function ThemeToggle({ className = "" }: ThemeToggleProps) {
       onClick={toggleTheme}
       aria-label={ready ? `Switch to ${theme === "dark" ? "light" : "dark"} mode` : "Toggle color mode"}
       title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-      className={`inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-lg text-slate-700 shadow-sm backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-md ${className}`.trim()}
+      className={`inline-flex h-10 w-10 items-center justify-center rounded-full border text-lg shadow-sm backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-md ${className}`.trim()}
+      style={{
+        borderColor: "var(--border-soft)",
+        background: "var(--bg-elevated)",
+        color: "var(--text-primary)",
+      }}
     >
       <span aria-hidden="true">{theme === "dark" ? "☾" : "☀"}</span>
     </button>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import HeaderMenu from "@/components/HeaderMenu";
 
 type ToolCard = {
   name: string;
@@ -10,6 +11,14 @@ type ToolCard = {
 };
 
 export default function DashboardPage() {
+  const menuItems = [
+    { href: "/planner", label: "Planner" },
+    { href: "/notifications", label: "Notifications" },
+    { href: "/registration-countdown", label: "Registration" },
+    { href: "/user-profile", label: "Profile" },
+    { href: "/profile", label: "Setup" },
+  ];
+
   const tools: ToolCard[] = [
     { name: "Schedule Builder", icon: "📅", href: "/schedule-builder", subtitle: "Generate class combinations" },
     { name: "Interactive Planner", icon: "🗓️", href: "/planner", subtitle: "Drag sections into calendar" },
@@ -25,33 +34,18 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white font-sans">
-      <header className="bg-schu-teal px-8 py-3 flex justify-between items-center shadow-md">
+    <div className="min-h-screen font-sans text-[var(--text-primary)]">
+      <header className="flex items-center justify-between bg-schu-teal px-4 py-3 shadow-md sm:px-6 lg:px-8">
         <Link href="/" className="text-2xl font-bold text-white tracking-tight hover:opacity-80 transition-opacity">
           ScheduleU
         </Link>
-
-        <nav className="flex items-center gap-6 text-white">
-          <Link href="/planner" className="text-sm font-medium hover:opacity-80">Planner</Link>
-          <Link href="/notifications" className="text-sm font-medium hover:opacity-80">Notifications</Link>
-          <Link href="/registration-countdown" className="text-sm font-medium hover:opacity-80">Registration</Link>
-          <Link href="/user-profile" className="text-sm font-medium hover:opacity-80">Profile</Link>
-          <Link href="/profile" className="text-sm font-medium hover:opacity-80">Setup</Link>
-          <Link href="/user-profile" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-            <span className="text-schu-teal text-xs">ME</span>
-          </Link>
-          <div className="flex flex-col gap-1 cursor-pointer group">
-            <div className="w-6 h-0.5 bg-white group-hover:bg-slate-200"></div>
-            <div className="w-6 h-0.5 bg-white group-hover:bg-slate-200"></div>
-            <div className="w-6 h-0.5 bg-white group-hover:bg-slate-200"></div>
-          </div>
-        </nav>
+        <HeaderMenu items={menuItems} title="Dashboard" />
       </header>
 
-      <main className="max-w-6xl mx-auto p-12">
-        <div className="flex justify-between items-end mb-12">
-          <h2 className="text-4xl font-black text-slate-700 uppercase tracking-tighter">Dashboard</h2>
-          <div className="flex gap-4 text-xs font-bold text-slate-500 uppercase">
+      <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+        <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <h2 className="text-3xl font-black uppercase tracking-tighter sm:text-4xl text-[var(--text-strong)]">Dashboard</h2>
+          <div className="flex flex-wrap gap-3 text-xs font-bold uppercase text-[var(--text-muted)]">
             <Link href="/courses" className="hover:text-schu-teal transition-colors">Browse Courses</Link>
             <Link href="/schedule-builder" className="hover:text-schu-teal transition-colors">Build Schedule</Link>
             <Link href="/planner" className="hover:text-schu-teal transition-colors">Planner</Link>
@@ -59,7 +53,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {tools.map((tool) => {
             const isParking = tool.name === "Parking Tracker";
             const isPlanner = tool.name === "Interactive Planner";
@@ -67,7 +61,7 @@ export default function DashboardPage() {
             return (
               <Link key={tool.name} href={tool.href} className="flex flex-col items-center group cursor-pointer">
                 <div
-                  className={`w-full aspect-square border-2 rounded-sm p-6 mb-3 transition-all bg-white flex items-center justify-center border-slate-100 group-hover:shadow-xl ${
+                  className={`mb-3 flex aspect-square w-full items-center justify-center rounded-2xl border p-5 transition-all bg-[var(--bg-elevated)] border-[var(--border-soft)] shadow-sm group-hover:shadow-xl sm:p-6 ${
                     isParking
                       ? "group-hover:border-pink-400"
                       : isPlanner
@@ -79,10 +73,10 @@ export default function DashboardPage() {
                     {tool.icon}
                   </span>
                 </div>
-                <p className="text-[11px] font-bold text-slate-800 uppercase text-center tracking-tight">
+                <p className="text-center text-[11px] font-bold uppercase tracking-tight text-[var(--text-strong)]">
                   {tool.name}
                 </p>
-                <p className="mt-1 text-[10px] font-bold text-slate-400 uppercase text-center tracking-wide">
+                <p className="mt-1 text-center text-[10px] font-bold uppercase tracking-wide text-[var(--text-muted)]">
                   {tool.subtitle}
                 </p>
               </Link>

@@ -1,25 +1,8 @@
 .shell {
-  --bg-surface: #ffffff;
-  --bg-soft: #eef8ff;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --brand-teal: #4cc9c0;
-  --brand-blue: #2563eb;
-  --border-soft: #dbeafe;
-  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
-  --shadow-hover: 0 14px 28px rgba(37, 99, 235, 0.12);
-  --radius-xl: 16px;
-  --radius-2xl: 20px;
-  --transition: 180ms ease;
-
   min-height: 100vh;
   color: var(--text-primary);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(76, 201, 192, 0.2), transparent 30%),
-    radial-gradient(circle at top right, rgba(37, 99, 235, 0.14), transparent 28%),
-    linear-gradient(180deg, #e6fffb 0%, #eff6ff 44%, #f8fbff 100%);
+  background: var(--page-gradient);
 }
 
 .navbar {
@@ -103,7 +86,7 @@
   margin: 0;
   font-size: clamp(1.8rem, 1.7vw + 1rem, 2.5rem);
   font-weight: 800;
-  color: #0b1c4d;
+  color: var(--text-strong);
 }
 
 .shell :global(.page-subtitle) {
@@ -117,7 +100,7 @@
 .shell :global(.notification-item),
 .shell :global(.workload-course-card),
 .shell :global(.travel-alert-card) {
-  background: rgba(255, 255, 255, 0.94);
+  background: var(--bg-elevated);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-soft);
@@ -142,7 +125,7 @@
 .shell :global(.stat-badge) {
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-soft);
-  background: linear-gradient(160deg, #ffffff, #f8fbff);
+  background: var(--surface-gradient);
   padding: 16px;
 }
 
@@ -157,7 +140,7 @@
   margin: 6px 0 0;
   font-size: 1.5rem;
   font-weight: 800;
-  color: #0b1c4d;
+  color: var(--text-strong);
 }
 
 .shell :global(.controls-row) {
@@ -171,8 +154,8 @@
   border: 1px solid var(--border-soft);
   border-radius: 999px;
   padding: 8px 14px;
-  color: #1e3a8a;
-  background: #fff;
+  color: var(--text-primary);
+  background: var(--bg-surface);
   font-weight: 600;
   font-size: 0.86rem;
   cursor: pointer;
@@ -209,9 +192,9 @@
 }
 
 .shell :global(.btn-secondary) {
-  background: #fff;
-  color: #1e3a8a;
-  border-color: #bfdbfe;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
 }
 
 .shell :global(.btn-primary:hover),
@@ -222,15 +205,15 @@
 
 .shell :global(.field) {
   border-radius: 12px;
-  border: 1px solid #cbd5e1;
-  background: #fff;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-surface);
   padding: 10px 12px;
   color: var(--text-primary);
   min-height: 40px;
 }
 
 .shell :global(.field:focus) {
-  outline: 2px solid rgba(37, 99, 235, 0.25);
+  outline: 2px solid var(--overlay-ring);
   border-color: var(--brand-blue);
 }
 
@@ -288,8 +271,8 @@
 
 .shell :global(.alert-banner) {
   border-radius: 14px;
-  border: 1px solid #fed7aa;
-  background: #fff7ed;
+  border: 1px solid color-mix(in srgb, #fed7aa 55%, var(--border-soft));
+  background: color-mix(in srgb, #fff7ed 65%, var(--bg-surface));
   color: #9a3412;
   padding: 12px 14px;
   font-size: 0.86rem;
@@ -297,10 +280,10 @@
 
 .shell :global(.empty-state) {
   text-align: center;
-  border: 1px dashed #cbd5e1;
+  border: 1px dashed var(--border-soft);
   border-radius: var(--radius-xl);
   padding: 28px 14px;
-  background: #f8fbff;
+  background: color-mix(in srgb, var(--bg-soft) 82%, transparent);
 }
 
 .shell :global(.empty-state__icon) {
@@ -309,7 +292,7 @@
 
 .shell :global(.empty-state__title) {
   margin: 8px 0 4px;
-  color: #0b1c4d;
+  color: var(--text-strong);
   font-size: 1.08rem;
 }
 
@@ -336,12 +319,12 @@
 }
 
 .shell :global(.notification-item--unread) {
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: var(--surface-gradient);
   border-color: #bfdbfe;
 }
 
 .shell :global(.notification-item--urgent) {
-  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  background: linear-gradient(180deg, var(--bg-surface) 0%, color-mix(in srgb, #fff7ed 70%, var(--bg-soft)) 100%);
   border-color: #fdba74;
   box-shadow: 0 10px 24px rgba(249, 115, 22, 0.16);
 }
@@ -372,7 +355,7 @@
 .shell :global(.reg-hero-message) {
   margin: 0;
   font-weight: 800;
-  color: #0b1c4d;
+  color: var(--text-strong);
 }
 
 .shell :global(.notification-item__title) {
@@ -449,7 +432,7 @@
   padding: 16px 18px;
   border-radius: var(--radius-2xl);
   border: 1px solid var(--border-soft);
-  background: linear-gradient(165deg, #ffffff 0%, #f8fbff 100%);
+  background: var(--surface-gradient);
   box-shadow: var(--shadow-soft);
 }
 
@@ -474,9 +457,7 @@
   position: relative;
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-2xl);
-  background:
-    radial-gradient(ellipse 100% 80% at 90% 0%, rgba(6, 182, 212, 0.12), transparent 55%),
-    linear-gradient(165deg, #ffffff 0%, #f0fdfa 35%, #eff6ff 100%);
+  background: var(--hero-gradient);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
 }

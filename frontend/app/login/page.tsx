@@ -76,44 +76,44 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-xl rounded-2xl border border-gray-100">
+    <div className="flex min-h-screen items-center justify-center p-4 bg-[var(--bg-page)]">
+      <div className="w-full max-w-md space-y-6 rounded-2xl border p-6 shadow-xl sm:p-8 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
         <div className="text-center">
           <h1 className="text-4xl font-black text-blue-600 tracking-tight uppercase italic">ScheduleU</h1>
-          <p className="text-gray-500 mt-2 font-medium">University Secure Portal</p>
+          <p className="mt-2 font-medium text-[var(--text-secondary)]">University Secure Portal</p>
         </div>
 
         {!showOTP ? (
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-bold text-gray-700 mb-1">University Email</label>
+              <label className="mb-1 block text-sm font-bold text-[var(--text-primary)]">University Email</label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition font-medium"
+                className="w-full rounded-lg border-2 px-4 py-2 font-medium transition focus:border-blue-500 focus:outline-none bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
                 placeholder="you@student.csulb.edu"
                 disabled={loading}
               />
             </div>
 
             <div>
-              <label className="block text-sm font-bold text-gray-700 mb-1">Password</label>
+              <label className="mb-1 block text-sm font-bold text-[var(--text-primary)]">Password</label>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition font-medium"
+                  className="w-full rounded-lg border-2 px-4 py-2 font-medium transition focus:border-blue-500 focus:outline-none bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
                   placeholder="••••••••"
                   disabled={loading}
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword((prev) => !prev)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600 transition"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 transition text-[var(--text-muted)] hover:text-blue-600"
                 >
                   {showPassword ? '🔒' : '👁️'}
                 </button>
@@ -142,13 +142,13 @@ export default function LoginPage() {
           </form>
         ) : (
           <div className="space-y-6">
-            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center">
+            <div className="rounded-xl border border-blue-200 bg-blue-50/90 p-4 text-center dark:bg-blue-950/30">
               <p className="text-xs font-black text-blue-600 uppercase tracking-widest">Multi-Factor Authentication</p>
               <p className="text-[11px] text-blue-400 mt-1">An 8-digit code was sent to your email.</p>
             </div>
 
             <input
-              className="w-full border-2 border-black p-4 rounded-xl text-center text-3xl font-black tracking-[0.2em] outline-none bg-white focus:ring-4 focus:ring-blue-100 transition"
+              className="w-full rounded-xl border-2 border-[var(--text-primary)] p-4 text-center text-3xl font-black tracking-[0.2em] outline-none transition focus:ring-4 focus:ring-blue-100 bg-[var(--bg-surface)] text-[var(--text-primary)]"
               maxLength={8}
               placeholder="00000000"
               value={otp}
@@ -166,7 +166,7 @@ export default function LoginPage() {
             
             <button 
               onClick={() => setShowOTP(false)}
-              className="w-full text-xs font-bold text-gray-400 uppercase tracking-tighter hover:text-blue-600 transition"
+              className="w-full text-xs font-bold uppercase tracking-tighter transition text-[var(--text-muted)] hover:text-blue-600"
             >
               Back to Login
             </button>
@@ -181,8 +181,8 @@ export default function LoginPage() {
           </div>
         )}
 
-        <div className="text-center text-sm pt-6 border-t border-gray-100">
-          <p className="text-gray-600 font-medium">
+        <div className="border-t pt-6 text-center text-sm border-[var(--border-soft)]">
+          <p className="font-medium text-[var(--text-secondary)]">
             Don't have an account yet?
             <Link href="/signup" className="font-bold text-blue-600 hover:underline ml-1">SIGN-UP</Link>
           </p>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { ReactNode } from "react";
+import HeaderMenu from "../HeaderMenu";
 import styles from "./PageLayout.module.css";
 
 type PageLayoutProps = {
@@ -12,6 +13,15 @@ type PageLayoutProps = {
 };
 
 export default function PageLayout({ label, title, subtitle, children }: PageLayoutProps) {
+  const menuItems = [
+    { href: "/dashboard", label: "Dashboard" },
+    { href: "/planner", label: "Planner" },
+    { href: "/notifications", label: "Notifications" },
+    { href: "/registration-countdown", label: "Registration" },
+    { href: "/ai-workload-scorer", label: "AI Workload" },
+    { href: "/travelalerts", label: "Travel Alerts" },
+  ];
+
   return (
     <div className={styles.shell}>
       <header className={styles.navbar}>
@@ -19,14 +29,7 @@ export default function PageLayout({ label, title, subtitle, children }: PageLay
           <Link href="/dashboard" className={styles.brand}>
             ScheduleU
           </Link>
-          <nav className={styles.links} aria-label="ScheduleU feature navigation">
-            <Link href="/dashboard">Dashboard</Link>
-            <Link href="/planner">Planner</Link>
-            <Link href="/notifications">Notifications</Link>
-            <Link href="/registration-countdown">Registration</Link>
-            <Link href="/ai-workload-scorer">AI Workload</Link>
-            <Link href="/travelalerts">Travel Alerts</Link>
-          </nav>
+          <HeaderMenu items={menuItems} title="Features" />
         </div>
       </header>
       <main className={styles.main}>

@@ -117,20 +117,21 @@ export default function NotificationBell() {
             position: "absolute",
             right: 0,
             marginTop: "10px",
-            width: "340px",
-            background: "white",
+            width: "min(340px, calc(100vw - 24px))",
+            background: "var(--bg-elevated)",
             borderRadius: "16px",
-            border: "1px solid #bfdbfe",
-            boxShadow: "0 18px 34px rgba(37,99,235,0.15)",
+            border: "1px solid var(--border-strong)",
+            boxShadow: "var(--shadow-hover)",
             padding: "12px",
             zIndex: 100,
             maxHeight: "400px",
             overflowY: "auto",
+            color: "var(--text-primary)",
           }}
         >
-          <p style={{ margin: "2px 0 10px", fontWeight: 700, color: "#0b1c4d" }}>Notification Center</p>
+          <p style={{ margin: "2px 0 10px", fontWeight: 700, color: "var(--text-strong)" }}>Notification Center</p>
           {notifications.length === 0 && (
-            <div style={{ textAlign: "center", padding: "18px 10px", color: "#475569" }}>
+            <div style={{ textAlign: "center", padding: "18px 10px", color: "var(--text-secondary)" }}>
               No notifications yet
             </div>
           )}
@@ -141,9 +142,11 @@ export default function NotificationBell() {
               style={{
                 padding: "12px",
                 marginBottom: "10px",
-                background: n.is_read ? "#f8fbff" : "#ecfeff",
-                color: "#0f172a",
-                border: "1px solid #dbeafe",
+                background: n.is_read
+                  ? "color-mix(in srgb, var(--bg-soft) 78%, var(--bg-surface))"
+                  : "color-mix(in srgb, #cffafe 40%, var(--bg-surface))",
+                color: "var(--text-primary)",
+                border: "1px solid var(--border-soft)",
                 borderRadius: "10px",
                 transition: "transform 0.2s ease",
                 cursor: "pointer",
@@ -159,7 +162,7 @@ export default function NotificationBell() {
                 {n.messages}
               </div>
 
-              <small style={{ color: "#64748b" }}>
+              <small style={{ color: "var(--text-muted)" }}>
                 {new Date(n.created_at).toLocaleString()}
               </small>
 
