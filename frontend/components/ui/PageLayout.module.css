@@ -991,6 +991,13 @@
   border-left: 5px solid #14b8a6;
 }
 
+.shell :global(.planner-builder-card) {
+  border-left: 5px solid #2563eb;
+  background:
+    radial-gradient(ellipse 90% 80% at 100% 0%, rgba(37, 99, 235, 0.1), transparent 52%),
+    linear-gradient(165deg, #ffffff 0%, #f8fbff 100%);
+}
+
 .shell :global(.planner-crn-panel) {
   display: flex;
   flex-direction: column;

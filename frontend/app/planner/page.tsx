@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import AlertBanner from "@/components/ui/AlertBanner";
 import PageLayout from "@/components/ui/PageLayout";
 import SectionCard from "@/components/ui/SectionCard";
@@ -232,6 +233,21 @@ export default function PlannerPage() {
               <span className="planner-stat__label">Term</span>
             </div>
           </div>
+        </div>
+      </SectionCard>
+
+      <SectionCard className="planner-builder-card">
+        <div className="reg-hero-row">
+          <div>
+            <p className="page-label">Schedule Builder</p>
+            <h2 className="reg-hero-message">Generate another schedule option</h2>
+            <p className="reg-hero-subtext">
+              Return to Schedule Builder when you want to compare generated combinations before placing sections on the calendar.
+            </p>
+          </div>
+          <Link href="/schedule-builder" className="btn btn-secondary">
+            Open Schedule Builder
+          </Link>
         </div>
       </SectionCard>
 
