@@ -125,11 +125,17 @@ export default function NotificationCenterClient({
       title="Notification Center"
       subtitle="Receive real-time academic and campus updates, including seat openings, registration milestones, and travel advisories."
     >
-      <SectionCard>
+      <SectionCard hover>
+        <p className="page-label">Overview</p>
+        <p className="section-intro">
+          Monitor the alerts that matter most before classes fill up, registration windows shift, or campus travel changes.
+        </p>
         <NotificationStatsRow notifications={notifications} />
       </SectionCard>
 
-      <SectionCard>
+      <SectionCard hover>
+        <p className="page-label">Inbox controls</p>
+        <p className="section-intro">Filter, search, and sort the live feed the same way you would triage a planner dashboard.</p>
         <NotificationFilters
           activeFilter={activeFilter}
           onFilterChange={setActiveFilter}
@@ -151,7 +157,7 @@ export default function NotificationCenterClient({
       {notSignedIn ? (
         <AlertBanner>
           You are not signed in.{" "}
-          <Link href="/login" style={{ fontWeight: 700, color: "#1e3a8a" }}>
+          <Link href="/login" className="alert-banner__link">
             Go to Login
           </Link>{" "}
           to load notifications tied to your account.
@@ -163,7 +169,16 @@ export default function NotificationCenterClient({
         </AlertBanner>
       ) : null}
 
-      <section className="notification-list">
+      <section className="notification-list" aria-labelledby="notification-feed-heading">
+        <div className="section-heading-block">
+          <p className="page-label">Live feed</p>
+          <h2 id="notification-feed-heading" className="section-heading">
+            Recent notifications
+          </h2>
+          <p className="section-intro section-intro--compact">
+            Urgent and unread items stay visually elevated so you can act on schedule changes faster.
+          </p>
+        </div>
         {filteredNotifications.length === 0 ? (
           <EmptyState
             icon="📭"

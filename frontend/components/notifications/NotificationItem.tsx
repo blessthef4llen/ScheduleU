@@ -43,7 +43,7 @@ export default function NotificationItem({ notification, onMarkRead, onDismiss }
 
       <div className="notification-item__meta">
         <span className="notification-item__time">{getRelativeTimeLabel(notification.created_at)}</span>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        <div className="notification-item__actions">
           <SecondaryButton type="button">View</SecondaryButton>
           {!notification.is_read && onMarkRead ? (
             <GradientButton type="button" onClick={() => onMarkRead(notification.id)}>

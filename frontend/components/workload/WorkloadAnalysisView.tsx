@@ -46,22 +46,24 @@ export default function WorkloadAnalysisView({ result, sectionSubtitle }: Worklo
         <RecommendationPanel recommendations={result.recommendations} />
       </SectionCard>
 
-      <section className="workload-course-section" aria-labelledby="workload-course-heading">
-        <div className="workload-course-section__head">
-          <p className="page-label workload-stats-eyebrow">Breakdown</p>
-          <h2 id="workload-course-heading" className="workload-section-title workload-section-title--tight">
-            Per-course workload
-          </h2>
-          <p className="workload-section-lead workload-section-lead--muted">
-            Difficulty scores and drivers for each class in this plan.
-          </p>
+      <SectionCard hover className="workload-section-card">
+        <div className="workload-course-section" aria-labelledby="workload-course-heading">
+          <div className="workload-course-section__head">
+            <p className="page-label workload-stats-eyebrow">Breakdown</p>
+            <h2 id="workload-course-heading" className="workload-section-title workload-section-title--tight">
+              Per-course workload
+            </h2>
+            <p className="workload-section-lead workload-section-lead--muted">
+              Difficulty scores and drivers for each class in this plan.
+            </p>
+          </div>
+          <div className="workload-course-list">
+            {result.analyzedCourses.map((course) => (
+              <CourseDifficultyCard key={`${course.courseCode}-${course.sectionCode}`} course={course} />
+            ))}
+          </div>
         </div>
-        <div className="workload-course-list">
-          {result.analyzedCourses.map((course) => (
-            <CourseDifficultyCard key={`${course.courseCode}-${course.sectionCode}`} course={course} />
-          ))}
-        </div>
-      </section>
+      </SectionCard>
     </div>
   );
 }
