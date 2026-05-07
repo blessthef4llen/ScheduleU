@@ -146,6 +146,8 @@ function semesterRowToSection(row: SemesterTableRow, termTable: string): Section
     section_uid: textValue(row.section_uid),
     term_table: termTable,
     term: normalizeTerm(row.term),
+    subject: textValue(row.subject),
+    course_number: textValue(row.course_number),
     course_code_full: textValue(row.course_code_full) ?? courseCode(row.subject, row.course_number),
     course_title: textValue(row.course_title),
     units: numericValue(row.units),
@@ -170,6 +172,8 @@ function legacyRowToSection(row: LegacySectionRow): SectionLite {
     section_uid: null,
     term_table: null,
     term: row.term ?? null,
+    subject: null,
+    course_number: null,
     course_code_full: textValue(row.course_code_full),
     course_title: null,
     section: row.sec ?? null,
@@ -476,6 +480,13 @@ export async function addSectionWithChecks(params: {
 
   const label = candidate.section.course_code_full ?? `SEC ${candidate.section.id}`;
   const candidateBlocks = buildBlocks(candidate.section.days, candidate.section.time_range, label);
+  if (candidateBlocks.length === 0) {
+    return {
+      ok: false,
+      msg: "This course cannot be selected because its meeting time has not been confirmed.",
+    };
+  }
+
   const conflict = findConflict(candidateBlocks, existingBlocks);
   if (conflict) {
     const candidateBlock = conflict.candidate;
