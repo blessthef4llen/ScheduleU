@@ -986,6 +986,36 @@
   margin-top: 18px;
 }
 
+.shell :global(.planner-crn-panel .btn-primary) {
+  border-color: transparent;
+  background: linear-gradient(90deg, #0f766e 0%, #1d4ed8 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+}
+
+.shell :global(.planner-crn-panel .btn-secondary) {
+  border-color: #94a3b8;
+  background: #ffffff;
+  color: #0b1c4d;
+}
+
+.shell :global(.planner-crn-panel .btn:disabled) {
+  opacity: 1;
+}
+
+.shell :global(.planner-crn-panel .btn-primary:disabled) {
+  border-color: #bfdbfe;
+  background: #dbeafe;
+  color: #1e3a8a;
+  box-shadow: none;
+}
+
+.shell :global(.planner-crn-panel .btn-secondary:disabled) {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+}
+
 .shell :global(.planner-crn-list) {
   display: flex;
   flex-wrap: wrap;
@@ -1304,20 +1334,38 @@
   text-decoration: none;
 }
 
+.shell :global(.planner-fullcalendar .fc-v-event),
 .shell :global(.planner-fullcalendar .fc-timegrid-event) {
-  border: 1px solid rgba(30, 64, 175, 0.15);
+  border: 1px solid rgba(15, 118, 110, 0.45) !important;
   border-radius: 10px;
-  background: linear-gradient(145deg, var(--brand-teal), var(--brand-blue));
-  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.16);
+  background: linear-gradient(145deg, #0f766e 0%, #1d4ed8 100%) !important;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+  color: #ffffff !important;
+  overflow: hidden;
 }
 
 .shell :global(.planner-fullcalendar .fc-event-main) {
   padding: 5px 6px;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.shell :global(.planner-fullcalendar .fc-event-main-frame) {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .shell :global(.planner-fullcalendar .fc-event-title),
 .shell :global(.planner-fullcalendar .fc-event-time) {
+  color: #ffffff !important;
   font-weight: 800;
+  line-height: 1.25;
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.35);
+}
+
+.shell :global(.planner-fullcalendar .fc-event-title) {
+  overflow-wrap: anywhere;
 }
 
 .shell :global(.planner-fullcalendar .fc-scrollgrid) {

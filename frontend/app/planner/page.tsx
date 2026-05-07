@@ -245,9 +245,14 @@ export default function PlannerPage() {
               Return to Schedule Builder when you want to compare generated combinations before placing sections on the calendar.
             </p>
           </div>
-          <Link href="/schedule-builder" className="btn btn-secondary">
-            Open Schedule Builder
-          </Link>
+          <div className="controls-row">
+            <Link href="/dashboard" className="btn btn-secondary">
+              Back to Dashboard
+            </Link>
+            <Link href="/schedule-builder" className="btn btn-secondary">
+              Open Schedule Builder
+            </Link>
+          </div>
         </div>
       </SectionCard>
 
