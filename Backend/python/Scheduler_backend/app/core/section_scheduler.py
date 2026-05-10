@@ -1,3 +1,5 @@
+"""Core scheduling backend logic for Section Scheduler."""
+
 from __future__ import annotations
 
 import re

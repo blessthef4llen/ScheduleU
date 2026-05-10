@@ -1,3 +1,4 @@
+// Shared Types helpers for ScheduleU.
 export type MeetingBlock = {
   day: number;
   startMin: number;

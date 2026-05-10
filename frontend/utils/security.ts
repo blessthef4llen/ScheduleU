@@ -1,3 +1,4 @@
+// Utility helpers for Security.
 import CryptoJS from 'crypto-js';
 
 // The 'Key' used to scramble the student data.

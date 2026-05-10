@@ -1,3 +1,4 @@
+// Reusable Notificationitem component for ScheduleU.
 import { GradientButton, SecondaryButton } from "@/components/ui/Buttons";
 import InfoBadge from "@/components/ui/InfoBadge";
 import type { NotificationRecord } from "./types";

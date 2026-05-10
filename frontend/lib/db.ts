@@ -1,3 +1,4 @@
+// Shared Db helpers for ScheduleU.
 import { Pool } from "pg";
 
 export const pool = new Pool({

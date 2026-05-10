@@ -1,4 +1,5 @@
 "use client";
+// Reusable Flipcountdown component for ScheduleU.
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CountdownParts } from "./types";

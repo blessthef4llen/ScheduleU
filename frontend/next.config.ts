@@ -1,3 +1,4 @@
+// Source file for Next.config.
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {

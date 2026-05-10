@@ -1,3 +1,5 @@
+"""API models and helpers for Models."""
+
 from pydantic import BaseModel, Field
 from typing import Literal
 

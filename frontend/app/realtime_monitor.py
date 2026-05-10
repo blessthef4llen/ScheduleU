@@ -1,3 +1,5 @@
+"""Source file for Realtime Monitor."""
+
 import os
 import time
 from typing import Any, Dict, Optional

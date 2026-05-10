@@ -1,4 +1,5 @@
 "use client";
+// Reusable Theme Script component for ScheduleU.
 
 import Script from "next/script";
 

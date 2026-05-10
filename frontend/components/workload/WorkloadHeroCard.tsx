@@ -1,3 +1,4 @@
+// Reusable Workloadherocard component for ScheduleU.
 ﻿import type { CSSProperties } from "react";
 import InfoBadge from "@/components/ui/InfoBadge";
 

@@ -1,3 +1,5 @@
+"""Core scheduling backend logic for Scheduling Models."""
+
 from dataclasses import dataclass
 from typing import List, Optional
 

@@ -1,3 +1,4 @@
+// Reusable Workloadanalysisview component for ScheduleU.
 ﻿import SectionCard from "@/components/ui/SectionCard";
 import StatBadge from "@/components/ui/StatBadge";
 import type { WorkloadResult } from "@/lib/workloadScorer";

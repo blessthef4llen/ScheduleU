@@ -1,3 +1,4 @@
+// Reusable Notificationstatsrow component for ScheduleU.
 import StatBadge from "@/components/ui/StatBadge";
 import type { NotificationRecord } from "./types";
 import { getCategory } from "./helpers";

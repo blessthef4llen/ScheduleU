@@ -1,4 +1,5 @@
 "use client";
+// Update Password page for ScheduleU.
 
 import { useState } from 'react';
 import { supabase } from '@/utils/supabase';

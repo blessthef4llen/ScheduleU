@@ -1,4 +1,5 @@
 "use client";
+// Reusable Registrationcountdownclient component for ScheduleU.
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";

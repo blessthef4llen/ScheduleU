@@ -1,3 +1,5 @@
+"""Source file for Realtime Sections Repository."""
+
 from typing import Any, Dict, List, Optional, Tuple
 from app.db import get_connection
 

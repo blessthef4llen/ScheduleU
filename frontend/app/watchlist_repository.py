@@ -1,3 +1,5 @@
+"""Source file for Watchlist Repository."""
+
 from typing import Any, Dict, List, Optional
 from app.db import get_connection
 

@@ -1,4 +1,5 @@
 "use client";
+// Reusable Notificationbell component for ScheduleU.
 
 import { useEffect, useState } from "react";
 import InfoBadge from "@/components/ui/InfoBadge";

@@ -1,3 +1,5 @@
+"""Application entrypoint for this service."""
+
 from fastapi import FastAPI
 
 

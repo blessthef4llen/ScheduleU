@@ -1,4 +1,6 @@
 "use client";
+
+// Parking page for ScheduleU.
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { supabase } from '../../utils/supabase';

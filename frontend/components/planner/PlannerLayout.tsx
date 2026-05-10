@@ -1,4 +1,5 @@
 "use client";
+// Reusable Plannerlayout component for ScheduleU.
 
 import SectionCard from "@/components/ui/SectionCard";
 import type { CalendarEvent, SectionLite } from "@/lib/planner/types";

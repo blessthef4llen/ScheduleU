@@ -1,4 +1,5 @@
 "use client";
+// Reusable Pagelayout component for ScheduleU.
 
 import Link from "next/link";
 import type { ReactNode } from "react";

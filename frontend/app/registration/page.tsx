@@ -1,4 +1,5 @@
 "use client";
+// Registration page for ScheduleU.
 
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";

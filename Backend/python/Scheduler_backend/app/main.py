@@ -1,3 +1,5 @@
+"""Application entrypoint for this service."""
+
 import os
 from pathlib import Path
 

@@ -1,3 +1,4 @@
+// Signup page for ScheduleU.
 'use client'
 
 import { useState } from 'react'

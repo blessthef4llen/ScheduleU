@@ -1,4 +1,5 @@
 "use client";
+// Degree Audit page for ScheduleU.
 
 import Link from "next/link";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";

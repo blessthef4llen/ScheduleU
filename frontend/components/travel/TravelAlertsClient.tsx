@@ -1,4 +1,5 @@
 "use client";
+// Reusable Travelalertsclient component for ScheduleU.
 
 import { useMemo, useState } from "react";
 import EmptyState from "@/components/ui/EmptyState";

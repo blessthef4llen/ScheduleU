@@ -1,3 +1,4 @@
+// Shared Workloaddemo helpers for ScheduleU.
 import { analyzeWorkload, type CourseDifficultyProfile, type StudentPlannedCourse, type WorkloadResult } from "./workloadScorer";
 
 const DEMO_USER = "demo-scheduleu";

@@ -1,3 +1,5 @@
+"""Core scheduling backend logic for Scheduler Engine."""
+
 # app/core/scheduler_engine.py
 from __future__ import annotations
 from typing import Set, List, Dict, Optional

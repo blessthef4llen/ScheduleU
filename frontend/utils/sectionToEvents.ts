@@ -1,3 +1,4 @@
+// Utility helpers for Sectiontoevents.
 import type { CalendarEvent, SectionLite } from "@/lib/planner/types";
 import { parseDays, parseTimeRange } from "@/lib/planner/conflict";
 

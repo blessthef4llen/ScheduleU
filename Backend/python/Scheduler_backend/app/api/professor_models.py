@@ -1,3 +1,5 @@
+"""API models and helpers for Professor Models."""
+
 from __future__ import annotations
 
 from pydantic import BaseModel

@@ -1,3 +1,5 @@
+"""Application entrypoint for this service."""
+
 #Updated main.py to integrate the backend
 from typing import Any, Dict, Optional, List
 from pydantic import BaseModel, Field

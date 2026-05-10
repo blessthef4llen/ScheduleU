@@ -1,3 +1,4 @@
+// Notifications page for ScheduleU.
 import NotificationCenterClient from "@/components/notifications/NotificationCenterClient";
 
 export default function NotificationsPage() {

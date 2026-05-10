@@ -1,4 +1,6 @@
 "use client";
+
+// Home page for ScheduleU.
 import Link from 'next/link';
 import HeaderMenu from "../components/HeaderMenu";
 import { ThemeToggle } from "../components/theme-toggle";

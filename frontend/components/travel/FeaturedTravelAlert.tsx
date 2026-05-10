@@ -1,3 +1,4 @@
+// Reusable Featuredtravelalert component for ScheduleU.
 import type { TravelAlert } from "@/lib/travelAlertsMock";
 
 type FeaturedTravelAlertProps = {

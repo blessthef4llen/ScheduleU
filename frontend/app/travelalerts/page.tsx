@@ -1,3 +1,4 @@
+// Travelalerts page for ScheduleU.
 import PageLayout from "@/components/ui/PageLayout";
 import TravelAlertsClient from "@/components/travel/TravelAlertsClient";
 import { TRAVEL_MOCK_ALERTS } from "@/lib/travelAlertsMock";

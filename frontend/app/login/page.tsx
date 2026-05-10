@@ -1,3 +1,4 @@
+// Login page for ScheduleU.
 'use client'
 
 import { useState } from 'react'

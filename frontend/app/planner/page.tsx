@@ -1,4 +1,5 @@
 "use client";
+// Planner page for ScheduleU.
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";

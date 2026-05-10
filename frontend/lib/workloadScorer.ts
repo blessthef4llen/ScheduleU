@@ -1,3 +1,4 @@
+// Shared Workloadscorer helpers for ScheduleU.
 export type Intensity = "low" | "medium" | "high" | string | null | undefined;
 
 export type CourseDifficultyProfile = {

@@ -1,3 +1,4 @@
+// Reusable Statbadge component for ScheduleU.
 type StatBadgeProps = {
   label: string;
   value: number;

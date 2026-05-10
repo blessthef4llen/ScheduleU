@@ -1,3 +1,4 @@
+// Reusable Demomodebanner component for ScheduleU.
 ﻿import Link from "next/link";
 
 export default function DemoModeBanner() {

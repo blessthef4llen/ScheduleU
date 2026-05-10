@@ -1,4 +1,6 @@
 "use client";
+
+// Social Hub page for ScheduleU.
 import React, { useState } from 'react';
 import Link from 'next/link';
 

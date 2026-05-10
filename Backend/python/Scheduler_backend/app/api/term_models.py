@@ -1,3 +1,5 @@
+"""API models and helpers for Term Models."""
+
 from pydantic import BaseModel, Field
 from typing import Optional
 

@@ -1,3 +1,4 @@
+// Reusable Helpers component for ScheduleU.
 import type { NotificationFilter, NotificationRecord } from "./types";
 
 export function getCategory(type: string | null): Exclude<NotificationFilter, "all" | "unread"> {

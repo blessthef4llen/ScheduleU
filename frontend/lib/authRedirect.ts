@@ -1,3 +1,4 @@
+// Shared Authredirect helpers for ScheduleU.
 const DEFAULT_SITE_URL = "http://localhost:3000";
 
 export function getSiteUrl(): string {

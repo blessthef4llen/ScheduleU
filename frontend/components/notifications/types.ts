@@ -1,3 +1,4 @@
+// Reusable Types component for ScheduleU.
 export type NotificationRecord = {
   id: string;
   messages: string;

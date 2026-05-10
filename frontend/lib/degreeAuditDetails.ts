@@ -1,3 +1,4 @@
+// Shared Degreeauditdetails helpers for ScheduleU.
 import { supabase } from "@/utils/supabase";
 
 export type AuditCourseDetail = {

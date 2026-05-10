@@ -1,3 +1,4 @@
+// Shared Notifications helpers for ScheduleU.
 import { pool } from "@/lib/db";
 import type { NotificationRecord } from "@/components/notifications/types";
 

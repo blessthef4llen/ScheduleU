@@ -1,3 +1,4 @@
+// Source file for Majors.
 export type MajorGroup = {
   college: string
   majors: string[]

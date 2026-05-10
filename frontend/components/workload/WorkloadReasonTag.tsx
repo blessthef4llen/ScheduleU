@@ -1,3 +1,4 @@
+// Reusable Workloadreasontag component for ScheduleU.
 ﻿type WorkloadReasonTagProps = {
   text: string;
   emphasis?: boolean;

@@ -1,3 +1,4 @@
+// Reusable Professorratingbadge component for ScheduleU.
 'use client'
 
 import { useEffect, useState } from 'react'

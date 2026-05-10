@@ -1,3 +1,4 @@
+// Next.js API route for registration reminder.
 import { NextResponse } from "next/server";
 import { createServerSupabase } from "@/lib/supabaseServer";
 

@@ -1,3 +1,4 @@
+// Reusable Fields component for ScheduleU.
 import type { InputHTMLAttributes, SelectHTMLAttributes } from "react";
 
 export function InputField(props: InputHTMLAttributes<HTMLInputElement>) {

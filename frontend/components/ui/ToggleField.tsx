@@ -1,3 +1,4 @@
+// Reusable Togglefield component for ScheduleU.
 import type { InputHTMLAttributes } from "react";
 
 type ToggleFieldProps = InputHTMLAttributes<HTMLInputElement> & {

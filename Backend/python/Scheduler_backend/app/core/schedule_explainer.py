@@ -1,3 +1,5 @@
+"""Core scheduling backend logic for Schedule Explainer."""
+
 from __future__ import annotations
 
 import json

@@ -1,4 +1,5 @@
 "use client";
+// Reusable Navbar component for ScheduleU.
 
 import Link from "next/link";
 

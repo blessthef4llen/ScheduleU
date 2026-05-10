@@ -1,3 +1,5 @@
+"""Core scheduling backend logic for Transcript Parser."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass

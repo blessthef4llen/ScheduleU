@@ -1,4 +1,5 @@
 "use client";
+// Reusable Plannercalendar component for ScheduleU.
 
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";

@@ -1,3 +1,5 @@
+"""Core scheduling backend logic for Catalog Merge."""
+
 # app/core/catalog_merge.py
 from __future__ import annotations
 

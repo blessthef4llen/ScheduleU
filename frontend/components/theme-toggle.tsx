@@ -1,4 +1,5 @@
 "use client";
+// Reusable Theme Toggle component for ScheduleU.
 
 import { useEffect, useState } from "react";
 

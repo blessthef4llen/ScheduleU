@@ -1,4 +1,5 @@
 "use client";
+// Reusable Notificationcenterclient component for ScheduleU.
 
 import { useEffect, useMemo, useState } from "react";
 import AlertBanner from "@/components/ui/AlertBanner";

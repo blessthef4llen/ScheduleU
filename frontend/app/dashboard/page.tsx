@@ -1,4 +1,5 @@
 "use client";
+// Dashboard page for ScheduleU.
 
 import Link from "next/link";
 import HeaderMenu from "@/components/HeaderMenu";

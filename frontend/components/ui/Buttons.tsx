@@ -1,3 +1,4 @@
+// Reusable Buttons component for ScheduleU.
 import type { ButtonHTMLAttributes } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;

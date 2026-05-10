@@ -1,3 +1,5 @@
+"""Core scheduling backend logic for Deps Model."""
+
 # app/core/deps_model.py
 from __future__ import annotations
 from dataclasses import dataclass

@@ -1,3 +1,4 @@
+// Shared Supabaseserver helpers for ScheduleU.
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 /**

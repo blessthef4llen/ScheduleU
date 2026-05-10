@@ -1,3 +1,4 @@
+// Reusable Types component for ScheduleU.
 export type RegistrationWindowRow = {
   id?: string | number;
   user_id?: string | null;

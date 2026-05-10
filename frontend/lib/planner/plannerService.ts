@@ -1,4 +1,5 @@
 "use client";
+// Shared Plannerservice helpers for ScheduleU.
 
 import { getSupabase } from "@/lib/supabaseClient";
 import type { SupabaseClient } from "@supabase/supabase-js";
@@ -122,6 +123,8 @@ function mapOpenSeats(value: string | number | null | undefined): {
 
   const label = text.replaceAll("_", " ");
   const normalized = label.toLowerCase();
+  // Semester tables mix numeric counts with human-readable labels, so we
+  // preserve the label while still normalizing it into a coarse status.
   const status = normalized.includes("available")
     ? "open"
     : normalized.includes("wait")
@@ -205,6 +208,8 @@ async function fetchSemesterRows(
 
   for (let from = 0; from < limit; from += pageSize) {
     const to = Math.min(from + pageSize - 1, limit - 1);
+    // Supabase range queries keep the fetch predictable for large term tables
+    // without loading the entire catalog into a single response.
     const { data, error } = await supabase
       .from(termTable)
       .select(SEMESTER_SELECT)
@@ -246,6 +251,9 @@ export async function getAuthedAppUser() {
     return { appUser: existing as AppUserRow, error: null as string | null };
   }
 
+  // The planner depends on an application-level users row even when the person
+  // signed in only exists in Supabase Auth, so we create a lightweight record
+  // on first use.
   const email = authUser.email ?? `${authUser.id}@scheduleu.local`;
   const name =
     typeof authUser.user_metadata?.full_name === "string"

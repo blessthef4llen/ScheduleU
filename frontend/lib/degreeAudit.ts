@@ -1,3 +1,4 @@
+// Shared Degreeaudit helpers for ScheduleU.
 import { supabase } from "@/utils/supabase";
 
 export async function getDegreeAudit(userId: string, programId: number) {

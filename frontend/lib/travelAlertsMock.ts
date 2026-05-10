@@ -1,3 +1,4 @@
+// Shared Travelalertsmock helpers for ScheduleU.
 export type TravelCategory = "shuttle" | "parking" | "weather" | "advisory";
 
 export type TravelShuttleStatus = "on-time" | "delayed";

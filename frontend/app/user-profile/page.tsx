@@ -1,4 +1,6 @@
 "use client";
+
+// User Profile page for ScheduleU.
 import { useState, useEffect, useMemo, type Dispatch, type ReactNode, type SetStateAction } from 'react';
 import Link from 'next/link';
 import { supabase } from '@/utils/supabase';

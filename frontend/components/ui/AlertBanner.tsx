@@ -1,3 +1,4 @@
+// Reusable Alertbanner component for ScheduleU.
 import type { ReactNode } from "react";
 
 type AlertBannerProps = {

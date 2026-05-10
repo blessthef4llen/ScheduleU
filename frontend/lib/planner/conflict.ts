@@ -1,3 +1,4 @@
+// Shared Conflict helpers for ScheduleU.
 import type { MeetingBlock } from "./types";
 
 export const DAY_NAME = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] as const;

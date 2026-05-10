@@ -1,3 +1,5 @@
+"""FastAPI routes for schedule generation, transcript parsing, and professor lookups."""
+
 # API route dependencies.
 from __future__ import annotations
 
@@ -88,6 +90,8 @@ def schedule_generate(req: GenerateRequest):
             raise HTTPException(status_code=400, detail={"unknown_courses": unknown})
 
     terms = req.terms if req.terms else ["Fall", "Spring"]
+    # The planner can accept seasonal placeholders and expand them into a fixed
+    # alternating horizon so the core engine always receives explicit term slots.
     # If only seasonal labels are provided (e.g., Fall/Spring), expand them to a fixed planning horizon.
     if len(terms) <= 4 and all(("20" not in t) for t in terms):
         horizon = 12
@@ -237,6 +241,8 @@ def term_schedule(req: TermScheduleRequest):
 
         options_by_course[course] = kept
 
+    # Ranking happens only after hard constraints are enforced, so downstream
+    # explanations compare schedules that are already conflict-free and allowed.
     # Pick ranked conflict-free schedules from the remaining sections.
     ranked, failures = pick_ranked_schedules(
         options_by_course,

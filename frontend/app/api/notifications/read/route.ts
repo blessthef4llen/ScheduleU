@@ -1,3 +1,4 @@
+// Next.js API route for notifications read.
 import { pool } from "@/lib/db";
 import { NextResponse } from "next/server";
 

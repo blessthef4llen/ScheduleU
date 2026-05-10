@@ -1,4 +1,5 @@
 "use client";
+// Utility helpers for Supabase.
 
 import { createClient } from "@supabase/supabase-js";
 

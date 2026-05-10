@@ -1,3 +1,5 @@
+"""Core scheduling backend logic for Catalog Loader."""
+
 from __future__ import annotations
 
 import os

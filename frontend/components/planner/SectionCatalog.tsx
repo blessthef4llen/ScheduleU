@@ -1,4 +1,5 @@
 "use client";
+// Reusable Sectioncatalog component for ScheduleU.
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Draggable } from "@fullcalendar/interaction";

@@ -1,3 +1,4 @@
+// Reusable Coursedifficultycard component for ScheduleU.
 ﻿import InfoBadge from "@/components/ui/InfoBadge";
 import type { AnalyzedCourse } from "@/lib/workloadScorer";
 import WorkloadReasonTag from "./WorkloadReasonTag";

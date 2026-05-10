@@ -1,3 +1,5 @@
+"""Source file for Db."""
+
 import os
 from dotenv import load_dotenv
 import psycopg

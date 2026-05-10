@@ -1,3 +1,4 @@
+// Reusable Emptystate component for ScheduleU.
 type EmptyStateProps = {
   icon?: string;
   title: string;

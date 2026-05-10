@@ -1,3 +1,4 @@
+// Reusable Recommendationpanel component for ScheduleU.
 ﻿type RecommendationPanelProps = {
   recommendations: string[];
 };

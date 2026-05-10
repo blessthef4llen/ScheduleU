@@ -1,4 +1,5 @@
 "use client";
+// Shared Exportcrn helpers for ScheduleU.
 
 import { getSupabase } from "@/lib/supabaseClient";
 

@@ -1,3 +1,4 @@
+// Reusable Sectioncard component for ScheduleU.
 import type { ReactNode } from "react";
 
 type SectionCardProps = {

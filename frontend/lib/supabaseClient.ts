@@ -1,4 +1,5 @@
 "use client";
+// Shared Supabaseclient helpers for ScheduleU.
 
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 

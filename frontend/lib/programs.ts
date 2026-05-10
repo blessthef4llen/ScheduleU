@@ -1,3 +1,4 @@
+// Shared Programs helpers for ScheduleU.
 import { supabase } from "@/utils/supabase";
 
 export type Program = {
