@@ -6,7 +6,7 @@ import { supabase } from '@/utils/supabase'
 import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
 import HeaderMenu from '@/components/HeaderMenu'
 import Link from 'next/link'
-import { isSectionWatched, saveWatchlistItem } from '@/lib/watchlist'
+import { isSectionWatched, removeWatchlistItem, saveWatchlistItem } from '@/lib/watchlist'
 
 type RawCourseRow = Record<string, unknown>
 
@@ -320,6 +320,7 @@ export default function CoursesPage() {
   const [currentPage, setCurrentPage] = useState(1)
   const [pageSize, setPageSize] = useState(20)
   const [savingKey, setSavingKey] = useState<string | null>(null)
+  const [watchingKey, setWatchingKey] = useState<string | null>(null)
   const [saveMessage, setSaveMessage] = useState('')
   const [watchedKeys, setWatchedKeys] = useState<string[]>([])
 
@@ -668,6 +669,8 @@ export default function CoursesPage() {
 
   const addSectionToWatchlist = async (section: SectionItem) => {
     setSaveMessage('')
+    const key = `${semesterTable}|${section.class_number}`
+    setWatchingKey(key)
 
     try {
       const { data: authData, error: authError } = await supabase.auth.getUser()
@@ -699,11 +702,45 @@ export default function CoursesPage() {
         lastNotifiedStatus: null,
       })
 
-      setWatchedKeys((prev) => Array.from(new Set([...prev, `${semesterTable}|${section.class_number}`])))
+      setWatchedKeys((prev) => Array.from(new Set([...prev, key])))
       setSaveMessage(`Watching ${section.course_code_full} (section ${section.section}) for seat changes.`)
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Failed to watch section.'
       setSaveMessage(`Watchlist error: ${message}`)
+    } finally {
+      setWatchingKey(null)
+    }
+  }
+
+  const removeSectionFromWatchlist = async (section: SectionItem) => {
+    setSaveMessage('')
+    const key = `${semesterTable}|${section.class_number}`
+    setWatchingKey(key)
+
+    try {
+      const { data: authData, error: authError } = await supabase.auth.getUser()
+      if (authError) throw new Error(authError.message)
+      const user = authData.user
+      if (!user) {
+        throw new Error('You must be logged in to manage watched sections.')
+      }
+      if (!section.class_number || section.class_number === 'N/A') {
+        throw new Error('This section is missing a class number, so it cannot be updated.')
+      }
+
+      removeWatchlistItem({
+        authUserId: user.id,
+        termTable: semesterTable,
+        classNumber: section.class_number,
+      })
+
+      setWatchedKeys((prev) => prev.filter((entry) => entry !== key))
+      setSaveMessage(`Stopped watching ${section.course_code_full} (section ${section.section}).`)
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to update watched section.'
+      setSaveMessage(`Watchlist error: ${message}`)
+    } finally {
+      setWatchingKey(null)
     }
   }
 
@@ -1019,18 +1056,32 @@ export default function CoursesPage() {
                                 ? 'Adding...'
                                 : 'Add to Shopping Cart'}
                             </button>
+                            {(() => {
+                              const watchKey = `${semesterTable}|${section.class_number}`
+                              const isWatched = watchedKeys.includes(watchKey)
+                              const watchPending = watchingKey === watchKey
+
+                              return (
                             <button
                               type="button"
-                              onClick={() => addSectionToWatchlist(section)}
-                              disabled={section.class_number === 'N/A' || watchedKeys.includes(`${semesterTable}|${section.class_number}`)}
-                              className="rounded-xl border px-3 py-1.5 text-sm font-black transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)] disabled:opacity-60"
+                              onClick={() =>
+                                isWatched ? removeSectionFromWatchlist(section) : addSectionToWatchlist(section)
+                              }
+                              disabled={section.class_number === 'N/A' || watchPending}
+                              className="rounded-xl border px-3 py-1.5 text-sm font-black transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)] disabled:cursor-not-allowed disabled:opacity-60"
                             >
                               {section.class_number === 'N/A'
                                 ? 'Class Number Required'
-                                : watchedKeys.includes(`${semesterTable}|${section.class_number}`)
-                                ? 'Watching'
+                                : watchPending
+                                ? isWatched
+                                  ? 'Updating...'
+                                  : 'Saving...'
+                                : isWatched
+                                ? 'Watching Seats Open'
                                 : 'Notify Me When Seat Opens'}
                             </button>
+                              )
+                            })()}
                           </div>
                         </div>
                       ))}
