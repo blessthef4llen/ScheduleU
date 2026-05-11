@@ -298,6 +298,7 @@ export default function CoursesPage() {
     { href: '/schedule-builder', label: 'Schedule Builder' },
     { href: '/watchlist', label: 'Watchlist' },
     { href: '/user-profile', label: 'Profile' },
+    { href: '/profile', label: 'Settings' },
   ]
 
   const [semesterTable, setSemesterTable] = useState(SEMESTER_OPTIONS[0].table)
@@ -675,17 +676,14 @@ export default function CoursesPage() {
     try {
       const { data: authData, error: authError } = await supabase.auth.getUser()
       if (authError) throw new Error(authError.message)
-      const user = authData.user
-      if (!user) {
-        throw new Error('You must be logged in to watch a section.')
-      }
+      const authUserId = authData.user?.id ?? 'guest'
       if (!section.class_number || section.class_number === 'N/A') {
         throw new Error('This section is missing a class number, so it cannot be watched yet.')
       }
 
       saveWatchlistItem({
-        id: `${user.id}:${semesterTable}:${section.class_number}`,
-        authUserId: user.id,
+        id: `${authUserId}:${semesterTable}:${section.class_number}`,
+        authUserId,
         termTable: semesterTable,
         classNumber: section.class_number,
         section: section.section,
@@ -720,16 +718,13 @@ export default function CoursesPage() {
     try {
       const { data: authData, error: authError } = await supabase.auth.getUser()
       if (authError) throw new Error(authError.message)
-      const user = authData.user
-      if (!user) {
-        throw new Error('You must be logged in to manage watched sections.')
-      }
+      const authUserId = authData.user?.id ?? 'guest'
       if (!section.class_number || section.class_number === 'N/A') {
         throw new Error('This section is missing a class number, so it cannot be updated.')
       }
 
       removeWatchlistItem({
-        authUserId: user.id,
+        authUserId,
         termTable: semesterTable,
         classNumber: section.class_number,
       })

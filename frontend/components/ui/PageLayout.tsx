@@ -21,6 +21,8 @@ export default function PageLayout({ label, title, subtitle, children }: PageLay
     { href: "/registration-countdown", label: "Registration" },
     { href: "/ai-workload-scorer", label: "AI Workload" },
     { href: "/travelalerts", label: "Travel Alerts" },
+    { href: "/user-profile", label: "Profile" },
+    { href: "/profile", label: "Settings" },
   ];
 
   return (
