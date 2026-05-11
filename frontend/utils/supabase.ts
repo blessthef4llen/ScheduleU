@@ -30,5 +30,22 @@ function createBrowserSupabase(): SupabaseClient {
   });
 }
 
-const w = window as typeof window & { __scheduleu_supabase?: SupabaseClient };
-export const supabase = w.__scheduleu_supabase ?? (w.__scheduleu_supabase = createBrowserSupabase());
+function getBrowserSupabase(): SupabaseClient {
+  if (typeof window === "undefined") {
+    throw new Error("ScheduleU Supabase client can only be used in the browser.");
+  }
+
+  const w = window as typeof window & { __scheduleu_supabase?: SupabaseClient };
+  if (!w.__scheduleu_supabase) {
+    w.__scheduleu_supabase = createBrowserSupabase();
+  }
+  return w.__scheduleu_supabase;
+}
+
+export const supabase = new Proxy({} as SupabaseClient, {
+  get(_target, prop, receiver) {
+    const client = getBrowserSupabase();
+    const value = Reflect.get(client as object, prop, receiver);
+    return typeof value === "function" ? value.bind(client) : value;
+  },
+});
