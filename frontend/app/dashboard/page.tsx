@@ -13,27 +13,29 @@ type ToolCard = {
 
 export default function DashboardPage() {
   const menuItems = [
+    { href: "/courses", label: "Courses" },
+    { href: "/schedule-builder", label: "Builder" },
     { href: "/planner", label: "Planner" },
+    { href: "/watchlist", label: "Watchlist" },
     { href: "/notifications", label: "Notifications" },
     { href: "/registration-countdown", label: "Registration" },
-    { href: "/user-profile", label: "Profile" },
-    { href: "/profile", label: "Setup" },
+    { href: "/daily-tips", label: "Daily Tips" },
   ];
 
   const tools: ToolCard[] = [
+    { name: "Browse Courses", icon: "🔍", href: "/courses", subtitle: "Search sections and filters" },
     { name: "Schedule Builder", icon: "📅", href: "/schedule-builder", subtitle: "Generate class combinations" },
     { name: "Interactive Planner", icon: "🗓️", href: "/planner", subtitle: "Drag sections into calendar" },
-    { name: "AI Workload", icon: "🤖", href: "/ai-workload-scorer", subtitle: "Estimate semester intensity" },
-    { name: "Progress Tracker", icon: "📈", href: "/transcript-import", subtitle: "Import transcript progress" },
+    { name: "Watchlist", icon: "👀", href: "/watchlist", subtitle: "Track seat openings" },
     { name: "Notification Center", icon: "🔔", href: "/notifications", subtitle: "See live academic alerts" },
     { name: "Registration Timer", icon: "⏳", href: "/registration-countdown", subtitle: "Track your appointment window" },
+    { name: "Daily Tips", icon: "💡", href: "/daily-tips", subtitle: "Personalized campus insights" },
+    { name: "AI Workload", icon: "🤖", href: "/ai-workload-scorer", subtitle: "Estimate semester intensity" },
+    { name: "Progress Tracker", icon: "📈", href: "/transcript-import", subtitle: "Import transcript progress" },
     { name: "Travel Alerts", icon: "🚌", href: "/travelalerts", subtitle: "Monitor campus commute updates" },
+    { name: "Parking Tracker", icon: "🚗", href: "/parking", subtitle: "Find and verify open lots" },
     { name: "Marketplace", icon: "🛒", href: "/marketplace", subtitle: "Browse student listings" },
     { name: "Social Hub", icon: "👥", href: "/social-hub", subtitle: "Connect with your campus community" },
-    { name: "Daily Tips", icon: "💡", href: "/daily-tips", subtitle: "Personalized campus insights" },
-    { name: "Parking Tracker", icon: "🚗", href: "/parking", subtitle: "Find and verify open lots" },
-    { name: "Watchlist", icon: "👀", href: "/watchlist", subtitle: "Track seat openings" },
-    { name: "Browse Courses", icon: "🔍", href: "/courses", subtitle: "Search sections and filters" },
   ];
 
   return (
@@ -52,7 +54,8 @@ export default function DashboardPage() {
             <Link href="/courses" className="hover:text-schu-teal transition-colors">Browse Courses</Link>
             <Link href="/schedule-builder" className="hover:text-schu-teal transition-colors">Build Schedule</Link>
             <Link href="/planner" className="hover:text-schu-teal transition-colors">Planner</Link>
-            <Link href="/travelalerts" className="hover:text-schu-teal transition-colors">Travel Alerts</Link>
+            <Link href="/watchlist" className="hover:text-schu-teal transition-colors">Watchlist</Link>
+            <Link href="/notifications" className="hover:text-schu-teal transition-colors">Notifications</Link>
           </div>
         </div>
 

@@ -3,6 +3,8 @@
 
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
+const STORAGE_KEY = "scheduleu-auth";
+
 /**
  * Single Supabase client per browser tab (window) to avoid multiple GoTrueClient instances
  * when Next/Turbopack loads the same module in more than one client chunk.
@@ -28,7 +30,14 @@ function getBrowserSupabaseEnv(): { supabaseUrl: string; supabaseAnonKey: string
 
 function createScheduleUBrowserClient(): SupabaseClient {
   const { supabaseUrl, supabaseAnonKey } = getBrowserSupabaseEnv();
-  return createClient(supabaseUrl, supabaseAnonKey);
+  return createClient(supabaseUrl, supabaseAnonKey, {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: true,
+      storageKey: STORAGE_KEY,
+    },
+  });
 }
 
 export function getSupabase(): SupabaseClient {

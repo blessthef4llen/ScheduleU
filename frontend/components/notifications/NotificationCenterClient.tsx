@@ -222,7 +222,7 @@ export default function NotificationCenterClient({
             </AlertBanner>
           ) : null}
 
-          <section className="notification-list" aria-labelledby="notification-feed-heading">
+          <SectionCard hover className="notification-feed-card">
             <div className="section-heading-block">
               <p className="page-label">Live feed</p>
               <h2 id="notification-feed-heading" className="section-heading">
@@ -232,23 +232,31 @@ export default function NotificationCenterClient({
                 Urgent and unread items stay visually elevated so you can act on schedule changes faster.
               </p>
             </div>
-            {filteredNotifications.length === 0 ? (
-              <EmptyState
-                icon="📭"
-                title="No notifications yet"
-                text="You are all caught up. We'll notify you when new academic or campus alerts arrive."
-              />
-            ) : (
-              filteredNotifications.map((notification) => (
-                <NotificationItem
-                  key={notification.id}
-                  notification={notification}
-                  onMarkRead={markAsRead}
-                  onDismiss={dismissNotification}
+            <div className="notification-feed-meta">
+              <span className="notification-feed-count">
+                {filteredNotifications.length} item{filteredNotifications.length === 1 ? "" : "s"}
+              </span>
+              <span className="notification-feed-note">Seat alerts, registration updates, and planner activity in one inbox.</span>
+            </div>
+            <div className="notification-list notification-feed-list" aria-labelledby="notification-feed-heading">
+              {filteredNotifications.length === 0 ? (
+                <EmptyState
+                  icon="📭"
+                  title="No notifications yet"
+                  text="You are all caught up. We'll notify you when new academic or campus alerts arrive."
                 />
-              ))
-            )}
-          </section>
+              ) : (
+                filteredNotifications.map((notification) => (
+                  <NotificationItem
+                    key={notification.id}
+                    notification={notification}
+                    onMarkRead={markAsRead}
+                    onDismiss={dismissNotification}
+                  />
+                ))
+              )}
+            </div>
+          </SectionCard>
         </div>
       </main>
     </div>

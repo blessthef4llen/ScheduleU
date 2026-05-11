@@ -1,10 +1,11 @@
 "use client";
 // Utility helpers for Supabase.
 
-import { createClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const STORAGE_KEY = "scheduleu-auth";
 const missing = [
   !supabaseUrl ? "NEXT_PUBLIC_SUPABASE_URL" : null,
   !supabaseAnonKey ? "NEXT_PUBLIC_SUPABASE_ANON_KEY" : null,
@@ -18,4 +19,16 @@ if (missing.length > 0) {
   );
 }
 
-export const supabase = createClient(supabaseUrl!, supabaseAnonKey!);
+function createBrowserSupabase(): SupabaseClient {
+  return createClient(supabaseUrl!, supabaseAnonKey!, {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: true,
+      storageKey: STORAGE_KEY,
+    },
+  });
+}
+
+const w = window as typeof window & { __scheduleu_supabase?: SupabaseClient };
+export const supabase = w.__scheduleu_supabase ?? (w.__scheduleu_supabase = createBrowserSupabase());

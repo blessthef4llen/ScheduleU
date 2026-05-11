@@ -1,7 +1,7 @@
 // Login page for ScheduleU.
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getAuthRedirectUrl } from '@/lib/authRedirect'
 import { supabase } from '@/utils/supabase'
 import Link from 'next/link'
@@ -16,6 +16,17 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
   const router = useRouter()
+
+  useEffect(() => {
+    const redirectIfSignedIn = async () => {
+      const { data } = await supabase.auth.getSession()
+      if (data.session) {
+        router.replace('/dashboard')
+      }
+    }
+
+    void redirectIfSignedIn()
+  }, [router])
 
   // 1. Send the numerical OTP to the user's email
   const handleLogin = async (event: React.FormEvent) => {
@@ -84,7 +95,10 @@ export default function LoginPage() {
       setLoading(false)
     } else {
       setMessage('Identity Verified! Redirecting...')
-      setTimeout(() => router.push('/dashboard'), 1500)
+      setTimeout(() => {
+        router.replace('/dashboard')
+        router.refresh()
+      }, 800)
     }
   }
 
