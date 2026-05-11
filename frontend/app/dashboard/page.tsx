@@ -20,8 +20,6 @@ export default function DashboardPage() {
     { href: "/notifications", label: "Notifications" },
     { href: "/registration-countdown", label: "Registration" },
     { href: "/daily-tips", label: "Daily Tips" },
-    { href: "/user-profile", label: "Profile" },
-    { href: "/profile", label: "Settings" },
   ];
 
   const tools: ToolCard[] = [
