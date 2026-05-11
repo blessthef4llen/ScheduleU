@@ -6,6 +6,8 @@ import Link from 'next/link'
 import HeaderMenu from '@/components/HeaderMenu'
 import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
 import { supabase } from '@/utils/supabase'
+import { loadStoredJson, saveStoredJson } from '@/lib/browserStorage'
+import { addSectionWithChecks, getAuthedAppUser, getOrCreateSchedule } from '@/lib/planner/plannerService'
 
 type CartRow = {
   term_table: string
@@ -51,6 +53,14 @@ type ScheduleCandidate = {
   explanation_bullets?: string[]
   selected_sections: SelectedSection[]
 }
+
+type AcceptedScheduleSnapshot = {
+  term: string
+  selectedAt: string
+  selectedSections: SelectedSection[]
+}
+
+const ACCEPTED_SCHEDULES_KEY = 'scheduleu.acceptedSchedules'
 
 const backendBaseUrl = process.env.NEXT_PUBLIC_SCHEDULER_API_URL ?? 'http://localhost:8000'
 type SemesterOption = {
@@ -236,6 +246,25 @@ function normalizeCourseNumber(subject: string, courseNumber: string): string {
   return normalizedNumber
 }
 
+function flattenSelectedSections(termResult: TermScheduleResponse | null, selectedCandidateIndex: number | null) {
+  if (!termResult) return [] as SelectedSection[]
+  if (selectedCandidateIndex !== null) {
+    return termResult.generated_schedules?.[selectedCandidateIndex]?.selected_sections ?? []
+  }
+  return termResult.selected_sections
+}
+
+function toComparableMinutes(value: string) {
+  const match = value.trim().match(/(\d{1,2}):(\d{2})(AM|PM)/i)
+  if (!match) return Number.MAX_SAFE_INTEGER
+  let hour = Number(match[1])
+  const minute = Number(match[2])
+  const suffix = match[3].toUpperCase()
+  if (suffix === 'AM' && hour === 12) hour = 0
+  if (suffix === 'PM' && hour !== 12) hour += 12
+  return hour * 60 + minute
+}
+
 export default function ScheduleBuilderPage() {
   const menuItems = [
     { href: '/dashboard', label: 'Dashboard' },
@@ -267,9 +296,14 @@ export default function ScheduleBuilderPage() {
   const [honorsOnly, setHonorsOnly] = useState(false)
   const [showCartEditor, setShowCartEditor] = useState(false)
   const [removingCartKey, setRemovingCartKey] = useState<string | null>(null)
+  const [acceptingSchedule, setAcceptingSchedule] = useState(false)
   const hasPrereqWarnings = result?.warnings.some((warning) =>
     warning.toLowerCase().includes('prerequisite')
   ) ?? false
+  const selectedSections = useMemo(
+    () => flattenSelectedSections(result, selectedCandidateIndex),
+    [result, selectedCandidateIndex]
+  )
 
   const requestedCourses = useMemo(() => {
     const uniq = new Set<string>()
@@ -552,6 +586,120 @@ export default function ScheduleBuilderPage() {
       setError(err instanceof Error ? err.message : 'Failed to generate schedule.')
     } finally {
       setGenerating(false)
+    }
+  }
+
+  const acceptSchedule = async () => {
+    if (!result) {
+      setError('Generate a schedule first.')
+      return
+    }
+    if (selectedSections.length === 0) {
+      setError('Select a schedule option before accepting it.')
+      return
+    }
+
+    setAcceptingSchedule(true)
+    setError('')
+    setMessage('')
+
+    try {
+      const { data: authData, error: authError } = await supabase.auth.getUser()
+      if (authError) throw new Error(authError.message)
+      if (!authData.user) throw new Error('You must be logged in to accept a schedule.')
+
+      const acceptedSchedules = loadStoredJson<Record<string, AcceptedScheduleSnapshot>>(ACCEPTED_SCHEDULES_KEY, {})
+      acceptedSchedules[authData.user.id] = {
+        term: result.term,
+        selectedAt: new Date().toISOString(),
+        selectedSections,
+      }
+      saveStoredJson(ACCEPTED_SCHEDULES_KEY, acceptedSchedules)
+
+      const plannedRows = selectedSections.map((section) => {
+        const orderedMeetings = [...section.meetings].sort((a, b) => toComparableMinutes(a.start) - toComparableMinutes(b.start))
+        const meetingDays = orderedMeetings.map((meeting) => meeting.day).join('/')
+        return {
+          user_id: authData.user!.id,
+          term: result.term,
+          course_code: section.course,
+          section_code: section.section_id,
+          meeting_days: meetingDays || null,
+          start_time: orderedMeetings[0]?.start ?? null,
+          end_time: orderedMeetings[orderedMeetings.length - 1]?.end ?? null,
+          is_active: true,
+        }
+      })
+
+      const deactivateExisting = await supabase
+        .from('student_planned_courses')
+        .update({ is_active: false })
+        .eq('user_id', authData.user.id)
+        .eq('term', result.term)
+
+      if (!deactivateExisting.error) {
+        const insertPlanned = await supabase.from('student_planned_courses').insert(plannedRows)
+        if (insertPlanned.error) {
+          setMessage(`Accepted schedule locally and in Planner, but could not update AI workload history: ${insertPlanned.error.message}`)
+        }
+      }
+
+      const auth = await getAuthedAppUser()
+      if (auth.appUser?.auth_uid) {
+        const scheduleResult = await getOrCreateSchedule({ userId: auth.appUser.auth_uid, term: result.term })
+        if (!scheduleResult.schedule) {
+          throw new Error(scheduleResult.error ?? 'Unable to open planner schedule.')
+        }
+
+        const scheduleId = scheduleResult.schedule.id
+        const existingDelete = await supabase.from('schedule_items').delete().eq('schedule_id', scheduleId)
+        if (existingDelete.error) {
+          throw new Error(existingDelete.error.message)
+        }
+
+        for (const section of selectedSections) {
+          const exactMatch = await supabase
+            .from(selectedTermTable)
+            .select('class_number')
+            .eq('course_code_full', section.course)
+            .eq('sec', section.section_id)
+            .limit(1)
+            .maybeSingle()
+
+          let classNumber = String(exactMatch.data?.class_number ?? '').trim()
+          if (!classNumber) {
+            const fallbackMatch = await supabase
+              .from(selectedTermTable)
+              .select('class_number')
+              .eq('course_code_full', section.course)
+              .eq('class_number', section.section_id)
+              .limit(1)
+              .maybeSingle()
+
+            classNumber = String(fallbackMatch.data?.class_number ?? '').trim()
+          }
+
+          if (!classNumber) {
+            throw new Error(`Could not resolve ${section.course} section ${section.section_id} into a planner section.`)
+          }
+
+          const addResult = await addSectionWithChecks({
+            scheduleId,
+            sectionId: Number(classNumber),
+            existingBlocks: [],
+            term: result.term,
+          })
+          if (!addResult.ok) {
+            throw new Error(addResult.msg)
+          }
+        }
+      }
+
+      setMessage('Schedule accepted. Your selected sections were saved and synced to the Planner.')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to accept this schedule.')
+    } finally {
+      setAcceptingSchedule(false)
     }
   }
 
@@ -908,11 +1056,11 @@ export default function ScheduleBuilderPage() {
               ) : (
               <div>
                 <h2 className="mb-2 text-lg font-semibold text-slate-900">Selected Sections</h2>
-                {(result.generated_schedules?.[selectedCandidateIndex]?.selected_sections ?? result.selected_sections).length === 0 ? (
+                {selectedSections.length === 0 ? (
                   <p className="text-sm text-slate-600">No conflict-free sections selected.</p>
                 ) : (
                   <div className="space-y-3">
-                    {(result.generated_schedules?.[selectedCandidateIndex]?.selected_sections ?? result.selected_sections).map((section) => (
+                    {selectedSections.map((section) => (
                       <div key={`${section.course}-${section.section_id}`} className="rounded-xl border border-slate-100 bg-gray-50 p-3 transition-all hover:shadow-sm">
                         <p className="font-semibold text-slate-900">
                           {section.course} • Section {section.section_id}
@@ -937,6 +1085,25 @@ export default function ScheduleBuilderPage() {
                   </div>
                 )}
               </div>
+              )}
+
+              {selectedSections.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={acceptSchedule}
+                    disabled={acceptingSchedule}
+                    className="rounded-xl schu-gradient px-4 py-2 text-sm font-black text-white transition-colors hover:opacity-90 disabled:opacity-60"
+                  >
+                    {acceptingSchedule ? 'Accepting...' : 'Accept Schedule'}
+                  </button>
+                  <Link
+                    href="/planner"
+                    className="rounded-xl border px-4 py-2 text-sm font-bold bg-white border-slate-200 text-slate-800 transition-colors hover:bg-slate-50"
+                  >
+                    Open Planner
+                  </Link>
+                </div>
               )}
 
               {selectedCandidateIndex !== null && (result.generated_schedules?.[selectedCandidateIndex] ?? null) && (

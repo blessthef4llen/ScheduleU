@@ -1,4 +1,5 @@
 // Reusable Notificationitem component for ScheduleU.
+import Link from "next/link";
 import { GradientButton, SecondaryButton } from "@/components/ui/Buttons";
 import InfoBadge from "@/components/ui/InfoBadge";
 import type { NotificationRecord } from "./types";
@@ -26,26 +27,38 @@ export default function NotificationItem({ notification, onMarkRead, onDismiss }
   const statusVariant = urgent ? "urgent" : notification.is_read ? "read" : "unread";
   const statusLabel = urgent ? "Urgent" : notification.is_read ? "Read" : "Unread";
   const accentClass = urgent ? "notif-accent--urgent" : `notif-accent--${category}`;
+  const destinationByCategory = {
+    seats: "/watchlist",
+    registration: "/registration-countdown",
+    travel: "/travelalerts",
+    planning: "/planner",
+  } as const;
 
   return (
     <article className={`notification-item notif-accent ${accentClass} ${cardStateClass}`.trim()}>
       <div className="notification-item__top">
-        <div>
-          <h3 className="notification-item__title">
-            {iconByCategory[category]} {getNotificationTitle(notification)}
-          </h3>
-          <p className="notification-item__message">{notification.messages}</p>
+        <div className="notification-item__content">
+          <div className="notification-item__title-row">
+            <h3 className="notification-item__title">
+              {iconByCategory[category]} {getNotificationTitle(notification)}
+            </h3>
+            <span className={`notification-priority notification-priority--${priority}`}>{priority}</span>
+          </div>
+          <div className="notification-item__message-box">
+            <p className="notification-item__message">{notification.messages}</p>
+          </div>
         </div>
         <div className="notification-item__badges">
           <InfoBadge variant={statusVariant}>{statusLabel}</InfoBadge>
-          <span className={`notification-priority notification-priority--${priority}`}>{priority}</span>
         </div>
       </div>
 
       <div className="notification-item__meta">
         <span className="notification-item__time">{getRelativeTimeLabel(notification.created_at)}</span>
         <div className="notification-item__actions">
-          <SecondaryButton type="button">View</SecondaryButton>
+          <Link href={destinationByCategory[category]} className="btn btn-secondary">
+            View details
+          </Link>
           {!notification.is_read && onMarkRead ? (
             <GradientButton type="button" onClick={() => onMarkRead(notification.id)}>
               Mark as read

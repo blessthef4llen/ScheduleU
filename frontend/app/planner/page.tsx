@@ -208,45 +208,36 @@ export default function PlannerPage() {
     <PageLayout
       label="ScheduleU Student Portal"
       title="Interactive Planner"
-      subtitle="Build a Spring 2026 weekly schedule from live course sections, with duplicate and time-conflict checks before registration."
+      subtitle="Arrange Spring 2026 sections on a weekly calendar, keep conflict checks intact, and export class numbers when you're ready to register."
     >
-      <SectionCard className="planner-hero-card">
-        <div className="planner-hero-layout">
-          <div className="planner-hero-main">
-            <p className="page-label">Registration Prep</p>
-            <h2 className="planner-hero-title">Schedule Builder</h2>
-            <p className="planner-hero-text">
-              Selected sections stay connected to your ScheduleU account and can be exported as class numbers when registration opens.
-            </p>
+      <div className="planner-page-stack">
+        <SectionCard className="planner-hero-card">
+          <div className="planner-hero-layout">
+            <div className="planner-hero-main">
+              <p className="page-label">Registration Prep</p>
+              <h2 className="planner-hero-title">Planner Workspace</h2>
+              <p className="planner-hero-text">
+                Selected sections stay connected to your ScheduleU account, remain conflict-checked, and can be exported as class numbers when registration opens.
+              </p>
+            </div>
+
+            <div className="planner-stat-row" aria-label="Planner summary">
+              <div className="planner-stat">
+                <span className="planner-stat__value">{selectedSectionCount}</span>
+                <span className="planner-stat__label">Selected</span>
+              </div>
+              <div className="planner-stat">
+                <span className="planner-stat__value">{catalog.length}</span>
+                <span className="planner-stat__label">Catalog</span>
+              </div>
+              <div className="planner-stat">
+                <span className="planner-stat__value">{TERM.replace("Spring ", "")}</span>
+                <span className="planner-stat__label">Term</span>
+              </div>
+            </div>
           </div>
 
-          <div className="planner-stat-row" aria-label="Planner summary">
-            <div className="planner-stat">
-              <span className="planner-stat__value">{selectedSectionCount}</span>
-              <span className="planner-stat__label">Selected</span>
-            </div>
-            <div className="planner-stat">
-              <span className="planner-stat__value">{catalog.length}</span>
-              <span className="planner-stat__label">Catalog</span>
-            </div>
-            <div className="planner-stat">
-              <span className="planner-stat__value">{TERM.replace("Spring ", "")}</span>
-              <span className="planner-stat__label">Term</span>
-            </div>
-          </div>
-        </div>
-      </SectionCard>
-
-      <SectionCard className="planner-builder-card">
-        <div className="reg-hero-row">
-          <div>
-            <p className="page-label">Schedule Builder</p>
-            <h2 className="reg-hero-message">Generate another schedule option</h2>
-            <p className="reg-hero-subtext">
-              Return to Schedule Builder when you want to compare generated combinations before placing sections on the calendar.
-            </p>
-          </div>
-          <div className="controls-row">
+          <div className="planner-hero-links">
             <Link href="/dashboard" className="btn btn-secondary">
               Back to Dashboard
             </Link>
@@ -254,56 +245,76 @@ export default function PlannerPage() {
               Open Schedule Builder
             </Link>
           </div>
-        </div>
-      </SectionCard>
+        </SectionCard>
 
-      <SectionCard className="planner-crn-card">
-        <div className="reg-hero-row">
-          <div>
-            <p className="page-label">CRN Export</p>
-            <h2 className="reg-hero-message">Registration Numbers</h2>
-            <p className="reg-hero-subtext">
-              Export class numbers from the Spring 2026 semester table for your selected sections.
-            </p>
-          </div>
-          <SecondaryButton type="button" onClick={() => setShowCrnPanel((value) => !value)}>
-            {showCrnPanel ? "Hide" : "Show"}
-          </SecondaryButton>
-        </div>
-
-        {showCrnPanel ? (
-          <div className="planner-crn-panel">
-            <div className="controls-row">
-              <GradientButton type="button" onClick={handleExportCrns} disabled={exportLoading}>
-                {exportLoading ? "Loading..." : "Export CRNs"}
-              </GradientButton>
-              <SecondaryButton type="button" onClick={handleCopyCrns} disabled={exportLoading || !scheduleId}>
-                Copy CRNs
-              </SecondaryButton>
+        <SectionCard className="planner-builder-card">
+          <div className="planner-card-row">
+            <div>
+              <p className="page-label">Schedule Builder</p>
+              <h2 className="planner-card-title">Compare generated options</h2>
+              <p className="planner-card-text">
+                Return to Schedule Builder when you want to review AI-generated combinations before placing sections on the calendar.
+              </p>
             </div>
-
-            {exportMessage ? <AlertBanner>{exportMessage}</AlertBanner> : null}
-
-            {exportedCrns.length > 0 ? (
-              <div className="planner-crn-list" aria-label="Exported CRNs">
-                {exportedCrns.map((crn) => (
-                  <span key={crn}>{crn}</span>
-                ))}
-              </div>
-            ) : null}
+            <div className="controls-row">
+              <Link href="/dashboard" className="btn btn-secondary">
+                Back to Dashboard
+              </Link>
+              <Link href="/schedule-builder" className="btn btn-secondary">
+                Open Schedule Builder
+              </Link>
+            </div>
           </div>
-        ) : null}
-      </SectionCard>
+        </SectionCard>
 
-      <PlannerLayout
-        catalogSections={catalog}
-        catalogSearch={search}
-        onCatalogSearchChange={setSearch}
-        events={events}
-        status={status}
-        onDropSection={handleDropSection}
-        onRemoveSection={handleRemoveSection}
-      />
+        <SectionCard className="planner-crn-card">
+          <div className="planner-card-row">
+            <div>
+              <p className="page-label">CRN Export</p>
+              <h2 className="planner-card-title">Registration numbers</h2>
+              <p className="planner-card-text">
+                Export class numbers from the Spring 2026 semester table for your selected sections.
+              </p>
+            </div>
+            <SecondaryButton type="button" onClick={() => setShowCrnPanel((value) => !value)}>
+              {showCrnPanel ? "Hide" : "Show"}
+            </SecondaryButton>
+          </div>
+
+          {showCrnPanel ? (
+            <div className="planner-crn-panel">
+              <div className="controls-row">
+                <GradientButton type="button" onClick={handleExportCrns} disabled={exportLoading}>
+                  {exportLoading ? "Loading..." : "Export CRNs"}
+                </GradientButton>
+                <SecondaryButton type="button" onClick={handleCopyCrns} disabled={exportLoading || !scheduleId}>
+                  Copy CRNs
+                </SecondaryButton>
+              </div>
+
+              {exportMessage ? <AlertBanner>{exportMessage}</AlertBanner> : null}
+
+              {exportedCrns.length > 0 ? (
+                <div className="planner-crn-list" aria-label="Exported CRNs">
+                  {exportedCrns.map((crn) => (
+                    <span key={crn}>{crn}</span>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+        </SectionCard>
+
+        <PlannerLayout
+          catalogSections={catalog}
+          catalogSearch={search}
+          onCatalogSearchChange={setSearch}
+          events={events}
+          status={status}
+          onDropSection={handleDropSection}
+          onRemoveSection={handleRemoveSection}
+        />
+      </div>
     </PageLayout>
   );
 }
