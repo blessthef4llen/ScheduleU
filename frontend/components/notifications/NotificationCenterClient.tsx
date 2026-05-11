@@ -30,6 +30,8 @@ export default function NotificationCenterClient({
     { href: "/registration-countdown", label: "Registration" },
     { href: "/travelalerts", label: "Travel Alerts" },
     { href: "/watchlist", label: "Watchlist" },
+    { href: "/user-profile", label: "Profile" },
+    { href: "/profile", label: "Settings" },
   ];
   const [notifications, setNotifications] = useState<NotificationRecord[]>(initialNotifications);
   const [userId, setUserId] = useState("");

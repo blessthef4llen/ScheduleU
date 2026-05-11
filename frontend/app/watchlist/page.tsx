@@ -11,6 +11,8 @@ export default function WatchlistPage() {
     { href: "/dashboard", label: "Dashboard" },
     { href: "/courses", label: "Courses" },
     { href: "/notifications", label: "Notifications" },
+    { href: "/user-profile", label: "Profile" },
+    { href: "/profile", label: "Settings" },
   ];
 
   const [items, setItems] = useState<WatchlistItem[]>([]);
@@ -19,16 +21,17 @@ export default function WatchlistPage() {
   useEffect(() => {
     const load = async () => {
       const { data } = await supabase.auth.getUser();
-      const authUserId = data.user?.id ?? null;
-      if (!authUserId) {
-        setItems([]);
-        setMessage("Sign in to view watched sections.");
-        return;
-      }
+      const authUserId = data.user?.id ?? "guest";
 
       const nextItems = listWatchlistItems(authUserId);
       setItems(nextItems);
-      setMessage(nextItems.length === 0 ? "You have no watched sections yet." : "");
+      setMessage(
+        nextItems.length === 0
+          ? authUserId === "guest"
+            ? "You have no watched sections yet. Add them from Courses to track seat openings on this device."
+            : "You have no watched sections yet."
+          : ""
+      );
     };
 
     void load();
