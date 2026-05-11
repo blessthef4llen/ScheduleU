@@ -30,7 +30,9 @@ export default function DashboardPage() {
     { name: "Travel Alerts", icon: "🚌", href: "/travelalerts", subtitle: "Monitor campus commute updates" },
     { name: "Marketplace", icon: "🛒", href: "/marketplace", subtitle: "Browse student listings" },
     { name: "Social Hub", icon: "👥", href: "/social-hub", subtitle: "Connect with your campus community" },
+    { name: "Daily Tips", icon: "💡", href: "/daily-tips", subtitle: "Personalized campus insights" },
     { name: "Parking Tracker", icon: "🚗", href: "/parking", subtitle: "Find and verify open lots" },
+    { name: "Watchlist", icon: "👀", href: "/watchlist", subtitle: "Track seat openings" },
     { name: "Browse Courses", icon: "🔍", href: "/courses", subtitle: "Search sections and filters" },
   ];
 

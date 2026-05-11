@@ -6,6 +6,7 @@ import { supabase } from '@/utils/supabase'
 import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
 import HeaderMenu from '@/components/HeaderMenu'
 import Link from 'next/link'
+import { isSectionWatched, saveWatchlistItem } from '@/lib/watchlist'
 
 type RawCourseRow = Record<string, unknown>
 
@@ -31,6 +32,8 @@ type SectionItem = {
   location: string
   instructor: string
   comment: string
+  status: string
+  openSeats: string
 }
 
 const SEMESTER_OPTIONS = [
@@ -223,6 +226,28 @@ function isHonorsCourse(subject: string, courseNumber: string): boolean {
   return subject.trim().toUpperCase() === 'UHP' || /H$/i.test(courseNumber.trim())
 }
 
+function parseStartHour(timeRange: string): number | null {
+  const match = timeRange.trim().match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i)
+  if (!match) return null
+
+  let hour = Number(match[1])
+  const suffix = match[3].toUpperCase()
+  if (suffix === 'AM' && hour === 12) hour = 0
+  if (suffix === 'PM' && hour !== 12) hour += 12
+  return Number.isFinite(hour) ? hour : null
+}
+
+function matchesTimeWindow(timeRange: string, timeFilter: string): boolean {
+  if (!timeFilter) return true
+  const startHour = parseStartHour(timeRange)
+  if (timeFilter === 'tba') return startHour === null
+  if (startHour === null) return false
+  if (timeFilter === 'morning') return startHour < 12
+  if (timeFilter === 'afternoon') return startHour >= 12 && startHour < 17
+  if (timeFilter === 'evening') return startHour >= 17
+  return true
+}
+
 function normalizeCourses(rows: RawCourseRow[]): CourseItem[] {
   const byCourse = new Map<string, CourseItem>()
 
@@ -271,6 +296,7 @@ export default function CoursesPage() {
   const menuItems = [
     { href: '/dashboard', label: 'Dashboard' },
     { href: '/schedule-builder', label: 'Schedule Builder' },
+    { href: '/watchlist', label: 'Watchlist' },
     { href: '/user-profile', label: 'Profile' },
   ]
 
@@ -280,6 +306,9 @@ export default function CoursesPage() {
   const [courseCodeFilter, setCourseCodeFilter] = useState('')
   const [titleFilter, setTitleFilter] = useState('')
   const [unitsFilter, setUnitsFilter] = useState('')
+  const [instructorFilter, setInstructorFilter] = useState('')
+  const [timeFilter, setTimeFilter] = useState('')
+  const [geKeywordFilter, setGeKeywordFilter] = useState('')
   const [honorsOnly, setHonorsOnly] = useState(false)
   const [courseNumberOptions, setCourseNumberOptions] = useState<string[]>([])
   const [loadingCourseNumbers, setLoadingCourseNumbers] = useState(false)
@@ -292,6 +321,7 @@ export default function CoursesPage() {
   const [pageSize, setPageSize] = useState(20)
   const [savingKey, setSavingKey] = useState<string | null>(null)
   const [saveMessage, setSaveMessage] = useState('')
+  const [watchedKeys, setWatchedKeys] = useState<string[]>([])
 
   const courses = useMemo(() => normalizeCourses(rows), [rows])
   const sectionsByCourseCode = useMemo(() => {
@@ -312,6 +342,8 @@ export default function CoursesPage() {
         location: asText(row.location, ''),
         instructor: asText(row.instructor, ''),
         comment: asText(row.comment, ''),
+        status: asText(row.status, ''),
+        openSeats: asText(row.open_seats, ''),
       }
 
       const current = map.get(code) ?? []
@@ -345,8 +377,11 @@ export default function CoursesPage() {
     const codeQuery = courseCodeFilter.trim().toLowerCase()
     const titleQuery = titleFilter.trim().toLowerCase()
     const unitsQuery = unitsFilter.trim().toLowerCase()
+    const instructorQuery = instructorFilter.trim().toLowerCase()
+    const geQuery = geKeywordFilter.trim().toLowerCase()
 
     return courses.filter((course) => {
+      const sections = sectionsByCourseCode.get(course.code) ?? []
       const matchesSubject =
         subjectFilter === 'all' ||
         (subjectFilter === 'UHP' ? course.subject === 'UHP' : course.subject === subjectFilter)
@@ -356,16 +391,28 @@ export default function CoursesPage() {
       const matchesUnits = !unitsQuery || course.units.toLowerCase().includes(unitsQuery)
       const matchesHonors =
         subjectFilter === 'UHP' || !honorsOnly || isHonorsCourse(course.subject, course.courseNumber)
+      const matchesInstructor =
+        !instructorQuery || sections.some((section) => section.instructor.toLowerCase().includes(instructorQuery))
+      const matchesTime =
+        !timeFilter || sections.some((section) => matchesTimeWindow(section.time, timeFilter))
+      const matchesGe =
+        !geQuery ||
+        sections.some((section) =>
+          `${section.course_title} ${section.course_info} ${section.comment}`.toLowerCase().includes(geQuery)
+        )
 
       return (
         matchesSubject &&
         matchesCode &&
         matchesTitle &&
         matchesUnits &&
-        matchesHonors
+        matchesHonors &&
+        matchesInstructor &&
+        matchesTime &&
+        matchesGe
       )
     })
-  }, [courses, courseCodeFilter, honorsOnly, subjectFilter, titleFilter, unitsFilter])
+  }, [courses, courseCodeFilter, geKeywordFilter, honorsOnly, instructorFilter, sectionsByCourseCode, subjectFilter, timeFilter, titleFilter, unitsFilter])
 
   useEffect(() => {
     const loadCourseNumbersForSubject = async () => {
@@ -464,13 +511,69 @@ export default function CoursesPage() {
 
   useEffect(() => {
     setCurrentPage(1)
-  }, [subjectFilter, courseCodeFilter, titleFilter, unitsFilter, honorsOnly, semesterTable, pageSize])
+  }, [subjectFilter, courseCodeFilter, titleFilter, unitsFilter, instructorFilter, timeFilter, geKeywordFilter, honorsOnly, semesterTable, pageSize])
 
   useEffect(() => {
     if (currentPage > totalPages) {
       setCurrentPage(totalPages)
     }
   }, [currentPage, totalPages])
+
+  useEffect(() => {
+    const loadWatchedState = async () => {
+      const { data: authData } = await supabase.auth.getUser()
+      const authUserId = authData.user?.id
+      if (!authUserId) {
+        setWatchedKeys([])
+        return
+      }
+
+      const keys = rows
+        .map((row) => asText(row.class_number, ''))
+        .filter((classNumber) => classNumber && classNumber !== 'N/A')
+        .filter((classNumber) => isSectionWatched({ authUserId, termTable: semesterTable, classNumber }))
+        .map((classNumber) => `${semesterTable}|${classNumber}`)
+
+      setWatchedKeys(keys)
+    }
+
+    void loadWatchedState()
+  }, [rows, semesterTable])
+
+  useEffect(() => {
+    if (!loaded) return
+
+    const channel = supabase
+      .channel(`course-results-${semesterTable}`)
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: semesterTable },
+        (payload) => {
+          const newRow = (payload.new ?? null) as RawCourseRow | null
+          const oldRow = (payload.old ?? null) as RawCourseRow | null
+          setRows((prev) => {
+            const classNumber = String(newRow?.class_number ?? oldRow?.class_number ?? '').trim()
+            if (!classNumber) return prev
+
+            if (payload.eventType === 'DELETE') {
+              return prev.filter((row) => String(row.class_number ?? '').trim() !== classNumber)
+            }
+
+            const nextRows = [...prev]
+            const index = nextRows.findIndex((row) => String(row.class_number ?? '').trim() === classNumber)
+            if (!newRow) return prev
+            if (index >= 0) nextRows[index] = newRow
+            else nextRows.unshift(newRow)
+            return nextRows
+          })
+        }
+      )
+      .subscribe()
+
+    return () => {
+      supabase.removeChannel(channel)
+    }
+  }, [loaded, semesterTable])
 
   const loadCourses = async () => {
     setLoading(true)
@@ -563,6 +666,47 @@ export default function CoursesPage() {
     }
   }
 
+  const addSectionToWatchlist = async (section: SectionItem) => {
+    setSaveMessage('')
+
+    try {
+      const { data: authData, error: authError } = await supabase.auth.getUser()
+      if (authError) throw new Error(authError.message)
+      const user = authData.user
+      if (!user) {
+        throw new Error('You must be logged in to watch a section.')
+      }
+      if (!section.class_number || section.class_number === 'N/A') {
+        throw new Error('This section is missing a class number, so it cannot be watched yet.')
+      }
+
+      saveWatchlistItem({
+        id: `${user.id}:${semesterTable}:${section.class_number}`,
+        authUserId: user.id,
+        termTable: semesterTable,
+        classNumber: section.class_number,
+        section: section.section,
+        courseCodeFull: section.course_code_full,
+        courseTitle: section.course_title,
+        instructor: section.instructor,
+        days: section.days,
+        time: section.time,
+        location: section.location,
+        status: section.status,
+        openSeats: section.openSeats,
+        addedAt: new Date().toISOString(),
+        lastKnownStatus: section.status || section.openSeats || 'unknown',
+        lastNotifiedStatus: null,
+      })
+
+      setWatchedKeys((prev) => Array.from(new Set([...prev, `${semesterTable}|${section.class_number}`])))
+      setSaveMessage(`Watching ${section.course_code_full} (section ${section.section}) for seat changes.`)
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to watch section.'
+      setSaveMessage(`Watchlist error: ${message}`)
+    }
+  }
+
   return (
     <div className="min-h-screen text-[var(--text-primary)]">
       <header className="flex items-center justify-between bg-schu-teal px-4 py-3 shadow-md sm:px-6 lg:px-8">
@@ -593,6 +737,12 @@ export default function CoursesPage() {
                 className="inline-flex items-center justify-center schu-gradient px-4 py-2 text-sm font-black text-white rounded-lg shadow-sm hover:opacity-90"
               >
                 Open Schedule Builder
+              </Link>
+              <Link
+                href="/watchlist"
+                className="inline-flex items-center justify-center rounded-lg border px-4 py-2 text-sm font-bold bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)]"
+              >
+                Open Watchlist
               </Link>
             </div>
           </div>
@@ -716,6 +866,55 @@ export default function CoursesPage() {
               />
             </div>
 
+            <div>
+              <label htmlFor="instructorFilter" className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
+                Instructor
+              </label>
+              <input
+                id="instructorFilter"
+                type="text"
+                value={instructorFilter}
+                onChange={(event) => setInstructorFilter(event.target.value)}
+                placeholder="e.g. Smith"
+                className="w-full rounded-xl border-2 px-3 py-2 bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
+                disabled={loading}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="timeFilter" className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
+                Time
+              </label>
+              <select
+                id="timeFilter"
+                value={timeFilter}
+                onChange={(event) => setTimeFilter(event.target.value)}
+                className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
+                disabled={loading}
+              >
+                <option value="">Any time</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+                <option value="tba">TBA / Online</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="geKeywordFilter" className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">
+                GE / keyword
+              </label>
+              <input
+                id="geKeywordFilter"
+                type="text"
+                value={geKeywordFilter}
+                onChange={(event) => setGeKeywordFilter(event.target.value)}
+                placeholder="e.g. GE, Area A, Writing"
+                className="w-full rounded-xl border-2 px-3 py-2 bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
+                disabled={loading}
+              />
+            </div>
+
             <div className="flex items-center gap-2 rounded-xl border px-3 py-2 bg-[var(--bg-soft)] border-[var(--border-soft)]">
               <input
                 id="honorsOnly"
@@ -806,9 +1005,10 @@ export default function CoursesPage() {
                             <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Units</p><p className="break-words text-[var(--text-primary)]">{section.units}</p></div>
                             <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Instructor</p><p className="break-words text-[var(--text-primary)]">{section.instructor}</p><div className="mt-1"><ProfessorRatingBadge instructor={section.instructor} /></div></div>
                             <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Time</p><p className="break-words text-[var(--text-primary)]">{section.time}</p></div>
+                            <div className="rounded-xl border px-2 py-1.5 bg-[var(--bg-surface)] border-[var(--border-soft)]"><p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Status</p><p className="break-words text-[var(--text-primary)]">{section.status || section.openSeats || 'Live status unavailable'}</p></div>
                           </div>
 
-                          <div className="mt-3">
+                          <div className="mt-3 flex flex-wrap gap-2">
                             <button
                               type="button"
                               onClick={() => addSectionToCart(section)}
@@ -818,6 +1018,18 @@ export default function CoursesPage() {
                               {savingKey === `${section.course_code_full}|${section.class_number}|${section.section}`
                                 ? 'Adding...'
                                 : 'Add to Shopping Cart'}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => addSectionToWatchlist(section)}
+                              disabled={section.class_number === 'N/A' || watchedKeys.includes(`${semesterTable}|${section.class_number}`)}
+                              className="rounded-xl border px-3 py-1.5 text-sm font-black transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)] disabled:opacity-60"
+                            >
+                              {section.class_number === 'N/A'
+                                ? 'Class Number Required'
+                                : watchedKeys.includes(`${semesterTable}|${section.class_number}`)
+                                ? 'Watching'
+                                : 'Notify Me When Seat Opens'}
                             </button>
                           </div>
                         </div>

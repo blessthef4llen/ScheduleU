@@ -13,6 +13,7 @@ import { getCategory, isUrgent } from "./helpers";
 import type { NotificationFilter, NotificationRecord } from "./types";
 import Link from "next/link";
 import { getSupabase } from "@/lib/supabaseClient";
+import { syncWatchlistNotifications } from "@/lib/watchlist";
 
 type NotificationCenterClientProps = {
   initialNotifications: NotificationRecord[];
@@ -43,6 +44,23 @@ export default function NotificationCenterClient({
       const id = userData.user.id;
       setUserId(id);
 
+      const watchlistSync = await syncWatchlistNotifications({
+        supabase,
+        authUserId: id,
+      });
+      if (watchlistSync.notifications.length > 0) {
+        await Promise.all(
+          watchlistSync.notifications.map((notification) =>
+            supabase.from("notification_center").insert({
+              user_id: id,
+              messages: notification.messages,
+              type: notification.type,
+              is_read: false,
+            })
+          )
+        );
+      }
+
       const { data, error } = await supabase
         .from("notification_center")
         .select("*")
@@ -51,7 +69,12 @@ export default function NotificationCenterClient({
       if (error) {
         setClientFetchError(true);
       } else if (data) {
-        setNotifications(data as NotificationRecord[]);
+        const dbNotifications = data as NotificationRecord[];
+        const existingMessages = new Set(dbNotifications.map((item) => `${item.type}|${item.messages}`));
+        const localOnly = watchlistSync.notifications.filter(
+          (item) => !existingMessages.has(`${item.type}|${item.messages}`)
+        );
+        setNotifications([...localOnly, ...dbNotifications]);
         setClientFetchError(false);
       }
     }

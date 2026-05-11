@@ -1,53 +1,88 @@
 "use client";
 
-// Social Hub page for ScheduleU.
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import { loadStoredJson, saveStoredJson } from '@/lib/browserStorage';
+
+type HubTab = 'POST' | 'EVENTS' | 'STUDY GROUPS' | 'CLASS REVIEWS' | 'ASK A QUESTION'
+
+type HubPost = {
+  id: number
+  tab: HubTab
+  text: string
+  likes: number
+  replies: string[]
+}
+
+const POSTS_KEY = 'scheduleu.socialHub.posts'
+
+const defaultPosts: HubPost[] = [
+  {
+    id: 1,
+    tab: 'ASK A QUESTION',
+    text: 'Is anyone selling grad tickets for engineering 2?',
+    likes: 3,
+    replies: ['I have 2 extra!', 'Check the Marketplace row.'],
+  },
+  {
+    id: 2,
+    tab: 'CLASS REVIEWS',
+    text: 'CECS 491A Review: 5/5 stars. The professor is nice!',
+    likes: 10,
+    replies: ['I agree!', 'Super helpful for senior project.'],
+  },
+]
 
 export default function SocialHubPage() {
-  const [activeTab, setActiveTab] = useState('POST');
-  const [newContent, setNewContent] = useState("");
-  
-  // 1. YOUR SPECIFIC CSULB EVENTS
+  const [activeTab, setActiveTab] = useState<HubTab>('POST');
+  const [newContent, setNewContent] = useState('');
+  const [posts, setPosts] = useState<HubPost[]>(defaultPosts);
+
   const events = [
-    { 
-      name: "Beach Women in Engineering Conference", 
-      date: "4/10/2026", 
-      time: "9:00am - 3:30pm", 
-      venue: "LB Airport Marriott, 4700 Airport Plaza Dr.",
-      desc: "Networking and workshops for engineering students."
-    },
-    { name: "Engineering 1 Graduation", date: "May 21st", time: "8:00am", venue: "CSULB Campus" },
-    { name: "Engineering 2 Graduation", date: "May 21st", time: "1:30pm", venue: "CSULB Campus" },
-  ];
-
-  // 2. YOUR STUDY GROUPS
-  const studyGroups = [
-    { class: "CECS 451", schedule: "Tuesdays 3:00pm - 5:00pm", loc: "Library" },
-    { class: "CECS 329", schedule: "Thursdays 9:00am - 10:00am", loc: "Horn Center" },
-  ];
-
-  // 3. YOUR POSTS & THREADS
-  const [myActivity, setMyActivity] = useState([
-    { 
-      id: 1, 
-      text: "Is anyone selling grad tickets for engineering 2?", 
-      likes: 3, 
-      replies: ["I have 2 extra!", "Check the Marketplace row."] 
-    },
     {
-      id: 2,
-      text: "CECS 491A Review: 5/5 stars. The professor is nice!",
-      likes: 10,
-      replies: ["I agree!", "Super helpful for senior project."]
+      name: 'Beach Women in Engineering Conference',
+      date: '4/10/2026',
+      time: '9:00am - 3:30pm',
+      venue: 'LB Airport Marriott, 4700 Airport Plaza Dr.',
+      desc: 'Networking and workshops for engineering students.',
+    },
+    { name: 'Engineering 1 Graduation', date: 'May 21st', time: '8:00am', venue: 'CSULB Campus', desc: 'Morning graduation ceremony.' },
+    { name: 'Engineering 2 Graduation', date: 'May 21st', time: '1:30pm', venue: 'CSULB Campus', desc: 'Afternoon graduation ceremony.' },
+  ];
+
+  const studyGroups = [
+    { class: 'CECS 451', schedule: 'Tuesdays 3:00pm - 5:00pm', loc: 'Library' },
+    { class: 'CECS 329', schedule: 'Thursdays 9:00am - 10:00am', loc: 'Horn Center' },
+  ];
+
+  useEffect(() => {
+    setPosts(loadStoredJson<HubPost[]>(POSTS_KEY, defaultPosts));
+  }, []);
+
+  useEffect(() => {
+    saveStoredJson(POSTS_KEY, posts);
+  }, [posts]);
+
+  const visiblePosts = useMemo(() => {
+    if (activeTab === 'POST') {
+      return posts.filter((post) => post.tab === 'POST' || post.tab === 'ASK A QUESTION' || post.tab === 'CLASS REVIEWS');
     }
-  ]);
+    return posts.filter((post) => post.tab === activeTab);
+  }, [activeTab, posts]);
 
   const handlePost = () => {
-    if (newContent.trim()) {
-      setMyActivity([{ id: Date.now(), text: newContent, likes: 0, replies: [] }, ...myActivity]);
-      setNewContent("");
-    }
+    if (!newContent.trim()) return;
+
+    const nextPost: HubPost = {
+      id: Date.now(),
+      tab: activeTab,
+      text: newContent.trim(),
+      likes: 0,
+      replies: [],
+    };
+
+    setPosts((prev) => [nextPost, ...prev]);
+    setNewContent('');
   };
 
   return (
@@ -58,13 +93,12 @@ export default function SocialHubPage() {
       </header>
 
       <main className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
-        {/* SIDEBAR DIRECTORY */}
         <aside className="lg:col-span-3">
-          <div className="bg-schu-teal text-white font-bold p-2 text-center text-xs uppercase">Directory</div>
-          <div className="border-2 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
-            {['POST', 'EVENTS', 'STUDY GROUPS', 'CLASS REVIEWS', 'ASK A QUESTION'].map((item) => (
-              <button 
-                key={item} 
+          <div className="bg-schu-teal p-2 text-center text-xs font-bold uppercase text-white">Directory</div>
+          <div className="border-2 border-[var(--border-soft)] bg-[var(--bg-elevated)]">
+            {(['POST', 'EVENTS', 'STUDY GROUPS', 'CLASS REVIEWS', 'ASK A QUESTION'] as HubTab[]).map((item) => (
+              <button
+                key={item}
                 onClick={() => setActiveTab(item)}
                 className={`w-full border-b px-4 py-3 text-left text-[10px] font-bold uppercase tracking-widest last:border-0 border-[var(--border-soft)] ${activeTab === item ? 'border-l-4 border-l-schu-teal bg-[var(--bg-soft)] text-schu-teal' : 'text-[var(--text-muted)]'}`}
               >
@@ -74,75 +108,65 @@ export default function SocialHubPage() {
           </div>
         </aside>
 
-        {/* DYNAMIC CONTENT AREA */}
         <section className="space-y-6 lg:col-span-9">
-          <div className="rounded-2xl border-2 p-4 sm:p-6 bg-[var(--bg-soft)] border-[var(--border-soft)]">
-            <h2 className="mb-4 text-xs font-black uppercase text-[var(--text-muted)]">Create {activeTab}</h2>
-            <textarea 
-              value={newContent}
-              onChange={(e) => setNewContent(e.target.value)}
-              placeholder={`Write your ${activeTab.toLowerCase()} here...`}
-              className="h-24 w-full rounded-xl border p-4 text-sm bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
-            />
-            <div className="flex justify-end mt-3">
-              <button onClick={handlePost} className="bg-schu-teal text-white px-6 py-2 rounded font-black text-[10px] uppercase tracking-widest">Submit to Hub</button>
+          {activeTab !== 'EVENTS' && activeTab !== 'STUDY GROUPS' ? (
+            <div className="rounded-2xl border-2 border-[var(--border-soft)] bg-[var(--bg-soft)] p-4 sm:p-6">
+              <h2 className="mb-4 text-xs font-black uppercase text-[var(--text-muted)]">Create {activeTab}</h2>
+              <textarea
+                value={newContent}
+                onChange={(e) => setNewContent(e.target.value)}
+                placeholder={`Write your ${activeTab.toLowerCase()} here...`}
+                className="h-24 w-full rounded-xl border border-[var(--border-soft)] bg-[var(--bg-surface)] p-4 text-sm text-[var(--text-primary)]"
+              />
+              <div className="mt-3 flex justify-end">
+                <button onClick={handlePost} className="rounded bg-schu-teal px-6 py-2 text-[10px] font-black uppercase tracking-widest text-white">Submit to Hub</button>
+              </div>
             </div>
-          </div>
+          ) : null}
 
           <div className="pt-4">
-            {/* VIEW: POSTS / ACTIVITY THREAD */}
-            {activeTab === 'POST' || activeTab === 'ASK A QUESTION' ? (
+            {(activeTab === 'POST' || activeTab === 'ASK A QUESTION' || activeTab === 'CLASS REVIEWS') ? (
               <div className="space-y-4">
-                <h3 className="text-xl font-black uppercase tracking-tighter text-[var(--text-strong)]">My Activity Thread</h3>
-                {myActivity.map(post => (
-                  <div key={post.id} className="rounded-2xl border p-4 shadow-sm sm:p-6 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
+                <h3 className="text-xl font-black uppercase tracking-tighter text-[var(--text-strong)]">Community Feed</h3>
+                {visiblePosts.map((post) => (
+                  <div key={post.id} className="rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-elevated)] p-4 shadow-sm sm:p-6">
                     <p className="font-bold text-[var(--text-primary)]">{post.text}</p>
-                    <div className="mt-3 flex gap-4 text-[10px] font-black text-schu-teal uppercase">
+                    <div className="mt-3 flex gap-4 text-[10px] font-black uppercase text-schu-teal">
                       <span>❤️ {post.likes} Likes</span>
                       <span>💬 {post.replies.length} Responses</span>
                     </div>
-                    {post.replies.map((r, i) => (
-                      <div key={i} className="mt-2 ml-2 border-l-2 border-schu-teal bg-[var(--bg-soft)] p-2 text-xs italic sm:ml-4">{r}</div>
+                    {post.replies.map((reply, index) => (
+                      <div key={index} className="mt-2 ml-2 border-l-2 border-schu-teal bg-[var(--bg-soft)] p-2 text-xs italic sm:ml-4">{reply}</div>
                     ))}
                   </div>
                 ))}
               </div>
             ) : null}
 
-            {/* VIEW: EVENTS */}
             {activeTab === 'EVENTS' && (
               <div className="space-y-4">
                 <h3 className="text-xl font-black uppercase tracking-tighter text-[var(--text-strong)]">Upcoming Campus Events</h3>
-                {events.map((e, idx) => (
-                  <div key={idx} className="rounded-2xl border-l-4 border-schu-teal p-4 shadow-sm sm:p-6 bg-[var(--bg-elevated)]">
-                    <h4 className="font-black uppercase text-[var(--text-strong)]">{e.name}</h4>
-                    <p className="mt-1 text-[10px] font-bold uppercase text-[var(--text-muted)]">{e.date} @ {e.time}</p>
-                    <p className="mt-1 text-xs italic text-[var(--text-secondary)]">📍 {e.venue}</p>
+                {events.map((event, idx) => (
+                  <div key={idx} className="rounded-2xl border-l-4 border-schu-teal bg-[var(--bg-elevated)] p-4 shadow-sm sm:p-6">
+                    <h4 className="font-black uppercase text-[var(--text-strong)]">{event.name}</h4>
+                    <p className="mt-1 text-[10px] font-bold uppercase text-[var(--text-muted)]">{event.date} @ {event.time}</p>
+                    <p className="mt-1 text-xs italic text-[var(--text-secondary)]">📍 {event.venue}</p>
+                    <p className="mt-2 text-sm text-[var(--text-secondary)]">{event.desc}</p>
                   </div>
                 ))}
               </div>
             )}
 
-            {/* VIEW: STUDY GROUPS */}
             {activeTab === 'STUDY GROUPS' && (
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {studyGroups.map((g, idx) => (
-                  <div key={idx} className="rounded-2xl border-2 p-6 text-center shadow-sm bg-[var(--bg-elevated)] border-[var(--border-soft)]">
-                    <span className="text-3xl block mb-2">🤝</span>
-                    <h4 className="font-black text-[var(--text-strong)]">{g.class}</h4>
-                    <p className="mt-1 text-[10px] font-bold uppercase text-[var(--text-muted)]">{g.schedule}</p>
-                    <p className="text-xs text-schu-teal font-black mt-1 uppercase">{g.loc}</p>
+                {studyGroups.map((group, idx) => (
+                  <div key={idx} className="rounded-2xl border-2 border-[var(--border-soft)] bg-[var(--bg-elevated)] p-6 text-center shadow-sm">
+                    <span className="mb-2 block text-3xl">🤝</span>
+                    <h4 className="font-black text-[var(--text-strong)]">{group.class}</h4>
+                    <p className="mt-1 text-[10px] font-bold uppercase text-[var(--text-muted)]">{group.schedule}</p>
+                    <p className="mt-1 text-xs font-black uppercase text-schu-teal">{group.loc}</p>
                   </div>
                 ))}
-              </div>
-            )}
-
-            {/* VIEW: CLASS REVIEWS */}
-            {activeTab === 'CLASS REVIEWS' && (
-              <div className="rounded-2xl border-2 p-6 text-center shadow-sm bg-[var(--bg-elevated)] border-[var(--border-soft)]">
-                <div className="text-yellow-400 text-2xl mb-2">⭐⭐⭐⭐⭐</div>
-                <h4 className="font-black uppercase text-[var(--text-strong)]">CECS 491A - Senior Project</h4>
-                <p className="mt-2 text-sm italic text-[var(--text-secondary)]">"Great professor, very clear expectations for the final project!"</p>
               </div>
             )}
           </div>
