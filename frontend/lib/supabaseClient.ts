@@ -2,7 +2,6 @@
 // Shared Supabaseclient helpers for ScheduleU.
 
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
-import { getClerkSupabaseAccessToken } from "./clerkSupabase";
 
 const STORAGE_KEY = "scheduleu-auth";
 
@@ -37,9 +36,6 @@ function createScheduleUBrowserClient(): SupabaseClient {
       autoRefreshToken: true,
       detectSessionInUrl: true,
       storageKey: STORAGE_KEY,
-    },
-    async accessToken() {
-      return await getClerkSupabaseAccessToken();
     },
   });
 }

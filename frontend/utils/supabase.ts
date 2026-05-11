@@ -2,7 +2,6 @@
 // Utility helpers for Supabase.
 
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
-import { getClerkSupabaseAccessToken } from "@/lib/clerkSupabase";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -27,9 +26,6 @@ function createBrowserSupabase(): SupabaseClient {
       autoRefreshToken: true,
       detectSessionInUrl: true,
       storageKey: STORAGE_KEY,
-    },
-    async accessToken() {
-      return await getClerkSupabaseAccessToken();
     },
   });
 }
