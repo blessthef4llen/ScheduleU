@@ -76,6 +76,11 @@ TIME_RE = re.compile(
     re.IGNORECASE
 )
 
+SINGLE_TIME_RE = re.compile(
+    r"^\s*([0-9]{1,2})(?::([0-9]{2}))?\s*(AM|PM)?\s*$",
+    re.IGNORECASE
+)
+
 
 # Convert parsed hour/minute to minutes from midnight.
 def _to_minutes(h: int, m: int, ampm: Optional[str]) -> int:
@@ -85,6 +90,35 @@ def _to_minutes(h: int, m: int, ampm: Optional[str]) -> int:
             h = 0
         if ampm_u == "PM":
             h += 12
+    return h * 60 + m
+
+def parse_single_time(time_str: str) -> Optional[int]:
+    """
+    Supports single times like "08:00AM", "8 AM", or "18:00".
+    Returns minutes from midnight, or None when the input is invalid.
+    """
+    s = time_str.strip()
+    if not s or "TBA" in s.upper():
+        return None
+
+    match = SINGLE_TIME_RE.match(s)
+    if not match:
+        return None
+
+    h = int(match.group(1))
+    m = int(match.group(2) or 0)
+    ampm = match.group(3)
+
+    if m >= 60:
+        return None
+
+    if ampm:
+        if h < 1 or h > 12:
+            return None
+        return _to_minutes(h, m, ampm)
+
+    if h > 23:
+        return None
     return h * 60 + m
 
 def parse_time_range(time_str: str) -> Optional[Tuple[int, int]]:

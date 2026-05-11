@@ -22,7 +22,7 @@ from app.core.schedule_explainer import generate_schedule_benefits
 from app.core.rmp_client import lookup_professor_rating
 from app.core.transcript_parser import parse_transcript_pdf
 
-from app.core.section_scheduler import parse_days, parse_time_range, conflicts
+from app.core.section_scheduler import parse_days, parse_time_range, parse_single_time, conflicts
 
 router = APIRouter()
 
@@ -176,14 +176,6 @@ def term_schedule(req: TermScheduleRequest):
         if norm_course_code(item.course) and item.section_id.strip() and norm_course_code(item.course) in set(eligible_requested)
     }
 
-    # Convert one time string to minutes.
-    def _parse_single_time(t: str) -> int:
-        # Reuse the range parser by passing the same start/end time.
-        rng = parse_time_range(f"{t}-{t}")
-        if rng is None:
-            raise ValueError(f"Bad time: {t}")
-        return rng[0]
-
     # Build blocked time ranges from the request.
     blocked_blocks = []
     for b in req.constraints.blocked_times:
@@ -198,9 +190,13 @@ def term_schedule(req: TermScheduleRequest):
     earliest_min = None
     latest_min = None
     if req.constraints.earliest_time:
-        earliest_min = _parse_single_time(req.constraints.earliest_time)
+        earliest_min = parse_single_time(req.constraints.earliest_time)
+        if earliest_min is None:
+            raise HTTPException(status_code=400, detail="Invalid earliest_time. Use a format like 08:00AM or 18:00.")
     if req.constraints.latest_time:
-        latest_min = _parse_single_time(req.constraints.latest_time)
+        latest_min = parse_single_time(req.constraints.latest_time)
+        if latest_min is None:
+            raise HTTPException(status_code=400, detail="Invalid latest_time. Use a format like 06:00PM or 18:00.")
 
     days_off_set = set()
     for d in req.constraints.days_off:
