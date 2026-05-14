@@ -30,6 +30,12 @@ def parse_cors_origins() -> list[str]:
 load_local_env()
 
 app = FastAPI(title="Scheduler Backend")
+@app.on_event("startup")
+
+from app.api import routes
+
+def startup_load_data():
+    routes.startup_load()
 
 app.include_router(api_router)
 
