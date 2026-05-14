@@ -790,38 +790,42 @@ export default function ScheduleBuilderPage() {
           </div>
         </header>
 
-        <section className="rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--hero-gradient)] border-[var(--border-soft)]">
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <section
+          className={`rounded-2xl border p-4 shadow-sm md:p-5 ${
+            syncedSchedule
+              ? 'border-emerald-100 bg-white'
+              : 'bg-[var(--hero-gradient)] border-[var(--border-soft)]'
+          }`}
+        >
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
             <div>
-              <p className="text-xs font-black uppercase tracking-wider text-schu-blue">Interactive Planner</p>
-              <h2 className="mt-1 text-xl font-black text-[var(--text-strong)]">Need the drag-and-drop calendar?</h2>
+              <p className={`text-xs font-black uppercase tracking-wider ${syncedSchedule ? 'text-emerald-700' : 'text-schu-blue'}`}>
+                Interactive Planner
+              </p>
+              <h2 className="mt-1 text-xl font-black text-[var(--text-strong)]">
+                {syncedSchedule ? `${syncedSchedule.term} planner synced` : 'Need the drag-and-drop calendar?'}
+              </h2>
               <p className="mt-1 text-sm font-medium text-[var(--text-secondary)]">
                 Use the planner to place sections on a weekly calendar, check conflicts, and export class numbers.
               </p>
-            </div>
-            <Link href={plannerHref} className="inline-flex items-center justify-center rounded-xl bg-[#1e4e8c] px-4 py-2 text-sm font-black text-white shadow-sm transition-opacity hover:opacity-90">
-              Launch Planner
-            </Link>
-          </div>
-        </section>
-
-        {syncedSchedule && (
-          <section className="rounded-2xl border border-emerald-100 bg-white p-4 shadow-sm md:p-5">
-            <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-              <div>
-                <p className="text-xs font-black uppercase tracking-wider text-emerald-700">Synced Planner Schedule</p>
-                <h2 className="mt-1 text-xl font-black text-slate-900">{syncedSchedule.term}</h2>
+              {syncedSchedule && (
                 <p className="mt-1 text-sm font-medium text-slate-600">
                   Last synced {new Date(syncedSchedule.selectedAt).toLocaleString()}.
                 </p>
-              </div>
-              <Link
-                href={plannerHrefForTerm(syncedSchedule.term)}
-                className="inline-flex items-center justify-center rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-black text-emerald-800 transition-colors hover:bg-emerald-100"
-              >
-                Open synced planner
-              </Link>
+              )}
             </div>
+            <Link
+              href={syncedSchedule ? plannerHrefForTerm(syncedSchedule.term) : plannerHref}
+              className={`inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-black shadow-sm transition-colors ${
+                syncedSchedule
+                  ? 'border border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100'
+                  : 'bg-[#1e4e8c] text-white hover:opacity-90'
+              }`}
+            >
+              {syncedSchedule ? 'Open synced planner' : 'Launch Planner'}
+            </Link>
+          </div>
+          {syncedSchedule && (
             <div className="mt-3 flex flex-wrap gap-2">
               {syncedSchedule.selectedSections.slice(0, 8).map((section) => (
                 <span
@@ -837,8 +841,8 @@ export default function ScheduleBuilderPage() {
                 </span>
               )}
             </div>
-          </section>
-        )}
+          )}
+        </section>
 
         <section className="space-y-4 rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
           <div className="flex flex-wrap gap-3">
