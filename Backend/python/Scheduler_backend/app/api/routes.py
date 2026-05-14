@@ -143,7 +143,10 @@ def schedule_generate(req: GenerateRequest):
 @router.post("/term/schedule", response_model=TermScheduleResponse)
 def term_schedule(req: TermScheduleRequest):
     if DEP_MODEL is None:
-        raise HTTPException(status_code=500, detail="Dependency model not loaded")
+        raise HTTPException(
+            status_code=500,
+            detail=STARTUP_ERROR or "Dependency model not loaded",
+        )
     # Normalize requested courses
     requested = [norm_course_code(c) for c in req.requested_courses if norm_course_code(c)]
     completed = {norm_course_code(c) for c in req.completed_courses if norm_course_code(c)}
