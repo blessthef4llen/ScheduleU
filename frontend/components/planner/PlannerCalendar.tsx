@@ -4,11 +4,13 @@
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import type { ReactNode } from "react";
 import type { CalendarEvent } from "@/lib/planner/types";
 
 type Props = {
   events: CalendarEvent[];
   status: string;
+  tools?: ReactNode;
   onDropSection: (sectionId: number) => Promise<void>;
   onRemoveSection: (sectionId: number) => Promise<void>;
 };
@@ -27,7 +29,7 @@ type EventClickInfo = {
   };
 };
 
-export default function PlannerCalendar({ events, status, onDropSection, onRemoveSection }: Props) {
+export default function PlannerCalendar({ events, status, tools, onDropSection, onRemoveSection }: Props) {
   async function handleEventReceive(info: EventReceiveInfo) {
     const sectionId = Number(info.event.extendedProps?.section_id);
     if (!Number.isFinite(sectionId)) return;
@@ -55,6 +57,8 @@ export default function PlannerCalendar({ events, status, onDropSection, onRemov
         </div>
         <span className="planner-count-badge">{events.length}</span>
       </div>
+
+      {tools ? <div className="planner-calendar-toolbar">{tools}</div> : null}
 
       {status ? <div className="planner-status-bar">{status}</div> : null}
 

@@ -10,17 +10,23 @@ type PageLayoutProps = {
   label?: string;
   title: string;
   subtitle?: string;
+  compact?: boolean;
   children: ReactNode;
 };
 
-export default function PageLayout({ label, title, subtitle, children }: PageLayoutProps) {
+export default function PageLayout({ label, title, subtitle, compact = false, children }: PageLayoutProps) {
   const menuItems = [
-    { href: "/dashboard", label: "Dashboard" },
+    { href: "/courses", label: "Courses" },
+    { href: "/schedule-builder", label: "Builder" },
     { href: "/planner", label: "Planner" },
+    { href: "/watchlist", label: "Watchlist" },
+    { href: "/dashboard", label: "Dashboard" },
     { href: "/notifications", label: "Notifications" },
     { href: "/registration-countdown", label: "Registration" },
+    { href: "/daily-tips", label: "Daily Tips" },
     { href: "/ai-workload-scorer", label: "AI Workload" },
     { href: "/travelalerts", label: "Travel Alerts" },
+    { href: "/transcript-import", label: "Progress" },
     { href: "/user-profile", label: "Profile" },
     { href: "/profile", label: "Settings" },
   ];
@@ -32,11 +38,11 @@ export default function PageLayout({ label, title, subtitle, children }: PageLay
           <Link href="/dashboard" className={styles.brand}>
             ScheduleU
           </Link>
-          <HeaderMenu items={menuItems} title="Features" />
+          <HeaderMenu items={menuItems} title={title} />
         </div>
       </header>
-      <main className={styles.main}>
-        <section className="page-layout">
+      <main className={`${styles.main}${compact ? ` ${styles.mainCompact}` : ""}`}>
+        <section className={`page-layout${compact ? " page-layout--compact" : ""}`}>
           {label ? <p className="page-label">{label}</p> : null}
           <header>
             <h1 className="page-title">{title}</h1>

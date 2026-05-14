@@ -1,6 +1,7 @@
 // Source file for Layout.
 import type { ReactNode } from "react";
 import "../globals.css";
+import "./globals.css";
 import { ThemeScript } from "../components/theme-script";
 import { AuthSessionManager } from "../components/AuthSessionManager";
 

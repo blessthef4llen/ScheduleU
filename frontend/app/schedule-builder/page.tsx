@@ -6,8 +6,31 @@ import Link from 'next/link'
 import HeaderMenu from '@/components/HeaderMenu'
 import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
 import { supabase } from '@/utils/supabase'
-import { loadStoredJson, saveStoredJson } from '@/lib/browserStorage'
-import { addSectionWithChecks, getAuthedAppUser, getOrCreateSchedule } from '@/lib/planner/plannerService'
+import {
+  addSectionWithChecks,
+  fetchSectionsByIds,
+  getAuthedAppUser,
+  getOrCreateSchedule,
+} from '@/lib/planner/plannerService'
+import {
+  loadAcceptedScheduleSnapshot,
+  saveAcceptedScheduleSnapshot,
+  SCHEDULE_SYNC_EVENT,
+  syncCartFromSections,
+  syncPlannedCoursesFromBuilderSections,
+  type AcceptedScheduleSnapshot,
+  type ScheduleBuilderSection,
+} from '@/lib/planner/sync'
+import {
+  getInitialSelectedTermTable,
+  loadSelectedTermTable,
+  normalizeTermTable,
+  plannerHrefForTerm,
+  PLANNER_TERM_OPTIONS,
+  saveSelectedTermTable,
+  tableToTermLabel,
+  TERM_SELECTION_EVENT,
+} from '@/lib/planner/terms'
 
 type CartRow = {
   term_table: string
@@ -17,21 +40,7 @@ type CartRow = {
   class_number: string | null
 }
 
-type SelectedMeeting = {
-  type?: string | null
-  day: string
-  start: string
-  end: string
-  location?: string | null
-  instructor?: string | null
-  comments?: string | null
-}
-
-type SelectedSection = {
-  course: string
-  section_id: string
-  meetings: SelectedMeeting[]
-}
+type SelectedSection = ScheduleBuilderSection
 
 type TermScheduleResponse = {
   term: string
@@ -70,17 +79,6 @@ const ACCEPTED_SCHEDULES_KEY = 'scheduleu.acceptedSchedules'
 const PROFESSOR_PREFERENCES_KEY = 'scheduleu.professorPreferences'
 
 const backendBaseUrl = process.env.NEXT_PUBLIC_SCHEDULER_API_URL ?? 'http://localhost:8000'
-type SemesterOption = {
-  label: string
-  table: string
-  disabled?: boolean
-}
-const SEMESTER_OPTIONS = [
-  { label: 'Spring 2026', table: 'spring_2026' },
-  { label: 'Summer 2026', table: 'summer_2026' },
-  { label: 'Fall 2026', table: 'fall_2026', disabled: true },
-  { label: 'Winter 2027', table: 'winter_2027', disabled: true },
-] as const satisfies readonly SemesterOption[]
 const SUBJECT_OPTIONS = [
   'ACCT',
   'AFRS',
@@ -212,21 +210,6 @@ const SUBJECT_OPTIONS = [
   'WGSS',
 ] as const
 
-function tableToTermLabel(table: string): string {
-  const normalized = table.trim().toLowerCase()
-  const match = normalized.match(/^([a-z]+)_(\d{4})$/)
-  if (!match) return table
-  const season = match[1]
-  const year = match[2]
-  const seasonMap: Record<string, string> = {
-    spring: 'Spring',
-    summer: 'Summer',
-    fall: 'Fall',
-    winter: 'Winter',
-  }
-  return `${seasonMap[season] ?? season} ${year}`
-}
-
 function isHonorsCourseCode(courseCode: string): boolean {
   const normalized = courseCode.trim().toUpperCase()
   if (!normalized) return false
@@ -259,17 +242,6 @@ function flattenSelectedSections(termResult: TermScheduleResponse | null, select
     return termResult.generated_schedules?.[selectedCandidateIndex]?.selected_sections ?? []
   }
   return termResult.selected_sections
-}
-
-function toComparableMinutes(value: string) {
-  const match = value.trim().match(/(\d{1,2}):(\d{2})(AM|PM)/i)
-  if (!match) return Number.MAX_SAFE_INTEGER
-  let hour = Number(match[1])
-  const minute = Number(match[2])
-  const suffix = match[3].toUpperCase()
-  if (suffix === 'AM' && hour === 12) hour = 0
-  if (suffix === 'PM' && hour !== 12) hour += 12
-  return hour * 60 + minute
 }
 
 function normalizeProfessorName(value: string) {
@@ -316,19 +288,12 @@ function loadProfessorPreferences(): Record<string, SavedProfessorPreference> {
 }
 
 export default function ScheduleBuilderPage() {
-  const menuItems = [
-    { href: '/dashboard', label: 'Dashboard' },
-    { href: '/planner', label: 'Planner' },
-    { href: '/courses', label: 'Courses' },
-    { href: '/user-profile', label: 'Profile' },
-  ]
-
   const [loadingCart, setLoadingCart] = useState(false)
   const [generating, setGenerating] = useState(false)
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
   const [cartRows, setCartRows] = useState<CartRow[]>([])
-  const [selectedTermTable, setSelectedTermTable] = useState<string>(SEMESTER_OPTIONS[0].table)
+  const [selectedTermTable, setSelectedTermTable] = useState<string>(getInitialSelectedTermTable)
   const [result, setResult] = useState<TermScheduleResponse | null>(null)
   const [daysOffText, setDaysOffText] = useState('')
   const [earliestTime, setEarliestTime] = useState('')
@@ -348,6 +313,8 @@ export default function ScheduleBuilderPage() {
   const [removingCartKey, setRemovingCartKey] = useState<string | null>(null)
   const [acceptingSchedule, setAcceptingSchedule] = useState(false)
   const [professorPreferences, setProfessorPreferences] = useState<Record<string, SavedProfessorPreference>>(loadProfessorPreferences)
+  const [syncBuilderCart, setSyncBuilderCart] = useState(true)
+  const [syncedSchedule, setSyncedSchedule] = useState<AcceptedScheduleSnapshot | null>(null)
   const hasPrereqWarnings = result?.warnings.some((warning) =>
     warning.toLowerCase().includes('prerequisite')
   ) ?? false
@@ -355,6 +322,26 @@ export default function ScheduleBuilderPage() {
     () => flattenSelectedSections(result, selectedCandidateIndex),
     [result, selectedCandidateIndex]
   )
+  const plannerHref = useMemo(() => plannerHrefForTerm(selectedTermTable), [selectedTermTable])
+  const menuItems = useMemo(
+    () => [
+      { href: '/dashboard', label: 'Dashboard' },
+      { href: plannerHref, label: 'Planner' },
+      { href: '/courses', label: 'Courses' },
+      { href: '/user-profile', label: 'Profile' },
+    ],
+    [plannerHref]
+  )
+
+  const handleSelectedTermChange = (termTableOrLabel: string) => {
+    const nextTermTable = normalizeTermTable(termTableOrLabel)
+    setSelectedTermTable(nextTermTable)
+    saveSelectedTermTable(nextTermTable)
+    setResult(null)
+    setSelectedCandidateIndex(null)
+    setManualNumberOptions([])
+    setNumberLoadError('')
+  }
 
   const requestedCourses = useMemo(() => {
     const uniq = new Set<string>()
@@ -369,6 +356,57 @@ export default function ScheduleBuilderPage() {
     }
     return Array.from(uniq).sort()
   }, [cartRows, honorsOnly, manualCourses, selectedTermTable])
+
+  useEffect(() => {
+    saveSelectedTermTable(selectedTermTable)
+  }, [selectedTermTable])
+
+  useEffect(() => {
+    const syncTermFromStorage = () => {
+      const nextTermTable = loadSelectedTermTable()
+      if (selectedTermTable === nextTermTable) return
+
+      setSelectedTermTable(nextTermTable)
+      setResult(null)
+      setSelectedCandidateIndex(null)
+      setManualNumberOptions([])
+      setNumberLoadError('')
+    }
+
+    window.addEventListener(TERM_SELECTION_EVENT, syncTermFromStorage)
+    window.addEventListener('storage', syncTermFromStorage)
+
+    return () => {
+      window.removeEventListener(TERM_SELECTION_EVENT, syncTermFromStorage)
+      window.removeEventListener('storage', syncTermFromStorage)
+    }
+  }, [selectedTermTable])
+
+  useEffect(() => {
+    let cancelled = false
+
+    const refreshSyncedSchedule = async () => {
+      const { data } = await supabase.auth.getUser()
+      const authUserId = data.user?.id
+      if (!authUserId || cancelled) return
+      setSyncedSchedule(loadAcceptedScheduleSnapshot(authUserId))
+    }
+
+    void refreshSyncedSchedule()
+
+    const handleSyncEvent = () => {
+      void refreshSyncedSchedule()
+    }
+
+    window.addEventListener(SCHEDULE_SYNC_EVENT, handleSyncEvent)
+    window.addEventListener('storage', handleSyncEvent)
+
+    return () => {
+      cancelled = true
+      window.removeEventListener(SCHEDULE_SYNC_EVENT, handleSyncEvent)
+      window.removeEventListener('storage', handleSyncEvent)
+    }
+  }, [])
 
   const lockedSections = useMemo(() => {
     const seen = new Set<string>()
@@ -549,7 +587,7 @@ export default function ScheduleBuilderPage() {
         setMessage('No cart items found. Add courses from the Courses page first.')
       } else {
         const firstTerm = rows.find((r) => r.term_table)?.term_table ?? ''
-        setSelectedTermTable((prev) => prev || firstTerm)
+        if (!selectedTermTable && firstTerm) handleSelectedTermChange(firstTerm)
         setMessage(`Loaded ${rows.length} cart row(s).`)
       }
     } catch (err) {
@@ -701,94 +739,115 @@ export default function ScheduleBuilderPage() {
       if (authError) throw new Error(authError.message)
       if (!authData.user) throw new Error('You must be logged in to accept a schedule.')
 
-      const acceptedSchedules = loadStoredJson<Record<string, AcceptedScheduleSnapshot>>(ACCEPTED_SCHEDULES_KEY, {})
-      acceptedSchedules[authData.user.id] = {
+      const syncWarnings: string[] = []
+      const acceptedSnapshot: AcceptedScheduleSnapshot = {
         term: result.term,
         selectedAt: new Date().toISOString(),
         selectedSections,
       }
-      saveStoredJson(ACCEPTED_SCHEDULES_KEY, acceptedSchedules)
-
-      const plannedRows = selectedSections.map((section) => {
-        const orderedMeetings = [...section.meetings].sort((a, b) => toComparableMinutes(a.start) - toComparableMinutes(b.start))
-        const meetingDays = orderedMeetings.map((meeting) => meeting.day).join('/')
-        return {
-          user_id: authData.user!.id,
-          term: result.term,
-          course_code: section.course,
-          section_code: section.section_id,
-          meeting_days: meetingDays || null,
-          start_time: orderedMeetings[0]?.start ?? null,
-          end_time: orderedMeetings[orderedMeetings.length - 1]?.end ?? null,
-          is_active: true,
-        }
+      saveSelectedTermTable(result.term)
+      saveAcceptedScheduleSnapshot({
+        authUserId: authData.user.id,
+        term: result.term,
+        selectedSections,
       })
+      setSyncedSchedule(acceptedSnapshot)
 
-      const deactivateExisting = await supabase
-        .from('student_planned_courses')
-        .update({ is_active: false })
-        .eq('user_id', authData.user.id)
-        .eq('term', result.term)
-
-      if (!deactivateExisting.error) {
-        const insertPlanned = await supabase.from('student_planned_courses').insert(plannedRows)
-        if (insertPlanned.error) {
-          setMessage(`Accepted schedule locally and in Planner, but could not update AI workload history: ${insertPlanned.error.message}`)
-        }
+      try {
+        await syncPlannedCoursesFromBuilderSections({
+          authUserId: authData.user.id,
+          term: result.term,
+          sections: selectedSections,
+        })
+      } catch (plannedError) {
+        syncWarnings.push(
+          plannedError instanceof Error
+            ? `AI workload plan: ${plannedError.message}`
+            : 'Could not update AI workload plan.'
+        )
       }
 
       const auth = await getAuthedAppUser()
-      if (auth.appUser?.auth_uid) {
-        const scheduleResult = await getOrCreateSchedule({ userId: auth.appUser.auth_uid, term: result.term })
-        if (!scheduleResult.schedule) {
-          throw new Error(scheduleResult.error ?? 'Unable to open planner schedule.')
-        }
+      if (!auth.appUser?.auth_uid) {
+        throw new Error(auth.error ?? 'Unable to open planner schedule.')
+      }
 
-        const scheduleId = scheduleResult.schedule.id
-        const existingDelete = await supabase.from('schedule_items').delete().eq('schedule_id', scheduleId)
-        if (existingDelete.error) {
-          throw new Error(existingDelete.error.message)
-        }
+      const scheduleResult = await getOrCreateSchedule({ userId: auth.appUser.auth_uid, term: result.term })
+      if (!scheduleResult.schedule) {
+        throw new Error(scheduleResult.error ?? 'Unable to open planner schedule.')
+      }
 
-        for (const section of selectedSections) {
-          const exactMatch = await supabase
+      const scheduleId = scheduleResult.schedule.id
+      const existingDelete = await supabase.from('schedule_items').delete().eq('schedule_id', scheduleId)
+      if (existingDelete.error) {
+        throw new Error(existingDelete.error.message)
+      }
+
+      const resolvedSectionIds: number[] = []
+
+      for (const section of selectedSections) {
+        const exactMatch = await supabase
+          .from(selectedTermTable)
+          .select('class_number')
+          .eq('course_code_full', section.course)
+          .eq('sec', section.section_id)
+          .limit(1)
+          .maybeSingle()
+
+        let classNumber = String(exactMatch.data?.class_number ?? '').trim()
+        if (!classNumber) {
+          const fallbackMatch = await supabase
             .from(selectedTermTable)
             .select('class_number')
             .eq('course_code_full', section.course)
-            .eq('sec', section.section_id)
+            .eq('class_number', section.section_id)
             .limit(1)
             .maybeSingle()
 
-          let classNumber = String(exactMatch.data?.class_number ?? '').trim()
-          if (!classNumber) {
-            const fallbackMatch = await supabase
-              .from(selectedTermTable)
-              .select('class_number')
-              .eq('course_code_full', section.course)
-              .eq('class_number', section.section_id)
-              .limit(1)
-              .maybeSingle()
+          classNumber = String(fallbackMatch.data?.class_number ?? '').trim()
+        }
 
-            classNumber = String(fallbackMatch.data?.class_number ?? '').trim()
-          }
+        if (!classNumber) {
+          throw new Error(`Could not resolve ${section.course} section ${section.section_id} into a planner section.`)
+        }
 
-          if (!classNumber) {
-            throw new Error(`Could not resolve ${section.course} section ${section.section_id} into a planner section.`)
-          }
+        const sectionId = Number(classNumber)
+        const addResult = await addSectionWithChecks({
+          scheduleId,
+          sectionId,
+          existingBlocks: [],
+          term: result.term,
+        })
+        if (!addResult.ok) {
+          throw new Error(addResult.msg)
+        }
 
-          const addResult = await addSectionWithChecks({
-            scheduleId,
-            sectionId: Number(classNumber),
-            existingBlocks: [],
-            term: result.term,
-          })
-          if (!addResult.ok) {
-            throw new Error(addResult.msg)
+        resolvedSectionIds.push(sectionId)
+      }
+
+      if (syncBuilderCart) {
+        const sectionResult = await fetchSectionsByIds(resolvedSectionIds, result.term)
+        if (sectionResult.error) {
+          syncWarnings.push(`Shopping cart: ${sectionResult.error}`)
+        } else {
+          try {
+            await syncCartFromSections({
+              authUserId: authData.user.id,
+              term: result.term,
+              sections: sectionResult.sections,
+            })
+          } catch (cartError) {
+            syncWarnings.push(
+              cartError instanceof Error ? `Shopping cart: ${cartError.message}` : 'Could not update shopping cart.'
+            )
           }
         }
       }
 
-      setMessage('Schedule accepted. Your selected sections were saved and synced to the Planner.')
+      const baseMessage = syncBuilderCart
+        ? 'Schedule synced to the Interactive Planner and shopping cart.'
+        : 'Schedule synced to the Interactive Planner.'
+      setMessage(syncWarnings.length > 0 ? `${baseMessage} Sync warning: ${syncWarnings.join(' ')}` : baseMessage)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to accept this schedule.')
     } finally {
@@ -826,25 +885,64 @@ export default function ScheduleBuilderPage() {
             <Link href="/courses" className="inline-flex items-center justify-center rounded-lg border px-4 py-2 text-sm font-bold transition-colors bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)] hover:bg-[var(--bg-soft)]">
               Back to Courses
             </Link>
-            <Link href="/planner" className="inline-flex items-center justify-center rounded-lg schu-gradient px-4 py-2 text-sm font-black text-white shadow-sm transition-opacity hover:opacity-90">
+            <Link href={plannerHref} className="inline-flex items-center justify-center rounded-lg schu-gradient px-4 py-2 text-sm font-black text-white shadow-sm transition-opacity hover:opacity-90">
               Open Planner
             </Link>
           </div>
         </header>
 
-        <section className="rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--hero-gradient)] border-[var(--border-soft)]">
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <section
+          className={`rounded-2xl border p-4 shadow-sm md:p-5 ${
+            syncedSchedule
+              ? 'border-emerald-100 bg-white'
+              : 'bg-[var(--hero-gradient)] border-[var(--border-soft)]'
+          }`}
+        >
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
             <div>
-              <p className="text-xs font-black uppercase tracking-wider text-schu-blue">Interactive Planner</p>
-              <h2 className="mt-1 text-xl font-black text-[var(--text-strong)]">Need the drag-and-drop calendar?</h2>
+              <p className={`text-xs font-black uppercase tracking-wider ${syncedSchedule ? 'text-emerald-700' : 'text-schu-blue'}`}>
+                Interactive Planner
+              </p>
+              <h2 className="mt-1 text-xl font-black text-[var(--text-strong)]">
+                {syncedSchedule ? `${syncedSchedule.term} planner synced` : 'Need the drag-and-drop calendar?'}
+              </h2>
               <p className="mt-1 text-sm font-medium text-[var(--text-secondary)]">
                 Use the planner to place sections on a weekly calendar, check conflicts, and export class numbers.
               </p>
+              {syncedSchedule && (
+                <p className="mt-1 text-sm font-medium text-slate-600">
+                  Last synced {new Date(syncedSchedule.selectedAt).toLocaleString()}.
+                </p>
+              )}
             </div>
-            <Link href="/planner" className="inline-flex items-center justify-center rounded-xl bg-[#1e4e8c] px-4 py-2 text-sm font-black text-white shadow-sm transition-opacity hover:opacity-90">
-              Launch Planner
+            <Link
+              href={syncedSchedule ? plannerHrefForTerm(syncedSchedule.term) : plannerHref}
+              className={`inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-black shadow-sm transition-colors ${
+                syncedSchedule
+                  ? 'border border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100'
+                  : 'bg-[#1e4e8c] text-white hover:opacity-90'
+              }`}
+            >
+              {syncedSchedule ? 'Open synced planner' : 'Launch Planner'}
             </Link>
           </div>
+          {syncedSchedule && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {syncedSchedule.selectedSections.slice(0, 8).map((section) => (
+                <span
+                  key={`${section.course}-${section.section_id}`}
+                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-700"
+                >
+                  {section.course} - {section.section_id}
+                </span>
+              ))}
+              {syncedSchedule.selectedSections.length > 8 && (
+                <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-700">
+                  +{syncedSchedule.selectedSections.length - 8} more
+                </span>
+              )}
+            </div>
+          )}
         </section>
 
         <section className="space-y-4 rounded-2xl border p-4 shadow-sm md:p-5 bg-[var(--bg-elevated)] border-[var(--border-soft)]">
@@ -881,10 +979,10 @@ export default function ScheduleBuilderPage() {
               <label className="mb-1 block text-xs font-black uppercase tracking-wider text-[var(--text-muted)]">Term</label>
               <select
                 value={selectedTermTable}
-                onChange={(e) => setSelectedTermTable(e.target.value)}
+                onChange={(e) => handleSelectedTermChange(e.target.value)}
                 className="w-full rounded-xl border-2 px-3 py-2 font-medium bg-[var(--bg-surface)] border-[var(--border-soft)] text-[var(--text-primary)]"
               >
-                {SEMESTER_OPTIONS.map((option) => {
+                {PLANNER_TERM_OPTIONS.map((option) => {
                   const disabled = 'disabled' in option ? Boolean(option.disabled) : false
                   return (
                   <option key={option.table} value={option.table} disabled={disabled}>
@@ -1269,21 +1367,32 @@ export default function ScheduleBuilderPage() {
               )}
 
               {selectedSections.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  <button
-                    type="button"
-                    onClick={acceptSchedule}
-                    disabled={acceptingSchedule}
-                    className="rounded-xl schu-gradient px-4 py-2 text-sm font-black text-white transition-colors hover:opacity-90 disabled:opacity-60"
-                  >
-                    {acceptingSchedule ? 'Accepting...' : 'Accept Schedule'}
-                  </button>
-                  <Link
-                    href="/planner"
-                    className="rounded-xl border px-4 py-2 text-sm font-bold bg-white border-slate-200 text-slate-800 transition-colors hover:bg-slate-50"
-                  >
-                    Open Planner
-                  </Link>
+                <div className="flex flex-col gap-3 rounded-xl border border-slate-100 bg-gray-50 p-3 md:flex-row md:items-center md:justify-between">
+                  <label className="flex items-center gap-2 text-sm font-bold text-slate-700">
+                    <input
+                      type="checkbox"
+                      checked={syncBuilderCart}
+                      onChange={(event) => setSyncBuilderCart(event.target.checked)}
+                      className="h-4 w-4"
+                    />
+                    Also update shopping cart
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={acceptSchedule}
+                      disabled={acceptingSchedule}
+                      className="rounded-xl schu-gradient px-4 py-2 text-sm font-black text-white transition-colors hover:opacity-90 disabled:opacity-60"
+                    >
+                      {acceptingSchedule ? 'Syncing...' : 'Sync to Interactive Planner'}
+                    </button>
+                    <Link
+                      href={plannerHref}
+                      className="rounded-xl border px-4 py-2 text-sm font-bold bg-white border-slate-200 text-slate-800 transition-colors hover:bg-slate-50"
+                    >
+                      Open Planner
+                    </Link>
+                  </div>
                 </div>
               )}
 

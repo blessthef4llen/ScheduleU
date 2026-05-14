@@ -104,6 +104,9 @@ All database objects can be recreated from scratch using the following scripts, 
 4. **030_seed.sql**  
    Inserts mock data used for development and demonstration.
 
+5. **065_fix_student_planned_courses_updated_at.sql**
+   Ensures AI Workload planned-course rows have timestamp columns and a matching `updated_at` trigger.
+
 ---
 
 ### Notes
