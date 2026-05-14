@@ -6,6 +6,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api import routes
 
 from app.api.routes import router as api_router
 
@@ -32,7 +33,6 @@ load_local_env()
 app = FastAPI(title="Scheduler Backend")
 @app.on_event("startup")
 
-from app.api import routes
 
 def startup_load_data():
     routes.startup_load()
