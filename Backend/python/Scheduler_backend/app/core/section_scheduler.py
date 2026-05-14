@@ -5,8 +5,10 @@ from __future__ import annotations
 import re
 from typing import Dict, List, Optional, Set, Tuple
 from dataclasses import dataclass
+from app.core.deps_model import DependencyModel
 
 from app.core.section_models import SectionOption, MeetingBlock
+from app.core.normalize import norm_course_code
 
 
 # --- Parsing helpers ---
@@ -317,6 +319,47 @@ def score_schedule_by_preference(
             matched += 1
     return base + matched * 1_000_000
 
+def filter_prereq_eligible_courses(
+    courses: List[str],
+    model: DependencyModel,
+    completed: Set[str],
+) -> Tuple[List[str], Dict[str, str]]:
+    """
+    Remove courses whose prerequisites are not satisfied.
+
+    Returns:
+      eligible_courses: courses safe to send into section scheduling
+      failures: course -> reason
+    """
+
+    normalized_completed = {
+        norm_course_code(c)
+        for c in completed
+        if norm_course_code(c)
+    }
+
+    eligible: List[str] = []
+    failures: Dict[str, str] = {}
+
+    for course in courses:
+        normalized_course = norm_course_code(course)
+
+        if not normalized_course:
+            continue
+
+        unmet = model.unmet_prereq_labels(
+            normalized_course,
+            normalized_completed,
+        )
+
+        if unmet:
+            failures[normalized_course] = (
+                "Missing prerequisite(s): " + ", ".join(unmet)
+            )
+        else:
+            eligible.append(normalized_course)
+
+    return eligible, failures
 
 def pick_ranked_schedules(
     options_by_course: Dict[str, List[SectionOption]],
