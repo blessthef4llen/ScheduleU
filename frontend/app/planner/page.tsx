@@ -4,7 +4,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import PageLayout from "@/components/ui/PageLayout";
-import SectionCard from "@/components/ui/SectionCard";
 import { GradientButton, SecondaryButton } from "@/components/ui/Buttons";
 import PlannerLayout from "@/components/planner/PlannerLayout";
 import type { CalendarEvent, MeetingBlock, SectionLite } from "@/lib/planner/types";
@@ -57,11 +56,6 @@ export default function PlannerPage() {
   const [syncMode, setSyncMode] = useState<PlannerSyncMode>("schedule_and_cart");
   const selectedTerm = useMemo(() => tableToTermLabel(selectedTermTable), [selectedTermTable]);
   const builderHref = useMemo(() => builderHrefForTerm(selectedTermTable), [selectedTermTable]);
-
-  const selectedSectionCount = useMemo(() => {
-    const ids = new Set(events.map((event) => event.extendedProps?.section_id).filter(Boolean));
-    return ids.size;
-  }, [events]);
 
   const reloadSchedule = useCallback(async (): Promise<SectionLite[]> => {
     setStatus(`Loading your saved ${selectedTerm} schedule...`);
@@ -312,30 +306,34 @@ export default function PlannerPage() {
   const plannerTools = (
     <>
       <div className="planner-tool-group planner-tool-group--term">
-        <label className="planner-sync-field">
-          <span>Term</span>
-          <select
-            className="field"
-            value={selectedTermTable}
-            onChange={(event) => handleTermTableChange(event.target.value)}
-          >
-            {PLANNER_TERM_OPTIONS.map((option) => {
-              const disabled = "disabled" in option ? Boolean(option.disabled) : false;
-              return (
-                <option key={option.table} value={option.table} disabled={disabled}>
-                  {option.label}
-                  {disabled ? " (Coming Soon)" : ""}
-                </option>
-              );
-            })}
-          </select>
+        <label className="planner-tool-label" htmlFor="planner-term-select">
+          Term
         </label>
+        <select
+          id="planner-term-select"
+          className="field"
+          value={selectedTermTable}
+          onChange={(event) => handleTermTableChange(event.target.value)}
+        >
+          {PLANNER_TERM_OPTIONS.map((option) => {
+            const disabled = "disabled" in option ? Boolean(option.disabled) : false;
+            return (
+              <option key={option.table} value={option.table} disabled={disabled}>
+                {option.label}
+                {disabled ? " (Coming Soon)" : ""}
+              </option>
+            );
+          })}
+        </select>
       </div>
 
       <div className="planner-tool-group planner-tool-group--sync">
-        <label className="planner-sync-field">
-          <span>Save changes to</span>
+        <label className="planner-tool-label" htmlFor="planner-sync-mode">
+          Save changes to
+        </label>
+        <div className="planner-tool-control-row">
           <select
+            id="planner-sync-mode"
             className="field"
             value={syncMode}
             onChange={(event) => handleSyncModeChange(event.target.value as PlannerSyncMode)}
@@ -343,17 +341,14 @@ export default function PlannerPage() {
             <option value="schedule_and_cart">Schedule + Cart</option>
             <option value="schedule_only">Schedule Only</option>
           </select>
-        </label>
-        <SecondaryButton type="button" onClick={handleManualSync} disabled={!authUserId}>
-          Sync Now
-        </SecondaryButton>
+          <SecondaryButton type="button" onClick={handleManualSync} disabled={!authUserId}>
+            Sync Now
+          </SecondaryButton>
+        </div>
       </div>
 
       <div className="planner-tool-group planner-tool-group--crn">
-        <div>
-          <p className="planner-tool-label">Registration numbers</p>
-          <p className="planner-tool-text">Export CRNs for selected sections.</p>
-        </div>
+        <p className="planner-tool-label">Registration numbers</p>
         <div className="controls-row">
           <GradientButton type="button" onClick={handleExportCrns} disabled={exportLoading}>
             {exportLoading ? "Loading..." : "Export CRNs"}
@@ -386,35 +381,9 @@ export default function PlannerPage() {
       label="ScheduleU Student Portal"
       title="Interactive Planner"
       subtitle={`Arrange ${selectedTerm} sections on a weekly calendar, keep conflict checks intact, and export class numbers when you're ready to register.`}
+      compact
     >
       <div className="planner-page-stack">
-        <SectionCard className="planner-hero-card planner-hero-card--compact">
-          <div className="planner-hero-layout">
-            <div className="planner-hero-main">
-              <p className="page-label">Registration Prep</p>
-              <h2 className="planner-hero-title">Planner Workspace</h2>
-              <p className="planner-hero-text">
-                Drag {selectedTerm} sections into the calendar, keep conflict checks intact, and sync edits back to Builder.
-              </p>
-            </div>
-
-            <div className="planner-stat-row" aria-label="Planner summary">
-              <div className="planner-stat">
-                <span className="planner-stat__value">{selectedSectionCount}</span>
-                <span className="planner-stat__label">Selected</span>
-              </div>
-              <div className="planner-stat">
-                <span className="planner-stat__value">{catalog.length}</span>
-                <span className="planner-stat__label">Catalog</span>
-              </div>
-              <div className="planner-stat">
-                <span className="planner-stat__value">{selectedTerm}</span>
-                <span className="planner-stat__label">Term</span>
-              </div>
-            </div>
-          </div>
-        </SectionCard>
-
         <PlannerLayout
           catalogSections={catalog}
           catalogSearch={search}

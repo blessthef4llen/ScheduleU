@@ -10,10 +10,11 @@ type PageLayoutProps = {
   label?: string;
   title: string;
   subtitle?: string;
+  compact?: boolean;
   children: ReactNode;
 };
 
-export default function PageLayout({ label, title, subtitle, children }: PageLayoutProps) {
+export default function PageLayout({ label, title, subtitle, compact = false, children }: PageLayoutProps) {
   const menuItems = [
     { href: "/courses", label: "Courses" },
     { href: "/schedule-builder", label: "Builder" },
@@ -40,8 +41,8 @@ export default function PageLayout({ label, title, subtitle, children }: PageLay
           <HeaderMenu items={menuItems} title={title} />
         </div>
       </header>
-      <main className={styles.main}>
-        <section className="page-layout">
+      <main className={`${styles.main}${compact ? ` ${styles.mainCompact}` : ""}`}>
+        <section className={`page-layout${compact ? " page-layout--compact" : ""}`}>
           {label ? <p className="page-label">{label}</p> : null}
           <header>
             <h1 className="page-title">{title}</h1>

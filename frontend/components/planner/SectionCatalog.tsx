@@ -152,7 +152,10 @@ export default function SectionCatalog({ sections, search, onSearchChange }: Pro
   }, [componentFilter, courseNumberRange, meetingFilter, search, sections, subjectFilter]);
 
   const visibleSections = filtered.slice(0, MAX_VISIBLE_SECTIONS);
-  const hiddenCount = Math.max(filtered.length - visibleSections.length, 0);
+  const resultSummary =
+    filtered.length > visibleSections.length
+      ? `Showing first ${visibleSections.length} of ${filtered.length} sections.`
+      : `Showing ${filtered.length} sections.`;
   const filtersActive =
     subjectFilter !== "all" ||
     courseNumberRange !== "all" ||
@@ -176,85 +179,82 @@ export default function SectionCatalog({ sections, search, onSearchChange }: Pro
         <span className="planner-count-badge">{filtered.length}</span>
       </div>
 
-      <label className="planner-search-label" htmlFor="planner-section-search">
-        Search sections
-      </label>
-      <input
-        id="planner-section-search"
-        type="search"
-        value={search}
-        onChange={(event) => onSearchChange(event.target.value)}
-        placeholder="Course, instructor, class number..."
-        className="field input-search planner-search"
-      />
-
-      <div className="planner-filter-grid" aria-label="Section filters">
-        <label className="planner-filter-field">
-          <span>Subject</span>
-          <select className="field" value={subjectFilter} onChange={(event) => setSubjectFilter(event.target.value)}>
-            <option value="all">All subjects</option>
-            {subjectOptions.map((subject) => (
-              <option key={subject} value={subject}>
-                {subject}
-              </option>
-            ))}
-          </select>
+      <div className="planner-catalog-controls">
+        <label className="planner-search-label" htmlFor="planner-section-search">
+          Search sections
         </label>
+        <input
+          id="planner-section-search"
+          type="search"
+          value={search}
+          onChange={(event) => onSearchChange(event.target.value)}
+          placeholder="Course, instructor, class number..."
+          className="field input-search planner-search"
+        />
 
-        <label className="planner-filter-field">
-          <span>Course Number</span>
-          <select
-            className="field"
-            value={courseNumberRange}
-            onChange={(event) => setCourseNumberRange(event.target.value as CourseNumberRange)}
-          >
-            {COURSE_NUMBER_RANGES.map((range) => (
-              <option key={range.value} value={range.value}>
-                {range.label}
-              </option>
-            ))}
-          </select>
-        </label>
+        <div className="planner-filter-grid" aria-label="Section filters">
+          <label className="planner-filter-field">
+            <span>Subject</span>
+            <select className="field" value={subjectFilter} onChange={(event) => setSubjectFilter(event.target.value)}>
+              <option value="all">All subjects</option>
+              {subjectOptions.map((subject) => (
+                <option key={subject} value={subject}>
+                  {subject}
+                </option>
+              ))}
+            </select>
+          </label>
 
-        <label className="planner-filter-field">
-          <span>Component</span>
-          <select className="field" value={componentFilter} onChange={(event) => setComponentFilter(event.target.value)}>
-            <option value="all">All types</option>
-            {componentOptions.map((component) => (
-              <option key={component} value={component}>
-                {component}
-              </option>
-            ))}
-          </select>
-        </label>
+          <label className="planner-filter-field">
+            <span>Course Number</span>
+            <select
+              className="field"
+              value={courseNumberRange}
+              onChange={(event) => setCourseNumberRange(event.target.value as CourseNumberRange)}
+            >
+              {COURSE_NUMBER_RANGES.map((range) => (
+                <option key={range.value} value={range.value}>
+                  {range.label}
+                </option>
+              ))}
+            </select>
+          </label>
 
-        <label className="planner-filter-field">
-          <span>Meeting Time</span>
-          <select
-            className="field"
-            value={meetingFilter}
-            onChange={(event) => setMeetingFilter(event.target.value as MeetingFilter)}
-          >
-            <option value="all">All meetings</option>
-            <option value="scheduled">Scheduled only</option>
-            <option value="tba">TBA only</option>
-          </select>
-        </label>
+          <label className="planner-filter-field">
+            <span>Component</span>
+            <select className="field" value={componentFilter} onChange={(event) => setComponentFilter(event.target.value)}>
+              <option value="all">All types</option>
+              {componentOptions.map((component) => (
+                <option key={component} value={component}>
+                  {component}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="planner-filter-field">
+            <span>Meeting Time</span>
+            <select
+              className="field"
+              value={meetingFilter}
+              onChange={(event) => setMeetingFilter(event.target.value as MeetingFilter)}
+            >
+              <option value="all">All meetings</option>
+              <option value="scheduled">Scheduled only</option>
+              <option value="tba">TBA only</option>
+            </select>
+          </label>
+        </div>
+
+        {filtersActive ? (
+          <button type="button" className="planner-filter-reset" onClick={resetFilters}>
+            Reset filters
+          </button>
+        ) : null}
+
       </div>
 
-      {filtersActive ? (
-        <button type="button" className="planner-filter-reset" onClick={resetFilters}>
-          Reset filters
-        </button>
-      ) : null}
-
-      {hiddenCount > 0 ? (
-        <p className="planner-result-note">
-          Showing first {visibleSections.length} of {filtered.length}. Search by course, instructor, or class number to narrow results.
-        </p>
-      ) : null}
-
-      <div ref={draggableRef} className="planner-course-list">
+      <div ref={draggableRef} className="planner-course-list" aria-label={resultSummary}>
         {filtered.length === 0 ? (
           <EmptyState icon="" title="No sections found" text="Try a different course, instructor, or class number." />
         ) : (
