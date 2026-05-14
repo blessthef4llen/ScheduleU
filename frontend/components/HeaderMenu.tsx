@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 
 type MenuItem = {
   href: string;
@@ -49,8 +50,8 @@ export default function HeaderMenu({
         <span className="h-0.5 w-5 rounded-full bg-current" />
       </button>
 
-      {open ? (
-        <div className="fixed inset-0 z-[90]">
+      {open ? createPortal(
+        <div className="fixed inset-0 z-[999]">
           <button
             type="button"
             aria-label="Close menu overlay"
@@ -87,7 +88,7 @@ export default function HeaderMenu({
             {children ? <div className="border-t border-[var(--border-soft)] pt-4">{children}</div> : null}
           </aside>
         </div>
-      ) : null}
+      , document.body) : null}
     </>
   );
 }
