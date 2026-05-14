@@ -1,4 +1,26 @@
 .shell {
+  --bg-page: var(--background, #ffffff);
+  --bg-surface: var(--surface, #ffffff);
+  --bg-soft: var(--surface-2, #f6f8fb);
+  --bg-elevated: var(--surface, #ffffff);
+  --text-primary: var(--foreground, #172033);
+  --text-secondary: var(--text-main, #334155);
+  --brand-teal: var(--schu-teal, #4fd1c5);
+  --brand-blue: var(--schu-blue, #1e4e8c);
+  --border-soft: var(--border, #dbe4f0);
+  --border-strong: var(--border, #dbe4f0);
+  --shadow-soft: 0 8px 24px var(--shadow-color, rgba(15, 23, 42, 0.08));
+  --shadow-hover: 0 14px 28px rgba(30, 78, 140, 0.14);
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --transition: 180ms ease;
+  --page-gradient:
+    radial-gradient(circle at top left, rgba(79, 209, 197, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(30, 78, 140, 0.08), transparent 24%),
+    var(--background, #ffffff);
+  --surface-gradient: linear-gradient(160deg, var(--surface, #ffffff), var(--surface-2, #f6f8fb));
+  --hero-gradient: linear-gradient(160deg, var(--surface, #ffffff), var(--surface-2, #f6f8fb));
+  --overlay-ring: rgba(30, 78, 140, 0.28);
   min-height: 100vh;
   color: var(--text-primary);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
@@ -10,9 +32,9 @@
   top: 0;
   z-index: 50;
   color: #fff;
-  background: linear-gradient(90deg, var(--brand-teal), var(--brand-blue));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
+  background: var(--brand-teal);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
 }
 
 .navbarInner {
@@ -900,10 +922,12 @@
 .shell :global(.planner-hero-card) {
   position: relative;
   overflow: hidden;
-  border-left: 5px solid var(--brand-teal);
-  background:
-    radial-gradient(ellipse 100% 80% at 100% 0%, rgba(76, 201, 192, 0.16), transparent 52%),
-    linear-gradient(165deg, #ffffff 0%, #f8fbff 44%, #f0fdfa 100%);
+  background: var(--bg-elevated);
+  border-color: var(--border-soft);
+}
+
+.shell :global(.planner-hero-card--compact) {
+  padding: 18px 20px;
 }
 
 .shell :global(.planner-page-stack) {
@@ -932,9 +956,9 @@
 }
 
 .shell :global(.planner-hero-text) {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.45;
 }
 
 .shell :global(.planner-stat-row) {
@@ -952,10 +976,10 @@
 
 .shell :global(.planner-stat) {
   border: 1px solid var(--border-soft);
-  border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.86);
-  padding: 12px 14px;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  border-radius: 12px;
+  background: var(--bg-surface);
+  padding: 10px 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 .shell :global(.planner-stat__value),
@@ -981,17 +1005,15 @@
 }
 
 .shell :global(.planner-crn-card) {
-  border-left: 5px solid #14b8a6;
-  background:
-    radial-gradient(ellipse 90% 80% at 100% 0%, rgba(20, 184, 166, 0.1), transparent 52%),
-    linear-gradient(165deg, #ffffff 0%, #f8fbff 100%);
+  background: var(--bg-elevated);
 }
 
 .shell :global(.planner-builder-card) {
-  border-left: 5px solid var(--brand-blue);
-  background:
-    radial-gradient(ellipse 90% 80% at 100% 0%, rgba(37, 99, 235, 0.08), transparent 52%),
-    linear-gradient(165deg, #ffffff 0%, #f8fbff 100%);
+  background: var(--bg-elevated);
+}
+
+.shell :global(.planner-sync-card) {
+  background: var(--bg-elevated);
 }
 
 .shell :global(.planner-card-row) {
@@ -1013,6 +1035,112 @@
   margin: 10px 0 0;
   color: var(--text-secondary);
   line-height: 1.55;
+}
+
+.shell :global(.planner-sync-controls) {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.shell :global(.planner-sync-field) {
+  display: flex;
+  min-width: min(100%, 180px);
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shell :global(.planner-sync-field span) {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.shell :global(.planner-sync-field .field) {
+  width: 100%;
+  min-width: 0;
+  font-size: 0.82rem;
+}
+
+.shell :global(.planner-calendar-toolbar) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-xl);
+  background: var(--bg-soft);
+  margin-bottom: 14px;
+  padding: 12px;
+}
+
+.shell :global(.planner-tool-group) {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.shell :global(.planner-tool-group--term) {
+  flex: 1 1 170px;
+  max-width: 230px;
+}
+
+.shell :global(.planner-tool-group--sync) {
+  flex: 1.5 1 280px;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.shell :global(.planner-tool-group--sync .planner-sync-field) {
+  flex: 1 1 190px;
+}
+
+.shell :global(.planner-tool-group--crn) {
+  flex: 2 1 300px;
+}
+
+.shell :global(.planner-tool-group--links) {
+  flex: 0 1 180px;
+  justify-content: flex-end;
+}
+
+.shell :global(.planner-tool-group--links .btn) {
+  width: 100%;
+  min-height: 50px;
+  white-space: normal;
+}
+
+.shell :global(.planner-tool-label) {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.shell :global(.planner-tool-text) {
+  margin: 3px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.shell :global(.planner-tool-message) {
+  margin: 0;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  background: #fff7ed;
+  color: #9a3412;
+  padding: 7px 9px;
+  font-size: 0.76rem;
+  font-weight: 700;
 }
 
 .shell :global(.planner-crn-panel) {
@@ -1061,18 +1189,29 @@
   padding-top: 2px;
 }
 
+.shell :global(.planner-crn-list--compact) {
+  gap: 6px;
+  padding-top: 0;
+}
+
 .shell :global(.planner-crn-list span) {
   display: inline-flex;
   align-items: center;
   min-height: 32px;
   border: 1px solid #bfdbfe;
   border-radius: 999px;
-  background: linear-gradient(160deg, #ffffff 0%, #eff6ff 100%);
+  background: var(--bg-surface);
   color: #1e40af;
   padding: 6px 12px;
   font-size: 0.82rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
+}
+
+.shell :global(.planner-crn-list--compact span) {
+  min-height: 26px;
+  padding: 4px 9px;
+  font-size: 0.74rem;
 }
 
 .shell :global(.planner-grid) {
@@ -1086,7 +1225,8 @@
   min-width: 0;
   padding: 0;
   overflow: hidden;
-  border-color: color-mix(in srgb, var(--border-soft) 88%, #bfdbfe);
+  border-color: var(--border-soft);
+  background: var(--bg-elevated);
 }
 
 .shell :global(.planner-panel__inner) {
@@ -1115,10 +1255,10 @@
   justify-content: center;
   min-width: 34px;
   height: 30px;
-  border: 1px solid #99f6e4;
+  border: 1px solid var(--border-soft);
   border-radius: 999px;
-  background: rgba(76, 201, 192, 0.16);
-  color: #0f766e;
+  background: var(--bg-soft);
+  color: var(--text-strong);
   padding: 0 10px;
   font-size: 0.78rem;
   font-weight: 900;
@@ -1169,10 +1309,10 @@
 }
 
 .shell :global(.planner-filter-reset) {
-  border: 1px solid #99f6e4;
+  border: 1px solid var(--border-soft);
   border-radius: 999px;
-  background: #fff;
-  color: #0f766e;
+  background: var(--bg-surface);
+  color: var(--text-primary);
   margin-top: 10px;
   padding: 7px 11px;
   font-size: 0.74rem;
@@ -1197,10 +1337,10 @@
 }
 
 .shell :global(.planner-result-note) {
-  border: 1px solid #99f6e4;
+  border: 1px solid var(--border-soft);
   border-radius: 12px;
-  background: rgba(240, 253, 250, 0.92);
-  color: #0f766e;
+  background: var(--bg-soft);
+  color: var(--text-secondary);
   margin: 12px 0 0;
   padding: 9px 11px;
   font-size: 0.78rem;
@@ -1210,9 +1350,8 @@
 
 .shell :global(.planner-course-card) {
   border: 1px solid var(--border-soft);
-  border-left: 4px solid #14b8a6;
-  border-radius: var(--radius-xl);
-  background: linear-gradient(160deg, #ffffff 0%, #f8fbff 56%, #f0fdfa 100%);
+  border-radius: 12px;
+  background: var(--bg-surface);
   padding: 14px;
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
   cursor: grab;
@@ -1238,7 +1377,7 @@
 
 .shell :global(.planner-course-code) {
   margin: 0;
-  color: #0f766e;
+  color: var(--brand-blue);
   font-size: 0.76rem;
   font-weight: 900;
   letter-spacing: 0.05em;
@@ -1255,10 +1394,10 @@
 
 .shell :global(.planner-section-chip) {
   flex-shrink: 0;
-  border: 1px solid #99f6e4;
+  border: 1px solid var(--border-soft);
   border-radius: 999px;
-  background: rgba(76, 201, 192, 0.18);
-  color: #0f766e;
+  background: var(--bg-soft);
+  color: var(--text-strong);
   padding: 4px 9px;
   font-size: 0.68rem;
   font-weight: 900;
@@ -1273,9 +1412,9 @@
 
 .shell :global(.planner-course-meta-grid span) {
   min-width: 0;
-  border: 1px solid rgba(219, 234, 254, 0.9);
+  border: 1px solid var(--border-soft);
   border-radius: 10px;
-  background: #fff;
+  background: var(--bg-surface);
   color: var(--text-secondary);
   padding: 7px 9px;
   font-size: 0.78rem;
@@ -1295,10 +1434,10 @@
 }
 
 .shell :global(.planner-status-bar) {
-  border: 1px solid #99f6e4;
+  border: 1px solid var(--border-soft);
   border-radius: 14px;
-  background: rgba(240, 253, 250, 0.92);
-  color: #0f766e;
+  background: var(--bg-soft);
+  color: var(--text-secondary);
   margin-bottom: 14px;
   padding: 10px 12px;
   font-size: 0.84rem;
@@ -1309,7 +1448,7 @@
   overflow: auto;
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-xl);
-  background: #fff;
+  background: var(--bg-surface);
 }
 
 .shell :global(.planner-fullcalendar .fc) {
@@ -1710,6 +1849,17 @@
     grid-template-columns: 1fr;
   }
 
+  .shell :global(.planner-calendar-toolbar) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shell :global(.planner-tool-group--links) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .shell :global(.planner-course-list) {
     max-height: 430px;
   }
@@ -1723,8 +1873,15 @@
   .shell :global(.planner-stat-row),
   .shell :global(.planner-course-meta-grid),
   .shell :global(.planner-filter-grid),
+  .shell :global(.planner-calendar-toolbar),
   .shell :global(.degree-course-columns) {
     grid-template-columns: 1fr;
+  }
+
+  .shell :global(.planner-tool-group--links) {
+    grid-column: auto;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .shell :global(.degree-hero-layout),

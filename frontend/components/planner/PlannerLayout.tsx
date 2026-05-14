@@ -2,6 +2,7 @@
 // Reusable Plannerlayout component for ScheduleU.
 
 import SectionCard from "@/components/ui/SectionCard";
+import type { ReactNode } from "react";
 import type { CalendarEvent, SectionLite } from "@/lib/planner/types";
 import SectionCatalog from "./SectionCatalog";
 import PlannerCalendar from "./PlannerCalendar";
@@ -12,6 +13,7 @@ type Props = {
   onCatalogSearchChange: (value: string) => void;
   events: CalendarEvent[];
   status: string;
+  calendarTools?: ReactNode;
   onDropSection: (sectionId: number) => Promise<void>;
   onRemoveSection: (sectionId: number) => Promise<void>;
 };
@@ -31,6 +33,7 @@ export default function PlannerLayout(props: Props) {
         <PlannerCalendar
           events={props.events}
           status={props.status}
+          tools={props.calendarTools}
           onDropSection={props.onDropSection}
           onRemoveSection={props.onRemoveSection}
         />

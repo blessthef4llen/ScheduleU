@@ -15,12 +15,17 @@ type PageLayoutProps = {
 
 export default function PageLayout({ label, title, subtitle, children }: PageLayoutProps) {
   const menuItems = [
-    { href: "/dashboard", label: "Dashboard" },
+    { href: "/courses", label: "Courses" },
+    { href: "/schedule-builder", label: "Builder" },
     { href: "/planner", label: "Planner" },
+    { href: "/watchlist", label: "Watchlist" },
+    { href: "/dashboard", label: "Dashboard" },
     { href: "/notifications", label: "Notifications" },
     { href: "/registration-countdown", label: "Registration" },
+    { href: "/daily-tips", label: "Daily Tips" },
     { href: "/ai-workload-scorer", label: "AI Workload" },
     { href: "/travelalerts", label: "Travel Alerts" },
+    { href: "/transcript-import", label: "Progress" },
     { href: "/user-profile", label: "Profile" },
     { href: "/profile", label: "Settings" },
   ];
@@ -32,7 +37,7 @@ export default function PageLayout({ label, title, subtitle, children }: PageLay
           <Link href="/dashboard" className={styles.brand}>
             ScheduleU
           </Link>
-          <HeaderMenu items={menuItems} title="Features" />
+          <HeaderMenu items={menuItems} title={title} />
         </div>
       </header>
       <main className={styles.main}>
