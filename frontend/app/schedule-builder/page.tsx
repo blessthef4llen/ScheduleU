@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import HeaderMenu from '@/components/HeaderMenu'
 import { ProfessorRatingBadge } from '@/components/ProfessorRatingBadge'
+import { loadStoredJson, saveStoredJson } from '@/lib/browserStorage'
 import { supabase } from '@/utils/supabase'
 import {
   addSectionWithChecks,
@@ -63,19 +64,12 @@ type ScheduleCandidate = {
   selected_sections: SelectedSection[]
 }
 
-type AcceptedScheduleSnapshot = {
-  term: string
-  selectedAt: string
-  selectedSections: SelectedSection[]
-}
-
 type ProfessorPreference = 'prefer' | 'avoid'
 type SavedProfessorPreference = {
   label: string
   preference: ProfessorPreference
 }
 
-const ACCEPTED_SCHEDULES_KEY = 'scheduleu.acceptedSchedules'
 const PROFESSOR_PREFERENCES_KEY = 'scheduleu.professorPreferences'
 
 const backendBaseUrl = process.env.NEXT_PUBLIC_SCHEDULER_API_URL ?? 'http://localhost:8000'
@@ -274,17 +268,16 @@ function getUniqueProfessors(section: SelectedSection) {
 
 function loadProfessorPreferences(): Record<string, SavedProfessorPreference> {
   const stored = loadStoredJson<Record<string, SavedProfessorPreference | ProfessorPreference>>(PROFESSOR_PREFERENCES_KEY, {})
-  return Object.fromEntries(
-    Object.entries(stored).flatMap(([name, entry]) => {
-      if (typeof entry === 'string') {
-        return [[name, { label: name, preference: entry } satisfies SavedProfessorPreference]]
-      }
-      if (!entry?.preference) {
-        return []
-      }
-      return [[name, entry]]
-    })
-  )
+  return Object.entries(stored).reduce<Record<string, SavedProfessorPreference>>((acc, [name, entry]) => {
+    if (typeof entry === 'string') {
+      acc[name] = { label: name, preference: entry }
+      return acc
+    }
+    if (entry?.preference) {
+      acc[name] = entry
+    }
+    return acc
+  }, {})
 }
 
 export default function ScheduleBuilderPage() {
