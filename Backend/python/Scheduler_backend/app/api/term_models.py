@@ -53,6 +53,14 @@ class TermConstraints(BaseModel):
         le=5,
         description="Future feature minimun instructor rating [0-5], section below are filtered out if below minimum"
     )
+    preferred_professors: list[str] = Field(
+        default_factory=list,
+        description="Professor names to prefer when ranking otherwise valid schedules."
+    )
+    blocked_professors: list[str] = Field(
+        default_factory=list,
+        description="Professor names to exclude from generated schedules when possible."
+    )
     ranking_preference: str = Field(
         default="compact",
         description="Ranking preference: compact | fewest_days | latest_start | earliest_end"

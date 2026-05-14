@@ -56,8 +56,10 @@ next-env.d.ts
 # Python
 venv
 .venv
+.venv*/
 **/venv/
 **/.venv/
+**/.venv*/
 Backend/python/venv/
 __pycache__/
 **/__pycache__/

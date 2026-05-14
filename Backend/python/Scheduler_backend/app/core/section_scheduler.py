@@ -76,6 +76,9 @@ TIME_RE = re.compile(
     re.IGNORECASE
 )
 
+PROFESSOR_TITLE_RE = re.compile(r"\b(dr|prof|professor)\.?\s+", re.IGNORECASE)
+PROFESSOR_NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
+
 
 # Convert parsed hour/minute to minutes from midnight.
 def _to_minutes(h: int, m: int, ampm: Optional[str]) -> int:
@@ -125,6 +128,28 @@ def parse_time_range(time_str: str) -> Optional[Tuple[int, int]]:
     start = _to_minutes(h1, m1, ap1)
     end = _to_minutes(h2, m2, ap2)
     return (start, end) if end > start else None
+
+
+def normalize_professor_name(name: Optional[str]) -> str:
+    raw = (name or "").strip().lower()
+    if not raw:
+        return ""
+    raw = PROFESSOR_TITLE_RE.sub("", raw)
+    raw = PROFESSOR_NON_ALNUM_RE.sub(" ", raw)
+    return " ".join(raw.split())
+
+
+def section_professor_names(sec: SectionOption) -> Set[str]:
+    names: Set[str] = set()
+    if sec.instructor:
+        normalized = normalize_professor_name(sec.instructor)
+        if normalized:
+            names.add(normalized)
+    for meeting in sec.meetings:
+        normalized = normalize_professor_name(meeting.instructor)
+        if normalized:
+            names.add(normalized)
+    return names
 
 
 # --- Conflict checking and scheduling ---
@@ -225,6 +250,7 @@ def score_schedule_by_preference(
     chosen: List[SectionOption],
     preference: str = "compact",
     preferred_sections: Optional[Dict[str, str]] = None,
+    preferred_professors: Optional[Set[str]] = None,
 ) -> int:
     m = compute_schedule_metrics(chosen)
     p = (preference or "compact").strip().lower()
@@ -242,6 +268,12 @@ def score_schedule_by_preference(
 
     # Prefer schedules that keep the user's selected sections when possible.
     # This is a strong ranking bonus, but it is not a hard constraint.
+    if preferred_professors:
+        matched_professors = sum(
+            1 for sec in chosen if section_professor_names(sec) & preferred_professors
+        )
+        base += matched_professors * 250_000
+
     if not preferred_sections:
         return base
     matched = 0
@@ -260,6 +292,7 @@ def pick_ranked_schedules(
     max_results: int = 5,
     ranking_preference: str = "compact",
     preferred_sections: Optional[Dict[str, str]] = None,
+    preferred_professors: Optional[Set[str]] = None,
 ) -> Tuple[List[Tuple[List[SectionOption], int, ScheduleMetrics]], Dict[str, str]]:
     """
     Returns ranked schedules:
@@ -294,6 +327,7 @@ def pick_ranked_schedules(
                 chosen,
                 ranking_preference,
                 preferred_sections=preferred_sections,
+                preferred_professors=preferred_professors,
             )
             metrics = compute_schedule_metrics(chosen)
             candidates.append((chosen.copy(), score, metrics))

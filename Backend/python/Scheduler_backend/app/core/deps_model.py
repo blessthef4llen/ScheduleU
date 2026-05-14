@@ -2,7 +2,7 @@
 
 # app/core/deps_model.py
 from __future__ import annotations
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict, Set, List, Tuple, Optional
 
 
@@ -23,6 +23,7 @@ class DependencyModel:
     # dependencies
     prereqs: Dict[str, Set[str]]   # course -> prereq courses
     coreqs: Dict[str, Set[str]]    # course -> coreq courses
+    prereq_groups: Dict[str, List[Set[str]]] = field(default_factory=dict)  # course -> AND of OR-groups
 
     # Ensure a course exists in the model before adding edges.
     def ensure_course(self, code: str) -> None:
@@ -33,17 +34,51 @@ class DependencyModel:
         self.ensure_course(course)
         self.ensure_course(prereq)
         self.prereqs.setdefault(course, set()).add(prereq)
+        groups = self.prereq_groups.setdefault(course, [])
+        singleton = {prereq}
+        if singleton not in groups:
+            groups.append(singleton)
 
     def add_coreq(self, course: str, coreq: str) -> None:
         self.ensure_course(course)
         self.ensure_course(coreq)
         self.coreqs.setdefault(course, set()).add(coreq)
 
+    def add_prereq_group(self, course: str, options: Set[str]) -> None:
+        normalized = {code for code in options if code}
+        if not normalized:
+            return
+        self.ensure_course(course)
+        for code in normalized:
+            self.ensure_course(code)
+        self.prereqs.setdefault(course, set()).update(normalized)
+        groups = self.prereq_groups.setdefault(course, [])
+        if normalized not in groups:
+            groups.append(normalized)
+
     def all_prereqs(self, course: str) -> Set[str]:
         return set(self.prereqs.get(course, set()))
 
     def all_coreqs(self, course: str) -> Set[str]:
         return set(self.coreqs.get(course, set()))
+
+    def unmet_prereq_labels(self, course: str, completed: Set[str]) -> List[str]:
+        groups = self.prereq_groups.get(course)
+        if not groups:
+            return sorted([code for code in self.all_prereqs(course) if code not in completed])
+
+        unmet: List[str] = []
+        for group in groups:
+            if group & completed:
+                continue
+            if len(group) == 1:
+                unmet.append(next(iter(group)))
+            else:
+                unmet.append(" or ".join(sorted(group)))
+        return unmet
+
+    def prereqs_satisfied(self, course: str, completed: Set[str]) -> bool:
+        return len(self.unmet_prereq_labels(course, completed)) == 0
 
     def dependency_closure(self, targets: Set[str]) -> Set[str]:
         """

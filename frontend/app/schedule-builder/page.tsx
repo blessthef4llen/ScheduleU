@@ -60,7 +60,14 @@ type AcceptedScheduleSnapshot = {
   selectedSections: SelectedSection[]
 }
 
+type ProfessorPreference = 'prefer' | 'avoid'
+type SavedProfessorPreference = {
+  label: string
+  preference: ProfessorPreference
+}
+
 const ACCEPTED_SCHEDULES_KEY = 'scheduleu.acceptedSchedules'
+const PROFESSOR_PREFERENCES_KEY = 'scheduleu.professorPreferences'
 
 const backendBaseUrl = process.env.NEXT_PUBLIC_SCHEDULER_API_URL ?? 'http://localhost:8000'
 type SemesterOption = {
@@ -265,6 +272,49 @@ function toComparableMinutes(value: string) {
   return hour * 60 + minute
 }
 
+function normalizeProfessorName(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/\b(dr|prof|professor)\.?\s+/gi, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ')
+}
+
+function shouldSkipProfessorName(value: string) {
+  const normalized = normalizeProfessorName(value)
+  return !normalized || normalized === 'n a' || normalized === 'tba' || normalized === 'staff' || normalized === 'arranged'
+}
+
+function getUniqueProfessors(section: SelectedSection) {
+  const seen = new Set<string>()
+  const professors: string[] = []
+  for (const meeting of section.meetings) {
+    const raw = (meeting.instructor ?? '').trim()
+    const normalized = normalizeProfessorName(raw)
+    if (!raw || shouldSkipProfessorName(raw) || seen.has(normalized)) continue
+    seen.add(normalized)
+    professors.push(raw)
+  }
+  return professors
+}
+
+function loadProfessorPreferences(): Record<string, SavedProfessorPreference> {
+  const stored = loadStoredJson<Record<string, SavedProfessorPreference | ProfessorPreference>>(PROFESSOR_PREFERENCES_KEY, {})
+  return Object.fromEntries(
+    Object.entries(stored).flatMap(([name, entry]) => {
+      if (typeof entry === 'string') {
+        return [[name, { label: name, preference: entry } satisfies SavedProfessorPreference]]
+      }
+      if (!entry?.preference) {
+        return []
+      }
+      return [[name, entry]]
+    })
+  )
+}
+
 export default function ScheduleBuilderPage() {
   const menuItems = [
     { href: '/dashboard', label: 'Dashboard' },
@@ -297,6 +347,7 @@ export default function ScheduleBuilderPage() {
   const [showCartEditor, setShowCartEditor] = useState(false)
   const [removingCartKey, setRemovingCartKey] = useState<string | null>(null)
   const [acceptingSchedule, setAcceptingSchedule] = useState(false)
+  const [professorPreferences, setProfessorPreferences] = useState<Record<string, SavedProfessorPreference>>(loadProfessorPreferences)
   const hasPrereqWarnings = result?.warnings.some((warning) =>
     warning.toLowerCase().includes('prerequisite')
   ) ?? false
@@ -336,6 +387,46 @@ export default function ScheduleBuilderPage() {
     }
     return locks
   }, [cartRows, honorsOnly, selectedTermTable])
+
+  const pinnedProfessors = useMemo(
+    () =>
+      Object.entries(professorPreferences)
+        .filter(([, entry]) => entry.preference === 'prefer')
+        .map(([name, entry]) => ({ name, label: entry.label })),
+    [professorPreferences]
+  )
+
+  const blockedProfessors = useMemo(
+    () =>
+      Object.entries(professorPreferences)
+        .filter(([, entry]) => entry.preference === 'avoid')
+        .map(([name, entry]) => ({ name, label: entry.label })),
+    [professorPreferences]
+  )
+
+  const setProfessorPreference = (professorName: string, preference: ProfessorPreference | null) => {
+    const normalized = normalizeProfessorName(professorName)
+    if (!normalized || shouldSkipProfessorName(professorName)) return
+
+    setProfessorPreferences((prev) => {
+      const next = { ...prev }
+      if (preference) {
+        next[normalized] = {
+          label: professorName.trim(),
+          preference,
+        }
+      }
+      else delete next[normalized]
+      saveStoredJson(PROFESSOR_PREFERENCES_KEY, next)
+      return next
+    })
+    setMessage(
+      preference
+        ? `${preference === 'prefer' ? 'Pinned' : 'Blocked'} professor: ${professorName.trim()}`
+        : `Cleared professor preference: ${professorName.trim()}`
+    )
+    setError('')
+  }
 
   const addManualCourse = () => {
     const subject = manualSubject.trim().toUpperCase()
@@ -560,6 +651,8 @@ export default function ScheduleBuilderPage() {
             .map((d) => d.trim())
             .filter(Boolean),
           buffer_minutes: bufferMinutes,
+          preferred_professors: pinnedProfessors.map((entry) => entry.label),
+          blocked_professors: blockedProfessors.map((entry) => entry.label),
           ranking_preference: rankingPreference,
           max_schedules: maxSchedules,
           blocked_times: [],
@@ -891,6 +984,58 @@ export default function ScheduleBuilderPage() {
           </div>
 
           <div className="rounded-xl border border-slate-100 bg-gray-50 p-4 space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <p className="text-sm font-medium text-slate-800">Professor Preferences</p>
+                <p className="text-xs text-slate-600">Pin professors to favor them or block professors to avoid them during schedule generation.</p>
+              </div>
+              {(pinnedProfessors.length > 0 || blockedProfessors.length > 0) && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setProfessorPreferences({})
+                    saveStoredJson(PROFESSOR_PREFERENCES_KEY, {})
+                    setMessage('Cleared all professor preferences.')
+                    setError('')
+                  }}
+                  className="rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 transition-colors hover:bg-slate-50"
+                >
+                  Clear All
+                </button>
+              )}
+            </div>
+
+            {pinnedProfessors.length === 0 && blockedProfessors.length === 0 ? (
+              <p className="text-sm text-slate-600">No professor preferences saved yet. Use the pin/block controls on generated sections below.</p>
+            ) : (
+              <div className="flex flex-wrap gap-2">
+                {pinnedProfessors.map(({ name, label }) => (
+                  <button
+                    key={`prefer-${name}`}
+                    type="button"
+                    onClick={() => setProfessorPreference(label, null)}
+                    className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700"
+                    title="Click to remove"
+                  >
+                    Pinned: {label} ×
+                  </button>
+                ))}
+                {blockedProfessors.map(({ name, label }) => (
+                  <button
+                    key={`avoid-${name}`}
+                    type="button"
+                    onClick={() => setProfessorPreference(label, null)}
+                    className="rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-bold text-rose-700"
+                    title="Click to remove"
+                  >
+                    Blocked: {label} ×
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="rounded-xl border border-slate-100 bg-gray-50 p-4 space-y-3">
             <p className="text-sm font-medium text-slate-700">Manual Course Entry</p>
             <div className="grid gap-2 md:grid-cols-[1fr_1fr_auto]">
               <select
@@ -1065,6 +1210,45 @@ export default function ScheduleBuilderPage() {
                         <p className="font-semibold text-slate-900">
                           {section.course} • Section {section.section_id}
                         </p>
+                        {getUniqueProfessors(section).length > 0 && (
+                          <div className="mt-2 flex flex-wrap gap-2">
+                            {getUniqueProfessors(section).map((professor) => {
+                              const normalized = normalizeProfessorName(professor)
+                              const preference = professorPreferences[normalized]?.preference ?? null
+                              return (
+                                <div
+                                  key={`${section.course}-${section.section_id}-${normalized}`}
+                                  className="flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white px-2 py-1.5"
+                                >
+                                  <span className="text-xs font-semibold text-slate-800">{professor}</span>
+                                  <ProfessorRatingBadge instructor={professor} />
+                                  <button
+                                    type="button"
+                                    onClick={() => setProfessorPreference(professor, preference === 'prefer' ? null : 'prefer')}
+                                    className={`rounded-full px-2 py-1 text-[11px] font-bold transition-colors ${
+                                      preference === 'prefer'
+                                        ? 'bg-emerald-600 text-white'
+                                        : 'border border-emerald-200 bg-emerald-50 text-emerald-700'
+                                    }`}
+                                  >
+                                    {preference === 'prefer' ? 'Pinned' : 'Pin'}
+                                  </button>
+                                  <button
+                                    type="button"
+                                    onClick={() => setProfessorPreference(professor, preference === 'avoid' ? null : 'avoid')}
+                                    className={`rounded-full px-2 py-1 text-[11px] font-bold transition-colors ${
+                                      preference === 'avoid'
+                                        ? 'bg-rose-600 text-white'
+                                        : 'border border-rose-200 bg-rose-50 text-rose-700'
+                                    }`}
+                                  >
+                                    {preference === 'avoid' ? 'Blocked' : 'Block'}
+                                  </button>
+                                </div>
+                              )
+                            })}
+                          </div>
+                        )}
                         <div className="mt-2 space-y-2 text-sm text-slate-700">
                           {section.meetings.map((meeting, idx) => (
                             <div
@@ -1073,9 +1257,6 @@ export default function ScheduleBuilderPage() {
                             >
                               <div>
                                 {meeting.day} {meeting.start}-{meeting.end} • {meeting.type ?? 'N/A'} • {meeting.location ?? 'N/A'} • {meeting.instructor ?? 'N/A'}
-                              </div>
-                              <div className="mt-1">
-                                <ProfessorRatingBadge instructor={meeting.instructor ?? 'N/A'} />
                               </div>
                             </div>
                           ))}

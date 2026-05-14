@@ -2,12 +2,80 @@
 
 from __future__ import annotations
 
+import csv
 import os
+from pathlib import Path
 from typing import Dict, Set, Any, List
 
 from .deps_model import DependencyModel, CourseMeta
 from .normalize import norm_course_code, split_codes
 from .supabase_client import get_supabase
+
+
+def _new_model() -> DependencyModel:
+    return DependencyModel(courses={}, prereqs={}, coreqs={})
+
+
+def _merge_models(base: DependencyModel, overlay: DependencyModel) -> DependencyModel:
+    for code, meta in overlay.courses.items():
+        existing = base.courses.get(code)
+        if existing is None:
+            base.courses[code] = meta
+            continue
+        if existing.title is None and meta.title is not None:
+            base.courses[code] = CourseMeta(code=existing.code, title=meta.title, units=existing.units if existing.units is not None else meta.units)
+        elif existing.units is None and meta.units is not None:
+            base.courses[code] = CourseMeta(code=existing.code, title=existing.title, units=meta.units)
+
+    for course, groups in overlay.prereq_groups.items():
+        for group in groups:
+            base.add_prereq_group(course, set(group))
+
+    for course, coreqs in overlay.coreqs.items():
+        for coreq in coreqs:
+            base.add_coreq(course, coreq)
+
+    return base
+
+
+def _load_dependency_model_from_local_csv(csv_path: Path) -> DependencyModel:
+    model = _new_model()
+    if not csv_path.exists():
+        return model
+
+    with csv_path.open(newline="", encoding="utf-8-sig") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            course = norm_course_code(str(row.get("course_code_full") or "").strip())
+            if not course:
+                continue
+
+            title = str(row.get("course_title") or "").strip() or None
+            units = None
+            units_raw = str(row.get("units") or "").strip()
+            if units_raw:
+                try:
+                    units = float(units_raw)
+                except ValueError:
+                    units = None
+
+            if course not in model.courses:
+                model.courses[course] = CourseMeta(code=course, title=title, units=units)
+
+            prereq_codes = split_codes(str(row.get("prereq_course_codes") or ""))
+            prereq_text = str(row.get("prereq_course") or "").strip().lower()
+            if prereq_codes:
+                if len(prereq_codes) > 1 and " or " in prereq_text:
+                    model.add_prereq_group(course, set(prereq_codes))
+                else:
+                    for code in prereq_codes:
+                        model.add_prereq(course, code)
+
+            coreq_codes = split_codes(str(row.get("coreq_course_codes") or ""))
+            for code in coreq_codes:
+                model.add_coreq(course, code)
+
+    return model
 
 
 # Build DependencyModel from Supabase using configured table shape.
@@ -37,10 +105,7 @@ def load_dependency_model_from_supabase() -> DependencyModel:
 
     sb = get_supabase()
 
-    courses: Dict[str, CourseMeta] = {}
-    prereqs: Dict[str, Set[str]] = {}
-    coreqs: Dict[str, Set[str]] = {}
-    model = DependencyModel(courses=courses, prereqs=prereqs, coreqs=coreqs)
+    model = _new_model()
 
 
     # One row per course with prereq/coreq columns split into lists.
@@ -90,6 +155,14 @@ def load_dependency_model_from_supabase() -> DependencyModel:
             if coreq_raw:
                 for c in split_codes(coreq_raw):
                     model.add_coreq(course, c)
+
+        local_csv_enabled = os.getenv("DEPS_LOCAL_CSV_OVERLAY", "1").strip().lower() not in {"0", "false", "no"}
+        local_csv_path = os.getenv(
+            "DEPS_LOCAL_CSV_PATH",
+            str(Path(__file__).resolve().parents[2] / "data" / "pre_req_filtered.csv"),
+        ).strip()
+        if local_csv_enabled:
+            model = _merge_models(model, _load_dependency_model_from_local_csv(Path(local_csv_path)))
 
         return model
 

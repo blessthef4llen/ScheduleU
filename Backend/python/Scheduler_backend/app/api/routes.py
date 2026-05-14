@@ -17,7 +17,7 @@ from app.core.catalog_merge import merge_catalog_into_dependency_model
 from app.api.term_models import TermScheduleRequest, TermScheduleResponse
 from app.api.transcript_models import TranscriptParseResponse
 from app.core.section_loader import load_section_options_for_courses
-from app.core.section_scheduler import pick_ranked_schedules
+from app.core.section_scheduler import pick_ranked_schedules, normalize_professor_name, section_professor_names
 from app.core.schedule_explainer import generate_schedule_benefits
 from app.core.rmp_client import lookup_professor_rating
 from app.core.transcript_parser import parse_transcript_pdf
@@ -151,7 +151,7 @@ def term_schedule(req: TermScheduleRequest):
     blocked_by_prereq = {}
     eligible_requested = []
     for course in requested:
-        unmet = sorted([p for p in DEP_MODEL.all_prereqs(course) if p not in completed]) if DEP_MODEL is not None else []
+        unmet = DEP_MODEL.unmet_prereq_labels(course, completed) if DEP_MODEL is not None else []
         if unmet:
             blocked_by_prereq[course] = unmet
         else:
@@ -170,6 +170,16 @@ def term_schedule(req: TermScheduleRequest):
 
     # Load section options from Supabase
     options_by_course = load_section_options_for_courses(eligible_requested)
+    preferred_professors = {
+        normalize_professor_name(name)
+        for name in req.constraints.preferred_professors
+        if normalize_professor_name(name)
+    }
+    blocked_professors = {
+        normalize_professor_name(name)
+        for name in req.constraints.blocked_professors
+        if normalize_professor_name(name)
+    }
     locked_by_course = {
         norm_course_code(item.course): item.section_id.strip()
         for item in req.locked_sections
@@ -211,6 +221,8 @@ def term_schedule(req: TermScheduleRequest):
         kept = []
         for sec in opts:
             ok = True
+            if blocked_professors and section_professor_names(sec) & blocked_professors:
+                continue
             for m in sec.meetings:
                 # days off
                 if m.days & days_off_set:
@@ -250,6 +262,7 @@ def term_schedule(req: TermScheduleRequest):
         max_results=req.constraints.max_schedules,
         ranking_preference=req.constraints.ranking_preference,
         preferred_sections=locked_by_course,
+        preferred_professors=preferred_professors,
     )
     best = ranked[0][0] if ranked else []
 
@@ -334,6 +347,14 @@ def term_schedule(req: TermScheduleRequest):
             warnings.append(
                 f"Used closest available alternatives for {len(locked_by_course) - matched} preferred section(s)."
             )
+    if preferred_professors and best:
+        matched_professors = sum(
+            1 for sec in best if section_professor_names(sec) & preferred_professors
+        )
+        if matched_professors == 0:
+            warnings.append("None of your pinned professors were available in the selected schedule.")
+    if blocked_professors and failures:
+        warnings.append("Some professor blocks reduced section availability.")
 
     return TermScheduleResponse(
         term=req.term,
